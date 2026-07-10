@@ -169,6 +169,25 @@ Open `viewer/viewer.html` directly in a browser to see two real generated files
 (Al-Fātiḥah and An-Nās) parsed live and rendered, with a raw-XML toggle and
 click-to-inspect on every word.
 
+## Text integrity
+
+```bash
+node src/checksum-verify.js   # compare QUL's Uthmani text against an independent SHA-256 manifest
+```
+
+This cross-checks our word data against the verse-level manifest from
+[spqrxi/quranchecksum](https://github.com/spqrxi/quranchecksum), an independent
+MIT-licensed tool built from Tanzil's KFGQPC-verified Uthmani text. **Result: 1,125 /
+6,236 verses match byte-for-byte; the rest differ in Unicode encoding convention, not
+content.** QUL's text follows the **QPC (King Fahd Complex glyph-font) Uthmani
+convention** — e.g. representing the superscript alef with a tatweel spacer
+(`ـٰ`, U+0640 U+0670) in ~3,638 verses, and using the wasla-alef (`ٱ`, U+0671) where
+Tanzil's own transcription uses different codepoint choices for the same
+pronunciation. This is a documented, legitimate divergence between two widely-used
+"Uthmani script" encodings (`quranchecksum`'s own spec calls this out explicitly), not
+an error in either source — but it's worth knowing before assuming byte-identity
+between QUSX output and Tanzil-sourced tooling.
+
 ## Known gaps
 
 1. **Multi-tradition pins aren't in the generator yet.** `quran-svg`'s data gives

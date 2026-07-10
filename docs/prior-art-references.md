@@ -11,6 +11,7 @@ Itqan community threads /d/549, /d/501, /d/246).
 | [quranpedia/quran-svg](https://github.com/quranpedia/quran-svg) | Ayah-polygon boundary data across **6 mushaf editions / 5 qira'at** (Hafs, Warsh, Qalun x2, Douri, Shubah) | Diffed programmatically — 55/114 surahs have real ayah-count divergence across traditions |
 | [Quran Foundation API](https://api-docs.quran.foundation) (`quran` GitHub org) | Canonical content API; also backs `open-quran-view`'s layout data | Referenced, not yet pulled directly |
 | [quran-mcp](https://github.com/quran/quran-mcp) | Live hosted MCP server (`mcp.quran.ai`) — multi-qira'at text, 50+ translations, 15+ tafsirs, morphology | Live service, not yet connected |
+| [spqrxi/quranchecksum](https://github.com/spqrxi/quranchecksum) | Independent MIT-licensed verse-level SHA-256 integrity manifest, built from Tanzil's KFGQPC-verified Uthmani text | **Integrated** — `src/checksum-verify.js` cross-checks QUL's text against it; 1,125/6,236 verses match byte-for-byte, rest differ by documented QPC-vs-Tanzil encoding convention (not content errors) |
 
 ## Independent prior art confirming the layout/milestone model
 
