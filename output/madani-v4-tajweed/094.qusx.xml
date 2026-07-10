@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="94" name="Ash-Sharh" nameArabic="الشرح" ayahCount="8" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)">
+  <juz number="30" sid="juz:30"/>
+  <manzil number="7" sid="manzil:7"/>
+  <hizb number="60" sid="hizb:60"/>
+  <rub number="239" sid="rub:239"/>
+  <page number="596" sid="page:596"/>
+  <line number="15" sid="page:596:line:15"/>
+  <ayah number="1" tradition="hafs-kufi" sid="94:1:hafs-kufi"/>
+  <word id="82878" position="1" stem="لَمْ" lemma="لَم">أَلَمْ</word>
+  <word id="82879" position="2" root="ش ر ح" stem="نَشْرَحْ" lemma="شَرَحَ">نَشْرَحْ</word>
+  <word id="82880" position="3" stem="كَ">لَكَ</word>
+  <word id="82881" position="4" root="ص د ر" stem="صَدْرَ" lemma="صَدْر">صَدْرَكَ</word>
+  <word id="82882" position="5">١</word>
+  <ayah eid="94:1:hafs-kufi"/>
+  <ayah number="2" tradition="hafs-kufi" sid="94:2:hafs-kufi"/>
+  <word id="82883" position="1" root="و ض ع" stem="وَضَعْ" lemma="وَضَعَ">وَوَضَعْنَا</word>
+  <word id="82884" position="2" stem="عَن" lemma="عَن">عَنكَ</word>
+  <word id="82885" position="3" root="و ز ر" stem="وِزْرَ" lemma="وِزْر">وِزْرَكَ</word>
+  <word id="82886" position="4">٢</word>
+  <page eid="page:596"/>
+  <page number="597" sid="page:597"/>
+  <line eid="page:596:line:15"/>
+  <line number="1" sid="page:597:line:1"/>
+  <ayah eid="94:2:hafs-kufi"/>
+  <ayah number="3" tradition="hafs-kufi" sid="94:3:hafs-kufi"/>
+  <word id="82887" position="1" stem="الَّذِىٓ" lemma="الَّذِى">ٱلَّذِىٓ</word>
+  <word id="82888" position="2" root="ن ق ض" stem="أَنقَضَ" lemma="أَنقَضَ">أَنقَضَ</word>
+  <word id="82889" position="3" root="ظ ه ر" stem="ظَهْرَ" lemma="ظَهْر">ظَهْرَكَ</word>
+  <word id="82890" position="4">٣</word>
+  <ayah eid="94:3:hafs-kufi"/>
+  <ayah number="4" tradition="hafs-kufi" sid="94:4:hafs-kufi"/>
+  <word id="82891" position="1" root="ر ف ع" stem="رَفَعْ" lemma="رَفَعَ">وَرَفَعْنَا</word>
+  <word id="82892" position="2" stem="كَ">لَكَ</word>
+  <word id="82893" position="3" root="ذ ك ر" stem="ذِكْرَ" lemma="ذِكْر">ذِكْرَكَ</word>
+  <word id="82894" position="4">٤</word>
+  <ayah eid="94:4:hafs-kufi"/>
+  <ayah number="5" tradition="hafs-kufi" sid="94:5:hafs-kufi"/>
+  <word id="82895" position="1" stem="إِنَّ" lemma="إِنّ">فَإِنَّ</word>
+  <word id="82896" position="2" stem="مَعَ" lemma="مَع">مَعَ</word>
+  <word id="82897" position="3" root="ع س ر" stem="عُسْرِ" lemma="عُسْر">ٱلْعُسْرِ</word>
+  <word id="82898" position="4" root="ي س ر" stem="يُسْرًا" lemma="يُسْر">يُسْرًا</word>
+  <word id="82899" position="5">٥</word>
+  <line eid="page:597:line:1"/>
+  <line number="2" sid="page:597:line:2"/>
+  <ayah eid="94:5:hafs-kufi"/>
+  <ayah number="6" tradition="hafs-kufi" sid="94:6:hafs-kufi"/>
+  <word id="82900" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
+  <word id="82901" position="2" stem="مَعَ" lemma="مَع">مَعَ</word>
+  <word id="82902" position="3" root="ع س ر" stem="عُسْرِ" lemma="عُسْر">ٱلْعُسْرِ</word>
+  <word id="82903" position="4" root="ي س ر" stem="يُسْرًا" lemma="يُسْر">يُسْرًۭا</word>
+  <word id="82904" position="5">٦</word>
+  <ayah eid="94:6:hafs-kufi"/>
+  <ayah number="7" tradition="hafs-kufi" sid="94:7:hafs-kufi"/>
+  <word id="82905" position="1" stem="إِذَا" lemma="إِذَا">فَإِذَا</word>
+  <word id="82906" position="2" root="ف ر غ" stem="فَرَغْ" lemma="فَرَغْ">فَرَغْتَ</word>
+  <word id="82907" position="3" root="ن ص ب" stem="انصَبْ" lemma="نُصِبَتْ">فَٱنصَبْ</word>
+  <word id="82908" position="4">٧</word>
+  <ayah eid="94:7:hafs-kufi"/>
+  <ayah number="8" tradition="hafs-kufi" sid="94:8:hafs-kufi"/>
+  <word id="82909" position="1" stem="إِلَىٰ" lemma="إِلَىٰ">وَإِلَىٰ</word>
+  <word id="82910" position="2" root="ر   ب   ب" stem="رَبِّ" lemma="رَبّ">رَبِّكَ</word>
+  <word id="82911" position="3" root="ر غ ب" stem="ارْغَب" lemma="يَرْغَبُ">فَٱرْغَب</word>
+  <word id="82912" position="4">٨</word>
+  <ayah eid="94:8:hafs-kufi"/>
+  <line eid="page:597:line:2"/>
+  <page eid="page:597"/>
+  <rub eid="rub:239"/>
+  <hizb eid="hizb:60"/>
+  <manzil eid="manzil:7"/>
+  <juz eid="juz:30"/>
+</qusx>

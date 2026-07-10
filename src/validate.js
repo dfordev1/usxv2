@@ -14,12 +14,29 @@
 // milestones over nested elements) — requiring strict cross-axis nesting
 // here would reject correct data, not catch real bugs.
 //
-// Usage: node src/validate.js [file ... | all]
+// Usage: node src/validate.js [--layout=key] [file ... | all]
+// With no file args, validates every *.xml under output/<layout>/ (all layouts
+// if --layout is omitted).
 
 const fs = require("fs");
 const path = require("path");
 
 const OUT = path.join(__dirname, "..", "output");
+
+function allGeneratedFiles(layoutFilter) {
+  const files = [];
+  const layoutDirs = fs
+    .readdirSync(OUT, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name)
+    .filter((name) => !layoutFilter || name === layoutFilter);
+  for (const dir of layoutDirs) {
+    for (const f of fs.readdirSync(path.join(OUT, dir)).filter((f) => f.endsWith(".xml"))) {
+      files.push(path.join(OUT, dir, f));
+    }
+  }
+  return files.sort();
+}
 
 const MILESTONE_TAGS = ["juz", "manzil", "hizb", "rub", "page", "line", "ayah"];
 const REQUIRED_ATTRS = {
@@ -163,16 +180,20 @@ function validateFile(filePath) {
 }
 
 function main() {
-  const args = process.argv.slice(2);
+  const rawArgs = process.argv.slice(2);
+  let layoutFilter = null;
+  const args = [];
+  for (const a of rawArgs) {
+    const m = a.match(/^--layout=(.+)$/);
+    if (m) layoutFilter = m[1];
+    else args.push(a);
+  }
+
   let files;
   if (args.length === 0 || args[0] === "all") {
-    files = fs
-      .readdirSync(OUT)
-      .filter((f) => f.endsWith(".xml"))
-      .sort()
-      .map((f) => path.join(OUT, f));
+    files = allGeneratedFiles(layoutFilter);
   } else {
-    files = args.map((a) => path.join(OUT, a));
+    files = args.map((a) => path.join(OUT, layoutFilter || "madani-v2", a));
   }
 
   let totalErrors = 0;

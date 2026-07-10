@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="105" name="Al-Fil" nameArabic="الفيل" ayahCount="5" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+  <juz number="30" sid="juz:30"/>
+  <manzil number="7" sid="manzil:7"/>
+  <hizb number="60" sid="hizb:60"/>
+  <rub number="240" sid="rub:240"/>
+  <page number="601" sid="page:601"/>
+  <line number="13" sid="page:601:line:13"/>
+  <ayah number="1" tradition="hafs-kufi" sid="105:1:hafs-kufi"/>
+  <word id="83420" position="1" stem="لَمْ" lemma="لَم">أَلَمْ</word>
+  <word id="83421" position="2" root="ر   ا   ي" stem="تَرَ" lemma="رَءَا">تَرَ</word>
+  <word id="83422" position="3" root="ك ي ف" stem="كَيْفَ" lemma="كَيْف">كَيْفَ</word>
+  <word id="83423" position="4" root="ف ع ل" stem="فَعَلَ" lemma="فَعَلَ">فَعَلَ</word>
+  <word id="83424" position="5" root="ر   ب   ب" stem="رَبُّ" lemma="رَبّ">رَبُّكَ</word>
+  <word id="83425" position="6" root="ص ح ب" stem="أَصْحَٰبِ" lemma="أَصْحَٰب">بِأَصْحَـٰبِ</word>
+  <word id="83426" position="7" root="ف ي ل" stem="فِيلِ" lemma="فِيل">ٱلْفِيلِ</word>
+  <word id="83427" position="8">١</word>
+  <ayah eid="105:1:hafs-kufi"/>
+  <ayah number="2" tradition="hafs-kufi" sid="105:2:hafs-kufi"/>
+  <word id="83428" position="1" stem="لَمْ" lemma="لَم">أَلَمْ</word>
+  <word id="83429" position="2" root="ج ع ل" stem="يَجْعَلْ" lemma="جَعَلَ">يَجْعَلْ</word>
+  <line eid="page:601:line:13"/>
+  <line number="14" sid="page:601:line:14"/>
+  <word id="83430" position="3" root="ك ي د" stem="كَيْدَ" lemma="كَيْد">كَيْدَهُمْ</word>
+  <word id="83431" position="4" stem="فِى" lemma="فِى">فِى</word>
+  <word id="83432" position="5" root="ض   ل   ل" stem="تَضْلِيلٍ" lemma="تَضْلِيل">تَضْلِيلٍۢ</word>
+  <word id="83433" position="6">٢</word>
+  <ayah eid="105:2:hafs-kufi"/>
+  <ayah number="3" tradition="hafs-kufi" sid="105:3:hafs-kufi"/>
+  <word id="83434" position="1" root="ر س ل" stem="أَرْسَلَ" lemma="أَرْسَلَ">وَأَرْسَلَ</word>
+  <word id="83435" position="2" stem="عَلَيْ" lemma="عَلَىٰ">عَلَيْهِمْ</word>
+  <word id="83436" position="3" root="ط   ي   ر" stem="طَيْرًا" lemma="طَيْر">طَيْرًا</word>
+  <word id="83437" position="4" root="ا ب ل" stem="أَبَابِيلَ" lemma="أَبَابِيل">أَبَابِيلَ</word>
+  <word id="83438" position="5">٣</word>
+  <line eid="page:601:line:14"/>
+  <line number="15" sid="page:601:line:15"/>
+  <ayah eid="105:3:hafs-kufi"/>
+  <ayah number="4" tradition="hafs-kufi" sid="105:4:hafs-kufi"/>
+  <word id="83439" position="1" root="ر   م   ي" stem="تَرْمِي" lemma="رَمَىٰ">تَرْمِيهِم</word>
+  <word id="83440" position="2" root="ح ج ر" stem="حِجَارَةٍ" lemma="حِجَارَة">بِحِجَارَةٍۢ</word>
+  <word id="83441" position="3" stem="مِّن" lemma="مِن">مِّن</word>
+  <word id="83442" position="4" root="س ج ل" stem="سِجِّيلٍ" lemma="سِجِّيل">سِجِّيلٍۢ</word>
+  <word id="83443" position="5">٤</word>
+  <ayah eid="105:4:hafs-kufi"/>
+  <ayah number="5" tradition="hafs-kufi" sid="105:5:hafs-kufi"/>
+  <word id="83444" position="1" root="ج ع ل" stem="جَعَلَ" lemma="جَعَلَ">فَجَعَلَهُمْ</word>
+  <word id="83445" position="2" root="ع ص ف" stem="عَصْفٍ" lemma="عَصْف">كَعَصْفٍۢ</word>
+  <word id="83446" position="3" root="ا ك ل" stem="مَّأْكُولٍۭ" lemma="مَّأْكُول">مَّأْكُولٍۭ</word>
+  <word id="83447" position="4">٥</word>
+  <ayah eid="105:5:hafs-kufi"/>
+  <line eid="page:601:line:15"/>
+  <page eid="page:601"/>
+  <rub eid="rub:240"/>
+  <hizb eid="hizb:60"/>
+  <manzil eid="manzil:7"/>
+  <juz eid="juz:30"/>
+</qusx>

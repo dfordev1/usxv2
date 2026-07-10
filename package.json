@@ -4,7 +4,8 @@
   "description": "Milestone-based XML markup for the Qur'an, modeled on the Bible's USX/USFM standard",
   "main": "src/generate.js",
   "scripts": {
-    "generate": "node src/generate.js all"
+    "generate": "node src/generate.js all",
+    "validate": "node src/validate.js all"
   },
   "engines": {
     "node": ">=22.0.0"

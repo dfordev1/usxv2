@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="53" name="An-Najm" nameArabic="النجم" ayahCount="62" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+  <juz number="27" sid="juz:27"/>
+  <manzil number="7" sid="manzil:7"/>
+  <hizb number="53" sid="hizb:53"/>
+  <rub number="210" sid="rub:210"/>
+  <page number="526" sid="page:526"/>
+  <line number="2" sid="page:526:line:2"/>
+  <ayah number="1" tradition="hafs-kufi" sid="53:1:hafs-kufi"/>
+  <word id="72624" position="1" root="ن ج م" stem="نَّجْمِ" lemma="نَّجْم">وَٱلنَّجْمِ</word>
+  <word id="72625" position="2" stem="إِذَا" lemma="إِذَا">إِذَا</word>
+  <word id="72626" position="3" root="ه   و   ي" stem="هَوَىٰ" lemma="هَوَىٰ">هَوَىٰ</word>
+  <word id="72627" position="4">١</word>
+  <ayah eid="53:1:hafs-kufi"/>
+  <ayah number="2" tradition="hafs-kufi" sid="53:2:hafs-kufi"/>
+  <word id="72628" position="1" stem="مَا" lemma="مَا">مَا</word>
+  <word id="72629" position="2" root="ض   ل   ل" stem="ضَلَّ" lemma="ضَلَّ">ضَلَّ</word>
+  <word id="72630" position="3" root="ص ح ب" stem="صَاحِبُ" lemma="صَاحِب">صَاحِبُكُمْ</word>
+  <word id="72631" position="4" stem="مَا" lemma="مَا">وَمَا</word>
+  <word id="72632" position="5" root="غ   و   ي" stem="غَوَىٰ" lemma="غَوَىٰ">غَوَىٰ</word>
+  <word id="72633" position="6">٢</word>
+  <ayah eid="53:2:hafs-kufi"/>
+  <ayah number="3" tradition="hafs-kufi" sid="53:3:hafs-kufi"/>
+  <word id="72634" position="1" stem="مَا" lemma="مَا">وَمَا</word>
+  <word id="72635" position="2" root="ن ط ق" stem="يَنطِقُ" lemma="يَنطِقُ">يَنطِقُ</word>
+  <line eid="page:526:line:2"/>
+  <line number="3" sid="page:526:line:3"/>
+  <word id="72636" position="3" stem="عَنِ" lemma="عَن">عَنِ</word>
+  <word id="72637" position="4" root="ه   و   ي" stem="هَوَىٰٓ" lemma="هَوَآء">ٱلْهَوَىٰٓ</word>
+  <word id="72638" position="5">٣</word>
+  <ayah eid="53:3:hafs-kufi"/>
+  <ayah number="4" tradition="hafs-kufi" sid="53:4:hafs-kufi"/>
+  <word id="72639" position="1" stem="إِنْ" lemma="إِن">إِنْ</word>
+  <word id="72640" position="2" stem="هُوَ">هُوَ</word>
+  <word id="72641" position="3" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
+  <word id="72642" position="4" root="و   ح   ي" stem="وَحْىٌ" lemma="وَحْى">وَحْىٌۭ</word>
+  <word id="72643" position="5" root="و   ح   ي" stem="يُوحَىٰ" lemma="أَوْحَىٰٓ">يُوحَىٰ</word>
+  <word id="72644" position="6">٤</word>
+  <ayah eid="53:4:hafs-kufi"/>
+  <ayah number="5" tradition="hafs-kufi" sid="53:5:hafs-kufi"/>
+  <word id="72645" position="1" root="ع ل م" stem="عَلَّمَ" lemma="عَلَّمَ">عَلَّمَهُۥ</word>
+  <word id="72646" position="2" root="ش   د   د" stem="شَدِيدُ" lemma="شَدِيد">شَدِيدُ</word>
+  <word id="72647" position="3" root="ق و ي" stem="قُوَىٰ" lemma="قُوَّة">ٱلْقُوَىٰ</word>
+  <word id="72648" position="4">٥</word>
+  <line eid="page:526:line:3"/>
+  <line number="4" sid="page:526:line:4"/>
+  <ayah eid="53:5:hafs-kufi"/>
+  <ayah number="6" tradition="hafs-kufi" sid="53:6:hafs-kufi"/>
+  <word id="72649" position="1" stem="ذُو" lemma="ذُو">ذُو</word>
+  <word id="72650" position="2" root="م   ر   ر" stem="مِرَّةٍ" lemma="مِرَّة">مِرَّةٍۢ</word>
+  <word id="72651" position="3" root="س و ي" stem="اسْتَوَىٰ" lemma="اسْتَوَىٰٓ">فَٱسْتَوَىٰ</word>
+  <word id="72652" position="4">٦</word>
+  <ayah eid="53:6:hafs-kufi"/>
+  <ayah number="7" tradition="hafs-kufi" sid="53:7:hafs-kufi"/>
+  <word id="72653" position="1" stem="هُوَ">وَهُوَ</word>
+  <word id="72654" position="2" root="ا   ف   ق" stem="أُفُقِ" lemma="أُفُق">بِٱلْأُفُقِ</word>
+  <word id="72655" position="3" root="ع   ل   و" stem="أَعْلَىٰ" lemma="أَعْلَىٰ">ٱلْأَعْلَىٰ</word>
+  <word id="72656" position="4">٧</word>
+  <ayah eid="53:7:hafs-kufi"/>
+  <ayah number="8" tradition="hafs-kufi" sid="53:8:hafs-kufi"/>
+  <word id="72657" position="1" stem="ثُمَّ" lemma="ثُمّ">ثُمَّ</word>
+  <word id="72658" position="2" root="د   ن   و" stem="دَنَا" lemma="دَنَا">دَنَا</word>
+  <word id="72659" position="3" root="د ل و" stem="تَدَلَّىٰ" lemma="تَدَلَّىٰ">فَتَدَلَّىٰ</word>
+  <word id="72660" position="4">٨</word>
+  <line eid="page:526:line:4"/>
+  <line number="5" sid="page:526:line:5"/>
+  <ayah eid="53:8:hafs-kufi"/>
+  <ayah number="9" tradition="hafs-kufi" sid="53:9:hafs-kufi"/>
+  <word id="72661" position="1" root="ك   و   ن" stem="كَانَ" lemma="كَانَ">فَكَانَ</word>
+  <word id="72662" position="2" root="ق   و   ب" stem="قَابَ" lemma="قَاب">قَابَ</word>
+  <word id="72663" position="3" root="ق و س" stem="قَوْسَيْنِ" lemma="قَوْسَيْن">قَوْسَيْنِ</word>
+  <word id="72664" position="4" stem="أَوْ" lemma="أَو">أَوْ</word>
+  <word id="72665" position="5" root="د   ن   و" stem="أَدْنَىٰ" lemma="أَدْنَىٰ">أَدْنَىٰ</word>
+  <word id="72666" position="6">٩</word>
+  <ayah eid="53:9:hafs-kufi"/>
+  <ayah number="10" tradition="hafs-kufi" sid="53:10:hafs-kufi"/>
+  <word id="72667" position="1" root="و   ح   ي" stem="أَوْحَىٰٓ" lemma="أَوْحَىٰٓ">فَأَوْحَىٰٓ</word>
+  <word id="72668" position="2" stem="إِلَىٰ" lemma="إِلَىٰ">إِلَىٰ</word>
+  <word id="72669" position="3" root="ع ب د" stem="عَبْدِ" lemma="عَبْد">عَبْدِهِۦ</word>
+  <word id="72670" position="4" stem="مَآ" lemma="مَا">مَآ</word>
+  <word id="72671" position="5" root="و   ح   ي" stem="أَوْحَىٰ" lemma="أَوْحَىٰٓ">أَوْحَىٰ</word>
+  <word id="72672" position="6">١٠</word>
+  <line eid="page:526:line:5"/>
+  <line number="6" sid="page:526:line:6"/>
+  <ayah eid="53:10:hafs-kufi"/>
+  <ayah number="11" tradition="hafs-kufi" sid="53:11:hafs-kufi"/>
+  <word id="72673" position="1" stem="مَا" lemma="مَا">مَا</word>
+  <word id="72674" position="2" root="ك ذ ب" stem="كَذَبَ" lemma="كَذَبَ">كَذَبَ</word>
+  <word id="72675" position="3" root="ف   ا   د" stem="فُؤَادُ" lemma="فُؤَاد">ٱلْفُؤَادُ</word>
+  <word id="72676" position="4" stem="مَا" lemma="مَا">مَا</word>
+  <word id="72677" position="5" root="ر   ا   ي" stem="رَأَىٰٓ" lemma="رَءَا">رَأَىٰٓ</word>
+  <word id="72678" position="6">١١</word>
+  <ayah eid="53:11:hafs-kufi"/>
+  <ayah number="12" tradition="hafs-kufi" sid="53:12:hafs-kufi"/>
+  <word id="72679" position="1" root="م ر ي" stem="تُمَٰرُ" lemma="تَمَارَ">أَفَتُمَـٰرُونَهُۥ</word>
+  <word id="72680" position="2" stem="عَلَىٰ" lemma="عَلَىٰ">عَلَىٰ</word>
+  <word id="72681" position="3" stem="مَا" lemma="مَا">مَا</word>
+  <word id="72682" position="4" root="ر   ا   ي" stem="يَرَىٰ" lemma="رَءَا">يَرَىٰ</word>
+  <word id="72683" position="5">١٢</word>
+  <ayah eid="53:12:hafs-kufi"/>
+  <ayah number="13" tradition="hafs-kufi" sid="53:13:hafs-kufi"/>
+  <word id="72684" position="1" stem="قَدْ" lemma="قَد">وَلَقَدْ</word>
+  <word id="72685" position="2" root="ر   ا   ي" stem="رَءَا" lemma="رَءَا">رَءَاهُ</word>
+  <line eid="page:526:line:6"/>
+  <line number="7" sid="page:526:line:7"/>
+  <word id="72686" position="3" root="ن ز ل" stem="نَزْلَةً" lemma="نَزْلَة">نَزْلَةً</word>
+  <word id="72687" position="4" root="ا خ ر" stem="أُخْرَىٰ" lemma="آخَر">أُخْرَىٰ</word>
+  <word id="72688" position="5">١٣</word>
+  <ayah eid="53:13:hafs-kufi"/>
+  <ayah number="14" tradition="hafs-kufi" sid="53:14:hafs-kufi"/>
+  <word id="72689" position="1" root="ع ن د" stem="عِندَ" lemma="عِند">عِندَ</word>
+  <word id="72690" position="2" root="س د ر" stem="سِدْرَةِ" lemma="سِدْرَة">سِدْرَةِ</word>
+  <word id="72691" position="3" root="ن   ه   ي" stem="مُنتَهَىٰ" lemma="مُنتَهَىٰ">ٱلْمُنتَهَىٰ</word>
+  <word id="72692" position="4">١٤</word>
+  <ayah eid="53:14:hafs-kufi"/>
+  <ayah number="15" tradition="hafs-kufi" sid="53:15:hafs-kufi"/>
+  <word id="72693" position="1" root="ع ن د" stem="عِندَ" lemma="عِند">عِندَهَا</word>
+  <word id="72694" position="2" root="ج   ن   ن" stem="جَنَّةُ" lemma="جَنَّة">جَنَّةُ</word>
+  <word id="72695" position="3" root="ا   و   ي" stem="مَأْوَىٰٓ" lemma="مَأْوَىٰ">ٱلْمَأْوَىٰٓ</word>
+  <word id="72696" position="4">١٥</word>
+  <line eid="page:526:line:7"/>
+  <line number="8" sid="page:526:line:8"/>
+  <ayah eid="53:15:hafs-kufi"/>
+  <ayah number="16" tradition="hafs-kufi" sid="53:16:hafs-kufi"/>
+  <word id="72697" position="1" stem="إِذْ" lemma="إِذ">إِذْ</word>
+  <word id="72698" position="2" root="غ   ش   و" stem="يَغْشَى" lemma="غَشِيَ">يَغْشَى</word>
+  <word id="72699" position="3" root="س د ر" stem="سِّدْرَةَ" lemma="سِدْرَة">ٱلسِّدْرَةَ</word>
+  <word id="72700" position="4" stem="مَا" lemma="مَا">مَا</word>
+  <word id="72701" position="5" root="غ   ش   و" stem="يَغْشَىٰ" lemma="غَشِيَ">يَغْشَىٰ</word>
+  <word id="72702" position="6">١٦</word>
+  <ayah eid="53:16:hafs-kufi"/>
+  <ayah number="17" tradition="hafs-kufi" sid="53:17:hafs-kufi"/>
+  <word id="72703" position="1" stem="مَا" lemma="مَا">مَا</word>
+  <word id="72704" position="2" root="ز   ي   غ" stem="زَاغَ" lemma="زَاغَ">زَاغَ</word>
+  <word id="72705" position="3" root="ب ص ر" stem="بَصَرُ" lemma="بَصَر">ٱلْبَصَرُ</word>
+  <word id="72706" position="4" stem="مَا" lemma="مَا">وَمَا</word>
+  <word id="72707" position="5" root="ط   غ   ي" stem="طَغَىٰ" lemma="طَغَىٰ">طَغَىٰ</word>
+  <word id="72708" position="6">١٧</word>
+  <ayah eid="53:17:hafs-kufi"/>
+  <ayah number="18" tradition="hafs-kufi" sid="53:18:hafs-kufi"/>
+  <word id="72709" position="1" stem="قَدْ" lemma="قَد">لَقَدْ</word>
+  <word id="72710" position="2" root="ر   ا   ي" stem="رَأَىٰ" lemma="رَءَا">رَأَىٰ</word>
+  <line eid="page:526:line:8"/>
+  <line number="9" sid="page:526:line:9"/>
+  <word id="72711" position="3" stem="مِنْ" lemma="مِن">مِنْ</word>
+  <word id="72712" position="4" root="ا   ي   ي" stem="ءَايَٰتِ" lemma="ءَايَة">ءَايَـٰتِ</word>
+  <word id="72713" position="5" root="ر   ب   ب" stem="رَبِّ" lemma="رَبّ">رَبِّهِ</word>
+  <word id="72714" position="6" root="ك ب ر" stem="كُبْرَىٰٓ" lemma="كُبْرَىٰ">ٱلْكُبْرَىٰٓ</word>
+  <word id="72715" position="7">١٨</word>
+  <ayah eid="53:18:hafs-kufi"/>
+  <ayah number="19" tradition="hafs-kufi" sid="53:19:hafs-kufi"/>
+  <word id="72716" position="1" root="ر   ا   ي" stem="رَءَيْ" lemma="رَءَا">أَفَرَءَيْتُمُ</word>
+  <word id="72717" position="2" stem="اللَّٰتَ" lemma="اللَّٰت">ٱللَّـٰتَ</word>
+  <word id="72718" position="3" root="ع   ز   ز" stem="الْعُزَّىٰ" lemma="الْعُزَّىٰ">وَٱلْعُزَّىٰ</word>
+  <word id="72719" position="4">١٩</word>
+  <ayah eid="53:19:hafs-kufi"/>
+  <ayah number="20" tradition="hafs-kufi" sid="53:20:hafs-kufi"/>
+  <word id="72720" position="1" root="م   ن   ي" stem="مَنَوٰةَ" lemma="مَنَوٰة">وَمَنَوٰةَ</word>
+  <line eid="page:526:line:9"/>
+  <line number="10" sid="page:526:line:10"/>
+  <word id="72721" position="2" root="ث ل ث" stem="ثَّالِثَةَ" lemma="ثَّالِثَة">ٱلثَّالِثَةَ</word>
+  <word id="72722" position="3" root="ا خ ر" stem="أُخْرَىٰٓ" lemma="آخَر">ٱلْأُخْرَىٰٓ</word>
+  <word id="72723" position="4">٢٠</word>
+  <ayah eid="53:20:hafs-kufi"/>
+  <ayah number="21" tradition="hafs-kufi" sid="53:21:hafs-kufi"/>
+  <word id="72724" position="1" stem="كُمُ">أَلَكُمُ</word>
+  <word id="72725" position="2" root="ذ ك ر" stem="ذَّكَرُ" lemma="ذَكَر">ٱلذَّكَرُ</word>
+  <word id="72726" position="3" stem="هُ">وَلَهُ</word>
+  <word id="72727" position="4" root="ا ن ث" stem="أُنثَىٰ" lemma="أُنثَىٰ">ٱلْأُنثَىٰ</word>
+  <word id="72728" position="5">٢١</word>
+  <ayah eid="53:21:hafs-kufi"/>
+  <ayah number="22" tradition="hafs-kufi" sid="53:22:hafs-kufi"/>
+  <word id="72729" position="1" stem="تِلْكَ" lemma="ذَٰلِك">تِلْكَ</word>
+  <word id="72730" position="2" stem="إِذًا" lemma="إِذًا">إِذًۭا</word>
+  <word id="72731" position="3" root="ق س م" stem="قِسْمَةٌ" lemma="قِسْمَة">قِسْمَةٌۭ</word>
+  <line eid="page:526:line:10"/>
+  <line number="11" sid="page:526:line:11"/>
+  <word id="72732" position="4" root="ض   ي   ز" stem="ضِيزَىٰٓ" lemma="ضِيزَىٰٓ">ضِيزَىٰٓ</word>
+  <word id="72733" position="5">٢٢</word>
+  <ayah eid="53:22:hafs-kufi"/>
+  <ayah number="23" tradition="hafs-kufi" sid="53:23:hafs-kufi"/>
+  <word id="72734" position="1" stem="إِنْ" lemma="إِن">إِنْ</word>
+  <word id="72735" position="2" stem="هِىَ">هِىَ</word>
+  <word id="72736" position="3" stem="إِلَّآ" lemma="إِلَّا">إِلَّآ</word>
+  <word id="72737" position="4" root="س   م   و" stem="أَسْمَآءٌ" lemma="اسْم">أَسْمَآءٌۭ</word>
+  <word id="72738" position="5" root="س   م   و" stem="سَمَّيْ" lemma="سَمَّىٰ">سَمَّيْتُمُوهَآ</word>
+  <word id="72739" position="6" stem="أَنتُمْ">أَنتُمْ</word>
+  <word id="72740" position="7" root="ا   ب   و" stem="ءَابَآؤُ" lemma="آبَاء">وَءَابَآؤُكُم</word>
+  <word id="72741" position="8" stem="مَّآ" lemma="مَا">مَّآ</word>
+  <word id="72742" position="9" root="ن ز ل" stem="أَنزَلَ" lemma="أَنزَلَ">أَنزَلَ</word>
+  <line eid="page:526:line:11"/>
+  <line number="12" sid="page:526:line:12"/>
+  <word id="72743" position="10" root="ا ل ه" stem="اللَّهُ" lemma="اللَّه">ٱللَّهُ</word>
+  <word id="72744" position="11" stem="هَا">بِهَا</word>
+  <word id="72745" position="12" stem="مِن" lemma="مِن">مِن</word>
+  <word id="72746" position="13" root="س ل ط" stem="سُلْطَٰنٍ" lemma="سُلْطَٰن">سُلْطَـٰنٍ ۚ</word>
+  <word id="72747" position="14" stem="إِن" lemma="إِن">إِن</word>
+  <word id="72748" position="15" root="ت ب ع" stem="يَتَّبِعُ" lemma="اتَّبَعَ">يَتَّبِعُونَ</word>
+  <word id="72749" position="16" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
+  <word id="72750" position="17" root="ظ   ن   ن" stem="ظَّنَّ" lemma="ظَنّ">ٱلظَّنَّ</word>
+  <word id="72751" position="18" stem="مَا" lemma="مَا">وَمَا</word>
+  <word id="72752" position="19" root="ه   و   ي" stem="تَهْوَى" lemma="هَوَىٰ">تَهْوَى</word>
+  <word id="72753" position="20" root="ن ف س" stem="أَنفُسُ">ٱلْأَنفُسُ ۖ</word>
+  <line eid="page:526:line:12"/>
+  <line number="13" sid="page:526:line:13"/>
+  <word id="72754" position="21" stem="قَدْ" lemma="قَد">وَلَقَدْ</word>
+  <word id="72755" position="22" root="ج   ي   ا" stem="جَآءَ" lemma="جَآءَ">جَآءَهُم</word>
+  <word id="72756" position="23" stem="مِّن" lemma="مِن">مِّن</word>
+  <word id="72757" position="24" root="ر   ب   ب" stem="رَّبِّ" lemma="رَبّ">رَّبِّهِمُ</word>
+  <word id="72758" position="25" root="ه   د   ي" stem="هُدَىٰٓ" lemma="هُدًى">ٱلْهُدَىٰٓ</word>
+  <word id="72759" position="26">٢٣</word>
+  <ayah eid="53:23:hafs-kufi"/>
+  <ayah number="24" tradition="hafs-kufi" sid="53:24:hafs-kufi"/>
+  <word id="72760" position="1" stem="أَمْ" lemma="أَم">أَمْ</word>
+  <word id="72761" position="2" root="ا ن س" stem="إِنسَٰنِ" lemma="إِنسَٰن">لِلْإِنسَـٰنِ</word>
+  <word id="72762" position="3" stem="مَا" lemma="مَا">مَا</word>
+  <word id="72763" position="4" root="م   ن   ي" stem="تَمَنَّىٰ" lemma="تَمَنَّىٰٓ">تَمَنَّىٰ</word>
+  <word id="72764" position="5">٢٤</word>
+  <ayah eid="53:24:hafs-kufi"/>
+  <ayah number="25" tradition="hafs-kufi" sid="53:25:hafs-kufi"/>
+  <word id="72765" position="1" root="ا ل ه" stem="لَّهِ" lemma="اللَّه">فَلِلَّهِ</word>
+  <line eid="page:526:line:13"/>
+  <line number="14" sid="page:526:line:14"/>
+  <word id="72766" position="2" root="ا خ ر" stem="ءَاخِرَةُ" lemma="آخِر">ٱلْـَٔاخِرَةُ</word>
+  <word id="72767" position="3" root="ا   و   ل" stem="أُولَىٰ" lemma="أَوَّل">وَٱلْأُولَىٰ</word>
+  <word id="72768" position="4">٢٥</word>
+  <rub eid="rub:210"/>
+  <rub number="211" sid="rub:211"/>
+  <ayah eid="53:25:hafs-kufi"/>
+  <ayah number="26" tradition="hafs-kufi" sid="53:26:hafs-kufi"/>
+  <word id="72769" position="1" stem="كَم" lemma="كَم">۞ وَكَم</word>
+  <word id="72770" position="2" stem="مِّن" lemma="مِن">مِّن</word>
+  <word id="72771" position="3" root="م ل ك" stem="مَّلَكٍ" lemma="مَلَك">مَّلَكٍۢ</word>
+  <word id="72772" position="4" stem="فِى" lemma="فِى">فِى</word>
+  <word id="72773" position="5" root="س   م   و" stem="سَّمَٰوَٰتِ" lemma="سَمَآء">ٱلسَّمَـٰوَٰتِ</word>
+  <word id="72774" position="6" stem="لَا" lemma="لَا">لَا</word>
+  <word id="72775" position="7" root="غ ن ي" stem="تُغْنِى" lemma="أَغْنَتْ">تُغْنِى</word>
+  <line eid="page:526:line:14"/>
+  <line number="15" sid="page:526:line:15"/>
+  <word id="72776" position="8" root="ش ف ع" stem="شَفَٰعَتُ">شَفَـٰعَتُهُمْ</word>
+  <word id="72777" position="9" root="ش   ي   ا" stem="شَيْـًٔا" lemma="شَفَٰعَة">شَيْـًٔا</word>
+  <word id="72778" position="10" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
+  <word id="72779" position="11" stem="مِنۢ" lemma="مِن">مِنۢ</word>
+  <word id="72780" position="12" root="ب ع د" stem="بَعْدِ" lemma="بَعْد">بَعْدِ</word>
+  <word id="72781" position="13" stem="أَن" lemma="أَن">أَن</word>
+  <word id="72782" position="14" root="ا ذ ن" stem="يَأْذَنَ" lemma="أَذِنَ">يَأْذَنَ</word>
+  <word id="72783" position="15" root="ا ل ه" stem="اللَّهُ" lemma="اللَّه">ٱللَّهُ</word>
+  <word id="72784" position="16" stem="مَن" lemma="مِن">لِمَن</word>
+  <word id="72785" position="17" root="ش   ي   ا" stem="يَشَآءُ" lemma="شَآءَ">يَشَآءُ</word>
+  <word id="72786" position="18" root="ر   ض   و" stem="يَرْضَىٰٓ" lemma="رَّضِىَ">وَيَرْضَىٰٓ</word>
+  <word id="72787" position="19">٢٦</word>
+  <page eid="page:526"/>
+  <page number="527" sid="page:527"/>
+  <line eid="page:526:line:15"/>
+  <line number="1" sid="page:527:line:1"/>
+  <ayah eid="53:26:hafs-kufi"/>
+  <ayah number="27" tradition="hafs-kufi" sid="53:27:hafs-kufi"/>
+  <word id="72788" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
+  <word id="72789" position="2" stem="الَّذِينَ" lemma="الَّذِى">ٱلَّذِينَ</word>
+  <word id="72790" position="3" stem="لَا" lemma="لَا">لَا</word>
+  <word id="72791" position="4" root="ا   م   ن" stem="يُؤْمِنُ" lemma="ءَامَنَ">يُؤْمِنُونَ</word>
+  <word id="72792" position="5" root="ا خ ر" stem="ءَاخِرَةِ" lemma="آخِر">بِٱلْـَٔاخِرَةِ</word>
+  <word id="72793" position="6" root="س   م   و" stem="يُسَمُّ" lemma="سَمَّىٰ">لَيُسَمُّونَ</word>
+  <word id="72794" position="7" root="م ل ك" stem="مَلَٰٓئِكَةَ" lemma="مَلَك">ٱلْمَلَـٰٓئِكَةَ</word>
+  <word id="72795" position="8" root="س   م   و" stem="تَسْمِيَةَ" lemma="تَسْمِيَة">تَسْمِيَةَ</word>
+  <word id="72796" position="9" root="ا ن ث" stem="أُنثَىٰ" lemma="أُنثَىٰ">ٱلْأُنثَىٰ</word>
+  <word id="72797" position="10">٢٧</word>
+  <line eid="page:527:line:1"/>
+  <line number="2" sid="page:527:line:2"/>
+  <ayah eid="53:27:hafs-kufi"/>
+  <ayah number="28" tradition="hafs-kufi" sid="53:28:hafs-kufi"/>
+  <word id="72798" position="1" stem="مَا" lemma="مَا">وَمَا</word>
+  <word id="72799" position="2" stem="هُم">لَهُم</word>
+  <word id="72800" position="3" stem="هِۦ">بِهِۦ</word>
+  <word id="72801" position="4" stem="مِنْ" lemma="مِن">مِنْ</word>
+  <word id="72802" position="5" root="ع ل م" stem="عِلْمٍ" lemma="عِلْم">عِلْمٍ ۖ</word>
+  <word id="72803" position="6" stem="إِن" lemma="إِن">إِن</word>
+  <word id="72804" position="7" root="ت ب ع" stem="يَتَّبِعُ" lemma="اتَّبَعَ">يَتَّبِعُونَ</word>
+  <word id="72805" position="8" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
+  <word id="72806" position="9" root="ظ   ن   ن" stem="ظَّنَّ" lemma="ظَنّ">ٱلظَّنَّ ۖ</word>
+  <word id="72807" position="10" stem="إِنَّ" lemma="إِنّ">وَإِنَّ</word>
+  <word id="72808" position="11" root="ظ   ن   ن" stem="ظَّنَّ" lemma="ظَنّ">ٱلظَّنَّ</word>
+  <word id="72809" position="12" stem="لَا" lemma="لَا">لَا</word>
+  <word id="72810" position="13" root="غ ن ي" stem="يُغْنِى" lemma="أَغْنَتْ">يُغْنِى</word>
+  <word id="72811" position="14" stem="مِنَ" lemma="مِن">مِنَ</word>
+  <line eid="page:527:line:2"/>
+  <line number="3" sid="page:527:line:3"/>
+  <word id="72812" position="15" root="ح   ق   ق" stem="حَقِّ" lemma="حَقّ">ٱلْحَقِّ</word>
+  <word id="72813" position="16" root="ش   ي   ا" stem="شَيْـًٔا" lemma="شَىْء">شَيْـًۭٔا</word>
+  <word id="72814" position="17">٢٨</word>
+  <ayah eid="53:28:hafs-kufi"/>
+  <ayah number="29" tradition="hafs-kufi" sid="53:29:hafs-kufi"/>
+  <word id="72815" position="1" root="ع ر ض" stem="أَعْرِضْ" lemma="أَعْرَضَ">فَأَعْرِضْ</word>
+  <word id="72816" position="2" stem="عَن" lemma="عَن">عَن</word>
+  <word id="72817" position="3" stem="مَّن" lemma="مِن">مَّن</word>
+  <word id="72818" position="4" root="و ل ي" stem="تَوَلَّىٰ" lemma="تَوَلَّىٰ">تَوَلَّىٰ</word>
+  <word id="72819" position="5" stem="عَن" lemma="عَن">عَن</word>
+  <word id="72820" position="6" root="ذ ك ر" stem="ذِكْرِ" lemma="ذِكْر">ذِكْرِنَا</word>
+  <word id="72821" position="7" stem="لَمْ" lemma="لَم">وَلَمْ</word>
+  <word id="72822" position="8" root="ر   و   د" stem="يُرِدْ" lemma="أَرَادَ">يُرِدْ</word>
+  <word id="72823" position="9" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
+  <word id="72824" position="10" root="ح   ي   ي" stem="حَيَوٰةَ" lemma="حَيَوٰة">ٱلْحَيَوٰةَ</word>
+  <line eid="page:527:line:3"/>
+  <line number="4" sid="page:527:line:4"/>
+  <word id="72825" position="11" root="د   ن   و" stem="دُّنْيَا" lemma="دُّنْيَا">ٱلدُّنْيَا</word>
+  <word id="72826" position="12">٢٩</word>
+  <ayah eid="53:29:hafs-kufi"/>
+  <ayah number="30" tradition="hafs-kufi" sid="53:30:hafs-kufi"/>
+  <word id="72827" position="1" stem="ذَٰلِكَ" lemma="ذَٰلِك">ذَٰلِكَ</word>
+  <word id="72828" position="2" root="ب ل غ" stem="مَبْلَغُ" lemma="مَبْلَغ">مَبْلَغُهُم</word>
+  <word id="72829" position="3" stem="مِّنَ" lemma="مِن">مِّنَ</word>
+  <word id="72830" position="4" root="ع ل م" stem="عِلْمِ" lemma="عِلْم">ٱلْعِلْمِ ۚ</word>
+  <word id="72831" position="5" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
+  <word id="72832" position="6" root="ر   ب   ب" stem="رَبَّ" lemma="رَبّ">رَبَّكَ</word>
+  <word id="72833" position="7" stem="هُوَ">هُوَ</word>
+  <word id="72834" position="8" root="ع ل م" stem="أَعْلَمُ" lemma="أَعْلَم">أَعْلَمُ</word>
+  <word id="72835" position="9" stem="مَن" lemma="مِن">بِمَن</word>
+  <word id="72836" position="10" root="ض   ل   ل" stem="ضَلَّ">ضَلَّ</word>
+  <word id="72837" position="11" stem="عَن" lemma="عَن">عَن</word>
+  <line eid="page:527:line:4"/>
+  <line number="5" sid="page:527:line:5"/>
+  <word id="72838" position="12" root="س ب ل" stem="سَبِيلِ" lemma="سَبِيل">سَبِيلِهِۦ</word>
+  <word id="72839" position="13" stem="هُوَ">وَهُوَ</word>
+  <word id="72840" position="14" root="ع ل م" stem="أَعْلَمُ" lemma="أَعْلَم">أَعْلَمُ</word>
+  <word id="72841" position="15" stem="مَنِ" lemma="مِن">بِمَنِ</word>
+  <word id="72842" position="16" root="ه   د   ي" stem="اهْتَدَىٰ" lemma="اهْتَدَىٰ">ٱهْتَدَىٰ</word>
+  <word id="72843" position="17">٣٠</word>
+  <ayah eid="53:30:hafs-kufi"/>
+  <ayah number="31" tradition="hafs-kufi" sid="53:31:hafs-kufi"/>
+  <word id="72844" position="1" root="ا ل ه" stem="لَّهِ" lemma="اللَّه">وَلِلَّهِ</word>
+  <word id="72845" position="2" stem="مَا" lemma="مَا">مَا</word>
+  <word id="72846" position="3" stem="فِى" lemma="فِى">فِى</word>
+  <word id="72847" position="4" root="س   م   و" stem="سَّمَٰوَٰتِ" lemma="سَمَآء">ٱلسَّمَـٰوَٰتِ</word>
+  <word id="72848" position="5" stem="مَا" lemma="مَا">وَمَا</word>
+  <line eid="page:527:line:5"/>
+  <line number="6" sid="page:527:line:6"/>
+  <word id="72849" position="6" stem="فِى" lemma="فِى">فِى</word>
+  <word id="72850" position="7" root="ا   ر   ض" stem="أَرْضِ" lemma="أَرْض">ٱلْأَرْضِ</word>
+  <word id="72851" position="8" root="ج   ز   ي" stem="يَجْزِىَ" lemma="جَزَىٰ">لِيَجْزِىَ</word>
+  <word id="72852" position="9" stem="الَّذِينَ" lemma="الَّذِى">ٱلَّذِينَ</word>
+  <word id="72853" position="10" root="س   و   ا" stem="أَسَٰٓـُٔ" lemma="أَسَآءَ">أَسَـٰٓـُٔوا۟</word>
+  <word id="72854" position="11" stem="مَا" lemma="مَا">بِمَا</word>
+  <word id="72855" position="12" root="ع م ل" stem="عَمِلُ" lemma="عَمِلَ">عَمِلُوا۟</word>
+  <word id="72856" position="13" root="ج   ز   ي" stem="يَجْزِىَ" lemma="جَزَىٰ">وَيَجْزِىَ</word>
+  <word id="72857" position="14" stem="الَّذِينَ" lemma="الَّذِى">ٱلَّذِينَ</word>
+  <word id="72858" position="15" root="ح س ن" stem="أَحْسَنُ" lemma="أَحْسَنَ">أَحْسَنُوا۟</word>
+  <line eid="page:527:line:6"/>
+  <line number="7" sid="page:527:line:7"/>
+  <word id="72859" position="16" root="ح س ن" stem="حُسْنَى" lemma="حُسْنَىٰ">بِٱلْحُسْنَى</word>
+  <word id="72860" position="17">٣١</word>
+  <ayah eid="53:31:hafs-kufi"/>
+  <ayah number="32" tradition="hafs-kufi" sid="53:32:hafs-kufi"/>
+  <word id="72861" position="1" stem="الَّذِينَ" lemma="الَّذِى">ٱلَّذِينَ</word>
+  <word id="72862" position="2" root="ج ن ب" stem="يَجْتَنِبُ" lemma="اجْتَنَبُ">يَجْتَنِبُونَ</word>
+  <word id="72863" position="3" root="ك ب ر" stem="كَبَٰٓئِرَ" lemma="كَبِيرَة">كَبَـٰٓئِرَ</word>
+  <word id="72864" position="4" root="ا ث م" stem="إِثْمِ" lemma="إِثْم">ٱلْإِثْمِ</word>
+  <word id="72865" position="5" root="ف ح ش" stem="فَوَٰحِشَ" lemma="فَٰحِشَة">وَٱلْفَوَٰحِشَ</word>
+  <word id="72866" position="6" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
+  <word id="72867" position="7" root="ل   م   م" stem="لَّمَمَ" lemma="لَّمَم">ٱللَّمَمَ ۚ</word>
+  <line eid="page:527:line:7"/>
+  <line number="8" sid="page:527:line:8"/>
+  <word id="72868" position="8" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
+  <word id="72869" position="9" root="ر   ب   ب" stem="رَبَّ" lemma="رَبّ">رَبَّكَ</word>
+  <word id="72870" position="10" root="و س ع" stem="وَٰسِعُ" lemma="وَٰسِع">وَٰسِعُ</word>
+  <word id="72871" position="11" root="غ ف ر" stem="مَغْفِرَةِ" lemma="مَّغْفِرَة">ٱلْمَغْفِرَةِ ۚ</word>
+  <word id="72872" position="12" stem="هُوَ">هُوَ</word>
+  <word id="72873" position="13" root="ع ل م" stem="أَعْلَمُ" lemma="أَعْلَم">أَعْلَمُ</word>
+  <word id="72874" position="14" stem="كُمْ">بِكُمْ</word>
+  <word id="72875" position="15" stem="إِذْ" lemma="إِذ">إِذْ</word>
+  <word id="72876" position="16" root="ن ش ا" stem="أَنشَأَ" lemma="أَنشَأَ">أَنشَأَكُم</word>
+  <word id="72877" position="17" stem="مِّنَ" lemma="مِن">مِّنَ</word>
+  <word id="72878" position="18" root="ا   ر   ض" stem="أَرْضِ" lemma="أَرْض">ٱلْأَرْضِ</word>
+  <line eid="page:527:line:8"/>
+  <line number="9" sid="page:527:line:9"/>
+  <word id="72879" position="19" stem="إِذْ" lemma="إِذ">وَإِذْ</word>
+  <word id="72880" position="20" stem="أَنتُمْ">أَنتُمْ</word>
+  <word id="72881" position="21" root="ج   ن   ن" stem="أَجِنَّةٌ" lemma="أَجِنَّة">أَجِنَّةٌۭ</word>
+  <word id="72882" position="22" stem="فِى" lemma="فِى">فِى</word>
+  <word id="72883" position="23" root="ب ط ن" stem="بُطُونِ" lemma="بَطْن">بُطُونِ</word>
+  <word id="72884" position="24" root="ا   م   م" stem="أُمَّهَٰتِ" lemma="أُمّ">أُمَّهَـٰتِكُمْ ۖ</word>
+  <word id="72885" position="25" stem="لَا" lemma="لَا">فَلَا</word>
+  <word id="72886" position="26" root="ز   ك   و" stem="تُزَكُّ" lemma="زَكَّىٰ">تُزَكُّوٓا۟</word>
+  <word id="72887" position="27" root="ن ف س" stem="أَنفُسَ">أَنفُسَكُمْ ۖ</word>
+  <word id="72888" position="28" stem="هُوَ">هُوَ</word>
+  <word id="72889" position="29" root="ع ل م" stem="أَعْلَمُ" lemma="أَعْلَم">أَعْلَمُ</word>
+  <line eid="page:527:line:9"/>
+  <line number="10" sid="page:527:line:10"/>
+  <word id="72890" position="30" stem="مَنِ" lemma="مِن">بِمَنِ</word>
+  <word id="72891" position="31" root="و   ق   ي" stem="اتَّقَىٰٓ" lemma="اتَّقَىٰ">ٱتَّقَىٰٓ</word>
+  <word id="72892" position="32">٣٢</word>
+  <ayah eid="53:32:hafs-kufi"/>
+  <ayah number="33" tradition="hafs-kufi" sid="53:33:hafs-kufi"/>
+  <word id="72893" position="1" root="ر   ا   ي" stem="رَءَيْ" lemma="رَءَا">أَفَرَءَيْتَ</word>
+  <word id="72894" position="2" stem="الَّذِى" lemma="الَّذِى">ٱلَّذِى</word>
+  <word id="72895" position="3" root="و ل ي" stem="تَوَلَّىٰ" lemma="تَوَلَّىٰ">تَوَلَّىٰ</word>
+  <word id="72896" position="4">٣٣</word>
+  <ayah eid="53:33:hafs-kufi"/>
+  <ayah number="34" tradition="hafs-kufi" sid="53:34:hafs-kufi"/>
+  <word id="72897" position="1" root="ع   ط   و" stem="أَعْطَىٰ" lemma="أَعْطَىٰ">وَأَعْطَىٰ</word>
+  <word id="72898" position="2" root="ق   ل   ل" stem="قَلِيلًا" lemma="قَلِيل">قَلِيلًۭا</word>
+  <word id="72899" position="3" root="ك   د   ي" stem="أَكْدَىٰٓ" lemma="أَكْدَىٰٓ">وَأَكْدَىٰٓ</word>
+  <line eid="page:527:line:10"/>
+  <line number="11" sid="page:527:line:11"/>
+  <word id="72900" position="4">٣٤</word>
+  <ayah eid="53:34:hafs-kufi"/>
+  <ayah number="35" tradition="hafs-kufi" sid="53:35:hafs-kufi"/>
+  <word id="72901" position="1" root="ع ن د" stem="عِندَ" lemma="عِند">أَعِندَهُۥ</word>
+  <word id="72902" position="2" root="ع ل م" stem="عِلْمُ" lemma="عِلْم">عِلْمُ</word>
+  <word id="72903" position="3" root="غ   ي   ب" stem="غَيْبِ" lemma="غَيْب">ٱلْغَيْبِ</word>
+  <word id="72904" position="4" stem="هُوَ">فَهُوَ</word>
+  <word id="72905" position="5" root="ر   ا   ي" stem="يَرَىٰٓ" lemma="رَءَا">يَرَىٰٓ</word>
+  <word id="72906" position="6">٣٥</word>
+  <ayah eid="53:35:hafs-kufi"/>
+  <ayah number="36" tradition="hafs-kufi" sid="53:36:hafs-kufi"/>
+  <word id="72907" position="1" stem="أَمْ" lemma="أَم">أَمْ</word>
+  <word id="72908" position="2" stem="لَمْ" lemma="لَم">لَمْ</word>
+  <word id="72909" position="3" root="ن ب ا" stem="يُنَبَّأْ" lemma="نَبَّأَ">يُنَبَّأْ</word>
+  <word id="72910" position="4" stem="مَا" lemma="مَا">بِمَا</word>
+  <word id="72911" position="5" stem="فِى" lemma="فِى">فِى</word>
+  <word id="72912" position="6" root="ص ح ف" stem="صُحُفِ" lemma="صُحُف">صُحُفِ</word>
+  <line eid="page:527:line:11"/>
+  <line number="12" sid="page:527:line:12"/>
+  <word id="72913" position="7" stem="مُوسَىٰ" lemma="مُوسَىٰ">مُوسَىٰ</word>
+  <word id="72914" position="8">٣٦</word>
+  <ayah eid="53:36:hafs-kufi"/>
+  <ayah number="37" tradition="hafs-kufi" sid="53:37:hafs-kufi"/>
+  <word id="72915" position="1" stem="إِبْرَٰهِيمَ" lemma="إِبْرَاهِيم">وَإِبْرَٰهِيمَ</word>
+  <word id="72916" position="2" stem="الَّذِى" lemma="الَّذِى">ٱلَّذِى</word>
+  <word id="72917" position="3" root="و   ف   ي" stem="وَفَّىٰٓ" lemma="وَفَّىٰٓ">وَفَّىٰٓ</word>
+  <word id="72918" position="4">٣٧</word>
+  <ayah eid="53:37:hafs-kufi"/>
+  <ayah number="38" tradition="hafs-kufi" sid="53:38:hafs-kufi"/>
+  <word id="72919" position="1" stem="أَ" lemma="لَا">أَلَّا</word>
+  <word id="72920" position="2" root="و ز ر" stem="تَزِرُ" lemma="يَزِرُ">تَزِرُ</word>
+  <word id="72921" position="3" root="و ز ر" stem="وَازِرَةٌ" lemma="وَازِرَة">وَازِرَةٌۭ</word>
+  <word id="72922" position="4" root="و ز ر" stem="وِزْرَ" lemma="وِزْر">وِزْرَ</word>
+  <word id="72923" position="5" root="ا خ ر" stem="أُخْرَىٰ" lemma="آخَر">أُخْرَىٰ</word>
+  <line eid="page:527:line:12"/>
+  <line number="13" sid="page:527:line:13"/>
+  <word id="72924" position="6">٣٨</word>
+  <ayah eid="53:38:hafs-kufi"/>
+  <ayah number="39" tradition="hafs-kufi" sid="53:39:hafs-kufi"/>
+  <word id="72925" position="1" stem="أَن" lemma="أَن">وَأَن</word>
+  <word id="72926" position="2" root="ل ي س" stem="لَّيْسَ" lemma="لَّيْسَ">لَّيْسَ</word>
+  <word id="72927" position="3" root="ا ن س" stem="إِنسَٰنِ" lemma="إِنسَٰن">لِلْإِنسَـٰنِ</word>
+  <word id="72928" position="4" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
+  <word id="72929" position="5" stem="مَا" lemma="مَا">مَا</word>
+  <word id="72930" position="6" root="س   ع   ي" stem="سَعَىٰ" lemma="سَعَىٰ">سَعَىٰ</word>
+  <word id="72931" position="7">٣٩</word>
+  <ayah eid="53:39:hafs-kufi"/>
+  <ayah number="40" tradition="hafs-kufi" sid="53:40:hafs-kufi"/>
+  <word id="72932" position="1" stem="أَنَّ" lemma="أَنّ">وَأَنَّ</word>
+  <word id="72933" position="2" root="س   ع   ي" stem="سَعْيَ" lemma="سَعْي">سَعْيَهُۥ</word>
+  <word id="72934" position="3" stem="سَوْفَ" lemma="سَوْف">سَوْفَ</word>
+  <line eid="page:527:line:13"/>
+  <line number="14" sid="page:527:line:14"/>
+  <word id="72935" position="4" root="ر   ا   ي" stem="يُرَىٰ" lemma="رَءَا">يُرَىٰ</word>
+  <word id="72936" position="5">٤٠</word>
+  <ayah eid="53:40:hafs-kufi"/>
+  <ayah number="41" tradition="hafs-kufi" sid="53:41:hafs-kufi"/>
+  <word id="72937" position="1" stem="ثُمَّ" lemma="ثُمّ">ثُمَّ</word>
+  <word id="72938" position="2" root="ج   ز   ي" stem="يُجْزَىٰ" lemma="جَزَىٰ">يُجْزَىٰهُ</word>
+  <word id="72939" position="3" root="ج   ز   ي" stem="جَزَآءَ" lemma="جَزَآء">ٱلْجَزَآءَ</word>
+  <word id="72940" position="4" root="و   ف   ي" stem="أَوْفَىٰ" lemma="أَوْفَىٰ">ٱلْأَوْفَىٰ</word>
+  <word id="72941" position="5">٤١</word>
+  <ayah eid="53:41:hafs-kufi"/>
+  <ayah number="42" tradition="hafs-kufi" sid="53:42:hafs-kufi"/>
+  <word id="72942" position="1" stem="أَنَّ" lemma="أَنّ">وَأَنَّ</word>
+  <word id="72943" position="2" stem="إِلَىٰ" lemma="إِلَىٰ">إِلَىٰ</word>
+  <word id="72944" position="3" root="ر   ب   ب" stem="رَبِّ" lemma="رَبّ">رَبِّكَ</word>
+  <word id="72945" position="4" root="ن   ه   ي" stem="مُنتَهَىٰ" lemma="مُنتَهَىٰ">ٱلْمُنتَهَىٰ</word>
+  <line eid="page:527:line:14"/>
+  <line number="15" sid="page:527:line:15"/>
+  <word id="72946" position="5">٤٢</word>
+  <ayah eid="53:42:hafs-kufi"/>
+  <ayah number="43" tradition="hafs-kufi" sid="53:43:hafs-kufi"/>
+  <word id="72947" position="1" stem="أَنَّ" lemma="أَنّ">وَأَنَّهُۥ</word>
+  <word id="72948" position="2" stem="هُوَ">هُوَ</word>
+  <word id="72949" position="3" root="ض ح ك" stem="أَضْحَكَ" lemma="أَضْحَكَ">أَضْحَكَ</word>
+  <word id="72950" position="4" root="ب   ك   ي" stem="أَبْكَىٰ" lemma="أَبْكَىٰ">وَأَبْكَىٰ</word>
+  <word id="72951" position="5">٤٣</word>
+  <ayah eid="53:43:hafs-kufi"/>
+  <ayah number="44" tradition="hafs-kufi" sid="53:44:hafs-kufi"/>
+  <word id="72952" position="1" stem="أَنَّ" lemma="أَنّ">وَأَنَّهُۥ</word>
+  <word id="72953" position="2" stem="هُوَ">هُوَ</word>
+  <word id="72954" position="3" root="م   و   ت" stem="أَمَاتَ" lemma="أَمَاتَ">أَمَاتَ</word>
+  <word id="72955" position="4" root="ح   ي   ي" stem="أَحْيَا" lemma="أَحْيَا">وَأَحْيَا</word>
+  <word id="72956" position="5">٤٤</word>
+  <page eid="page:527"/>
+  <page number="528" sid="page:528"/>
+  <line eid="page:527:line:15"/>
+  <line number="1" sid="page:528:line:1"/>
+  <ayah eid="53:44:hafs-kufi"/>
+  <ayah number="45" tradition="hafs-kufi" sid="53:45:hafs-kufi"/>
+  <word id="72957" position="1" stem="أَنَّ" lemma="أَنّ">وَأَنَّهُۥ</word>
+  <word id="72958" position="2" root="خ ل ق" stem="خَلَقَ" lemma="خَلَقَ">خَلَقَ</word>
+  <word id="72959" position="3" root="ز   و   ج" stem="زَّوْجَيْنِ" lemma="زَوْج">ٱلزَّوْجَيْنِ</word>
+  <word id="72960" position="4" root="ذ ك ر" stem="ذَّكَرَ" lemma="ذَكَر">ٱلذَّكَرَ</word>
+  <word id="72961" position="5" root="ا ن ث" stem="أُنثَىٰ" lemma="أُنثَىٰ">وَٱلْأُنثَىٰ</word>
+  <word id="72962" position="6">٤٥</word>
+  <ayah eid="53:45:hafs-kufi"/>
+  <ayah number="46" tradition="hafs-kufi" sid="53:46:hafs-kufi"/>
+  <word id="72963" position="1" stem="مِن" lemma="مِن">مِن</word>
+  <word id="72964" position="2" root="ن ط ف" stem="نُّطْفَةٍ" lemma="نُّطْفَة">نُّطْفَةٍ</word>
+  <word id="72965" position="3" stem="إِذَا" lemma="إِذَا">إِذَا</word>
+  <word id="72966" position="4" root="م   ن   ي" stem="تُمْنَىٰ" lemma="يُمْنَىٰ">تُمْنَىٰ</word>
+  <word id="72967" position="5">٤٦</word>
+  <ayah eid="53:46:hafs-kufi"/>
+  <ayah number="47" tradition="hafs-kufi" sid="53:47:hafs-kufi"/>
+  <word id="72968" position="1" stem="أَنَّ" lemma="أَنّ">وَأَنَّ</word>
+  <line eid="page:528:line:1"/>
+  <line number="2" sid="page:528:line:2"/>
+  <word id="72969" position="2" stem="عَلَيْ" lemma="عَلَىٰ">عَلَيْهِ</word>
+  <word id="72970" position="3" root="ن ش ا" stem="نَّشْأَةَ" lemma="نَّشْأَة">ٱلنَّشْأَةَ</word>
+  <word id="72971" position="4" root="ا خ ر" stem="أُخْرَىٰ" lemma="آخَر">ٱلْأُخْرَىٰ</word>
+  <word id="72972" position="5">٤٧</word>
+  <ayah eid="53:47:hafs-kufi"/>
+  <ayah number="48" tradition="hafs-kufi" sid="53:48:hafs-kufi"/>
+  <word id="72973" position="1" stem="أَنَّ" lemma="أَنّ">وَأَنَّهُۥ</word>
+  <word id="72974" position="2" stem="هُوَ">هُوَ</word>
+  <word id="72975" position="3" root="غ ن ي" stem="أَغْنَىٰ" lemma="أَغْنَىٰ">أَغْنَىٰ</word>
+  <word id="72976" position="4" root="ق   ن   ي" stem="أَقْنَىٰ" lemma="أَقْنَىٰ">وَأَقْنَىٰ</word>
+  <word id="72977" position="5">٤٨</word>
+  <ayah eid="53:48:hafs-kufi"/>
+  <ayah number="49" tradition="hafs-kufi" sid="53:49:hafs-kufi"/>
+  <word id="72978" position="1" stem="أَنَّ" lemma="أَنّ">وَأَنَّهُۥ</word>
+  <word id="72979" position="2" stem="هُوَ">هُوَ</word>
+  <word id="72980" position="3" root="ر   ب   ب" stem="رَبُّ" lemma="رَبّ">رَبُّ</word>
+  <line eid="page:528:line:2"/>
+  <line number="3" sid="page:528:line:3"/>
+  <word id="72981" position="4" root="ش ع ر" stem="شِّعْرَىٰ" lemma="شِّعْرَىٰ">ٱلشِّعْرَىٰ</word>
+  <word id="72982" position="5">٤٩</word>
+  <ayah eid="53:49:hafs-kufi"/>
+  <ayah number="50" tradition="hafs-kufi" sid="53:50:hafs-kufi"/>
+  <word id="72983" position="1" stem="أَنَّ" lemma="أَنّ">وَأَنَّهُۥٓ</word>
+  <word id="72984" position="2" root="ه ل ك" stem="أَهْلَكَ" lemma="أَهْلَكَ">أَهْلَكَ</word>
+  <word id="72985" position="3" root="ع   و   د" stem="عَادًا" lemma="عَاد">عَادًا</word>
+  <word id="72986" position="4" root="ا   و   ل" stem="أُولَىٰ" lemma="أَوَّل">ٱلْأُولَىٰ</word>
+  <word id="72987" position="5">٥٠</word>
+  <ayah eid="53:50:hafs-kufi"/>
+  <ayah number="51" tradition="hafs-kufi" sid="53:51:hafs-kufi"/>
+  <word id="72988" position="1" stem="ثَمُودَا۟" lemma="ثَمُود">وَثَمُودَا۟</word>
+  <word id="72989" position="2" stem="مَآ" lemma="مَا">فَمَآ</word>
+  <word id="72990" position="3" root="ب   ق   ي" stem="أَبْقَىٰ" lemma="بَقِىَ">أَبْقَىٰ</word>
+  <word id="72991" position="4">٥١</word>
+  <line eid="page:528:line:3"/>
+  <line number="4" sid="page:528:line:4"/>
+  <ayah eid="53:51:hafs-kufi"/>
+  <ayah number="52" tradition="hafs-kufi" sid="53:52:hafs-kufi"/>
+  <word id="72992" position="1" root="ق   و   م" stem="قَوْمَ" lemma="قَوْم">وَقَوْمَ</word>
+  <word id="72993" position="2" stem="نُوحٍ" lemma="نُوح">نُوحٍۢ</word>
+  <word id="72994" position="3" stem="مِّن" lemma="مِن">مِّن</word>
+  <word id="72995" position="4" root="ق ب ل" stem="قَبْلُ" lemma="قَبْل">قَبْلُ ۖ</word>
+  <word id="72996" position="5" stem="إِنَّ" lemma="إِنّ">إِنَّهُمْ</word>
+  <word id="72997" position="6" root="ك   و   ن" stem="كَانُ" lemma="كَانَ">كَانُوا۟</word>
+  <word id="72998" position="7" stem="هُمْ">هُمْ</word>
+  <word id="72999" position="8" root="ظ ل م" stem="أَظْلَمَ" lemma="أَظْلَم">أَظْلَمَ</word>
+  <word id="73000" position="9" root="ط   غ   ي" stem="أَطْغَىٰ" lemma="أَطْغَىٰ">وَأَطْغَىٰ</word>
+  <word id="73001" position="10">٥٢</word>
+  <ayah eid="53:52:hafs-kufi"/>
+  <ayah number="53" tradition="hafs-kufi" sid="53:53:hafs-kufi"/>
+  <word id="73002" position="1" root="ا ف ك" stem="مُؤْتَفِكَةَ" lemma="مُؤْتَفِكَة">وَٱلْمُؤْتَفِكَةَ</word>
+  <line eid="page:528:line:4"/>
+  <line number="5" sid="page:528:line:5"/>
+  <word id="73003" position="2" root="ه   و   ي" stem="أَهْوَىٰ" lemma="هَوَىٰ">أَهْوَىٰ</word>
+  <word id="73004" position="3">٥٣</word>
+  <ayah eid="53:53:hafs-kufi"/>
+  <ayah number="54" tradition="hafs-kufi" sid="53:54:hafs-kufi"/>
+  <word id="73005" position="1" root="غ   ش   و" stem="غَشَّىٰ" lemma="غَشَّىٰ">فَغَشَّىٰهَا</word>
+  <word id="73006" position="2" stem="مَا" lemma="مَا">مَا</word>
+  <word id="73007" position="3" root="غ   ش   و" stem="غَشَّىٰ" lemma="غَشَّىٰ">غَشَّىٰ</word>
+  <word id="73008" position="4">٥٤</word>
+  <ayah eid="53:54:hafs-kufi"/>
+  <ayah number="55" tradition="hafs-kufi" sid="53:55:hafs-kufi"/>
+  <word id="73009" position="1" root="ا   ي   ي" stem="أَىِّ" lemma="أَىّ">فَبِأَىِّ</word>
+  <word id="73010" position="2" root="ا   ل   و" stem="ءَالَآءِ" lemma="ءَالَآء">ءَالَآءِ</word>
+  <word id="73011" position="3" root="ر   ب   ب" stem="رَبِّ" lemma="رَبّ">رَبِّكَ</word>
+  <word id="73012" position="4" root="م ر ي" stem="تَتَمَارَىٰ" lemma="تَمَارَ">تَتَمَارَىٰ</word>
+  <word id="73013" position="5">٥٥</word>
+  <line eid="page:528:line:5"/>
+  <line number="6" sid="page:528:line:6"/>
+  <ayah eid="53:55:hafs-kufi"/>
+  <ayah number="56" tradition="hafs-kufi" sid="53:56:hafs-kufi"/>
+  <word id="73014" position="1" stem="هَٰذَا" lemma="هَٰذَا">هَـٰذَا</word>
+  <word id="73015" position="2" root="ن ذ ر" stem="نَذِيرٌ" lemma="نَذِير">نَذِيرٌۭ</word>
+  <word id="73016" position="3" stem="مِّنَ" lemma="مِن">مِّنَ</word>
+  <word id="73017" position="4" root="ن ذ ر" stem="نُّذُرِ" lemma="نَذِير">ٱلنُّذُرِ</word>
+  <word id="73018" position="5" root="ا   و   ل" stem="أُولَىٰٓ" lemma="أَوَّل">ٱلْأُولَىٰٓ</word>
+  <word id="73019" position="6">٥٦</word>
+  <ayah eid="53:56:hafs-kufi"/>
+  <ayah number="57" tradition="hafs-kufi" sid="53:57:hafs-kufi"/>
+  <word id="73020" position="1" root="ا ز ف" stem="أَزِفَتِ" lemma="أَزِفَتِ">أَزِفَتِ</word>
+  <word id="73021" position="2" root="ا ز ف" stem="ءَازِفَةُ" lemma="ءَازِفَة">ٱلْـَٔازِفَةُ</word>
+  <word id="73022" position="3">٥٧</word>
+  <ayah eid="53:57:hafs-kufi"/>
+  <ayah number="58" tradition="hafs-kufi" sid="53:58:hafs-kufi"/>
+  <word id="73023" position="1" root="ل ي س" stem="لَيْسَ" lemma="لَّيْسَ">لَيْسَ</word>
+  <word id="73024" position="2" stem="هَا">لَهَا</word>
+  <word id="73025" position="3" stem="مِن" lemma="مِن">مِن</word>
+  <line eid="page:528:line:6"/>
+  <line number="7" sid="page:528:line:7"/>
+  <word id="73026" position="4" root="د   و   ن" stem="دُونِ" lemma="دُون">دُونِ</word>
+  <word id="73027" position="5" root="ا ل ه" stem="اللَّهِ" lemma="اللَّه">ٱللَّهِ</word>
+  <word id="73028" position="6" root="ك ش ف" stem="كَاشِفَةٌ" lemma="كَاشِفَة">كَاشِفَةٌ</word>
+  <word id="73029" position="7">٥٨</word>
+  <ayah eid="53:58:hafs-kufi"/>
+  <ayah number="59" tradition="hafs-kufi" sid="53:59:hafs-kufi"/>
+  <word id="73030" position="1" stem="مِنْ" lemma="مِن">أَفَمِنْ</word>
+  <word id="73031" position="2" stem="هَٰذَا" lemma="هَٰذَا">هَـٰذَا</word>
+  <word id="73032" position="3" root="ح د ث" stem="حَدِيثِ" lemma="حَدِيث">ٱلْحَدِيثِ</word>
+  <word id="73033" position="4" root="ع ج ب" stem="تَعْجَبُ" lemma="عَجِبُ">تَعْجَبُونَ</word>
+  <word id="73034" position="5">٥٩</word>
+  <ayah eid="53:59:hafs-kufi"/>
+  <ayah number="60" tradition="hafs-kufi" sid="53:60:hafs-kufi"/>
+  <word id="73035" position="1" root="ض ح ك" stem="تَضْحَكُ" lemma="ضَحِكَتْ">وَتَضْحَكُونَ</word>
+  <line eid="page:528:line:7"/>
+  <line number="8" sid="page:528:line:8"/>
+  <word id="73036" position="2" stem="لَا" lemma="لَا">وَلَا</word>
+  <word id="73037" position="3" root="ب   ك   ي" stem="تَبْكُ" lemma="بَكَتْ">تَبْكُونَ</word>
+  <word id="73038" position="4">٦٠</word>
+  <ayah eid="53:60:hafs-kufi"/>
+  <ayah number="61" tradition="hafs-kufi" sid="53:61:hafs-kufi"/>
+  <word id="73039" position="1" stem="أَنتُمْ">وَأَنتُمْ</word>
+  <word id="73040" position="2" root="س م د" stem="سَٰمِدُونَ" lemma="سَٰمِدُون">سَـٰمِدُونَ</word>
+  <word id="73041" position="3">٦١</word>
+  <ayah eid="53:61:hafs-kufi"/>
+  <ayah number="62" tradition="hafs-kufi" sid="53:62:hafs-kufi"/>
+  <word id="73042" position="1" root="س ج د" stem="اسْجُدُ" lemma="سَجَدَ">فَٱسْجُدُوا۟</word>
+  <word id="73043" position="2" root="ا ل ه" stem="لَّهِ" lemma="اللَّه">لِلَّهِ</word>
+  <word id="73044" position="3" root="ع ب د" stem="اعْبُدُ" lemma="عَبَدَ">وَٱعْبُدُوا۟ ۩</word>
+  <word id="73045" position="4">٦٢</word>
+  <sajda number="12" type="required" verseKey="53:62"/>
+  <ayah eid="53:62:hafs-kufi"/>
+  <line eid="page:528:line:8"/>
+  <page eid="page:528"/>
+  <rub eid="rub:211"/>
+  <hizb eid="hizb:53"/>
+  <manzil eid="manzil:7"/>
+  <juz eid="juz:27"/>
+</qusx>

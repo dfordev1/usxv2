@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="106" name="Quraysh" nameArabic="قريش" ayahCount="4" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)">
+  <juz number="30" sid="juz:30"/>
+  <manzil number="7" sid="manzil:7"/>
+  <hizb number="60" sid="hizb:60"/>
+  <rub number="240" sid="rub:240"/>
+  <page number="608" sid="page:608"/>
+  <line number="3" sid="page:608:line:3"/>
+  <ayah number="1" tradition="hafs-kufi" sid="106:1:hafs-kufi"/>
+  <word id="83448" position="1" root="ا ل ف" stem="إِيلَٰفِ" lemma="إِلَٰف">لِإِيلَـٰفِ</word>
+  <word id="83449" position="2" stem="قُرَيْشٍ" lemma="قُرَيْش">قُرَيْشٍ</word>
+  <word id="83450" position="3">١</word>
+  <ayah eid="106:1:hafs-kufi"/>
+  <ayah number="2" tradition="hafs-kufi" sid="106:2:hafs-kufi"/>
+  <word id="83451" position="1" root="ا ل ف" stem="إِۦلَٰفِ" lemma="إِلَٰف">إِۦلَـٰفِهِمْ</word>
+  <word id="83452" position="2" root="ر ح ل" stem="رِحْلَةَ" lemma="رِحْلَة">رِحْلَةَ</word>
+  <word id="83453" position="3" root="ش   ت   و" stem="شِّتَآءِ" lemma="شِّتَآء">ٱلشِّتَآءِ</word>
+  <word id="83454" position="4" root="ص ي ف" stem="صَّيْفِ" lemma="صَّيْف">وَٱلصَّيْفِ</word>
+  <word id="83455" position="5">٢</word>
+  <ayah eid="106:2:hafs-kufi"/>
+  <ayah number="3" tradition="hafs-kufi" sid="106:3:hafs-kufi"/>
+  <word id="83456" position="1" root="ع ب د" stem="يَعْبُدُ" lemma="عَبَدَ">فَلْيَعْبُدُوا۟</word>
+  <word id="83457" position="2" root="ر   ب   ب" stem="رَبَّ" lemma="رَبّ">رَبَّ</word>
+  <line eid="page:608:line:3"/>
+  <line number="4" sid="page:608:line:4"/>
+  <word id="83458" position="3" stem="هَٰذَا" lemma="هَٰذَا">هَـٰذَا</word>
+  <word id="83459" position="4" root="ب   ي   ت" stem="بَيْتِ" lemma="بَيْت">ٱلْبَيْتِ</word>
+  <word id="83460" position="5">٣</word>
+  <ayah eid="106:3:hafs-kufi"/>
+  <ayah number="4" tradition="hafs-kufi" sid="106:4:hafs-kufi"/>
+  <word id="83461" position="1" stem="الَّذِىٓ" lemma="الَّذِى">ٱلَّذِىٓ</word>
+  <word id="83462" position="2" root="ط ع م" stem="أَطْعَمَ" lemma="أَطْعَمَ">أَطْعَمَهُم</word>
+  <word id="83463" position="3" stem="مِّن" lemma="مِن">مِّن</word>
+  <word id="83464" position="4" root="ج   و   ع" stem="جُوعٍ" lemma="جُوع">جُوعٍۢ</word>
+  <word id="83465" position="5" root="ا   م   ن" stem="ءَامَنَ" lemma="ءَامَنَ">وَءَامَنَهُم</word>
+  <word id="83466" position="6" stem="مِّنْ" lemma="مِن">مِّنْ</word>
+  <word id="83467" position="7" root="خ   و   ف" stem="خَوْفٍۭ" lemma="خَوْف">خَوْفٍۭ</word>
+  <word id="83468" position="8">٤</word>
+  <ayah eid="106:4:hafs-kufi"/>
+  <line eid="page:608:line:4"/>
+  <page eid="page:608"/>
+  <rub eid="rub:240"/>
+  <hizb eid="hizb:60"/>
+  <manzil eid="manzil:7"/>
+  <juz eid="juz:30"/>
+</qusx>

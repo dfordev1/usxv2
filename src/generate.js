@@ -1,13 +1,23 @@
 #!/usr/bin/env node
 // QUSX generator — reads QUL raw data and emits one QUSX XML file per surah.
-// Usage: node src/generate.js [surahNumber ... | all]
+// Usage: node src/generate.js [--layout=key] [surahNumber ... | all]
+// Layout keys: madani-v2 (default), madani-v1, madani-v4-tajweed, qatar, indopak-15
 
 const fs = require("fs");
 const path = require("path");
 const { DatabaseSync } = require("node:sqlite");
 
 const RAW = path.join(__dirname, "..", "data", "raw");
+const LAYOUTS_DIR = path.join(__dirname, "..", "data", "layouts");
 const OUT = path.join(__dirname, "..", "output");
+
+const LAYOUTS = {
+  "madani-v2": { file: path.join(RAW, "qpc-v2-15-lines.db"), label: "KFGQPC V2 (1421H)" },
+  "madani-v1": { file: path.join(LAYOUTS_DIR, "qpc-v1-15-lines.db"), label: "KFGQPC V1 (1405H)" },
+  "madani-v4-tajweed": { file: path.join(LAYOUTS_DIR, "qpc-v4-tajweed-15-lines.db"), label: "QPC V4 Tajweed (1441H)" },
+  qatar: { file: path.join(LAYOUTS_DIR, "mushaf-qatar-layout.db"), label: "Mushaf Qatar" },
+  "indopak-15": { file: path.join(LAYOUTS_DIR, "qudratullah-indopak-15-lines.db"), label: "IndoPak 15-line (Qudratullah)" },
+};
 
 function loadJSON(name) {
   return JSON.parse(fs.readFileSync(path.join(RAW, name), "utf-8"));
@@ -32,7 +42,6 @@ const rubMeta = loadJSON("quran-metadata-rub.json");
 const manzilMeta = loadJSON("quran-metadata-manzil.json");
 const sajdaMeta = loadJSON("quran-metadata-sajda.json");
 
-const layoutDb = new DatabaseSync(path.join(RAW, "qpc-v2-15-lines.db"), { readOnly: true });
 const rootDb = new DatabaseSync(path.join(RAW, "word-root.db"), { readOnly: true });
 const stemDb = new DatabaseSync(path.join(RAW, "word-stem.db"), { readOnly: true });
 const lemmaDb = new DatabaseSync(path.join(RAW, "word-lemma.db"), { readOnly: true });
@@ -62,14 +71,23 @@ for (const rec of Object.values(ayahMeta)) {
   ayahByKey.set(rec.verse_key, rec);
 }
 
-// page/line layout: global word id -> {page, line}
-const pageRows = layoutDb.prepare("SELECT * FROM pages ORDER BY page_number, line_number").all();
-const wordLocation = new Map(); // word id -> {page, line, lineType, isCentered}
-for (const row of pageRows) {
-  if (row.line_type !== "ayah" || row.first_word_id === "" || row.last_word_id === "") continue;
-  for (let wid = row.first_word_id; wid <= row.last_word_id; wid++) {
-    wordLocation.set(wid, { page: row.page_number, line: row.line_number });
+// page/line layout: global word id -> {page, line}. Built per-layout at generation
+// time (see buildWordLocation) since different print editions place words on
+// different pages/lines — sometimes even a different total page count (e.g.
+// IndoPak layouts run 610 pages, not 604).
+function buildWordLocation(layoutDbPath) {
+  const db = new DatabaseSync(layoutDbPath, { readOnly: true });
+  const info = db.prepare("SELECT * FROM info").get();
+  const pageRows = db.prepare("SELECT * FROM pages ORDER BY page_number, line_number").all();
+  const wordLocation = new Map();
+  for (const row of pageRows) {
+    if (row.line_type !== "ayah" || row.first_word_id === "" || row.last_word_id === "") continue;
+    for (let wid = row.first_word_id; wid <= row.last_word_id; wid++) {
+      wordLocation.set(wid, { page: row.page_number, line: row.line_number });
+    }
   }
+  db.close();
+  return { wordLocation, info };
 }
 
 // juz/hizb/rub/manzil boundaries per surah: surah -> [{number, startAyah, endAyah}]
@@ -122,7 +140,7 @@ function findRange(index, surah, ayah) {
   return null;
 }
 
-function generateSurah(surahNumber) {
+function generateSurah(surahNumber, wordLocation, layoutLabel) {
   const surahWords = wordsBySurah.get(surahNumber);
   if (!surahWords) throw new Error("No words found for surah " + surahNumber);
 
@@ -133,7 +151,8 @@ function generateSurah(surahNumber) {
     `<qusx version="0.1" surah="${surahNumber}" name="${xmlEscape(
       surahName.name_simple
     )}" nameArabic="${xmlEscape(surahName.name_arabic)}" ayahCount="${surahName.verses_count}" ` +
-      `revelationPlace="${surahName.revelation_place}" bismillahPre="${surahName.bismillah_pre}" tradition="hafs-kufi">`
+      `revelationPlace="${surahName.revelation_place}" bismillahPre="${surahName.bismillah_pre}" ` +
+      `tradition="hafs-kufi" layout="${xmlEscape(layoutLabel)}">`
   );
 
   let openAyah = null;
@@ -243,8 +262,29 @@ function generateSurah(surahNumber) {
 // ---- CLI ------------------------------------------------------------------
 
 function main() {
-  const args = process.argv.slice(2);
-  fs.mkdirSync(OUT, { recursive: true });
+  const rawArgs = process.argv.slice(2);
+
+  let layoutKey = "madani-v2";
+  const args = [];
+  for (const a of rawArgs) {
+    const m = a.match(/^--layout=(.+)$/);
+    if (m) layoutKey = m[1];
+    else args.push(a);
+  }
+
+  const layout = LAYOUTS[layoutKey];
+  if (!layout) {
+    console.error(`Unknown layout "${layoutKey}". Available: ${Object.keys(LAYOUTS).join(", ")}`);
+    process.exit(1);
+  }
+  if (!fs.existsSync(layout.file)) {
+    console.error(`Layout database not found: ${layout.file}`);
+    process.exit(1);
+  }
+
+  const { wordLocation, info } = buildWordLocation(layout.file);
+  const outDir = path.join(OUT, layoutKey);
+  fs.mkdirSync(outDir, { recursive: true });
 
   let targets;
   if (args.length === 0 || args[0] === "all") {
@@ -253,9 +293,11 @@ function main() {
     targets = args.map(Number);
   }
 
+  console.log(`Layout: ${layout.label} (${info.number_of_pages} pages, ${info.lines_per_page} lines/page)`);
+
   for (const surahNumber of targets) {
-    const xml = generateSurah(surahNumber);
-    const outPath = path.join(OUT, `${String(surahNumber).padStart(3, "0")}.qusx.xml`);
+    const xml = generateSurah(surahNumber, wordLocation, layout.label);
+    const outPath = path.join(outDir, `${String(surahNumber).padStart(3, "0")}.qusx.xml`);
     fs.writeFileSync(outPath, xml, "utf-8");
     console.log("wrote " + outPath + " (" + xml.length + " bytes)");
   }
