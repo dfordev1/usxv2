@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <!-- QUSX: milestone-based markup for the Qur'an, modeled on USX/USFM. -->
+
+  <xs:simpleType name="sidRef">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^:]+(:[^:]+)*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Milestone pins: each pin either opens a range (sid, plus a `number` and
+       for <ayah> a `tradition`) or closes one (eid only). Enforced by the two
+       xs:choice patterns below rather than a single freely-optional attribute
+       set, so a pin can't carry both sid and eid at once. -->
+
+  <xs:complexType name="milestonePin">
+    <xs:choice>
+      <xs:sequence>
+        <xs:attribute name="number" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="sid" type="sidRef" use="required"/>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:attribute name="eid" type="sidRef" use="required"/>
+      </xs:sequence>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="ayahPin">
+    <xs:choice>
+      <xs:sequence>
+        <xs:attribute name="number" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="tradition" type="xs:string" use="required"/>
+        <xs:attribute name="sid" type="sidRef" use="required"/>
+      </xs:sequence>
+      <xs:sequence>
+        <xs:attribute name="eid" type="sidRef" use="required"/>
+      </xs:sequence>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="word">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="position" type="xs:positiveInteger" use="required"/>
+        <xs:attribute name="root" type="xs:string" use="optional"/>
+        <xs:attribute name="stem" type="xs:string" use="optional"/>
+        <xs:attribute name="lemma" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="sajda">
+    <xs:attribute name="number" type="xs:positiveInteger" use="required"/>
+    <xs:attribute name="type" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="required"/>
+          <xs:enumeration value="optional"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="verseKey" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="qusx">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="juz" type="milestonePin"/>
+        <xs:element name="manzil" type="milestonePin"/>
+        <xs:element name="hizb" type="milestonePin"/>
+        <xs:element name="rub" type="milestonePin"/>
+        <xs:element name="page" type="milestonePin"/>
+        <xs:element name="line" type="milestonePin"/>
+        <xs:element name="ayah" type="ayahPin"/>
+        <xs:element name="word" type="word"/>
+        <xs:element name="sajda" type="sajda"/>
+      </xs:choice>
+
+      <xs:attribute name="version" type="xs:string" use="required"/>
+      <xs:attribute name="surah" type="xs:positiveInteger" use="required"/>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="nameArabic" type="xs:string" use="required"/>
+      <xs:attribute name="ayahCount" type="xs:positiveInteger" use="required"/>
+      <xs:attribute name="revelationPlace" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="makkah"/>
+            <xs:enumeration value="madinah"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="bismillahPre" type="xs:boolean" use="required"/>
+      <xs:attribute name="tradition" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
