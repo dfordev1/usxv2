@@ -22,6 +22,13 @@ Generator is complete and validated against real data for **all 114 surahs**:
 | Word tokens | 83668 | 83668 |
 | Sajda pins | 15 | 15 (standard Hafs list) |
 
+`src/validate.js` additionally checks real semantic invariants — every `sid` has
+exactly one matching `eid`, no axis is opened twice without closing, ayah numbers run
+1..N with no gaps — against a formal shape defined in `schema/qusx.xsd`. **All 114
+generated files pass with 0 errors.** `viewer/viewer.html` parses the generator's raw
+output with the browser's own `DOMParser` and renders it, so the format is proven
+consumable end-to-end, not just internally consistent.
+
 Currently ships **one tradition (Hafs/Kufi)** with real word-level text, morphology,
 and page/line layout. Multi-tradition ayah pins (Qalun, Warsh, Douri, Shu'bah) are
 proven out in the interactive demo but not yet merged into the generator — see
@@ -73,9 +80,13 @@ for different layouts or traditions.
 | `<sajda>` | Point marker (non-paired) | Fires once at the ayah containing a prostration point; `type` = `required`/`optional` |
 
 Boundary tags follow the USX convention: `sid` opens a range, a matching bare `eid`
-closes it. Coarser structures (juz/manzil/hizb/rub) open before finer ones
-(page/line/ayah) and close after them, so ranges nest correctly even though the
-underlying word stream is flat.
+closes it. Each axis (juz/manzil/hizb/rub/page/line/ayah) is independently
+well-paired — but axes are **not** required to nest inside one another in document
+order. `page`/`line` are word-position-based and legitimately cross `ayah` (and
+sometimes `juz`/`hizb`/`rub`) boundaries mid-ayah — e.g. Sūrat An-Nās ayah 3 is split
+across two lines in the KFGQPC V2 layout. That crossing is exactly the "overlapping
+structures" problem milestone markup exists to solve; see it live in
+`viewer/viewer.html`.
 
 ## Data sources
 
@@ -98,14 +109,27 @@ Full citation list and independent prior-art (open-quran-view, DigitalKhatt) in
 2. **Only one print layout is wired in** (KFGQPC V2 Madani, 604 pages). QUL has 11
    more layouts (IndoPak variants, Libyan Awqaf, etc.) already downloaded in
    principle but not yet joined into the generator.
-3. **No schema validation (XSD/RelaxNG) yet** — output is well-formed XML (verified
-   by aggregate word/ayah/sajda counts against known totals) but not schema-checked.
+
+## Validating and viewing
+
+```bash
+node src/validate.js all      # conformance-check every generated file
+node src/validate.js 001.qusx.xml 114.qusx.xml   # check specific files
+```
+
+Open `viewer/viewer.html` directly in a browser to see two real generated files
+(Al-Fātiḥah and An-Nās) parsed live and rendered, with a raw-XML toggle and
+click-to-inspect on every word.
 
 ## Project layout
 
 ```
 qusx/
-├── src/generate.js          # the generator
+├── src/
+│   ├── generate.js          # the generator
+│   └── validate.js          # conformance checker
+├── schema/qusx.xsd           # formal element/attribute shape
+├── viewer/viewer.html        # live DOMParser-based viewer (self-contained)
 ├── data/
 │   ├── raw/                 # QUL exports (text, metadata, morphology, layout)
 │   └── diff-report.json     # our derived per-surah ayah-count deltas across traditions
