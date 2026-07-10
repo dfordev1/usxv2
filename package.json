@@ -1,12 +1,27 @@
 {
   "name": "qusx",
   "version": "0.1.0",
-  "description": "Milestone-based XML markup for the Qur'an, modeled on the Bible's USX/USFM standard",
+  "description": "QUSX (Qur'an Unified Scripture XML) — a milestone-based XML data standard for the Qur'an, modeled on the Bible's USX/USFM standard. One text, many layers (ayah, page, line, juz, hizb, rub, manzil, sajda), zero duplication.",
   "main": "src/generate.js",
   "scripts": {
     "generate": "node src/generate.js all",
     "validate": "node src/validate.js all"
   },
+  "keywords": [
+    "quran",
+    "quranic-data",
+    "islam",
+    "xml",
+    "usx",
+    "usfm",
+    "mushaf",
+    "arabic",
+    "milestone-markup",
+    "data-standard",
+    "scripture",
+    "qiraat",
+    "riwayat"
+  ],
   "engines": {
     "node": ">=22.0.0"
   },
@@ -14,5 +29,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/dfordev1/usxv2"
-  }
+  },
+  "homepage": "https://github.com/dfordev1/usxv2"
 }

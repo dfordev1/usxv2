@@ -1,16 +1,63 @@
-# QUSX — Unified Scripture-style Markup for the Qur'an
+<p align="center">
+  <img src="assets/banner.png" alt="QUSX — Unified Scripture-style Markup for the Qur'an. One text, many layers, zero duplication." width="100%">
+</p>
 
-A milestone-based XML schema for Qur'anic text, modeled on the Bible's USX/USFM
-standard (see `docs/prior-art-references.md`). Instead of nesting text inside a
-book → chapter → verse tree, the Mushaf is treated as **one flat stream of words**,
-sliced by boundary pins (`sid`/`eid`) for every structural layer — ayah, page, line,
-juz, hizb, rub, manzil, sajda. Multiple counting traditions can coexist over the same
-text stream without duplicating a single letter (see `<ayah tradition="...">`).
+<p align="center">
+  <a href="https://github.com/dfordev1/usxv2/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-33564F.svg"></a>
+  <a href="https://nodejs.org"><img alt="Node >=22" src="https://img.shields.io/badge/node-%3E%3D22-33564F.svg"></a>
+  <img alt="570 files, 0 validation errors" src="https://img.shields.io/badge/validated-570%20files%2C%200%20errors-3f7d4f.svg">
+  <img alt="5 Mushaf layouts" src="https://img.shields.io/badge/layouts-5-9c7a3c.svg">
+  <a href="https://community.itqan.dev/d/549/2"><img alt="Itqan community discussion" src="https://img.shields.io/badge/discussion-Itqan%20community-33564F.svg"></a>
+</p>
+
+# QUSX — a milestone-based XML standard for the Qur'an
+
+**QUSX (Qur'an Unified Scripture XML)** is a data standard for representing Qur'anic
+text, modeled directly on the Bible's **USX/USFM** milestone-markup convention (see
+[`docs/prior-art-references.md`](docs/prior-art-references.md)). Instead of nesting
+Qur'anic text inside a rigid surah → ayah → word tree, the Mushaf is treated as **one
+flat stream of words**, sliced by independent boundary pins (`sid`/`eid`) for every
+structural layer a Quran app actually needs: ayah, page, line, juz, hizb, rub, manzil,
+sajda. Multiple qira'at/riwayat numbering traditions and multiple print-edition
+layouts can coexist over that *same* text stream — without duplicating a single
+letter.
 
 Born out of a discussion on the [Itqan community](https://community.itqan.dev)
-(threads `/d/549`, `/d/501`, `/d/246`) about the lack of a unified Quranic data
-standard, and how the Bible's Digital Bible Library / USX ecosystem solved the same
-problem for Scripture data at scale.
+(threads [`/d/549`](https://community.itqan.dev/d/549), [`/d/501`](https://community.itqan.dev/d/501), [`/d/246`](https://community.itqan.dev/d/246))
+about the lack of a unified Quranic data standard, and how the Bible's Digital Bible
+Library / USX ecosystem solved the same problem — Scripture text served consistently
+across 1,773 languages — for Bible software.
+
+## Table of contents
+
+- [Why this exists](#why-this-exists)
+- [Status](#status)
+- [Quick start](#quick-start)
+- [Example output](#example-output-al-fatihah-abridged)
+- [Tag reference](#tag-reference)
+- [Data sources](#data-sources)
+- [Validating and viewing](#validating-and-viewing)
+- [Known gaps](#known-gaps)
+- [Project layout](#project-layout)
+
+## Why this exists
+
+<p align="center">
+  <img src="assets/overview.png" alt="Diagram: one word stream sliced independently by juz, hizb, rub, page, line, and ayah (Hafs and Qalun) boundary pins, plus a real QUSX XML snippet for Al-Fatihah." width="100%">
+</p>
+
+Building a Qur'an app or API today usually means maintaining several *separate*,
+easy-to-desync datasets: one for page-accurate rendering (matching a specific printed
+Mushaf), one for searchable/structured text, one for word-level morphology, and — for
+apps supporting more than one riwayah — a full duplicate text per riwayah. Every
+independent Quranic-data project we surveyed (QUL, quran-svg, quranhub,
+open-quran-view) reinvents a similar-but-incompatible page/line/word schema to solve
+this same problem.
+
+QUSX's flat word-stream + independent milestone pins means **one file serves every
+view**: an app walks `sid`/`eid` pairs to reconstruct whichever slice it needs — an
+ayah, a printed page, a juz, a riwayah's numbering — without re-fetching or
+duplicating the underlying text.
 
 ## Status
 
@@ -31,10 +78,10 @@ comes out to 610 pages instead of 604, matching its real-world pagination.
 
 `src/validate.js` additionally checks real semantic invariants — every `sid` has
 exactly one matching `eid`, no axis is opened twice without closing, ayah numbers run
-1..N with no gaps — against a formal shape defined in `schema/qusx.xsd`. **All 570
-generated files pass with 0 errors.** `viewer/viewer.html` parses the generator's raw
-output with the browser's own `DOMParser` and renders it, so the format is proven
-consumable end-to-end, not just internally consistent.
+1..N with no gaps — against a formal shape defined in [`schema/qusx.xsd`](schema/qusx.xsd).
+**All 570 generated files pass with 0 errors.** [`viewer/viewer.html`](viewer/viewer.html)
+parses the generator's raw output with the browser's own `DOMParser` and renders it,
+so the format is proven consumable end-to-end, not just internally consistent.
 
 Currently ships **one tradition (Hafs/Kufi)** with real word-level text and
 morphology. Multi-tradition ayah pins (Qalun, Warsh, Douri, Shu'bah) are proven out
@@ -86,7 +133,7 @@ for different layouts or traditions.
 | `<word>` | Base text unit (leaf) | `id` = global mushaf position, `position` = index within ayah, `root`/`stem`/`lemma` = morphology embeds |
 | `<ayah>` | Milestone pin | `tradition` attr allows multiple counting schemes over the same word stream |
 | `<page>` / `<line>` | Milestone pin | From a specific print edition's layout — see `<qusx layout="...">` on the root element |
-| `<juz>` / `<hizb>` / `<rub>` / `<manzil>` | Milestone pin | Standard 30/60/240/7-way divisions |
+| `<juz>` / `<hizb>` / `<rub>` / `<manzil>` | Milestone pin | Standard 30/60/240/7-way divisions — see [`docs/quranic-structural-glossary.xlsx`](docs/quranic-structural-glossary.xlsx) for definitions |
 | `<sajda>` | Point marker (non-paired) | Fires once at the ayah containing a prostration point; `type` = `required`/`optional` |
 
 Boundary tags follow the USX convention: `sid` opens a range, a matching bare `eid`
@@ -106,7 +153,21 @@ All raw data lives in `data/` and was pulled from:
 - **[quranpedia/quran-svg](https://github.com/quranpedia/quran-svg)** — per-surah ayah counts across 6 mushaf editions/5 qira'at, used to derive multi-tradition boundary deltas. Our derived analysis is in `data/diff-report.json`; the source repo's raw files are *not* bundled here since it currently has no published license — see it directly if you need the underlying polygon/page data.
 
 Full citation list and independent prior-art (open-quran-view, DigitalKhatt) in
-`docs/prior-art-references.md`.
+[`docs/prior-art-references.md`](docs/prior-art-references.md). A standalone
+reference workbook of every structural term (juz, hizb, rub, manzil, ruku, sajda,
+surah), built from the same real QUL data, is in
+[`docs/quranic-structural-glossary.xlsx`](docs/quranic-structural-glossary.xlsx).
+
+## Validating and viewing
+
+```bash
+node src/validate.js all                       # conformance-check every generated file, all layouts
+node src/validate.js --layout=indopak-15 all    # check just one layout
+```
+
+Open `viewer/viewer.html` directly in a browser to see two real generated files
+(Al-Fātiḥah and An-Nās) parsed live and rendered, with a raw-XML toggle and
+click-to-inspect on every word.
 
 ## Known gaps
 
@@ -121,16 +182,9 @@ Full citation list and independent prior-art (open-quran-view, DigitalKhatt) in
    Khatt, Libyan Awqaf, etc.) follow the same pattern in `LAYOUTS` in
    `src/generate.js` — just need downloading and registering.
 
-## Validating and viewing
-
-```bash
-node src/validate.js all                       # conformance-check every generated file, all layouts
-node src/validate.js --layout=indopak-15 all    # check just one layout
-```
-
-Open `viewer/viewer.html` directly in a browser to see two real generated files
-(Al-Fātiḥah and An-Nās) parsed live and rendered, with a raw-XML toggle and
-click-to-inspect on every word.
+This is a v0.1 prototype open for review and contribution, not a finished standard —
+see the [Itqan community thread](https://community.itqan.dev/d/549/2) for ongoing
+discussion.
 
 ## Project layout
 
@@ -146,8 +200,10 @@ qusx/
 │   ├── layouts/              # 4 additional QUL Mushaf layout databases
 │   └── diff-report.json     # our derived per-surah ayah-count deltas across traditions
 ├── output/<layout-key>/     # generated *.qusx.xml, one per surah per layout
+├── assets/                  # banner and diagram images
 ├── LICENSE                  # MIT (code/schema only — see note on bundled data)
 ├── package.json
 └── docs/
-    └── prior-art-references.md
+    ├── prior-art-references.md
+    └── quranic-structural-glossary.xlsx
 ```
