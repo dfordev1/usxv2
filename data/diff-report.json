@@ -1,0 +1,662 @@
+[
+  {
+    "surah": 2,
+    "name": "Al-Baqara",
+    "counts": {
+      "hafs_kfqc": 286,
+      "qalon_kfqc": 285,
+      "qalon_libya": 285,
+      "warsh_kfqc": 285,
+      "douri_kfqc": 285,
+      "shubah_kfqc": 286
+    }
+  },
+  {
+    "surah": 4,
+    "name": "An-Nisa",
+    "counts": {
+      "hafs_kfqc": 176,
+      "qalon_kfqc": 175,
+      "qalon_libya": 175,
+      "warsh_kfqc": 175,
+      "douri_kfqc": 175,
+      "shubah_kfqc": 176
+    }
+  },
+  {
+    "surah": 5,
+    "name": "Al-Ma'ida",
+    "counts": {
+      "hafs_kfqc": 120,
+      "qalon_kfqc": 122,
+      "qalon_libya": 122,
+      "warsh_kfqc": 122,
+      "douri_kfqc": 122,
+      "shubah_kfqc": 120
+    }
+  },
+  {
+    "surah": 6,
+    "name": "Al-An'am",
+    "counts": {
+      "hafs_kfqc": 165,
+      "qalon_kfqc": 167,
+      "qalon_libya": 167,
+      "warsh_kfqc": 167,
+      "douri_kfqc": 167,
+      "shubah_kfqc": 165
+    }
+  },
+  {
+    "surah": 8,
+    "name": "Al-Anfal",
+    "counts": {
+      "hafs_kfqc": 75,
+      "qalon_kfqc": 76,
+      "qalon_libya": 76,
+      "warsh_kfqc": 76,
+      "douri_kfqc": 76,
+      "shubah_kfqc": 75
+    }
+  },
+  {
+    "surah": 9,
+    "name": "At-Tawba",
+    "counts": {
+      "hafs_kfqc": 129,
+      "qalon_kfqc": 130,
+      "qalon_libya": 130,
+      "warsh_kfqc": 130,
+      "douri_kfqc": 130,
+      "shubah_kfqc": 129
+    }
+  },
+  {
+    "surah": 11,
+    "name": "Hud",
+    "counts": {
+      "hafs_kfqc": 123,
+      "qalon_kfqc": 121,
+      "qalon_libya": 122,
+      "warsh_kfqc": 121,
+      "douri_kfqc": 122,
+      "shubah_kfqc": 123
+    }
+  },
+  {
+    "surah": 13,
+    "name": "Ar-Ra'd",
+    "counts": {
+      "hafs_kfqc": 43,
+      "qalon_kfqc": 44,
+      "qalon_libya": 44,
+      "warsh_kfqc": 44,
+      "douri_kfqc": 44,
+      "shubah_kfqc": 43
+    }
+  },
+  {
+    "surah": 14,
+    "name": "Ibrahim",
+    "counts": {
+      "hafs_kfqc": 52,
+      "qalon_kfqc": 54,
+      "qalon_libya": 54,
+      "warsh_kfqc": 54,
+      "douri_kfqc": 54,
+      "shubah_kfqc": 52
+    }
+  },
+  {
+    "surah": 17,
+    "name": "Al-Israa",
+    "counts": {
+      "hafs_kfqc": 111,
+      "qalon_kfqc": 110,
+      "qalon_libya": 110,
+      "warsh_kfqc": 110,
+      "douri_kfqc": 110,
+      "shubah_kfqc": 111
+    }
+  },
+  {
+    "surah": 18,
+    "name": "Al-Kahf",
+    "counts": {
+      "hafs_kfqc": 110,
+      "qalon_kfqc": 105,
+      "qalon_libya": 105,
+      "warsh_kfqc": 105,
+      "douri_kfqc": 105,
+      "shubah_kfqc": 110
+    }
+  },
+  {
+    "surah": 19,
+    "name": "Maryam",
+    "counts": {
+      "hafs_kfqc": 98,
+      "qalon_kfqc": 99,
+      "qalon_libya": 98,
+      "warsh_kfqc": 99,
+      "douri_kfqc": 98,
+      "shubah_kfqc": 98
+    }
+  },
+  {
+    "surah": 20,
+    "name": "Ta-Ha",
+    "counts": {
+      "hafs_kfqc": 135,
+      "qalon_kfqc": 134,
+      "qalon_libya": 134,
+      "warsh_kfqc": 134,
+      "douri_kfqc": 134,
+      "shubah_kfqc": 135
+    }
+  },
+  {
+    "surah": 21,
+    "name": "Al-Anbiya",
+    "counts": {
+      "hafs_kfqc": 112,
+      "qalon_kfqc": 111,
+      "qalon_libya": 111,
+      "warsh_kfqc": 111,
+      "douri_kfqc": 111,
+      "shubah_kfqc": 112
+    }
+  },
+  {
+    "surah": 22,
+    "name": "Al-Hajj",
+    "counts": {
+      "hafs_kfqc": 78,
+      "qalon_kfqc": 76,
+      "qalon_libya": 76,
+      "warsh_kfqc": 76,
+      "douri_kfqc": 76,
+      "shubah_kfqc": 78
+    }
+  },
+  {
+    "surah": 23,
+    "name": "Al-Mu'minun",
+    "counts": {
+      "hafs_kfqc": 118,
+      "qalon_kfqc": 119,
+      "qalon_libya": 119,
+      "warsh_kfqc": 119,
+      "douri_kfqc": 119,
+      "shubah_kfqc": 118
+    }
+  },
+  {
+    "surah": 24,
+    "name": "An-Nur",
+    "counts": {
+      "hafs_kfqc": 64,
+      "qalon_kfqc": 62,
+      "qalon_libya": 62,
+      "warsh_kfqc": 62,
+      "douri_kfqc": 62,
+      "shubah_kfqc": 64
+    }
+  },
+  {
+    "surah": 26,
+    "name": "Ash-Shu'ara",
+    "counts": {
+      "hafs_kfqc": 227,
+      "qalon_kfqc": 226,
+      "qalon_libya": 227,
+      "warsh_kfqc": 226,
+      "douri_kfqc": 227,
+      "shubah_kfqc": 227
+    }
+  },
+  {
+    "surah": 27,
+    "name": "An-Naml",
+    "counts": {
+      "hafs_kfqc": 93,
+      "qalon_kfqc": 95,
+      "qalon_libya": 95,
+      "warsh_kfqc": 95,
+      "douri_kfqc": 95,
+      "shubah_kfqc": 93
+    }
+  },
+  {
+    "surah": 30,
+    "name": "Ar-Rum",
+    "counts": {
+      "hafs_kfqc": 60,
+      "qalon_kfqc": 59,
+      "qalon_libya": 60,
+      "warsh_kfqc": 59,
+      "douri_kfqc": 60,
+      "shubah_kfqc": 60
+    }
+  },
+  {
+    "surah": 31,
+    "name": "Luqman",
+    "counts": {
+      "hafs_kfqc": 34,
+      "qalon_kfqc": 33,
+      "qalon_libya": 33,
+      "warsh_kfqc": 33,
+      "douri_kfqc": 33,
+      "shubah_kfqc": 34
+    }
+  },
+  {
+    "surah": 35,
+    "name": "Fatir",
+    "counts": {
+      "hafs_kfqc": 45,
+      "qalon_kfqc": 46,
+      "qalon_libya": 45,
+      "warsh_kfqc": 46,
+      "douri_kfqc": 45,
+      "shubah_kfqc": 45
+    }
+  },
+  {
+    "surah": 36,
+    "name": "Ya-Sin",
+    "counts": {
+      "hafs_kfqc": 83,
+      "qalon_kfqc": 82,
+      "qalon_libya": 82,
+      "warsh_kfqc": 82,
+      "douri_kfqc": 82,
+      "shubah_kfqc": 83
+    }
+  },
+  {
+    "surah": 37,
+    "name": "As-Saffat",
+    "counts": {
+      "hafs_kfqc": 182,
+      "qalon_kfqc": 182,
+      "qalon_libya": 181,
+      "warsh_kfqc": 182,
+      "douri_kfqc": 182,
+      "shubah_kfqc": 182
+    }
+  },
+  {
+    "surah": 38,
+    "name": "Saad",
+    "counts": {
+      "hafs_kfqc": 88,
+      "qalon_kfqc": 86,
+      "qalon_libya": 86,
+      "warsh_kfqc": 86,
+      "douri_kfqc": 86,
+      "shubah_kfqc": 88
+    }
+  },
+  {
+    "surah": 39,
+    "name": "Az-Zumar",
+    "counts": {
+      "hafs_kfqc": 75,
+      "qalon_kfqc": 72,
+      "qalon_libya": 72,
+      "warsh_kfqc": 72,
+      "douri_kfqc": 72,
+      "shubah_kfqc": 75
+    }
+  },
+  {
+    "surah": 40,
+    "name": "Al-Ghafir",
+    "counts": {
+      "hafs_kfqc": 85,
+      "qalon_kfqc": 84,
+      "qalon_libya": 84,
+      "warsh_kfqc": 84,
+      "douri_kfqc": 84,
+      "shubah_kfqc": 85
+    }
+  },
+  {
+    "surah": 41,
+    "name": "Fussilat",
+    "counts": {
+      "hafs_kfqc": 54,
+      "qalon_kfqc": 53,
+      "qalon_libya": 53,
+      "warsh_kfqc": 53,
+      "douri_kfqc": 53,
+      "shubah_kfqc": 54
+    }
+  },
+  {
+    "surah": 42,
+    "name": "Ash-Shura",
+    "counts": {
+      "hafs_kfqc": 53,
+      "qalon_kfqc": 50,
+      "qalon_libya": 50,
+      "warsh_kfqc": 50,
+      "douri_kfqc": 50,
+      "shubah_kfqc": 53
+    }
+  },
+  {
+    "surah": 44,
+    "name": "Ad-Dukhan",
+    "counts": {
+      "hafs_kfqc": 59,
+      "qalon_kfqc": 56,
+      "qalon_libya": 56,
+      "warsh_kfqc": 56,
+      "douri_kfqc": 56,
+      "shubah_kfqc": 59
+    }
+  },
+  {
+    "surah": 45,
+    "name": "Al-Jathiya",
+    "counts": {
+      "hafs_kfqc": 37,
+      "qalon_kfqc": 36,
+      "qalon_libya": 36,
+      "warsh_kfqc": 36,
+      "douri_kfqc": 36,
+      "shubah_kfqc": 37
+    }
+  },
+  {
+    "surah": 46,
+    "name": "Al-Ahqaf",
+    "counts": {
+      "hafs_kfqc": 35,
+      "qalon_kfqc": 34,
+      "qalon_libya": 34,
+      "warsh_kfqc": 34,
+      "douri_kfqc": 34,
+      "shubah_kfqc": 35
+    }
+  },
+  {
+    "surah": 47,
+    "name": "Muhammad",
+    "counts": {
+      "hafs_kfqc": 38,
+      "qalon_kfqc": 39,
+      "qalon_libya": 39,
+      "warsh_kfqc": 39,
+      "douri_kfqc": 39,
+      "shubah_kfqc": 38
+    }
+  },
+  {
+    "surah": 52,
+    "name": "At-Tur",
+    "counts": {
+      "hafs_kfqc": 49,
+      "qalon_kfqc": 47,
+      "qalon_libya": 47,
+      "warsh_kfqc": 47,
+      "douri_kfqc": 47,
+      "shubah_kfqc": 49
+    }
+  },
+  {
+    "surah": 53,
+    "name": "An-Najm",
+    "counts": {
+      "hafs_kfqc": 62,
+      "qalon_kfqc": 61,
+      "qalon_libya": 61,
+      "warsh_kfqc": 61,
+      "douri_kfqc": 61,
+      "shubah_kfqc": 62
+    }
+  },
+  {
+    "surah": 55,
+    "name": "Ar-Rahman",
+    "counts": {
+      "hafs_kfqc": 78,
+      "qalon_kfqc": 77,
+      "qalon_libya": 77,
+      "warsh_kfqc": 77,
+      "douri_kfqc": 77,
+      "shubah_kfqc": 78
+    }
+  },
+  {
+    "surah": 56,
+    "name": "Al-Waqi'a",
+    "counts": {
+      "hafs_kfqc": 96,
+      "qalon_kfqc": 99,
+      "qalon_libya": 99,
+      "warsh_kfqc": 99,
+      "douri_kfqc": 99,
+      "shubah_kfqc": 96
+    }
+  },
+  {
+    "surah": 57,
+    "name": "Al-Hadid",
+    "counts": {
+      "hafs_kfqc": 29,
+      "qalon_kfqc": 28,
+      "qalon_libya": 28,
+      "warsh_kfqc": 28,
+      "douri_kfqc": 28,
+      "shubah_kfqc": 29
+    }
+  },
+  {
+    "surah": 58,
+    "name": "Al-Mujadila",
+    "counts": {
+      "hafs_kfqc": 22,
+      "qalon_kfqc": 21,
+      "qalon_libya": 22,
+      "warsh_kfqc": 21,
+      "douri_kfqc": 22,
+      "shubah_kfqc": 22
+    }
+  },
+  {
+    "surah": 67,
+    "name": "Al-Mulk",
+    "counts": {
+      "hafs_kfqc": 30,
+      "qalon_kfqc": 31,
+      "qalon_libya": 30,
+      "warsh_kfqc": 31,
+      "douri_kfqc": 31,
+      "shubah_kfqc": 30
+    }
+  },
+  {
+    "surah": 71,
+    "name": "Nuh",
+    "counts": {
+      "hafs_kfqc": 28,
+      "qalon_kfqc": 30,
+      "qalon_libya": 30,
+      "warsh_kfqc": 30,
+      "douri_kfqc": 30,
+      "shubah_kfqc": 28
+    }
+  },
+  {
+    "surah": 73,
+    "name": "Al-Muzzamil",
+    "counts": {
+      "hafs_kfqc": 20,
+      "qalon_kfqc": 18,
+      "qalon_libya": 20,
+      "warsh_kfqc": 18,
+      "douri_kfqc": 20,
+      "shubah_kfqc": 20
+    }
+  },
+  {
+    "surah": 74,
+    "name": "Al-Mudathir",
+    "counts": {
+      "hafs_kfqc": 56,
+      "qalon_kfqc": 55,
+      "qalon_libya": 56,
+      "warsh_kfqc": 55,
+      "douri_kfqc": 56,
+      "shubah_kfqc": 56
+    }
+  },
+  {
+    "surah": 75,
+    "name": "Al-Qiyama",
+    "counts": {
+      "hafs_kfqc": 40,
+      "qalon_kfqc": 39,
+      "qalon_libya": 39,
+      "warsh_kfqc": 39,
+      "douri_kfqc": 39,
+      "shubah_kfqc": 40
+    }
+  },
+  {
+    "surah": 79,
+    "name": "An-Nazi'at",
+    "counts": {
+      "hafs_kfqc": 46,
+      "qalon_kfqc": 45,
+      "qalon_libya": 45,
+      "warsh_kfqc": 45,
+      "douri_kfqc": 45,
+      "shubah_kfqc": 46
+    }
+  },
+  {
+    "surah": 80,
+    "name": "Abasa",
+    "counts": {
+      "hafs_kfqc": 42,
+      "qalon_kfqc": 42,
+      "qalon_libya": 41,
+      "warsh_kfqc": 42,
+      "douri_kfqc": 42,
+      "shubah_kfqc": 42
+    }
+  },
+  {
+    "surah": 81,
+    "name": "At-Takwir",
+    "counts": {
+      "hafs_kfqc": 29,
+      "qalon_kfqc": 29,
+      "qalon_libya": 28,
+      "warsh_kfqc": 29,
+      "douri_kfqc": 29,
+      "shubah_kfqc": 29
+    }
+  },
+  {
+    "surah": 86,
+    "name": "At-Tariq",
+    "counts": {
+      "hafs_kfqc": 17,
+      "qalon_kfqc": 17,
+      "qalon_libya": 16,
+      "warsh_kfqc": 17,
+      "douri_kfqc": 16,
+      "shubah_kfqc": 17
+    }
+  },
+  {
+    "surah": 89,
+    "name": "Al-Fajr",
+    "counts": {
+      "hafs_kfqc": 30,
+      "qalon_kfqc": 32,
+      "qalon_libya": 32,
+      "warsh_kfqc": 32,
+      "douri_kfqc": 32,
+      "shubah_kfqc": 30
+    }
+  },
+  {
+    "surah": 91,
+    "name": "Ash-Shams",
+    "counts": {
+      "hafs_kfqc": 15,
+      "qalon_kfqc": 15,
+      "qalon_libya": 16,
+      "warsh_kfqc": 15,
+      "douri_kfqc": 16,
+      "shubah_kfqc": 15
+    }
+  },
+  {
+    "surah": 96,
+    "name": "Al-'Alaq",
+    "counts": {
+      "hafs_kfqc": 19,
+      "qalon_kfqc": 20,
+      "qalon_libya": 20,
+      "warsh_kfqc": 20,
+      "douri_kfqc": 20,
+      "shubah_kfqc": 19
+    }
+  },
+  {
+    "surah": 99,
+    "name": "Az-Zalzala",
+    "counts": {
+      "hafs_kfqc": 8,
+      "qalon_kfqc": 9,
+      "qalon_libya": 8,
+      "warsh_kfqc": 9,
+      "douri_kfqc": 8,
+      "shubah_kfqc": 8
+    }
+  },
+  {
+    "surah": 101,
+    "name": "Al-Qari'a",
+    "counts": {
+      "hafs_kfqc": 11,
+      "qalon_kfqc": 10,
+      "qalon_libya": 10,
+      "warsh_kfqc": 10,
+      "douri_kfqc": 10,
+      "shubah_kfqc": 11
+    }
+  },
+  {
+    "surah": 106,
+    "name": "Quraysh",
+    "counts": {
+      "hafs_kfqc": 4,
+      "qalon_kfqc": 5,
+      "qalon_libya": 5,
+      "warsh_kfqc": 5,
+      "douri_kfqc": 5,
+      "shubah_kfqc": 4
+    }
+  },
+  {
+    "surah": 107,
+    "name": "Al-Ma'un",
+    "counts": {
+      "hafs_kfqc": 7,
+      "qalon_kfqc": 6,
+      "qalon_libya": 6,
+      "warsh_kfqc": 6,
+      "douri_kfqc": 6,
+      "shubah_kfqc": 7
+    }
+  }
+]

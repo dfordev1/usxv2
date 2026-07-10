@@ -1,0 +1,17 @@
+{
+  "name": "qusx",
+  "version": "0.1.0",
+  "description": "Milestone-based XML markup for the Qur'an, modeled on the Bible's USX/USFM standard",
+  "main": "src/generate.js",
+  "scripts": {
+    "generate": "node src/generate.js all"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfordev1/usxv2"
+  }
+}
