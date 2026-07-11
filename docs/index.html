@@ -1,4 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>QUSX Viewer — real generated files, parsed live</title>
+<meta name="description" content="Live viewer for QUSX (Qur'an Unified Scripture XML) — parses real generator output with the browser's own DOMParser.">
 <style>
   :root {
     --ink: #1c1a16;
@@ -74,7 +80,8 @@
 
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
-
+</head>
+<body>
 <div class="wrap">
   <header>
     <p class="eyebrow">QUSX Viewer · proof of consumability</p>
@@ -133,7 +140,6 @@
     live in-browser render of qusx/output/*.qusx.xml · github.com/dfordev1/usxv2
   </footer>
 </div>
-
 <script>
 (function () {
   var FILES = {
@@ -265,3 +271,5 @@
   render("fatiha");
 })();
 </script>
+</body>
+</html>
