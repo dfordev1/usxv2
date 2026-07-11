@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="112" name="Al-Ikhlas" nameArabic="الإخلاص" ayahCount="4" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0">
-  <juz number="30" sid="juz:30"/>
-  <manzil number="7" sid="manzil:7"/>
-  <hizb number="60" sid="hizb:60"/>
-  <rub number="240" sid="rub:240"/>
-  <ruku number="556" sid="ruku:556"/>
+<qusx version="0.1" surah="112" name="Al-Ikhlas" nameArabic="الإخلاص" ayahCount="4" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0" normalization="NFC">
+  <juz number="30" sid="juz:30" fragment="middle"/>
+  <manzil number="7" sid="manzil:7" fragment="middle"/>
+  <hizb number="60" sid="hizb:60" fragment="middle"/>
+  <rub number="240" sid="rub:240" fragment="middle"/>
+  <ruku number="556" sid="ruku:556" fragment="whole"/>
   <page number="609" sid="page:609"/>
   <line number="14" sid="page:609:line:14"/>
   <ayah number="1" tradition="hafs-kufi" sid="112:1:hafs-kufi"/>
   <word id="83596" position="1" root="ق   و   ل" stem="قُلْ" lemma="قَالَ">قُلْ</word>
   <word id="83597" position="2" stem="هُوَ">هُوَ</word>
-  <word id="83598" position="3" root="ا ل ه" stem="اللَّهُ" lemma="اللَّه">ٱللَّهُ</word>
+  <word id="83598" position="3" root="ا ل ه" stem="اللَّهُ" lemma="اللَّه">ٱللَّهُ</word>
   <word id="83599" position="4" root="ا   ح   د" stem="أَحَدٌ" lemma="أَحَد">أَحَدٌ</word>
-  <word id="83600" position="5">١</word>
+  <word id="83600" position="5" type="number">١</word>
   <ayah eid="112:1:hafs-kufi"/>
   <ayah number="2" tradition="hafs-kufi" sid="112:2:hafs-kufi"/>
-  <word id="83601" position="1" root="ا ل ه" stem="اللَّهُ" lemma="اللَّه">ٱللَّهُ</word>
-  <word id="83602" position="2" root="ص م د" stem="صَّمَدُ" lemma="صَّمَد">ٱلصَّمَدُ</word>
-  <word id="83603" position="3">٢</word>
+  <word id="83601" position="1" root="ا ل ه" stem="اللَّهُ" lemma="اللَّه">ٱللَّهُ</word>
+  <word id="83602" position="2" root="ص م د" stem="صَّمَدُ" lemma="صَّمَد">ٱلصَّمَدُ</word>
+  <word id="83603" position="3" type="number">٢</word>
   <ayah eid="112:2:hafs-kufi"/>
   <ayah number="3" tradition="hafs-kufi" sid="112:3:hafs-kufi"/>
   <word id="83604" position="1" stem="لَمْ" lemma="لَم">لَمْ</word>
@@ -26,15 +26,15 @@
   <line eid="page:609:line:14"/>
   <line number="15" sid="page:609:line:15"/>
   <word id="83607" position="4" root="و ل د" stem="يُولَدْ" lemma="وَلَدَ">يُولَدْ</word>
-  <word id="83608" position="5">٣</word>
+  <word id="83608" position="5" type="number">٣</word>
   <ayah eid="112:3:hafs-kufi"/>
   <ayah number="4" tradition="hafs-kufi" sid="112:4:hafs-kufi"/>
   <word id="83609" position="1" stem="لَمْ" lemma="لَم">وَلَمْ</word>
   <word id="83610" position="2" root="ك   و   ن" stem="يَكُن" lemma="كَانَ">يَكُن</word>
-  <word id="83611" position="3" stem="هُۥ">لَّهُۥ</word>
+  <word id="83611" position="3" stem="هُۥ">لَّهُۥ</word>
   <word id="83612" position="4" root="ك ف ا" stem="كُفُوًا" lemma="كُفُو">كُفُوًا</word>
   <word id="83613" position="5" root="ا   ح   د" stem="أَحَدٌۢ" lemma="أَحَد">أَحَدٌۢ</word>
-  <word id="83614" position="6">٤</word>
+  <word id="83614" position="6" type="number">٤</word>
   <ayah eid="112:4:hafs-kufi"/>
   <line eid="page:609:line:15"/>
   <page eid="page:609"/>

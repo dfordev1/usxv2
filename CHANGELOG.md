@@ -5,6 +5,25 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added `fragment` attribute (`whole`/`start`/`middle`/`end`) to
+  juz/hizb/rub/manzil/ruku opening pins, resolving the cross-file identity
+  ambiguity flagged in the audit: a range spanning two surah files (e.g. Juz 1
+  covers all of Surah 1 and part of Surah 2) is now explicitly marked as
+  fragments of one range, not two coincidentally-numbered ones.
+- Added `type="number"` to `<word>` elements holding the ayah-ending
+  verse-number glyph, distinguishing them from lexical words (a consumer
+  counting "words per ayah" would previously be off by one).
+- Added `normalization="NFC"` to the `<qusx>` root, with `validate.js` now
+  actually checking word text is NFC-normalized rather than just asserting it.
+- Hardened `src/generate.js`'s CLI: invalid/out-of-range surah arguments are
+  now rejected instead of silently producing garbage, duplicate targets are
+  deduped, and output is written via temp-file-then-rename so a crash mid-run
+  can't leave a corrupt/partial file at the real output path.
+- Verified true determinism (not just "matches last commit"): two independent
+  `node src/generate.js --layout=madani-v2 all` runs byte-diffed identical.
+
+## 2026-07-11 — Third audit-response batch
+
 - Added `<ruku>` milestone pins (data was downloaded early on but sat unused
   until now) — same pattern as juz/hizb/rub/manzil.
 - Added `generatorVersion` attribute to the `<qusx>` root, sourced from

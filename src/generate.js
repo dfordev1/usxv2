@@ -33,6 +33,18 @@ function xmlEscape(s) {
     .replace(/"/g, "&quot;");
 }
 
+// All text is normalized to NFC before embedding — same convention
+// quranchecksum uses (see src/checksum-verify.js), stated explicitly here
+// rather than left implicit.
+function normalize(s) {
+  return String(s).normalize("NFC");
+}
+
+// Arabic-Indic digit sequence (the ayah-ending verse-number glyph QUL stores
+// as a "word" token, e.g. "٧"). Not a lexical word — see the `type="number"`
+// distinction on <word> below.
+const ARABIC_DIGIT_ONLY = /^[٠-٩]+$/;
+
 // ---- load source data -------------------------------------------------
 
 const uthmani = loadJSON("uthmani.json");        // "s:a:w" -> {id, surah, ayah, word, text}
@@ -93,18 +105,34 @@ function buildWordLocation(layoutDbPath) {
   return { wordLocation, info };
 }
 
-// juz/hizb/rub/manzil boundaries per surah: surah -> [{number, startAyah, endAyah}]
+// juz/hizb/rub/manzil/ruku boundaries per surah: surah -> [{number, start, end,
+// globalStartSurah, globalEndSurah}]. The global fields (parsed from the
+// source's Quran-wide first_verse_key/last_verse_key) let generateSurah tell
+// whether *this* surah's fragment is where the range truly starts/ends, or
+// whether it's a continuation of a range that began in (or continues into) a
+// different surah's file — see the `fragment` attribute below.
 function buildRangeIndex(meta, numberField) {
-  const index = new Map(); // surah -> [{number, start, end}]
+  const index = new Map();
   for (const rec of Object.values(meta)) {
+    const globalStartSurah = Number(rec.first_verse_key.split(":")[0]);
+    const globalEndSurah = Number(rec.last_verse_key.split(":")[0]);
     for (const [surahStr, range] of Object.entries(rec.verse_mapping)) {
       const surah = Number(surahStr);
       const [start, end] = range.split("-").map(Number);
       if (!index.has(surah)) index.set(surah, []);
-      index.get(surah).push({ number: rec[numberField], start, end });
+      index.get(surah).push({ number: rec[numberField], start, end, globalStartSurah, globalEndSurah });
     }
   }
   return index;
+}
+
+function fragmentOf(range, surah) {
+  const isStart = range.globalStartSurah === surah;
+  const isEnd = range.globalEndSurah === surah;
+  if (isStart && isEnd) return "whole";
+  if (isStart) return "start";
+  if (isEnd) return "end";
+  return "middle";
 }
 const juzIndex = buildRangeIndex(juzMeta, "juz_number");
 const hizbIndex = buildRangeIndex(hizbMeta, "hizb_number");
@@ -153,10 +181,11 @@ function generateSurah(surahNumber, wordLocation, layoutLabel) {
   lines.push('<?xml version="1.0" encoding="UTF-8"?>');
   lines.push(
     `<qusx version="0.1" surah="${surahNumber}" name="${xmlEscape(
-      surahName.name_simple
-    )}" nameArabic="${xmlEscape(surahName.name_arabic)}" ayahCount="${surahName.verses_count}" ` +
+      normalize(surahName.name_simple)
+    )}" nameArabic="${xmlEscape(normalize(surahName.name_arabic))}" ayahCount="${surahName.verses_count}" ` +
       `revelationPlace="${surahName.revelation_place}" bismillahPre="${surahName.bismillah_pre}" ` +
-      `tradition="hafs-kufi" layout="${xmlEscape(layoutLabel)}" generatorVersion="${GENERATOR_VERSION}">`
+      `tradition="hafs-kufi" layout="${xmlEscape(layoutLabel)}" generatorVersion="${GENERATOR_VERSION}" ` +
+      `normalization="NFC">`
   );
 
   let openAyah = null;
@@ -182,35 +211,41 @@ function generateSurah(surahNumber, wordLocation, layoutLabel) {
     const manzilR = findRange(manzilIndex, w.surah, w.ayah);
     const rukuR = findRange(rukuIndex, w.surah, w.ayah);
 
-    // open/close juz/hizb/rub/manzil pins (coarse-to-fine order)
+    // open/close juz/hizb/rub/manzil/ruku pins (coarse-to-fine order). Each
+    // opening pin carries `fragment` ("whole"/"start"/"middle"/"end") stating
+    // whether this file's copy of the range is the entire range, or a
+    // fragment of a range that continues in another surah's file — resolves
+    // the sid-collision ambiguity from earlier: sid="juz:1" in both
+    // 001.qusx.xml (fragment="start") and 002.qusx.xml (fragment="end") is
+    // now explicitly two fragments of the same range, not two coincidences.
     const juzId = juzR ? `juz:${juzR.number}` : null;
     if (juzId !== openJuz) {
       closeIfOpen("juz", openJuz);
-      if (juzId) lines.push(`  <juz number="${juzR.number}" sid="${juzId}"/>`);
+      if (juzId) lines.push(`  <juz number="${juzR.number}" sid="${juzId}" fragment="${fragmentOf(juzR, w.surah)}"/>`);
       openJuz = juzId;
     }
     const manzilId = manzilR ? `manzil:${manzilR.number}` : null;
     if (manzilId !== openManzil) {
       closeIfOpen("manzil", openManzil);
-      if (manzilId) lines.push(`  <manzil number="${manzilR.number}" sid="${manzilId}"/>`);
+      if (manzilId) lines.push(`  <manzil number="${manzilR.number}" sid="${manzilId}" fragment="${fragmentOf(manzilR, w.surah)}"/>`);
       openManzil = manzilId;
     }
     const hizbId = hizbR ? `hizb:${hizbR.number}` : null;
     if (hizbId !== openHizb) {
       closeIfOpen("hizb", openHizb);
-      if (hizbId) lines.push(`  <hizb number="${hizbR.number}" sid="${hizbId}"/>`);
+      if (hizbId) lines.push(`  <hizb number="${hizbR.number}" sid="${hizbId}" fragment="${fragmentOf(hizbR, w.surah)}"/>`);
       openHizb = hizbId;
     }
     const rubId = rubR ? `rub:${rubR.number}` : null;
     if (rubId !== openRub) {
       closeIfOpen("rub", openRub);
-      if (rubId) lines.push(`  <rub number="${rubR.number}" sid="${rubId}"/>`);
+      if (rubId) lines.push(`  <rub number="${rubR.number}" sid="${rubId}" fragment="${fragmentOf(rubR, w.surah)}"/>`);
       openRub = rubId;
     }
     const rukuId = rukuR ? `ruku:${rukuR.number}` : null;
     if (rukuId !== openRuku) {
       closeIfOpen("ruku", openRuku);
-      if (rukuId) lines.push(`  <ruku number="${rukuR.number}" sid="${rukuId}"/>`);
+      if (rukuId) lines.push(`  <ruku number="${rukuR.number}" sid="${rukuId}" fragment="${fragmentOf(rukuR, w.surah)}"/>`);
       openRuku = rukuId;
     }
 
@@ -243,11 +278,14 @@ function generateSurah(surahNumber, wordLocation, layoutLabel) {
     const root = rootIndex.get(wordLocKey);
     const stem = stemIndex.get(wordLocKey);
     const lemma = lemmaIndex.get(wordLocKey);
+    const wordText = normalize(w.text);
+    const isNumber = ARABIC_DIGIT_ONLY.test(wordText.trim());
     const attrs = [`id="${w.id}"`, `position="${w.word}"`];
-    if (root) attrs.push(`root="${xmlEscape(root)}"`);
-    if (stem) attrs.push(`stem="${xmlEscape(stem)}"`);
-    if (lemma) attrs.push(`lemma="${xmlEscape(lemma)}"`);
-    lines.push(`  <word ${attrs.join(" ")}>${xmlEscape(w.text)}</word>`);
+    if (isNumber) attrs.push(`type="number"`);
+    if (root) attrs.push(`root="${xmlEscape(normalize(root))}"`);
+    if (stem) attrs.push(`stem="${xmlEscape(normalize(stem))}"`);
+    if (lemma) attrs.push(`lemma="${xmlEscape(normalize(lemma))}"`);
+    lines.push(`  <word ${attrs.join(" ")}>${xmlEscape(wordText)}</word>`);
 
     // sajda marker (fires at end of the ayah that contains a sajda point)
     const sajda = sajdaByKey.get(verseKey);
@@ -303,7 +341,13 @@ function main() {
   if (args.length === 0 || args[0] === "all") {
     targets = Array.from({ length: 114 }, (_, i) => i + 1);
   } else {
-    targets = args.map(Number);
+    const parsed = args.map((a) => ({ raw: a, n: Number(a) }));
+    const invalid = parsed.filter((p) => !Number.isInteger(p.n) || p.n < 1 || p.n > 114);
+    if (invalid.length > 0) {
+      console.error(`Invalid surah number(s): ${invalid.map((p) => p.raw).join(", ")} (must be an integer 1-114)`);
+      process.exit(1);
+    }
+    targets = [...new Set(parsed.map((p) => p.n))]; // dedupe repeated targets
   }
 
   console.log(`Layout: ${layout.label} (${info.number_of_pages} pages, ${info.lines_per_page} lines/page)`);
@@ -311,7 +355,12 @@ function main() {
   for (const surahNumber of targets) {
     const xml = generateSurah(surahNumber, wordLocation, layout.label);
     const outPath = path.join(outDir, `${String(surahNumber).padStart(3, "0")}.qusx.xml`);
-    fs.writeFileSync(outPath, xml, "utf-8");
+    // write to a temp file then rename, so a crash mid-write can never leave
+    // a partially-written file at the real output path (rename is atomic on
+    // the same filesystem, which outDir always is here).
+    const tmpPath = outPath + ".tmp";
+    fs.writeFileSync(tmpPath, xml, "utf-8");
+    fs.renameSync(tmpPath, outPath);
     console.log("wrote " + outPath + " (" + xml.length + " bytes)");
   }
 }

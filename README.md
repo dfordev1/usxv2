@@ -141,11 +141,11 @@ for different layouts or traditions.
 
 | Tag | Role | Notes |
 |---|---|---|
-| `<qusx>` | Root, one per surah | `tradition` attr = active ayah-counting scheme |
-| `<word>` | Base text unit (leaf) | `id` = global mushaf position, `position` = index within ayah, `root`/`stem`/`lemma` = morphology embeds |
+| `<qusx>` | Root, one per surah | `tradition` = active ayah-counting scheme; `normalization="NFC"` states the text-encoding policy (checked by `validate.js`); `generatorVersion` self-declares what produced the file |
+| `<word>` | Base text unit (leaf) | `id` = global mushaf position, `position` = index within ayah, `type="number"` marks the ayah-ending verse-number glyph (not a lexical word — see below), `root`/`stem`/`lemma` = morphology embeds |
 | `<ayah>` | Milestone pin | `tradition` attr allows multiple counting schemes over the same word stream |
 | `<page>` / `<line>` | Milestone pin | From a specific print edition's layout — see `<qusx layout="...">` on the root element |
-| `<juz>` / `<hizb>` / `<rub>` / `<manzil>` / `<ruku>` | Milestone pin | Standard 30/60/240/7-way divisions, plus thematic ruku markers (558 total) — see [`docs/quranic-structural-glossary.xlsx`](docs/quranic-structural-glossary.xlsx) for definitions |
+| `<juz>` / `<hizb>` / `<rub>` / `<manzil>` / `<ruku>` | Milestone pin | Standard 30/60/240/7-way divisions, plus thematic ruku markers (558 total); `fragment` (`whole`/`start`/`middle`/`end`) states whether this file's copy is the entire range or a piece of one spanning surahs — see below. Definitions in [`docs/quranic-structural-glossary.xlsx`](docs/quranic-structural-glossary.xlsx) |
 | `<sajda>` | Point marker (non-paired) | Fires once at the ayah containing a prostration point; `type` = `required`/`optional` |
 
 Boundary tags follow the USX convention: `sid` opens a range, a matching bare `eid`
@@ -157,16 +157,26 @@ across two lines in the KFGQPC V2 layout. That crossing is exactly the "overlapp
 structures" problem milestone markup exists to solve; see it live in
 `viewer/viewer.html`.
 
-**Known scoping limitation:** each `.qusx.xml` file covers one surah, so a
-`juz`/`hizb`/`rub`/`manzil` that spans two surahs (e.g. Juz 1 covers all of Surah 1
-and part of Surah 2) is written as **two separate fragments with the same
-number** — `sid="juz:1"` opens and closes once in `001.qusx.xml`, then opens and
-closes *again* in `002.qusx.xml`. Within a single file this is unambiguous (each
-number appears at most once), but nothing in the format currently marks these as
-fragments of one Quran-wide range rather than two coincidentally-numbered ranges —
-a consumer that concatenates files needs to know this convention out of band. A
-real fix (e.g. a `continues="true"` flag, or moving these particular axes to a
-single whole-Quran document) is an open design question, not yet resolved.
+**Cross-file fragment identity:** each `.qusx.xml` file covers one surah, so a
+`juz`/`hizb`/`rub`/`manzil`/`ruku` that spans two surahs (e.g. Juz 1 covers all of
+Surah 1 and part of Surah 2) is written once per file it touches — `sid="juz:1"`
+opens and closes in `001.qusx.xml`, then opens and closes *again* in `002.qusx.xml`.
+The `fragment` attribute on the opening pin disambiguates these explicitly:
+`001.qusx.xml`'s `juz:1` carries `fragment="start"` (the range begins here), and
+`002.qusx.xml`'s carries `fragment="end"` (continuation, ends here) — so a consumer
+concatenating files can tell these are two pieces of *one* range, not two
+coincidentally-numbered ones. A range entirely inside one surah (never crossing a
+file boundary) gets `fragment="whole"`.
+
+**What `tradition="hafs-kufi"` actually means:** the code is a deliberate compound,
+not one flat label — `hafs` names the **recitation transmission** (riwāyah, i.e.
+whose reading of Nafiʿ/ʿĀṣim/etc. this is) and `kufi` names the **ayah-counting
+system** (ʿadd al-āy school) applied to it. These are two genuinely independent
+axes — e.g. Warsh's transmission can in principle be counted by more than one
+school — and the schema's closed `traditionCode` enum (see `schema/qusx.xsd`)
+currently only has compound values for the specific transmission+counting pairs
+this project has real per-surah data for (see `data/diff-report.json`), not a
+general cross-product of every possible pairing.
 
 ## Data sources
 
@@ -250,27 +260,32 @@ account for its own divergence from that source.
    `src/generate.js` — just need downloading and registering.
 3. **Text/morphology are duplicated once per layout**, not factored into a
    separately-referenceable layer — see the [Why this exists](#why-this-exists)
-   caveat.
-4. **Juz/hizb/rub/manzil ranges that span two surahs are written as separate
-   same-numbered fragments** in each surah's file, with no in-format marker that
-   they're fragments of one Quran-wide range — see the note in
-   [Tag reference](#tag-reference).
-5. **541 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
+   caveat. This is the one substantial item left that's a real architecture
+   decision, not a mechanical fix: separating text/morphology/layout into
+   independently-combinable documents needs a join-key contract designed first.
+4. **541 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
    are genuinely unexplained**, not just attributed to the known QPC-encoding
    pattern.
-6. **Only ~13 of the ~150+ items from the fuller third-party review have been
-   triaged and fixed** — the rest (data-model layering beyond #3, richer schema
-   semantics, release/versioning policy beyond `CHANGELOG.md`, etc.) remain open.
+5. **Only ~18 of the ~150+ items from the fuller third-party review have been
+   triaged and fixed** — the rest (richer schema semantics beyond what's listed
+   below, release/versioning policy beyond `CHANGELOG.md`, punctuation/pause-sign
+   modeling, extension/namespace policy, etc.) remain open.
 
 **Closed since the audit:** real XSD compilation + validation (was previously only
 regex-checked), CI (`.github/workflows/ci.yml`, including a deterministic-regeneration
-check — committed output must exactly match a fresh build from source), 8 negative
-tests proving the validators actually reject bad input (`test/`), word-position and
+check — committed output must exactly match a fresh build from source, verified with
+two independent generation runs diffing byte-identical), 8 negative tests proving the
+validators actually reject bad input (`test/`), word-position and
 corpus-completeness checks in `validate.js`, filename/surah-name/count/place
 cross-checks against canonical data, a closed `tradition` enum and
 `surah`/`ayahCount` range constraints in the schema, `<ruku>` pins (data was
-downloaded early on but sat unused), `generatorVersion` embedded in generated files,
-`THIRD_PARTY_NOTICES.md`, `CONTRIBUTING.md`, and `CHANGELOG.md`.
+downloaded early on but sat unused), `generatorVersion` and `normalization="NFC"`
+embedded in generated files (with `validate.js` checking the latter is actually
+true), a `fragment` attribute resolving the juz/hizb/rub/manzil/ruku cross-file
+identity ambiguity, a `type="number"` distinction so verse-number glyphs aren't
+mistaken for lexical words, CLI hardening (invalid/duplicate surah args rejected,
+atomic temp-file-then-rename writes), `THIRD_PARTY_NOTICES.md`, `CONTRIBUTING.md`,
+and `CHANGELOG.md`.
 
 This is a v0.1 research prototype open for review and contribution, not a
 finished or formally released standard — see the

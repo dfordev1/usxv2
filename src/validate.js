@@ -225,6 +225,22 @@ function validateFile(filePath) {
     }
   }
 
+  // NFC-normalization check: run as a separate pass over <word>...</word>
+  // text content (Arabic text never contains a literal "<", so this is safe)
+  // rather than threading text capture through the attribute-only tag walker
+  // above.
+  const declaredNormalization = rootAttrs.normalization;
+  if (declaredNormalization === "NFC") {
+    const wordTextRe = /<word\b[^>]*>([^<]*)<\/word>/g;
+    let wm;
+    while ((wm = wordTextRe.exec(xml))) {
+      const text = wm[1];
+      if (text.normalize("NFC") !== text) {
+        errors.push(`${fileName}: word text "${text}" is not NFC-normalized, but root declares normalization="NFC"`);
+      }
+    }
+  }
+
   const stillOpen = [...openPerAxis.keys()];
   if (stillOpen.length > 0) {
     errors.push(`${fileName}: unclosed milestones at end of file: ${stillOpen.join(", ")}`);

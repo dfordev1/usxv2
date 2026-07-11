@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="103" name="Al-'Asr" nameArabic="العصر" ayahCount="3" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)" generatorVersion="0.1.0">
-  <juz number="30" sid="juz:30"/>
-  <manzil number="7" sid="manzil:7"/>
-  <hizb number="60" sid="hizb:60"/>
-  <rub number="240" sid="rub:240"/>
-  <ruku number="547" sid="ruku:547"/>
+<qusx version="0.1" surah="103" name="Al-'Asr" nameArabic="العصر" ayahCount="3" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)" generatorVersion="0.1.0" normalization="NFC">
+  <juz number="30" sid="juz:30" fragment="middle"/>
+  <manzil number="7" sid="manzil:7" fragment="middle"/>
+  <hizb number="60" sid="hizb:60" fragment="middle"/>
+  <rub number="240" sid="rub:240" fragment="middle"/>
+  <ruku number="547" sid="ruku:547" fragment="whole"/>
   <page number="601" sid="page:601"/>
   <line number="3" sid="page:601:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="103:1:hafs-kufi"/>
   <word id="83361" position="1" root="ع ص ر" stem="عَصْرِ" lemma="عَصْر">وَٱلْعَصْرِ</word>
-  <word id="83362" position="2">١</word>
+  <word id="83362" position="2" type="number">١</word>
   <ayah eid="103:1:hafs-kufi"/>
   <ayah number="2" tradition="hafs-kufi" sid="103:2:hafs-kufi"/>
-  <word id="83363" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
+  <word id="83363" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
   <word id="83364" position="2" root="ا ن س" stem="إِنسَٰنَ" lemma="إِنسَٰن">ٱلْإِنسَـٰنَ</word>
   <word id="83365" position="3" stem="فِى" lemma="فِى">لَفِى</word>
   <word id="83366" position="4" root="خ س ر" stem="خُسْرٍ" lemma="خُسْر">خُسْرٍ</word>
-  <word id="83367" position="5">٢</word>
+  <word id="83367" position="5" type="number">٢</word>
   <ayah eid="103:2:hafs-kufi"/>
   <ayah number="3" tradition="hafs-kufi" sid="103:3:hafs-kufi"/>
-  <word id="83368" position="1" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
-  <word id="83369" position="2" stem="الَّذِينَ" lemma="الَّذِى">ٱلَّذِينَ</word>
+  <word id="83368" position="1" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
+  <word id="83369" position="2" stem="الَّذِينَ" lemma="الَّذِى">ٱلَّذِينَ</word>
   <word id="83370" position="3" root="ا   م   ن" stem="ءَامَنُ" lemma="ءَامَنَ">ءَامَنُوا۟</word>
   <line eid="page:601:line:3"/>
   <line number="4" sid="page:601:line:4"/>
   <word id="83371" position="4" root="ع م ل" stem="عَمِلُ" lemma="عَمِلَ">وَعَمِلُوا۟</word>
-  <word id="83372" position="5" root="ص ل ح" stem="صَّٰلِحَٰتِ" lemma="صَّٰلِحَٰت">ٱلصَّـٰلِحَـٰتِ</word>
+  <word id="83372" position="5" root="ص ل ح" stem="صَّٰلِحَٰتِ" lemma="صَّٰلِحَٰت">ٱلصَّـٰلِحَـٰتِ</word>
   <word id="83373" position="6" root="و ص ي" stem="تَوَاصَ" lemma="تَوَاصَ">وَتَوَاصَوْا۟</word>
-  <word id="83374" position="7" root="ح   ق   ق" stem="حَقِّ" lemma="حَقّ">بِٱلْحَقِّ</word>
+  <word id="83374" position="7" root="ح   ق   ق" stem="حَقِّ" lemma="حَقّ">بِٱلْحَقِّ</word>
   <word id="83375" position="8" root="و ص ي" stem="تَوَاصَ" lemma="تَوَاصَ">وَتَوَاصَوْا۟</word>
-  <word id="83376" position="9" root="ص ب ر" stem="صَّبْرِ" lemma="صَبْر">بِٱلصَّبْرِ</word>
-  <word id="83377" position="10">٣</word>
+  <word id="83376" position="9" root="ص ب ر" stem="صَّبْرِ" lemma="صَبْر">بِٱلصَّبْرِ</word>
+  <word id="83377" position="10" type="number">٣</word>
   <ayah eid="103:3:hafs-kufi"/>
   <line eid="page:601:line:4"/>
   <page eid="page:601"/>
