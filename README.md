@@ -266,8 +266,13 @@ account for its own divergence from that source.
    per-surah ayah-count deltas (55/114 surahs differ) and pinpoints *which page* a
    tradition's numbering first diverges from Hafs, but not the exact *word* where an
    ayah boundary moves — that repo stores click polygons, not per-word Qalun/Warsh
-   text. Sourcing actual word-level Qalun/Warsh text (e.g. from Tanzil) is the
-   blocking step before `<ayah tradition="qalon">` can be generated for real.
+   text. Sourcing actual word-level Qalun/Warsh text is the blocking step before
+   `<ayah tradition="qalon">` can be generated for real. **Checked and ruled out:**
+   [tanzil.net/download](https://tanzil.net/download/) — verified directly, it has
+   no riwayah/qira'a selector at all; its "text type" options (Simple/Uthmani/etc.)
+   are orthographic variants of the *same* Hafs reading, not different
+   transmissions. An earlier version of this README named Tanzil as an example
+   source before actually checking; this is that correction.
 2. **5 of QUL's 12 print layouts are wired in** (KFGQPC V1/V2/V4-tajweed, Mushaf
    Qatar, IndoPak 15-line). The remaining 7 (other IndoPak line counts, Digital
    Khatt, Libyan Awqaf, etc.) follow the same pattern in `LAYOUTS` in
