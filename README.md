@@ -266,25 +266,34 @@ account for its own divergence from that source.
 4. **541 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
    are genuinely unexplained**, not just attributed to the known QPC-encoding
    pattern.
-5. **Only ~18 of the ~150+ items from the fuller third-party review have been
+5. **Only ~22 of the ~150+ items from the fuller third-party review have been
    triaged and fixed** — the rest (richer schema semantics beyond what's listed
    below, release/versioning policy beyond `CHANGELOG.md`, punctuation/pause-sign
-   modeling, extension/namespace policy, etc.) remain open.
+   modeling, extension/namespace policy, sajda pinned to exact word rather than
+   end-of-ayah, etc.) remain open.
+6. **No dedicated negative test proves the cross-layout consistency check
+   actually catches a real divergence** — it's been run against real data (where
+   it correctly found nothing wrong across all 5 layouts) but, unlike the other
+   validator checks, has no fixture demonstrating it fails on bad input.
 
 **Closed since the audit:** real XSD compilation + validation (was previously only
 regex-checked), CI (`.github/workflows/ci.yml`, including a deterministic-regeneration
 check — committed output must exactly match a fresh build from source, verified with
 two independent generation runs diffing byte-identical), 8 negative tests proving the
 validators actually reject bad input (`test/`), word-position and
-corpus-completeness checks in `validate.js`, filename/surah-name/count/place
-cross-checks against canonical data, a closed `tradition` enum and
-`surah`/`ayahCount` range constraints in the schema, `<ruku>` pins (data was
-downloaded early on but sat unused), `generatorVersion` and `normalization="NFC"`
-embedded in generated files (with `validate.js` checking the latter is actually
-true), a `fragment` attribute resolving the juz/hizb/rub/manzil/ruku cross-file
-identity ambiguity, a `type="number"` distinction so verse-number glyphs aren't
-mistaken for lexical words, CLI hardening (invalid/duplicate surah args rejected,
-atomic temp-file-then-rename writes), `THIRD_PARTY_NOTICES.md`, `CONTRIBUTING.md`,
+corpus-completeness checks in `validate.js` (now including ruku totals and
+per-layout page counts), filename/surah-name/count/place cross-checks against
+canonical data, a cross-layout consistency check confirming word text and
+morphology are byte-identical across all 5 layouts (only page/line placement
+differs, as intended), a closed `tradition` enum and `surah`/`ayahCount` range
+constraints in the schema, `<ruku>` pins (data was downloaded early on but sat
+unused), `generatorVersion` and `normalization="NFC"` embedded in generated files
+(with `validate.js` checking the latter is actually true), a `fragment` attribute
+resolving the juz/hizb/rub/manzil/ruku cross-file identity ambiguity, a
+`type="number"` distinction so verse-number glyphs aren't mistaken for lexical
+words, CLI hardening (invalid/duplicate surah args rejected, atomic
+temp-file-then-rename writes, duplicate morphology mappings now warned about
+instead of silently overwritten), `THIRD_PARTY_NOTICES.md`, `CONTRIBUTING.md`,
 and `CHANGELOG.md`.
 
 This is a v0.1 research prototype open for review and contribution, not a

@@ -146,15 +146,29 @@ for (const rec of Object.values(sajdaMeta)) {
   sajdaByKey.set(rec.verse_key, rec);
 }
 
-// word embeds: word_location "s:a:w" -> root/stem/lemma text
+// word embeds: word_location "s:a:w" -> root/stem/lemma text. Warns (does not
+// silently overwrite unnoticed) if the source data has two mappings for the
+// same word — a real data-quality signal worth surfacing rather than hiding.
 function buildWordEmbedIndex(db, groupTable, wordTable, groupIdCol, textCol) {
   const groups = new Map();
   for (const row of db.prepare(`SELECT id, ${textCol} FROM ${groupTable}`).all()) {
     groups.set(row.id, row[textCol]);
   }
   const index = new Map();
+  let duplicates = 0;
   for (const row of db.prepare(`SELECT ${groupIdCol}, word_location FROM ${wordTable}`).all()) {
+    if (index.has(row.word_location)) {
+      duplicates++;
+      console.warn(
+        `warning: duplicate ${wordTable} mapping for ${row.word_location} (had "${index.get(
+          row.word_location
+        )}", now overwriting with "${groups.get(row[groupIdCol])}")`
+      );
+    }
     index.set(row.word_location, groups.get(row[groupIdCol]));
+  }
+  if (duplicates > 0) {
+    console.warn(`warning: ${wordTable} had ${duplicates} duplicate word_location mapping(s), see above`);
   }
   return index;
 }

@@ -5,6 +5,21 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added ruku totals (558) and per-layout expected page counts (604 for the
+  Madani-family layouts, 610 for IndoPak) to `validate.js`'s
+  corpus-completeness check.
+- Added a cross-layout consistency check: extracts each surah's word
+  text+morphology sequence per layout and confirms they're byte-identical
+  across all 5 layouts (only page/line placement should differ). Run
+  against real data with no failures found; not yet covered by a dedicated
+  negative-test fixture (see README Known gaps).
+- Added a duplicate-morphology-mapping warning to `src/generate.js` — if the
+  source root/stem/lemma databases ever have two entries for the same word,
+  it's now surfaced instead of silently overwritten. Ran against real data:
+  zero duplicates found.
+
+## 2026-07-11 — Fourth audit-response batch
+
 - Added `fragment` attribute (`whole`/`start`/`middle`/`end`) to
   juz/hizb/rub/manzil/ruku opening pins, resolving the cross-file identity
   ambiguity flagged in the audit: a range spanning two surah files (e.g. Juz 1

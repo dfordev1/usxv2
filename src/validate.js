@@ -133,6 +133,8 @@ function validateFile(filePath) {
   let expectedPosition = 1; // resets to 1 at the start of each ayah
   let wordCount = 0;
   let sajdaCount = 0;
+  let rukuCount = 0;
+  let maxPageNumber = 0;
 
   while ((m = tagRe.exec(xml))) {
     const tag = m[1];
@@ -208,6 +210,8 @@ function validateFile(filePath) {
         ayahNumbers.push(Number(attrs.number));
         expectedPosition = 1; // word position numbering restarts at each ayah
       }
+      if (tag === "ruku") rukuCount++;
+      if (tag === "page") maxPageNumber = Math.max(maxPageNumber, Number(attrs.number));
       continue;
     }
 
@@ -258,13 +262,34 @@ function validateFile(filePath) {
     );
   }
 
-  return { errors, wordCount, sajdaCount, ayahCount: ayahNumbers.length, surah: Number(rootAttrs.surah) };
+  return {
+    errors,
+    wordCount,
+    sajdaCount,
+    rukuCount,
+    maxPageNumber,
+    ayahCount: ayahNumbers.length,
+    surah: Number(rootAttrs.surah),
+  };
 }
 
-// Known Quran-wide totals (Hafs/Kufi, standard 15-sajda list) — used to check
-// that a layout's generated corpus is complete, not just that each file is
-// individually well-formed.
-const EXPECTED_CORPUS_TOTALS = { surahCount: 114, ayahCount: 6236, wordCount: 83668, sajdaCount: 15 };
+// Known Quran-wide totals (Hafs/Kufi, standard 15-sajda list, 558 ruku
+// markers) — used to check that a layout's generated corpus is complete, not
+// just that each file is individually well-formed.
+const EXPECTED_CORPUS_TOTALS = { surahCount: 114, ayahCount: 6236, wordCount: 83668, sajdaCount: 15, rukuCount: 558 };
+
+// Real page count per print edition, from each layout database's own `info`
+// table (see src/generate.js buildWordLocation) — not guessed. IndoPak
+// genuinely paginates differently (610 vs 604) and that's correct, not a bug;
+// this check exists to catch the case where it's *wrong* (e.g. a layout
+// silently truncated or a wrong database wired to the wrong key).
+const EXPECTED_PAGE_COUNTS = {
+  "madani-v2": 604,
+  "madani-v1": 604,
+  "madani-v4-tajweed": 604,
+  qatar: 604,
+  "indopak-15": 610,
+};
 
 function validateLayoutCompleteness(layoutDir, fileResults) {
   const errors = [];
@@ -282,16 +307,62 @@ function validateLayoutCompleteness(layoutDir, fileResults) {
       ayahCount: acc.ayahCount + r.ayahCount,
       wordCount: acc.wordCount + r.wordCount,
       sajdaCount: acc.sajdaCount + r.sajdaCount,
+      rukuCount: acc.rukuCount + r.rukuCount,
     }),
-    { ayahCount: 0, wordCount: 0, sajdaCount: 0 }
+    { ayahCount: 0, wordCount: 0, sajdaCount: 0, rukuCount: 0 }
   );
 
-  for (const key of ["ayahCount", "wordCount", "sajdaCount"]) {
+  for (const key of ["ayahCount", "wordCount", "sajdaCount", "rukuCount"]) {
     if (totals[key] !== EXPECTED_CORPUS_TOTALS[key]) {
       errors.push(`${layoutDir}: corpus-wide ${key} is ${totals[key]}, expected ${EXPECTED_CORPUS_TOTALS[key]}`);
     }
   }
 
+  const expectedPages = EXPECTED_PAGE_COUNTS[layoutDir];
+  if (expectedPages) {
+    const actualMaxPage = Math.max(...fileResults.map((r) => r.maxPageNumber));
+    if (actualMaxPage !== expectedPages) {
+      errors.push(`${layoutDir}: highest page number across the corpus is ${actualMaxPage}, expected ${expectedPages}`);
+    }
+  }
+
+  return errors;
+}
+
+// Word text (and morphology) should be byte-identical across every layout —
+// only page/line placement is supposed to differ between print editions. This
+// extracts each file's word sequence (text + root/stem/lemma, ignoring
+// page/line/fragment attributes) and compares the same surah across all
+// layouts present in this run, flagging any real divergence — which would
+// mean a layout's generation path silently diverged, not just its pagination.
+function extractWordSequence(filePath) {
+  const xml = fs.readFileSync(filePath, "utf-8");
+  const re = /<word\b([^>]*)>([^<]*)<\/word>/g;
+  const sequence = [];
+  let m;
+  while ((m = re.exec(xml))) {
+    const attrs = parseAttrs(m[1]);
+    sequence.push({ text: m[2], root: attrs.root || null, stem: attrs.stem || null, lemma: attrs.lemma || null });
+  }
+  return sequence;
+}
+
+function validateCrossLayoutConsistency(filesByLayoutBySurah) {
+  const errors = [];
+  for (const [surah, byLayout] of filesByLayoutBySurah) {
+    const layoutNames = Object.keys(byLayout);
+    if (layoutNames.length < 2) continue;
+    const [firstLayout, ...restLayouts] = layoutNames;
+    const firstSeq = JSON.stringify(extractWordSequence(byLayout[firstLayout]));
+    for (const layout of restLayouts) {
+      const seq = JSON.stringify(extractWordSequence(byLayout[layout]));
+      if (seq !== firstSeq) {
+        errors.push(
+          `surah ${surah}: word/morphology sequence in layout "${layout}" differs from layout "${firstLayout}" (should be identical — only page/line placement should differ between layouts)`
+        );
+      }
+    }
+  }
   return errors;
 }
 
@@ -314,6 +385,7 @@ function main() {
 
   let totalErrors = 0;
   const resultsByLayout = new Map(); // layoutDir -> [{wordCount, sajdaCount, ayahCount, surah}]
+  const filesByLayoutBySurah = new Map(); // surah -> {layoutDir: filePath}
 
   for (const f of files) {
     const { errors, ...result } = validateFile(f);
@@ -323,15 +395,24 @@ function main() {
     const layoutDir = path.basename(path.dirname(f));
     if (!resultsByLayout.has(layoutDir)) resultsByLayout.set(layoutDir, []);
     resultsByLayout.get(layoutDir).push(result);
+
+    if (!filesByLayoutBySurah.has(result.surah)) filesByLayoutBySurah.set(result.surah, {});
+    filesByLayoutBySurah.get(result.surah)[layoutDir] = f;
   }
 
-  // corpus-completeness checks only make sense when validating a full "all"
-  // run for a layout (not a hand-picked file list) — skip otherwise.
+  // corpus-completeness and cross-layout checks only make sense when
+  // validating a full "all" run (not a hand-picked file list) — skip otherwise.
   if (args.length === 0 || args[0] === "all") {
     for (const [layoutDir, results] of resultsByLayout) {
       const completenessErrors = validateLayoutCompleteness(layoutDir, results);
       totalErrors += completenessErrors.length;
       for (const e of completenessErrors) console.log("FAIL: " + e);
+    }
+
+    if (!layoutFilter) {
+      const crossLayoutErrors = validateCrossLayoutConsistency(filesByLayoutBySurah);
+      totalErrors += crossLayoutErrors.length;
+      for (const e of crossLayoutErrors) console.log("FAIL: " + e);
     }
   }
 
