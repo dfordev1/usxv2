@@ -291,10 +291,11 @@ unused), `generatorVersion` and `normalization="NFC"` embedded in generated file
 (with `validate.js` checking the latter is actually true), a `fragment` attribute
 resolving the juz/hizb/rub/manzil/ruku cross-file identity ambiguity, a
 `type="number"` distinction so verse-number glyphs aren't mistaken for lexical
-words, CLI hardening (invalid/duplicate surah args rejected, atomic
-temp-file-then-rename writes, duplicate morphology mappings now warned about
-instead of silently overwritten), `THIRD_PARTY_NOTICES.md`, `CONTRIBUTING.md`,
-and `CHANGELOG.md`.
+words, CLI hardening (invalid/out-of-range surah args rejected; duplicate
+args deduplicated, not rejected — `node src/generate.js 1 1` exits 0 and
+writes surah 1 once; atomic temp-file-then-rename writes; duplicate
+morphology mappings now warned about instead of silently overwritten),
+`THIRD_PARTY_NOTICES.md`, `CONTRIBUTING.md`, and `CHANGELOG.md`.
 
 This is a v0.1 research prototype open for review and contribution, not a
 finished or formally released standard — see the

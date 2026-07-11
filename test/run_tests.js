@@ -14,11 +14,12 @@
 
 const fs = require("fs");
 const path = require("path");
-const { execFileSync } = require("child_process");
+const { execFileSync, spawnSync } = require("child_process");
 const { validateFile } = require("../src/validate.js");
 
 const FIXTURES = path.join(__dirname, "fixtures");
 const SCHEMA = path.join(__dirname, "..", "schema", "qusx.xsd");
+const GENERATE = path.join(__dirname, "..", "src", "generate.js");
 
 let failures = 0;
 let passed = 0;
@@ -104,6 +105,31 @@ check(
 check(
   "schema-violation-surah-out-of-range.qusx.xml is rejected by the XSD",
   xsdValid(path.join(FIXTURES, "schema-violation-surah-out-of-range.qusx.xml")) === "INVALID"
+);
+
+// --- CLI behavior tests (src/generate.js), run for real, not mocked ---
+// These exist because README/CHANGELOG once imprecisely implied duplicate
+// CLI args are "rejected" like invalid ones — they're not, they're silently
+// deduplicated. `node src/generate.js 1 1` exits 0. Asserting both behaviors
+// explicitly here means that gap can't reappear silently again.
+
+const dedupeRun = spawnSync("node", [GENERATE, "--layout=madani-v2", "1", "1"], { encoding: "utf-8" });
+check(
+  "duplicate CLI args (`1 1`) are deduplicated, not rejected — exits 0",
+  dedupeRun.status === 0,
+  `expected exit 0, got ${dedupeRun.status}. stderr: ${dedupeRun.stderr}`
+);
+check(
+  "duplicate CLI args (`1 1`) write surah 1 exactly once, not twice",
+  (dedupeRun.stdout.match(/wrote .*001\.qusx\.xml/g) || []).length === 1,
+  `expected exactly one "wrote ...001.qusx.xml" line, got: ${dedupeRun.stdout}`
+);
+
+const invalidRun = spawnSync("node", [GENERATE, "--layout=madani-v2", "999"], { encoding: "utf-8" });
+check(
+  "invalid/out-of-range CLI arg (`999`) is rejected — exits non-zero",
+  invalidRun.status !== 0,
+  `expected non-zero exit, got ${invalidRun.status}`
 );
 
 // --- positive control: a real generated file must NOT be rejected ---

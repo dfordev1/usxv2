@@ -5,6 +5,16 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- **Corrected a real documentation bug**: README.md previously said CLI
+  hardening covers "invalid/duplicate surah args rejected" — false for the
+  duplicate half. `node src/generate.js 1 1` exits 0 and writes surah 1
+  once (deduplicated, not rejected); only out-of-range/non-integer args are
+  actually rejected. Caught by external review, verified by reproducing it
+  directly (`node src/generate.js 1 1`, confirmed exit 0 / single write).
+  Fixed the README wording and added two CLI-level tests
+  (`test/run_tests.js`) asserting the exact real behavior — the previous
+  test suite only tested `validateFile`/XSD, never actually ran the CLI, so
+  it had no way to catch this.
 - Added ruku totals (558) and per-layout expected page counts (604 for the
   Madani-family layouts, 610 for IndoPak) to `validate.js`'s
   corpus-completeness check.
