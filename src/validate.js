@@ -289,6 +289,11 @@ const EXPECTED_PAGE_COUNTS = {
   "madani-v4-tajweed": 604,
   qatar: 604,
   "indopak-15": 610,
+  "indopak-9-gaba": 1890,
+  "indopak-13-qudratullah": 849,
+  "indopak-13-taj": 847,
+  "indopak-16-taj": 548,
+  nastaleeq: 610,
 };
 
 function validateLayoutCompleteness(layoutDir, fileResults) {

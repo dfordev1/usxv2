@@ -5,8 +5,8 @@
 <p align="center">
   <a href="https://github.com/dfordev1/usxv2/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-33564F.svg"></a>
   <a href="https://nodejs.org"><img alt="Node >=22" src="https://img.shields.io/badge/node-%3E%3D22-33564F.svg"></a>
-  <img alt="570 files, 0 validation errors" src="https://img.shields.io/badge/validated-570%20files%2C%200%20errors-3f7d4f.svg">
-  <img alt="5 Mushaf layouts" src="https://img.shields.io/badge/layouts-5-9c7a3c.svg">
+  <img alt="1140 files, 0 validation errors" src="https://img.shields.io/badge/validated-1140%20files%2C%200%20errors-3f7d4f.svg">
+  <img alt="10 Mushaf layouts" src="https://img.shields.io/badge/layouts-10-9c7a3c.svg">
   <a href="https://community.itqan.dev/d/549/2"><img alt="Itqan community discussion" src="https://img.shields.io/badge/discussion-Itqan%20community-33564F.svg"></a>
 </p>
 
@@ -58,8 +58,8 @@ QUSX's flat word-stream + independent milestone pins means **one *per-surah* fil
 serves every view**: an app walks `sid`/`eid` pairs to reconstruct whichever slice it
 needs within that surah — an ayah, a printed page, a juz fragment, a riwayah's
 numbering — without re-fetching or duplicating the underlying text *within that
-file*. To be precise about current scope: this project ships **570 files** (114
-surahs × 5 layouts), and text/morphology *is* duplicated once per layout — a page-2
+file*. To be precise about current scope: this project ships **1140 files** (114
+surahs × 10 layouts), and text/morphology *is* duplicated once per layout — a page-2
 KFGQPC-V2 file and a page-2 IndoPak file both carry the full word text independently,
 because layout is baked into each generated document rather than factored into a
 separate referenceable layer. Whether/how to split text, morphology, and layout into
@@ -68,7 +68,7 @@ regenerating the underlying text) is unresolved — see [Known gaps](#known-gaps
 
 ## Status
 
-Generator produces output for **all 114 surahs, across 5 print layouts** (570 files
+Generator produces output for **all 114 surahs, across 10 print layouts** (1140 files
 total), checked against real data:
 
 | Layout | Pages | Ayah pins | Word tokens | Sajda pins |
@@ -78,16 +78,21 @@ total), checked against real data:
 | QPC V4 Tajweed (1441H) | 604 | 6236 | 83668 | 15 |
 | Mushaf Qatar | 604 | 6236 | 83668 | 15 |
 | IndoPak 15-line (Qudratullah) | **610** | 6236 | 83668 | 15 |
+| IndoPak 9-line (Gaba) | **1890** | 6236 | 83668 | 15 |
+| IndoPak 13-line (Qudratullah) | **849** | 6236 | 83668 | 15 |
+| IndoPak 13-line (Taj Company) | **847** | 6236 | 83668 | 15 |
+| IndoPak 16-line (Taj Company) | **548** | 6236 | 83668 | 15 |
+| KFGQPC Nastaleeq 15-line | 610 | 6236 | 83668 | 15 |
 
 Text/ayah/word/sajda counts are identical across layouts (same underlying Hafs/Kufi
-text) — only page/line placement changes per print edition, and IndoPak correctly
-comes out to 610 pages instead of 604, matching its real-world pagination.
+text) — only page/line placement changes per print edition, and each IndoPak/Nastaleeq
+line-count variant correctly comes out to its own real-world page count instead of 604.
 
 Two independent checks, not one: `src/validate.js` checks semantic invariants (every
 `sid` has exactly one matching `eid`, no axis opened twice without closing, ayah
-numbers run 1..N with no gaps) — **all 570 files pass, 0 errors.** Separately,
+numbers run 1..N with no gaps) — **all 1140 files pass, 0 errors.** Separately,
 `scripts/xsd_validate.py` runs the actual [`schema/qusx.xsd`](schema/qusx.xsd)
-through a real XML Schema processor (`lxml`/libxml2) — **all 570 files are also
+through a real XML Schema processor (`lxml`/libxml2) — **all 1140 files are also
 XSD-valid.** These are deliberately two different tools checking different things
 (structural shape vs. semantic pairing rules XSD 1.0 can't express); see
 [Validating and viewing](#validating-and-viewing) for why both are needed.
@@ -109,7 +114,8 @@ node src/generate.js all                      # generate the whole Qur'an, defau
 ```
 
 Available `--layout` keys: `madani-v2` (default), `madani-v1`, `madani-v4-tajweed`,
-`qatar`, `indopak-15`.
+`qatar`, `indopak-15`, `indopak-9-gaba`, `indopak-13-qudratullah`, `indopak-13-taj`,
+`indopak-16-taj`, `nastaleeq`.
 
 Requires Node 22+ (uses the built-in `node:sqlite` module).
 
@@ -221,7 +227,7 @@ CI (`.github/workflows/ci.yml`) runs all three on every push/PR.
 `src/validate.js` is a hand-written semantic checker (sid/eid pairing, ayah
 sequencing, required attributes by convention) — it is **not** an XSD validator and
 was never a substitute for one. `scripts/xsd_validate.py` runs the actual
-`schema/qusx.xsd` through `lxml` and confirms **570/570 generated files are valid**
+`schema/qusx.xsd` through `lxml` and confirms **1140/1140 generated files are valid**
 against it. Note XSD 1.0 cannot express "sid XOR eid" as a structural constraint
 (see the comment in `qusx.xsd`), so that specific rule is still enforced only by
 `validate.js`, not by the schema itself — this is a real, stated scope split
@@ -305,7 +311,7 @@ input (`test/`), word-position and
 corpus-completeness checks in `validate.js` (now including ruku totals and
 per-layout page counts), filename/surah-name/count/place cross-checks against
 canonical data, a cross-layout consistency check confirming word text and
-morphology are byte-identical across all 5 layouts (only page/line placement
+morphology are byte-identical across all 10 layouts (only page/line placement
 differs, as intended), a closed `tradition` enum and `surah`/`ayahCount` range
 constraints in the schema, `<ruku>` pins (data was downloaded early on but sat
 unused), `generatorVersion` and `normalization="NFC"` embedded in generated files

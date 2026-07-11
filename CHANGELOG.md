@@ -5,6 +5,17 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added 5 more Mushaf print layouts from QUL, taking coverage from 5 to 10 of the
+  12 layouts QUL publishes (the 2 skipped — Digital Khatt and Ligature Basd SVG —
+  use a different data shape than the page/line DB schema the generator expects,
+  and haven't been investigated yet): IndoPak 9-line (Gaba), IndoPak 13-line
+  (Qudratullah), IndoPak 13-line (Taj Company), IndoPak 16-line (Taj Company), and
+  KFGQPC Nastaleeq 15-line. Output grew from 570 to 1140 files (114 surahs × 10
+  layouts); all 1140 pass both `validate.js` and the real XSD. Each layout's
+  expected max-page-number (1890 / 849 / 847 / 548 / 610 respectively) was taken
+  from the actual generated output, not guessed, and added to
+  `validate.js`'s corpus-completeness check. CI's deterministic-regeneration loop
+  and README file/layout counts updated to match.
 - Investigated (before fixing/documenting anything, per the CLI-args lesson)
   two audit claims directly against real data:
   - **Bismillah**: confirmed `bismillahPre` is display-only metadata — Surah

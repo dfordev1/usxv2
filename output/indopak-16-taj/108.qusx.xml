@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="108" name="Al-Kawthar" nameArabic="الكوثر" ayahCount="3" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 16-line (Taj Company)" generatorVersion="0.1.0" normalization="NFC">
+  <juz number="30" sid="juz:30" fragment="middle"/>
+  <manzil number="7" sid="manzil:7" fragment="middle"/>
+  <hizb number="60" sid="hizb:60" fragment="middle"/>
+  <rub number="240" sid="rub:240" fragment="middle"/>
+  <ruku number="552" sid="ruku:552" fragment="whole"/>
+  <page number="546" sid="page:546"/>
+  <line number="15" sid="page:546:line:15"/>
+  <ayah number="1" tradition="hafs-kufi" sid="108:1:hafs-kufi"/>
+  <word id="83501" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّآ</word>
+  <word id="83502" position="2" root="ع   ط   و" stem="أَعْطَيْ" lemma="أَعْطَىٰ">أَعْطَيْنَـٰكَ</word>
+  <word id="83503" position="3" root="ك ث ر" stem="كَوْثَرَ" lemma="كَوْثَر">ٱلْكَوْثَرَ</word>
+  <word id="83504" position="4" type="number">١</word>
+  <ayah eid="108:1:hafs-kufi"/>
+  <ayah number="2" tradition="hafs-kufi" sid="108:2:hafs-kufi"/>
+  <word id="83505" position="1" root="ص ل و" stem="صَلِّ" lemma="صَلَّىٰ">فَصَلِّ</word>
+  <word id="83506" position="2" root="ر   ب   ب" stem="رَبِّ" lemma="رَبّ">لِرَبِّكَ</word>
+  <word id="83507" position="3" root="ن ح ر" stem="انْحَرْ" lemma="انْحَرْ">وَٱنْحَرْ</word>
+  <word id="83508" position="4" type="number">٢</word>
+  <ayah eid="108:2:hafs-kufi"/>
+  <ayah number="3" tradition="hafs-kufi" sid="108:3:hafs-kufi"/>
+  <word id="83509" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
+  <line eid="page:546:line:15"/>
+  <line number="16" sid="page:546:line:16"/>
+  <word id="83510" position="2" root="ش ن ا" stem="شَانِئَ" lemma="شَانِئ">شَانِئَكَ</word>
+  <word id="83511" position="3" stem="هُوَ">هُوَ</word>
+  <word id="83512" position="4" root="ب ت ر" stem="أَبْتَرُ" lemma="أَبْتَر">ٱلْأَبْتَرُ</word>
+  <word id="83513" position="5" type="number">٣</word>
+  <ayah eid="108:3:hafs-kufi"/>
+  <line eid="page:546:line:16"/>
+  <page eid="page:546"/>
+  <ruku eid="ruku:552"/>
+  <rub eid="rub:240"/>
+  <hizb eid="hizb:60"/>
+  <manzil eid="manzil:7"/>
+  <juz eid="juz:30"/>
+</qusx>

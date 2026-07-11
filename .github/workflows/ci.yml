@@ -36,7 +36,7 @@ jobs:
 
       - name: Deterministic regeneration (committed output must match a fresh build from source)
         run: |
-          for layout in madani-v2 madani-v1 madani-v4-tajweed qatar indopak-15; do
+          for layout in madani-v2 madani-v1 madani-v4-tajweed qatar indopak-15 indopak-9-gaba indopak-13-qudratullah indopak-13-taj indopak-16-taj nastaleeq; do
             node src/generate.js --layout=$layout all
           done
           git diff --exit-code -- output/ || (echo "::error::Regenerated output differs from committed output — either the generator changed without regenerating, or committed output was hand-edited." && exit 1)

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // QUSX generator — reads QUL raw data and emits one QUSX XML file per surah.
 // Usage: node src/generate.js [--layout=key] [surahNumber ... | all]
-// Layout keys: madani-v2 (default), madani-v1, madani-v4-tajweed, qatar, indopak-15
+// Layout keys: madani-v2 (default), madani-v1, madani-v4-tajweed, qatar, indopak-15,
+//   indopak-9-gaba, indopak-13-qudratullah, indopak-13-taj, indopak-16-taj, nastaleeq
 
 const fs = require("fs");
 const path = require("path");
@@ -19,6 +20,11 @@ const LAYOUTS = {
   "madani-v4-tajweed": { file: path.join(LAYOUTS_DIR, "qpc-v4-tajweed-15-lines.db"), label: "QPC V4 Tajweed (1441H)" },
   qatar: { file: path.join(LAYOUTS_DIR, "mushaf-qatar-layout.db"), label: "Mushaf Qatar" },
   "indopak-15": { file: path.join(LAYOUTS_DIR, "qudratullah-indopak-15-lines.db"), label: "IndoPak 15-line (Qudratullah)" },
+  "indopak-9-gaba": { file: path.join(LAYOUTS_DIR, "indopak-9-lines-gaba.db"), label: "IndoPak 9-line (Gaba)" },
+  "indopak-13-qudratullah": { file: path.join(LAYOUTS_DIR, "indopak-13-lines-layout-qudratullah.db"), label: "IndoPak 13-line (Qudratullah)" },
+  "indopak-13-taj": { file: path.join(LAYOUTS_DIR, "indopak-13-lines-taj-company.db"), label: "IndoPak 13-line (Taj Company)" },
+  "indopak-16-taj": { file: path.join(LAYOUTS_DIR, "taj-indopak-16-lines.db"), label: "IndoPak 16-line (Taj Company)" },
+  nastaleeq: { file: path.join(LAYOUTS_DIR, "qpc-nastaleeq-15-lines.db"), label: "KFGQPC Nastaleeq 15-line" },
 };
 
 function loadJSON(name) {

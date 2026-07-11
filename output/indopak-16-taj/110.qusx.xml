@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="110" name="An-Nasr" nameArabic="النصر" ayahCount="3" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 16-line (Taj Company)" generatorVersion="0.1.0" normalization="NFC">
+  <juz number="30" sid="juz:30" fragment="middle"/>
+  <manzil number="7" sid="manzil:7" fragment="middle"/>
+  <hizb number="60" sid="hizb:60" fragment="middle"/>
+  <rub number="240" sid="rub:240" fragment="middle"/>
+  <ruku number="554" sid="ruku:554" fragment="whole"/>
+  <page number="547" sid="page:547"/>
+  <line number="7" sid="page:547:line:7"/>
+  <ayah number="1" tradition="hafs-kufi" sid="110:1:hafs-kufi"/>
+  <word id="83546" position="1" stem="إِذَا" lemma="إِذَا">إِذَا</word>
+  <word id="83547" position="2" root="ج   ي   ا" stem="جَآءَ" lemma="جَآءَ">جَآءَ</word>
+  <word id="83548" position="3" root="ن ص ر" stem="نَصْرُ" lemma="نَصْر">نَصْرُ</word>
+  <word id="83549" position="4" root="ا ل ه" stem="اللَّهِ" lemma="اللَّه">ٱللَّهِ</word>
+  <word id="83550" position="5" root="ف ت ح" stem="فَتْحُ" lemma="فَتْح">وَٱلْفَتْحُ</word>
+  <word id="83551" position="6" type="number">١</word>
+  <ayah eid="110:1:hafs-kufi"/>
+  <ayah number="2" tradition="hafs-kufi" sid="110:2:hafs-kufi"/>
+  <word id="83552" position="1" root="ر   ا   ي" stem="رَأَيْ" lemma="رَءَا">وَرَأَيْتَ</word>
+  <word id="83553" position="2" root="ن   و   س" stem="نَّاسَ" lemma="نَّاس">ٱلنَّاسَ</word>
+  <word id="83554" position="3" root="د خ ل" stem="يَدْخُلُ" lemma="دَخَلَ">يَدْخُلُونَ</word>
+  <word id="83555" position="4" stem="فِى" lemma="فِى">فِى</word>
+  <word id="83556" position="5" root="د ي ن" stem="دِينِ" lemma="دِين">دِينِ</word>
+  <line eid="page:547:line:7"/>
+  <line number="8" sid="page:547:line:8"/>
+  <word id="83557" position="6" root="ا ل ه" stem="اللَّهِ" lemma="اللَّه">ٱللَّهِ</word>
+  <word id="83558" position="7" root="ف و ج" stem="أَفْوَاجًا" lemma="فَوْج">أَفْوَاجًۭا</word>
+  <word id="83559" position="8" type="number">٢</word>
+  <ayah eid="110:2:hafs-kufi"/>
+  <ayah number="3" tradition="hafs-kufi" sid="110:3:hafs-kufi"/>
+  <word id="83560" position="1" root="س ب ح" stem="سَبِّحْ" lemma="سَبَّحَ">فَسَبِّحْ</word>
+  <word id="83561" position="2" root="ح م د" stem="حَمْدِ" lemma="حَمْد">بِحَمْدِ</word>
+  <word id="83562" position="3" root="ر   ب   ب" stem="رَبِّ" lemma="رَبّ">رَبِّكَ</word>
+  <word id="83563" position="4" root="غ ف ر" stem="اسْتَغْفِرْ" lemma="اسْتَغْفَرَ">وَٱسْتَغْفِرْهُ ۚ</word>
+  <word id="83564" position="5" stem="إِنَّ" lemma="إِنّ">إِنَّهُۥ</word>
+  <word id="83565" position="6" root="ك   و   ن" stem="كَانَ" lemma="كَانَ">كَانَ</word>
+  <word id="83566" position="7" root="ت   و   ب" stem="تَوَّابًۢا" lemma="تَوَّاب">تَوَّابًۢا</word>
+  <word id="83567" position="8" type="number">٣</word>
+  <ayah eid="110:3:hafs-kufi"/>
+  <line eid="page:547:line:8"/>
+  <page eid="page:547"/>
+  <ruku eid="ruku:554"/>
+  <rub eid="rub:240"/>
+  <hizb eid="hizb:60"/>
+  <manzil eid="manzil:7"/>
+  <juz eid="juz:30"/>
+</qusx>
