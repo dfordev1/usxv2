@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="43" name="Az-Zukhruf" nameArabic="الزخرف" ayahCount="89" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="43" name="Az-Zukhruf" nameArabic="الزخرف" ayahCount="89" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="25" sid="juz:25"/>
   <manzil number="6" sid="manzil:6"/>
   <hizb number="49" sid="hizb:49"/>
   <rub number="196" sid="rub:196"/>
+  <ruku number="426" sid="ruku:426"/>
   <page number="489" sid="page:489"/>
   <line number="7" sid="page:489:line:7"/>
   <ayah number="1" tradition="hafs-kufi" sid="43:1:hafs-kufi"/>
@@ -204,6 +205,8 @@
   <word id="67501" position="8" root="ك ف ر" stem="كَفُورٌ" lemma="كَفُور">لَكَفُورٌۭ</word>
   <word id="67502" position="9" root="ب   ي   ن" stem="مُّبِينٌ" lemma="مُّبِين">مُّبِينٌ</word>
   <word id="67503" position="10">١٥</word>
+  <ruku eid="ruku:426"/>
+  <ruku number="427" sid="ruku:427"/>
   <ayah eid="43:15:hafs-kufi"/>
   <ayah number="16" tradition="hafs-kufi" sid="43:16:hafs-kufi"/>
   <word id="67504" position="1" stem="أَمِ" lemma="أَم">أَمِ</word>
@@ -382,6 +385,8 @@
   <word id="67627" position="6" root="ع ق ب" stem="عَٰقِبَةُ" lemma="عَٰقِبَة">عَـٰقِبَةُ</word>
   <word id="67628" position="7" root="ك ذ ب" stem="مُكَذِّبِينَ" lemma="مُّكَذِّبِين">ٱلْمُكَذِّبِينَ</word>
   <word id="67629" position="8">٢٥</word>
+  <ruku eid="ruku:427"/>
+  <ruku number="428" sid="ruku:428"/>
   <ayah eid="43:25:hafs-kufi"/>
   <ayah number="26" tradition="hafs-kufi" sid="43:26:hafs-kufi"/>
   <word id="67630" position="1" stem="إِذْ" lemma="إِذ">وَإِذْ</word>
@@ -548,6 +553,8 @@
   <line number="3" sid="page:492:line:3"/>
   <word id="67746" position="12" root="و   ق   ي" stem="مُتَّقِينَ" lemma="مُتَّقِين">لِلْمُتَّقِينَ</word>
   <word id="67747" position="13">٣٥</word>
+  <ruku eid="ruku:428"/>
+  <ruku number="429" sid="ruku:429"/>
   <ayah eid="43:35:hafs-kufi"/>
   <ayah number="36" tradition="hafs-kufi" sid="43:36:hafs-kufi"/>
   <word id="67748" position="1" stem="مَن" lemma="مِن">وَمَن</word>
@@ -687,6 +694,8 @@
   <word id="67844" position="12" root="ا ل ه" stem="ءَالِهَةً" lemma="إِلَٰه">ءَالِهَةًۭ</word>
   <word id="67845" position="13" root="ع ب د" stem="يُعْبَدُ" lemma="عَبَدَ">يُعْبَدُونَ</word>
   <word id="67846" position="14">٤٥</word>
+  <ruku eid="ruku:429"/>
+  <ruku number="430" sid="ruku:430"/>
   <ayah eid="43:45:hafs-kufi"/>
   <ayah number="46" tradition="hafs-kufi" sid="43:46:hafs-kufi"/>
   <word id="67847" position="1" stem="قَدْ" lemma="قَد">وَلَقَدْ</word>
@@ -856,6 +865,8 @@
   <word id="67963" position="5">٥٦</word>
   <rub eid="rub:197"/>
   <rub number="198" sid="rub:198"/>
+  <ruku eid="ruku:430"/>
+  <ruku number="431" sid="ruku:431"/>
   <ayah eid="43:56:hafs-kufi"/>
   <ayah number="57" tradition="hafs-kufi" sid="43:57:hafs-kufi"/>
   <word id="67964" position="1" stem="لَمَّا" lemma="لَمَّا">۞ وَلَمَّا</word>
@@ -1029,6 +1040,8 @@
   <word id="68084" position="6" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
   <word id="68085" position="7" root="و   ق   ي" stem="مُتَّقِينَ" lemma="مُتَّقِين">ٱلْمُتَّقِينَ</word>
   <word id="68086" position="8">٦٧</word>
+  <ruku eid="ruku:431"/>
+  <ruku number="432" sid="ruku:432"/>
   <ayah eid="43:67:hafs-kufi"/>
   <ayah number="68" tradition="hafs-kufi" sid="43:68:hafs-kufi"/>
   <word id="68087" position="1" root="ع ب د" stem="عِبَادِ" lemma="عَبْد">يَـٰعِبَادِ</word>
@@ -1319,6 +1332,7 @@
   <ayah eid="43:89:hafs-kufi"/>
   <line eid="page:495:line:15"/>
   <page eid="page:495"/>
+  <ruku eid="ruku:432"/>
   <rub eid="rub:198"/>
   <hizb eid="hizb:50"/>
   <manzil eid="manzil:6"/>

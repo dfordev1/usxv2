@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="99" name="Az-Zalzalah" nameArabic="الزلزلة" ayahCount="8" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)">
+<qusx version="0.1" surah="99" name="Az-Zalzalah" nameArabic="الزلزلة" ayahCount="8" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0">
   <juz number="30" sid="juz:30"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="60" sid="hizb:60"/>
   <rub number="239" sid="rub:239"/>
+  <ruku number="543" sid="ruku:543"/>
   <page number="605" sid="page:605"/>
   <line number="6" sid="page:605:line:6"/>
   <ayah number="1" tradition="hafs-kufi" sid="99:1:hafs-kufi"/>
@@ -76,6 +77,7 @@
   <ayah eid="99:8:hafs-kufi"/>
   <line eid="page:605:line:10"/>
   <page eid="page:605"/>
+  <ruku eid="ruku:543"/>
   <rub eid="rub:239"/>
   <hizb eid="hizb:60"/>
   <manzil eid="manzil:7"/>

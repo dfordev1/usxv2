@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="95" name="At-Tin" nameArabic="التين" ayahCount="8" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)">
+<qusx version="0.1" surah="95" name="At-Tin" nameArabic="التين" ayahCount="8" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)" generatorVersion="0.1.0">
   <juz number="30" sid="juz:30"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="60" sid="hizb:60"/>
   <rub number="239" sid="rub:239"/>
+  <ruku number="539" sid="ruku:539"/>
   <page number="597" sid="page:597"/>
   <line number="5" sid="page:597:line:5"/>
   <ayah number="1" tradition="hafs-kufi" sid="95:1:hafs-kufi"/>
@@ -72,6 +73,7 @@
   <ayah eid="95:8:hafs-kufi"/>
   <line eid="page:597:line:8"/>
   <page eid="page:597"/>
+  <ruku eid="ruku:539"/>
   <rub eid="rub:239"/>
   <hizb eid="hizb:60"/>
   <manzil eid="manzil:7"/>

@@ -7,6 +7,8 @@ const fs = require("fs");
 const path = require("path");
 const { DatabaseSync } = require("node:sqlite");
 
+const GENERATOR_VERSION = require("../package.json").version;
+
 const RAW = path.join(__dirname, "..", "data", "raw");
 const LAYOUTS_DIR = path.join(__dirname, "..", "data", "layouts");
 const OUT = path.join(__dirname, "..", "output");
@@ -40,6 +42,7 @@ const juzMeta = loadJSON("quran-metadata-juz.json");
 const hizbMeta = loadJSON("quran-metadata-hizb.json");
 const rubMeta = loadJSON("quran-metadata-rub.json");
 const manzilMeta = loadJSON("quran-metadata-manzil.json");
+const rukuMeta = loadJSON("quran-metadata-ruku.json");
 const sajdaMeta = loadJSON("quran-metadata-sajda.json");
 
 const rootDb = new DatabaseSync(path.join(RAW, "word-root.db"), { readOnly: true });
@@ -107,6 +110,7 @@ const juzIndex = buildRangeIndex(juzMeta, "juz_number");
 const hizbIndex = buildRangeIndex(hizbMeta, "hizb_number");
 const rubIndex = buildRangeIndex(rubMeta, "rub_number");
 const manzilIndex = buildRangeIndex(manzilMeta, "manzil_number");
+const rukuIndex = buildRangeIndex(rukuMeta, "ruku_number");
 
 // sajda: verse_key -> {sajdah_number, sajdah_type}
 const sajdaByKey = new Map();
@@ -152,7 +156,7 @@ function generateSurah(surahNumber, wordLocation, layoutLabel) {
       surahName.name_simple
     )}" nameArabic="${xmlEscape(surahName.name_arabic)}" ayahCount="${surahName.verses_count}" ` +
       `revelationPlace="${surahName.revelation_place}" bismillahPre="${surahName.bismillah_pre}" ` +
-      `tradition="hafs-kufi" layout="${xmlEscape(layoutLabel)}">`
+      `tradition="hafs-kufi" layout="${xmlEscape(layoutLabel)}" generatorVersion="${GENERATOR_VERSION}">`
   );
 
   let openAyah = null;
@@ -162,6 +166,7 @@ function generateSurah(surahNumber, wordLocation, layoutLabel) {
   let openHizb = null;
   let openRub = null;
   let openManzil = null;
+  let openRuku = null;
 
   function closeIfOpen(tag, state) {
     if (state) lines.push(`  <${tag} eid="${state}"/>`);
@@ -175,6 +180,7 @@ function generateSurah(surahNumber, wordLocation, layoutLabel) {
     const hizbR = findRange(hizbIndex, w.surah, w.ayah);
     const rubR = findRange(rubIndex, w.surah, w.ayah);
     const manzilR = findRange(manzilIndex, w.surah, w.ayah);
+    const rukuR = findRange(rukuIndex, w.surah, w.ayah);
 
     // open/close juz/hizb/rub/manzil pins (coarse-to-fine order)
     const juzId = juzR ? `juz:${juzR.number}` : null;
@@ -200,6 +206,12 @@ function generateSurah(surahNumber, wordLocation, layoutLabel) {
       closeIfOpen("rub", openRub);
       if (rubId) lines.push(`  <rub number="${rubR.number}" sid="${rubId}"/>`);
       openRub = rubId;
+    }
+    const rukuId = rukuR ? `ruku:${rukuR.number}` : null;
+    if (rukuId !== openRuku) {
+      closeIfOpen("ruku", openRuku);
+      if (rukuId) lines.push(`  <ruku number="${rukuR.number}" sid="${rukuId}"/>`);
+      openRuku = rukuId;
     }
 
     // page/line pins
@@ -250,6 +262,7 @@ function generateSurah(surahNumber, wordLocation, layoutLabel) {
   closeIfOpen("ayah", openAyah);
   closeIfOpen("line", openLine);
   closeIfOpen("page", openPage);
+  closeIfOpen("ruku", openRuku);
   closeIfOpen("rub", openRub);
   closeIfOpen("hizb", openHizb);
   closeIfOpen("manzil", openManzil);

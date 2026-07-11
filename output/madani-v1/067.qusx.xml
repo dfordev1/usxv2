@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="67" name="Al-Mulk" nameArabic="الملك" ayahCount="30" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+<qusx version="0.1" surah="67" name="Al-Mulk" nameArabic="الملك" ayahCount="30" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="57" sid="hizb:57"/>
   <rub number="225" sid="rub:225"/>
+  <ruku number="498" sid="ruku:498"/>
   <page number="562" sid="page:562"/>
   <line number="3" sid="page:562:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="67:1:hafs-kufi"/>
@@ -224,6 +225,8 @@
   <word id="77863" position="6" root="ل ط ف" stem="لَّطِيفُ" lemma="لَطِيف">ٱللَّطِيفُ</word>
   <word id="77864" position="7" root="خ ب ر" stem="خَبِيرُ" lemma="خَبِير">ٱلْخَبِيرُ</word>
   <word id="77865" position="8">١٤</word>
+  <ruku eid="ruku:498"/>
+  <ruku number="499" sid="ruku:499"/>
   <ayah eid="67:14:hafs-kufi"/>
   <ayah number="15" tradition="hafs-kufi" sid="67:15:hafs-kufi"/>
   <word id="77866" position="1" stem="هُوَ">هُوَ</word>
@@ -499,6 +502,7 @@
   <ayah eid="67:30:hafs-kufi"/>
   <line eid="page:564:line:5"/>
   <page eid="page:564"/>
+  <ruku eid="ruku:499"/>
   <rub eid="rub:225"/>
   <hizb eid="hizb:57"/>
   <manzil eid="manzil:7"/>

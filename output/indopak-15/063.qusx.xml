@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="63" name="Al-Munafiqun" nameArabic="المنافقون" ayahCount="11" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)">
+<qusx version="0.1" surah="63" name="Al-Munafiqun" nameArabic="المنافقون" ayahCount="11" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0">
   <juz number="28" sid="juz:28"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="56" sid="hizb:56"/>
   <rub number="221" sid="rub:221"/>
+  <ruku number="490" sid="ruku:490"/>
   <page number="554" sid="page:554"/>
   <line number="12" sid="page:554:line:12"/>
   <ayah number="1" tradition="hafs-kufi" sid="63:1:hafs-kufi"/>
@@ -192,6 +193,8 @@
   <line number="11" sid="page:555:line:11"/>
   <word id="76832" position="17" root="ع ل م" stem="يَعْلَمُ" lemma="عَلِمَ">يَعْلَمُونَ</word>
   <word id="76833" position="18">٨</word>
+  <ruku eid="ruku:490"/>
+  <ruku number="491" sid="ruku:491"/>
   <ayah eid="63:8:hafs-kufi"/>
   <ayah number="9" tradition="hafs-kufi" sid="63:9:hafs-kufi"/>
   <word id="76834" position="1" root="ا   ي   ي" stem="أَيُّهَا" lemma="أَيُّهَا">يَـٰٓأَيُّهَا</word>
@@ -261,6 +264,7 @@
   <ayah eid="63:11:hafs-kufi"/>
   <line eid="page:555:line:15"/>
   <page eid="page:555"/>
+  <ruku eid="ruku:491"/>
   <rub eid="rub:222"/>
   <hizb eid="hizb:56"/>
   <manzil eid="manzil:7"/>

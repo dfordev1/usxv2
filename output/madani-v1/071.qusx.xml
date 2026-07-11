@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="71" name="Nuh" nameArabic="نوح" ayahCount="28" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+<qusx version="0.1" surah="71" name="Nuh" nameArabic="نوح" ayahCount="28" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="57" sid="hizb:57"/>
   <rub number="228" sid="rub:228"/>
+  <ruku number="506" sid="ruku:506"/>
   <page number="570" sid="page:570"/>
   <line number="7" sid="page:570:line:7"/>
   <ayah number="1" tradition="hafs-kufi" sid="71:1:hafs-kufi"/>
@@ -239,6 +240,8 @@
   <word id="79150" position="3" root="س ب ل" stem="سُبُلًا" lemma="سَبِيل">سُبُلًۭا</word>
   <word id="79151" position="4" root="ف   ج   ج" stem="فِجَاجًا" lemma="فَجّ">فِجَاجًۭا</word>
   <word id="79152" position="5">٢٠</word>
+  <ruku eid="ruku:506"/>
+  <ruku number="507" sid="ruku:507"/>
   <ayah eid="71:20:hafs-kufi"/>
   <ayah number="21" tradition="hafs-kufi" sid="71:21:hafs-kufi"/>
   <word id="79153" position="1" root="ق   و   ل" stem="قَالَ" lemma="قَالَ">قَالَ</word>
@@ -366,6 +369,7 @@
   <ayah eid="71:28:hafs-kufi"/>
   <line eid="page:571:line:15"/>
   <page eid="page:571"/>
+  <ruku eid="ruku:507"/>
   <rub eid="rub:228"/>
   <hizb eid="hizb:57"/>
   <manzil eid="manzil:7"/>

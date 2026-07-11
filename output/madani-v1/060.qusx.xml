@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="60" name="Al-Mumtahanah" nameArabic="الممتحنة" ayahCount="13" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+<qusx version="0.1" surah="60" name="Al-Mumtahanah" nameArabic="الممتحنة" ayahCount="13" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0">
   <juz number="28" sid="juz:28"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="55" sid="hizb:55"/>
   <rub number="219" sid="rub:219"/>
+  <ruku number="484" sid="ruku:484"/>
   <page number="549" sid="page:549"/>
   <line number="2" sid="page:549:line:2"/>
   <ayah number="1" tradition="hafs-kufi" sid="60:1:hafs-kufi"/>
@@ -215,6 +216,8 @@
   <word id="76076" position="20">٦</word>
   <rub eid="rub:219"/>
   <rub number="220" sid="rub:220"/>
+  <ruku eid="ruku:484"/>
+  <ruku number="485" sid="ruku:485"/>
   <ayah eid="60:6:hafs-kufi"/>
   <ayah number="7" tradition="hafs-kufi" sid="60:7:hafs-kufi"/>
   <word id="76077" position="1" root="ع   س   ي" stem="عَسَى" lemma="عَسَى">۞ عَسَى</word>
@@ -469,6 +472,7 @@
   <ayah eid="60:13:hafs-kufi"/>
   <line eid="page:551:line:6"/>
   <page eid="page:551"/>
+  <ruku eid="ruku:485"/>
   <rub eid="rub:220"/>
   <hizb eid="hizb:55"/>
   <manzil eid="manzil:7"/>

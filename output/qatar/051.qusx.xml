@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="51" name="Adh-Dhariyat" nameArabic="الذاريات" ayahCount="60" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="51" name="Adh-Dhariyat" nameArabic="الذاريات" ayahCount="60" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="26" sid="juz:26"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="52" sid="hizb:52"/>
   <rub number="208" sid="rub:208"/>
+  <ruku number="457" sid="ruku:457"/>
   <page number="520" sid="page:520"/>
   <line number="14" sid="page:520:line:14"/>
   <ayah number="1" tradition="hafs-kufi" sid="51:1:hafs-kufi"/>
@@ -196,6 +197,8 @@
   <word id="71961" position="8" stem="أَنَّ" lemma="أَنّ">أَنَّكُمْ</word>
   <word id="71962" position="9" root="ن ط ق" stem="تَنطِقُ" lemma="يَنطِقُ">تَنطِقُونَ</word>
   <word id="71963" position="10">٢٣</word>
+  <ruku eid="ruku:457"/>
+  <ruku number="458" sid="ruku:458"/>
   <ayah eid="51:23:hafs-kufi"/>
   <ayah number="24" tradition="hafs-kufi" sid="51:24:hafs-kufi"/>
   <word id="71964" position="1" stem="هَلْ" lemma="هَل">هَلْ</word>
@@ -467,6 +470,8 @@
   <line number="12" sid="page:522:line:12"/>
   <word id="72145" position="8" root="ف س ق" stem="فَٰسِقِينَ" lemma="فَاسِق">فَـٰسِقِينَ</word>
   <word id="72146" position="9">٤٦</word>
+  <ruku eid="ruku:458"/>
+  <ruku number="459" sid="ruku:459"/>
   <ayah eid="51:46:hafs-kufi"/>
   <ayah number="47" tradition="hafs-kufi" sid="51:47:hafs-kufi"/>
   <word id="72147" position="1" root="س   م   و" stem="سَّمَآءَ" lemma="سَمَآء">وَٱلسَّمَآءَ</word>
@@ -636,6 +641,7 @@
   <ayah eid="51:60:hafs-kufi"/>
   <line eid="page:523:line:7"/>
   <page eid="page:523"/>
+  <ruku eid="ruku:459"/>
   <rub eid="rub:209"/>
   <hizb eid="hizb:53"/>
   <manzil eid="manzil:7"/>

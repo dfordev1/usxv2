@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="77" name="Al-Mursalat" nameArabic="المرسلات" ayahCount="50" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="77" name="Al-Mursalat" nameArabic="المرسلات" ayahCount="50" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="58" sid="hizb:58"/>
   <rub number="232" sid="rub:232"/>
+  <ruku number="518" sid="ruku:518"/>
   <page number="580" sid="page:580"/>
   <line number="9" sid="page:580:line:9"/>
   <ayah number="1" tradition="hafs-kufi" sid="77:1:hafs-kufi"/>
@@ -298,6 +299,8 @@
   <word id="80742" position="2" root="ي و م" stem="يَوْمَئِذٍ" lemma="يَوْمَئِذ">يَوْمَئِذٍۢ</word>
   <word id="80743" position="3" root="ك ذ ب" stem="مُكَذِّبِينَ" lemma="مُّكَذِّبِين">لِّلْمُكَذِّبِينَ</word>
   <word id="80744" position="4">٤٠</word>
+  <ruku eid="ruku:518"/>
+  <ruku number="519" sid="ruku:519"/>
   <ayah eid="77:40:hafs-kufi"/>
   <ayah number="41" tradition="hafs-kufi" sid="77:41:hafs-kufi"/>
   <word id="80745" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
@@ -383,6 +386,7 @@
   <ayah eid="77:50:hafs-kufi"/>
   <line eid="page:581:line:15"/>
   <page eid="page:581"/>
+  <ruku eid="ruku:519"/>
   <rub eid="rub:232"/>
   <hizb eid="hizb:58"/>
   <manzil eid="manzil:7"/>

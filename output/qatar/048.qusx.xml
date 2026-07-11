@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="48" name="Al-Fath" nameArabic="الفتح" ayahCount="29" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="48" name="Al-Fath" nameArabic="الفتح" ayahCount="29" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="26" sid="juz:26"/>
   <manzil number="6" sid="manzil:6"/>
   <hizb number="51" sid="hizb:51"/>
   <rub number="204" sid="rub:204"/>
+  <ruku number="448" sid="ruku:448"/>
   <page number="511" sid="page:511"/>
   <line number="3" sid="page:511:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="48:1:hafs-kufi"/>
@@ -196,6 +197,8 @@
   <word id="70607" position="24" root="ا ج ر" stem="أَجْرًا" lemma="أَجْر">أَجْرًا</word>
   <word id="70608" position="25" root="ع ظ م" stem="عَظِيمًا" lemma="عَظِيم">عَظِيمًۭا</word>
   <word id="70609" position="26">١٠</word>
+  <ruku eid="ruku:448"/>
+  <ruku number="449" sid="ruku:449"/>
   <ayah eid="48:10:hafs-kufi"/>
   <ayah number="11" tradition="hafs-kufi" sid="48:11:hafs-kufi"/>
   <word id="70610" position="1" root="ق   و   ل" stem="يَقُولُ" lemma="قَالَ">سَيَقُولُ</word>
@@ -425,6 +428,8 @@
   <hizb number="52" sid="hizb:52"/>
   <rub eid="rub:204"/>
   <rub number="205" sid="rub:205"/>
+  <ruku eid="ruku:449"/>
+  <ruku number="450" sid="ruku:450"/>
   <ayah eid="48:17:hafs-kufi"/>
   <ayah number="18" tradition="hafs-kufi" sid="48:18:hafs-kufi"/>
   <word id="70783" position="1" stem="قَدْ" lemma="قَد">۞ لَّقَدْ</word>
@@ -661,6 +666,8 @@
   <word id="70958" position="27" root="ش   ي   ا" stem="شَىْءٍ">شَىْءٍ</word>
   <word id="70959" position="28" root="ع ل م" stem="عَلِيمًا" lemma="عَلِيم">عَلِيمًۭا</word>
   <word id="70960" position="29">٢٦</word>
+  <ruku eid="ruku:450"/>
+  <ruku number="451" sid="ruku:451"/>
   <line eid="page:514:line:10"/>
   <line number="11" sid="page:514:line:11"/>
   <ayah eid="48:26:hafs-kufi"/>
@@ -793,6 +800,7 @@
   <ayah eid="48:29:hafs-kufi"/>
   <line eid="page:515:line:6"/>
   <page eid="page:515"/>
+  <ruku eid="ruku:451"/>
   <rub eid="rub:205"/>
   <hizb eid="hizb:52"/>
   <manzil eid="manzil:6"/>

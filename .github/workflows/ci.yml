@@ -34,5 +34,12 @@ jobs:
       - name: Negative tests
         run: node test/run_tests.js
 
+      - name: Deterministic regeneration (committed output must match a fresh build from source)
+        run: |
+          for layout in madani-v2 madani-v1 madani-v4-tajweed qatar indopak-15; do
+            node src/generate.js --layout=$layout all
+          done
+          git diff --exit-code -- output/ || (echo "::error::Regenerated output differs from committed output — either the generator changed without regenerating, or committed output was hand-edited." && exit 1)
+
       - name: Text integrity check (informational — known unexplained residual, see README)
         run: node src/checksum-verify.js || true

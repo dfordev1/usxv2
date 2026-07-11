@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="90" name="Al-Balad" nameArabic="البلد" ayahCount="20" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+<qusx version="0.1" surah="90" name="Al-Balad" nameArabic="البلد" ayahCount="20" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0">
   <juz number="30" sid="juz:30"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="60" sid="hizb:60"/>
   <rub number="238" sid="rub:238"/>
+  <ruku number="534" sid="ruku:534"/>
   <page number="594" sid="page:594"/>
   <line number="6" sid="page:594:line:6"/>
   <ayah number="1" tradition="hafs-kufi" sid="90:1:hafs-kufi"/>
@@ -166,6 +167,7 @@
   <ayah eid="90:20:hafs-kufi"/>
   <line eid="page:594:line:14"/>
   <page eid="page:594"/>
+  <ruku eid="ruku:534"/>
   <rub eid="rub:238"/>
   <hizb eid="hizb:60"/>
   <manzil eid="manzil:7"/>

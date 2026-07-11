@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="44" name="Ad-Dukhan" nameArabic="الدخان" ayahCount="59" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)">
+<qusx version="0.1" surah="44" name="Ad-Dukhan" nameArabic="الدخان" ayahCount="59" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)" generatorVersion="0.1.0">
   <juz number="25" sid="juz:25"/>
   <manzil number="6" sid="manzil:6"/>
   <hizb number="50" sid="hizb:50"/>
   <rub number="198" sid="rub:198"/>
+  <ruku number="433" sid="ruku:433"/>
   <page number="496" sid="page:496"/>
   <line number="3" sid="page:496:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="44:1:hafs-kufi"/>
@@ -306,6 +307,8 @@
   <word id="68484" position="7" root="ك   و   ن" stem="كَانُ" lemma="كَانَ">كَانُوا۟</word>
   <word id="68485" position="8" root="ن ظ ر" stem="مُنظَرِينَ" lemma="مُنظَرُون">مُنظَرِينَ</word>
   <word id="68486" position="9">٢٩</word>
+  <ruku eid="ruku:433"/>
+  <ruku number="434" sid="ruku:434"/>
   <ayah eid="44:29:hafs-kufi"/>
   <ayah number="30" tradition="hafs-kufi" sid="44:30:hafs-kufi"/>
   <word id="68487" position="1" stem="قَدْ" lemma="قَد">وَلَقَدْ</word>
@@ -462,6 +465,8 @@
   <word id="68590" position="7" root="ع   ز   ز" stem="عَزِيزُ" lemma="عَزِيز">ٱلْعَزِيزُ</word>
   <word id="68591" position="8" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="68592" position="9">٤٢</word>
+  <ruku eid="ruku:434"/>
+  <ruku number="435" sid="ruku:435"/>
   <ayah eid="44:42:hafs-kufi"/>
   <ayah number="43" tradition="hafs-kufi" sid="44:43:hafs-kufi"/>
   <word id="68593" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
@@ -621,6 +626,7 @@
   <ayah eid="44:59:hafs-kufi"/>
   <line eid="page:498:line:15"/>
   <page eid="page:498"/>
+  <ruku eid="ruku:435"/>
   <rub eid="rub:199"/>
   <hizb eid="hizb:50"/>
   <manzil eid="manzil:6"/>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="58" name="Al-Mujadila" nameArabic="المجادلة" ayahCount="22" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="58" name="Al-Mujadila" nameArabic="المجادلة" ayahCount="22" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="28" sid="juz:28"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="55" sid="hizb:55"/>
   <rub number="217" sid="rub:217"/>
+  <ruku number="478" sid="ruku:478"/>
   <page number="542" sid="page:542"/>
   <line number="3" sid="page:542:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="58:1:hafs-kufi"/>
@@ -168,6 +169,8 @@
   <word id="75074" position="14" root="ش   ي   ا" stem="شَىْءٍ" lemma="شَىْء">شَىْءٍۢ</word>
   <word id="75075" position="15" root="ش ه د" stem="شَهِيدٌ" lemma="شَهِيد">شَهِيدٌ</word>
   <word id="75076" position="16">٦</word>
+  <ruku eid="ruku:478"/>
+  <ruku number="479" sid="ruku:479"/>
   <page eid="page:542"/>
   <page number="543" sid="page:543"/>
   <line eid="page:542:line:15"/>
@@ -432,6 +435,8 @@
   <word id="75280" position="25">١٣</word>
   <rub eid="rub:217"/>
   <rub number="218" sid="rub:218"/>
+  <ruku eid="ruku:479"/>
+  <ruku number="480" sid="ruku:480"/>
   <ayah eid="58:13:hafs-kufi"/>
   <ayah number="14" tradition="hafs-kufi" sid="58:14:hafs-kufi"/>
   <word id="75281" position="1" stem="لَمْ" lemma="لَم">۞ أَلَمْ</word>
@@ -650,6 +655,7 @@
   <ayah eid="58:22:hafs-kufi"/>
   <line eid="page:545:line:6"/>
   <page eid="page:545"/>
+  <ruku eid="ruku:480"/>
   <rub eid="rub:218"/>
   <hizb eid="hizb:55"/>
   <manzil eid="manzil:7"/>

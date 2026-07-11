@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="69" name="Al-Haqqah" nameArabic="الحاقة" ayahCount="52" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)">
+<qusx version="0.1" surah="69" name="Al-Haqqah" nameArabic="الحاقة" ayahCount="52" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="57" sid="hizb:57"/>
   <rub number="227" sid="rub:227"/>
+  <ruku number="502" sid="ruku:502"/>
   <page number="566" sid="page:566"/>
   <line number="12" sid="page:566:line:12"/>
   <ayah number="1" tradition="hafs-kufi" sid="69:1:hafs-kufi"/>
@@ -351,6 +352,8 @@
   <word id="78647" position="3" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
   <word id="78648" position="4" root="خ   ط   ا" stem="خَٰطِـُٔونَ" lemma="خَٰطِـِٔين">ٱلْخَـٰطِـُٔونَ</word>
   <word id="78649" position="5">٣٧</word>
+  <ruku eid="ruku:502"/>
+  <ruku number="503" sid="ruku:503"/>
   <ayah eid="69:37:hafs-kufi"/>
   <ayah number="38" tradition="hafs-kufi" sid="69:38:hafs-kufi"/>
   <word id="78650" position="1" stem="لَآ" lemma="لَا">فَلَآ</word>
@@ -478,6 +481,7 @@
   <ayah eid="69:52:hafs-kufi"/>
   <line eid="page:568:line:8"/>
   <page eid="page:568"/>
+  <ruku eid="ruku:503"/>
   <rub eid="rub:227"/>
   <hizb eid="hizb:57"/>
   <manzil eid="manzil:7"/>

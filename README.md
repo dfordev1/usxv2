@@ -145,7 +145,7 @@ for different layouts or traditions.
 | `<word>` | Base text unit (leaf) | `id` = global mushaf position, `position` = index within ayah, `root`/`stem`/`lemma` = morphology embeds |
 | `<ayah>` | Milestone pin | `tradition` attr allows multiple counting schemes over the same word stream |
 | `<page>` / `<line>` | Milestone pin | From a specific print edition's layout — see `<qusx layout="...">` on the root element |
-| `<juz>` / `<hizb>` / `<rub>` / `<manzil>` | Milestone pin | Standard 30/60/240/7-way divisions — see [`docs/quranic-structural-glossary.xlsx`](docs/quranic-structural-glossary.xlsx) for definitions |
+| `<juz>` / `<hizb>` / `<rub>` / `<manzil>` / `<ruku>` | Milestone pin | Standard 30/60/240/7-way divisions, plus thematic ruku markers (558 total) — see [`docs/quranic-structural-glossary.xlsx`](docs/quranic-structural-glossary.xlsx) for definitions |
 | `<sajda>` | Point marker (non-paired) | Fires once at the ayah containing a prostration point; `type` = `required`/`optional` |
 
 Boundary tags follow the USX convention: `sid` opens a range, a matching bare `eid`
@@ -258,19 +258,19 @@ account for its own divergence from that source.
 5. **541 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
    are genuinely unexplained**, not just attributed to the known QPC-encoding
    pattern.
-6. **No provenance/versioning metadata is embedded in generated files** (no
-   generator version, no source-dataset retrieval date, no build timestamp) — a
-   `.qusx.xml` file doesn't self-declare which run of which data produced it.
-7. **Only 8 of the ~150+ items from the fuller third-party review below have been
+6. **Only ~13 of the ~150+ items from the fuller third-party review have been
    triaged and fixed** — the rest (data-model layering beyond #3, richer schema
-   semantics, release/versioning policy, contributor docs, etc.) remain open.
+   semantics, release/versioning policy beyond `CHANGELOG.md`, etc.) remain open.
 
-**Closed since the last review pass:** real XSD compilation + validation (was
-previously only regex-checked), CI (`.github/workflows/ci.yml`), 8 negative tests
-proving the validators actually reject bad input (`test/`), word-position and
-corpus-completeness checks in `validate.js`, a closed `tradition` enum and
-`surah`/`ayahCount` range constraints in the schema, and `THIRD_PARTY_NOTICES.md`
-documenting bundled data provenance/terms.
+**Closed since the audit:** real XSD compilation + validation (was previously only
+regex-checked), CI (`.github/workflows/ci.yml`, including a deterministic-regeneration
+check — committed output must exactly match a fresh build from source), 8 negative
+tests proving the validators actually reject bad input (`test/`), word-position and
+corpus-completeness checks in `validate.js`, filename/surah-name/count/place
+cross-checks against canonical data, a closed `tradition` enum and
+`surah`/`ayahCount` range constraints in the schema, `<ruku>` pins (data was
+downloaded early on but sat unused), `generatorVersion` embedded in generated files,
+`THIRD_PARTY_NOTICES.md`, `CONTRIBUTING.md`, and `CHANGELOG.md`.
 
 This is a v0.1 research prototype open for review and contribution, not a
 finished or formally released standard — see the
@@ -306,6 +306,8 @@ qusx/
 ├── assets/                   # banner and diagram images
 ├── LICENSE                   # MIT (code/schema only — see note on bundled data)
 ├── THIRD_PARTY_NOTICES.md     # exact provenance/terms for every bundled dataset
+├── CONTRIBUTING.md
+├── CHANGELOG.md
 ├── requirements.txt           # Python deps for scripts/
 ├── package.json
 └── docs/

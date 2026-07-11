@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="75" name="Al-Qiyamah" nameArabic="القيامة" ayahCount="40" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="75" name="Al-Qiyamah" nameArabic="القيامة" ayahCount="40" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="58" sid="hizb:58"/>
   <rub number="231" sid="rub:231"/>
+  <ruku number="514" sid="ruku:514"/>
   <page number="577" sid="page:577"/>
   <line number="8" sid="page:577:line:8"/>
   <ayah number="1" tradition="hafs-kufi" sid="75:1:hafs-kufi"/>
@@ -238,6 +239,8 @@
   <line number="5" sid="page:578:line:5"/>
   <word id="80233" position="4" root="س   و   ق" stem="مَسَاقُ" lemma="مَسَاق">ٱلْمَسَاقُ</word>
   <word id="80234" position="5">٣٠</word>
+  <ruku eid="ruku:514"/>
+  <ruku number="515" sid="ruku:515"/>
   <ayah eid="75:30:hafs-kufi"/>
   <ayah number="31" tradition="hafs-kufi" sid="75:31:hafs-kufi"/>
   <word id="80235" position="1" stem="لَا" lemma="لَا">فَلَا</word>
@@ -326,6 +329,7 @@
   <ayah eid="75:40:hafs-kufi"/>
   <line eid="page:578:line:9"/>
   <page eid="page:578"/>
+  <ruku eid="ruku:515"/>
   <rub eid="rub:231"/>
   <hizb eid="hizb:58"/>
   <manzil eid="manzil:7"/>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="64" name="At-Taghabun" nameArabic="التغابن" ayahCount="18" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+<qusx version="0.1" surah="64" name="At-Taghabun" nameArabic="التغابن" ayahCount="18" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0">
   <juz number="28" sid="juz:28"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="56" sid="hizb:56"/>
   <rub number="222" sid="rub:222"/>
+  <ruku number="492" sid="ruku:492"/>
   <page number="556" sid="page:556"/>
   <line number="2" sid="page:556:line:2"/>
   <ayah number="1" tradition="hafs-kufi" sid="64:1:hafs-kufi"/>
@@ -213,6 +214,8 @@
   <word id="77039" position="10" root="ب   ا   س" stem="بِئْسَ" lemma="بِئْسَ">وَبِئْسَ</word>
   <word id="77040" position="11" root="ص   ي   ر" stem="مَصِيرُ" lemma="مَصِير">ٱلْمَصِيرُ</word>
   <word id="77041" position="12">١٠</word>
+  <ruku eid="ruku:492"/>
+  <ruku number="493" sid="ruku:493"/>
   <ayah eid="64:10:hafs-kufi"/>
   <ayah number="11" tradition="hafs-kufi" sid="64:11:hafs-kufi"/>
   <word id="77042" position="1" stem="مَآ" lemma="مَا">مَآ</word>
@@ -359,6 +362,7 @@
   <ayah eid="64:18:hafs-kufi"/>
   <line eid="page:557:line:14"/>
   <page eid="page:557"/>
+  <ruku eid="ruku:493"/>
   <rub eid="rub:222"/>
   <hizb eid="hizb:56"/>
   <manzil eid="manzil:7"/>

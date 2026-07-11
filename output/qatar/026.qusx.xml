@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="26" name="Ash-Shu'ara" nameArabic="الشعراء" ayahCount="227" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="26" name="Ash-Shu'ara" nameArabic="الشعراء" ayahCount="227" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="19" sid="juz:19"/>
   <manzil number="5" sid="manzil:5"/>
   <hizb number="37" sid="hizb:37"/>
   <rub number="147" sid="rub:147"/>
+  <ruku number="316" sid="ruku:316"/>
   <page number="367" sid="page:367"/>
   <line number="2" sid="page:367:line:2"/>
   <ayah number="1" tradition="hafs-kufi" sid="26:1:hafs-kufi"/>
@@ -109,6 +110,8 @@
   <word id="50127" position="4" root="ع   ز   ز" stem="عَزِيزُ" lemma="عَزِيز">ٱلْعَزِيزُ</word>
   <word id="50128" position="5" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="50129" position="6">٩</word>
+  <ruku eid="ruku:316"/>
+  <ruku number="317" sid="ruku:317"/>
   <ayah eid="26:9:hafs-kufi"/>
   <ayah number="10" tradition="hafs-kufi" sid="26:10:hafs-kufi"/>
   <word id="50130" position="1" stem="إِذْ" lemma="إِذ">وَإِذْ</word>
@@ -384,6 +387,8 @@
   <word id="50316" position="5" root="ب   ي   ض" stem="بَيْضَآءُ" lemma="أَبْيَض">بَيْضَآءُ</word>
   <word id="50317" position="6" root="ن ظ ر" stem="نَّٰظِرِينَ" lemma="نَٰظِرِين">لِلنَّـٰظِرِينَ</word>
   <word id="50318" position="7">٣٣</word>
+  <ruku eid="ruku:317"/>
+  <ruku number="318" sid="ruku:318"/>
   <ayah eid="26:33:hafs-kufi"/>
   <ayah number="34" tradition="hafs-kufi" sid="26:34:hafs-kufi"/>
   <word id="50319" position="1" root="ق   و   ل" stem="قَالَ" lemma="قَالَ">قَالَ</word>
@@ -606,6 +611,8 @@
   <word id="50470" position="12">٥١</word>
   <rub eid="rub:147"/>
   <rub number="148" sid="rub:148"/>
+  <ruku eid="ruku:318"/>
+  <ruku number="319" sid="ruku:319"/>
   <ayah eid="26:51:hafs-kufi"/>
   <ayah number="52" tradition="hafs-kufi" sid="26:52:hafs-kufi"/>
   <word id="50471" position="1" root="و   ح   ي" stem="أَوْحَيْ" lemma="أَوْحَىٰٓ">۞ وَأَوْحَيْنَآ</word>
@@ -766,6 +773,8 @@
   <word id="50572" position="4" root="ع   ز   ز" stem="عَزِيزُ" lemma="عَزِيز">ٱلْعَزِيزُ</word>
   <word id="50573" position="5" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="50574" position="6">٦٨</word>
+  <ruku eid="ruku:319"/>
+  <ruku number="320" sid="ruku:320"/>
   <ayah eid="26:68:hafs-kufi"/>
   <ayah number="69" tradition="hafs-kufi" sid="26:69:hafs-kufi"/>
   <word id="50575" position="1" root="ت ل و" stem="اتْلُ" lemma="تَلَىٰ">وَٱتْلُ</word>
@@ -1097,6 +1106,8 @@
   <line number="12" sid="page:371:line:12"/>
   <word id="50788" position="5" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="50789" position="6">١٠٤</word>
+  <ruku eid="ruku:320"/>
+  <ruku number="321" sid="ruku:321"/>
   <ayah eid="26:104:hafs-kufi"/>
   <ayah number="105" tradition="hafs-kufi" sid="26:105:hafs-kufi"/>
   <word id="50790" position="1" root="ك ذ ب" stem="كَذَّبَتْ" lemma="كَذَّبَ">كَذَّبَتْ</word>
@@ -1281,6 +1292,8 @@
   <word id="50909" position="4" root="ع   ز   ز" stem="عَزِيزُ" lemma="عَزِيز">ٱلْعَزِيزُ</word>
   <word id="50910" position="5" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="50911" position="6">١٢٢</word>
+  <ruku eid="ruku:321"/>
+  <ruku number="322" sid="ruku:322"/>
   <line eid="page:372:line:7"/>
   <line number="8" sid="page:372:line:8"/>
   <ayah eid="26:122:hafs-kufi"/>
@@ -1451,6 +1464,8 @@
   <word id="51019" position="4" root="ع   ز   ز" stem="عَزِيزُ" lemma="عَزِيز">ٱلْعَزِيزُ</word>
   <word id="51020" position="5" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="51021" position="6">١٤٠</word>
+  <ruku eid="ruku:322"/>
+  <ruku number="323" sid="ruku:323"/>
   <ayah eid="26:140:hafs-kufi"/>
   <ayah number="141" tradition="hafs-kufi" sid="26:141:hafs-kufi"/>
   <word id="51022" position="1" root="ك ذ ب" stem="كَذَّبَتْ" lemma="كَذَّبَ">كَذَّبَتْ</word>
@@ -1640,6 +1655,8 @@
   <word id="51146" position="4" root="ع   ز   ز" stem="عَزِيزُ" lemma="عَزِيز">ٱلْعَزِيزُ</word>
   <word id="51147" position="5" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="51148" position="6">١٥٩</word>
+  <ruku eid="ruku:323"/>
+  <ruku number="324" sid="ruku:324"/>
   <page eid="page:373"/>
   <page number="374" sid="page:374"/>
   <line eid="page:373:line:15"/>
@@ -1801,6 +1818,8 @@
   <word id="51253" position="4" root="ع   ز   ز" stem="عَزِيزُ" lemma="عَزِيز">ٱلْعَزِيزُ</word>
   <word id="51254" position="5" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="51255" position="6">١٧٥</word>
+  <ruku eid="ruku:324"/>
+  <ruku number="325" sid="ruku:325"/>
   <ayah eid="26:175:hafs-kufi"/>
   <ayah number="176" tradition="hafs-kufi" sid="26:176:hafs-kufi"/>
   <word id="51256" position="1" root="ك ذ ب" stem="كَذَّبَ" lemma="كَذَّبَ">كَذَّبَ</word>
@@ -1979,6 +1998,8 @@
   <word id="51371" position="4" root="ع   ز   ز" stem="عَزِيزُ" lemma="عَزِيز">ٱلْعَزِيزُ</word>
   <word id="51372" position="5" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="51373" position="6">١٩١</word>
+  <ruku eid="ruku:325"/>
+  <ruku number="326" sid="ruku:326"/>
   <ayah eid="26:191:hafs-kufi"/>
   <ayah number="192" tradition="hafs-kufi" sid="26:192:hafs-kufi"/>
   <word id="51374" position="1" stem="إِنَّ" lemma="إِنّ">وَإِنَّهُۥ</word>
@@ -2327,6 +2348,7 @@
   <ayah eid="26:227:hafs-kufi"/>
   <line eid="page:376:line:14"/>
   <page eid="page:376"/>
+  <ruku eid="ruku:326"/>
   <rub eid="rub:150"/>
   <hizb eid="hizb:38"/>
   <manzil eid="manzil:5"/>

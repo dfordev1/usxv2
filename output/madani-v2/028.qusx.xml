@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="28" name="Al-Qasas" nameArabic="القصص" ayahCount="88" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)">
+<qusx version="0.1" surah="28" name="Al-Qasas" nameArabic="القصص" ayahCount="88" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)" generatorVersion="0.1.0">
   <juz number="20" sid="juz:20"/>
   <manzil number="5" sid="manzil:5"/>
   <hizb number="39" sid="hizb:39"/>
   <rub number="154" sid="rub:154"/>
+  <ruku number="334" sid="ruku:334"/>
   <page number="385" sid="page:385"/>
   <line number="10" sid="page:385:line:10"/>
   <ayah number="1" tradition="hafs-kufi" sid="28:1:hafs-kufi"/>
@@ -258,6 +259,8 @@
   <word id="53025" position="16" stem="لَا" lemma="لَا">لَا</word>
   <word id="53026" position="17" root="ع ل م" stem="يَعْلَمُ" lemma="عَلِمَ">يَعْلَمُونَ</word>
   <word id="53027" position="18">١٣</word>
+  <ruku eid="ruku:334"/>
+  <ruku number="335" sid="ruku:335"/>
   <page eid="page:386"/>
   <page number="387" sid="page:387"/>
   <line eid="page:386:line:15"/>
@@ -460,6 +463,8 @@
   <word id="53179" position="9" root="ق   و   م" stem="قَوْمِ" lemma="قَوْم">ٱلْقَوْمِ</word>
   <word id="53180" position="10" root="ظ ل م" stem="ظَّٰلِمِينَ" lemma="ظَالِم">ٱلظَّـٰلِمِينَ</word>
   <word id="53181" position="11">٢١</word>
+  <ruku eid="ruku:335"/>
+  <ruku number="336" sid="ruku:336"/>
   <page eid="page:387"/>
   <page number="388" sid="page:388"/>
   <line eid="page:387:line:15"/>
@@ -648,6 +653,8 @@
   <word id="53321" position="16">٢٨</word>
   <rub eid="rub:155"/>
   <rub number="156" sid="rub:156"/>
+  <ruku eid="ruku:336"/>
+  <ruku number="337" sid="ruku:337"/>
   <page eid="page:388"/>
   <page number="389" sid="page:389"/>
   <line eid="page:388:line:15"/>
@@ -981,6 +988,8 @@
   <word id="53564" position="9" stem="مِّنَ" lemma="مِن">مِّنَ</word>
   <word id="53565" position="10" root="ق ب ح" stem="مَقْبُوحِينَ" lemma="مَقْبُوحِين">ٱلْمَقْبُوحِينَ</word>
   <word id="53566" position="11">٤٢</word>
+  <ruku eid="ruku:337"/>
+  <ruku number="338" sid="ruku:338"/>
   <ayah eid="28:42:hafs-kufi"/>
   <ayah number="43" tradition="hafs-kufi" sid="28:43:hafs-kufi"/>
   <word id="53567" position="1" stem="قَدْ" lemma="قَد">وَلَقَدْ</word>
@@ -1192,6 +1201,8 @@
   <hizb number="40" sid="hizb:40"/>
   <rub eid="rub:156"/>
   <rub number="157" sid="rub:157"/>
+  <ruku eid="ruku:338"/>
+  <ruku number="339" sid="ruku:339"/>
   <page eid="page:391"/>
   <page number="392" sid="page:392"/>
   <line eid="page:391:line:15"/>
@@ -1406,6 +1417,8 @@
   <word id="53875" position="14" stem="لَا" lemma="لَا">أَفَلَا</word>
   <word id="53876" position="15" root="ع ق ل" stem="تَعْقِلُ" lemma="عَقَلُ">تَعْقِلُونَ</word>
   <word id="53877" position="16">٦٠</word>
+  <ruku eid="ruku:339"/>
+  <ruku number="340" sid="ruku:340"/>
   <ayah eid="28:60:hafs-kufi"/>
   <ayah number="61" tradition="hafs-kufi" sid="28:61:hafs-kufi"/>
   <word id="53878" position="1" stem="مَن" lemma="مِن">أَفَمَن</word>
@@ -1695,6 +1708,8 @@
   <word id="54086" position="18">٧٥</word>
   <rub eid="rub:157"/>
   <rub number="158" sid="rub:158"/>
+  <ruku eid="ruku:340"/>
+  <ruku number="341" sid="ruku:341"/>
   <ayah eid="28:75:hafs-kufi"/>
   <ayah number="76" tradition="hafs-kufi" sid="28:76:hafs-kufi"/>
   <word id="54087" position="1" stem="إِنَّ" lemma="إِنّ">۞ إِنَّ</word>
@@ -1914,6 +1929,8 @@
   <word id="54253" position="25" root="ف ل ح" stem="يُفْلِحُ" lemma="أَفْلَحَ">يُفْلِحُ</word>
   <word id="54254" position="26" root="ك ف ر" stem="كَٰفِرُونَ" lemma="كَٰفِرُون">ٱلْكَـٰفِرُونَ</word>
   <word id="54255" position="27">٨٢</word>
+  <ruku eid="ruku:341"/>
+  <ruku number="342" sid="ruku:342"/>
   <ayah eid="28:82:hafs-kufi"/>
   <ayah number="83" tradition="hafs-kufi" sid="28:83:hafs-kufi"/>
   <word id="54256" position="1" stem="تِلْكَ" lemma="ذَٰلِك">تِلْكَ</word>
@@ -2058,6 +2075,7 @@
   <ayah eid="28:88:hafs-kufi"/>
   <line eid="page:396:line:7"/>
   <page eid="page:396"/>
+  <ruku eid="ruku:342"/>
   <rub eid="rub:158"/>
   <hizb eid="hizb:40"/>
   <manzil eid="manzil:5"/>

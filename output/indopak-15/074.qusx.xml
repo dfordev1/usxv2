@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="74" name="Al-Muddaththir" nameArabic="المدثر" ayahCount="56" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)">
+<qusx version="0.1" surah="74" name="Al-Muddaththir" nameArabic="المدثر" ayahCount="56" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="58" sid="hizb:58"/>
   <rub number="230" sid="rub:230"/>
+  <ruku number="512" sid="ruku:512"/>
   <page number="578" sid="page:578"/>
   <line number="3" sid="page:578:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="74:1:hafs-kufi"/>
@@ -290,6 +291,8 @@
   <word id="79957" position="56" root="ذ ك ر" stem="ذِكْرَىٰ" lemma="ذِكْرَىٰ">ذِكْرَىٰ</word>
   <word id="79958" position="57" root="ب ش ر" stem="بَشَرِ" lemma="بَشَر">لِلْبَشَرِ</word>
   <word id="79959" position="58">٣١</word>
+  <ruku eid="ruku:512"/>
+  <ruku number="513" sid="ruku:513"/>
   <ayah eid="74:31:hafs-kufi"/>
   <ayah number="32" tradition="hafs-kufi" sid="74:32:hafs-kufi"/>
   <word id="79960" position="1" stem="كَلَّا" lemma="كَلَّا">كَلَّا</word>
@@ -499,6 +502,7 @@
   <ayah eid="74:56:hafs-kufi"/>
   <line eid="page:580:line:5"/>
   <page eid="page:580"/>
+  <ruku eid="ruku:513"/>
   <rub eid="rub:230"/>
   <hizb eid="hizb:58"/>
   <manzil eid="manzil:7"/>

@@ -109,6 +109,7 @@
         <xs:element name="manzil" type="milestonePin"/>
         <xs:element name="hizb" type="milestonePin"/>
         <xs:element name="rub" type="milestonePin"/>
+        <xs:element name="ruku" type="milestonePin"/>
         <xs:element name="page" type="milestonePin"/>
         <xs:element name="line" type="milestonePin"/>
         <xs:element name="ayah" type="ayahPin"/>
@@ -132,6 +133,7 @@
       <xs:attribute name="bismillahPre" type="xs:boolean" use="required"/>
       <xs:attribute name="tradition" type="traditionCode" use="required"/>
       <xs:attribute name="layout" type="xs:string" use="optional"/>
+      <xs:attribute name="generatorVersion" type="xs:string" use="optional"/>
     </xs:complexType>
   </xs:element>
 

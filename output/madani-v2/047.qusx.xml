@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="47" name="Muhammad" nameArabic="محمد" ayahCount="38" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)">
+<qusx version="0.1" surah="47" name="Muhammad" nameArabic="محمد" ayahCount="38" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)" generatorVersion="0.1.0">
   <juz number="26" sid="juz:26"/>
   <manzil number="6" sid="manzil:6"/>
   <hizb number="51" sid="hizb:51"/>
   <rub number="202" sid="rub:202"/>
+  <ruku number="444" sid="ruku:444"/>
   <page number="507" sid="page:507"/>
   <line number="2" sid="page:507:line:2"/>
   <ayah number="1" tradition="hafs-kufi" sid="47:1:hafs-kufi"/>
@@ -205,6 +206,8 @@
   <word id="70041" position="10" root="و ل ي" stem="مَوْلَىٰ" lemma="مَوْلَىٰ">مَوْلَىٰ</word>
   <word id="70042" position="11" stem="هُمْ">لَهُمْ</word>
   <word id="70043" position="12">١١</word>
+  <ruku eid="ruku:444"/>
+  <ruku number="445" sid="ruku:445"/>
   <page eid="page:507"/>
   <page number="508" sid="page:508"/>
   <line eid="page:507:line:15"/>
@@ -413,6 +416,8 @@
   <word id="70201" position="13" root="ق ل ب" stem="مُتَقَلَّبَ" lemma="مُتَقَلَّب">مُتَقَلَّبَكُمْ</word>
   <word id="70202" position="14" root="ث   و   ي" stem="مَثْوَىٰ" lemma="مَثْوًى">وَمَثْوَىٰكُمْ</word>
   <word id="70203" position="15">١٩</word>
+  <ruku eid="ruku:445"/>
+  <ruku number="446" sid="ruku:446"/>
   <page eid="page:508"/>
   <page number="509" sid="page:509"/>
   <line eid="page:508:line:15"/>
@@ -581,6 +586,8 @@
   <word id="70321" position="9" root="ح ب ط" stem="أَحْبَطَ" lemma="أَحْبَطَ">فَأَحْبَطَ</word>
   <word id="70322" position="10" root="ع م ل" stem="أَعْمَٰلَ" lemma="عَمَل">أَعْمَـٰلَهُمْ</word>
   <word id="70323" position="11">٢٨</word>
+  <ruku eid="ruku:446"/>
+  <ruku number="447" sid="ruku:447"/>
   <ayah eid="47:28:hafs-kufi"/>
   <ayah number="29" tradition="hafs-kufi" sid="47:29:hafs-kufi"/>
   <word id="70324" position="1" stem="أَمْ" lemma="أَم">أَمْ</word>
@@ -787,6 +794,7 @@
   <ayah eid="47:38:hafs-kufi"/>
   <line eid="page:510:line:15"/>
   <page eid="page:510"/>
+  <ruku eid="ruku:447"/>
   <rub eid="rub:204"/>
   <hizb eid="hizb:51"/>
   <manzil eid="manzil:6"/>

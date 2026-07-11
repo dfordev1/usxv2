@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="78" name="An-Naba" nameArabic="النبإ" ayahCount="40" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)">
+<qusx version="0.1" surah="78" name="An-Naba" nameArabic="النبإ" ayahCount="40" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0">
   <juz number="30" sid="juz:30"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="59" sid="hizb:59"/>
   <rub number="233" sid="rub:233"/>
+  <ruku number="520" sid="ruku:520"/>
   <page number="586" sid="page:586"/>
   <line number="3" sid="page:586:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="78:1:hafs-kufi"/>
@@ -230,6 +231,8 @@
   <word id="80929" position="4" stem="إِلَّا" lemma="إِلَّا">إِلَّا</word>
   <word id="80930" position="5" root="ع ذ ب" stem="عَذَابًا" lemma="عَذَاب">عَذَابًا</word>
   <word id="80931" position="6">٣٠</word>
+  <ruku eid="ruku:520"/>
+  <ruku number="521" sid="ruku:521"/>
   <ayah eid="78:30:hafs-kufi"/>
   <ayah number="31" tradition="hafs-kufi" sid="78:31:hafs-kufi"/>
   <word id="80932" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
@@ -347,6 +350,7 @@
   <ayah eid="78:40:hafs-kufi"/>
   <line eid="page:587:line:10"/>
   <page eid="page:587"/>
+  <ruku eid="ruku:521"/>
   <rub eid="rub:233"/>
   <hizb eid="hizb:59"/>
   <manzil eid="manzil:7"/>

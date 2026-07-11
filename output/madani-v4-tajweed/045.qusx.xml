@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="45" name="Al-Jathiyah" nameArabic="الجاثية" ayahCount="37" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)">
+<qusx version="0.1" surah="45" name="Al-Jathiyah" nameArabic="الجاثية" ayahCount="37" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)" generatorVersion="0.1.0">
   <juz number="25" sid="juz:25"/>
   <manzil number="6" sid="manzil:6"/>
   <hizb number="50" sid="hizb:50"/>
   <rub number="199" sid="rub:199"/>
+  <ruku number="436" sid="ruku:436"/>
   <page number="499" sid="page:499"/>
   <line number="3" sid="page:499:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="45:1:hafs-kufi"/>
@@ -173,6 +174,8 @@
   <word id="68814" position="12">١١</word>
   <rub eid="rub:199"/>
   <rub number="200" sid="rub:200"/>
+  <ruku eid="ruku:436"/>
+  <ruku number="437" sid="ruku:437"/>
   <ayah eid="45:11:hafs-kufi"/>
   <ayah number="12" tradition="hafs-kufi" sid="45:12:hafs-kufi"/>
   <word id="68815" position="1" root="ا ل ه" stem="اللَّهُ" lemma="اللَّه">۞ ٱللَّهُ</word>
@@ -381,6 +384,8 @@
   <word id="68966" position="16" stem="مَا" lemma="مَا">مَا</word>
   <word id="68967" position="17" root="ح ك م" stem="يَحْكُمُ" lemma="حَكَمَ">يَحْكُمُونَ</word>
   <word id="68968" position="18">٢١</word>
+  <ruku eid="ruku:437"/>
+  <ruku number="438" sid="ruku:438"/>
   <ayah eid="45:21:hafs-kufi"/>
   <ayah number="22" tradition="hafs-kufi" sid="45:22:hafs-kufi"/>
   <word id="68969" position="1" root="خ ل ق" stem="خَلَقَ" lemma="خَلَقَ">وَخَلَقَ</word>
@@ -506,6 +511,8 @@
   <word id="69063" position="17" stem="لَا" lemma="لَا">لَا</word>
   <word id="69064" position="18" root="ع ل م" stem="يَعْلَمُ" lemma="عَلِمَ">يَعْلَمُونَ</word>
   <word id="69065" position="19">٢٦</word>
+  <ruku eid="ruku:438"/>
+  <ruku number="439" sid="ruku:439"/>
   <ayah eid="45:26:hafs-kufi"/>
   <ayah number="27" tradition="hafs-kufi" sid="45:27:hafs-kufi"/>
   <word id="69066" position="1" root="ا ل ه" stem="لَّهِ" lemma="اللَّه">وَلِلَّهِ</word>
@@ -711,6 +718,7 @@
   <ayah eid="45:37:hafs-kufi"/>
   <line eid="page:502:line:6"/>
   <page eid="page:502"/>
+  <ruku eid="ruku:439"/>
   <rub eid="rub:200"/>
   <hizb eid="hizb:50"/>
   <manzil eid="manzil:6"/>

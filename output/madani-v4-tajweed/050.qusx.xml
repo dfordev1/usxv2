@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="50" name="Qaf" nameArabic="ق" ayahCount="45" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)">
+<qusx version="0.1" surah="50" name="Qaf" nameArabic="ق" ayahCount="45" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)" generatorVersion="0.1.0">
   <juz number="26" sid="juz:26"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="52" sid="hizb:52"/>
   <rub number="207" sid="rub:207"/>
+  <ruku number="454" sid="ruku:454"/>
   <page number="518" sid="page:518"/>
   <line number="3" sid="page:518:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="50:1:hafs-kufi"/>
@@ -194,6 +195,8 @@
   <word id="71557" position="9" root="خ ل ق" stem="خَلْقٍ" lemma="خَلَقَ">خَلْقٍۢ</word>
   <word id="71558" position="10" root="ج   د   د" stem="جَدِيدٍ" lemma="جَدِيد">جَدِيدٍۢ</word>
   <word id="71559" position="11">١٥</word>
+  <ruku eid="ruku:454"/>
+  <ruku number="455" sid="ruku:455"/>
   <page eid="page:518"/>
   <page number="519" sid="page:519"/>
   <line eid="page:518:line:15"/>
@@ -377,6 +380,8 @@
   <word id="71686" position="7" root="ظ ل م" stem="ظَلَّٰمٍ" lemma="ظَلَّٰم">بِظَلَّـٰمٍۢ</word>
   <word id="71687" position="8" root="ع ب د" stem="عَبِيدِ" lemma="عَبْد">لِّلْعَبِيدِ</word>
   <word id="71688" position="9">٢٩</word>
+  <ruku eid="ruku:455"/>
+  <ruku number="456" sid="ruku:456"/>
   <ayah eid="50:29:hafs-kufi"/>
   <ayah number="30" tradition="hafs-kufi" sid="50:30:hafs-kufi"/>
   <word id="71689" position="1" root="ي و م" stem="يَوْمَ" lemma="يَوْم">يَوْمَ</word>
@@ -598,6 +603,7 @@
   <ayah eid="50:45:hafs-kufi"/>
   <line eid="page:520:line:11"/>
   <page eid="page:520"/>
+  <ruku eid="ruku:456"/>
   <rub eid="rub:208"/>
   <hizb eid="hizb:52"/>
   <manzil eid="manzil:7"/>

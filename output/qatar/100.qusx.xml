@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="100" name="Al-'Adiyat" nameArabic="العاديات" ayahCount="11" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="100" name="Al-'Adiyat" nameArabic="العاديات" ayahCount="11" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="30" sid="juz:30"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="60" sid="hizb:60"/>
   <rub number="239" sid="rub:239"/>
+  <ruku number="544" sid="ruku:544"/>
   <page number="599" sid="page:599"/>
   <line number="14" sid="page:599:line:14"/>
   <ayah number="1" tradition="hafs-kufi" sid="100:1:hafs-kufi"/>
@@ -93,6 +94,7 @@
   <ayah eid="100:11:hafs-kufi"/>
   <line eid="page:600:line:3"/>
   <page eid="page:600"/>
+  <ruku eid="ruku:544"/>
   <rub eid="rub:240"/>
   <hizb eid="hizb:60"/>
   <manzil eid="manzil:7"/>

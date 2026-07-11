@@ -1,0 +1,63 @@
+# Changelog
+
+No formal versioning policy exists yet (see `README.md` Known gaps) — this is a
+plain chronological record, not semver-scoped releases.
+
+## Unreleased
+
+- Added `<ruku>` milestone pins (data was downloaded early on but sat unused
+  until now) — same pattern as juz/hizb/rub/manzil.
+- Added `generatorVersion` attribute to the `<qusx>` root, sourced from
+  `package.json`, so a generated file can self-declare what produced it.
+- Added `CONTRIBUTING.md` and this changelog.
+- Added a deterministic-regeneration check to CI: regenerates all 570 files
+  from source and fails the build if the result differs from what's committed.
+- Added filename-vs-declared-surah and surah-name/count/place-vs-canonical
+  cross-checks to `src/validate.js`.
+
+## 2026-07-11 — Second audit-response batch
+
+- Fixed `schema/qusx.xsd`: it did not actually compile (`<xs:attribute>` was
+  invalid inside `<xs:sequence>`). Verified with a real XML Schema processor
+  (`lxml`), not just the project's own regex-based checker.
+- Added `scripts/xsd_validate.py` — genuine XSD validation, confirming all 570
+  generated files are schema-valid, not just individually well-formed.
+- Tightened the schema: `surah` constrained to 1–114, `ayahCount` to 1–286,
+  `tradition` to a closed enum, `sajda/@verseKey` to a numeric pattern.
+- Added CI (`.github/workflows/ci.yml`) running validation + tests on every push.
+- Added `test/` — 6 negative-test fixtures plus `test/run_tests.js`, proving
+  the validators actually reject bad input (not just pass good input).
+- Added word-position continuity and corpus-completeness checks to
+  `src/validate.js`.
+- Added `THIRD_PARTY_NOTICES.md` documenting exact source/date/terms for
+  every bundled dataset.
+- Corrected README overclaims: "one file serves every view" and "zero
+  duplication" were true within a single surah/layout file but false across
+  the 570-file corpus (text+morphology duplicate once per layout) — now
+  stated accurately. Corrected the checksum-verify section, which previously
+  implied the full mismatch set was explained by encoding convention; 541 of
+  5,111 mismatches are genuinely unexplained, and the README now says so.
+- Documented (not yet solved) that juz/hizb/rub/manzil ranges spanning two
+  surahs are written as separate same-numbered fragments per file with no
+  in-format marker they're the same range.
+
+Prompted by an external audit surfacing ~160 issues across schema rigor,
+validator coverage, data-model layering, and release engineering. Findings
+were independently re-verified before acting on them — two specific claims in
+that audit (duplicated ayah/word totals, a phantom commit hash) did not match
+this repository's actual state and were not acted on.
+
+## 2026-07-10 — Initial release
+
+- Generator (`src/generate.js`) producing QUSX XML for all 114 surahs.
+- 5 print layouts wired in: KFGQPC V1/V2/V4-tajweed, Mushaf Qatar, IndoPak
+  15-line — 570 files total.
+- Semantic conformance checker (`src/validate.js`), initial `schema/qusx.xsd`
+  (not yet verified against a real processor at this point).
+- Live viewer (`viewer/viewer.html`) parsing real generated output with the
+  browser's own `DOMParser`.
+- Text-integrity cross-check (`src/checksum-verify.js`) against an
+  independent SHA-256 manifest ([spqrxi/quranchecksum](https://github.com/spqrxi/quranchecksum)).
+- `docs/quranic-structural-glossary.xlsx` — 8-sheet reference workbook built
+  from real QUL data.
+- `docs/prior-art-references.md` — citations and independent prior art.

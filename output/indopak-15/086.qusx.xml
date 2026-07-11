@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="86" name="At-Tariq" nameArabic="الطارق" ayahCount="17" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)">
+<qusx version="0.1" surah="86" name="At-Tariq" nameArabic="الطارق" ayahCount="17" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0">
   <juz number="30" sid="juz:30"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="59" sid="hizb:59"/>
   <rub number="236" sid="rub:236"/>
+  <ruku number="530" sid="ruku:530"/>
   <page number="596" sid="page:596"/>
   <line number="7" sid="page:596:line:7"/>
   <ayah number="1" tradition="hafs-kufi" sid="86:1:hafs-kufi"/>
@@ -136,6 +137,7 @@
   <ayah eid="86:17:hafs-kufi"/>
   <line eid="page:596:line:15"/>
   <page eid="page:596"/>
+  <ruku eid="ruku:530"/>
   <rub eid="rub:236"/>
   <hizb eid="hizb:59"/>
   <manzil eid="manzil:7"/>

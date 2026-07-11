@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="31" name="Luqman" nameArabic="لقمان" ayahCount="34" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+<qusx version="0.1" surah="31" name="Luqman" nameArabic="لقمان" ayahCount="34" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0">
   <juz number="21" sid="juz:21"/>
   <manzil number="5" sid="manzil:5"/>
   <hizb number="41" sid="hizb:41"/>
   <rub number="164" sid="rub:164"/>
+  <ruku number="356" sid="ruku:356"/>
   <page number="411" sid="page:411"/>
   <line number="3" sid="page:411:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="31:1:hafs-kufi"/>
@@ -178,6 +179,8 @@
   <word id="56409" position="13" root="ض   ل   ل" stem="ضَلَٰلٍ" lemma="ضَلَٰل">ضَلَـٰلٍۢ</word>
   <word id="56410" position="14" root="ب   ي   ن" stem="مُّبِينٍ" lemma="مُّبِين">مُّبِينٍۢ</word>
   <word id="56411" position="15">١١</word>
+  <ruku eid="ruku:356"/>
+  <ruku number="357" sid="ruku:357"/>
   <page eid="page:411"/>
   <page number="412" sid="page:412"/>
   <line eid="page:411:line:15"/>
@@ -380,6 +383,8 @@
   <word id="56563" position="10" root="ص   و   ت" stem="صَوْتُ" lemma="صَوْت">لَصَوْتُ</word>
   <word id="56564" position="11" root="ح م ر" stem="حَمِيرِ" lemma="حِمَار">ٱلْحَمِيرِ</word>
   <word id="56565" position="12">١٩</word>
+  <ruku eid="ruku:357"/>
+  <ruku number="358" sid="ruku:358"/>
   <page eid="page:412"/>
   <page number="413" sid="page:413"/>
   <line eid="page:412:line:15"/>
@@ -645,6 +650,8 @@
   <word id="56760" position="15" root="ع   ل   و" stem="عَلِىُّ" lemma="عَلِيّ">ٱلْعَلِىُّ</word>
   <word id="56761" position="16" root="ك ب ر" stem="كَبِيرُ" lemma="كَبِير">ٱلْكَبِيرُ</word>
   <word id="56762" position="17">٣٠</word>
+  <ruku eid="ruku:358"/>
+  <ruku number="359" sid="ruku:359"/>
   <ayah eid="31:30:hafs-kufi"/>
   <ayah number="31" tradition="hafs-kufi" sid="31:31:hafs-kufi"/>
   <word id="56763" position="1" stem="لَمْ" lemma="لَم">أَلَمْ</word>
@@ -778,6 +785,7 @@
   <ayah eid="31:34:hafs-kufi"/>
   <line eid="page:414:line:14"/>
   <page eid="page:414"/>
+  <ruku eid="ruku:359"/>
   <rub eid="rub:165"/>
   <hizb eid="hizb:42"/>
   <manzil eid="manzil:5"/>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="54" name="Al-Qamar" nameArabic="القمر" ayahCount="55" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)">
+<qusx version="0.1" surah="54" name="Al-Qamar" nameArabic="القمر" ayahCount="55" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)" generatorVersion="0.1.0">
   <juz number="27" sid="juz:27"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="53" sid="hizb:53"/>
   <rub number="211" sid="rub:211"/>
+  <ruku number="465" sid="ruku:465"/>
   <page number="528" sid="page:528"/>
   <line number="12" sid="page:528:line:12"/>
   <ayah number="1" tradition="hafs-kufi" sid="54:1:hafs-kufi"/>
@@ -246,6 +247,8 @@
   <word id="73206" position="6" stem="مِن" lemma="مِن">مِن</word>
   <word id="73207" position="7" root="ذ ك ر" stem="مُّدَّكِرٍ" lemma="مُّدَّكِر">مُّدَّكِرٍۢ</word>
   <word id="73208" position="8">٢٢</word>
+  <ruku eid="ruku:465"/>
+  <ruku number="466" sid="ruku:466"/>
   <ayah eid="54:22:hafs-kufi"/>
   <ayah number="23" tradition="hafs-kufi" sid="54:23:hafs-kufi"/>
   <word id="73209" position="1" root="ك ذ ب" stem="كَذَّبَتْ" lemma="كَذَّبَ">كَذَّبَتْ</word>
@@ -440,6 +443,8 @@
   <word id="73338" position="6" stem="مِن" lemma="مِن">مِن</word>
   <word id="73339" position="7" root="ذ ك ر" stem="مُّدَّكِرٍ" lemma="مُّدَّكِر">مُّدَّكِرٍۢ</word>
   <word id="73340" position="8">٤٠</word>
+  <ruku eid="ruku:466"/>
+  <ruku number="467" sid="ruku:467"/>
   <line eid="page:530:line:9"/>
   <line number="10" sid="page:530:line:10"/>
   <ayah eid="54:40:hafs-kufi"/>
@@ -597,6 +602,7 @@
   <ayah eid="54:55:hafs-kufi"/>
   <line eid="page:531:line:4"/>
   <page eid="page:531"/>
+  <ruku eid="ruku:467"/>
   <rub eid="rub:212"/>
   <hizb eid="hizb:53"/>
   <manzil eid="manzil:7"/>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="62" name="Al-Jumu'ah" nameArabic="الجمعة" ayahCount="11" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)">
+<qusx version="0.1" surah="62" name="Al-Jumu'ah" nameArabic="الجمعة" ayahCount="11" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)" generatorVersion="0.1.0">
   <juz number="28" sid="juz:28"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="56" sid="hizb:56"/>
   <rub number="221" sid="rub:221"/>
+  <ruku number="488" sid="ruku:488"/>
   <page number="553" sid="page:553"/>
   <line number="3" sid="page:553:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="62:1:hafs-kufi"/>
@@ -171,6 +172,8 @@
   <word id="76632" position="17" root="ك   و   ن" stem="كُن" lemma="كَانَ">كُنتُمْ</word>
   <word id="76633" position="18" root="ع م ل" stem="تَعْمَلُ" lemma="عَمِلَ">تَعْمَلُونَ</word>
   <word id="76634" position="19">٨</word>
+  <ruku eid="ruku:488"/>
+  <ruku number="489" sid="ruku:489"/>
   <page eid="page:553"/>
   <page number="554" sid="page:554"/>
   <line eid="page:553:line:15"/>
@@ -254,6 +257,7 @@
   <ayah eid="62:11:hafs-kufi"/>
   <line eid="page:554:line:6"/>
   <page eid="page:554"/>
+  <ruku eid="ruku:489"/>
   <rub eid="rub:221"/>
   <hizb eid="hizb:56"/>
   <manzil eid="manzil:7"/>

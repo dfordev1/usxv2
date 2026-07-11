@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="68" name="Al-Qalam" nameArabic="القلم" ayahCount="52" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="68" name="Al-Qalam" nameArabic="القلم" ayahCount="52" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="57" sid="hizb:57"/>
   <rub number="226" sid="rub:226"/>
+  <ruku number="500" sid="ruku:500"/>
   <page number="564" sid="page:564"/>
   <line number="8" sid="page:564:line:8"/>
   <ayah number="1" tradition="hafs-kufi" sid="68:1:hafs-kufi"/>
@@ -303,6 +304,8 @@
   <word id="78261" position="7" root="ك   و   ن" stem="كَانُ" lemma="كَانَ">كَانُوا۟</word>
   <word id="78262" position="8" root="ع ل م" stem="يَعْلَمُ" lemma="عَلِمَ">يَعْلَمُونَ</word>
   <word id="78263" position="9">٣٣</word>
+  <ruku eid="ruku:500"/>
+  <ruku number="501" sid="ruku:501"/>
   <ayah eid="68:33:hafs-kufi"/>
   <ayah number="34" tradition="hafs-kufi" sid="68:34:hafs-kufi"/>
   <word id="78264" position="1" stem="إِنَّ" lemma="إِنّ">إِنَّ</word>
@@ -530,6 +533,7 @@
   <ayah eid="68:52:hafs-kufi"/>
   <line eid="page:566:line:9"/>
   <page eid="page:566"/>
+  <ruku eid="ruku:501"/>
   <rub eid="rub:226"/>
   <hizb eid="hizb:57"/>
   <manzil eid="manzil:7"/>

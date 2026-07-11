@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="52" name="At-Tur" nameArabic="الطور" ayahCount="49" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)">
+<qusx version="0.1" surah="52" name="At-Tur" nameArabic="الطور" ayahCount="49" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0">
   <juz number="27" sid="juz:27"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="53" sid="hizb:53"/>
   <rub number="209" sid="rub:209"/>
+  <ruku number="460" sid="ruku:460"/>
   <page number="523" sid="page:523"/>
   <line number="11" sid="page:523:line:11"/>
   <ayah number="1" tradition="hafs-kufi" sid="52:1:hafs-kufi"/>
@@ -284,6 +285,8 @@
   <word id="72445" position="8" root="ب   ر   ر" stem="بَرُّ" lemma="بَرّ">ٱلْبَرُّ</word>
   <word id="72446" position="9" root="ر ح م" stem="رَّحِيمُ" lemma="رَّحِيم">ٱلرَّحِيمُ</word>
   <word id="72447" position="10">٢٨</word>
+  <ruku eid="ruku:460"/>
+  <ruku number="461" sid="ruku:461"/>
   <ayah eid="52:28:hafs-kufi"/>
   <ayah number="29" tradition="hafs-kufi" sid="52:29:hafs-kufi"/>
   <word id="72448" position="1" root="ذ ك ر" stem="ذَكِّرْ" lemma="ذُكِّرَ">فَذَكِّرْ</word>
@@ -541,6 +544,7 @@
   <ayah eid="52:49:hafs-kufi"/>
   <line eid="page:525:line:15"/>
   <page eid="page:525"/>
+  <ruku eid="ruku:461"/>
   <rub eid="rub:210"/>
   <hizb eid="hizb:53"/>
   <manzil eid="manzil:7"/>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="1" name="Al-Fatihah" nameArabic="الفاتحة" ayahCount="7" revelationPlace="makkah" bismillahPre="false" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+<qusx version="0.1" surah="1" name="Al-Fatihah" nameArabic="الفاتحة" ayahCount="7" revelationPlace="makkah" bismillahPre="false" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0">
   <juz number="1" sid="juz:1"/>
   <manzil number="1" sid="manzil:1"/>
   <hizb number="1" sid="hizb:1"/>
   <rub number="1" sid="rub:1"/>
+  <ruku number="1" sid="ruku:1"/>
   <page number="1" sid="page:1"/>
   <line number="2" sid="page:1:line:2"/>
   <ayah number="1" tradition="hafs-kufi" sid="1:1:hafs-kufi"/>
@@ -70,6 +71,7 @@
   <ayah eid="1:7:hafs-kufi"/>
   <line eid="page:1:line:8"/>
   <page eid="page:1"/>
+  <ruku eid="ruku:1"/>
   <rub eid="rub:1"/>
   <hizb eid="hizb:1"/>
   <manzil eid="manzil:1"/>

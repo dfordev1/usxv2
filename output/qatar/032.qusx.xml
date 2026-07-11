@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="32" name="As-Sajdah" nameArabic="السجدة" ayahCount="30" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="32" name="As-Sajdah" nameArabic="السجدة" ayahCount="30" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="21" sid="juz:21"/>
   <manzil number="5" sid="manzil:5"/>
   <hizb number="42" sid="hizb:42"/>
   <rub number="165" sid="rub:165"/>
+  <ruku number="360" sid="ruku:360"/>
   <page number="415" sid="page:415"/>
   <line number="2" sid="page:415:line:2"/>
   <ayah number="1" tradition="hafs-kufi" sid="32:1:hafs-kufi"/>
@@ -197,6 +198,8 @@
   <word id="57004" position="10" root="ر   ب   ب" stem="رَبِّ" lemma="رَبّ">رَبِّكُمْ</word>
   <word id="57005" position="11" root="ر ج ع" stem="تُرْجَعُ" lemma="رَجَعَ">تُرْجَعُونَ</word>
   <word id="57006" position="12">١١</word>
+  <ruku eid="ruku:360"/>
+  <ruku number="361" sid="ruku:361"/>
   <page eid="page:415"/>
   <page number="416" sid="page:416"/>
   <line eid="page:415:line:15"/>
@@ -419,6 +422,8 @@
   <word id="57163" position="12" root="ج ر م" stem="مُجْرِمِينَ" lemma="مُجْرِم">ٱلْمُجْرِمِينَ</word>
   <word id="57164" position="13" root="ن ق م" stem="مُنتَقِمُونَ" lemma="مُنتَقِمُون">مُنتَقِمُونَ</word>
   <word id="57165" position="14">٢٢</word>
+  <ruku eid="ruku:361"/>
+  <ruku number="362" sid="ruku:362"/>
   <ayah eid="32:22:hafs-kufi"/>
   <ayah number="23" tradition="hafs-kufi" sid="32:23:hafs-kufi"/>
   <word id="57166" position="1" stem="قَدْ" lemma="قَد">وَلَقَدْ</word>
@@ -561,6 +566,7 @@
   <ayah eid="32:30:hafs-kufi"/>
   <line eid="page:417:line:14"/>
   <page eid="page:417"/>
+  <ruku eid="ruku:362"/>
   <rub eid="rub:166"/>
   <hizb eid="hizb:42"/>
   <manzil eid="manzil:5"/>

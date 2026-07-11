@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="84" name="Al-Inshiqaq" nameArabic="الإنشقاق" ayahCount="25" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+<qusx version="0.1" surah="84" name="Al-Inshiqaq" nameArabic="الإنشقاق" ayahCount="25" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0">
   <juz number="30" sid="juz:30"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="59" sid="hizb:59"/>
   <rub number="236" sid="rub:236"/>
+  <ruku number="528" sid="ruku:528"/>
   <page number="589" sid="page:589"/>
   <line number="4" sid="page:589:line:4"/>
   <ayah number="1" tradition="hafs-kufi" sid="84:1:hafs-kufi"/>
@@ -213,6 +214,7 @@
   <ayah eid="84:25:hafs-kufi"/>
   <line eid="page:589:line:15"/>
   <page eid="page:589"/>
+  <ruku eid="ruku:528"/>
   <rub eid="rub:236"/>
   <hizb eid="hizb:59"/>
   <manzil eid="manzil:7"/>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="72" name="Al-Jinn" nameArabic="الجن" ayahCount="28" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)">
+<qusx version="0.1" surah="72" name="Al-Jinn" nameArabic="الجن" ayahCount="28" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="58" sid="hizb:58"/>
   <rub number="229" sid="rub:229"/>
+  <ruku number="508" sid="ruku:508"/>
   <page number="573" sid="page:573"/>
   <line number="15" sid="page:573:line:15"/>
   <ayah number="1" tradition="hafs-kufi" sid="72:1:hafs-kufi"/>
@@ -294,6 +295,8 @@
   <word id="79447" position="9" stem="عَلَيْ" lemma="عَلَىٰ">عَلَيْهِ</word>
   <word id="79448" position="10" root="ل ب د" stem="لِبَدًا" lemma="لِبَد">لِبَدًۭا</word>
   <word id="79449" position="11">١٩</word>
+  <ruku eid="ruku:508"/>
+  <ruku number="509" sid="ruku:509"/>
   <ayah eid="72:19:hafs-kufi"/>
   <ayah number="20" tradition="hafs-kufi" sid="72:20:hafs-kufi"/>
   <word id="79450" position="1" root="ق   و   ل" stem="قُلْ" lemma="قَالَ">قُلْ</word>
@@ -447,6 +450,7 @@
   <ayah eid="72:28:hafs-kufi"/>
   <line eid="page:576:line:2"/>
   <page eid="page:576"/>
+  <ruku eid="ruku:509"/>
   <rub eid="rub:229"/>
   <hizb eid="hizb:58"/>
   <manzil eid="manzil:7"/>

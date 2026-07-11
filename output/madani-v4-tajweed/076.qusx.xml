@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="76" name="Al-Insan" nameArabic="الانسان" ayahCount="31" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)">
+<qusx version="0.1" surah="76" name="Al-Insan" nameArabic="الانسان" ayahCount="31" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="QPC V4 Tajweed (1441H)" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="58" sid="hizb:58"/>
   <rub number="231" sid="rub:231"/>
+  <ruku number="516" sid="ruku:516"/>
   <page number="578" sid="page:578"/>
   <line number="12" sid="page:578:line:12"/>
   <ayah number="1" tradition="hafs-kufi" sid="76:1:hafs-kufi"/>
@@ -276,6 +277,8 @@
   <word id="80480" position="7" root="س   ع   ي" stem="سَعْيُ" lemma="سَعْي">سَعْيُكُم</word>
   <word id="80481" position="8" root="ش ك ر" stem="مَّشْكُورًا" lemma="مَّشْكُور">مَّشْكُورًا</word>
   <word id="80482" position="9">٢٢</word>
+  <ruku eid="ruku:516"/>
+  <ruku number="517" sid="ruku:517"/>
   <line eid="page:579:line:13"/>
   <line number="14" sid="page:579:line:14"/>
   <ayah eid="76:22:hafs-kufi"/>
@@ -398,6 +401,7 @@
   <ayah eid="76:31:hafs-kufi"/>
   <line eid="page:580:line:6"/>
   <page eid="page:580"/>
+  <ruku eid="ruku:517"/>
   <rub eid="rub:232"/>
   <hizb eid="hizb:58"/>
   <manzil eid="manzil:7"/>

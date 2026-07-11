@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="49" name="Al-Hujurat" nameArabic="الحجرات" ayahCount="18" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)">
+<qusx version="0.1" surah="49" name="Al-Hujurat" nameArabic="الحجرات" ayahCount="18" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)" generatorVersion="0.1.0">
   <juz number="26" sid="juz:26"/>
   <manzil number="6" sid="manzil:6"/>
   <hizb number="52" sid="hizb:52"/>
   <rub number="206" sid="rub:206"/>
+  <ruku number="452" sid="ruku:452"/>
   <page number="515" sid="page:515"/>
   <line number="9" sid="page:515:line:9"/>
   <ayah number="1" tradition="hafs-kufi" sid="49:1:hafs-kufi"/>
@@ -240,6 +241,8 @@
   <word id="71234" position="9" stem="لَعَلَّ" lemma="لَعَلّ">لَعَلَّكُمْ</word>
   <word id="71235" position="10" root="ر ح م" stem="تُرْحَمُ" lemma="رَّحِمَ">تُرْحَمُونَ</word>
   <word id="71236" position="11">١٠</word>
+  <ruku eid="ruku:452"/>
+  <ruku number="453" sid="ruku:453"/>
   <ayah eid="49:10:hafs-kufi"/>
   <ayah number="11" tradition="hafs-kufi" sid="49:11:hafs-kufi"/>
   <word id="71237" position="1" root="ا   ي   ي" stem="أَيُّهَا" lemma="أَيُّهَا">يَـٰٓأَيُّهَا</word>
@@ -487,6 +490,7 @@
   <ayah eid="49:18:hafs-kufi"/>
   <line eid="page:517:line:15"/>
   <page eid="page:517"/>
+  <ruku eid="ruku:453"/>
   <rub eid="rub:207"/>
   <hizb eid="hizb:52"/>
   <manzil eid="manzil:6"/>

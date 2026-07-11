@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="108" name="Al-Kawthar" nameArabic="الكوثر" ayahCount="3" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)">
+<qusx version="0.1" surah="108" name="Al-Kawthar" nameArabic="الكوثر" ayahCount="3" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 15-line (Qudratullah)" generatorVersion="0.1.0">
   <juz number="30" sid="juz:30"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="60" sid="hizb:60"/>
   <rub number="240" sid="rub:240"/>
+  <ruku number="552" sid="ruku:552"/>
   <page number="608" sid="page:608"/>
   <line number="12" sid="page:608:line:12"/>
   <ayah number="1" tradition="hafs-kufi" sid="108:1:hafs-kufi"/>
@@ -27,6 +28,7 @@
   <ayah eid="108:3:hafs-kufi"/>
   <line eid="page:608:line:12"/>
   <page eid="page:608"/>
+  <ruku eid="ruku:552"/>
   <rub eid="rub:240"/>
   <hizb eid="hizb:60"/>
   <manzil eid="manzil:7"/>

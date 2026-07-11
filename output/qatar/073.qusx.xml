@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="73" name="Al-Muzzammil" nameArabic="المزمل" ayahCount="20" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="73" name="Al-Muzzammil" nameArabic="المزمل" ayahCount="20" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="29" sid="juz:29"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="58" sid="hizb:58"/>
   <rub number="229" sid="rub:229"/>
+  <ruku number="510" sid="ruku:510"/>
   <page number="574" sid="page:574"/>
   <line number="3" sid="page:574:line:3"/>
   <ayah number="1" tradition="hafs-kufi" sid="73:1:hafs-kufi"/>
@@ -209,6 +210,8 @@
   <word id="79697" position="10">١٩</word>
   <rub eid="rub:229"/>
   <rub number="230" sid="rub:230"/>
+  <ruku eid="ruku:510"/>
+  <ruku number="511" sid="ruku:511"/>
   <page eid="page:574"/>
   <page number="575" sid="page:575"/>
   <line eid="page:574:line:15"/>
@@ -309,6 +312,7 @@
   <ayah eid="73:20:hafs-kufi"/>
   <line eid="page:575:line:7"/>
   <page eid="page:575"/>
+  <ruku eid="ruku:511"/>
   <rub eid="rub:230"/>
   <hizb eid="hizb:58"/>
   <manzil eid="manzil:7"/>

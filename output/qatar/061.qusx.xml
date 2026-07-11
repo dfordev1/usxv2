@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="61" name="As-Saf" nameArabic="الصف" ayahCount="14" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar">
+<qusx version="0.1" surah="61" name="As-Saf" nameArabic="الصف" ayahCount="14" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="Mushaf Qatar" generatorVersion="0.1.0">
   <juz number="28" sid="juz:28"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="55" sid="hizb:55"/>
   <rub number="220" sid="rub:220"/>
+  <ruku number="486" sid="ruku:486"/>
   <page number="551" sid="page:551"/>
   <line number="9" sid="page:551:line:9"/>
   <ayah number="1" tradition="hafs-kufi" sid="61:1:hafs-kufi"/>
@@ -194,6 +195,8 @@
   <word id="76414" position="13" root="ك ر ه" stem="كَرِهَ" lemma="كَرِهَ">كَرِهَ</word>
   <word id="76415" position="14" root="ش ر ك" stem="مُشْرِكُونَ" lemma="مُشْرِك">ٱلْمُشْرِكُونَ</word>
   <word id="76416" position="15">٩</word>
+  <ruku eid="ruku:486"/>
+  <ruku number="487" sid="ruku:487"/>
   <ayah eid="61:9:hafs-kufi"/>
   <ayah number="10" tradition="hafs-kufi" sid="61:10:hafs-kufi"/>
   <word id="76417" position="1" root="ا   ي   ي" stem="أَيُّهَا" lemma="أَيُّهَا">يَـٰٓأَيُّهَا</word>
@@ -315,6 +318,7 @@
   <ayah eid="61:14:hafs-kufi"/>
   <line eid="page:552:line:15"/>
   <page eid="page:552"/>
+  <ruku eid="ruku:487"/>
   <rub eid="rub:220"/>
   <hizb eid="hizb:55"/>
   <manzil eid="manzil:7"/>

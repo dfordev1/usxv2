@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="59" name="Al-Hashr" nameArabic="الحشر" ayahCount="24" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)">
+<qusx version="0.1" surah="59" name="Al-Hashr" nameArabic="الحشر" ayahCount="24" revelationPlace="madinah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)" generatorVersion="0.1.0">
   <juz number="28" sid="juz:28"/>
   <manzil number="7" sid="manzil:7"/>
   <hizb number="55" sid="hizb:55"/>
   <rub number="218" sid="rub:218"/>
+  <ruku number="481" sid="ruku:481"/>
   <page number="545" sid="page:545"/>
   <line number="9" sid="page:545:line:9"/>
   <ayah number="1" tradition="hafs-kufi" sid="59:1:hafs-kufi"/>
@@ -313,6 +314,8 @@
   <word id="75677" position="24">١٠</word>
   <rub eid="rub:218"/>
   <rub number="219" sid="rub:219"/>
+  <ruku eid="ruku:481"/>
+  <ruku number="482" sid="ruku:482"/>
   <ayah eid="59:10:hafs-kufi"/>
   <ayah number="11" tradition="hafs-kufi" sid="59:11:hafs-kufi"/>
   <word id="75678" position="1" stem="لَمْ" lemma="لَم">۞ أَلَمْ</word>
@@ -481,6 +484,8 @@
   <line number="2" sid="page:548:line:2"/>
   <word id="75800" position="10" root="ظ ل م" stem="ظَّٰلِمِينَ" lemma="ظَالِم">ٱلظَّـٰلِمِينَ</word>
   <word id="75801" position="11">١٧</word>
+  <ruku eid="ruku:482"/>
+  <ruku number="483" sid="ruku:483"/>
   <ayah eid="59:17:hafs-kufi"/>
   <ayah number="18" tradition="hafs-kufi" sid="59:18:hafs-kufi"/>
   <word id="75802" position="1" root="ا   ي   ي" stem="أَيُّهَا" lemma="أَيُّهَا">يَـٰٓأَيُّهَا</word>
@@ -633,6 +638,7 @@
   <ayah eid="59:24:hafs-kufi"/>
   <line eid="page:548:line:14"/>
   <page eid="page:548"/>
+  <ruku eid="ruku:483"/>
   <rub eid="rub:219"/>
   <hizb eid="hizb:55"/>
   <manzil eid="manzil:7"/>

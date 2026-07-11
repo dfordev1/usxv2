@@ -23,6 +23,18 @@ const path = require("path");
 
 const OUT = path.join(__dirname, "..", "output");
 
+// Canonical surah names, loaded once for the name/number cross-check below.
+// Missing gracefully (this validator can run on files outside the repo where
+// data/raw/ isn't present) rather than crashing.
+let CANONICAL_SURAH_NAMES = null;
+try {
+  CANONICAL_SURAH_NAMES = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "..", "data", "raw", "quran-metadata-surah-name.json"), "utf-8")
+  );
+} catch {
+  CANONICAL_SURAH_NAMES = null;
+}
+
 function allGeneratedFiles(layoutFilter) {
   const files = [];
   const layoutDirs = fs
@@ -38,12 +50,13 @@ function allGeneratedFiles(layoutFilter) {
   return files.sort();
 }
 
-const MILESTONE_TAGS = ["juz", "manzil", "hizb", "rub", "page", "line", "ayah"];
+const MILESTONE_TAGS = ["juz", "manzil", "hizb", "rub", "ruku", "page", "line", "ayah"];
 const REQUIRED_ATTRS = {
   juz: ["number", "sid"],
   manzil: ["number", "sid"],
   hizb: ["number", "sid"],
   rub: ["number", "sid"],
+  ruku: ["number", "sid"],
   page: ["number", "sid"],
   line: ["number", "sid"],
   ayah: ["number", "tradition", "sid"],
@@ -70,6 +83,43 @@ function validateFile(filePath) {
   }
   const rootAttrs = parseAttrs(rootMatch[1]);
   const declaredAyahCount = Number(rootAttrs.ayahCount);
+  const declaredSurah = Number(rootAttrs.surah);
+
+  // filename vs declared surah number: "042.qusx.xml" must contain surah="42"
+  const fileNameMatch = fileName.match(/^(\d+)\.qusx\.xml$/);
+  if (fileNameMatch) {
+    const fileNameSurah = Number(fileNameMatch[1]);
+    if (fileNameSurah !== declaredSurah) {
+      errors.push(`${fileName}: filename implies surah ${fileNameSurah}, but root surah="${declaredSurah}"`);
+    }
+  } else {
+    errors.push(`${fileName}: filename does not match expected pattern NNN.qusx.xml`);
+  }
+
+  // surah name/count vs the canonical QUL surah-name table, when available
+  if (CANONICAL_SURAH_NAMES) {
+    const canonical = CANONICAL_SURAH_NAMES[String(declaredSurah)];
+    if (!canonical) {
+      errors.push(`${fileName}: surah="${declaredSurah}" is not a valid surah number (no canonical entry 1-114)`);
+    } else {
+      if (rootAttrs.name !== canonical.name_simple) {
+        errors.push(`${fileName}: name="${rootAttrs.name}" does not match canonical "${canonical.name_simple}" for surah ${declaredSurah}`);
+      }
+      if (rootAttrs.nameArabic !== canonical.name_arabic) {
+        errors.push(`${fileName}: nameArabic="${rootAttrs.nameArabic}" does not match canonical "${canonical.name_arabic}" for surah ${declaredSurah}`);
+      }
+      if (Number(canonical.verses_count) !== declaredAyahCount) {
+        errors.push(`${fileName}: ayahCount="${declaredAyahCount}" does not match canonical ${canonical.verses_count} for surah ${declaredSurah}`);
+      }
+      if (String(rootAttrs.bismillahPre) !== String(canonical.bismillah_pre)) {
+        errors.push(`${fileName}: bismillahPre="${rootAttrs.bismillahPre}" does not match canonical ${canonical.bismillah_pre} for surah ${declaredSurah}`);
+      }
+      const canonicalPlace = canonical.revelation_place.toLowerCase();
+      if (rootAttrs.revelationPlace !== canonicalPlace) {
+        errors.push(`${fileName}: revelationPlace="${rootAttrs.revelationPlace}" does not match canonical "${canonicalPlace}" for surah ${declaredSurah}`);
+      }
+    }
+  }
 
   // walk every top-level element in document order
   const tagRe = /<(\w+)([^>]*?)(\/)?>/g;

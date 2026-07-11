@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="46" name="Al-Ahqaf" nameArabic="الأحقاف" ayahCount="35" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)">
+<qusx version="0.1" surah="46" name="Al-Ahqaf" nameArabic="الأحقاف" ayahCount="35" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0">
   <juz number="26" sid="juz:26"/>
   <manzil number="6" sid="manzil:6"/>
   <hizb number="51" sid="hizb:51"/>
   <rub number="201" sid="rub:201"/>
+  <ruku number="440" sid="ruku:440"/>
   <page number="502" sid="page:502"/>
   <line number="9" sid="page:502:line:9"/>
   <ayah number="1" tradition="hafs-kufi" sid="46:1:hafs-kufi"/>
@@ -232,6 +233,8 @@
   <word id="69388" position="23" root="ق   و   م" stem="قَوْمَ" lemma="قَوْم">ٱلْقَوْمَ</word>
   <word id="69389" position="24" root="ظ ل م" stem="ظَّٰلِمِينَ" lemma="ظَالِم">ٱلظَّـٰلِمِينَ</word>
   <word id="69390" position="25">١٠</word>
+  <ruku eid="ruku:440"/>
+  <ruku number="441" sid="ruku:441"/>
   <ayah eid="46:10:hafs-kufi"/>
   <ayah number="11" tradition="hafs-kufi" sid="46:11:hafs-kufi"/>
   <word id="69391" position="1" root="ق   و   ل" stem="قَالَ" lemma="قَالَ">وَقَالَ</word>
@@ -509,6 +512,8 @@
   <word id="69601" position="28">٢٠</word>
   <rub eid="rub:201"/>
   <rub number="202" sid="rub:202"/>
+  <ruku eid="ruku:441"/>
+  <ruku number="442" sid="ruku:442"/>
   <page eid="page:504"/>
   <page number="505" sid="page:505"/>
   <line eid="page:504:line:15"/>
@@ -667,6 +672,8 @@
   <word id="69719" position="31" stem="هِۦ">بِهِۦ</word>
   <word id="69720" position="32" root="ه   ز   ا" stem="يَسْتَهْزِءُ" lemma="اسْتُهْزِئَ">يَسْتَهْزِءُونَ</word>
   <word id="69721" position="33">٢٦</word>
+  <ruku eid="ruku:442"/>
+  <ruku number="443" sid="ruku:443"/>
   <ayah eid="46:26:hafs-kufi"/>
   <ayah number="27" tradition="hafs-kufi" sid="46:27:hafs-kufi"/>
   <word id="69722" position="1" stem="قَدْ" lemma="قَد">وَلَقَدْ</word>
@@ -896,6 +903,7 @@
   <ayah eid="46:35:hafs-kufi"/>
   <line eid="page:506:line:14"/>
   <page eid="page:506"/>
+  <ruku eid="ruku:443"/>
   <rub eid="rub:202"/>
   <hizb eid="hizb:51"/>
   <manzil eid="manzil:6"/>
