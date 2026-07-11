@@ -424,4 +424,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { validateFile, validateLayoutCompleteness };
+module.exports = { validateFile, validateLayoutCompleteness, validateCrossLayoutConsistency };

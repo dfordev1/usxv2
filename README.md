@@ -141,12 +141,26 @@ for different layouts or traditions.
 
 | Tag | Role | Notes |
 |---|---|---|
-| `<qusx>` | Root, one per surah | `tradition` = active ayah-counting scheme; `normalization="NFC"` states the text-encoding policy (checked by `validate.js`); `generatorVersion` self-declares what produced the file |
+| `<qusx>` | Root, one per surah | `tradition` = active ayah-counting scheme; `normalization="NFC"` states the text-encoding policy (checked by `validate.js`); `generatorVersion` self-declares what produced the file; `bismillahPre` — see note below |
 | `<word>` | Base text unit (leaf) | `id` = global mushaf position, `position` = index within ayah, `type="number"` marks the ayah-ending verse-number glyph (not a lexical word — see below), `root`/`stem`/`lemma` = morphology embeds |
 | `<ayah>` | Milestone pin | `tradition` attr allows multiple counting schemes over the same word stream |
 | `<page>` / `<line>` | Milestone pin | From a specific print edition's layout — see `<qusx layout="...">` on the root element |
 | `<juz>` / `<hizb>` / `<rub>` / `<manzil>` / `<ruku>` | Milestone pin | Standard 30/60/240/7-way divisions, plus thematic ruku markers (558 total); `fragment` (`whole`/`start`/`middle`/`end`) states whether this file's copy is the entire range or a piece of one spanning surahs — see below. Definitions in [`docs/quranic-structural-glossary.xlsx`](docs/quranic-structural-glossary.xlsx) |
-| `<sajda>` | Point marker (non-paired) | Fires once at the ayah containing a prostration point; `type` = `required`/`optional` |
+| `<sajda>` | Point marker (non-paired) | Fires once at the ayah containing a prostration point; `type` = `required`/`optional`. **Precision limit, verified not fixable with current data:** QUL's sajda dataset only gives `verse_key` (ayah-level), not a word position — checked directly against `data/raw/quran-metadata-sajda.json`, which has no word field at all. The pin fires after the ayah's last word as the closest available approximation; pinning to the exact word would need a different/richer data source. |
+
+**What `bismillahPre` means — verified, not assumed:** it's a **display-only flag**,
+not a pointer to any `<word>` elements. Checked directly against real data: Surah
+2's ayah 1 is just `الٓمٓ` (Alif-Lam-Meem) — no Basmalah words appear in the word
+stream at all, even though `bismillahPre="true"`. This matches standard practice:
+the opening formula printed atop most surahs is paratextual (a page heading, like
+a surah's name), not part of the counted ayah text — except in Al-Fatihah, where
+it genuinely *is* ayah 1 (and `bismillahPre="false"` there for exactly that
+reason — it's already inside the ayah stream, not a separate heading), and
+At-Tawbah, which has no Basmalah at all. A consumer wanting to *display* the
+Basmalah before a surah needs to render it as static boilerplate text of their
+own — QUSX doesn't carry it as data, and doing so would either duplicate the
+Fatiha's actual ayah-1 text under a different guise or invent word elements with
+no source-data backing.
 
 Boundary tags follow the USX convention: `sid` opens a range, a matching bare `eid`
 closes it. Each axis (juz/manzil/hizb/rub/page/line/ayah) is independently
@@ -266,21 +280,23 @@ account for its own divergence from that source.
 4. **541 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
    are genuinely unexplained**, not just attributed to the known QPC-encoding
    pattern.
-5. **Only ~22 of the ~150+ items from the fuller third-party review have been
+5. **Only ~26 of the ~150+ items from the fuller third-party review have been
    triaged and fixed** — the rest (richer schema semantics beyond what's listed
    below, release/versioning policy beyond `CHANGELOG.md`, punctuation/pause-sign
-   modeling, extension/namespace policy, sajda pinned to exact word rather than
-   end-of-ayah, etc.) remain open.
-6. **No dedicated negative test proves the cross-layout consistency check
-   actually catches a real divergence** — it's been run against real data (where
-   it correctly found nothing wrong across all 5 layouts) but, unlike the other
-   validator checks, has no fixture demonstrating it fails on bad input.
+   modeling, extension/namespace policy, etc.) remain open.
+6. **Sajda can't be pinned to an exact word with current data** — checked
+   directly: `data/raw/quran-metadata-sajda.json` only has `verse_key`
+   (ayah-level), no word position. This isn't a bug to fix in our code; it's a
+   real limit of the source dataset. The pin fires at the end of the containing
+   ayah as the closest available approximation.
 
 **Closed since the audit:** real XSD compilation + validation (was previously only
 regex-checked), CI (`.github/workflows/ci.yml`, including a deterministic-regeneration
 check — committed output must exactly match a fresh build from source, verified with
-two independent generation runs diffing byte-identical), 8 negative tests proving the
-validators actually reject bad input (`test/`), word-position and
+two independent generation runs diffing byte-identical), 16 negative tests proving
+the validators, CLI, cross-layout consistency check, and checksum script all
+actually reject/catch bad input and match known-real baselines — not just pass good
+input (`test/`), word-position and
 corpus-completeness checks in `validate.js` (now including ruku totals and
 per-layout page counts), filename/surah-name/count/place cross-checks against
 canonical data, a cross-layout consistency check confirming word text and

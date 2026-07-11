@@ -5,6 +5,25 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Investigated (before fixing/documenting anything, per the CLI-args lesson)
+  two audit claims directly against real data:
+  - **Bismillah**: confirmed `bismillahPre` is display-only metadata — Surah
+    2 ayah 1 is just `الٓمٓ` in the word stream, no Basmalah words present.
+    This is correct, standard behavior, not a bug. Documented precisely in
+    README (previously undocumented, which is what the audit actually
+    flagged — not broken behavior).
+  - **Sajda word-precision**: confirmed `data/raw/quran-metadata-sajda.json`
+    only has `verse_key`, no word-level field — pinning sajda to an exact
+    word isn't achievable with current source data, not a code bug.
+    Documented as a real data limitation instead of silently approximating.
+- Formalized 5 previously-manual checks into real `test/run_tests.js`
+  assertions: unknown `--layout` value rejection, cross-layout consistency
+  catching an injected divergence (operates on a temp copy, real output
+  files untouched — verified), cross-layout consistency finding nothing
+  wrong between two real uncorrupted layouts (positive control), and
+  checksum-verify.js's exit code + known baseline match count
+  (1,125/6,236) pinned so a silent regression would be caught. 16/16 tests
+  pass.
 - **Corrected a real documentation bug**: README.md previously said CLI
   hardening covers "invalid/duplicate surah args rejected" — false for the
   duplicate half. `node src/generate.js 1 1` exits 0 and writes surah 1

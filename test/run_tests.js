@@ -15,7 +15,7 @@
 const fs = require("fs");
 const path = require("path");
 const { execFileSync, spawnSync } = require("child_process");
-const { validateFile } = require("../src/validate.js");
+const { validateFile, validateCrossLayoutConsistency } = require("../src/validate.js");
 
 const FIXTURES = path.join(__dirname, "fixtures");
 const SCHEMA = path.join(__dirname, "..", "schema", "qusx.xsd");
@@ -130,6 +130,69 @@ check(
   "invalid/out-of-range CLI arg (`999`) is rejected — exits non-zero",
   invalidRun.status !== 0,
   `expected non-zero exit, got ${invalidRun.status}`
+);
+
+const invalidLayoutRun = spawnSync("node", [GENERATE, "--layout=nonexistent-layout", "1"], { encoding: "utf-8" });
+check(
+  "unknown --layout value is rejected — exits non-zero",
+  invalidLayoutRun.status !== 0,
+  `expected non-zero exit, got ${invalidLayoutRun.status}`
+);
+
+// --- cross-layout consistency negative test ---
+// validateCrossLayoutConsistency was previously only proven by hand (corrupt
+// a real file, run validate.js, restore) — not by an automated test. This
+// formalizes that exact manual check: corrupt a temp copy of a real file's
+// word text, confirm the checker flags it against an uncorrupted layout,
+// with no risk to the actual committed output (operates on a temp copy only).
+
+const realDir = path.join(__dirname, "..", "output");
+const tmpDir = fs.mkdtempSync(path.join(require("os").tmpdir(), "qusx-crosslayout-test-"));
+const layoutA = "madani-v2";
+const layoutB = "madani-v1";
+fs.mkdirSync(path.join(tmpDir, layoutA), { recursive: true });
+fs.mkdirSync(path.join(tmpDir, layoutB), { recursive: true });
+const cleanFileA = path.join(realDir, layoutA, "001.qusx.xml");
+const cleanFileB = path.join(realDir, layoutB, "001.qusx.xml");
+const tmpFileA = path.join(tmpDir, layoutA, "001.qusx.xml");
+const tmpFileB = path.join(tmpDir, layoutB, "001.qusx.xml");
+fs.copyFileSync(cleanFileA, tmpFileA);
+const corrupted = fs.readFileSync(cleanFileB, "utf-8").replace("بِسْمِ", "XXXXX");
+fs.writeFileSync(tmpFileB, corrupted, "utf-8");
+
+const crossLayoutErrorsOnCorrupted = validateCrossLayoutConsistency(
+  new Map([[1, { [layoutA]: tmpFileA, [layoutB]: tmpFileB }]])
+);
+check(
+  "cross-layout consistency check catches an injected word-text divergence",
+  crossLayoutErrorsOnCorrupted.length > 0,
+  "expected at least one divergence error between the clean and corrupted copies"
+);
+
+const crossLayoutErrorsOnClean = validateCrossLayoutConsistency(
+  new Map([[1, { [layoutA]: cleanFileA, [layoutB]: cleanFileB }]])
+);
+check(
+  "cross-layout consistency check finds no divergence between two real, uncorrupted layouts (positive control)",
+  crossLayoutErrorsOnClean.length === 0
+);
+
+fs.rmSync(tmpDir, { recursive: true, force: true });
+
+// --- checksum-verify.js negative-control test ---
+// Pins the known, documented real-world result (see README Text integrity)
+// so a silent regression in the checksum logic — or a silent change in the
+// underlying data — doesn't go unnoticed. This is intentionally NOT
+// asserting a clean pass: 1,125/6,236 matching is the honest current state.
+
+const checksumRun = spawnSync("node", [path.join(__dirname, "..", "src", "checksum-verify.js")], {
+  encoding: "utf-8",
+});
+check("checksum-verify.js exits non-zero (matches known 1,125/6,236 partial-match state)", checksumRun.status === 1);
+check(
+  "checksum-verify.js reports the known baseline match count (1125/6236)",
+  /Matched: 1125 \/ 6236/.test(checksumRun.stdout),
+  `expected "Matched: 1125 / 6236" in output, got: ${checksumRun.stdout.split("\n").slice(0, 3).join(" ")}`
 );
 
 // --- positive control: a real generated file must NOT be rejected ---
