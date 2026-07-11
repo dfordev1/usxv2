@@ -10,6 +10,48 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="surahNumber">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="114"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- 286 is the largest known ayah count (Al-Baqarah, Hafs/Kufi). A future
+       tradition with a larger single-surah count would need this raised;
+       flagged rather than left unbounded so a nonsense value (e.g. ayahCount
+       written as a word id by mistake) doesn't pass silently. -->
+  <xs:simpleType name="ayahCountValue">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="286"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Closed to the traditions this project has actually sourced real
+       per-surah ayah-count data for (see data/diff-report.json /
+       docs/prior-art-references.md). "hafs-kufi" is the only one the
+       generator currently emits; the rest are reserved for when
+       word-level Qalun/Warsh/Douri/Shubah text is sourced (see README
+       Known gaps). This is deliberately a closed enum, not an open
+       xs:string, so a typo'd or invented tradition code fails loudly. -->
+  <xs:simpleType name="traditionCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="hafs-kufi"/>
+      <xs:enumeration value="qalon-kfqc"/>
+      <xs:enumeration value="qalon-libya"/>
+      <xs:enumeration value="warsh-kfqc"/>
+      <xs:enumeration value="douri-kfqc"/>
+      <xs:enumeration value="shubah-kfqc"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="verseKeyRef">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,3}:[0-9]{1,3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <!-- Milestone pins are empty elements (self-closing), so no content model
        is needed; attributes go directly on the complexType, not wrapped in
        xs:sequence/xs:choice (xs:attribute is not a valid particle inside
@@ -30,7 +72,7 @@
 
   <xs:complexType name="ayahPin">
     <xs:attribute name="number" type="xs:positiveInteger" use="optional"/>
-    <xs:attribute name="tradition" type="xs:string" use="optional"/>
+    <xs:attribute name="tradition" type="traditionCode" use="optional"/>
     <xs:attribute name="sid" type="sidRef" use="optional"/>
     <xs:attribute name="eid" type="sidRef" use="optional"/>
   </xs:complexType>
@@ -57,7 +99,7 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
-    <xs:attribute name="verseKey" type="xs:string" use="required"/>
+    <xs:attribute name="verseKey" type="verseKeyRef" use="required"/>
   </xs:complexType>
 
   <xs:element name="qusx">
@@ -75,10 +117,10 @@
       </xs:choice>
 
       <xs:attribute name="version" type="xs:string" use="required"/>
-      <xs:attribute name="surah" type="xs:positiveInteger" use="required"/>
+      <xs:attribute name="surah" type="surahNumber" use="required"/>
       <xs:attribute name="name" type="xs:string" use="required"/>
       <xs:attribute name="nameArabic" type="xs:string" use="required"/>
-      <xs:attribute name="ayahCount" type="xs:positiveInteger" use="required"/>
+      <xs:attribute name="ayahCount" type="ayahCountValue" use="required"/>
       <xs:attribute name="revelationPlace" use="required">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -88,7 +130,7 @@
         </xs:simpleType>
       </xs:attribute>
       <xs:attribute name="bismillahPre" type="xs:boolean" use="required"/>
-      <xs:attribute name="tradition" type="xs:string" use="required"/>
+      <xs:attribute name="tradition" type="traditionCode" use="required"/>
       <xs:attribute name="layout" type="xs:string" use="optional"/>
     </xs:complexType>
   </xs:element>

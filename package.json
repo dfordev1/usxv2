@@ -1,11 +1,15 @@
 {
   "name": "qusx",
   "version": "0.1.0",
-  "description": "QUSX (Qur'an Unified Scripture XML) — a milestone-based XML data standard for the Qur'an, modeled on the Bible's USX/USFM standard. One text, many layers (ayah, page, line, juz, hizb, rub, manzil, sajda), zero duplication.",
+  "description": "QUSX (Qur'an Unified Scripture XML) — a milestone-based XML data standard for the Qur'an, modeled on the Bible's USX/USFM standard. v0.1 research prototype, not a finished standard.",
   "main": "src/generate.js",
   "scripts": {
     "generate": "node src/generate.js all",
-    "validate": "node src/validate.js all"
+    "validate": "node src/validate.js all",
+    "validate:xsd": "python scripts/xsd_validate.py",
+    "test": "node test/run_tests.js",
+    "checksum": "node src/checksum-verify.js",
+    "verify": "npm run validate && npm run validate:xsd && npm test"
   },
   "keywords": [
     "quran",

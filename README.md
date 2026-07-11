@@ -180,13 +180,19 @@ Full citation list and independent prior-art (open-quran-view, DigitalKhatt) in
 reference workbook of every structural term (juz, hizb, rub, manzil, ruku, sajda,
 surah), built from the same real QUL data, is in
 [`docs/quranic-structural-glossary.xlsx`](docs/quranic-structural-glossary.xlsx).
+Exact per-file license/provenance terms for everything bundled are in
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## Validating and viewing
 
 ```bash
-node src/validate.js all                       # conformance-check every generated file, all layouts (semantic invariants: sid/eid pairing, ayah sequencing)
+npm run verify                                  # everything below, in one command (also runs in CI on every push)
+node src/validate.js all                        # conformance-check every generated file, all layouts (semantic invariants: sid/eid pairing, ayah sequencing, word-position continuity, corpus-wide totals)
 python scripts/xsd_validate.py                  # validate against schema/qusx.xsd with a real XML Schema processor (lxml/libxml2)
+node test/run_tests.js                          # negative tests: proves both validators above actually reject bad input, not just pass good input
 ```
+
+CI (`.github/workflows/ci.yml`) runs all three on every push/PR.
 
 `src/validate.js` is a hand-written semantic checker (sid/eid pairing, ayah
 sequencing, required attributes by convention) — it is **not** an XSD validator and
@@ -249,25 +255,36 @@ account for its own divergence from that source.
    same-numbered fragments** in each surah's file, with no in-format marker that
    they're fragments of one Quran-wide range — see the note in
    [Tag reference](#tag-reference).
-5. **No automated test suite, CI, provenance/versioning metadata, or license
-   manifest for bundled third-party data** — this is a single-session prototype,
-   not release engineering.
-6. **541 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
+5. **541 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
    are genuinely unexplained**, not just attributed to the known QPC-encoding
    pattern.
+6. **No provenance/versioning metadata is embedded in generated files** (no
+   generator version, no source-dataset retrieval date, no build timestamp) — a
+   `.qusx.xml` file doesn't self-declare which run of which data produced it.
+7. **Only 8 of the ~150+ items from the fuller third-party review below have been
+   triaged and fixed** — the rest (data-model layering beyond #3, richer schema
+   semantics, release/versioning policy, contributor docs, etc.) remain open.
+
+**Closed since the last review pass:** real XSD compilation + validation (was
+previously only regex-checked), CI (`.github/workflows/ci.yml`), 8 negative tests
+proving the validators actually reject bad input (`test/`), word-position and
+corpus-completeness checks in `validate.js`, a closed `tradition` enum and
+`surah`/`ayahCount` range constraints in the schema, and `THIRD_PARTY_NOTICES.md`
+documenting bundled data provenance/terms.
 
 This is a v0.1 research prototype open for review and contribution, not a
 finished or formally released standard — see the
 [Itqan community thread](https://community.itqan.dev/d/549/2) for ongoing
-discussion. A structured third-party review surfaced ~160 additional gaps across
-schema rigor, validator coverage, data-model layering, and release engineering;
-the items above are the ones independently verified and prioritized so far, not
-an exhaustive list.
+discussion. A structured third-party review surfaced ~160 gaps across schema
+rigor, validator coverage, data-model layering, and release engineering; the
+items above are the ones triaged and either fixed or explicitly tracked so far,
+not an exhaustive list.
 
 ## Project layout
 
 ```
 qusx/
+├── .github/workflows/ci.yml   # runs validate.js + xsd_validate.py + test/ on every push
 ├── src/
 │   ├── generate.js           # the generator
 │   ├── validate.js           # semantic conformance checker (not an XSD validator)
@@ -275,6 +292,9 @@ qusx/
 ├── scripts/
 │   ├── xsd_validate.py       # real XSD validation via lxml (requirements.txt)
 │   └── build_glossary_xlsx.py
+├── test/
+│   ├── run_tests.js          # negative tests: proves validators actually reject bad input
+│   └── fixtures/             # deliberately malformed/invalid .qusx.xml files
 ├── schema/qusx.xsd            # formal element/attribute shape
 ├── viewer/viewer.html         # live DOMParser-based viewer (self-contained)
 ├── data/
@@ -285,6 +305,7 @@ qusx/
 ├── output/<layout-key>/      # generated *.qusx.xml, one per surah per layout
 ├── assets/                   # banner and diagram images
 ├── LICENSE                   # MIT (code/schema only — see note on bundled data)
+├── THIRD_PARTY_NOTICES.md     # exact provenance/terms for every bundled dataset
 ├── requirements.txt           # Python deps for scripts/
 ├── package.json
 └── docs/

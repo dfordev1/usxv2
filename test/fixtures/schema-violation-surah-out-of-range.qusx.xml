@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="200" name="Fake" nameArabic="وهمي" ayahCount="1" revelationPlace="makkah" bismillahPre="false" tradition="made-up-tradition">
+  <ayah number="1" tradition="made-up-tradition" sid="200:1:made-up-tradition"/>
+  <word id="1" position="1">كلمة</word>
+  <ayah eid="200:1:made-up-tradition"/>
+</qusx>

@@ -80,6 +80,9 @@ function validateFile(filePath) {
   let ayahNumbers = [];
   let wordIds = [];
   let lastWordId = 0;
+  let expectedPosition = 1; // resets to 1 at the start of each ayah
+  let wordCount = 0;
+  let sajdaCount = 0;
 
   while ((m = tagRe.exec(xml))) {
     const tag = m[1];
@@ -93,8 +96,17 @@ function validateFile(filePath) {
       }
       const id = Number(attrs.id);
       wordIds.push(id);
+      wordCount++;
       if (id <= lastWordId) errors.push(`${fileName}: word id ${id} is not strictly increasing after ${lastWordId}`);
       lastWordId = id;
+
+      const position = Number(attrs.position);
+      if (position !== expectedPosition) {
+        errors.push(
+          `${fileName}: word id ${id} has position ${position}, expected ${expectedPosition} (position should count 1..N within each ayah, resetting at each ayah boundary)`
+        );
+      }
+      expectedPosition++;
       continue;
     }
 
@@ -105,6 +117,7 @@ function validateFile(filePath) {
       if (attrs.type && !["required", "optional"].includes(attrs.type)) {
         errors.push(`${fileName}: <sajda> invalid type "${attrs.type}"`);
       }
+      sajdaCount++;
       continue;
     }
 
@@ -141,7 +154,10 @@ function validateFile(filePath) {
       }
       openPerAxis.set(tag, { sid: attrs.sid });
 
-      if (tag === "ayah") ayahNumbers.push(Number(attrs.number));
+      if (tag === "ayah") {
+        ayahNumbers.push(Number(attrs.number));
+        expectedPosition = 1; // word position numbering restarts at each ayah
+      }
       continue;
     }
 
@@ -176,6 +192,40 @@ function validateFile(filePath) {
     );
   }
 
+  return { errors, wordCount, sajdaCount, ayahCount: ayahNumbers.length, surah: Number(rootAttrs.surah) };
+}
+
+// Known Quran-wide totals (Hafs/Kufi, standard 15-sajda list) — used to check
+// that a layout's generated corpus is complete, not just that each file is
+// individually well-formed.
+const EXPECTED_CORPUS_TOTALS = { surahCount: 114, ayahCount: 6236, wordCount: 83668, sajdaCount: 15 };
+
+function validateLayoutCompleteness(layoutDir, fileResults) {
+  const errors = [];
+  const surahsPresent = new Set(fileResults.map((r) => r.surah));
+  if (surahsPresent.size !== EXPECTED_CORPUS_TOTALS.surahCount) {
+    const missing = [];
+    for (let i = 1; i <= 114; i++) if (!surahsPresent.has(i)) missing.push(i);
+    errors.push(
+      `${layoutDir}: expected 114 surahs, found ${surahsPresent.size}. Missing: ${missing.join(", ") || "(duplicates present instead)"}`
+    );
+  }
+
+  const totals = fileResults.reduce(
+    (acc, r) => ({
+      ayahCount: acc.ayahCount + r.ayahCount,
+      wordCount: acc.wordCount + r.wordCount,
+      sajdaCount: acc.sajdaCount + r.sajdaCount,
+    }),
+    { ayahCount: 0, wordCount: 0, sajdaCount: 0 }
+  );
+
+  for (const key of ["ayahCount", "wordCount", "sajdaCount"]) {
+    if (totals[key] !== EXPECTED_CORPUS_TOTALS[key]) {
+      errors.push(`${layoutDir}: corpus-wide ${key} is ${totals[key]}, expected ${EXPECTED_CORPUS_TOTALS[key]}`);
+    }
+  }
+
   return errors;
 }
 
@@ -197,14 +247,34 @@ function main() {
   }
 
   let totalErrors = 0;
+  const resultsByLayout = new Map(); // layoutDir -> [{wordCount, sajdaCount, ayahCount, surah}]
+
   for (const f of files) {
-    const errors = validateFile(f);
+    const { errors, ...result } = validateFile(f);
     totalErrors += errors.length;
     for (const e of errors) console.log("FAIL: " + e);
+
+    const layoutDir = path.basename(path.dirname(f));
+    if (!resultsByLayout.has(layoutDir)) resultsByLayout.set(layoutDir, []);
+    resultsByLayout.get(layoutDir).push(result);
+  }
+
+  // corpus-completeness checks only make sense when validating a full "all"
+  // run for a layout (not a hand-picked file list) — skip otherwise.
+  if (args.length === 0 || args[0] === "all") {
+    for (const [layoutDir, results] of resultsByLayout) {
+      const completenessErrors = validateLayoutCompleteness(layoutDir, results);
+      totalErrors += completenessErrors.length;
+      for (const e of completenessErrors) console.log("FAIL: " + e);
+    }
   }
 
   console.log(`\nChecked ${files.length} file(s), ${totalErrors} error(s).`);
   process.exit(totalErrors > 0 ? 1 : 0);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = { validateFile, validateLayoutCompleteness };
