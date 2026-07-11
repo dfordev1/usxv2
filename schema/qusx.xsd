@@ -10,34 +10,29 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <!-- Milestone pins: each pin either opens a range (sid, plus a `number` and
-       for <ayah> a `tradition`) or closes one (eid only). Enforced by the two
-       xs:choice patterns below rather than a single freely-optional attribute
-       set, so a pin can't carry both sid and eid at once. -->
+  <!-- Milestone pins are empty elements (self-closing), so no content model
+       is needed; attributes go directly on the complexType, not wrapped in
+       xs:sequence/xs:choice (xs:attribute is not a valid particle inside
+       those; only elements are). All milestone attributes are declared
+       `optional` here because XSD 1.0 has no way to express "sid XOR eid,
+       and if sid then number/tradition are required too" as a schema
+       constraint; that conditional/mutual-exclusion rule is semantic, not
+       structural, and is enforced by src/validate.js instead. This mirrors
+       how real-world XSDs handle co-occurrence constraints: schema for
+       shape, a validator (or XSD 1.1 assertions / Schematron) for rules
+       that span multiple attributes. -->
 
   <xs:complexType name="milestonePin">
-    <xs:choice>
-      <xs:sequence>
-        <xs:attribute name="number" type="xs:positiveInteger" use="required"/>
-        <xs:attribute name="sid" type="sidRef" use="required"/>
-      </xs:sequence>
-      <xs:sequence>
-        <xs:attribute name="eid" type="sidRef" use="required"/>
-      </xs:sequence>
-    </xs:choice>
+    <xs:attribute name="number" type="xs:positiveInteger" use="optional"/>
+    <xs:attribute name="sid" type="sidRef" use="optional"/>
+    <xs:attribute name="eid" type="sidRef" use="optional"/>
   </xs:complexType>
 
   <xs:complexType name="ayahPin">
-    <xs:choice>
-      <xs:sequence>
-        <xs:attribute name="number" type="xs:positiveInteger" use="required"/>
-        <xs:attribute name="tradition" type="xs:string" use="required"/>
-        <xs:attribute name="sid" type="sidRef" use="required"/>
-      </xs:sequence>
-      <xs:sequence>
-        <xs:attribute name="eid" type="sidRef" use="required"/>
-      </xs:sequence>
-    </xs:choice>
+    <xs:attribute name="number" type="xs:positiveInteger" use="optional"/>
+    <xs:attribute name="tradition" type="xs:string" use="optional"/>
+    <xs:attribute name="sid" type="sidRef" use="optional"/>
+    <xs:attribute name="eid" type="sidRef" use="optional"/>
   </xs:complexType>
 
   <xs:complexType name="word">
@@ -94,6 +89,7 @@
       </xs:attribute>
       <xs:attribute name="bismillahPre" type="xs:boolean" use="required"/>
       <xs:attribute name="tradition" type="xs:string" use="required"/>
+      <xs:attribute name="layout" type="xs:string" use="optional"/>
     </xs:complexType>
   </xs:element>
 

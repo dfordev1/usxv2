@@ -54,15 +54,22 @@ independent Quranic-data project we surveyed (QUL, quran-svg, quranhub,
 open-quran-view) reinvents a similar-but-incompatible page/line/word schema to solve
 this same problem.
 
-QUSX's flat word-stream + independent milestone pins means **one file serves every
-view**: an app walks `sid`/`eid` pairs to reconstruct whichever slice it needs — an
-ayah, a printed page, a juz, a riwayah's numbering — without re-fetching or
-duplicating the underlying text.
+QUSX's flat word-stream + independent milestone pins means **one *per-surah* file
+serves every view**: an app walks `sid`/`eid` pairs to reconstruct whichever slice it
+needs within that surah — an ayah, a printed page, a juz fragment, a riwayah's
+numbering — without re-fetching or duplicating the underlying text *within that
+file*. To be precise about current scope: this project ships **570 files** (114
+surahs × 5 layouts), and text/morphology *is* duplicated once per layout — a page-2
+KFGQPC-V2 file and a page-2 IndoPak file both carry the full word text independently,
+because layout is baked into each generated document rather than factored into a
+separate referenceable layer. Whether/how to split text, morphology, and layout into
+independently-combinable documents (so a layout change wouldn't require
+regenerating the underlying text) is unresolved — see [Known gaps](#known-gaps).
 
 ## Status
 
-Generator is complete and validated against real data for **all 114 surahs, across 5
-print layouts** (570 files total):
+Generator produces output for **all 114 surahs, across 5 print layouts** (570 files
+total), checked against real data:
 
 | Layout | Pages | Ayah pins | Word tokens | Sajda pins |
 |---|---|---|---|---|
@@ -76,12 +83,17 @@ Text/ayah/word/sajda counts are identical across layouts (same underlying Hafs/K
 text) — only page/line placement changes per print edition, and IndoPak correctly
 comes out to 610 pages instead of 604, matching its real-world pagination.
 
-`src/validate.js` additionally checks real semantic invariants — every `sid` has
-exactly one matching `eid`, no axis is opened twice without closing, ayah numbers run
-1..N with no gaps — against a formal shape defined in [`schema/qusx.xsd`](schema/qusx.xsd).
-**All 570 generated files pass with 0 errors.** [`viewer/viewer.html`](viewer/viewer.html)
-parses the generator's raw output with the browser's own `DOMParser` and renders it,
-so the format is proven consumable end-to-end, not just internally consistent.
+Two independent checks, not one: `src/validate.js` checks semantic invariants (every
+`sid` has exactly one matching `eid`, no axis opened twice without closing, ayah
+numbers run 1..N with no gaps) — **all 570 files pass, 0 errors.** Separately,
+`scripts/xsd_validate.py` runs the actual [`schema/qusx.xsd`](schema/qusx.xsd)
+through a real XML Schema processor (`lxml`/libxml2) — **all 570 files are also
+XSD-valid.** These are deliberately two different tools checking different things
+(structural shape vs. semantic pairing rules XSD 1.0 can't express); see
+[Validating and viewing](#validating-and-viewing) for why both are needed.
+[`viewer/viewer.html`](viewer/viewer.html) parses the generator's raw output with the
+browser's own `DOMParser` and renders it, so the format is proven consumable
+end-to-end, not just internally consistent.
 
 Currently ships **one tradition (Hafs/Kufi)** with real word-level text and
 morphology. Multi-tradition ayah pins (Qalun, Warsh, Douri, Shu'bah) are proven out
@@ -145,6 +157,17 @@ across two lines in the KFGQPC V2 layout. That crossing is exactly the "overlapp
 structures" problem milestone markup exists to solve; see it live in
 `viewer/viewer.html`.
 
+**Known scoping limitation:** each `.qusx.xml` file covers one surah, so a
+`juz`/`hizb`/`rub`/`manzil` that spans two surahs (e.g. Juz 1 covers all of Surah 1
+and part of Surah 2) is written as **two separate fragments with the same
+number** — `sid="juz:1"` opens and closes once in `001.qusx.xml`, then opens and
+closes *again* in `002.qusx.xml`. Within a single file this is unambiguous (each
+number appears at most once), but nothing in the format currently marks these as
+fragments of one Quran-wide range rather than two coincidentally-numbered ranges —
+a consumer that concatenates files needs to know this convention out of band. A
+real fix (e.g. a `continues="true"` flag, or moving these particular axes to a
+single whole-Quran document) is an open design question, not yet resolved.
+
 ## Data sources
 
 All raw data lives in `data/` and was pulled from:
@@ -161,9 +184,18 @@ surah), built from the same real QUL data, is in
 ## Validating and viewing
 
 ```bash
-node src/validate.js all                       # conformance-check every generated file, all layouts
-node src/validate.js --layout=indopak-15 all    # check just one layout
+node src/validate.js all                       # conformance-check every generated file, all layouts (semantic invariants: sid/eid pairing, ayah sequencing)
+python scripts/xsd_validate.py                  # validate against schema/qusx.xsd with a real XML Schema processor (lxml/libxml2)
 ```
+
+`src/validate.js` is a hand-written semantic checker (sid/eid pairing, ayah
+sequencing, required attributes by convention) — it is **not** an XSD validator and
+was never a substitute for one. `scripts/xsd_validate.py` runs the actual
+`schema/qusx.xsd` through `lxml` and confirms **570/570 generated files are valid**
+against it. Note XSD 1.0 cannot express "sid XOR eid" as a structural constraint
+(see the comment in `qusx.xsd`), so that specific rule is still enforced only by
+`validate.js`, not by the schema itself — this is a real, stated scope split
+between the two tools, not an oversight.
 
 Open `viewer/viewer.html` directly in a browser to see two real generated files
 (Al-Fātiḥah and An-Nās) parsed live and rendered, with a raw-XML toggle and
@@ -177,16 +209,26 @@ node src/checksum-verify.js   # compare QUL's Uthmani text against an independen
 
 This cross-checks our word data against the verse-level manifest from
 [spqrxi/quranchecksum](https://github.com/spqrxi/quranchecksum), an independent
-MIT-licensed tool built from Tanzil's KFGQPC-verified Uthmani text. **Result: 1,125 /
-6,236 verses match byte-for-byte; the rest differ in Unicode encoding convention, not
-content.** QUL's text follows the **QPC (King Fahd Complex glyph-font) Uthmani
-convention** — e.g. representing the superscript alef with a tatweel spacer
-(`ـٰ`, U+0640 U+0670) in ~3,638 verses, and using the wasla-alef (`ٱ`, U+0671) where
-Tanzil's own transcription uses different codepoint choices for the same
-pronunciation. This is a documented, legitimate divergence between two widely-used
-"Uthmani script" encodings (`quranchecksum`'s own spec calls this out explicitly), not
-an error in either source — but it's worth knowing before assuming byte-identity
-between QUSX output and Tanzil-sourced tooling.
+MIT-licensed tool built from Tanzil's KFGQPC-verified Uthmani text.
+
+**Result: 1,125 / 6,236 verses (18%) match byte-for-byte. Of the 5,111 that don't:**
+
+| Cause | Verses | Explained? |
+|---|---|---|
+| Tatweel-spaced superscript alef (`ـٰ`, U+0640 U+0670) — QPC glyph-font convention | 3,581 | Yes — documented QPC-vs-Tanzil encoding difference, not a content error |
+| Wasla-alef (`ٱ`, U+0671) codepoint choice, no tatweel | 989 | Yes — same category, different specific codepoint |
+| **Neither pattern present** | **541** | **No — genuinely unexplained, not yet root-caused** |
+
+The exit code from `checksum-verify.js` is **failure** when any mismatch exists, and
+that's correct behavior — a partial explanation is not the same as a pass. The 4,570
+verses covered by the two known encoding patterns are a legitimate, documented
+divergence between two widely-used "Uthmani script" conventions (`quranchecksum`'s own
+spec calls this exact scenario out). The remaining 541 are an open question this
+project has not resolved, and this README does not claim otherwise. **This checksum
+result establishes that QUL's text is internally reproducible and self-consistent —
+it does not establish byte-for-byte equivalence with Tanzil or any other independent
+canonical source**, and the 541 unexplained verses mean it cannot yet even fully
+account for its own divergence from that source.
 
 ## Known gaps
 
@@ -200,27 +242,50 @@ between QUSX output and Tanzil-sourced tooling.
    Qatar, IndoPak 15-line). The remaining 7 (other IndoPak line counts, Digital
    Khatt, Libyan Awqaf, etc.) follow the same pattern in `LAYOUTS` in
    `src/generate.js` — just need downloading and registering.
+3. **Text/morphology are duplicated once per layout**, not factored into a
+   separately-referenceable layer — see the [Why this exists](#why-this-exists)
+   caveat.
+4. **Juz/hizb/rub/manzil ranges that span two surahs are written as separate
+   same-numbered fragments** in each surah's file, with no in-format marker that
+   they're fragments of one Quran-wide range — see the note in
+   [Tag reference](#tag-reference).
+5. **No automated test suite, CI, provenance/versioning metadata, or license
+   manifest for bundled third-party data** — this is a single-session prototype,
+   not release engineering.
+6. **541 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
+   are genuinely unexplained**, not just attributed to the known QPC-encoding
+   pattern.
 
-This is a v0.1 prototype open for review and contribution, not a finished standard —
-see the [Itqan community thread](https://community.itqan.dev/d/549/2) for ongoing
-discussion.
+This is a v0.1 research prototype open for review and contribution, not a
+finished or formally released standard — see the
+[Itqan community thread](https://community.itqan.dev/d/549/2) for ongoing
+discussion. A structured third-party review surfaced ~160 additional gaps across
+schema rigor, validator coverage, data-model layering, and release engineering;
+the items above are the ones independently verified and prioritized so far, not
+an exhaustive list.
 
 ## Project layout
 
 ```
 qusx/
 ├── src/
-│   ├── generate.js          # the generator
-│   └── validate.js          # conformance checker
-├── schema/qusx.xsd           # formal element/attribute shape
-├── viewer/viewer.html        # live DOMParser-based viewer (self-contained)
+│   ├── generate.js           # the generator
+│   ├── validate.js           # semantic conformance checker (not an XSD validator)
+│   └── checksum-verify.js    # cross-checks text against an independent SHA-256 manifest
+├── scripts/
+│   ├── xsd_validate.py       # real XSD validation via lxml (requirements.txt)
+│   └── build_glossary_xlsx.py
+├── schema/qusx.xsd            # formal element/attribute shape
+├── viewer/viewer.html         # live DOMParser-based viewer (self-contained)
 ├── data/
-│   ├── raw/                 # QUL exports (text, metadata, morphology, default layout)
-│   ├── layouts/              # 4 additional QUL Mushaf layout databases
-│   └── diff-report.json     # our derived per-surah ayah-count deltas across traditions
-├── output/<layout-key>/     # generated *.qusx.xml, one per surah per layout
-├── assets/                  # banner and diagram images
-├── LICENSE                  # MIT (code/schema only — see note on bundled data)
+│   ├── raw/                  # QUL exports (text, metadata, morphology, default layout)
+│   ├── layouts/               # 4 additional QUL Mushaf layout databases
+│   ├── external/              # third-party manifests (quranchecksum)
+│   └── diff-report.json      # our derived per-surah ayah-count deltas across traditions
+├── output/<layout-key>/      # generated *.qusx.xml, one per surah per layout
+├── assets/                   # banner and diagram images
+├── LICENSE                   # MIT (code/schema only — see note on bundled data)
+├── requirements.txt           # Python deps for scripts/
 ├── package.json
 └── docs/
     ├── prior-art-references.md
