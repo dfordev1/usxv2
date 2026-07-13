@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // QUSX generator — reads QUL raw data and emits one QUSX XML file per surah.
-// Usage: node src/generate.js [--layout=key] [surahNumber ... | all]
+// Usage: node src/generate.js [--layout=key] [--output-dir=path] [surahNumber ... | all]
+//   --output-dir defaults to the real output/ tree; override it (e.g. in
+//   tests) to avoid writing to committed files.
 // Layout keys: madani-v2 (default), madani-v1, madani-v4-tajweed, qatar, indopak-15,
 //   indopak-9-gaba, indopak-13-qudratullah, indopak-13-taj, indopak-16-taj, nastaleeq
 
@@ -336,10 +338,13 @@ function main() {
   const rawArgs = process.argv.slice(2);
 
   let layoutKey = "madani-v2";
+  let outputRoot = OUT;
   const args = [];
   for (const a of rawArgs) {
-    const m = a.match(/^--layout=(.+)$/);
-    if (m) layoutKey = m[1];
+    const layoutMatch = a.match(/^--layout=(.+)$/);
+    const outDirMatch = a.match(/^--output-dir=(.+)$/);
+    if (layoutMatch) layoutKey = layoutMatch[1];
+    else if (outDirMatch) outputRoot = outDirMatch[1];
     else args.push(a);
   }
 
@@ -354,7 +359,10 @@ function main() {
   }
 
   const { wordLocation, info } = buildWordLocation(layout.file);
-  const outDir = path.join(OUT, layoutKey);
+  // --output-dir lets callers (notably the test suite) redirect output away
+  // from the real committed output/ tree, so mutation-oriented tests never
+  // touch real files -- see test/run_tests.js.
+  const outDir = path.join(outputRoot, layoutKey);
   fs.mkdirSync(outDir, { recursive: true });
 
   let targets;

@@ -97,24 +97,48 @@ const REQUIRED_ATTRS = {
   sajda: ["number", "type", "verseKey"],
 };
 
+// Returns { attrs, duplicates }. Silently overwriting a duplicate attribute
+// (e.g. malformed input with `number="1" number="2"`) would hide a real
+// well-formedness problem the XSD pass might not always catch first --
+// duplicates are surfaced explicitly instead.
 function parseAttrs(attrString) {
   const attrs = {};
+  const duplicates = [];
   const re = /(\w+)="([^"]*)"/g;
   let m;
-  while ((m = re.exec(attrString))) attrs[m[1]] = m[2];
-  return attrs;
+  while ((m = re.exec(attrString))) {
+    if (Object.prototype.hasOwnProperty.call(attrs, m[1])) duplicates.push(m[1]);
+    attrs[m[1]] = m[2];
+  }
+  return { attrs, duplicates };
 }
 
 function validateFile(filePath) {
-  const xml = fs.readFileSync(filePath, "utf-8");
   const errors = [];
   const fileName = path.basename(filePath);
 
+  // Always return the same shape ({errors, wordCount, ...}), even on early
+  // failure -- a caller that destructures the result shouldn't have to
+  // special-case "no root element found" as a different return type.
+  const EMPTY_RESULT = { wordCount: 0, sajdaCount: 0, rukuCount: 0, maxPageNumber: 0, ayahCount: 0, surah: null };
+
+  let xml;
+  try {
+    xml = fs.readFileSync(filePath, "utf-8");
+  } catch (e) {
+    // A missing/unreadable file is a validation failure to report, not a
+    // crash -- a raw Node stack trace isn't a useful diagnostic here.
+    return { errors: [`${fileName}: could not read file (${e.code || e.message})`], ...EMPTY_RESULT };
+  }
+
   const rootMatch = xml.match(/<qusx\s+([^>]*)>/);
   if (!rootMatch) {
-    return [`${fileName}: no <qusx> root element found`];
+    return { errors: [`${fileName}: no <qusx> root element found`], ...EMPTY_RESULT };
   }
-  const rootAttrs = parseAttrs(rootMatch[1]);
+  const { attrs: rootAttrs, duplicates: rootDuplicates } = parseAttrs(rootMatch[1]);
+  for (const dup of rootDuplicates) {
+    errors.push(`${fileName}: root <qusx> has duplicate attribute "${dup}"`);
+  }
   const declaredAyahCount = Number(rootAttrs.ayahCount);
   const declaredSurah = Number(rootAttrs.surah);
 
@@ -190,7 +214,8 @@ function validateFile(filePath) {
   while ((m = tagRe.exec(xml))) {
     const tag = m[1];
     if (tag === "qusx" || tag === "?xml") continue;
-    const attrs = parseAttrs(m[2]);
+    const { attrs, duplicates } = parseAttrs(m[2]);
+    for (const dup of duplicates) errors.push(`${fileName}: <${tag}> has duplicate attribute "${dup}"`);
     const selfClosing = !!m[3];
 
     if (tag === "word") {
@@ -232,8 +257,12 @@ function validateFile(filePath) {
     const isOpen = "sid" in attrs;
     const isClose = "eid" in attrs && !isOpen;
 
-    if (!isOpen && !isClose) {
+    if (!isOpen && !("eid" in attrs)) {
       errors.push(`${fileName}: <${tag}> has neither sid nor eid`);
+      continue;
+    }
+    if (isOpen && "eid" in attrs) {
+      errors.push(`${fileName}: <${tag} sid="${attrs.sid}" eid="${attrs.eid}"> has both sid and eid -- must be exactly one (XOR)`);
       continue;
     }
 
@@ -397,7 +426,7 @@ function extractWordSequence(filePath) {
   const sequence = [];
   let m;
   while ((m = re.exec(xml))) {
-    const attrs = parseAttrs(m[1]);
+    const { attrs } = parseAttrs(m[1]);
     sequence.push({ text: m[2], root: attrs.root || null, stem: attrs.stem || null, lemma: attrs.lemma || null });
   }
   return sequence;
@@ -432,11 +461,38 @@ function main() {
     else args.push(a);
   }
 
+  // A typo'd --layout value previously matched zero directories silently
+  // (allGeneratedFiles just filters an empty result), producing a false
+  // "Checked 0 file(s), 0 error(s)" green run. Reject it explicitly instead.
+  if (layoutFilter) {
+    const existingLayouts = fs
+      .readdirSync(OUT, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name);
+    if (!existingLayouts.includes(layoutFilter)) {
+      console.error(`Unknown layout "${layoutFilter}". Available: ${existingLayouts.join(", ")}`);
+      process.exit(1);
+    }
+  }
+
   let files;
   if (args.length === 0 || args[0] === "all") {
     files = allGeneratedFiles(layoutFilter);
   } else {
-    files = args.map((a) => path.join(OUT, layoutFilter || "madani-v2", a));
+    // A file argument that already resolves to a real path (relative to cwd,
+    // or absolute) is used literally -- e.g. `test/fixtures/example.xml`.
+    // Only a bare filename with no existing match falls back to the
+    // convenience shorthand of being joined under output/<layout>/, which is
+    // what the common `validate.js 001.qusx.xml` usage relies on.
+    files = args.map((a) => (fs.existsSync(a) ? a : path.join(OUT, layoutFilter || "madani-v2", a)));
+  }
+
+  // A validation run that discovers zero files is not a green pass -- most
+  // likely a wrong path, an empty/not-yet-generated output directory, or an
+  // argument mistake. Fail loudly instead of reporting "0 file(s), 0 error(s)".
+  if (files.length === 0) {
+    console.error("No files to validate -- 0 files matched. This is treated as a failure, not a pass.");
+    process.exit(1);
   }
 
   let totalErrors = 0;

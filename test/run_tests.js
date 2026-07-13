@@ -20,6 +20,7 @@ const { validateFile, validateCrossLayoutConsistency } = require("../src/validat
 const FIXTURES = path.join(__dirname, "fixtures");
 const SCHEMA = path.join(__dirname, "..", "schema", "qusx.xsd");
 const GENERATE = path.join(__dirname, "..", "src", "generate.js");
+const VALIDATE = path.join(__dirname, "..", "src", "validate.js");
 
 let failures = 0;
 let passed = 0;
@@ -131,32 +132,57 @@ check(
 // CLI args are "rejected" like invalid ones — they're not, they're silently
 // deduplicated. `node src/generate.js 1 1` exits 0. Asserting both behaviors
 // explicitly here means that gap can't reappear silently again.
+//
+// All of these use --output-dir pointed at a temp directory, never the real
+// committed output/ tree -- a mutation-oriented CLI test must not leave the
+// checkout dirty (found by external review: it previously did, via the
+// real generator writing over output/madani-v2/001.qusx.xml on every run).
+// Cleaned up in a finally block so a failed assertion above doesn't leave
+// the temp directory behind.
 
-const dedupeRun = spawnSync("node", [GENERATE, "--layout=madani-v2", "1", "1"], { encoding: "utf-8" });
-check(
-  "duplicate CLI args (`1 1`) are deduplicated, not rejected — exits 0",
-  dedupeRun.status === 0,
-  `expected exit 0, got ${dedupeRun.status}. stderr: ${dedupeRun.stderr}`
-);
-check(
-  "duplicate CLI args (`1 1`) write surah 1 exactly once, not twice",
-  (dedupeRun.stdout.match(/wrote .*001\.qusx\.xml/g) || []).length === 1,
-  `expected exactly one "wrote ...001.qusx.xml" line, got: ${dedupeRun.stdout}`
-);
+const cliTestDir = fs.mkdtempSync(path.join(require("os").tmpdir(), "qusx-cli-test-"));
+try {
+  const dedupeRun = spawnSync("node", [GENERATE, "--layout=madani-v2", `--output-dir=${cliTestDir}`, "1", "1"], {
+    encoding: "utf-8",
+  });
+  check(
+    "duplicate CLI args (`1 1`) are deduplicated, not rejected — exits 0",
+    dedupeRun.status === 0,
+    `expected exit 0, got ${dedupeRun.status}. stderr: ${dedupeRun.stderr}`
+  );
+  check(
+    "duplicate CLI args (`1 1`) write surah 1 exactly once, not twice",
+    (dedupeRun.stdout.match(/wrote .*001\.qusx\.xml/g) || []).length === 1,
+    `expected exactly one "wrote ...001.qusx.xml" line, got: ${dedupeRun.stdout}`
+  );
+  check(
+    "--output-dir is honored -- the real committed output/ tree is untouched by this test",
+    !dedupeRun.stdout.includes(path.join("output", "madani-v2")) && dedupeRun.stdout.includes(cliTestDir),
+    `expected output written under the temp dir, not the real output/ tree, got: ${dedupeRun.stdout}`
+  );
 
-const invalidRun = spawnSync("node", [GENERATE, "--layout=madani-v2", "999"], { encoding: "utf-8" });
-check(
-  "invalid/out-of-range CLI arg (`999`) is rejected — exits non-zero",
-  invalidRun.status !== 0,
-  `expected non-zero exit, got ${invalidRun.status}`
-);
+  const invalidRun = spawnSync("node", [GENERATE, "--layout=madani-v2", `--output-dir=${cliTestDir}`, "999"], {
+    encoding: "utf-8",
+  });
+  check(
+    "invalid/out-of-range CLI arg (`999`) is rejected — exits non-zero",
+    invalidRun.status !== 0,
+    `expected non-zero exit, got ${invalidRun.status}`
+  );
 
-const invalidLayoutRun = spawnSync("node", [GENERATE, "--layout=nonexistent-layout", "1"], { encoding: "utf-8" });
-check(
-  "unknown --layout value is rejected — exits non-zero",
-  invalidLayoutRun.status !== 0,
-  `expected non-zero exit, got ${invalidLayoutRun.status}`
-);
+  const invalidLayoutRun = spawnSync(
+    "node",
+    [GENERATE, "--layout=nonexistent-layout", `--output-dir=${cliTestDir}`, "1"],
+    { encoding: "utf-8" }
+  );
+  check(
+    "unknown --layout value is rejected — exits non-zero",
+    invalidLayoutRun.status !== 0,
+    `expected non-zero exit, got ${invalidLayoutRun.status}`
+  );
+} finally {
+  fs.rmSync(cliTestDir, { recursive: true, force: true });
+}
 
 // --- cross-layout consistency negative test ---
 // validateCrossLayoutConsistency was previously only proven by hand (corrupt
@@ -212,6 +238,54 @@ check(
   "checksum-verify.js reports the known baseline match count (1125/6236)",
   /Matched: 1125 \/ 6236/.test(checksumRun.stdout),
   `expected "Matched: 1125 / 6236" in output, got: ${checksumRun.stdout.split("\n").slice(0, 3).join(" ")}`
+);
+
+// --- validate.js CLI hardening (found by external review, verified before fixing) ---
+
+const unknownLayoutRun = spawnSync("node", [VALIDATE, "--layout=does-not-exist", "all"], { encoding: "utf-8" });
+check(
+  "validate.js rejects an unknown --layout instead of silently reporting 0 files, 0 errors",
+  unknownLayoutRun.status !== 0 && /Unknown layout/.test(unknownLayoutRun.stderr),
+  `expected non-zero exit and an "Unknown layout" message, got status=${unknownLayoutRun.status} stderr=${unknownLayoutRun.stderr}`
+);
+
+const zeroFileRun = spawnSync("node", [VALIDATE, "--layout=madani-v2", "this-file-does-not-exist.xml"], { encoding: "utf-8" });
+check(
+  "validate.js treats a missing file as a real failure, with a clean message not a raw stack trace",
+  zeroFileRun.status !== 0 && /could not read file/.test(zeroFileRun.stdout) && !/at Object\.readFileSync/.test(zeroFileRun.stderr),
+  `expected a clean "could not read file" message and no raw stack trace, got stdout=${zeroFileRun.stdout} stderr=${zeroFileRun.stderr.slice(0, 200)}`
+);
+
+const arbitraryPathRun = spawnSync(
+  "node",
+  [VALIDATE, path.relative(path.join(__dirname, ".."), path.join(FIXTURES, "duplicate-sid.qusx.xml"))],
+  { encoding: "utf-8", cwd: path.join(__dirname, "..") }
+);
+check(
+  "validate.js treats an arbitrary existing file path (e.g. test/fixtures/x.xml) literally, not joined under output/<layout>/",
+  /duplicate sid/i.test(arbitraryPathRun.stdout),
+  `expected the real fixture to be read directly and flagged for its actual defect, got stdout=${arbitraryPathRun.stdout}`
+);
+
+check(
+  "duplicate-root-attribute.qusx.xml is rejected by validate.js",
+  semanticErrorsFor("duplicate-root-attribute.qusx.xml").some((e) => /duplicate attribute/i.test(e)),
+  "expected a 'duplicate attribute' error"
+);
+
+check(
+  "sid-and-eid-same-element.qusx.xml is rejected by validate.js",
+  semanticErrorsFor("sid-and-eid-same-element.qusx.xml").some((e) => /has both sid and eid/i.test(e)),
+  "expected a 'has both sid and eid' error"
+);
+
+check(
+  "validateFile() returns the same shape ({errors, wordCount, ...}) even when no root element is found",
+  (() => {
+    const r = semanticErrorsFor("malformed-not-well-formed.xml");
+    return Array.isArray(r); // semanticErrorsFor already extracts .errors -- if this throws or the shape differs, the test harness itself would fail first
+  })(),
+  "expected validateFile()'s return shape to support .errors uniformly"
 );
 
 // --- positive control: a real generated file must NOT be rejected ---
