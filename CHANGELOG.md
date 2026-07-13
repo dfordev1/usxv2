@@ -6,19 +6,33 @@ plain chronological record, not semver-scoped releases.
 ## Unreleased
 
 - Added `data/traditions/*-ayah-boundaries.json` — real per-ayah page
-  position for all 5 KFQC reading traditions, extracted directly from
-  `quranpedia/quran-svg`'s SVG source files (`scripts/extract_ayah_boundaries_from_svg.js`),
-  working around the per-page JSON tagging bug (the SVG source is correctly
-  tagged even where the JSON export isn't). Warsh, Qalun, Al-Duri, and
-  Shu'bah extracted with every expected ayah matched (6214/6214, 6214/6214,
-  6218/6218, 6236/6236). Hafs has a confirmed real gap -- 104 of 6236 ayahs
-  across 42 surahs are genuinely untagged in the source, specifically ayahs
-  that fall within a surah's decorative title-header region -- verified by
-  hand on Al 'Imran (page 49/50) before concluding it's a real data
-  limitation and not an extraction bug. An earlier version of the extraction
-  script had a real bug (assumed a fixed SVG attribute order) that produced
-  a false "0 ayahs" result for Al-Duri's Al-Fatiha; fixed and re-verified
-  before this was committed.
+  position for all 5 KFQC reading traditions, now 100% complete for all
+  five (6236/6236 Hafs, 6214/6214 Warsh, 6214/6214 Qalun, 6218/6218
+  Al-Duri, 6236/6236 Shu'bah). History of how this got to complete, kept
+  because the debugging path is itself informative:
+  - First pass (`scripts/extract_ayah_boundaries_from_svg.js`) extracted
+    from `quranpedia/quran-svg`'s static SVG export, working around a
+    confirmed tagging bug in their per-page JSON export (JSON has
+    `surahNumber: 0, ayahNumber: 0` on ~97% of sampled pages; the SVG
+    source is correctly tagged). Warsh/Qalun/Al-Duri/Shu'bah came back
+    100% correct this way. Hafs came back with a real gap — 104 of 6236
+    ayahs across 42 surahs — verified by hand (not assumed) that these
+    verses are genuinely untagged in the static SVG source, specifically
+    ones inside a surah's decorative title-header region.
+  - An earlier version of that script also had a real bug of our own
+    (assumed a fixed SVG attribute order) that produced a false "Al-Duri's
+    Al-Fatiha has 0 ayahs" result — caught, fixed, and re-verified
+    (6218/6218) before being trusted.
+  - For the remaining Hafs gap: inspecting quranpedia.net's own frontend
+    network requests showed it calls a live API
+    (`quranpedia.net/api/page/hafs/<page>?surah=<surah>`) that returns the
+    same missing verses correctly tagged. Verified directly (page 50,
+    surah 3: static export had 7 ayahs starting at ayah 3; live API
+    returned all 9, ayah 1-9). Built a second extractor
+    (`scripts/extract_ayah_boundaries_live_api.js`) against this live API
+    and closed the gap completely. This data is a snapshot of a live,
+    unversioned API — may drift if the site changes, unlike the frozen
+    GitHub export.
 - Added `data/traditions/ayah-counts.json` — verified per-surah ayah counts
   for all 5 KFQC reading traditions (Hafs, Warsh, Qalun, Al-Duri, Shu'bah),
   built from `quranpedia/quran-svg`'s `surah.json`/`markers.json` files (CC0,
