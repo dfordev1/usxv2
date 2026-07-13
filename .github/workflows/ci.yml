@@ -41,5 +41,15 @@ jobs:
           done
           git diff --exit-code -- output/ || (echo "::error::Regenerated output differs from committed output — either the generator changed without regenerating, or committed output was hand-edited." && exit 1)
 
-      - name: Text integrity check (informational — known unexplained residual, see README)
-        run: node src/checksum-verify.js || true
+      - name: Pilot traditions — XSD validation (the 4 conforming traditions must stay XSD-valid)
+        run: python scripts/xsd_validate.py --pilot
+
+      - name: Pilot traditions — deterministic regeneration (committed pilot output must match a fresh build)
+        run: |
+          for tradition in warsh qalon douri shubah sousi; do
+            node scripts/generate_tradition_pilot.js $tradition all
+          done
+          git diff --exit-code -- output-pilot/ || (echo "::error::Regenerated pilot output differs from committed pilot output." && exit 1)
+
+      - name: Text integrity check (baseline gate — fails only if the match count regresses from the reviewed baseline)
+        run: node scripts/checksum-baseline.js

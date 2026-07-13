@@ -13,16 +13,17 @@ something from that list, mention which item in your PR description.
 ## Setup
 
 ```bash
-npm install       # no runtime deps, but keeps package-lock in sync
+npm install       # no runtime JS deps; installs devDependencies if any
 pip install -r requirements.txt
-npm run verify    # confirms your environment can run everything CI runs
+npm run verify    # runs most of what CI runs (see the note under "Before opening a PR")
 ```
 
 ## Making a change
 
 - **Changing the generator** (`src/generate.js`): after any change, regenerate
-  *all* layouts (`for layout in madani-v2 madani-v1 madani-v4-tajweed qatar
-  indopak-15; do node src/generate.js --layout=$layout all; done`) and commit the
+  *all ten* layouts (`for layout in madani-v2 madani-v1 madani-v4-tajweed qatar
+  indopak-15 indopak-9-gaba indopak-13-qudratullah indopak-13-taj indopak-16-taj
+  nastaleeq; do node src/generate.js --layout=$layout all; done`) and commit the
   regenerated `output/` files in the same PR. CI's deterministic-regeneration
   check will fail the build otherwise — it exists specifically to catch
   generator changes that weren't followed by a regeneration.
@@ -45,8 +46,14 @@ npm run verify    # confirms your environment can run everything CI runs
 npm run verify
 ```
 
-This runs everything CI runs (`validate.js`, `xsd_validate.py`, `test/run_tests.js`)
-in one command. If it doesn't pass locally, it won't pass in CI.
+This runs `validate.js`, `xsd_validate.py` (main + `--pilot`), `test/run_tests.js`,
+and the checksum baseline gate in one command. **It does not run the
+deterministic-regeneration checks that CI also runs** (main + pilot) — those
+regenerate every file from source and fail if the result differs from what's
+committed. If you changed the generator, run the regeneration commands above
+(and their pilot equivalent, `for tradition in warsh qalon douri shubah sousi;
+do node scripts/generate_tradition_pilot.js $tradition all; done`) and commit
+the result, or CI will fail even though `npm run verify` passed locally.
 
 ## What's most useful right now
 
