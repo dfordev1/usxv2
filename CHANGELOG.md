@@ -5,6 +5,36 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Narrowed (not resolved) the Al-Duri surah-67 ayah-count conflict (30 vs
+  31). Research confirmed this is a real, documented classical
+  ʿadd-al-āy (verse-counting) disagreement -- Surah Al-Mulk has 30 ayahs
+  under the majority/Kufi counting school and 31 under the Ḥijāzī school
+  -- not a data-quality bug in either source. Al-Duri and Al-Susi are both
+  transmitters (rawī) of Abu ʿAmr al-Basri specifically, so their true
+  count should follow the classical Basri counting school, distinct from
+  Kufi/Ḥijāzī/Shami. Could not determine the actual Basri-school count
+  for Al-Mulk from general web search -- that lives in specialized
+  ʿulūm al-Qurʾān references (e.g. al-Dani's *al-Bayan fi ʿAdd Ay
+  al-Qur'an*), not something reachable here. Recorded as a well-defined,
+  narrowed question rather than claimed solved.
+- Two scope decisions made directly, since they don't require external
+  input:
+  1. **QUSX v1 models ayah numbering only, not rasm/text variants.** The
+     open question a reviewer raised on the Itqan thread (does QUSX
+     handle just verse-numbering differences between traditions, or the
+     actual differing wording too) is decided: numbering only for v1.
+     Rasm-level text differences (Warsh's actual wording differing from
+     Hafs's, not just verse boundaries) are a materially harder, separate
+     problem -- out of scope until there's a real plan for it.
+  2. **Al-Susi stays out of the formally-supported tradition list for
+     now.** It has real pilot text and passes validate.js, but (a) has no
+     independently verified ayah-count data the way the other 4 do, and
+     (b) was never part of the originally-licensed 5-tradition scope from
+     `quran-svg`. Its pilot output stays in `output-pilot/sousi/` as a
+     bonus artifact, not added to `schema/qusx.xsd`'s tradition enum,
+     pending either verification or a deliberate decision to formally add
+     it.
+
 - Scaled the pilot generator from 2 example surahs to the full 114-surah
   corpus, across all 5 traditions with real text (Warsh, Qalun, Al-Duri,
   Shu'bah, plus Al-Susi as a bonus extra). Real results, not assumed:

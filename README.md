@@ -302,11 +302,23 @@ account for its own divergence from that source.
      numbering, not yet done.
    - **Al-Duri has an unresolved 3-way count discrepancy** (6205 in the
      original Itqan announcement, 6218 from `quran-svg`, 6217 from this text
-     source) — precisely located to surah 67 (30 vs 31 ayahs), not silently
-     picked between.
-   Still genuinely open: whether QUSX v1 should model numbering-only
-   differences or full rasm/text variants (raised directly by a reviewer on
-   the Itqan community thread) — this pilot only ever solves the former.
+     source) — precisely located to surah 67 (30 vs 31 ayahs). Narrowed, not
+     resolved: this is a real, documented classical ʿadd-al-āy
+     (verse-counting) disagreement — Al-Mulk has 30 ayahs under the
+     majority/Kufi counting school and 31 under the Ḥijāzī school, not a
+     data-quality bug. Al-Duri and Al-Susi are both transmitters of Abu ʿAmr
+     al-Basri, so the true count should follow the classical Basri counting
+     school specifically — that number lives in specialized ʿulūm al-Qurʾān
+     references (e.g. al-Dani's *al-Bayan fi ʿAdd Ay al-Qur'an*), not
+     reachable from general web search.
+   **Decided, not left open:** QUSX v1 models ayah **numbering only**, not
+   rasm/text variants (Warsh's actual differing wording, not just verse
+   boundaries) — that's a materially harder, separate problem, out of scope
+   until there's a real plan for it. Al-Susi stays out of the formally-
+   supported tradition list (not added to `schema/qusx.xsd`'s enum) since it
+   has no independently verified ayah-count data and was never part of the
+   originally-licensed 5-tradition scope — its pilot output remains a bonus
+   artifact in `output-pilot/sousi/`.
    **Checked and ruled out** as a text source: [tanzil.net/download](https://tanzil.net/download/)
    — verified directly, no riwayah/qira'a selector at all.
 2. **10 of QUL's 12 print layouts are wired in** (KFGQPC V1/V2/V4-tajweed,
