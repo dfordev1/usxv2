@@ -87,6 +87,7 @@
   }
   .word {
     font-size: 1.55rem; padding: .1rem .25rem; border-radius: 4px; cursor: pointer;
+    white-space: nowrap; flex-shrink: 0; /* a word must never break mid-word onto two lines */
   }
   .word:hover, .word.tapped { background: var(--gold-soft); }
   .word.number { font-size: 1rem; color: var(--gold); align-self: center; }
@@ -104,6 +105,9 @@
   .mushaf-line {
     display: flex; flex-wrap: nowrap; justify-content: center; gap: .35rem; direction: rtl;
     padding: .2rem 0; border-bottom: 1px dotted var(--rule);
+    overflow-x: auto; /* a dense line scrolls horizontally on narrow screens rather
+      than breaking a word mid-glyph or forcing the whole page to overflow */
+    -webkit-overflow-scrolling: touch;
   }
   .mushaf-line:last-child { border-bottom: none; }
   .morph-panel {
