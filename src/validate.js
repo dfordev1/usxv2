@@ -35,6 +35,38 @@ try {
   CANONICAL_SURAH_NAMES = null;
 }
 
+// Per-tradition ayah counts (surah name/bismillah/revelation-place are facts
+// about the surah itself and don't vary by tradition -- only ayah count and
+// numbering do, since different qira'at split/merge verse boundaries
+// differently). Maps a <qusx tradition="..."> value (e.g. "warsh-kfqc") to
+// its short key (e.g. "warsh") in data/traditions/ayah-counts.json. Missing
+// gracefully, same pattern as CANONICAL_SURAH_NAMES above.
+const TRADITION_ID_TO_KEY = {
+  "hafs-kufi": "hafs",
+  "warsh-kfqc": "warsh",
+  "qalon-kfqc": "qalon",
+  "douri-kfqc": "douri",
+  "shubah-kfqc": "shubah",
+};
+let TRADITION_AYAH_COUNTS = null;
+try {
+  const data = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "..", "data", "traditions", "ayah-counts.json"), "utf-8")
+  );
+  TRADITION_AYAH_COUNTS = data.traditions;
+} catch {
+  TRADITION_AYAH_COUNTS = null;
+}
+
+// Returns the expected ayah count for a surah under a given tradition, or
+// null if unknown (falls back to the Hafs canonical count in that case).
+function expectedAyahCount(traditionAttr, surahNumber) {
+  const key = TRADITION_ID_TO_KEY[traditionAttr];
+  if (!key || !TRADITION_AYAH_COUNTS || !TRADITION_AYAH_COUNTS[key]) return null;
+  const rec = TRADITION_AYAH_COUNTS[key].perSurah.find((s) => s.surah === surahNumber);
+  return rec ? rec.ayahCount : null;
+}
+
 function allGeneratedFiles(layoutFilter) {
   const files = [];
   const layoutDirs = fs
@@ -108,8 +140,17 @@ function validateFile(filePath) {
       if (rootAttrs.nameArabic !== canonical.name_arabic) {
         errors.push(`${fileName}: nameArabic="${rootAttrs.nameArabic}" does not match canonical "${canonical.name_arabic}" for surah ${declaredSurah}`);
       }
-      if (Number(canonical.verses_count) !== declaredAyahCount) {
-        errors.push(`${fileName}: ayahCount="${declaredAyahCount}" does not match canonical ${canonical.verses_count} for surah ${declaredSurah}`);
+      // ayah count varies by tradition (different qira'at split/merge verse
+      // boundaries differently) -- use the per-tradition count when known,
+      // falling back to the Hafs canonical count only when the tradition is
+      // unrecognized or the per-tradition data isn't available.
+      const traditionExpected = expectedAyahCount(rootAttrs.tradition, declaredSurah);
+      const expected = traditionExpected !== null ? traditionExpected : Number(canonical.verses_count);
+      if (expected !== declaredAyahCount) {
+        errors.push(
+          `${fileName}: ayahCount="${declaredAyahCount}" does not match expected ${expected} for surah ${declaredSurah}` +
+            (traditionExpected !== null ? ` (tradition="${rootAttrs.tradition}")` : " (Hafs canonical)")
+        );
       }
       if (String(rootAttrs.bismillahPre) !== String(canonical.bismillah_pre)) {
         errors.push(`${fileName}: bismillahPre="${rootAttrs.bismillahPre}" does not match canonical ${canonical.bismillah_pre} for surah ${declaredSurah}`);

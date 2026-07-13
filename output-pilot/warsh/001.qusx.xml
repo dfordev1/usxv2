@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="1" name="Al-Fatihah" nameArabic="الفاتحة" ayahCount="7" revelationPlace="makkah" bismillahPre="false" tradition="warsh-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="warsh-kfqc" sid="1:1:warsh-kfqc"/>
+  <word id="1" position="1">اِ۬لْحَمْدُ</word>
+  <word id="2" position="2">لِلهِ</word>
+  <word id="3" position="3">رَبِّ</word>
+  <word id="4" position="4">اِ۬لْعَٰلَمِينَ</word>
+  <word id="5" position="5" type="number">١</word>
+  <ayah eid="1:1:warsh-kfqc"/>
+  <ayah number="2" tradition="warsh-kfqc" sid="1:2:warsh-kfqc"/>
+  <word id="6" position="1">اَ۬لرَّحْمَٰنِ</word>
+  <word id="7" position="2">اِ۬لرَّحِيمِ</word>
+  <word id="8" position="3" type="number">٢</word>
+  <ayah eid="1:2:warsh-kfqc"/>
+  <ayah number="3" tradition="warsh-kfqc" sid="1:3:warsh-kfqc"/>
+  <word id="9" position="1">مَلِكِ</word>
+  <word id="10" position="2">يَوْمِ</word>
+  <word id="11" position="3">اِ۬لدِّينِۖ</word>
+  <word id="12" position="4" type="number">٣</word>
+  <ayah eid="1:3:warsh-kfqc"/>
+  <ayah number="4" tradition="warsh-kfqc" sid="1:4:warsh-kfqc"/>
+  <word id="13" position="1">إِيَّاكَ</word>
+  <word id="14" position="2">نَعْبُدُ</word>
+  <word id="15" position="3">وَإِيَّاكَ</word>
+  <word id="16" position="4">نَسْتَعِينُۖ</word>
+  <word id="17" position="5" type="number">٤</word>
+  <ayah eid="1:4:warsh-kfqc"/>
+  <ayah number="5" tradition="warsh-kfqc" sid="1:5:warsh-kfqc"/>
+  <word id="18" position="1">اُ۪هْدِنَا</word>
+  <word id="19" position="2">اَ۬لصِّرَٰطَ</word>
+  <word id="20" position="3">اَ۬لْمُسْتَقِيمَ</word>
+  <word id="21" position="4" type="number">٥</word>
+  <ayah eid="1:5:warsh-kfqc"/>
+  <ayah number="6" tradition="warsh-kfqc" sid="1:6:warsh-kfqc"/>
+  <word id="22" position="1">صِرَٰطَ</word>
+  <word id="23" position="2">اَ۬لذِينَ</word>
+  <word id="24" position="3">أَنْعَمْتَ</word>
+  <word id="25" position="4">عَلَيْهِمْ</word>
+  <word id="26" position="5" type="number">٦</word>
+  <ayah eid="1:6:warsh-kfqc"/>
+  <ayah number="7" tradition="warsh-kfqc" sid="1:7:warsh-kfqc"/>
+  <word id="27" position="1">غَيْرِ</word>
+  <word id="28" position="2">اِ۬لْمَغْضُوبِ</word>
+  <word id="29" position="3">عَلَيْهِمْ</word>
+  <word id="30" position="4">وَلَا</word>
+  <word id="31" position="5">اَ۬لضَّآلِّينَۖ</word>
+  <word id="32" position="6" type="number">٧</word>
+  <ayah eid="1:7:warsh-kfqc"/>
+</qusx>

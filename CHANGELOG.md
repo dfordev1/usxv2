@@ -5,6 +5,35 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added `scripts/generate_tradition_pilot.js` — a deliberately separate,
+  minimal pilot generator proving the QUSX milestone-pin model works
+  end-to-end for a non-Hafs tradition's real text. Kept separate from
+  `src/generate.js`, which is tightly coupled to Hafs word-by-word data
+  (juz/hizb/rub/manzil/ruku indices are all keyed to Hafs verse numbering
+  as canonical) -- reusing it directly would be unsafe without a real
+  redesign. Deliberately does NOT attempt root/stem/lemma, juz/hizb/rub
+  /manzil/ruku pins, or page/line pins for the pilot tradition -- see the
+  script header for why each is out of scope. Piloted on Warsh
+  Al-Fatihah (identical ayah count to Hafs, both validators pass 0 errors)
+  and Warsh Quraysh (genuinely different count, 4 vs 5 -- passes XSD,
+  correctly exposed a real gap in `validate.js` rather than being hidden).
+  Surah name, revelation place, and bismillah presence are reused from the
+  existing canonical Hafs-sourced metadata for the pilot files, since those
+  are facts about the surah itself, not the reading tradition -- only ayah
+  text/count/numbering actually varies.
+- Made `validate.js`'s ayah-count check tradition-aware. Different qira'at
+  genuinely split/merge verse boundaries differently (Warsh's Quraysh has 5
+  ayahs vs Hafs's 4) -- the check previously compared every file's
+  ayahCount against the single Hafs canonical table regardless of its
+  `tradition` attribute, which would have false-flagged every genuinely-
+  divergent non-Hafs file as an error. Now looks up the file's own
+  tradition in `data/traditions/ayah-counts.json` when available, falling
+  back to the Hafs canonical count only for unrecognized traditions. Added
+  a positive control (Warsh's real 5-ayah Quraysh is NOT flagged) and a
+  negative control (a file wrongly claiming Hafs's count of 4 for a Warsh
+  file IS flagged) to `test/run_tests.js` (18/18 passing). Re-ran the full
+  1140-file real corpus through the updated validator -- still 0 errors,
+  confirming the fix didn't loosen anything for the existing Hafs files.
 - Added `data/traditions/text/*-text.json` — real per-ayah Arabic text for
   Warsh, Qalun, Al-Duri, Shu'bah, and Al-Susi, from
   `thetruetruth/quran-data-kfgqpc` (a third-party mirror of King Fahd

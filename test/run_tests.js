@@ -95,6 +95,25 @@ check(
   "expected an ayah-sequence error"
 );
 
+// --- tradition-aware ayah-count check ---
+// Different qira'at genuinely split/merge verse boundaries differently (e.g.
+// Warsh's Quraysh has 5 ayahs vs Hafs's 4). validateFile() must compare a
+// non-Hafs file's declared ayahCount against ITS OWN tradition's real count
+// (data/traditions/ayah-counts.json), not silently fall back to the Hafs
+// canonical count -- that would false-flag every genuinely-divergent surah.
+
+check(
+  "a real Warsh file with its own correct ayah count (5, not Hafs's 4) is NOT flagged (positive control)",
+  semanticErrorsFor("tradition-warsh/106.qusx.xml").length === 0,
+  `expected no errors, got: ${JSON.stringify(semanticErrorsFor("tradition-warsh/106.qusx.xml"))}`
+);
+
+check(
+  "a Warsh file with the wrong ayah count (4, Hafs's count, not Warsh's real 5) IS flagged",
+  semanticErrorsFor("tradition-warsh-wrong-ayah-count/106.qusx.xml").some((e) => /does not match expected 5.*warsh-kfqc/i.test(e)),
+  `expected a tradition-aware ayahCount error, got: ${JSON.stringify(semanticErrorsFor("tradition-warsh-wrong-ayah-count/106.qusx.xml"))}`
+);
+
 // --- XSD (real XML Schema processor) negative tests ---
 
 check(
