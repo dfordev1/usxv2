@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QUSX Explorer — read, compare, inspect</title>
+<meta name="description" content="A working reader, tradition comparer, and structural explorer for QUSX (Qur'an Unified Scripture XML), built on real generated output.">
+<style>
+  :root {
+    --ink: #1c1a16;
+    --paper: #f2efe8;
+    --paper-raised: #e9e4d8;
+    --rule: #d8d0bd;
+    --accent: #33564f;
+    --accent-soft: #33564f1a;
+    --gold: #9c7a3c;
+    --gold-soft: #9c7a3c22;
+    --muted: #6b6558;
+    --mono: #4a5f5a;
+    --ok: #3f7d4f;
+    --warn: #a8492f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #ece7db;
+      --paper: #17181a;
+      --paper-raised: #202225;
+      --rule: #33352f;
+      --accent: #7fb3a3;
+      --gold: #d1ab6a;
+      --gold-soft: #d1ab6a22;
+      --muted: #9a958a;
+      --mono: #8fc4b0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 0 3rem;
+    background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  .arabic { font-family: "Traditional Arabic", "Scheherazade New", "Amiri", serif; direction: rtl; }
+  header {
+    background: var(--accent); color: #f2efe8; padding: 1.25rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem;
+  }
+  header h1 { margin: 0; font-size: 1.15rem; font-weight: 700; }
+  header p { margin: .15rem 0 0; font-size: .8rem; opacity: .85; }
+  nav.tabs {
+    display: flex; gap: 0; background: var(--paper-raised); border-bottom: 1px solid var(--rule);
+    position: sticky; top: 0; z-index: 5;
+  }
+  nav.tabs button {
+    flex: 1; padding: .85rem 1rem; border: none; background: none; color: var(--muted);
+    font-size: .92rem; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent;
+  }
+  nav.tabs button.active { color: var(--accent); border-bottom-color: var(--gold); background: var(--gold-soft); }
+  main { max-width: 980px; margin: 0 auto; padding: 1.25rem 1.5rem; }
+  .view { display: none; }
+  .view.active { display: block; }
+  .controls {
+    display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem;
+    background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 10px; padding: .85rem 1rem;
+  }
+  .controls label { font-size: .78rem; color: var(--muted); display: flex; flex-direction: column; gap: .25rem; }
+  select {
+    font: inherit; padding: .45rem .6rem; border-radius: 6px; border: 1px solid var(--rule);
+    background: var(--paper); color: var(--ink); min-width: 150px;
+  }
+  .status { font-size: .8rem; color: var(--muted); margin-left: auto; }
+  .status.err { color: var(--warn); }
+  .card {
+    background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 12px;
+    padding: 1rem 1.1rem; margin-bottom: .85rem;
+  }
+  .badge-row { display: flex; gap: .4rem; flex-wrap: wrap; margin: .35rem 0; }
+  .badge {
+    font-size: .72rem; padding: .2rem .55rem; border-radius: 999px; background: var(--gold-soft);
+    color: var(--gold); font-weight: 700; letter-spacing: .02em;
+  }
+  .badge.milestone { background: var(--accent-soft); color: var(--accent); }
+  /* --- reader --- */
+  .ayah-block { margin-bottom: 1.1rem; padding-bottom: .9rem; border-bottom: 1px dashed var(--rule); }
+  .ayah-block:last-child { border-bottom: none; }
+  .ayah-num {
+    display: inline-block; font-size: .72rem; color: var(--accent); border: 1px solid var(--accent);
+    border-radius: 50%; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-inline-end: .4rem;
+  }
+  .word-row { display: flex; flex-wrap: wrap; gap: .3rem; direction: rtl; }
+  .word {
+    font-size: 1.55rem; padding: .1rem .25rem; border-radius: 4px; cursor: pointer;
+  }
+  .word:hover, .word.tapped { background: var(--gold-soft); }
+  .word.number { font-size: 1rem; color: var(--gold); align-self: center; }
+  .morph-panel {
+    margin-top: .5rem; padding: .6rem .8rem; background: var(--paper); border-radius: 8px;
+    font-size: .82rem; display: none; border: 1px solid var(--rule);
+  }
+  .morph-panel.shown { display: block; }
+  .morph-panel .arabic { font-size: 1.1rem; }
+  .morph-row { display: flex; gap: .5rem; margin-top: .2rem; }
+  .morph-row span:first-child { color: var(--muted); min-width: 70px; }
+  /* --- compare --- */
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+  @media (max-width: 700px) { .compare-grid { grid-template-columns: 1fr; } }
+  .compare-col h3 { margin: 0 0 .5rem; font-size: .85rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .diff-flag { background: var(--warn); color: #fff; font-size: .68rem; padding: .1rem .4rem; border-radius: 4px; margin-inline-start: .35rem; }
+  /* --- explorer --- */
+  pre.xml-view {
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: .9rem;
+    overflow-x: auto; font-size: .78rem; max-height: 480px; direction: ltr; text-align: left;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  table.pins { width: 100%; border-collapse: collapse; font-size: .8rem; }
+  table.pins th, table.pins td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--rule); }
+  table.pins th { color: var(--muted); font-weight: 600; }
+  .tag-sid { color: var(--ok); }
+  .tag-eid { color: var(--warn); }
+  .empty-hint { color: var(--muted); font-size: .85rem; padding: 1rem; text-align: center; }
+  footer { text-align: center; color: var(--muted); font-size: .78rem; margin-top: 2rem; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>QUSX Explorer</h1>
+    <p>Real generated output, fetched live — not a mockup</p>
+  </div>
+  <div style="font-size:.78rem;opacity:.85">
+    <a href="https://github.com/dfordev1/usxv2" style="color:inherit">github.com/dfordev1/usxv2</a>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button data-view="reader" class="active">Reader</button>
+  <button data-view="compare">Compare traditions</button>
+  <button data-view="explorer">Structure explorer</button>
+</nav>
+
+<main>
+
+  <!-- READER -->
+  <section id="view-reader" class="view active">
+    <div class="controls">
+      <label>Surah
+        <select id="reader-surah"></select>
+      </label>
+      <label>Layout
+        <select id="reader-layout"></select>
+      </label>
+      <span class="status" id="reader-status"></span>
+    </div>
+    <div class="card" id="reader-meta" style="display:none"></div>
+    <div id="reader-content"></div>
+  </section>
+
+  <!-- COMPARE -->
+  <section id="view-compare" class="view">
+    <div class="controls">
+      <label>Surah
+        <select id="compare-surah"></select>
+      </label>
+      <label>Tradition A
+        <select id="compare-a">
+          <option value="hafs">Hafs (Kufi)</option>
+        </select>
+      </label>
+      <label>Tradition B
+        <select id="compare-b">
+          <option value="warsh">Warsh</option>
+          <option value="qalon">Qalun</option>
+          <option value="douri">Al-Duri</option>
+          <option value="shubah">Shu'bah</option>
+        </select>
+      </label>
+      <span class="status" id="compare-status"></span>
+    </div>
+    <div class="card" id="compare-summary" style="display:none"></div>
+    <div class="compare-grid" id="compare-content"></div>
+  </section>
+
+  <!-- EXPLORER -->
+  <section id="view-explorer" class="view">
+    <div class="controls">
+      <label>Surah
+        <select id="explorer-surah"></select>
+      </label>
+      <label>Source
+        <select id="explorer-source">
+          <option value="output/madani-v2">Hafs — madani-v2</option>
+          <option value="output-pilot/warsh">Warsh (pilot)</option>
+          <option value="output-pilot/qalon">Qalun (pilot)</option>
+          <option value="output-pilot/douri">Al-Duri (pilot)</option>
+          <option value="output-pilot/shubah">Shu'bah (pilot)</option>
+        </select>
+      </label>
+      <span class="status" id="explorer-status"></span>
+    </div>
+    <div class="card">
+      <div class="badge-row" id="explorer-badges"></div>
+      <h3 style="margin:.75rem 0 .35rem;font-size:.85rem;color:var(--muted)">Milestone pins (in document order)</h3>
+      <div style="max-height:260px;overflow-y:auto">
+        <table class="pins" id="explorer-pins"><tbody></tbody></table>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="margin:0 0 .35rem;font-size:.85rem;color:var(--muted)">Raw XML</h3>
+      <pre class="xml-view" id="explorer-xml"></pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Fetches real files from <code>raw.githubusercontent.com/dfordev1/usxv2/main</code> — same generator output committed to the repo, nothing precomputed for this page.
+</footer>
+
+<script>
+const SURAHS = [[1,"Al-Fatihah","الفاتحة"],[2,"Al-Baqarah","البقرة"],[3,"Ali 'Imran","آل عمران"],[4,"An-Nisa","النساء"],[5,"Al-Ma'idah","المائدة"],[6,"Al-An'am","الأنعام"],[7,"Al-A'raf","الأعراف"],[8,"Al-Anfal","الأنفال"],[9,"At-Tawbah","التوبة"],[10,"Yunus","يونس"],[11,"Hud","هود"],[12,"Yusuf","يوسف"],[13,"Ar-Ra'd","الرعد"],[14,"Ibrahim","ابراهيم"],[15,"Al-Hijr","الحجر"],[16,"An-Nahl","النحل"],[17,"Al-Isra","الإسراء"],[18,"Al-Kahf","الكهف"],[19,"Maryam","مريم"],[20,"Taha","طه"],[21,"Al-Anbya","الأنبياء"],[22,"Al-Hajj","الحج"],[23,"Al-Mu'minun","المؤمنون"],[24,"An-Nur","النور"],[25,"Al-Furqan","الفرقان"],[26,"Ash-Shu'ara","الشعراء"],[27,"An-Naml","النمل"],[28,"Al-Qasas","القصص"],[29,"Al-'Ankabut","العنكبوت"],[30,"Ar-Rum","الروم"],[31,"Luqman","لقمان"],[32,"As-Sajdah","السجدة"],[33,"Al-Ahzab","الأحزاب"],[34,"Saba","سبإ"],[35,"Fatir","فاطر"],[36,"Ya-Sin","يس"],[37,"As-Saffat","الصافات"],[38,"Sad","ص"],[39,"Az-Zumar","الزمر"],[40,"Ghafir","غافر"],[41,"Fussilat","فصلت"],[42,"Ash-Shuraa","الشورى"],[43,"Az-Zukhruf","الزخرف"],[44,"Ad-Dukhan","الدخان"],[45,"Al-Jathiyah","الجاثية"],[46,"Al-Ahqaf","الأحقاف"],[47,"Muhammad","محمد"],[48,"Al-Fath","الفتح"],[49,"Al-Hujurat","الحجرات"],[50,"Qaf","ق"],[51,"Adh-Dhariyat","الذاريات"],[52,"At-Tur","الطور"],[53,"An-Najm","النجم"],[54,"Al-Qamar","القمر"],[55,"Ar-Rahman","الرحمن"],[56,"Al-Waqi'ah","الواقعة"],[57,"Al-Hadid","الحديد"],[58,"Al-Mujadila","المجادلة"],[59,"Al-Hashr","الحشر"],[60,"Al-Mumtahanah","الممتحنة"],[61,"As-Saf","الصف"],[62,"Al-Jumu'ah","الجمعة"],[63,"Al-Munafiqun","المنافقون"],[64,"At-Taghabun","التغابن"],[65,"At-Talaq","الطلاق"],[66,"At-Tahrim","التحريم"],[67,"Al-Mulk","الملك"],[68,"Al-Qalam","القلم"],[69,"Al-Haqqah","الحاقة"],[70,"Al-Ma'arij","المعارج"],[71,"Nuh","نوح"],[72,"Al-Jinn","الجن"],[73,"Al-Muzzammil","المزمل"],[74,"Al-Muddaththir","المدثر"],[75,"Al-Qiyamah","القيامة"],[76,"Al-Insan","الانسان"],[77,"Al-Mursalat","المرسلات"],[78,"An-Naba","النبإ"],[79,"An-Nazi'at","النازعات"],[80,"'Abasa","عبس"],[81,"At-Takwir","التكوير"],[82,"Al-Infitar","الإنفطار"],[83,"Al-Mutaffifin","المطففين"],[84,"Al-Inshiqaq","الإنشقاق"],[85,"Al-Buruj","البروج"],[86,"At-Tariq","الطارق"],[87,"Al-A'la","الأعلى"],[88,"Al-Ghashiyah","الغاشية"],[89,"Al-Fajr","الفجر"],[90,"Al-Balad","البلد"],[91,"Ash-Shams","الشمس"],[92,"Al-Layl","الليل"],[93,"Ad-Duhaa","الضحى"],[94,"Ash-Sharh","الشرح"],[95,"At-Tin","التين"],[96,"Al-'Alaq","العلق"],[97,"Al-Qadr","القدر"],[98,"Al-Bayyinah","البينة"],[99,"Az-Zalzalah","الزلزلة"],[100,"Al-'Adiyat","العاديات"],[101,"Al-Qari'ah","القارعة"],[102,"At-Takathur","التكاثر"],[103,"Al-'Asr","العصر"],[104,"Al-Humazah","الهمزة"],[105,"Al-Fil","الفيل"],[106,"Quraysh","قريش"],[107,"Al-Ma'un","الماعون"],[108,"Al-Kawthar","الكوثر"],[109,"Al-Kafirun","الكافرون"],[110,"An-Nasr","النصر"],[111,"Al-Masad","المسد"],[112,"Al-Ikhlas","الإخلاص"],[113,"Al-Falaq","الفلق"],[114,"An-Nas","الناس"]];
+
+const LAYOUTS = [
+  ["madani-v2","KFGQPC V2 (1421H)"],["madani-v1","KFGQPC V1 (1405H)"],
+  ["madani-v4-tajweed","QPC V4 Tajweed"],["qatar","Mushaf Qatar"],
+  ["indopak-15","IndoPak 15-line"],["indopak-9-gaba","IndoPak 9-line"],
+  ["indopak-13-qudratullah","IndoPak 13-line (Qudratullah)"],
+  ["indopak-13-taj","IndoPak 13-line (Taj)"],["indopak-16-taj","IndoPak 16-line"],
+  ["nastaleeq","KFGQPC Nastaleeq"],
+];
+
+const RAW_BASE = "https://raw.githubusercontent.com/dfordev1/usxv2/main";
+const cache = new Map();
+
+async function fetchXml(pathFrag) {
+  if (cache.has(pathFrag)) return cache.get(pathFrag);
+  const res = await fetch(`${RAW_BASE}/${pathFrag}`);
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${pathFrag}`);
+  const text = await res.text();
+  cache.set(pathFrag, text);
+  return text;
+}
+
+function parseXml(text) {
+  return new DOMParser().parseFromString(text, "application/xml");
+}
+
+function surahPad(n) { return String(n).padStart(3, "0"); }
+
+// ---- populate selects ----
+function fillSurahSelect(sel) {
+  for (const [n, en, ar] of SURAHS) {
+    const opt = document.createElement("option");
+    opt.value = n;
+    opt.textContent = `${n}. ${en} — ${ar}`;
+    sel.appendChild(opt);
+  }
+}
+["reader-surah", "compare-surah", "explorer-surah"].forEach(id => fillSurahSelect(document.getElementById(id)));
+for (const [key, label] of LAYOUTS) {
+  const opt = document.createElement("option");
+  opt.value = key; opt.textContent = label;
+  document.getElementById("reader-layout").appendChild(opt);
+}
+
+// ---- tabs ----
+document.querySelectorAll("nav.tabs button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("nav.tabs button").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("view-" + btn.dataset.view).classList.add("active");
+  });
+});
+
+// ---- READER ----
+async function loadReader() {
+  const surah = document.getElementById("reader-surah").value;
+  const layout = document.getElementById("reader-layout").value;
+  const status = document.getElementById("reader-status");
+  const content = document.getElementById("reader-content");
+  const meta = document.getElementById("reader-meta");
+  status.textContent = "loading…"; status.className = "status";
+  content.innerHTML = "";
+  try {
+    const xml = await fetchXml(`output/${layout}/${surahPad(surah)}.qusx.xml`);
+    const doc = parseXml(xml);
+    const root = doc.documentElement;
+    meta.style.display = "block";
+    meta.innerHTML = `
+      <strong class="arabic" style="font-size:1.3rem">${root.getAttribute("nameArabic")}</strong>
+      &nbsp; ${root.getAttribute("name")} · ${root.getAttribute("ayahCount")} ayahs · ${root.getAttribute("revelationPlace")}
+      <div class="badge-row">
+        <span class="badge">tradition: ${root.getAttribute("tradition")}</span>
+        <span class="badge">layout: ${root.getAttribute("layout") || layout}</span>
+      </div>`;
+
+    let currentAyahDiv = null, currentWordRow = null;
+    for (const node of root.children) {
+      if (node.tagName === "ayah" && node.getAttribute("sid")) {
+        currentAyahDiv = document.createElement("div");
+        currentAyahDiv.className = "ayah-block";
+        const num = document.createElement("span");
+        num.className = "ayah-num";
+        num.textContent = node.getAttribute("number");
+        currentAyahDiv.appendChild(num);
+        currentWordRow = document.createElement("div");
+        currentWordRow.className = "word-row";
+        currentAyahDiv.appendChild(currentWordRow);
+        content.appendChild(currentAyahDiv);
+      } else if (node.tagName === "word" && currentWordRow) {
+        const span = document.createElement("span");
+        span.className = "word arabic" + (node.getAttribute("type") === "number" ? " number" : "");
+        span.textContent = node.textContent;
+        const root_ = node.getAttribute("root"), stem = node.getAttribute("stem"), lemma = node.getAttribute("lemma");
+        if (root_ || stem || lemma) {
+          span.addEventListener("click", () => showMorph(span, { root: root_, stem, lemma, text: node.textContent }));
+        }
+        currentWordRow.appendChild(span);
+      }
+    }
+    status.textContent = `loaded ✓`;
+  } catch (e) {
+    status.textContent = "failed to load: " + e.message; status.className = "status err";
+  }
+}
+
+let morphPanel = null;
+function showMorph(anchor, data) {
+  if (morphPanel) morphPanel.remove();
+  document.querySelectorAll(".word.tapped").forEach(w => w.classList.remove("tapped"));
+  anchor.classList.add("tapped");
+  morphPanel = document.createElement("div");
+  morphPanel.className = "morph-panel shown";
+  morphPanel.innerHTML = `
+    <div class="arabic">${data.text}</div>
+    ${data.root ? `<div class="morph-row"><span>root</span><span class="arabic">${data.root}</span></div>` : ""}
+    ${data.stem ? `<div class="morph-row"><span>stem</span><span class="arabic">${data.stem}</span></div>` : ""}
+    ${data.lemma ? `<div class="morph-row"><span>lemma</span><span class="arabic">${data.lemma}</span></div>` : ""}
+  `;
+  anchor.closest(".ayah-block").appendChild(morphPanel);
+}
+
+document.getElementById("reader-surah").addEventListener("change", loadReader);
+document.getElementById("reader-layout").addEventListener("change", loadReader);
+
+// ---- COMPARE ----
+function extractAyahs(xmlText) {
+  const doc = parseXml(xmlText);
+  const ayahs = [];
+  let current = null;
+  for (const node of doc.documentElement.children) {
+    if (node.tagName === "ayah" && node.getAttribute("sid")) {
+      current = { number: node.getAttribute("number"), words: [] };
+      ayahs.push(current);
+    } else if (node.tagName === "word" && current) {
+      current.words.push(node.textContent);
+    }
+  }
+  return ayahs;
+}
+
+const PILOT_PATHS = { warsh: "output-pilot/warsh", qalon: "output-pilot/qalon", douri: "output-pilot/douri", shubah: "output-pilot/shubah" };
+
+async function loadCompare() {
+  const surah = document.getElementById("compare-surah").value;
+  const tradB = document.getElementById("compare-b").value;
+  const status = document.getElementById("compare-status");
+  const summary = document.getElementById("compare-summary");
+  const content = document.getElementById("compare-content");
+  status.textContent = "loading…"; status.className = "status";
+  content.innerHTML = "";
+  try {
+    const [xmlA, xmlB] = await Promise.all([
+      fetchXml(`output/madani-v2/${surahPad(surah)}.qusx.xml`),
+      fetchXml(`${PILOT_PATHS[tradB]}/${surahPad(surah)}.qusx.xml`),
+    ]);
+    const ayahsA = extractAyahs(xmlA);
+    const ayahsB = extractAyahs(xmlB);
+
+    summary.style.display = "block";
+    const diff = ayahsA.length !== ayahsB.length;
+    summary.innerHTML = `
+      <div class="badge-row">
+        <span class="badge">Hafs: ${ayahsA.length} ayahs</span>
+        <span class="badge">${tradB}: ${ayahsB.length} ayahs</span>
+        ${diff ? `<span class="badge" style="background:var(--warn);color:#fff">numbering differs</span>` : `<span class="badge" style="background:var(--ok);color:#fff">same count</span>`}
+      </div>`;
+
+    const colA = document.createElement("div");
+    colA.className = "compare-col";
+    colA.innerHTML = `<h3>Hafs (Kufi)</h3>`;
+    const colB = document.createElement("div");
+    colB.className = "compare-col";
+    colB.innerHTML = `<h3>${tradB}</h3>`;
+
+    const maxLen = Math.max(ayahsA.length, ayahsB.length);
+    for (let i = 0; i < maxLen; i++) {
+      const a = ayahsA[i], b = ayahsB[i];
+      colA.innerHTML += ayahCardHtml(a);
+      colB.innerHTML += ayahCardHtml(b);
+    }
+    content.appendChild(colA);
+    content.appendChild(colB);
+    status.textContent = "loaded ✓";
+  } catch (e) {
+    status.textContent = "failed to load: " + e.message; status.className = "status err";
+  }
+}
+function ayahCardHtml(ayah) {
+  if (!ayah) return `<div class="card" style="opacity:.4">— no corresponding ayah —</div>`;
+  return `<div class="card"><span class="ayah-num">${ayah.number}</span><span class="arabic" style="font-size:1.3rem">${ayah.words.join(" ")}</span></div>`;
+}
+document.getElementById("compare-surah").addEventListener("change", loadCompare);
+document.getElementById("compare-b").addEventListener("change", loadCompare);
+
+// ---- EXPLORER ----
+async function loadExplorer() {
+  const surah = document.getElementById("explorer-surah").value;
+  const source = document.getElementById("explorer-source").value;
+  const status = document.getElementById("explorer-status");
+  status.textContent = "loading…"; status.className = "status";
+  try {
+    const xml = await fetchXml(`${source}/${surahPad(surah)}.qusx.xml`);
+    const doc = parseXml(xml);
+    const root = doc.documentElement;
+
+    document.getElementById("explorer-badges").innerHTML = Array.from(root.attributes)
+      .map(a => `<span class="badge">${a.name}=${a.value}</span>`).join("");
+
+    const tbody = document.querySelector("#explorer-pins tbody");
+    tbody.innerHTML = "";
+    let wordCount = 0;
+    for (const node of root.children) {
+      if (node.tagName === "word") { wordCount++; continue; }
+      const sid = node.getAttribute("sid"), eid = node.getAttribute("eid");
+      if (!sid && !eid) continue;
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td>${node.tagName}</td>
+        <td>${sid ? `<span class="tag-sid">sid=${sid}</span>` : `<span class="tag-eid">eid=${eid}</span>`}</td>
+        <td>${node.getAttribute("number") || ""}</td>
+        <td>${node.getAttribute("fragment") || ""}</td>`;
+      tbody.appendChild(tr);
+    }
+    document.getElementById("explorer-xml").textContent = xml;
+    status.textContent = `loaded ✓ (${wordCount} words, ${tbody.children.length} pin events)`;
+  } catch (e) {
+    status.textContent = "failed to load: " + e.message; status.className = "status err";
+  }
+}
+document.getElementById("explorer-surah").addEventListener("change", loadExplorer);
+document.getElementById("explorer-source").addEventListener("change", loadExplorer);
+
+// ---- init ----
+loadReader();
+loadCompare();
+loadExplorer();
+</script>
+</body>
+</html>
