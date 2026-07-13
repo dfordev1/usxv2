@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "purpose": "A transparent, versioned correction layer for verse-level text-integrity comparison ONLY. Applied by scripts/checksum-verify-full-options.js when reconstructing verse text for comparison against Tanzil. Never applied to, and never mutates, data/raw/uthmani.json -- that file is third-party licensed source data (see data/LICENSES.md) and is not edited by this project.",
+    "investigated": "2026-07-13",
+    "corroboration": "Each correction was independently confirmed against two sources: a real Tanzil download (data/external/tanzil-uthmani-full-options.xml) and a live fetch from the quran.com v4 API (api.quran.com/api/v4/quran/verses/uthmani). Both agree with the corrected form in every case below.",
+    "policy": "Only formatting-class differences (extra/missing whitespace, stray bidi control characters) are corrected here. The two orthographic-class differences (11:13, 80:25) are deliberately NOT included -- see data/external/qul-orthographic-review.md."
+  },
+  "corrections": {
+    "5:52": {
+      "class": "formatting",
+      "issue": "stray space inside a word",
+      "rawText": "فَتَرَى ٱلَّذِينَ فِى قُلُوبِهِم مَّرَضٌۭ يُسَـٰرِعُونَ فِيهِمْ يَقُولُونَ نَخْشَىٰٓ أَن تُصِيبَنَا دَآئِرَ ةٌۭ ۚ فَعَسَى ٱللَّهُ أَن يَأْتِىَ بِٱلْفَتْحِ أَوْ أَمْرٍۢ مِّنْ عِندِهِۦ فَيُصْبِحُوا۟ عَلَىٰ مَآ أَسَرُّوا۟ فِىٓ أَنفُسِهِمْ نَـٰدِمِينَ",
+      "correctedText": "فَتَرَى ٱلَّذِينَ فِى قُلُوبِهِم مَّرَضٌۭ يُسَـٰرِعُونَ فِيهِمْ يَقُولُونَ نَخْشَىٰٓ أَن تُصِيبَنَا دَآئِرَةٌۭ ۚ فَعَسَى ٱللَّهُ أَن يَأْتِىَ بِٱلْفَتْحِ أَوْ أَمْرٍۢ مِّنْ عِندِهِۦ فَيُصْبِحُوا۟ عَلَىٰ مَآ أَسَرُّوا۟ فِىٓ أَنفُسِهِمْ نَـٰدِمِينَ",
+      "note": "دَآئِرَ ةٌۭ -> دَآئِرَةٌۭ (removed the space splitting one word into two tokens)."
+    },
+    "11:31": {
+      "class": "formatting",
+      "issue": "doubled space before a pause mark",
+      "rawText": "وَلَآ أَقُولُ لَكُمْ عِندِى خَزَآئِنُ ٱللَّهِ وَلَآ أَعْلَمُ ٱلْغَيْبَ وَلَآ أَقُولُ إِنِّى مَلَكٌۭ وَلَآ أَقُولُ لِلَّذِينَ تَزْدَرِىٓ أَعْيُنُكُمْ لَن يُؤْتِيَهُمُ ٱللَّهُ خَيْرًا ۖ ٱللَّهُ أَعْلَمُ بِمَا فِىٓ أَنفُسِهِمْ  ۖ إِنِّىٓ إِذًۭا لَّمِنَ ٱلظَّـٰلِمِينَ",
+      "correctedText": "وَلَآ أَقُولُ لَكُمْ عِندِى خَزَآئِنُ ٱللَّهِ وَلَآ أَعْلَمُ ٱلْغَيْبَ وَلَآ أَقُولُ إِنِّى مَلَكٌۭ وَلَآ أَقُولُ لِلَّذِينَ تَزْدَرِىٓ أَعْيُنُكُمْ لَن يُؤْتِيَهُمُ ٱللَّهُ خَيْرًا ۖ ٱللَّهُ أَعْلَمُ بِمَا فِىٓ أَنفُسِهِمْ ۖ إِنِّىٓ إِذًۭا لَّمِنَ ٱلظَّـٰلِمِينَ",
+      "note": "collapsed a doubled space before the pause mark after أَنفُسِهِمْ."
+    },
+    "18:1": {
+      "class": "formatting",
+      "issue": "missing space before a pause mark",
+      "rawText": "ٱلْحَمْدُ لِلَّهِ ٱلَّذِىٓ أَنزَلَ عَلَىٰ عَبْدِهِ ٱلْكِتَـٰبَ وَلَمْ يَجْعَل لَّهُۥ عِوَجَاۜ",
+      "correctedText": "ٱلْحَمْدُ لِلَّهِ ٱلَّذِىٓ أَنزَلَ عَلَىٰ عَبْدِهِ ٱلْكِتَـٰبَ وَلَمْ يَجْعَل لَّهُۥ عِوَجَا ۜ",
+      "note": "inserted the missing space before U+06DC (pause mark) after عِوَجَا."
+    },
+    "27:26": {
+      "class": "formatting",
+      "issue": "stray right-to-left mark",
+      "rawText": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ رَبُّ ٱلْعَرْشِ ٱلْعَظِيمِ ۩‏",
+      "correctedText": "ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ رَبُّ ٱلْعَرْشِ ٱلْعَظِيمِ ۩",
+      "note": "removed a trailing U+200F (right-to-left mark) after the sajdah sign -- an invisible bidi control character, not part of the Quranic text."
+    }
+  }
+}
