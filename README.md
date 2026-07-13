@@ -100,10 +100,23 @@ XSD-valid.** These are deliberately two different tools checking different thing
 browser's own `DOMParser` and renders it, so the format is proven consumable
 end-to-end, not just internally consistent.
 
-Currently ships **one tradition (Hafs/Kufi)** with real word-level text and
-morphology. Multi-tradition ayah pins (Qalun, Warsh, Douri, Shu'bah) are proven out
-in the interactive demo but not yet merged into the generator — see
-[Known gaps](#known-gaps).
+The main generator (`src/generate.js`) ships **one tradition (Hafs/Kufi)** with real
+word-level text, morphology (root/stem/lemma), and full page/juz/hizb/rub/manzil/ruku
+milestone pins across all 10 print layouts (1140 files, all validated).
+
+A **separate pilot generator** (`scripts/generate_tradition_pilot.js`) produces real,
+XSD-valid ayah-numbering pins with real Arabic text for 4 more traditions — Warsh,
+Qalun, Al-Duri, Shu'bah (456 files, `output-pilot/`) — plus Al-Susi as an
+unscoped bonus. This is genuinely real, not a demo: real per-tradition text,
+verified to differ from Hafs at the rasm level, not a relabeled copy. It is
+**deliberately narrower** than the main generator's output, though — no
+morphology, and no page/juz/hizb/rub/manzil/ruku pins, since those would need
+re-deriving against each tradition's own numbering, not yet done. It's also kept
+as a separate script rather than merged into `src/generate.js`, since that
+generator is tightly coupled to Hafs-canonical indexing throughout. See
+[Known gaps](#known-gaps) for open questions (license status of the pilot's
+text source, an unresolved Al-Duri count discrepancy, and whether QUSX should
+model numbering-only or full rasm/text variants).
 
 ## Quick start
 
@@ -268,21 +281,39 @@ account for its own divergence from that source.
 
 ## Known gaps
 
-1. **Multi-tradition pins aren't in the generator yet.** `quran-svg`'s data gives
-   per-surah ayah-count deltas (55/114 surahs differ) and pinpoints *which page* a
-   tradition's numbering first diverges from Hafs, but not the exact *word* where an
-   ayah boundary moves — that repo stores click polygons, not per-word Qalun/Warsh
-   text. Sourcing actual word-level Qalun/Warsh text is the blocking step before
-   `<ayah tradition="qalon">` can be generated for real. **Checked and ruled out:**
-   [tanzil.net/download](https://tanzil.net/download/) — verified directly, it has
-   no riwayah/qira'a selector at all; its "text type" options (Simple/Uthmani/etc.)
-   are orthographic variants of the *same* Hafs reading, not different
-   transmissions. An earlier version of this README named Tanzil as an example
-   source before actually checking; this is that correction.
-2. **5 of QUL's 12 print layouts are wired in** (KFGQPC V1/V2/V4-tajweed, Mushaf
-   Qatar, IndoPak 15-line). The remaining 7 (other IndoPak line counts, Digital
-   Khatt, Libyan Awqaf, etc.) follow the same pattern in `LAYOUTS` in
-   `src/generate.js` — just need downloading and registering.
+1. **Multi-tradition pins exist as a real pilot, not in the main generator.**
+   Real per-tradition Arabic text was found for Warsh, Qalun, Al-Duri, Shu'bah
+   (and Al-Susi as a bonus) — sourced from `thetruetruth/quran-data-kfgqpc`, a
+   third-party mirror of King Fahd Complex's official font/data packages —
+   and used to generate real, XSD-valid ayah-numbering pins for all 114 surahs
+   in each tradition (`scripts/generate_tradition_pilot.js`, output in
+   `output-pilot/`). This is genuinely real, verified data (spot-checked to
+   differ from Hafs at the rasm level, not a relabeled copy), not a mockup.
+   Three real caveats, stated plainly rather than glossed over:
+   - **License status is a judgment call, not a confirmed clearance.** The
+     source repo has no LICENSE file or stated terms beyond "for developer"
+     use. Included on the project owner's reasoning that King Fahd Complex's
+     already-confirmed-permissive terms (via `quran-svg`'s licensing) likely
+     extend to this derived text — see `THIRD_PARTY_NOTICES.md` for the full
+     caveat. Treat as unverified-but-included, not cleared.
+   - **Numbering/text only, not full parity with the main generator's output**
+     — no morphology (root/stem/lemma), and no page/juz/hizb/rub/manzil/ruku
+     pins, since those would need re-deriving against each tradition's own
+     numbering, not yet done.
+   - **Al-Duri has an unresolved 3-way count discrepancy** (6205 in the
+     original Itqan announcement, 6218 from `quran-svg`, 6217 from this text
+     source) — precisely located to surah 67 (30 vs 31 ayahs), not silently
+     picked between.
+   Still genuinely open: whether QUSX v1 should model numbering-only
+   differences or full rasm/text variants (raised directly by a reviewer on
+   the Itqan community thread) — this pilot only ever solves the former.
+   **Checked and ruled out** as a text source: [tanzil.net/download](https://tanzil.net/download/)
+   — verified directly, no riwayah/qira'a selector at all.
+2. **10 of QUL's 12 print layouts are wired in** (KFGQPC V1/V2/V4-tajweed,
+   Mushaf Qatar, 5 IndoPak line-counts, KFGQPC Nastaleeq). The remaining 2
+   (Digital Khatt, the SVG-based Ligature Basd Mushaf) use a different data
+   shape than the page/line DB schema the generator expects and haven't been
+   investigated.
 3. **Text/morphology are duplicated once per layout**, not factored into a
    separately-referenceable layer — see the [Why this exists](#why-this-exists)
    caveat. This is the one substantial item left that's a real architecture
