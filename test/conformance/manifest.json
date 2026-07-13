@@ -1,0 +1,186 @@
+{
+  "_comment": "QUSX v1 conformance fixture manifest. Machine-readable contract for third-party implementers: run each fixture's 'file' through your own XSD + ISO Schematron (+ semantic, for js-only rules) checker and compare the rule ids you observe against 'expectedFailingRules'. Every rule id referenced here MUST exist in test/conformance/rules.json (the same file this manifest and schema/qusx.sch both cite). See README.md in this directory for the full consumption contract and the notes below for two known, deliberate multi-rule couplings.",
+  "version": "1.0-draft",
+  "rulesFile": "test/conformance/rules.json",
+  "generatedAgainst": {
+    "xsd": "schema/qusx.xsd",
+    "schematron": "schema/qusx.sch",
+    "referenceChecker": "src/validate.js"
+  },
+  "notes": [
+    "QUSX-HDR-001 (filename NNN.qusx.xml must encode the same surah as the surah attribute) is scoped to files that are part of a corpus tree (see NORMATIVE-RULES.md: 'Files not matching that pattern are outside the corpus naming convention and reported as such'). Every fixture in this suite except the reused test/fixtures/tradition-warsh*/106.qusx.xml files intentionally lives at a non-corpus path; QUSX-HDR-001 is exempt for all fixtures in this manifest and is never listed in expectedFailingRules here.",
+    "QUSX-HDR-002..006 are non-portable (need data/raw/quran-metadata-surah-name.json and data/traditions/ayah-counts.json) and are out of scope for this portable fixture suite; a fixture may incidentally trip QUSX-HDR-006 (declared ayahCount vs. the real canonical count) because these are small hand-written excerpts, not full real surahs -- that is expected and not a suite defect.",
+    "QUSX-PIN-004 and QUSX-PIN-005 are checkedBy \"js\" only (not schematron -- see schema/qusx.sch's own header comment: a stateful 'currently open per axis' machine is deliberately not duplicated in XPath). The reference src/validate.js tracks only ONE currently-open sid per axis; reopening an axis while open (PIN-004) or closing with a mismatched eid (PIN-005) necessarily leaves the true still-open sid without a valid matching close in the same pass, so src/validate.js also reports QUSX-PIN-006 alongside the targeted rule. This is not incidental fixture sloppiness -- it is how the single authoritative js checker for these two rules actually behaves, verified by running node src/validate.js against both fixtures. Their expectedFailingRules lists reflect that ground truth.",
+    "A handful of reused test/fixtures/*.qusx.xml files (predating this suite) declare ayahCount=\"7\" (the real Al-Fatihah header) but include only 1-2 ayahs, so they incidentally also trip QUSX-AYH-001 alongside their targeted rule. Per the task's reuse instruction these files are referenced by their existing path rather than being edited or duplicated; the incidental QUSX-AYH-001 finding is listed honestly in expectedFailingRules for those entries. New fixtures created directly for this suite (under test/conformance/fixtures/) declare an ayahCount matching their actual content and do not have this issue.",
+    "Fixtures targeting an L1 (QUSX-STR) rule are expected to fail XSD validation. Per CONFORMANCE.md ('Levels are cumulative... a document at level N satisfies every rule at levels 0..N'), a document that is not XSD-valid is not meaningfully evaluated at L2 -- a staged pipeline runs L1 first and only proceeds to Schematron/semantic (L2) checks if L1 passes. expectedFailingRules for L1 fixtures therefore lists only the L1 rule, even where the unstaffed reference src/validate.js (which does not stage) would also report an incidental L2 finding on the same missing/invalid attribute."
+  ],
+  "fixtures": [
+    {
+      "file": "test/conformance/fixtures/positive/001.qusx.xml",
+      "description": "Small, hand-written, structurally complete Hafs Al-Fatihah excerpt (2 ayahs, 4 words) satisfying every portable L0-L2 rule.",
+      "expectedOutcome": "pass",
+      "targetsRule": null,
+      "expectedFailingRules": [],
+      "level": "L2"
+    },
+
+    {
+      "file": "test/fixtures/malformed-not-well-formed.xml",
+      "description": "Reused fixture: an unclosed <word> element makes the document not well-formed XML.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-WF-001",
+      "expectedFailingRules": ["QUSX-WF-001"],
+      "level": "L0"
+    },
+    {
+      "file": "test/fixtures/duplicate-root-attribute.qusx.xml",
+      "description": "Reused fixture: root <qusx> carries the attribute \"surah\" twice.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-WF-003",
+      "expectedFailingRules": ["QUSX-WF-003", "QUSX-AYH-001"],
+      "level": "L0"
+    },
+
+    {
+      "file": "test/fixtures/schema-violation-surah-out-of-range.qusx.xml",
+      "description": "Reused fixture: surah=\"200\" is outside the valid 1-114 range.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-STR-002",
+      "expectedFailingRules": ["QUSX-STR-002"],
+      "level": "L1"
+    },
+    {
+      "file": "test/conformance/fixtures/str-006-bad-tradition/001.qusx.xml",
+      "description": "Root tradition=\"not-a-real-tradition\" is not a value of the traditionCode enumeration.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-STR-006",
+      "expectedFailingRules": ["QUSX-STR-006"],
+      "level": "L1"
+    },
+    {
+      "file": "test/conformance/fixtures/str-007-unexpected-child/001.qusx.xml",
+      "description": "A <footnote> element appears as a direct child of <qusx>, which is not one of the ten allowed element names.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-STR-007",
+      "expectedFailingRules": ["QUSX-STR-007"],
+      "level": "L1"
+    },
+    {
+      "file": "test/conformance/fixtures/str-008-word-missing-position/001.qusx.xml",
+      "description": "<word id=\"1\"> omits the required \"position\" attribute.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-STR-008",
+      "expectedFailingRules": ["QUSX-STR-008"],
+      "level": "L1"
+    },
+    {
+      "file": "test/conformance/fixtures/str-011-bad-fragment-value/001.qusx.xml",
+      "description": "<juz sid=\"juz:1\" fragment=\"partial\"> uses a fragment value outside whole|start|middle|end.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-STR-011",
+      "expectedFailingRules": ["QUSX-STR-011"],
+      "level": "L1"
+    },
+
+    {
+      "file": "test/fixtures/sid-and-eid-same-element.qusx.xml",
+      "description": "Reused fixture: <ayah> carries both sid and eid on the same element instead of exactly one.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-PIN-001",
+      "expectedFailingRules": ["QUSX-PIN-001", "QUSX-AYH-001"],
+      "level": "L2"
+    },
+    {
+      "file": "test/conformance/fixtures/pin-002-missing-number/001.qusx.xml",
+      "description": "<juz sid=\"juz:1\"> (an opening pin) omits the required \"number\" attribute.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-PIN-002",
+      "expectedFailingRules": ["QUSX-PIN-002"],
+      "level": "L2"
+    },
+    {
+      "file": "test/fixtures/duplicate-sid.qusx.xml",
+      "description": "Reused fixture: the sid value \"1:1:hafs-kufi\" is opened twice in the document.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-PIN-003",
+      "expectedFailingRules": ["QUSX-PIN-003", "QUSX-AYH-001"],
+      "level": "L2"
+    },
+    {
+      "file": "test/conformance/fixtures/pin-004-same-axis-reopened/001.qusx.xml",
+      "description": "A second <page sid=\"page:2\"> opens while <page sid=\"page:1\"> (same axis) is still open. See manifest notes: the reference js checker also reports PIN-005 and PIN-006 here because it tracks only one currently-open sid per axis.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-PIN-004",
+      "expectedFailingRules": ["QUSX-PIN-004", "QUSX-PIN-005", "QUSX-PIN-006"],
+      "level": "L2"
+    },
+    {
+      "file": "test/conformance/fixtures/pin-005-eid-mismatch/001.qusx.xml",
+      "description": "<ayah eid=\"1:1:wrong-id\"> does not match the open sid \"1:1:hafs-kufi\". See manifest notes: the mismatched close also leaves the true sid unclosed, so PIN-006 is reported alongside PIN-005.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-PIN-005",
+      "expectedFailingRules": ["QUSX-PIN-005", "QUSX-PIN-006"],
+      "level": "L2"
+    },
+    {
+      "file": "test/fixtures/unclosed-milestone.qusx.xml",
+      "description": "Reused fixture: <ayah sid=\"1:1:hafs-kufi\"> is opened but never closed before end of document.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-PIN-006",
+      "expectedFailingRules": ["QUSX-PIN-006", "QUSX-AYH-001"],
+      "level": "L2"
+    },
+    {
+      "file": "test/conformance/fixtures/pin-008-fragment-on-eid/001.qusx.xml",
+      "description": "<juz eid=\"juz:1\" fragment=\"whole\"> puts fragment on a closing (eid) pin instead of the opening (sid) pin.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-PIN-008",
+      "expectedFailingRules": ["QUSX-PIN-008"],
+      "level": "L2"
+    },
+
+    {
+      "file": "test/fixtures/bad-ayah-sequence.qusx.xml",
+      "description": "Reused fixture: opening ayah numbers are [1, 3], skipping 2 -- not a contiguous 1..N sequence.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-AYH-001",
+      "expectedFailingRules": ["QUSX-AYH-001"],
+      "level": "L2"
+    },
+
+    {
+      "file": "test/conformance/fixtures/wrd-001-id-not-increasing/001.qusx.xml",
+      "description": "Word ids appear as 2 then 1 -- not strictly increasing across the document.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-WRD-001",
+      "expectedFailingRules": ["QUSX-WRD-001"],
+      "level": "L2"
+    },
+    {
+      "file": "test/fixtures/bad-word-position.qusx.xml",
+      "description": "Reused fixture: the second <word> in ayah 1 has position=\"3\" instead of the expected 2.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-WRD-002",
+      "expectedFailingRules": ["QUSX-WRD-002", "QUSX-AYH-001"],
+      "level": "L2"
+    },
+
+    {
+      "file": "test/conformance/fixtures/trd-001-tradition-mismatch/001.qusx.xml",
+      "description": "<ayah tradition=\"warsh-kfqc\"> does not match the root <qusx tradition=\"hafs-kufi\">.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-TRD-001",
+      "expectedFailingRules": ["QUSX-TRD-001"],
+      "level": "L2"
+    },
+
+    {
+      "file": "test/conformance/fixtures/nrm-001-non-nfc-text/001.qusx.xml",
+      "description": "Root declares normalization=\"NFC\" but the <word> text uses a decomposed alef+hamza-above sequence (U+0627 U+0654) instead of the precomposed U+0623, so the text is not NFC.",
+      "expectedOutcome": "fail",
+      "targetsRule": "QUSX-NRM-001",
+      "expectedFailingRules": ["QUSX-NRM-001"],
+      "level": "L2"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "_comment": "Machine-readable index of QUSX v1 normative rules. Human-readable normative source: docs/conformance/NORMATIVE-RULES.md. This file is the contract cited by the fixture manifest (test/conformance/manifest.json), the Schematron schema (schema/qusx.sch), and src/validate.js error messages. Every rule id here MUST appear in NORMATIVE-RULES.md and vice versa; a test enforces that.",
+  "standardVersion": "1.0-draft",
+  "levels": {
+    "L0": "XML well-formed",
+    "L1": "XSD structurally valid",
+    "L2": "Semantically conforming (single document)",
+    "L3": "Complete Hafs corpus",
+    "L4": "Text-integrity verified"
+  },
+  "checkedByLegend": {
+    "parser": "any XML 1.0 parser",
+    "xsd": "schema/qusx.xsd via any XSD 1.0 processor",
+    "schematron": "schema/qusx.sch via any ISO Schematron processor",
+    "js": "src/validate.js (needs canonical reference data and/or corpus)",
+    "script": "a dedicated integrity script"
+  },
+  "rules": [
+    { "id": "QUSX-WF-001", "level": "L0", "category": "WF", "portable": true, "checkedBy": ["parser"], "summary": "Document is well-formed XML 1.0." },
+    { "id": "QUSX-WF-002", "level": "L0", "category": "WF", "portable": true, "checkedBy": ["parser", "xsd"], "summary": "Document element is <qusx>." },
+    { "id": "QUSX-WF-003", "level": "L0", "category": "WF", "portable": true, "checkedBy": ["parser", "js"], "summary": "No element carries a duplicate attribute name." },
+
+    { "id": "QUSX-STR-001", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "<qusx> carries all required attributes." },
+    { "id": "QUSX-STR-002", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "surah is an integer 1-114." },
+    { "id": "QUSX-STR-003", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "ayahCount is an integer 1-286." },
+    { "id": "QUSX-STR-004", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "revelationPlace is makkah or madinah." },
+    { "id": "QUSX-STR-005", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "bismillahPre is xs:boolean." },
+    { "id": "QUSX-STR-006", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "tradition is a traditionCode enumeration value." },
+    { "id": "QUSX-STR-007", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "Every child of <qusx> is an allowed element." },
+    { "id": "QUSX-STR-008", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "<word> carries id and position, both positive integers." },
+    { "id": "QUSX-STR-009", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "<word> type, if present, is 'number'." },
+    { "id": "QUSX-STR-010", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "<sajda> carries number, type (required|optional), verseKey (pattern)." },
+    { "id": "QUSX-STR-011", "level": "L1", "category": "STR", "portable": true, "checkedBy": ["xsd"], "summary": "fragment, if present, is whole|start|middle|end." },
+
+    { "id": "QUSX-HDR-001", "level": "L2", "category": "HDR", "portable": true, "checkedBy": ["js"], "summary": "Filename NNN.qusx.xml encodes the same surah as the surah attribute." },
+    { "id": "QUSX-HDR-002", "level": "L2", "category": "HDR", "portable": false, "checkedBy": ["js"], "summary": "name equals the canonical simple name for surah." },
+    { "id": "QUSX-HDR-003", "level": "L2", "category": "HDR", "portable": false, "checkedBy": ["js"], "summary": "nameArabic equals the canonical Arabic name for surah." },
+    { "id": "QUSX-HDR-004", "level": "L2", "category": "HDR", "portable": false, "checkedBy": ["js"], "summary": "revelationPlace equals the canonical revelation place for surah." },
+    { "id": "QUSX-HDR-005", "level": "L2", "category": "HDR", "portable": false, "checkedBy": ["js"], "summary": "bismillahPre equals the canonical bismillah-pre flag for surah." },
+    { "id": "QUSX-HDR-006", "level": "L2", "category": "HDR", "portable": false, "checkedBy": ["js"], "summary": "ayahCount equals the expected count for (surah, tradition); skipped when no verified count exists." },
+
+    { "id": "QUSX-PIN-001", "level": "L2", "category": "PIN", "portable": true, "checkedBy": ["schematron", "js"], "summary": "A milestone carries exactly one of sid or eid (XOR)." },
+    { "id": "QUSX-PIN-002", "level": "L2", "category": "PIN", "portable": true, "checkedBy": ["schematron", "js"], "summary": "An opening pin (sid) carries its axis's required opening attributes." },
+    { "id": "QUSX-PIN-003", "level": "L2", "category": "PIN", "portable": true, "checkedBy": ["schematron", "js"], "summary": "Every sid value is unique within the document." },
+    { "id": "QUSX-PIN-004", "level": "L2", "category": "PIN", "portable": true, "checkedBy": ["js"], "summary": "Within one axis, no pin opens while a previous same-axis pin is still open." },
+    { "id": "QUSX-PIN-005", "level": "L2", "category": "PIN", "portable": true, "checkedBy": ["js"], "summary": "A closing pin (eid) matches the currently-open sid on the same axis." },
+    { "id": "QUSX-PIN-006", "level": "L2", "category": "PIN", "portable": true, "checkedBy": ["schematron", "js"], "summary": "Every sid is closed by a matching eid; no axis remains open at end of document." },
+    { "id": "QUSX-PIN-007", "level": "L2", "category": "PIN", "portable": true, "checkedBy": ["schematron"], "summary": "Cross-axis overlap is explicitly permitted; axes need not nest." },
+    { "id": "QUSX-PIN-008", "level": "L2", "category": "PIN", "portable": true, "checkedBy": ["schematron"], "summary": "fragment, if present, appears on an opening (sid) pin, not a closing (eid) pin." },
+    { "id": "QUSX-PIN-009", "level": "L2", "category": "PIN", "portable": true, "checkedBy": ["schematron"], "summary": "fragment values are descriptive; v1 validates their shape, not cross-file reconstruction." },
+
+    { "id": "QUSX-AYH-001", "level": "L2", "category": "AYH", "portable": true, "checkedBy": ["js"], "summary": "Opening ayah numbers are exactly 1..ayahCount, contiguous, once each, in order." },
+
+    { "id": "QUSX-WRD-001", "level": "L2", "category": "WRD", "portable": true, "checkedBy": ["js"], "summary": "word id is strictly increasing in document order across the file." },
+    { "id": "QUSX-WRD-002", "level": "L2", "category": "WRD", "portable": true, "checkedBy": ["js"], "summary": "word position counts 1..N within each ayah, resetting at each ayah opening." },
+    { "id": "QUSX-WRD-003", "level": "L2", "category": "WRD", "portable": true, "checkedBy": ["js"], "summary": "Every word appears inside an open ayah range." },
+
+    { "id": "QUSX-TRD-001", "level": "L2", "category": "TRD", "portable": true, "checkedBy": ["schematron", "js"], "summary": "Every ayah pin's tradition equals the root tradition; no mixing." },
+    { "id": "QUSX-TRD-002", "level": "L2", "category": "TRD", "portable": true, "checkedBy": ["js"], "summary": "Root tradition selects the conformance profile (hafs-kufi core vs experimental)." },
+
+    { "id": "QUSX-NRM-001", "level": "L2", "category": "NRM", "portable": true, "checkedBy": ["js"], "summary": "If normalization=NFC, every word text is already NFC." },
+    { "id": "QUSX-NRM-002", "level": "L2", "category": "NRM", "portable": true, "checkedBy": ["js"], "summary": "normalization is a producer claim; only NFC triggers the v1 check." },
+
+    { "id": "QUSX-COR-001", "level": "L3", "category": "COR", "portable": false, "checkedBy": ["js"], "summary": "A complete Hafs corpus has exactly 114 surah files." },
+    { "id": "QUSX-COR-002", "level": "L3", "category": "COR", "portable": false, "checkedBy": ["js"], "summary": "Corpus ayah total is 6236 (Hafs)." },
+    { "id": "QUSX-COR-003", "level": "L3", "category": "COR", "portable": false, "checkedBy": ["js"], "summary": "Corpus word total is 83668 (Hafs)." },
+    { "id": "QUSX-COR-004", "level": "L3", "category": "COR", "portable": false, "checkedBy": ["js"], "summary": "Corpus sajda total is 15." },
+    { "id": "QUSX-COR-005", "level": "L3", "category": "COR", "portable": false, "checkedBy": ["js"], "summary": "Corpus ruku total is 558." },
+
+    { "id": "QUSX-LAY-001", "level": "L3", "category": "LAY", "portable": false, "checkedBy": ["js"], "summary": "Highest page number per layout equals that edition's known page count." },
+    { "id": "QUSX-LAY-002", "level": "L3", "category": "LAY", "portable": false, "checkedBy": ["js"], "summary": "Per surah, word text+morphology is byte-identical across every layout." },
+
+    { "id": "QUSX-TXT-001", "level": "L4", "category": "TXT", "portable": false, "checkedBy": ["script"], "summary": "QUL raw text matches Tanzil full-options at the committed baseline (6230/6236); no regression." },
+    { "id": "QUSX-TXT-002", "level": "L4", "category": "TXT", "portable": false, "checkedBy": ["script"], "summary": "With the correction overlay, match reaches 6234/6236 and residuals are exactly {11:13, 80:25}." }
+  ]
+}

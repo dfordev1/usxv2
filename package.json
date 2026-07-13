@@ -11,9 +11,11 @@
     "checksum": "node src/checksum-verify.js",
     "checksum:full-options": "node scripts/checksum-verify-full-options.js",
     "checksum:baseline": "node scripts/checksum-baseline.js",
+    "validate:schematron": "python scripts/schematron_validate.py",
+    "conformance": "node test/conformance/verify-manifest.js && node test/conformance/run-conformance.js",
     "hashes": "node scripts/hash_sources.js",
     "validate:pilot": "python scripts/xsd_validate.py --pilot",
-    "verify": "npm run hashes && npm run validate && npm run validate:xsd && npm run validate:pilot && npm test && npm run checksum:baseline && npm run checksum:full-options"
+    "verify": "npm run hashes && npm run validate && npm run validate:xsd && npm run validate:pilot && npm test && npm run conformance && npm run checksum:baseline && npm run checksum:full-options"
   },
   "keywords": [
     "quran",

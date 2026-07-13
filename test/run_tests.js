@@ -74,26 +74,26 @@ function semanticErrorsFor(fixtureName) {
 
 check(
   "duplicate-sid.qusx.xml is rejected by validate.js",
-  semanticErrorsFor("duplicate-sid.qusx.xml").some((e) => /duplicate sid/i.test(e)),
-  "expected a 'duplicate sid' error"
+  semanticErrorsFor("duplicate-sid.qusx.xml").some((e) => /\[QUSX-PIN-003\]/.test(e) && /duplicate sid/i.test(e)),
+  "expected a '[QUSX-PIN-003] duplicate sid' error"
 );
 
 check(
   "unclosed-milestone.qusx.xml is rejected by validate.js",
-  semanticErrorsFor("unclosed-milestone.qusx.xml").some((e) => /unclosed milestone/i.test(e)),
-  "expected an 'unclosed milestone' error"
+  semanticErrorsFor("unclosed-milestone.qusx.xml").some((e) => /\[QUSX-PIN-006\]/.test(e) && /unclosed milestone/i.test(e)),
+  "expected a '[QUSX-PIN-006] unclosed milestone' error"
 );
 
 check(
   "bad-word-position.qusx.xml is rejected by validate.js",
-  semanticErrorsFor("bad-word-position.qusx.xml").some((e) => /position/i.test(e)),
-  "expected a word-position error"
+  semanticErrorsFor("bad-word-position.qusx.xml").some((e) => /\[QUSX-WRD-002\]/.test(e) && /position/i.test(e)),
+  "expected a '[QUSX-WRD-002]' word-position error"
 );
 
 check(
   "bad-ayah-sequence.qusx.xml is rejected by validate.js",
-  semanticErrorsFor("bad-ayah-sequence.qusx.xml").some((e) => /ayah numbers/i.test(e)),
-  "expected an ayah-sequence error"
+  semanticErrorsFor("bad-ayah-sequence.qusx.xml").some((e) => /\[QUSX-AYH-001\]/.test(e) && /ayah numbers/i.test(e)),
+  "expected a '[QUSX-AYH-001]' ayah-sequence error"
 );
 
 // --- tradition-aware ayah-count check ---
@@ -111,7 +111,7 @@ check(
 
 check(
   "a Warsh file with the wrong ayah count (4, Hafs's count, not Warsh's real 5) IS flagged",
-  semanticErrorsFor("tradition-warsh-wrong-ayah-count/106.qusx.xml").some((e) => /does not match expected 5.*warsh-kfqc/i.test(e)),
+  semanticErrorsFor("tradition-warsh-wrong-ayah-count/106.qusx.xml").some((e) => /\[QUSX-HDR-006\]/.test(e) && /does not match expected 5.*warsh-kfqc/i.test(e)),
   `expected a tradition-aware ayahCount error, got: ${JSON.stringify(semanticErrorsFor("tradition-warsh-wrong-ayah-count/106.qusx.xml"))}`
 );
 
@@ -301,7 +301,7 @@ check(
 const zeroFileRun = spawnSync("node", [VALIDATE, "--layout=madani-v2", "this-file-does-not-exist.xml"], { encoding: "utf-8" });
 check(
   "validate.js treats a missing file as a real failure, with a clean message not a raw stack trace",
-  zeroFileRun.status !== 0 && /could not read file/.test(zeroFileRun.stdout) && !/at Object\.readFileSync/.test(zeroFileRun.stderr),
+  zeroFileRun.status !== 0 && /\[QUSX-WF-001\]/.test(zeroFileRun.stdout) && /could not read file/.test(zeroFileRun.stdout) && !/at Object\.readFileSync/.test(zeroFileRun.stderr),
   `expected a clean "could not read file" message and no raw stack trace, got stdout=${zeroFileRun.stdout} stderr=${zeroFileRun.stderr.slice(0, 200)}`
 );
 
@@ -312,20 +312,20 @@ const arbitraryPathRun = spawnSync(
 );
 check(
   "validate.js treats an arbitrary existing file path (e.g. test/fixtures/x.xml) literally, not joined under output/<layout>/",
-  /duplicate sid/i.test(arbitraryPathRun.stdout),
+  /\[QUSX-PIN-003\]/.test(arbitraryPathRun.stdout) && /duplicate sid/i.test(arbitraryPathRun.stdout),
   `expected the real fixture to be read directly and flagged for its actual defect, got stdout=${arbitraryPathRun.stdout}`
 );
 
 check(
   "duplicate-root-attribute.qusx.xml is rejected by validate.js",
-  semanticErrorsFor("duplicate-root-attribute.qusx.xml").some((e) => /duplicate attribute/i.test(e)),
-  "expected a 'duplicate attribute' error"
+  semanticErrorsFor("duplicate-root-attribute.qusx.xml").some((e) => /\[QUSX-WF-003\]/.test(e) && /duplicate attribute/i.test(e)),
+  "expected a '[QUSX-WF-003] duplicate attribute' error"
 );
 
 check(
   "sid-and-eid-same-element.qusx.xml is rejected by validate.js",
-  semanticErrorsFor("sid-and-eid-same-element.qusx.xml").some((e) => /has both sid and eid/i.test(e)),
-  "expected a 'has both sid and eid' error"
+  semanticErrorsFor("sid-and-eid-same-element.qusx.xml").some((e) => /\[QUSX-PIN-001\]/.test(e) && /has both sid and eid/i.test(e)),
+  "expected a '[QUSX-PIN-001] has both sid and eid' error"
 );
 
 check(

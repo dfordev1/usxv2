@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="1" name="Al-Fatihah" nameArabic="الفاتحة" ayahCount="2" revelationPlace="makkah" bismillahPre="false" tradition="hafs-kufi" normalization="NFC">
+  <ayah number="1" tradition="hafs-kufi" sid="1:1:hafs-kufi"/>
+  <word id="1" position="1" root="س   م   و" stem="سْمِ" lemma="اسْم">بِسْمِ</word>
+  <word id="2" position="2" root="ا ل ه" stem="اللَّهِ" lemma="اللَّه">ٱللَّهِ</word>
+  <ayah eid="1:1:hafs-kufi"/>
+  <ayah number="2" tradition="hafs-kufi" sid="1:2:hafs-kufi"/>
+  <word id="3" position="1" root="ح م د" stem="حَمْدُ" lemma="حَمْد">ٱلْحَمْدُ</word>
+  <word id="4" position="2" root="ا ل ه" stem="لَّهِ" lemma="اللَّه">لِلَّهِ</word>
+  <ayah eid="1:2:hafs-kufi"/>
+</qusx>

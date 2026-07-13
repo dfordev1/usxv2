@@ -128,16 +128,16 @@ function validateFile(filePath) {
   } catch (e) {
     // A missing/unreadable file is a validation failure to report, not a
     // crash -- a raw Node stack trace isn't a useful diagnostic here.
-    return { errors: [`${fileName}: could not read file (${e.code || e.message})`], ...EMPTY_RESULT };
+    return { errors: [`[QUSX-WF-001] ${fileName}: could not read file (${e.code || e.message})`], ...EMPTY_RESULT };
   }
 
   const rootMatch = xml.match(/<qusx\s+([^>]*)>/);
   if (!rootMatch) {
-    return { errors: [`${fileName}: no <qusx> root element found`], ...EMPTY_RESULT };
+    return { errors: [`[QUSX-WF-001] ${fileName}: no <qusx> root element found`], ...EMPTY_RESULT };
   }
   const { attrs: rootAttrs, duplicates: rootDuplicates } = parseAttrs(rootMatch[1]);
   for (const dup of rootDuplicates) {
-    errors.push(`${fileName}: root <qusx> has duplicate attribute "${dup}"`);
+    errors.push(`[QUSX-WF-003] ${fileName}: root <qusx> has duplicate attribute "${dup}"`);
   }
   const declaredAyahCount = Number(rootAttrs.ayahCount);
   const declaredSurah = Number(rootAttrs.surah);
@@ -147,23 +147,23 @@ function validateFile(filePath) {
   if (fileNameMatch) {
     const fileNameSurah = Number(fileNameMatch[1]);
     if (fileNameSurah !== declaredSurah) {
-      errors.push(`${fileName}: filename implies surah ${fileNameSurah}, but root surah="${declaredSurah}"`);
+      errors.push(`[QUSX-HDR-001] ${fileName}: filename implies surah ${fileNameSurah}, but root surah="${declaredSurah}"`);
     }
   } else {
-    errors.push(`${fileName}: filename does not match expected pattern NNN.qusx.xml`);
+    errors.push(`[QUSX-HDR-001] ${fileName}: filename does not match expected pattern NNN.qusx.xml`);
   }
 
   // surah name/count vs the canonical QUL surah-name table, when available
   if (CANONICAL_SURAH_NAMES) {
     const canonical = CANONICAL_SURAH_NAMES[String(declaredSurah)];
     if (!canonical) {
-      errors.push(`${fileName}: surah="${declaredSurah}" is not a valid surah number (no canonical entry 1-114)`);
+      errors.push(`[QUSX-STR-002] ${fileName}: surah="${declaredSurah}" is not a valid surah number (no canonical entry 1-114)`);
     } else {
       if (rootAttrs.name !== canonical.name_simple) {
-        errors.push(`${fileName}: name="${rootAttrs.name}" does not match canonical "${canonical.name_simple}" for surah ${declaredSurah}`);
+        errors.push(`[QUSX-HDR-002] ${fileName}: name="${rootAttrs.name}" does not match canonical "${canonical.name_simple}" for surah ${declaredSurah}`);
       }
       if (rootAttrs.nameArabic !== canonical.name_arabic) {
-        errors.push(`${fileName}: nameArabic="${rootAttrs.nameArabic}" does not match canonical "${canonical.name_arabic}" for surah ${declaredSurah}`);
+        errors.push(`[QUSX-HDR-003] ${fileName}: nameArabic="${rootAttrs.nameArabic}" does not match canonical "${canonical.name_arabic}" for surah ${declaredSurah}`);
       }
       // ayah count varies by tradition (different qira'at split/merge verse
       // boundaries differently). Only Hafs's canonical count is comparable
@@ -181,17 +181,17 @@ function validateFile(filePath) {
         const expected = traditionExpected !== null ? traditionExpected : Number(canonical.verses_count);
         if (expected !== declaredAyahCount) {
           errors.push(
-            `${fileName}: ayahCount="${declaredAyahCount}" does not match expected ${expected} for surah ${declaredSurah}` +
+            `[QUSX-HDR-006] ${fileName}: ayahCount="${declaredAyahCount}" does not match expected ${expected} for surah ${declaredSurah}` +
               (traditionExpected !== null ? ` (tradition="${rootAttrs.tradition}")` : " (Hafs canonical)")
           );
         }
       }
       if (String(rootAttrs.bismillahPre) !== String(canonical.bismillah_pre)) {
-        errors.push(`${fileName}: bismillahPre="${rootAttrs.bismillahPre}" does not match canonical ${canonical.bismillah_pre} for surah ${declaredSurah}`);
+        errors.push(`[QUSX-HDR-005] ${fileName}: bismillahPre="${rootAttrs.bismillahPre}" does not match canonical ${canonical.bismillah_pre} for surah ${declaredSurah}`);
       }
       const canonicalPlace = canonical.revelation_place.toLowerCase();
       if (rootAttrs.revelationPlace !== canonicalPlace) {
-        errors.push(`${fileName}: revelationPlace="${rootAttrs.revelationPlace}" does not match canonical "${canonicalPlace}" for surah ${declaredSurah}`);
+        errors.push(`[QUSX-HDR-004] ${fileName}: revelationPlace="${rootAttrs.revelationPlace}" does not match canonical "${canonicalPlace}" for surah ${declaredSurah}`);
       }
     }
   }
@@ -215,23 +215,23 @@ function validateFile(filePath) {
     const tag = m[1];
     if (tag === "qusx" || tag === "?xml") continue;
     const { attrs, duplicates } = parseAttrs(m[2]);
-    for (const dup of duplicates) errors.push(`${fileName}: <${tag}> has duplicate attribute "${dup}"`);
+    for (const dup of duplicates) errors.push(`[QUSX-WF-003] ${fileName}: <${tag}> has duplicate attribute "${dup}"`);
     const selfClosing = !!m[3];
 
     if (tag === "word") {
       for (const req of REQUIRED_ATTRS.word) {
-        if (!(req in attrs)) errors.push(`${fileName}: <word> missing required attr "${req}" near id=${attrs.id}`);
+        if (!(req in attrs)) errors.push(`[QUSX-STR-008] ${fileName}: <word> missing required attr "${req}" near id=${attrs.id}`);
       }
       const id = Number(attrs.id);
       wordIds.push(id);
       wordCount++;
-      if (id <= lastWordId) errors.push(`${fileName}: word id ${id} is not strictly increasing after ${lastWordId}`);
+      if (id <= lastWordId) errors.push(`[QUSX-WRD-001] ${fileName}: word id ${id} is not strictly increasing after ${lastWordId}`);
       lastWordId = id;
 
       const position = Number(attrs.position);
       if (position !== expectedPosition) {
         errors.push(
-          `${fileName}: word id ${id} has position ${position}, expected ${expectedPosition} (position should count 1..N within each ayah, resetting at each ayah boundary)`
+          `[QUSX-WRD-002] ${fileName}: word id ${id} has position ${position}, expected ${expectedPosition} (position should count 1..N within each ayah, resetting at each ayah boundary)`
         );
       }
       expectedPosition++;
@@ -240,17 +240,17 @@ function validateFile(filePath) {
 
     if (tag === "sajda") {
       for (const req of REQUIRED_ATTRS.sajda) {
-        if (!(req in attrs)) errors.push(`${fileName}: <sajda> missing required attr "${req}"`);
+        if (!(req in attrs)) errors.push(`[QUSX-STR-010] ${fileName}: <sajda> missing required attr "${req}"`);
       }
       if (attrs.type && !["required", "optional"].includes(attrs.type)) {
-        errors.push(`${fileName}: <sajda> invalid type "${attrs.type}"`);
+        errors.push(`[QUSX-STR-010] ${fileName}: <sajda> invalid type "${attrs.type}"`);
       }
       sajdaCount++;
       continue;
     }
 
     if (!MILESTONE_TAGS.includes(tag)) {
-      errors.push(`${fileName}: unexpected element <${tag}>`);
+      errors.push(`[QUSX-STR-007] ${fileName}: unexpected element <${tag}>`);
       continue;
     }
 
@@ -258,20 +258,20 @@ function validateFile(filePath) {
     const isClose = "eid" in attrs && !isOpen;
 
     if (!isOpen && !("eid" in attrs)) {
-      errors.push(`${fileName}: <${tag}> has neither sid nor eid`);
+      errors.push(`[QUSX-PIN-001] ${fileName}: <${tag}> has neither sid nor eid`);
       continue;
     }
     if (isOpen && "eid" in attrs) {
-      errors.push(`${fileName}: <${tag} sid="${attrs.sid}" eid="${attrs.eid}"> has both sid and eid -- must be exactly one (XOR)`);
+      errors.push(`[QUSX-PIN-001] ${fileName}: <${tag} sid="${attrs.sid}" eid="${attrs.eid}"> has both sid and eid -- must be exactly one (XOR)`);
       continue;
     }
 
     if (isOpen) {
       for (const req of REQUIRED_ATTRS[tag]) {
-        if (!(req in attrs)) errors.push(`${fileName}: <${tag} sid="${attrs.sid}"> missing required attr "${req}"`);
+        if (!(req in attrs)) errors.push(`[QUSX-PIN-002] ${fileName}: <${tag} sid="${attrs.sid}"> missing required attr "${req}"`);
       }
       if (seenSids.has(attrs.sid)) {
-        errors.push(`${fileName}: duplicate sid "${attrs.sid}"`);
+        errors.push(`[QUSX-PIN-003] ${fileName}: duplicate sid "${attrs.sid}"`);
       }
       seenSids.set(attrs.sid, tag);
 
@@ -281,7 +281,7 @@ function validateFile(filePath) {
       const alreadyOpen = openPerAxis.get(tag);
       if (alreadyOpen) {
         errors.push(
-          `${fileName}: <${tag} sid="${attrs.sid}"> opened while <${tag} sid="${alreadyOpen.sid}"> (same axis) was still open`
+          `[QUSX-PIN-004] ${fileName}: <${tag} sid="${attrs.sid}"> opened while <${tag} sid="${alreadyOpen.sid}"> (same axis) was still open`
         );
       }
       openPerAxis.set(tag, { sid: attrs.sid });
@@ -289,6 +289,15 @@ function validateFile(filePath) {
       if (tag === "ayah") {
         ayahNumbers.push(Number(attrs.number));
         expectedPosition = 1; // word position numbering restarts at each ayah
+        // QUSX-TRD-001: an ayah pin's tradition must equal the root tradition;
+        // a file must not mix traditions. (Also enforced portably in
+        // schema/qusx.sch; kept here so the reference corpus checker honors
+        // every rule rules.json says it checks.)
+        if ("tradition" in attrs && rootAttrs.tradition && attrs.tradition !== rootAttrs.tradition) {
+          errors.push(
+            `[QUSX-TRD-001] ${fileName}: <ayah sid="${attrs.sid}"> tradition="${attrs.tradition}" does not match root tradition="${rootAttrs.tradition}"`
+          );
+        }
       }
       if (tag === "ruku") rukuCount++;
       if (tag === "page") maxPageNumber = Math.max(maxPageNumber, Number(attrs.number));
@@ -298,10 +307,10 @@ function validateFile(filePath) {
     if (isClose) {
       const open = openPerAxis.get(tag);
       if (!open) {
-        errors.push(`${fileName}: <${tag} eid="${attrs.eid}"> has no matching open <${tag} sid="...">`);
+        errors.push(`[QUSX-PIN-005] ${fileName}: <${tag} eid="${attrs.eid}"> has no matching open <${tag} sid="...">`);
       } else {
         if (open.sid !== attrs.eid) {
-          errors.push(`${fileName}: <${tag} eid="${attrs.eid}"> does not match its own open sid "${open.sid}"`);
+          errors.push(`[QUSX-PIN-005] ${fileName}: <${tag} eid="${attrs.eid}"> does not match its own open sid "${open.sid}"`);
         }
         openPerAxis.delete(tag);
         closedSids.add(attrs.eid);
@@ -320,25 +329,25 @@ function validateFile(filePath) {
     while ((wm = wordTextRe.exec(xml))) {
       const text = wm[1];
       if (text.normalize("NFC") !== text) {
-        errors.push(`${fileName}: word text "${text}" is not NFC-normalized, but root declares normalization="NFC"`);
+        errors.push(`[QUSX-NRM-001] ${fileName}: word text "${text}" is not NFC-normalized, but root declares normalization="NFC"`);
       }
     }
   }
 
   const stillOpen = [...openPerAxis.keys()];
   if (stillOpen.length > 0) {
-    errors.push(`${fileName}: unclosed milestones at end of file: ${stillOpen.join(", ")}`);
+    errors.push(`[QUSX-PIN-006] ${fileName}: unclosed milestones at end of file: ${stillOpen.join(", ")}`);
   }
 
   for (const sid of seenSids.keys()) {
-    if (!closedSids.has(sid)) errors.push(`${fileName}: sid "${sid}" was never closed`);
+    if (!closedSids.has(sid)) errors.push(`[QUSX-PIN-006] ${fileName}: sid "${sid}" was never closed`);
   }
 
   // ayah numbers should be exactly 1..ayahCount, each appearing once, in order
   const expected = Array.from({ length: declaredAyahCount }, (_, i) => i + 1);
   if (JSON.stringify(ayahNumbers) !== JSON.stringify(expected)) {
     errors.push(
-      `${fileName}: ayah numbers ${JSON.stringify(ayahNumbers)} do not match expected 1..${declaredAyahCount}`
+      `[QUSX-AYH-001] ${fileName}: ayah numbers ${JSON.stringify(ayahNumbers)} do not match expected 1..${declaredAyahCount}`
     );
   }
 
@@ -383,7 +392,7 @@ function validateLayoutCompleteness(layoutDir, fileResults) {
     const missing = [];
     for (let i = 1; i <= 114; i++) if (!surahsPresent.has(i)) missing.push(i);
     errors.push(
-      `${layoutDir}: expected 114 surahs, found ${surahsPresent.size}. Missing: ${missing.join(", ") || "(duplicates present instead)"}`
+      `[QUSX-COR-001] ${layoutDir}: expected 114 surahs, found ${surahsPresent.size}. Missing: ${missing.join(", ") || "(duplicates present instead)"}`
     );
   }
 
@@ -397,9 +406,15 @@ function validateLayoutCompleteness(layoutDir, fileResults) {
     { ayahCount: 0, wordCount: 0, sajdaCount: 0, rukuCount: 0 }
   );
 
+  const CORPUS_TOTAL_RULE_IDS = {
+    ayahCount: "QUSX-COR-002",
+    wordCount: "QUSX-COR-003",
+    sajdaCount: "QUSX-COR-004",
+    rukuCount: "QUSX-COR-005",
+  };
   for (const key of ["ayahCount", "wordCount", "sajdaCount", "rukuCount"]) {
     if (totals[key] !== EXPECTED_CORPUS_TOTALS[key]) {
-      errors.push(`${layoutDir}: corpus-wide ${key} is ${totals[key]}, expected ${EXPECTED_CORPUS_TOTALS[key]}`);
+      errors.push(`[${CORPUS_TOTAL_RULE_IDS[key]}] ${layoutDir}: corpus-wide ${key} is ${totals[key]}, expected ${EXPECTED_CORPUS_TOTALS[key]}`);
     }
   }
 
@@ -407,7 +422,7 @@ function validateLayoutCompleteness(layoutDir, fileResults) {
   if (expectedPages) {
     const actualMaxPage = Math.max(...fileResults.map((r) => r.maxPageNumber));
     if (actualMaxPage !== expectedPages) {
-      errors.push(`${layoutDir}: highest page number across the corpus is ${actualMaxPage}, expected ${expectedPages}`);
+      errors.push(`[QUSX-LAY-001] ${layoutDir}: highest page number across the corpus is ${actualMaxPage}, expected ${expectedPages}`);
     }
   }
 
@@ -443,7 +458,7 @@ function validateCrossLayoutConsistency(filesByLayoutBySurah) {
       const seq = JSON.stringify(extractWordSequence(byLayout[layout]));
       if (seq !== firstSeq) {
         errors.push(
-          `surah ${surah}: word/morphology sequence in layout "${layout}" differs from layout "${firstLayout}" (should be identical — only page/line placement should differ between layouts)`
+          `[QUSX-LAY-002] surah ${surah}: word/morphology sequence in layout "${layout}" differs from layout "${firstLayout}" (should be identical — only page/line placement should differ between layouts)`
         );
       }
     }
