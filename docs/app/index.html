@@ -90,6 +90,7 @@
     white-space: nowrap; flex-shrink: 0; /* a word must never break mid-word onto two lines */
   }
   .word:hover, .word.tapped { background: var(--gold-soft); }
+  .word:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
   .word.number { font-size: 1rem; color: var(--gold); align-self: center; }
   /* real page/line rendering -- this is what makes different print layouts
      actually look different, since each layout's <page>/<line> pins fall
@@ -306,7 +307,7 @@ async function loadReader() {
     const root = doc.documentElement;
     meta.style.display = "block";
     meta.innerHTML = `
-      <strong class="arabic" style="font-size:1.3rem">${root.getAttribute("nameArabic")}</strong>
+      <strong class="arabic" lang="ar" style="font-size:1.3rem">${root.getAttribute("nameArabic")}</strong>
       &nbsp; ${root.getAttribute("name")} · ${root.getAttribute("ayahCount")} ayahs · ${root.getAttribute("revelationPlace")}
       <div class="badge-row">
         <span class="badge">tradition: ${root.getAttribute("tradition")}</span>
@@ -352,9 +353,15 @@ async function loadReader() {
         const span = document.createElement("span");
         span.className = "word arabic" + (node.getAttribute("type") === "number" ? " number" : "");
         span.textContent = node.textContent;
+        span.lang = "ar";
         const root_ = node.getAttribute("root"), stem = node.getAttribute("stem"), lemma = node.getAttribute("lemma");
         if (root_ || stem || lemma) {
-          span.addEventListener("click", () => showMorph(span, { root: root_, stem, lemma, text: node.textContent }));
+          span.tabIndex = 0;
+          span.setAttribute("role", "button");
+          span.setAttribute("aria-label", `${node.textContent}, show root, stem, and lemma`);
+          const activate = () => showMorph(span, { root: root_, stem, lemma, text: node.textContent });
+          span.addEventListener("click", activate);
+          span.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); activate(); } });
         }
         currentLineDiv.appendChild(span);
       }
@@ -373,10 +380,10 @@ function showMorph(anchor, data) {
   morphPanel = document.createElement("div");
   morphPanel.className = "morph-panel shown";
   morphPanel.innerHTML = `
-    <div class="arabic">${data.text}</div>
-    ${data.root ? `<div class="morph-row"><span>root</span><span class="arabic">${data.root}</span></div>` : ""}
-    ${data.stem ? `<div class="morph-row"><span>stem</span><span class="arabic">${data.stem}</span></div>` : ""}
-    ${data.lemma ? `<div class="morph-row"><span>lemma</span><span class="arabic">${data.lemma}</span></div>` : ""}
+    <div class="arabic" lang="ar">${data.text}</div>
+    ${data.root ? `<div class="morph-row"><span>root</span><span class="arabic" lang="ar">${data.root}</span></div>` : ""}
+    ${data.stem ? `<div class="morph-row"><span>stem</span><span class="arabic" lang="ar">${data.stem}</span></div>` : ""}
+    ${data.lemma ? `<div class="morph-row"><span>lemma</span><span class="arabic" lang="ar">${data.lemma}</span></div>` : ""}
   `;
   // append after the word's containing line (a flex row), not inside it,
   // so the panel doesn't get squeezed into the RTL word flow
@@ -452,7 +459,7 @@ async function loadCompare() {
 }
 function ayahCardHtml(ayah) {
   if (!ayah) return `<div class="card" style="opacity:.4">— no corresponding ayah —</div>`;
-  return `<div class="card"><span class="ayah-num">${ayah.number}</span><span class="arabic" style="font-size:1.3rem">${ayah.words.join(" ")}</span></div>`;
+  return `<div class="card"><span class="ayah-num">${ayah.number}</span><span class="arabic" lang="ar" style="font-size:1.3rem">${ayah.words.join(" ")}</span></div>`;
 }
 document.getElementById("compare-surah").addEventListener("change", loadCompare);
 document.getElementById("compare-b").addEventListener("change", loadCompare);
