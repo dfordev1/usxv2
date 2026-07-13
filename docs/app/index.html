@@ -81,18 +81,31 @@
   }
   .badge.milestone { background: var(--accent-soft); color: var(--accent); }
   /* --- reader --- */
-  .ayah-block { margin-bottom: 1.1rem; padding-bottom: .9rem; border-bottom: 1px dashed var(--rule); }
-  .ayah-block:last-child { border-bottom: none; }
   .ayah-num {
     display: inline-block; font-size: .72rem; color: var(--accent); border: 1px solid var(--accent);
     border-radius: 50%; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-inline-end: .4rem;
   }
-  .word-row { display: flex; flex-wrap: wrap; gap: .3rem; direction: rtl; }
   .word {
     font-size: 1.55rem; padding: .1rem .25rem; border-radius: 4px; cursor: pointer;
   }
   .word:hover, .word.tapped { background: var(--gold-soft); }
   .word.number { font-size: 1rem; color: var(--gold); align-self: center; }
+  /* real page/line rendering -- this is what makes different print layouts
+     actually look different, since each layout's <page>/<line> pins fall
+     in different places for the same underlying words */
+  .mushaf-page {
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 10px;
+    padding: 1.1rem 1.25rem; margin-bottom: 1.25rem;
+  }
+  .mushaf-page-header {
+    display: flex; justify-content: space-between; font-size: .72rem; color: var(--muted);
+    border-bottom: 1px solid var(--rule); padding-bottom: .5rem; margin-bottom: .65rem;
+  }
+  .mushaf-line {
+    display: flex; flex-wrap: nowrap; justify-content: center; gap: .35rem; direction: rtl;
+    padding: .2rem 0; border-bottom: 1px dotted var(--rule);
+  }
+  .mushaf-line:last-child { border-bottom: none; }
   .morph-panel {
     margin-top: .5rem; padding: .6rem .8rem; background: var(--paper); border-radius: 8px;
     font-size: .82rem; display: none; border: 1px solid var(--rule);
@@ -296,20 +309,42 @@ async function loadReader() {
         <span class="badge">layout: ${root.getAttribute("layout") || layout}</span>
       </div>`;
 
-    let currentAyahDiv = null, currentWordRow = null;
+    // Walk the document rendering REAL page/line structure -- not just
+    // ayah-by-ayah flowing text. This is what actually makes different
+    // print layouts look different: each layout's <page>/<line> pins fall
+    // in different places for the identical underlying words, and a
+    // <line> can legitimately cross an ayah boundary mid-word (the whole
+    // point of the milestone-pin model). Rendering by ayah only, like the
+    // first version of this app did, hid that entirely.
+    let currentPageDiv = null, currentLineDiv = null, currentAyahNum = null, pageCount = 0, lineCount = 0;
+    let pendingAyahMarker = true; // show the ayah number badge before the next word after an <ayah sid>
+
     for (const node of root.children) {
-      if (node.tagName === "ayah" && node.getAttribute("sid")) {
-        currentAyahDiv = document.createElement("div");
-        currentAyahDiv.className = "ayah-block";
-        const num = document.createElement("span");
-        num.className = "ayah-num";
-        num.textContent = node.getAttribute("number");
-        currentAyahDiv.appendChild(num);
-        currentWordRow = document.createElement("div");
-        currentWordRow.className = "word-row";
-        currentAyahDiv.appendChild(currentWordRow);
-        content.appendChild(currentAyahDiv);
-      } else if (node.tagName === "word" && currentWordRow) {
+      if (node.tagName === "page" && node.getAttribute("sid")) {
+        pageCount++;
+        currentPageDiv = document.createElement("div");
+        currentPageDiv.className = "mushaf-page";
+        const header = document.createElement("div");
+        header.className = "mushaf-page-header";
+        header.innerHTML = `<span>page ${node.getAttribute("number")}</span><span>${root.getAttribute("layout") || layout}</span>`;
+        currentPageDiv.appendChild(header);
+        content.appendChild(currentPageDiv);
+      } else if (node.tagName === "line" && node.getAttribute("sid") && currentPageDiv) {
+        lineCount++;
+        currentLineDiv = document.createElement("div");
+        currentLineDiv.className = "mushaf-line";
+        currentPageDiv.appendChild(currentLineDiv);
+      } else if (node.tagName === "ayah" && node.getAttribute("sid")) {
+        currentAyahNum = node.getAttribute("number");
+        pendingAyahMarker = true;
+      } else if (node.tagName === "word" && currentLineDiv) {
+        if (pendingAyahMarker) {
+          const num = document.createElement("span");
+          num.className = "ayah-num";
+          num.textContent = currentAyahNum;
+          currentLineDiv.appendChild(num);
+          pendingAyahMarker = false;
+        }
         const span = document.createElement("span");
         span.className = "word arabic" + (node.getAttribute("type") === "number" ? " number" : "");
         span.textContent = node.textContent;
@@ -317,10 +352,10 @@ async function loadReader() {
         if (root_ || stem || lemma) {
           span.addEventListener("click", () => showMorph(span, { root: root_, stem, lemma, text: node.textContent }));
         }
-        currentWordRow.appendChild(span);
+        currentLineDiv.appendChild(span);
       }
     }
-    status.textContent = `loaded ✓`;
+    status.textContent = `loaded ✓ (${pageCount} page${pageCount === 1 ? "" : "s"}, ${lineCount} lines)`;
   } catch (e) {
     status.textContent = "failed to load: " + e.message; status.className = "status err";
   }
@@ -339,7 +374,10 @@ function showMorph(anchor, data) {
     ${data.stem ? `<div class="morph-row"><span>stem</span><span class="arabic">${data.stem}</span></div>` : ""}
     ${data.lemma ? `<div class="morph-row"><span>lemma</span><span class="arabic">${data.lemma}</span></div>` : ""}
   `;
-  anchor.closest(".ayah-block").appendChild(morphPanel);
+  // append after the word's containing line (a flex row), not inside it,
+  // so the panel doesn't get squeezed into the RTL word flow
+  const line = anchor.closest(".mushaf-line");
+  line.insertAdjacentElement("afterend", morphPanel);
 }
 
 document.getElementById("reader-surah").addEventListener("change", loadReader);
