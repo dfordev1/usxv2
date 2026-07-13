@@ -5,6 +5,28 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- **Corrected a real, significant documentation error** in the Text
+  integrity section, found while trying to build the "standardized plain
+  text" layer (see below). The README claimed 4,570 of 5,111 checksum
+  mismatches were explained by two encoding patterns, leaving 541
+  genuinely unexplained. Both numbers were wrong -- they came from an
+  earlier, uncommitted, never-re-verified analysis. Turned the claimed
+  rules into actual code (`scripts/derive_standardized_plain_text.js`)
+  and re-tested against the real manifest:
+  - The tatweel-spaced-dagger-alif rule is real (confirmed by diffing
+    against an actual Tanzil download, not assumed), but only resolves
+    740 verses when actually applied and re-hashed -- not 3,581.
+  - The "wasla-alef" rule was flatly wrong. Tanzil's own text uses the
+    same wasla-alef codepoint in plenty of places (e.g. Al-Fatihah 1:6,
+    confirmed by direct codepoint inspection) -- applying this rule
+    actively made the match count worse (1,125 -> 515) before it was
+    caught and removed.
+  Real, corrected numbers: 1,865 / 6,236 verses now explained (was claimed
+  as 5,695), 4,371 genuinely unexplained (was claimed as 541) -- a
+  majority of all verses, not a small residual. README's Text integrity
+  and Known gaps sections updated with an explicit correction note rather
+  than silently changing the numbers.
+
 - Added `scripts/derive_no_tashkeel.js` and tested a real community
   proposal (from someone else reviewing this project, not from us): that
   milestone pins should be built once against one text layer and carry

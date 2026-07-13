@@ -264,20 +264,29 @@ MIT-licensed tool built from Tanzil's KFGQPC-verified Uthmani text.
 
 | Cause | Verses | Explained? |
 |---|---|---|
-| Tatweel-spaced superscript alef (`ـٰ`, U+0640 U+0670) — QPC glyph-font convention | 3,581 | Yes — documented QPC-vs-Tanzil encoding difference, not a content error |
-| Wasla-alef (`ٱ`, U+0671) codepoint choice, no tatweel | 989 | Yes — same category, different specific codepoint |
-| **Neither pattern present** | **541** | **No — genuinely unexplained, not yet root-caused** |
+| Tatweel-spaced superscript alef (`ـٰ`, U+0640 U+0670) — QPC glyph-font convention | 740 | Yes — verified by actually applying the fix and re-checking against the real manifest hashes, not just counting pattern presence (see `scripts/derive_standardized_plain_text.js`) |
+| **Everything else** | **4,371** | **No — genuinely unexplained** |
+
+**Correction, 2026-07-13:** this table previously claimed 3,581 verses were explained by
+the tatweel pattern and 989 more by a "wasla-alef codepoint choice" pattern, leaving only
+541 unexplained. Those numbers were wrong, caught by actually turning the claimed rules
+into code and re-testing against the real manifest instead of trusting the old prose:
+- The tatweel rule is real, but only resolves 740 verses when actually applied and
+  re-hashed — not 3,581. The old number likely counted verses merely *containing* the
+  pattern, not verses that fully match once *only* that pattern is fixed (a verse can
+  have this pattern and still diverge from Tanzil for an unrelated reason).
+- The wasla-alef rule was flatly wrong. Checked directly against a real Tanzil download:
+  Tanzil's own text uses the same wasla-alef codepoint (U+0671) in plenty of places (e.g.
+  Al-Fatihah 1:6) — Tanzil does not consistently prefer plain alef. Applying this rule
+  actively made the match count *worse* (1,125 → 515) before it was caught and removed.
 
 The exit code from `checksum-verify.js` is **failure** when any mismatch exists, and
-that's correct behavior — a partial explanation is not the same as a pass. The 4,570
-verses covered by the two known encoding patterns are a legitimate, documented
-divergence between two widely-used "Uthmani script" conventions (`quranchecksum`'s own
-spec calls this exact scenario out). The remaining 541 are an open question this
-project has not resolved, and this README does not claim otherwise. **This checksum
-result establishes that QUL's text is internally reproducible and self-consistent —
-it does not establish byte-for-byte equivalence with Tanzil or any other independent
-canonical source**, and the 541 unexplained verses mean it cannot yet even fully
-account for its own divergence from that source.
+that's correct behavior — a partial explanation is not the same as a pass. **This
+checksum result establishes that QUL's text is internally reproducible and
+self-consistent — it does not establish byte-for-byte equivalence with Tanzil or any
+other independent canonical source**, and the 4,371 unexplained verses (a majority of
+all verses) mean this project understands its divergence from that source far less
+than earlier documentation claimed.
 
 ## Known gaps
 
@@ -331,9 +340,10 @@ account for its own divergence from that source.
    caveat. This is the one substantial item left that's a real architecture
    decision, not a mechanical fix: separating text/morphology/layout into
    independently-combinable documents needs a join-key contract designed first.
-4. **541 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
-   are genuinely unexplained**, not just attributed to the known QPC-encoding
-   pattern.
+4. **4,371 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
+   are genuinely unexplained** — a majority of all verses. An earlier version of
+   this README claimed only 541 were unexplained; that number was wrong (see the
+   2026-07-13 correction in that section) and this is the real, re-verified figure.
 5. **Only ~26 of the ~150+ items from the fuller third-party review have been
    triaged and fixed** — the rest (richer schema semantics beyond what's listed
    below, release/versioning policy beyond `CHANGELOG.md`, punctuation/pause-sign
