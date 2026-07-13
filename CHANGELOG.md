@@ -5,6 +5,21 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Deeper checksum-mismatch investigation, done by downloading the real Tanzil
+  Uthmani text directly (not just the hash manifest) and diffing it
+  character-by-character against every one of the 3,741 still-unexplained
+  verses. Found and fixed a real bug in the annotation-stripping rule: it
+  left a double space where a mid-verse mark was removed (`word ۖ word` ->
+  `word  word`), which never matched Tanzil's single-spaced text even though
+  the mark itself was correctly stripped. Fixing the whitespace collapse in
+  `scripts/derive_standardized_plain_text.js` resolved 701 more verses with
+  no regression risk (2,495 -> 3,196 / 6,236 explained; 3,741 -> 3,040
+  unexplained). Also identified, but deliberately did NOT auto-fix: ~2,038 of
+  the remaining unexplained verses are missing Tanzil's U+06DF (small high
+  rounded zero) mark on silent word-final `وا` -- a real gap in QUL's source
+  data, not a codepoint-substitution pattern, and not safe to guess at
+  programmatically since it depends on Arabic verb morphology. Documented in
+  `README.md`'s Text integrity section as an open, unresolved gap.
 - Found a third confirmed checksum-mismatch pattern and fixed a real
   methodology bug in how the first two were being measured. Diffing
   Al-Baqarah 2:2 against real Tanzil text found QUL includes Quranic

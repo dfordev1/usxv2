@@ -270,8 +270,9 @@ normalization rules (never overriding a verse that already matched raw — see
 | + Tatweel-spaced superscript alef (`ـٰ`, U+0640 U+0670) — QPC glyph-font convention | +740 | diffed against a real Tanzil download |
 | + Tanzil's download format prepends the Bismillah to a surah's first ayah (except Al-Fatihah, At-Tawbah) | +63 | hashed Al-Baqarah 2:1 both ways |
 | + Quranic annotation/pause signs (waqf marks etc., U+06D6–U+06ED) present in QUL, absent from Tanzil's plain text | +567 net | diffed Al-Baqarah 2:2; found unsafe to apply blindly — 350 verses actually need these marks *kept*, so the rule only applies when it doesn't break an already-correct match |
-| **Total explained** | **2,495 / 6,236** | |
-| **Still genuinely unexplained** | **3,741** | |
+| + Whitespace-collapse bugfix (stripping an annotation mark surrounded by spaces left a double space, which the annotation rule above never collapsed) | +701 | diffed the annotation rule's own output against a fresh Tanzil download, 2026-07-13 |
+| **Total explained** | **3,196 / 6,236** | |
+| **Still genuinely unexplained** | **3,040** | |
 
 **Correction, 2026-07-13:** this table previously claimed 3,581 verses were explained by
 the tatweel pattern and 989 more by a "wasla-alef codepoint choice" pattern, leaving only
@@ -291,11 +292,26 @@ into code and re-testing against the real manifest instead of trusting the old p
   (regressed 350 previously-correct verses before that was caught and fixed to cascade
   per-verse instead of transforming unconditionally).
 
+**Second pass, 2026-07-13 (same day, later):** re-diffed the still-unexplained list
+directly against a fresh Tanzil download (not just the manifest hash — the actual text)
+and found the annotation rule had a real bug: stripping a mark like `word ۖ word` left
+`word  word` (double space), which never matches Tanzil's single-spaced text even though
+the annotation itself was correctly removed. Fixing the whitespace collapse resolved 701
+more verses for free, with no regression risk (it only changes candidates that didn't
+already match). Also found, but explicitly did NOT auto-fix: ~2,038 of the remaining
+unexplained verses are missing **U+06DF (Arabic small high rounded zero)**, a mark Tanzil
+places after a silent word-final `وا` (e.g. verb plurals) that QUL's word data simply
+doesn't encode at that position. This is a real, structural gap — QUL's text is missing a
+recitation mark, not differently-encoding one Tanzil also has — but *which* `وا` occurrences
+take the mark is a matter of Arabic morphology (verb conjugation), not a codepoint
+substitution; guessing wrong would insert a linguistically incorrect mark into scripture
+text. Left unresolved rather than guessed at.
+
 The exit code from `checksum-verify.js` is **failure** when any mismatch exists, and
 that's correct behavior — a partial explanation is not the same as a pass. **This
 checksum result establishes that QUL's text is internally reproducible and
 self-consistent — it does not establish byte-for-byte equivalence with Tanzil or any
-other independent canonical source**, and the 3,741 unexplained verses (60% of all verses)
+other independent canonical source**, and the 3,040 unexplained verses (49% of all verses)
 mean this project understands its divergence from that source far less
 than earlier documentation claimed.
 
@@ -357,14 +373,18 @@ than earlier documentation claimed.
    caveat. This is the one substantial item left that's a real architecture
    decision, not a mechanical fix: separating text/morphology/layout into
    independently-combinable documents needs a join-key contract designed first.
-4. **3,741 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
-   are genuinely unexplained** — 60% of all verses. An earlier version of this
-   README claimed only 541 were unexplained; that number was wrong (see the
-   2026-07-13 correction in that section). Three confirmed patterns explain
-   2,495/6,236 verses total: tatweel-spaced encoding, Tanzil's Bismillah-
-   prepending download convention, and Quranic annotation signs QUL includes
-   that Tanzil's plain text drops (the last one only applied where it doesn't
-   break an already-correct match — see the correction note for why).
+4. **3,040 of the 6,236 verses (see [Text integrity](#text-integrity))
+   are genuinely unexplained against Tanzil** — 49% of all verses. An earlier
+   version of this README claimed only 541 were unexplained; that number was
+   wrong (see the 2026-07-13 corrections in that section). Four confirmed
+   patterns now explain 3,196/6,236 verses total: tatweel-spaced encoding,
+   Tanzil's Bismillah-prepending download convention, Quranic annotation signs
+   QUL includes that Tanzil's plain text drops (only applied where it doesn't
+   break an already-correct match), and a whitespace-collapse bugfix in that
+   annotation rule. Of the remainder, ~2,038 verses are missing Tanzil's
+   U+06DF (small high rounded zero) mark on silent word-final `وا` — a real
+   gap in QUL's source data, not a normalization difference, and not safe to
+   auto-fix (see the "second pass" correction note for why).
 5. **Only ~26 of the ~150+ items from the fuller third-party review have been
    triaged and fixed** — the rest (richer schema semantics beyond what's listed
    below, release/versioning policy beyond `CHANGELOG.md`, punctuation/pause-sign

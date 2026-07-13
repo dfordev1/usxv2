@@ -55,7 +55,11 @@ function stripTatweelSpacer(text) {
   return text.replace(/ـٰ/g, "ٰ");
 }
 function stripAnnotations(text) {
-  return text.replace(QURANIC_ANNOTATION_RE, "");
+  // Stripping a mid-verse mark surrounded by spaces ("word ۖ word") without
+  // collapsing the resulting double space left 686 verses mismatched for a
+  // whitespace reason having nothing to do with the annotation rule itself
+  // -- confirmed 2026-07-13 by diffing against a real Tanzil download.
+  return text.replace(QURANIC_ANNOTATION_RE, "").replace(/ {2,}/g, " ").trim();
 }
 function sha256(s) {
   return crypto.createHash("sha256").update(s, "utf-8").digest("hex");
