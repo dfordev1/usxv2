@@ -9,10 +9,11 @@
     "validate:xsd": "python scripts/xsd_validate.py",
     "test": "node test/run_tests.js",
     "checksum": "node src/checksum-verify.js",
+    "checksum:full-options": "node scripts/checksum-verify-full-options.js",
     "checksum:baseline": "node scripts/checksum-baseline.js",
     "hashes": "node scripts/hash_sources.js",
     "validate:pilot": "python scripts/xsd_validate.py --pilot",
-    "verify": "npm run hashes && npm run validate && npm run validate:xsd && npm run validate:pilot && npm test && npm run checksum:baseline"
+    "verify": "npm run hashes && npm run validate && npm run validate:xsd && npm run validate:pilot && npm test && npm run checksum:baseline && npm run checksum:full-options"
   },
   "keywords": [
     "quran",

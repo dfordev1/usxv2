@@ -2,6 +2,7 @@
   "algorithm": "sha256",
   "files": {
     "data/external/quran-uthmani.manifest.json": "3e3b32c5a1e6548cbaaa3ed64aa340bda2fb94b946d2359a9adac7d91b00a657",
+    "data/external/tanzil-uthmani-full-options.xml": "af9311c521b5dadab01ea1ef259c281ffa83cf224bad24ee89469ce1c3c72916",
     "data/layouts/indopak-13-lines-layout-qudratullah.db": "eb3f8c0e6bdce30c8fa53519b47df25c9e8b5f22a0d6474a9a14a9d46b23cd5d",
     "data/layouts/indopak-13-lines-taj-company.db": "048e539cd5c86d9baaec5dc537ecc90300f5e14643b93a54afaa061276ac1604",
     "data/layouts/indopak-9-lines-gaba.db": "2774ad9cbd26b89d1cf6726ce0172ea4eb3c86d84cbe96930408a243a4800155",

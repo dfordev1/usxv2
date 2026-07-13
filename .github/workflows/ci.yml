@@ -56,3 +56,6 @@ jobs:
 
       - name: Text integrity check (baseline gate — fails only if the match count regresses from the reviewed baseline)
         run: node scripts/checksum-baseline.js
+
+      - name: Text integrity — full-options Tanzil comparison (fails only on an unclassified new mismatch)
+        run: node scripts/checksum-verify-full-options.js

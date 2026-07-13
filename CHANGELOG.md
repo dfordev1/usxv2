@@ -5,6 +5,31 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- **Root-cause finding on the checksum-mismatch investigation: it was mostly
+  an export-configuration mismatch, not a text-quality problem.** Tanzil's
+  download tool has 5 independent options (pause marks, sajdah signs,
+  rub-el-hizb signs, tatweel-below-superscript-alef, sequential tanween).
+  quranchecksum's manifest was built from one specific combination but never
+  recorded which in its metadata; QUL's own convention matches a *different*
+  combination (all 5 options on). Verified by downloading both
+  configurations directly from tanzil.net and diffing each against QUL's raw
+  word data: Tanzil's default export + its own per-surah Bismillah attribute
+  reproduces quranchecksum's manifest exactly (6,236/6,236), proving the
+  manifest is valid but under-documented; Tanzil's full-options export
+  matches QUL directly, with zero normalization, on 6,230/6,236 verses.
+  Added `scripts/checksum-verify-full-options.js` (wired into `npm run
+  verify` and CI) and committed `data/external/tanzil-uthmani-full-options.xml`
+  (CC-BY 3.0, hash-tracked) as the new primary text-integrity check. The
+  remaining 6 verses are individually classified: 4 are QUL formatting
+  anomalies (stray/missing whitespace, a stray U+200F), 2 are substantive
+  orthographic differences (11:13, 80:25) flagged for upstream review, not
+  silently "corrected." Also found and fixed: the old normalization script's
+  Bismillah rule used a single hardcoded string for every surah, but Surahs
+  95 and 97 need a special form with shadda on the bā' — confirmed directly
+  in Tanzil's XML `bismillah` attribute, not assumed. Superseded (not
+  deleted) the old `src/checksum-verify.js` / `derive_standardized_plain_text.js`
+  framing in `README.md`, since the ~3,000-verse "unexplained" figure it
+  produced was chasing the wrong target.
 - Deeper checksum-mismatch investigation, done by downloading the real Tanzil
   Uthmani text directly (not just the hash manifest) and diffing it
   character-by-character against every one of the 3,741 still-unexplained

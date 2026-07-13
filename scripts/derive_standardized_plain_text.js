@@ -49,7 +49,25 @@ const RAW = path.join(__dirname, "..", "data", "raw");
 const MANIFEST_PATH = path.join(__dirname, "..", "data", "external", "quran-uthmani.manifest.json");
 
 const ARABIC_DIGIT_ONLY = /^[٠-٩]+$/;
-const QURANIC_ANNOTATION_RE = /[ۖ-ۭ]/g; // U+06D6-U+06ED
+// NOT a blanket U+06D6-U+06ED range -- confirmed 2026-07-13 by counting each
+// codepoint in that range separately in both QUL and a real Tanzil download.
+// U+06DF, U+06E0, U+06E5, U+06E6, U+06E7 are NOT pause/waqf marks -- they're
+// silent-letter orthography (e.g. small high rounded zero on silent word-
+// final "وا") that QUL and Tanzil agree on byte-for-byte (identical counts:
+// 3988/3988, 66/66, 1257/1257, 957/957, 38/38). The blanket range was
+// stripping them too, which is why 2,038 verses looked "unexplained" for a
+// reason that had nothing to do with annotation marks. Only include
+// codepoints that are actually pause marks or diverge between the sources.
+const QURANIC_ANNOTATION_EXCLUDE = new Set([0x06df, 0x06e0, 0x06e5, 0x06e6, 0x06e7]);
+const QURANIC_ANNOTATION_RE = new RegExp(
+  "[" +
+    Array.from({ length: 0x06ed - 0x06d6 + 1 }, (_, i) => 0x06d6 + i)
+      .filter((cp) => !QURANIC_ANNOTATION_EXCLUDE.has(cp))
+      .map((cp) => String.fromCodePoint(cp))
+      .join("") +
+    "]",
+  "g"
+);
 
 function stripTatweelSpacer(text) {
   return text.replace(/ـٰ/g, "ٰ");
