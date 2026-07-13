@@ -5,6 +5,19 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- **Corrected another documentation claim** while investigating the 2
+  unaddressed QUL print layouts (Digital Khatt, Ligature Basd SVG
+  Mushaf). README said they "use a different data shape than the
+  page/line DB schema the generator expects" -- that was never actually
+  checked, just assumed from the layouts' names. Read QUL's own published
+  schema documentation for both directly (unauthenticated, public pages)
+  and confirmed both use the exact same `page_number`/`line_number`
+  /`line_type`/`first_word_id`/`last_word_id` schema as the other 10
+  layouts already wired in. The real remaining blocker is just
+  downloading the actual SQLite files, which needs an authenticated QUL
+  session (not available this session) -- not a data-compatibility
+  problem. README corrected accordingly.
+
 - **Corrected a real, significant documentation error** in the Text
   integrity section, found while trying to build the "standardized plain
   text" layer (see below). The README claimed 4,570 of 5,111 checksum

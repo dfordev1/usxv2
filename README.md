@@ -332,9 +332,15 @@ than earlier documentation claimed.
    — verified directly, no riwayah/qira'a selector at all.
 2. **10 of QUL's 12 print layouts are wired in** (KFGQPC V1/V2/V4-tajweed,
    Mushaf Qatar, 5 IndoPak line-counts, KFGQPC Nastaleeq). The remaining 2
-   (Digital Khatt, the SVG-based Ligature Basd Mushaf) use a different data
-   shape than the page/line DB schema the generator expects and haven't been
-   investigated.
+   (Digital Khatt, the SVG-based Ligature Basd Mushaf) are NOT wired in yet,
+   but **not because of a data-shape mismatch** — that was a prior
+   assumption, never actually checked. Corrected 2026-07-13: read QUL's own
+   published schema docs for both directly, and both use the *exact same*
+   `page_number`/`line_number`/`line_type`/`first_word_id`/`last_word_id`
+   schema as the other 10 layouts already integrated. The real blocker is
+   just downloading the actual SQLite files, which needs an authenticated
+   QUL session — not yet done, but should follow the same pattern as the
+   other 10 layouts once downloaded.
 3. **Text/morphology are duplicated once per layout**, not factored into a
    separately-referenceable layer — see the [Why this exists](#why-this-exists)
    caveat. This is the one substantial item left that's a real architecture
