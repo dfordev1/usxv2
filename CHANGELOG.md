@@ -5,6 +5,28 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added `data/traditions/text/*-text.json` — real per-ayah Arabic text for
+  Warsh, Qalun, Al-Duri, Shu'bah, and Al-Susi, from
+  `thetruetruth/quran-data-kfgqpc` (a third-party mirror of King Fahd
+  Complex's official font/data packages). This is the first real word/ayah
+  *content* we have for any tradition other than Hafs -- everything added
+  so far had only been numbering/position data. Verified directly, not
+  assumed: pulled Al-Fatihah ayah 2 from the Warsh file and compared
+  against our own generated Hafs output -- genuinely different rasm
+  (`اِ۬لْحَمْدُ` vs our `ٱلْحَمْدُ`), confirming this is real distinct text,
+  not a relabeled Hafs copy. Qalun (6214) and Shu'bah (6236) ayah counts
+  match exactly; Al-Duri's count (6217) disagrees with both our earlier
+  `quran-svg`-derived count (6218) and the original Itqan announcement
+  (6205) -- a three-way discrepancy, recorded rather than resolved by
+  picking one arbitrarily.
+  **License caveat, stated plainly**: the source repo has no LICENSE file
+  and no stated terms beyond a README description saying the data is "for
+  developer" use. This was NOT independently verified as a real license --
+  it's included on the project owner's explicit judgment call that King
+  Fahd Complex's already-confirmed permissive terms (via `quran-svg`,
+  see above) likely extend to this derived text. See
+  `THIRD_PARTY_NOTICES.md` for the full caveat; treat this as
+  unverified-but-included, not cleared.
 - Added `data/traditions/*-ayah-boundaries.json` — real per-ayah page
   position for all 5 KFQC reading traditions, now 100% complete for all
   five (6236/6236 Hafs, 6214/6214 Warsh, 6214/6214 Qalun, 6218/6218
