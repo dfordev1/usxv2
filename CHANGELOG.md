@@ -5,6 +5,23 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Found a third confirmed checksum-mismatch pattern and fixed a real
+  methodology bug in how the first two were being measured. Diffing
+  Al-Baqarah 2:2 against real Tanzil text found QUL includes Quranic
+  annotation/pause signs (waqf marks, U+06D6-U+06ED) that Tanzil's plain
+  download drops. Naively stripping them unconditionally regressed 350
+  previously-correct verses (Tanzil keeps some of these marks in some
+  verses) -- caught by explicitly checking for regressions, not just
+  measuring net gain. Rewrote `scripts/derive_standardized_plain_text.js`
+  to cascade per-verse (always prefer raw text if it already matches;
+  only try a normalization rule, in order, if it doesn't) instead of
+  transforming unconditionally. Final, re-verified numbers: 2,495/6,236
+  explained (raw + all three rules, zero regressions), 3,741 genuinely
+  unexplained (60% of all verses). README's Text integrity table and
+  Known gaps rewritten to show the cumulative/cascading breakdown rather
+  than a flat list, so the "never regress" property is visible in the
+  numbers themselves.
+
 - Found and confirmed a second real checksum-mismatch pattern while
   continuing the Text integrity investigation: Tanzil's downloaded plain
   text file prepends the Bismillah to a surah's first ayah (except

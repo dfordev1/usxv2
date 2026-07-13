@@ -1,40 +1,45 @@
 #!/usr/bin/env node
 // Derives a "standardized plain text" layer from QUL's QPC-glyph-convention
-// word text. README's Text integrity section previously described TWO
-// candidate normalization rules as analysis results, never committed as
-// code or actually re-verified. Re-deriving them here against a real
-// Tanzil download (tanzil.net) found only ONE holds up:
+// word text, and measures how much of the checksum-verify.js mismatch gap
+// three confirmed normalization rules actually explain. README's Text
+// integrity section previously described these as analysis results, never
+// committed as code or actually re-verified -- this script exists so the
+// numbers are reproducible, not re-asserted from memory.
+//
+// Confirmed rules (each verified by diffing against a real Tanzil download
+// before being trusted, not assumed from the README's old prose):
 //
 // 1. Tatweel-spaced dagger alif (ـٰ = U+0640 U+0670, QPC glyph-font
-//    convention) -> plain dagger alif alone (ٰ = U+0670). CONFIRMED:
-//    diffing QUL's Al-Fatihah 1:1 ("ٱلرَّحْمَـٰنِ") against Tanzil's own
-//    published text ("ٱلرَّحْمَٰنِ") -- the only difference is the tatweel.
+//    convention) -> plain dagger alif alone (ٰ = U+0670).
 //
-// 2. ~~Wasla-alef (ٱ = U+0671) -> plain alef (ا = U+0627)~~ -- REJECTED.
-//    First pass assumed this from the README's old prose without checking
-//    codepoints directly, and it actively regressed the match count
-//    (1125 -> 515 out of 6236). Direct codepoint check on Al-Fatihah 1:6
-//    showed Tanzil's OWN text uses U+0671 (wasla-alef) too -- Tanzil does
-//    NOT systematically use plain alef instead. The rule was wrong, not a
-//    minor imprecision; removed rather than kept as a partial/approximate
-//    rule.
+// 2. Tanzil's downloaded plain-text file prepends the Bismillah to a
+//    surah's first ayah (except Al-Fatihah, where it IS ayah 1, and
+//    At-Tawbah, which has none) -- a download-format convention, not a
+//    QPC-encoding difference.
 //
-// 3. Tanzil's downloaded plain-text file prepends the Bismillah to the
-//    FIRST ayah of every surah except Al-Fatihah (where the Bismillah IS
-//    ayah 1 itself) and At-Tawbah (which has no Bismillah at all) -- this
-//    is a real Tanzil download-format convention, not a QPC-vs-plain
-//    encoding difference. CONFIRMED by hashing Al-Baqarah 2:1 both ways:
-//    without the Bismillah prefix the hash doesn't match the manifest;
-//    with it prepended, it matches exactly. Resolves 63 verses when
-//    applied for real and re-checked (not assumed from the pattern alone).
+// 3. Quranic annotation/pause signs (waqf marks, small high/low letters --
+//    U+06D6 to U+06ED) present in QUL's text are absent from Tanzil's plain
+//    download. CONFIRMED on Al-Baqarah 2:2: QUL has "ۛ" (U+06DB, small high
+//    three dots) and "ۭ" (U+06ED, small low meem) that Tanzil's plain text
+//    simply doesn't include.
 //
-// This is run against src/checksum-verify.js's own manifest to measure how
-// many verses these confirmed rules actually resolve -- not assumed.
+// IMPORTANT: rule 3 is NOT safe to apply unconditionally -- checked
+// directly and found 350 verses where stripping these marks broke an
+// otherwise-correct match (Tanzil's text keeps some annotation marks in
+// some verses). So this script tries raw text first, only falls back to
+// normalized candidates if the raw text doesn't already match -- it never
+// regresses a verse that was already correct. A rule that only works
+// "on average" isn't safe to apply as a blanket transform; per-verse
+// cascading is required, not optional.
+//
+// ~~Wasla-alef (ٱ -> ا) rule~~ -- REJECTED after direct verification: made
+// the match count worse (1125 -> 515). Tanzil's own text uses wasla-alef
+// (U+0671) too; it was never a real pattern.
 //
 // Usage: node scripts/derive_standardized_plain_text.js [--verify]
-//   --verify: also reconstructs every verse with the normalization applied
-//             and checks it against the checksum manifest, reporting the
-//             real before/after match counts.
+//   --verify: checks every verse against the checksum manifest using the
+//             cascading rule order, reports real matched/unexplained
+//             counts, and writes the still-unexplained verse list.
 
 const fs = require("fs");
 const path = require("path");
@@ -44,11 +49,14 @@ const RAW = path.join(__dirname, "..", "data", "raw");
 const MANIFEST_PATH = path.join(__dirname, "..", "data", "external", "quran-uthmani.manifest.json");
 
 const ARABIC_DIGIT_ONLY = /^[٠-٩]+$/;
+const QURANIC_ANNOTATION_RE = /[ۖ-ۭ]/g; // U+06D6-U+06ED
 
-function toStandardizedPlain(text) {
-  return text.replace(/ـٰ/g, "ٰ"); // tatweel + dagger alif -> dagger alif alone (only confirmed rule)
+function stripTatweelSpacer(text) {
+  return text.replace(/ـٰ/g, "ٰ");
 }
-
+function stripAnnotations(text) {
+  return text.replace(QURANIC_ANNOTATION_RE, "");
+}
 function sha256(s) {
   return crypto.createHash("sha256").update(s, "utf-8").digest("hex");
 }
@@ -65,20 +73,6 @@ function main() {
   }
   for (const words of byVerse.values()) words.sort((a, b) => Number(a.word) - Number(b.word));
 
-  if (!verify) {
-    // just demonstrate the transform on one verse
-    const words = byVerse.get("1:1");
-    const before = words
-      .filter((w) => !ARABIC_DIGIT_ONLY.test(w.text.trim()))
-      .map((w) => w.text)
-      .join(" ");
-    const after = toStandardizedPlain(before);
-    console.log("before:", before);
-    console.log("after: ", after);
-    return;
-  }
-
-  const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf-8"));
   const reconstructRaw = (words) =>
     words
       .filter((w) => !ARABIC_DIGIT_ONLY.test(w.text.trim()))
@@ -88,9 +82,29 @@ function main() {
       .trim();
   const bismillahText = reconstructRaw(byVerse.get("1:1"));
 
+  // Candidate texts for a verse, in preference order -- raw first, so a
+  // verse that already matches is never touched by a normalization rule.
+  function candidatesFor(verseKey, rawText) {
+    const [surahStr, ayahStr] = verseKey.split(":");
+    const plain = stripAnnotations(stripTatweelSpacer(rawText)).normalize("NFC").trim();
+    const candidates = [rawText, plain];
+    if (ayahStr === "1" && surahStr !== "1" && surahStr !== "9") {
+      candidates.push(stripAnnotations(stripTatweelSpacer(bismillahText + " " + rawText)).normalize("NFC").trim());
+    }
+    return candidates;
+  }
+
+  if (!verify) {
+    const words = byVerse.get("2:2");
+    const raw = reconstructRaw(words);
+    console.log("raw:  ", raw);
+    console.log("plain:", candidatesFor("2:2", raw)[1]);
+    return;
+  }
+
+  const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf-8"));
   let checked = 0;
-  let matchedBefore = 0;
-  let matchedAfter = 0;
+  let matched = 0;
   const stillMismatched = [];
 
   for (const [verseKey, expectedHash] of Object.entries(manifest.verses)) {
@@ -98,27 +112,13 @@ function main() {
     if (!words) continue;
     checked++;
     const rawText = reconstructRaw(words);
-    if (sha256(rawText) === expectedHash) matchedBefore++;
-
-    let candidate = toStandardizedPlain(rawText).normalize("NFC").trim();
-    if (sha256(candidate) !== expectedHash) {
-      const [surahStr, ayahStr] = verseKey.split(":");
-      if (ayahStr === "1" && surahStr !== "1" && surahStr !== "9") {
-        candidate = toStandardizedPlain(bismillahText + " " + rawText).normalize("NFC").trim();
-      }
-    }
-
-    if (sha256(candidate) === expectedHash) {
-      matchedAfter++;
-    } else if (sha256(rawText) !== expectedHash) {
-      stillMismatched.push(verseKey);
-    }
+    const isMatch = candidatesFor(verseKey, rawText).some((c) => sha256(c) === expectedHash);
+    if (isMatch) matched++;
+    else stillMismatched.push(verseKey);
   }
 
   console.log(`Checked ${checked} verses.`);
-  console.log(`Matched before normalization: ${matchedBefore} / ${checked}`);
-  console.log(`Matched after normalization:  ${matchedAfter} / ${checked}`);
-  console.log(`Resolved by the confirmed rules: ${matchedAfter - matchedBefore}`);
+  console.log(`Matched (raw, or via a confirmed normalization rule, cascading, never regressing): ${matched} / ${checked}`);
   console.log(`Still unexplained: ${stillMismatched.length}`);
   fs.writeFileSync(
     path.join(__dirname, "..", "data", "external", "still-unexplained-verses.json"),

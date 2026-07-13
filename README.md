@@ -260,15 +260,18 @@ This cross-checks our word data against the verse-level manifest from
 [spqrxi/quranchecksum](https://github.com/spqrxi/quranchecksum), an independent
 MIT-licensed tool built from Tanzil's KFGQPC-verified Uthmani text.
 
-**Result: 1,125 / 6,236 verses (18%) match byte-for-byte. Of the 5,111 that don't:**
+**Result: 1,125 / 6,236 verses (18%) match byte-for-byte. Applying three confirmed
+normalization rules (never overriding a verse that already matched raw — see
+`scripts/derive_standardized_plain_text.js`) explains more:**
 
-| Cause | Verses | Explained? |
+| Cause | Explains (cumulative, cascading) | Verified how |
 |---|---|---|
-| Tatweel-spaced superscript alef (`ـٰ`, U+0640 U+0670) — QPC glyph-font convention | 740 | Yes — verified by actually applying the fix and re-checking against the real manifest hashes, not just counting pattern presence |
-| Tanzil's download format prepends the Bismillah to a surah's first ayah (except Al-Fatihah and At-Tawbah) | 63 | Yes — confirmed by hashing Al-Baqarah 2:1 both ways: only matches the manifest with the Bismillah prepended |
-| **Everything else** | **4,308** | **No — genuinely unexplained** |
-
-(see `scripts/derive_standardized_plain_text.js` for both rules, run with `--verify` to reproduce)
+| Raw text (no transform needed) | 1,125 | baseline |
+| + Tatweel-spaced superscript alef (`ـٰ`, U+0640 U+0670) — QPC glyph-font convention | +740 | diffed against a real Tanzil download |
+| + Tanzil's download format prepends the Bismillah to a surah's first ayah (except Al-Fatihah, At-Tawbah) | +63 | hashed Al-Baqarah 2:1 both ways |
+| + Quranic annotation/pause signs (waqf marks etc., U+06D6–U+06ED) present in QUL, absent from Tanzil's plain text | +567 net | diffed Al-Baqarah 2:2; found unsafe to apply blindly — 350 verses actually need these marks *kept*, so the rule only applies when it doesn't break an already-correct match |
+| **Total explained** | **2,495 / 6,236** | |
+| **Still genuinely unexplained** | **3,741** | |
 
 **Correction, 2026-07-13:** this table previously claimed 3,581 verses were explained by
 the tatweel pattern and 989 more by a "wasla-alef codepoint choice" pattern, leaving only
@@ -282,17 +285,18 @@ into code and re-testing against the real manifest instead of trusting the old p
   Tanzil's own text uses the same wasla-alef codepoint (U+0671) in plenty of places (e.g.
   Al-Fatihah 1:6) — Tanzil does not consistently prefer plain alef. Applying this rule
   actively made the match count *worse* (1,125 → 515) before it was caught and removed.
-- A genuinely new pattern was found while investigating further: Tanzil's own downloaded
-  text prepends the Bismillah to a surah's first ayah — this is a download-format
-  convention, not a QPC-encoding difference — resolving 63 more verses once confirmed
-  and applied for real.
+- Two genuinely new patterns were found while investigating further: the Bismillah-
+  prepending convention (above), and Quranic annotation signs QUL includes that Tanzil's
+  plain download drops — the second one is real but was initially applied too broadly
+  (regressed 350 previously-correct verses before that was caught and fixed to cascade
+  per-verse instead of transforming unconditionally).
 
 The exit code from `checksum-verify.js` is **failure** when any mismatch exists, and
 that's correct behavior — a partial explanation is not the same as a pass. **This
 checksum result establishes that QUL's text is internally reproducible and
 self-consistent — it does not establish byte-for-byte equivalence with Tanzil or any
-other independent canonical source**, and the 4,308 unexplained verses (a majority of
-all verses) mean this project understands its divergence from that source far less
+other independent canonical source**, and the 3,741 unexplained verses (60% of all verses)
+mean this project understands its divergence from that source far less
 than earlier documentation claimed.
 
 ## Known gaps
@@ -353,12 +357,14 @@ than earlier documentation claimed.
    caveat. This is the one substantial item left that's a real architecture
    decision, not a mechanical fix: separating text/morphology/layout into
    independently-combinable documents needs a join-key contract designed first.
-4. **4,308 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
-   are genuinely unexplained** — a majority of all verses. An earlier version of
-   this README claimed only 541 were unexplained; that number was wrong (see the
-   2026-07-13 correction in that section) and this is the real, re-verified figure,
-   after finding and confirming a second real pattern (Tanzil's Bismillah-prepending
-   download convention) beyond the original tatweel-encoding one.
+4. **3,741 of the 5,111 checksum mismatches (see [Text integrity](#text-integrity))
+   are genuinely unexplained** — 60% of all verses. An earlier version of this
+   README claimed only 541 were unexplained; that number was wrong (see the
+   2026-07-13 correction in that section). Three confirmed patterns explain
+   2,495/6,236 verses total: tatweel-spaced encoding, Tanzil's Bismillah-
+   prepending download convention, and Quranic annotation signs QUL includes
+   that Tanzil's plain text drops (the last one only applied where it doesn't
+   break an already-correct match — see the correction note for why).
 5. **Only ~26 of the ~150+ items from the fuller third-party review have been
    triaged and fixed** — the rest (richer schema semantics beyond what's listed
    below, release/versioning policy beyond `CHANGELOG.md`, punctuation/pause-sign
