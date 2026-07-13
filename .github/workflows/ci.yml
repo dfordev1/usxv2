@@ -59,3 +59,8 @@ jobs:
 
       - name: Text integrity — full-options Tanzil comparison (fails only on an unclassified new mismatch)
         run: node scripts/checksum-verify-full-options.js
+
+      - name: Verification must not modify the working tree (source-of-truth guarantee)
+        run: |
+          git status --porcelain
+          test -z "$(git status --porcelain)" || (echo "::error::Running the verification suite left the working tree dirty -- something read as a source is being written to, or a generated file wasn't committed. See git status output above." && exit 1)

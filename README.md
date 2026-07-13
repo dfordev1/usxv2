@@ -257,6 +257,11 @@ node scripts/checksum-verify-full-options.js   # compare QUL's raw text directly
 node src/checksum-verify.js                    # (superseded framing, kept for history — see below)
 ```
 
+For the full retrieval details (exact Tanzil download options/URLs, dates,
+file hashes, Bismillah behavior) and the final per-verse decisions in one
+place, see
+[`data/external/TEXT_INTEGRITY_PROVENANCE.md`](data/external/TEXT_INTEGRITY_PROVENANCE.md).
+
 **Root-cause finding, 2026-07-13 (supersedes everything below it in this
 section): the "thousands of unexplained verses" figure was never mostly a
 text-quality problem. It was an export-configuration mismatch.**

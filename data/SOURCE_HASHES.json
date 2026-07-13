@@ -1,6 +1,7 @@
 {
   "algorithm": "sha256",
   "files": {
+    "data/external/TEXT_INTEGRITY_PROVENANCE.md": "93037adb78c90f048c2f0b7e63cb0b7e65b1961235d5fa4042f714bbbbccb8d6",
     "data/external/qul-orthographic-review.md": "3ae406c81628f37ff9aceee6e3d9631758f95f803e941a0bb5e591602a680619",
     "data/external/qul-text-corrections.json": "939e46c674009172ff6635007c143d423ce53aee067e3175365f5dee366d2371",
     "data/external/quran-uthmani.manifest.json": "3e3b32c5a1e6548cbaaa3ed64aa340bda2fb94b946d2359a9adac7d91b00a657",
