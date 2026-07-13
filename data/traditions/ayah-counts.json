@@ -1,0 +1,2902 @@
+{
+  "generatedAt": "2026-07-13",
+  "source": "quranpedia/quran-svg (mushafs/<tradition>/kfqc/json/surah.json), CC0",
+  "note": "ayahCount per surah per tradition, verified against the announced totals. This is numbering-only data -- does NOT establish where verse boundaries fall relative to the shared Hafs word stream. See docs/qirat-versification-draft.md.",
+  "traditions": {
+    "hafs": {
+      "surahCount": 114,
+      "ayahTotal": 6236,
+      "announcedTotal": 6236,
+      "markersCount": 6236,
+      "perSurah": [
+        {
+          "surah": 1,
+          "ayahCount": 7,
+          "pageNumber": 1
+        },
+        {
+          "surah": 2,
+          "ayahCount": 286,
+          "pageNumber": 2
+        },
+        {
+          "surah": 3,
+          "ayahCount": 200,
+          "pageNumber": 50
+        },
+        {
+          "surah": 4,
+          "ayahCount": 176,
+          "pageNumber": 77
+        },
+        {
+          "surah": 5,
+          "ayahCount": 120,
+          "pageNumber": 106
+        },
+        {
+          "surah": 6,
+          "ayahCount": 165,
+          "pageNumber": 128
+        },
+        {
+          "surah": 7,
+          "ayahCount": 206,
+          "pageNumber": 151
+        },
+        {
+          "surah": 8,
+          "ayahCount": 75,
+          "pageNumber": 177
+        },
+        {
+          "surah": 9,
+          "ayahCount": 129,
+          "pageNumber": 187
+        },
+        {
+          "surah": 10,
+          "ayahCount": 109,
+          "pageNumber": 208
+        },
+        {
+          "surah": 11,
+          "ayahCount": 123,
+          "pageNumber": 221
+        },
+        {
+          "surah": 12,
+          "ayahCount": 111,
+          "pageNumber": 235
+        },
+        {
+          "surah": 13,
+          "ayahCount": 43,
+          "pageNumber": 249
+        },
+        {
+          "surah": 14,
+          "ayahCount": 52,
+          "pageNumber": 255
+        },
+        {
+          "surah": 15,
+          "ayahCount": 99,
+          "pageNumber": 262
+        },
+        {
+          "surah": 16,
+          "ayahCount": 128,
+          "pageNumber": 267
+        },
+        {
+          "surah": 17,
+          "ayahCount": 111,
+          "pageNumber": 282
+        },
+        {
+          "surah": 18,
+          "ayahCount": 110,
+          "pageNumber": 293
+        },
+        {
+          "surah": 19,
+          "ayahCount": 98,
+          "pageNumber": 305
+        },
+        {
+          "surah": 20,
+          "ayahCount": 135,
+          "pageNumber": 312
+        },
+        {
+          "surah": 21,
+          "ayahCount": 112,
+          "pageNumber": 322
+        },
+        {
+          "surah": 22,
+          "ayahCount": 78,
+          "pageNumber": 332
+        },
+        {
+          "surah": 23,
+          "ayahCount": 118,
+          "pageNumber": 342
+        },
+        {
+          "surah": 24,
+          "ayahCount": 64,
+          "pageNumber": 350
+        },
+        {
+          "surah": 25,
+          "ayahCount": 77,
+          "pageNumber": 359
+        },
+        {
+          "surah": 26,
+          "ayahCount": 227,
+          "pageNumber": 367
+        },
+        {
+          "surah": 27,
+          "ayahCount": 93,
+          "pageNumber": 377
+        },
+        {
+          "surah": 28,
+          "ayahCount": 88,
+          "pageNumber": 385
+        },
+        {
+          "surah": 29,
+          "ayahCount": 69,
+          "pageNumber": 396
+        },
+        {
+          "surah": 30,
+          "ayahCount": 60,
+          "pageNumber": 404
+        },
+        {
+          "surah": 31,
+          "ayahCount": 34,
+          "pageNumber": 411
+        },
+        {
+          "surah": 32,
+          "ayahCount": 30,
+          "pageNumber": 415
+        },
+        {
+          "surah": 33,
+          "ayahCount": 73,
+          "pageNumber": 418
+        },
+        {
+          "surah": 34,
+          "ayahCount": 54,
+          "pageNumber": 428
+        },
+        {
+          "surah": 35,
+          "ayahCount": 45,
+          "pageNumber": 434
+        },
+        {
+          "surah": 36,
+          "ayahCount": 83,
+          "pageNumber": 440
+        },
+        {
+          "surah": 37,
+          "ayahCount": 182,
+          "pageNumber": 446
+        },
+        {
+          "surah": 38,
+          "ayahCount": 88,
+          "pageNumber": 453
+        },
+        {
+          "surah": 39,
+          "ayahCount": 75,
+          "pageNumber": 458
+        },
+        {
+          "surah": 40,
+          "ayahCount": 85,
+          "pageNumber": 467
+        },
+        {
+          "surah": 41,
+          "ayahCount": 54,
+          "pageNumber": 477
+        },
+        {
+          "surah": 42,
+          "ayahCount": 53,
+          "pageNumber": 483
+        },
+        {
+          "surah": 43,
+          "ayahCount": 89,
+          "pageNumber": 489
+        },
+        {
+          "surah": 44,
+          "ayahCount": 59,
+          "pageNumber": 496
+        },
+        {
+          "surah": 45,
+          "ayahCount": 37,
+          "pageNumber": 499
+        },
+        {
+          "surah": 46,
+          "ayahCount": 35,
+          "pageNumber": 502
+        },
+        {
+          "surah": 47,
+          "ayahCount": 38,
+          "pageNumber": 507
+        },
+        {
+          "surah": 48,
+          "ayahCount": 29,
+          "pageNumber": 511
+        },
+        {
+          "surah": 49,
+          "ayahCount": 18,
+          "pageNumber": 515
+        },
+        {
+          "surah": 50,
+          "ayahCount": 45,
+          "pageNumber": 518
+        },
+        {
+          "surah": 51,
+          "ayahCount": 60,
+          "pageNumber": 520
+        },
+        {
+          "surah": 52,
+          "ayahCount": 49,
+          "pageNumber": 523
+        },
+        {
+          "surah": 53,
+          "ayahCount": 62,
+          "pageNumber": 526
+        },
+        {
+          "surah": 54,
+          "ayahCount": 55,
+          "pageNumber": 528
+        },
+        {
+          "surah": 55,
+          "ayahCount": 78,
+          "pageNumber": 531
+        },
+        {
+          "surah": 56,
+          "ayahCount": 96,
+          "pageNumber": 534
+        },
+        {
+          "surah": 57,
+          "ayahCount": 29,
+          "pageNumber": 537
+        },
+        {
+          "surah": 58,
+          "ayahCount": 22,
+          "pageNumber": 542
+        },
+        {
+          "surah": 59,
+          "ayahCount": 24,
+          "pageNumber": 545
+        },
+        {
+          "surah": 60,
+          "ayahCount": 13,
+          "pageNumber": 549
+        },
+        {
+          "surah": 61,
+          "ayahCount": 14,
+          "pageNumber": 551
+        },
+        {
+          "surah": 62,
+          "ayahCount": 11,
+          "pageNumber": 553
+        },
+        {
+          "surah": 63,
+          "ayahCount": 11,
+          "pageNumber": 554
+        },
+        {
+          "surah": 64,
+          "ayahCount": 18,
+          "pageNumber": 556
+        },
+        {
+          "surah": 65,
+          "ayahCount": 12,
+          "pageNumber": 558
+        },
+        {
+          "surah": 66,
+          "ayahCount": 12,
+          "pageNumber": 560
+        },
+        {
+          "surah": 67,
+          "ayahCount": 30,
+          "pageNumber": 562
+        },
+        {
+          "surah": 68,
+          "ayahCount": 52,
+          "pageNumber": 564
+        },
+        {
+          "surah": 69,
+          "ayahCount": 52,
+          "pageNumber": 566
+        },
+        {
+          "surah": 70,
+          "ayahCount": 44,
+          "pageNumber": 568
+        },
+        {
+          "surah": 71,
+          "ayahCount": 28,
+          "pageNumber": 570
+        },
+        {
+          "surah": 72,
+          "ayahCount": 28,
+          "pageNumber": 572
+        },
+        {
+          "surah": 73,
+          "ayahCount": 20,
+          "pageNumber": 574
+        },
+        {
+          "surah": 74,
+          "ayahCount": 56,
+          "pageNumber": 575
+        },
+        {
+          "surah": 75,
+          "ayahCount": 40,
+          "pageNumber": 577
+        },
+        {
+          "surah": 76,
+          "ayahCount": 31,
+          "pageNumber": 578
+        },
+        {
+          "surah": 77,
+          "ayahCount": 50,
+          "pageNumber": 580
+        },
+        {
+          "surah": 78,
+          "ayahCount": 40,
+          "pageNumber": 582
+        },
+        {
+          "surah": 79,
+          "ayahCount": 46,
+          "pageNumber": 583
+        },
+        {
+          "surah": 80,
+          "ayahCount": 42,
+          "pageNumber": 585
+        },
+        {
+          "surah": 81,
+          "ayahCount": 29,
+          "pageNumber": 586
+        },
+        {
+          "surah": 82,
+          "ayahCount": 19,
+          "pageNumber": 587
+        },
+        {
+          "surah": 83,
+          "ayahCount": 36,
+          "pageNumber": 587
+        },
+        {
+          "surah": 84,
+          "ayahCount": 25,
+          "pageNumber": 589
+        },
+        {
+          "surah": 85,
+          "ayahCount": 22,
+          "pageNumber": 590
+        },
+        {
+          "surah": 86,
+          "ayahCount": 17,
+          "pageNumber": 591
+        },
+        {
+          "surah": 87,
+          "ayahCount": 19,
+          "pageNumber": 591
+        },
+        {
+          "surah": 88,
+          "ayahCount": 26,
+          "pageNumber": 592
+        },
+        {
+          "surah": 89,
+          "ayahCount": 30,
+          "pageNumber": 593
+        },
+        {
+          "surah": 90,
+          "ayahCount": 20,
+          "pageNumber": 594
+        },
+        {
+          "surah": 91,
+          "ayahCount": 15,
+          "pageNumber": 595
+        },
+        {
+          "surah": 92,
+          "ayahCount": 21,
+          "pageNumber": 595
+        },
+        {
+          "surah": 93,
+          "ayahCount": 11,
+          "pageNumber": 596
+        },
+        {
+          "surah": 94,
+          "ayahCount": 8,
+          "pageNumber": 596
+        },
+        {
+          "surah": 95,
+          "ayahCount": 8,
+          "pageNumber": 597
+        },
+        {
+          "surah": 96,
+          "ayahCount": 19,
+          "pageNumber": 597
+        },
+        {
+          "surah": 97,
+          "ayahCount": 5,
+          "pageNumber": 598
+        },
+        {
+          "surah": 98,
+          "ayahCount": 8,
+          "pageNumber": 598
+        },
+        {
+          "surah": 99,
+          "ayahCount": 8,
+          "pageNumber": 599
+        },
+        {
+          "surah": 100,
+          "ayahCount": 11,
+          "pageNumber": 599
+        },
+        {
+          "surah": 101,
+          "ayahCount": 11,
+          "pageNumber": 600
+        },
+        {
+          "surah": 102,
+          "ayahCount": 8,
+          "pageNumber": 600
+        },
+        {
+          "surah": 103,
+          "ayahCount": 3,
+          "pageNumber": 601
+        },
+        {
+          "surah": 104,
+          "ayahCount": 9,
+          "pageNumber": 601
+        },
+        {
+          "surah": 105,
+          "ayahCount": 5,
+          "pageNumber": 601
+        },
+        {
+          "surah": 106,
+          "ayahCount": 4,
+          "pageNumber": 602
+        },
+        {
+          "surah": 107,
+          "ayahCount": 7,
+          "pageNumber": 602
+        },
+        {
+          "surah": 108,
+          "ayahCount": 3,
+          "pageNumber": 602
+        },
+        {
+          "surah": 109,
+          "ayahCount": 6,
+          "pageNumber": 603
+        },
+        {
+          "surah": 110,
+          "ayahCount": 3,
+          "pageNumber": 603
+        },
+        {
+          "surah": 111,
+          "ayahCount": 5,
+          "pageNumber": 603
+        },
+        {
+          "surah": 112,
+          "ayahCount": 4,
+          "pageNumber": 604
+        },
+        {
+          "surah": 113,
+          "ayahCount": 5,
+          "pageNumber": 604
+        },
+        {
+          "surah": 114,
+          "ayahCount": 6,
+          "pageNumber": 604
+        }
+      ]
+    },
+    "warsh": {
+      "surahCount": 114,
+      "ayahTotal": 6214,
+      "announcedTotal": 6214,
+      "markersCount": 6210,
+      "perSurah": [
+        {
+          "surah": 1,
+          "ayahCount": 7,
+          "pageNumber": 1
+        },
+        {
+          "surah": 2,
+          "ayahCount": 285,
+          "pageNumber": 2
+        },
+        {
+          "surah": 3,
+          "ayahCount": 200,
+          "pageNumber": 50
+        },
+        {
+          "surah": 4,
+          "ayahCount": 175,
+          "pageNumber": 77
+        },
+        {
+          "surah": 5,
+          "ayahCount": 122,
+          "pageNumber": 106
+        },
+        {
+          "surah": 6,
+          "ayahCount": 167,
+          "pageNumber": 128
+        },
+        {
+          "surah": 7,
+          "ayahCount": 206,
+          "pageNumber": 151
+        },
+        {
+          "surah": 8,
+          "ayahCount": 76,
+          "pageNumber": 177
+        },
+        {
+          "surah": 9,
+          "ayahCount": 130,
+          "pageNumber": 187
+        },
+        {
+          "surah": 10,
+          "ayahCount": 109,
+          "pageNumber": 208
+        },
+        {
+          "surah": 11,
+          "ayahCount": 121,
+          "pageNumber": 221
+        },
+        {
+          "surah": 12,
+          "ayahCount": 111,
+          "pageNumber": 235
+        },
+        {
+          "surah": 13,
+          "ayahCount": 44,
+          "pageNumber": 249
+        },
+        {
+          "surah": 14,
+          "ayahCount": 54,
+          "pageNumber": 255
+        },
+        {
+          "surah": 15,
+          "ayahCount": 99,
+          "pageNumber": 262
+        },
+        {
+          "surah": 16,
+          "ayahCount": 128,
+          "pageNumber": 267
+        },
+        {
+          "surah": 17,
+          "ayahCount": 110,
+          "pageNumber": 282
+        },
+        {
+          "surah": 18,
+          "ayahCount": 105,
+          "pageNumber": 293
+        },
+        {
+          "surah": 19,
+          "ayahCount": 99,
+          "pageNumber": 305
+        },
+        {
+          "surah": 20,
+          "ayahCount": 134,
+          "pageNumber": 312
+        },
+        {
+          "surah": 21,
+          "ayahCount": 111,
+          "pageNumber": 322
+        },
+        {
+          "surah": 22,
+          "ayahCount": 76,
+          "pageNumber": 332
+        },
+        {
+          "surah": 23,
+          "ayahCount": 119,
+          "pageNumber": 342
+        },
+        {
+          "surah": 24,
+          "ayahCount": 62,
+          "pageNumber": 350
+        },
+        {
+          "surah": 25,
+          "ayahCount": 77,
+          "pageNumber": 359
+        },
+        {
+          "surah": 26,
+          "ayahCount": 226,
+          "pageNumber": 367
+        },
+        {
+          "surah": 27,
+          "ayahCount": 95,
+          "pageNumber": 377
+        },
+        {
+          "surah": 28,
+          "ayahCount": 88,
+          "pageNumber": 385
+        },
+        {
+          "surah": 29,
+          "ayahCount": 69,
+          "pageNumber": 396
+        },
+        {
+          "surah": 30,
+          "ayahCount": 59,
+          "pageNumber": 404
+        },
+        {
+          "surah": 31,
+          "ayahCount": 33,
+          "pageNumber": 411
+        },
+        {
+          "surah": 32,
+          "ayahCount": 30,
+          "pageNumber": 415
+        },
+        {
+          "surah": 33,
+          "ayahCount": 73,
+          "pageNumber": 418
+        },
+        {
+          "surah": 34,
+          "ayahCount": 54,
+          "pageNumber": 428
+        },
+        {
+          "surah": 35,
+          "ayahCount": 46,
+          "pageNumber": 434
+        },
+        {
+          "surah": 36,
+          "ayahCount": 82,
+          "pageNumber": 440
+        },
+        {
+          "surah": 37,
+          "ayahCount": 182,
+          "pageNumber": 446
+        },
+        {
+          "surah": 38,
+          "ayahCount": 86,
+          "pageNumber": 453
+        },
+        {
+          "surah": 39,
+          "ayahCount": 72,
+          "pageNumber": 458
+        },
+        {
+          "surah": 40,
+          "ayahCount": 84,
+          "pageNumber": 467
+        },
+        {
+          "surah": 41,
+          "ayahCount": 53,
+          "pageNumber": 477
+        },
+        {
+          "surah": 42,
+          "ayahCount": 50,
+          "pageNumber": 483
+        },
+        {
+          "surah": 43,
+          "ayahCount": 89,
+          "pageNumber": 489
+        },
+        {
+          "surah": 44,
+          "ayahCount": 56,
+          "pageNumber": 496
+        },
+        {
+          "surah": 45,
+          "ayahCount": 36,
+          "pageNumber": 499
+        },
+        {
+          "surah": 46,
+          "ayahCount": 34,
+          "pageNumber": 502
+        },
+        {
+          "surah": 47,
+          "ayahCount": 39,
+          "pageNumber": 507
+        },
+        {
+          "surah": 48,
+          "ayahCount": 29,
+          "pageNumber": 511
+        },
+        {
+          "surah": 49,
+          "ayahCount": 18,
+          "pageNumber": 515
+        },
+        {
+          "surah": 50,
+          "ayahCount": 45,
+          "pageNumber": 518
+        },
+        {
+          "surah": 51,
+          "ayahCount": 60,
+          "pageNumber": 520
+        },
+        {
+          "surah": 52,
+          "ayahCount": 47,
+          "pageNumber": 523
+        },
+        {
+          "surah": 53,
+          "ayahCount": 61,
+          "pageNumber": 526
+        },
+        {
+          "surah": 54,
+          "ayahCount": 55,
+          "pageNumber": 528
+        },
+        {
+          "surah": 55,
+          "ayahCount": 77,
+          "pageNumber": 531
+        },
+        {
+          "surah": 56,
+          "ayahCount": 99,
+          "pageNumber": 534
+        },
+        {
+          "surah": 57,
+          "ayahCount": 28,
+          "pageNumber": 537
+        },
+        {
+          "surah": 58,
+          "ayahCount": 21,
+          "pageNumber": 542
+        },
+        {
+          "surah": 59,
+          "ayahCount": 24,
+          "pageNumber": 545
+        },
+        {
+          "surah": 60,
+          "ayahCount": 13,
+          "pageNumber": 549
+        },
+        {
+          "surah": 61,
+          "ayahCount": 14,
+          "pageNumber": 551
+        },
+        {
+          "surah": 62,
+          "ayahCount": 11,
+          "pageNumber": 553
+        },
+        {
+          "surah": 63,
+          "ayahCount": 11,
+          "pageNumber": 554
+        },
+        {
+          "surah": 64,
+          "ayahCount": 18,
+          "pageNumber": 556
+        },
+        {
+          "surah": 65,
+          "ayahCount": 12,
+          "pageNumber": 558
+        },
+        {
+          "surah": 66,
+          "ayahCount": 12,
+          "pageNumber": 560
+        },
+        {
+          "surah": 67,
+          "ayahCount": 31,
+          "pageNumber": 562
+        },
+        {
+          "surah": 68,
+          "ayahCount": 52,
+          "pageNumber": 564
+        },
+        {
+          "surah": 69,
+          "ayahCount": 52,
+          "pageNumber": 566
+        },
+        {
+          "surah": 70,
+          "ayahCount": 44,
+          "pageNumber": 568
+        },
+        {
+          "surah": 71,
+          "ayahCount": 30,
+          "pageNumber": 570
+        },
+        {
+          "surah": 72,
+          "ayahCount": 28,
+          "pageNumber": 572
+        },
+        {
+          "surah": 73,
+          "ayahCount": 18,
+          "pageNumber": 574
+        },
+        {
+          "surah": 74,
+          "ayahCount": 55,
+          "pageNumber": 575
+        },
+        {
+          "surah": 75,
+          "ayahCount": 39,
+          "pageNumber": 577
+        },
+        {
+          "surah": 76,
+          "ayahCount": 31,
+          "pageNumber": 578
+        },
+        {
+          "surah": 77,
+          "ayahCount": 50,
+          "pageNumber": 580
+        },
+        {
+          "surah": 78,
+          "ayahCount": 40,
+          "pageNumber": 582
+        },
+        {
+          "surah": 79,
+          "ayahCount": 45,
+          "pageNumber": 583
+        },
+        {
+          "surah": 80,
+          "ayahCount": 42,
+          "pageNumber": 585
+        },
+        {
+          "surah": 81,
+          "ayahCount": 29,
+          "pageNumber": 586
+        },
+        {
+          "surah": 82,
+          "ayahCount": 19,
+          "pageNumber": 587
+        },
+        {
+          "surah": 83,
+          "ayahCount": 36,
+          "pageNumber": 587
+        },
+        {
+          "surah": 84,
+          "ayahCount": 25,
+          "pageNumber": 589
+        },
+        {
+          "surah": 85,
+          "ayahCount": 22,
+          "pageNumber": 590
+        },
+        {
+          "surah": 86,
+          "ayahCount": 17,
+          "pageNumber": 591
+        },
+        {
+          "surah": 87,
+          "ayahCount": 19,
+          "pageNumber": 591
+        },
+        {
+          "surah": 88,
+          "ayahCount": 26,
+          "pageNumber": 592
+        },
+        {
+          "surah": 89,
+          "ayahCount": 32,
+          "pageNumber": 593
+        },
+        {
+          "surah": 90,
+          "ayahCount": 20,
+          "pageNumber": 594
+        },
+        {
+          "surah": 91,
+          "ayahCount": 15,
+          "pageNumber": 595
+        },
+        {
+          "surah": 92,
+          "ayahCount": 21,
+          "pageNumber": 595
+        },
+        {
+          "surah": 93,
+          "ayahCount": 11,
+          "pageNumber": 596
+        },
+        {
+          "surah": 94,
+          "ayahCount": 8,
+          "pageNumber": 596
+        },
+        {
+          "surah": 95,
+          "ayahCount": 8,
+          "pageNumber": 597
+        },
+        {
+          "surah": 96,
+          "ayahCount": 20,
+          "pageNumber": 597
+        },
+        {
+          "surah": 97,
+          "ayahCount": 5,
+          "pageNumber": 598
+        },
+        {
+          "surah": 98,
+          "ayahCount": 8,
+          "pageNumber": 598
+        },
+        {
+          "surah": 99,
+          "ayahCount": 9,
+          "pageNumber": 599
+        },
+        {
+          "surah": 100,
+          "ayahCount": 11,
+          "pageNumber": 599
+        },
+        {
+          "surah": 101,
+          "ayahCount": 10,
+          "pageNumber": 600
+        },
+        {
+          "surah": 102,
+          "ayahCount": 8,
+          "pageNumber": 600
+        },
+        {
+          "surah": 103,
+          "ayahCount": 3,
+          "pageNumber": 601
+        },
+        {
+          "surah": 104,
+          "ayahCount": 9,
+          "pageNumber": 601
+        },
+        {
+          "surah": 105,
+          "ayahCount": 5,
+          "pageNumber": 601
+        },
+        {
+          "surah": 106,
+          "ayahCount": 5,
+          "pageNumber": 602
+        },
+        {
+          "surah": 107,
+          "ayahCount": 6,
+          "pageNumber": 602
+        },
+        {
+          "surah": 108,
+          "ayahCount": 3,
+          "pageNumber": 602
+        },
+        {
+          "surah": 109,
+          "ayahCount": 6,
+          "pageNumber": 603
+        },
+        {
+          "surah": 110,
+          "ayahCount": 3,
+          "pageNumber": 603
+        },
+        {
+          "surah": 111,
+          "ayahCount": 5,
+          "pageNumber": 603
+        },
+        {
+          "surah": 112,
+          "ayahCount": 4,
+          "pageNumber": 604
+        },
+        {
+          "surah": 113,
+          "ayahCount": 5,
+          "pageNumber": 604
+        },
+        {
+          "surah": 114,
+          "ayahCount": 6,
+          "pageNumber": 604
+        }
+      ]
+    },
+    "qalon": {
+      "surahCount": 114,
+      "ayahTotal": 6214,
+      "announcedTotal": 6214,
+      "markersCount": 6210,
+      "perSurah": [
+        {
+          "surah": 1,
+          "ayahCount": 7,
+          "pageNumber": 1
+        },
+        {
+          "surah": 2,
+          "ayahCount": 285,
+          "pageNumber": 2
+        },
+        {
+          "surah": 3,
+          "ayahCount": 200,
+          "pageNumber": 50
+        },
+        {
+          "surah": 4,
+          "ayahCount": 175,
+          "pageNumber": 77
+        },
+        {
+          "surah": 5,
+          "ayahCount": 122,
+          "pageNumber": 106
+        },
+        {
+          "surah": 6,
+          "ayahCount": 167,
+          "pageNumber": 128
+        },
+        {
+          "surah": 7,
+          "ayahCount": 206,
+          "pageNumber": 151
+        },
+        {
+          "surah": 8,
+          "ayahCount": 76,
+          "pageNumber": 177
+        },
+        {
+          "surah": 9,
+          "ayahCount": 130,
+          "pageNumber": 187
+        },
+        {
+          "surah": 10,
+          "ayahCount": 109,
+          "pageNumber": 208
+        },
+        {
+          "surah": 11,
+          "ayahCount": 121,
+          "pageNumber": 221
+        },
+        {
+          "surah": 12,
+          "ayahCount": 111,
+          "pageNumber": 235
+        },
+        {
+          "surah": 13,
+          "ayahCount": 44,
+          "pageNumber": 249
+        },
+        {
+          "surah": 14,
+          "ayahCount": 54,
+          "pageNumber": 255
+        },
+        {
+          "surah": 15,
+          "ayahCount": 99,
+          "pageNumber": 262
+        },
+        {
+          "surah": 16,
+          "ayahCount": 128,
+          "pageNumber": 267
+        },
+        {
+          "surah": 17,
+          "ayahCount": 110,
+          "pageNumber": 282
+        },
+        {
+          "surah": 18,
+          "ayahCount": 105,
+          "pageNumber": 293
+        },
+        {
+          "surah": 19,
+          "ayahCount": 99,
+          "pageNumber": 305
+        },
+        {
+          "surah": 20,
+          "ayahCount": 134,
+          "pageNumber": 312
+        },
+        {
+          "surah": 21,
+          "ayahCount": 111,
+          "pageNumber": 322
+        },
+        {
+          "surah": 22,
+          "ayahCount": 76,
+          "pageNumber": 332
+        },
+        {
+          "surah": 23,
+          "ayahCount": 119,
+          "pageNumber": 342
+        },
+        {
+          "surah": 24,
+          "ayahCount": 62,
+          "pageNumber": 350
+        },
+        {
+          "surah": 25,
+          "ayahCount": 77,
+          "pageNumber": 359
+        },
+        {
+          "surah": 26,
+          "ayahCount": 226,
+          "pageNumber": 367
+        },
+        {
+          "surah": 27,
+          "ayahCount": 95,
+          "pageNumber": 377
+        },
+        {
+          "surah": 28,
+          "ayahCount": 88,
+          "pageNumber": 385
+        },
+        {
+          "surah": 29,
+          "ayahCount": 69,
+          "pageNumber": 396
+        },
+        {
+          "surah": 30,
+          "ayahCount": 59,
+          "pageNumber": 404
+        },
+        {
+          "surah": 31,
+          "ayahCount": 33,
+          "pageNumber": 411
+        },
+        {
+          "surah": 32,
+          "ayahCount": 30,
+          "pageNumber": 415
+        },
+        {
+          "surah": 33,
+          "ayahCount": 73,
+          "pageNumber": 418
+        },
+        {
+          "surah": 34,
+          "ayahCount": 54,
+          "pageNumber": 428
+        },
+        {
+          "surah": 35,
+          "ayahCount": 46,
+          "pageNumber": 434
+        },
+        {
+          "surah": 36,
+          "ayahCount": 82,
+          "pageNumber": 440
+        },
+        {
+          "surah": 37,
+          "ayahCount": 182,
+          "pageNumber": 446
+        },
+        {
+          "surah": 38,
+          "ayahCount": 86,
+          "pageNumber": 453
+        },
+        {
+          "surah": 39,
+          "ayahCount": 72,
+          "pageNumber": 458
+        },
+        {
+          "surah": 40,
+          "ayahCount": 84,
+          "pageNumber": 467
+        },
+        {
+          "surah": 41,
+          "ayahCount": 53,
+          "pageNumber": 477
+        },
+        {
+          "surah": 42,
+          "ayahCount": 50,
+          "pageNumber": 483
+        },
+        {
+          "surah": 43,
+          "ayahCount": 89,
+          "pageNumber": 489
+        },
+        {
+          "surah": 44,
+          "ayahCount": 56,
+          "pageNumber": 496
+        },
+        {
+          "surah": 45,
+          "ayahCount": 36,
+          "pageNumber": 499
+        },
+        {
+          "surah": 46,
+          "ayahCount": 34,
+          "pageNumber": 502
+        },
+        {
+          "surah": 47,
+          "ayahCount": 39,
+          "pageNumber": 507
+        },
+        {
+          "surah": 48,
+          "ayahCount": 29,
+          "pageNumber": 511
+        },
+        {
+          "surah": 49,
+          "ayahCount": 18,
+          "pageNumber": 515
+        },
+        {
+          "surah": 50,
+          "ayahCount": 45,
+          "pageNumber": 518
+        },
+        {
+          "surah": 51,
+          "ayahCount": 60,
+          "pageNumber": 520
+        },
+        {
+          "surah": 52,
+          "ayahCount": 47,
+          "pageNumber": 523
+        },
+        {
+          "surah": 53,
+          "ayahCount": 61,
+          "pageNumber": 526
+        },
+        {
+          "surah": 54,
+          "ayahCount": 55,
+          "pageNumber": 528
+        },
+        {
+          "surah": 55,
+          "ayahCount": 77,
+          "pageNumber": 531
+        },
+        {
+          "surah": 56,
+          "ayahCount": 99,
+          "pageNumber": 534
+        },
+        {
+          "surah": 57,
+          "ayahCount": 28,
+          "pageNumber": 537
+        },
+        {
+          "surah": 58,
+          "ayahCount": 21,
+          "pageNumber": 542
+        },
+        {
+          "surah": 59,
+          "ayahCount": 24,
+          "pageNumber": 545
+        },
+        {
+          "surah": 60,
+          "ayahCount": 13,
+          "pageNumber": 549
+        },
+        {
+          "surah": 61,
+          "ayahCount": 14,
+          "pageNumber": 551
+        },
+        {
+          "surah": 62,
+          "ayahCount": 11,
+          "pageNumber": 553
+        },
+        {
+          "surah": 63,
+          "ayahCount": 11,
+          "pageNumber": 554
+        },
+        {
+          "surah": 64,
+          "ayahCount": 18,
+          "pageNumber": 556
+        },
+        {
+          "surah": 65,
+          "ayahCount": 12,
+          "pageNumber": 558
+        },
+        {
+          "surah": 66,
+          "ayahCount": 12,
+          "pageNumber": 560
+        },
+        {
+          "surah": 67,
+          "ayahCount": 31,
+          "pageNumber": 562
+        },
+        {
+          "surah": 68,
+          "ayahCount": 52,
+          "pageNumber": 564
+        },
+        {
+          "surah": 69,
+          "ayahCount": 52,
+          "pageNumber": 566
+        },
+        {
+          "surah": 70,
+          "ayahCount": 44,
+          "pageNumber": 568
+        },
+        {
+          "surah": 71,
+          "ayahCount": 30,
+          "pageNumber": 570
+        },
+        {
+          "surah": 72,
+          "ayahCount": 28,
+          "pageNumber": 572
+        },
+        {
+          "surah": 73,
+          "ayahCount": 18,
+          "pageNumber": 574
+        },
+        {
+          "surah": 74,
+          "ayahCount": 55,
+          "pageNumber": 575
+        },
+        {
+          "surah": 75,
+          "ayahCount": 39,
+          "pageNumber": 577
+        },
+        {
+          "surah": 76,
+          "ayahCount": 31,
+          "pageNumber": 578
+        },
+        {
+          "surah": 77,
+          "ayahCount": 50,
+          "pageNumber": 580
+        },
+        {
+          "surah": 78,
+          "ayahCount": 40,
+          "pageNumber": 582
+        },
+        {
+          "surah": 79,
+          "ayahCount": 45,
+          "pageNumber": 583
+        },
+        {
+          "surah": 80,
+          "ayahCount": 42,
+          "pageNumber": 585
+        },
+        {
+          "surah": 81,
+          "ayahCount": 29,
+          "pageNumber": 586
+        },
+        {
+          "surah": 82,
+          "ayahCount": 19,
+          "pageNumber": 587
+        },
+        {
+          "surah": 83,
+          "ayahCount": 36,
+          "pageNumber": 587
+        },
+        {
+          "surah": 84,
+          "ayahCount": 25,
+          "pageNumber": 589
+        },
+        {
+          "surah": 85,
+          "ayahCount": 22,
+          "pageNumber": 590
+        },
+        {
+          "surah": 86,
+          "ayahCount": 17,
+          "pageNumber": 591
+        },
+        {
+          "surah": 87,
+          "ayahCount": 19,
+          "pageNumber": 591
+        },
+        {
+          "surah": 88,
+          "ayahCount": 26,
+          "pageNumber": 592
+        },
+        {
+          "surah": 89,
+          "ayahCount": 32,
+          "pageNumber": 593
+        },
+        {
+          "surah": 90,
+          "ayahCount": 20,
+          "pageNumber": 594
+        },
+        {
+          "surah": 91,
+          "ayahCount": 15,
+          "pageNumber": 595
+        },
+        {
+          "surah": 92,
+          "ayahCount": 21,
+          "pageNumber": 595
+        },
+        {
+          "surah": 93,
+          "ayahCount": 11,
+          "pageNumber": 596
+        },
+        {
+          "surah": 94,
+          "ayahCount": 8,
+          "pageNumber": 596
+        },
+        {
+          "surah": 95,
+          "ayahCount": 8,
+          "pageNumber": 597
+        },
+        {
+          "surah": 96,
+          "ayahCount": 20,
+          "pageNumber": 597
+        },
+        {
+          "surah": 97,
+          "ayahCount": 5,
+          "pageNumber": 598
+        },
+        {
+          "surah": 98,
+          "ayahCount": 8,
+          "pageNumber": 598
+        },
+        {
+          "surah": 99,
+          "ayahCount": 9,
+          "pageNumber": 599
+        },
+        {
+          "surah": 100,
+          "ayahCount": 11,
+          "pageNumber": 599
+        },
+        {
+          "surah": 101,
+          "ayahCount": 10,
+          "pageNumber": 600
+        },
+        {
+          "surah": 102,
+          "ayahCount": 8,
+          "pageNumber": 600
+        },
+        {
+          "surah": 103,
+          "ayahCount": 3,
+          "pageNumber": 601
+        },
+        {
+          "surah": 104,
+          "ayahCount": 9,
+          "pageNumber": 601
+        },
+        {
+          "surah": 105,
+          "ayahCount": 5,
+          "pageNumber": 601
+        },
+        {
+          "surah": 106,
+          "ayahCount": 5,
+          "pageNumber": 602
+        },
+        {
+          "surah": 107,
+          "ayahCount": 6,
+          "pageNumber": 602
+        },
+        {
+          "surah": 108,
+          "ayahCount": 3,
+          "pageNumber": 602
+        },
+        {
+          "surah": 109,
+          "ayahCount": 6,
+          "pageNumber": 603
+        },
+        {
+          "surah": 110,
+          "ayahCount": 3,
+          "pageNumber": 603
+        },
+        {
+          "surah": 111,
+          "ayahCount": 5,
+          "pageNumber": 603
+        },
+        {
+          "surah": 112,
+          "ayahCount": 4,
+          "pageNumber": 604
+        },
+        {
+          "surah": 113,
+          "ayahCount": 5,
+          "pageNumber": 604
+        },
+        {
+          "surah": 114,
+          "ayahCount": 6,
+          "pageNumber": 604
+        }
+      ]
+    },
+    "douri": {
+      "surahCount": 114,
+      "ayahTotal": 6218,
+      "announcedTotal": 6205,
+      "markersCount": 6218,
+      "perSurah": [
+        {
+          "surah": 1,
+          "ayahCount": 7,
+          "pageNumber": 1
+        },
+        {
+          "surah": 2,
+          "ayahCount": 285,
+          "pageNumber": 2
+        },
+        {
+          "surah": 3,
+          "ayahCount": 200,
+          "pageNumber": 50
+        },
+        {
+          "surah": 4,
+          "ayahCount": 175,
+          "pageNumber": 77
+        },
+        {
+          "surah": 5,
+          "ayahCount": 122,
+          "pageNumber": 106
+        },
+        {
+          "surah": 6,
+          "ayahCount": 167,
+          "pageNumber": 128
+        },
+        {
+          "surah": 7,
+          "ayahCount": 206,
+          "pageNumber": 151
+        },
+        {
+          "surah": 8,
+          "ayahCount": 76,
+          "pageNumber": 177
+        },
+        {
+          "surah": 9,
+          "ayahCount": 130,
+          "pageNumber": 187
+        },
+        {
+          "surah": 10,
+          "ayahCount": 109,
+          "pageNumber": 208
+        },
+        {
+          "surah": 11,
+          "ayahCount": 122,
+          "pageNumber": 221
+        },
+        {
+          "surah": 12,
+          "ayahCount": 111,
+          "pageNumber": 235
+        },
+        {
+          "surah": 13,
+          "ayahCount": 44,
+          "pageNumber": 249
+        },
+        {
+          "surah": 14,
+          "ayahCount": 54,
+          "pageNumber": 255
+        },
+        {
+          "surah": 15,
+          "ayahCount": 99,
+          "pageNumber": 262
+        },
+        {
+          "surah": 16,
+          "ayahCount": 128,
+          "pageNumber": 267
+        },
+        {
+          "surah": 17,
+          "ayahCount": 110,
+          "pageNumber": 282
+        },
+        {
+          "surah": 18,
+          "ayahCount": 105,
+          "pageNumber": 293
+        },
+        {
+          "surah": 19,
+          "ayahCount": 98,
+          "pageNumber": 305
+        },
+        {
+          "surah": 20,
+          "ayahCount": 134,
+          "pageNumber": 312
+        },
+        {
+          "surah": 21,
+          "ayahCount": 111,
+          "pageNumber": 322
+        },
+        {
+          "surah": 22,
+          "ayahCount": 76,
+          "pageNumber": 332
+        },
+        {
+          "surah": 23,
+          "ayahCount": 119,
+          "pageNumber": 342
+        },
+        {
+          "surah": 24,
+          "ayahCount": 62,
+          "pageNumber": 350
+        },
+        {
+          "surah": 25,
+          "ayahCount": 77,
+          "pageNumber": 359
+        },
+        {
+          "surah": 26,
+          "ayahCount": 227,
+          "pageNumber": 367
+        },
+        {
+          "surah": 27,
+          "ayahCount": 95,
+          "pageNumber": 377
+        },
+        {
+          "surah": 28,
+          "ayahCount": 88,
+          "pageNumber": 385
+        },
+        {
+          "surah": 29,
+          "ayahCount": 69,
+          "pageNumber": 396
+        },
+        {
+          "surah": 30,
+          "ayahCount": 60,
+          "pageNumber": 404
+        },
+        {
+          "surah": 31,
+          "ayahCount": 33,
+          "pageNumber": 411
+        },
+        {
+          "surah": 32,
+          "ayahCount": 30,
+          "pageNumber": 415
+        },
+        {
+          "surah": 33,
+          "ayahCount": 73,
+          "pageNumber": 418
+        },
+        {
+          "surah": 34,
+          "ayahCount": 54,
+          "pageNumber": 428
+        },
+        {
+          "surah": 35,
+          "ayahCount": 45,
+          "pageNumber": 434
+        },
+        {
+          "surah": 36,
+          "ayahCount": 82,
+          "pageNumber": 440
+        },
+        {
+          "surah": 37,
+          "ayahCount": 182,
+          "pageNumber": 446
+        },
+        {
+          "surah": 38,
+          "ayahCount": 86,
+          "pageNumber": 453
+        },
+        {
+          "surah": 39,
+          "ayahCount": 72,
+          "pageNumber": 458
+        },
+        {
+          "surah": 40,
+          "ayahCount": 84,
+          "pageNumber": 467
+        },
+        {
+          "surah": 41,
+          "ayahCount": 53,
+          "pageNumber": 477
+        },
+        {
+          "surah": 42,
+          "ayahCount": 50,
+          "pageNumber": 483
+        },
+        {
+          "surah": 43,
+          "ayahCount": 89,
+          "pageNumber": 489
+        },
+        {
+          "surah": 44,
+          "ayahCount": 56,
+          "pageNumber": 496
+        },
+        {
+          "surah": 45,
+          "ayahCount": 36,
+          "pageNumber": 499
+        },
+        {
+          "surah": 46,
+          "ayahCount": 34,
+          "pageNumber": 502
+        },
+        {
+          "surah": 47,
+          "ayahCount": 39,
+          "pageNumber": 507
+        },
+        {
+          "surah": 48,
+          "ayahCount": 29,
+          "pageNumber": 511
+        },
+        {
+          "surah": 49,
+          "ayahCount": 18,
+          "pageNumber": 515
+        },
+        {
+          "surah": 50,
+          "ayahCount": 45,
+          "pageNumber": 518
+        },
+        {
+          "surah": 51,
+          "ayahCount": 60,
+          "pageNumber": 520
+        },
+        {
+          "surah": 52,
+          "ayahCount": 47,
+          "pageNumber": 523
+        },
+        {
+          "surah": 53,
+          "ayahCount": 61,
+          "pageNumber": 526
+        },
+        {
+          "surah": 54,
+          "ayahCount": 55,
+          "pageNumber": 528
+        },
+        {
+          "surah": 55,
+          "ayahCount": 77,
+          "pageNumber": 531
+        },
+        {
+          "surah": 56,
+          "ayahCount": 99,
+          "pageNumber": 534
+        },
+        {
+          "surah": 57,
+          "ayahCount": 28,
+          "pageNumber": 537
+        },
+        {
+          "surah": 58,
+          "ayahCount": 22,
+          "pageNumber": 542
+        },
+        {
+          "surah": 59,
+          "ayahCount": 24,
+          "pageNumber": 545
+        },
+        {
+          "surah": 60,
+          "ayahCount": 13,
+          "pageNumber": 549
+        },
+        {
+          "surah": 61,
+          "ayahCount": 14,
+          "pageNumber": 551
+        },
+        {
+          "surah": 62,
+          "ayahCount": 11,
+          "pageNumber": 553
+        },
+        {
+          "surah": 63,
+          "ayahCount": 11,
+          "pageNumber": 554
+        },
+        {
+          "surah": 64,
+          "ayahCount": 18,
+          "pageNumber": 556
+        },
+        {
+          "surah": 65,
+          "ayahCount": 12,
+          "pageNumber": 558
+        },
+        {
+          "surah": 66,
+          "ayahCount": 12,
+          "pageNumber": 560
+        },
+        {
+          "surah": 67,
+          "ayahCount": 31,
+          "pageNumber": 562
+        },
+        {
+          "surah": 68,
+          "ayahCount": 52,
+          "pageNumber": 564
+        },
+        {
+          "surah": 69,
+          "ayahCount": 52,
+          "pageNumber": 566
+        },
+        {
+          "surah": 70,
+          "ayahCount": 44,
+          "pageNumber": 568
+        },
+        {
+          "surah": 71,
+          "ayahCount": 30,
+          "pageNumber": 570
+        },
+        {
+          "surah": 72,
+          "ayahCount": 28,
+          "pageNumber": 572
+        },
+        {
+          "surah": 73,
+          "ayahCount": 20,
+          "pageNumber": 574
+        },
+        {
+          "surah": 74,
+          "ayahCount": 56,
+          "pageNumber": 575
+        },
+        {
+          "surah": 75,
+          "ayahCount": 39,
+          "pageNumber": 577
+        },
+        {
+          "surah": 76,
+          "ayahCount": 31,
+          "pageNumber": 578
+        },
+        {
+          "surah": 77,
+          "ayahCount": 50,
+          "pageNumber": 580
+        },
+        {
+          "surah": 78,
+          "ayahCount": 40,
+          "pageNumber": 582
+        },
+        {
+          "surah": 79,
+          "ayahCount": 45,
+          "pageNumber": 583
+        },
+        {
+          "surah": 80,
+          "ayahCount": 42,
+          "pageNumber": 585
+        },
+        {
+          "surah": 81,
+          "ayahCount": 29,
+          "pageNumber": 586
+        },
+        {
+          "surah": 82,
+          "ayahCount": 19,
+          "pageNumber": 587
+        },
+        {
+          "surah": 83,
+          "ayahCount": 36,
+          "pageNumber": 587
+        },
+        {
+          "surah": 84,
+          "ayahCount": 25,
+          "pageNumber": 589
+        },
+        {
+          "surah": 85,
+          "ayahCount": 22,
+          "pageNumber": 590
+        },
+        {
+          "surah": 86,
+          "ayahCount": 16,
+          "pageNumber": 591
+        },
+        {
+          "surah": 87,
+          "ayahCount": 19,
+          "pageNumber": 591
+        },
+        {
+          "surah": 88,
+          "ayahCount": 26,
+          "pageNumber": 592
+        },
+        {
+          "surah": 89,
+          "ayahCount": 32,
+          "pageNumber": 593
+        },
+        {
+          "surah": 90,
+          "ayahCount": 20,
+          "pageNumber": 594
+        },
+        {
+          "surah": 91,
+          "ayahCount": 16,
+          "pageNumber": 595
+        },
+        {
+          "surah": 92,
+          "ayahCount": 21,
+          "pageNumber": 595
+        },
+        {
+          "surah": 93,
+          "ayahCount": 11,
+          "pageNumber": 596
+        },
+        {
+          "surah": 94,
+          "ayahCount": 8,
+          "pageNumber": 596
+        },
+        {
+          "surah": 95,
+          "ayahCount": 8,
+          "pageNumber": 597
+        },
+        {
+          "surah": 96,
+          "ayahCount": 20,
+          "pageNumber": 597
+        },
+        {
+          "surah": 97,
+          "ayahCount": 5,
+          "pageNumber": 598
+        },
+        {
+          "surah": 98,
+          "ayahCount": 8,
+          "pageNumber": 598
+        },
+        {
+          "surah": 99,
+          "ayahCount": 8,
+          "pageNumber": 599
+        },
+        {
+          "surah": 100,
+          "ayahCount": 11,
+          "pageNumber": 599
+        },
+        {
+          "surah": 101,
+          "ayahCount": 10,
+          "pageNumber": 600
+        },
+        {
+          "surah": 102,
+          "ayahCount": 8,
+          "pageNumber": 600
+        },
+        {
+          "surah": 103,
+          "ayahCount": 3,
+          "pageNumber": 601
+        },
+        {
+          "surah": 104,
+          "ayahCount": 9,
+          "pageNumber": 601
+        },
+        {
+          "surah": 105,
+          "ayahCount": 5,
+          "pageNumber": 601
+        },
+        {
+          "surah": 106,
+          "ayahCount": 5,
+          "pageNumber": 602
+        },
+        {
+          "surah": 107,
+          "ayahCount": 6,
+          "pageNumber": 602
+        },
+        {
+          "surah": 108,
+          "ayahCount": 3,
+          "pageNumber": 602
+        },
+        {
+          "surah": 109,
+          "ayahCount": 6,
+          "pageNumber": 603
+        },
+        {
+          "surah": 110,
+          "ayahCount": 3,
+          "pageNumber": 603
+        },
+        {
+          "surah": 111,
+          "ayahCount": 5,
+          "pageNumber": 603
+        },
+        {
+          "surah": 112,
+          "ayahCount": 4,
+          "pageNumber": 604
+        },
+        {
+          "surah": 113,
+          "ayahCount": 5,
+          "pageNumber": 604
+        },
+        {
+          "surah": 114,
+          "ayahCount": 6,
+          "pageNumber": 604
+        }
+      ]
+    },
+    "shubah": {
+      "surahCount": 114,
+      "ayahTotal": 6236,
+      "announcedTotal": 6236,
+      "markersCount": 6236,
+      "perSurah": [
+        {
+          "surah": 1,
+          "ayahCount": 7,
+          "pageNumber": 1
+        },
+        {
+          "surah": 2,
+          "ayahCount": 286,
+          "pageNumber": 2
+        },
+        {
+          "surah": 3,
+          "ayahCount": 200,
+          "pageNumber": 50
+        },
+        {
+          "surah": 4,
+          "ayahCount": 176,
+          "pageNumber": 77
+        },
+        {
+          "surah": 5,
+          "ayahCount": 120,
+          "pageNumber": 106
+        },
+        {
+          "surah": 6,
+          "ayahCount": 165,
+          "pageNumber": 128
+        },
+        {
+          "surah": 7,
+          "ayahCount": 206,
+          "pageNumber": 151
+        },
+        {
+          "surah": 8,
+          "ayahCount": 75,
+          "pageNumber": 177
+        },
+        {
+          "surah": 9,
+          "ayahCount": 129,
+          "pageNumber": 187
+        },
+        {
+          "surah": 10,
+          "ayahCount": 109,
+          "pageNumber": 208
+        },
+        {
+          "surah": 11,
+          "ayahCount": 123,
+          "pageNumber": 221
+        },
+        {
+          "surah": 12,
+          "ayahCount": 111,
+          "pageNumber": 235
+        },
+        {
+          "surah": 13,
+          "ayahCount": 43,
+          "pageNumber": 249
+        },
+        {
+          "surah": 14,
+          "ayahCount": 52,
+          "pageNumber": 255
+        },
+        {
+          "surah": 15,
+          "ayahCount": 99,
+          "pageNumber": 262
+        },
+        {
+          "surah": 16,
+          "ayahCount": 128,
+          "pageNumber": 267
+        },
+        {
+          "surah": 17,
+          "ayahCount": 111,
+          "pageNumber": 282
+        },
+        {
+          "surah": 18,
+          "ayahCount": 110,
+          "pageNumber": 293
+        },
+        {
+          "surah": 19,
+          "ayahCount": 98,
+          "pageNumber": 305
+        },
+        {
+          "surah": 20,
+          "ayahCount": 135,
+          "pageNumber": 312
+        },
+        {
+          "surah": 21,
+          "ayahCount": 112,
+          "pageNumber": 322
+        },
+        {
+          "surah": 22,
+          "ayahCount": 78,
+          "pageNumber": 332
+        },
+        {
+          "surah": 23,
+          "ayahCount": 118,
+          "pageNumber": 342
+        },
+        {
+          "surah": 24,
+          "ayahCount": 64,
+          "pageNumber": 350
+        },
+        {
+          "surah": 25,
+          "ayahCount": 77,
+          "pageNumber": 359
+        },
+        {
+          "surah": 26,
+          "ayahCount": 227,
+          "pageNumber": 367
+        },
+        {
+          "surah": 27,
+          "ayahCount": 93,
+          "pageNumber": 377
+        },
+        {
+          "surah": 28,
+          "ayahCount": 88,
+          "pageNumber": 385
+        },
+        {
+          "surah": 29,
+          "ayahCount": 69,
+          "pageNumber": 396
+        },
+        {
+          "surah": 30,
+          "ayahCount": 60,
+          "pageNumber": 404
+        },
+        {
+          "surah": 31,
+          "ayahCount": 34,
+          "pageNumber": 411
+        },
+        {
+          "surah": 32,
+          "ayahCount": 30,
+          "pageNumber": 415
+        },
+        {
+          "surah": 33,
+          "ayahCount": 73,
+          "pageNumber": 418
+        },
+        {
+          "surah": 34,
+          "ayahCount": 54,
+          "pageNumber": 428
+        },
+        {
+          "surah": 35,
+          "ayahCount": 45,
+          "pageNumber": 434
+        },
+        {
+          "surah": 36,
+          "ayahCount": 83,
+          "pageNumber": 440
+        },
+        {
+          "surah": 37,
+          "ayahCount": 182,
+          "pageNumber": 446
+        },
+        {
+          "surah": 38,
+          "ayahCount": 88,
+          "pageNumber": 453
+        },
+        {
+          "surah": 39,
+          "ayahCount": 75,
+          "pageNumber": 458
+        },
+        {
+          "surah": 40,
+          "ayahCount": 85,
+          "pageNumber": 467
+        },
+        {
+          "surah": 41,
+          "ayahCount": 54,
+          "pageNumber": 477
+        },
+        {
+          "surah": 42,
+          "ayahCount": 53,
+          "pageNumber": 483
+        },
+        {
+          "surah": 43,
+          "ayahCount": 89,
+          "pageNumber": 489
+        },
+        {
+          "surah": 44,
+          "ayahCount": 59,
+          "pageNumber": 496
+        },
+        {
+          "surah": 45,
+          "ayahCount": 37,
+          "pageNumber": 499
+        },
+        {
+          "surah": 46,
+          "ayahCount": 35,
+          "pageNumber": 502
+        },
+        {
+          "surah": 47,
+          "ayahCount": 38,
+          "pageNumber": 507
+        },
+        {
+          "surah": 48,
+          "ayahCount": 29,
+          "pageNumber": 511
+        },
+        {
+          "surah": 49,
+          "ayahCount": 18,
+          "pageNumber": 515
+        },
+        {
+          "surah": 50,
+          "ayahCount": 45,
+          "pageNumber": 518
+        },
+        {
+          "surah": 51,
+          "ayahCount": 60,
+          "pageNumber": 520
+        },
+        {
+          "surah": 52,
+          "ayahCount": 49,
+          "pageNumber": 523
+        },
+        {
+          "surah": 53,
+          "ayahCount": 62,
+          "pageNumber": 526
+        },
+        {
+          "surah": 54,
+          "ayahCount": 55,
+          "pageNumber": 528
+        },
+        {
+          "surah": 55,
+          "ayahCount": 78,
+          "pageNumber": 531
+        },
+        {
+          "surah": 56,
+          "ayahCount": 96,
+          "pageNumber": 534
+        },
+        {
+          "surah": 57,
+          "ayahCount": 29,
+          "pageNumber": 537
+        },
+        {
+          "surah": 58,
+          "ayahCount": 22,
+          "pageNumber": 542
+        },
+        {
+          "surah": 59,
+          "ayahCount": 24,
+          "pageNumber": 545
+        },
+        {
+          "surah": 60,
+          "ayahCount": 13,
+          "pageNumber": 549
+        },
+        {
+          "surah": 61,
+          "ayahCount": 14,
+          "pageNumber": 551
+        },
+        {
+          "surah": 62,
+          "ayahCount": 11,
+          "pageNumber": 553
+        },
+        {
+          "surah": 63,
+          "ayahCount": 11,
+          "pageNumber": 554
+        },
+        {
+          "surah": 64,
+          "ayahCount": 18,
+          "pageNumber": 556
+        },
+        {
+          "surah": 65,
+          "ayahCount": 12,
+          "pageNumber": 558
+        },
+        {
+          "surah": 66,
+          "ayahCount": 12,
+          "pageNumber": 560
+        },
+        {
+          "surah": 67,
+          "ayahCount": 30,
+          "pageNumber": 562
+        },
+        {
+          "surah": 68,
+          "ayahCount": 52,
+          "pageNumber": 564
+        },
+        {
+          "surah": 69,
+          "ayahCount": 52,
+          "pageNumber": 566
+        },
+        {
+          "surah": 70,
+          "ayahCount": 44,
+          "pageNumber": 568
+        },
+        {
+          "surah": 71,
+          "ayahCount": 28,
+          "pageNumber": 570
+        },
+        {
+          "surah": 72,
+          "ayahCount": 28,
+          "pageNumber": 572
+        },
+        {
+          "surah": 73,
+          "ayahCount": 20,
+          "pageNumber": 574
+        },
+        {
+          "surah": 74,
+          "ayahCount": 56,
+          "pageNumber": 575
+        },
+        {
+          "surah": 75,
+          "ayahCount": 40,
+          "pageNumber": 577
+        },
+        {
+          "surah": 76,
+          "ayahCount": 31,
+          "pageNumber": 578
+        },
+        {
+          "surah": 77,
+          "ayahCount": 50,
+          "pageNumber": 580
+        },
+        {
+          "surah": 78,
+          "ayahCount": 40,
+          "pageNumber": 582
+        },
+        {
+          "surah": 79,
+          "ayahCount": 46,
+          "pageNumber": 583
+        },
+        {
+          "surah": 80,
+          "ayahCount": 42,
+          "pageNumber": 585
+        },
+        {
+          "surah": 81,
+          "ayahCount": 29,
+          "pageNumber": 586
+        },
+        {
+          "surah": 82,
+          "ayahCount": 19,
+          "pageNumber": 587
+        },
+        {
+          "surah": 83,
+          "ayahCount": 36,
+          "pageNumber": 587
+        },
+        {
+          "surah": 84,
+          "ayahCount": 25,
+          "pageNumber": 589
+        },
+        {
+          "surah": 85,
+          "ayahCount": 22,
+          "pageNumber": 590
+        },
+        {
+          "surah": 86,
+          "ayahCount": 17,
+          "pageNumber": 591
+        },
+        {
+          "surah": 87,
+          "ayahCount": 19,
+          "pageNumber": 591
+        },
+        {
+          "surah": 88,
+          "ayahCount": 26,
+          "pageNumber": 592
+        },
+        {
+          "surah": 89,
+          "ayahCount": 30,
+          "pageNumber": 593
+        },
+        {
+          "surah": 90,
+          "ayahCount": 20,
+          "pageNumber": 594
+        },
+        {
+          "surah": 91,
+          "ayahCount": 15,
+          "pageNumber": 595
+        },
+        {
+          "surah": 92,
+          "ayahCount": 21,
+          "pageNumber": 595
+        },
+        {
+          "surah": 93,
+          "ayahCount": 11,
+          "pageNumber": 596
+        },
+        {
+          "surah": 94,
+          "ayahCount": 8,
+          "pageNumber": 596
+        },
+        {
+          "surah": 95,
+          "ayahCount": 8,
+          "pageNumber": 597
+        },
+        {
+          "surah": 96,
+          "ayahCount": 19,
+          "pageNumber": 597
+        },
+        {
+          "surah": 97,
+          "ayahCount": 5,
+          "pageNumber": 598
+        },
+        {
+          "surah": 98,
+          "ayahCount": 8,
+          "pageNumber": 598
+        },
+        {
+          "surah": 99,
+          "ayahCount": 8,
+          "pageNumber": 599
+        },
+        {
+          "surah": 100,
+          "ayahCount": 11,
+          "pageNumber": 599
+        },
+        {
+          "surah": 101,
+          "ayahCount": 11,
+          "pageNumber": 600
+        },
+        {
+          "surah": 102,
+          "ayahCount": 8,
+          "pageNumber": 600
+        },
+        {
+          "surah": 103,
+          "ayahCount": 3,
+          "pageNumber": 601
+        },
+        {
+          "surah": 104,
+          "ayahCount": 9,
+          "pageNumber": 601
+        },
+        {
+          "surah": 105,
+          "ayahCount": 5,
+          "pageNumber": 601
+        },
+        {
+          "surah": 106,
+          "ayahCount": 4,
+          "pageNumber": 602
+        },
+        {
+          "surah": 107,
+          "ayahCount": 7,
+          "pageNumber": 602
+        },
+        {
+          "surah": 108,
+          "ayahCount": 3,
+          "pageNumber": 602
+        },
+        {
+          "surah": 109,
+          "ayahCount": 6,
+          "pageNumber": 603
+        },
+        {
+          "surah": 110,
+          "ayahCount": 3,
+          "pageNumber": 603
+        },
+        {
+          "surah": 111,
+          "ayahCount": 5,
+          "pageNumber": 603
+        },
+        {
+          "surah": 112,
+          "ayahCount": 4,
+          "pageNumber": 604
+        },
+        {
+          "surah": 113,
+          "ayahCount": 5,
+          "pageNumber": 604
+        },
+        {
+          "surah": 114,
+          "ayahCount": 6,
+          "pageNumber": 604
+        }
+      ]
+    }
+  },
+  "discrepancies": [
+    "warsh: surah.json total (6214) and markers.json entry count (6210) differ by 4. Possibly stacked/deduped markers, not yet explained.",
+    "qalon: surah.json total (6214) and markers.json entry count (6210) differ by 4. Possibly stacked/deduped markers, not yet explained.",
+    "douri: surah.json sums to 6218 ayahs, but the Itqan announcement stated 6205. Unresolved -- needs clarification from the source, not assumed correct either way."
+  ]
+}

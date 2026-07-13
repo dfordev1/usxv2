@@ -5,6 +5,17 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added `data/traditions/ayah-counts.json` — verified per-surah ayah counts
+  for all 5 KFQC reading traditions (Hafs, Warsh, Qalun, Al-Duri, Shu'bah),
+  built from `quranpedia/quran-svg`'s `surah.json`/`markers.json` files (CC0,
+  licensed 2026-07-12, confirmed via commit history before use). This is
+  numbering data only — it does NOT establish where verse boundaries fall in
+  the shared word stream; that's still blocked on a data-tagging bug in the
+  source repo's per-page files (reported to the maintainer, not yet fixed).
+  Generation surfaced two unresolved discrepancies, recorded rather than
+  silently resolved: (1) Warsh and Qalun's `markers.json` has 4 fewer entries
+  than their `surah.json` ayah-count totals; (2) Al-Duri's `surah.json` sums
+  to 6218 ayahs, not the 6205 stated in the original Itqan announcement.
 - Added 5 more Mushaf print layouts from QUL, taking coverage from 5 to 10 of the
   12 layouts QUL publishes (the 2 skipped — Digital Khatt and Ligature Basd SVG —
   use a different data shape than the page/line DB schema the generator expects,
