@@ -5,6 +5,22 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- **Closed out the text-integrity work**: added a transparent,
+  provenance-tracked correction layer (`data/external/qul-text-corrections.json`)
+  applying the 4 formatting fixes (5:52, 11:31, 18:1, 27:26) at comparison time
+  only -- `data/raw/uthmani.json` is never edited. Each correction is checked
+  for staleness against the live source on every run. Comparison result:
+  6,234/6,236 with corrections, 6,230/6,236 raw. The 2 orthographic cases
+  (11:13, 80:25) remain deliberately unresolved -- documented in the new
+  `data/external/qul-orthographic-review.md` with full provenance and a
+  recommended (not yet filed) upstream report to QUL. Added 5 regression
+  tests in `test/run_tests.js` pinning the exact match counts, the exact 2
+  remaining verses, and that the source file is byte-identical before/after.
+  Added `.gitattributes` forcing LF line endings for text/source/data files
+  and marking `.db`/`.png`/`.jpg`/`.xlsx`/etc as binary -- Windows' common
+  `core.autocrlf=true` was silently converting checked-out text files to
+  CRLF, which changes their bytes and breaks `scripts/hash_sources.js`'s
+  SHA-256 check on an otherwise-unmodified clone.
 - Cross-checked all 6 residual checksum verses against a third source (the
   live quran.com v4 API) -- it agrees with Tanzil on all 6, including both
   orthographic cases (11:13, 80:25). Strengthens the case that these are real

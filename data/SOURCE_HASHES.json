@@ -1,6 +1,8 @@
 {
   "algorithm": "sha256",
   "files": {
+    "data/external/qul-orthographic-review.md": "3ae406c81628f37ff9aceee6e3d9631758f95f803e941a0bb5e591602a680619",
+    "data/external/qul-text-corrections.json": "939e46c674009172ff6635007c143d423ce53aee067e3175365f5dee366d2371",
     "data/external/quran-uthmani.manifest.json": "3e3b32c5a1e6548cbaaa3ed64aa340bda2fb94b946d2359a9adac7d91b00a657",
     "data/external/tanzil-uthmani-full-options.xml": "af9311c521b5dadab01ea1ef259c281ffa83cf224bad24ee89469ce1c3c72916",
     "data/layouts/indopak-13-lines-layout-qudratullah.db": "eb3f8c0e6bdce30c8fa53519b47df25c9e8b5f22a0d6474a9a14a9d46b23cd5d",

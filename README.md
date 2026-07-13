@@ -308,9 +308,25 @@ Quran.com's Uthmani text likely shares lineage with Tanzil's, so this isn't a
 fully independent third source, but it is evidence that a second major,
 actively-maintained platform disagrees with QUL's word-level data at exactly
 these 6 positions — consistent with real QUL transcription defects rather than
-a legitimate alternate convention. Still not auto-corrected: QUL's raw text is
+a legitimate alternate convention.
+
+**A transparent correction layer, not a silent edit, 2026-07-13:** the 4
+formatting cases are now corrected — but only in a dedicated, committed,
+versioned file, [`data/external/qul-text-corrections.json`](data/external/qul-text-corrections.json),
+applied by `checksum-verify-full-options.js` when reconstructing text for
+comparison. **`data/raw/uthmani.json` itself is never modified** — it's
 third-party licensed source data (see [`data/LICENSES.md`](data/LICENSES.md)),
-so a defect there belongs reported upstream to QUL, not silently patched here.
+and this project's policy is to report suspected defects upstream, not alter
+imported source text. Each correction records its provenance (what QUL has,
+what Tanzil and quran.com both agree on) and is checked for staleness against
+the live source on every run — if the underlying data ever changes, the
+correction stops applying automatically rather than silently going wrong.
+This brings the *comparison-layer* result to **6,234 / 6,236**.
+
+The 2 orthographic cases (11:13, 80:25) are deliberately left uncorrected —
+see [`data/external/qul-orthographic-review.md`](data/external/qul-orthographic-review.md)
+for the full provenance and the recommended next step (an upstream report to
+QUL, not yet filed — it needs a human decision on the right channel).
 
 The four "formatting" cases are QUL source-data encoding anomalies (extra/missing
 whitespace, a stray bidi control character) — they don't change a single Quranic
@@ -355,10 +371,11 @@ comes up again.
 </details>
 
 **Current state: QUL's raw Uthmani text matches a real, independently-downloaded
-Tanzil export (with matching display options) on 6,230 / 6,236 verses (99.9%),
-with the remaining 6 individually investigated and classified** — 4 as QUL
-source-data formatting anomalies, 2 as substantive orthographic differences that
-need upstream review before either side is called "correct." This is a
+Tanzil export (with matching display options) on 6,230 / 6,236 verses (99.9%)
+with zero corrections, or **6,234 / 6,236 with the 4 documented, provenance-tracked
+formatting corrections applied in a comparison layer that never touches source
+data.** The remaining 2 (11:13, 80:25) are substantive orthographic differences
+that need upstream review before either side is called "correct." This is a
 materially different, far stronger claim than earlier versions of this README
 made, and it took two rounds of being wrong (see the corrections above) to get
 here — recorded rather than smoothed over.
@@ -421,11 +438,12 @@ here — recorded rather than smoothed over.
    caveat. This is the one substantial item left that's a real architecture
    decision, not a mechanical fix: separating text/morphology/layout into
    independently-combinable documents needs a join-key contract designed first.
-4. **6 of the 6,236 verses (see [Text integrity](#text-integrity)) have a
-   genuine, individually-classified difference from an independent Tanzil
-   export** — 4 are QUL source-data formatting anomalies (stray/missing
-   whitespace, a stray bidi control character), 2 are substantive orthographic
-   differences needing upstream review. Earlier versions of this README
+4. **2 of the 6,236 verses (11:13, 80:25) have a genuine, unresolved orthographic
+   difference from an independent Tanzil export** — see
+   [Text integrity](#text-integrity) and `data/external/qul-orthographic-review.md`.
+   4 formerly-residual formatting anomalies are now corrected in a transparent,
+   provenance-tracked comparison layer (`data/external/qul-text-corrections.json`)
+   that never touches the underlying source data. Earlier versions of this README
    claimed this gap was in the thousands (541, then 3,741, then 3,040) — all
    of those were measuring divergence from the wrong thing: a specific,
    undocumented Tanzil export configuration that doesn't match QUL's own
