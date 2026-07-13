@@ -301,6 +301,17 @@ like every other bundled source.
 | 11:13 | **orthographic, needs review** | QUL: `افْتَرَاهُ` (plain alef). Tanzil: `ٱفْتَرَىٰهُ` (alef wasla + alef maksura/superscript alef) — a different encoded letter, not spacing |
 | 80:25 | **orthographic, needs review** | QUL: `اَنَّا` (plain alef). Tanzil: `أَنَّا` (alef with hamza above) — a different encoded letter, not spacing |
 
+**Cross-checked against a third source, 2026-07-13:** fetched all 6 verse keys live
+from the [quran.com v4 API](https://api.quran.com/api/v4/quran/verses/uthmani) —
+it agrees with Tanzil on every one of the 6, including both orthographic cases.
+Quran.com's Uthmani text likely shares lineage with Tanzil's, so this isn't a
+fully independent third source, but it is evidence that a second major,
+actively-maintained platform disagrees with QUL's word-level data at exactly
+these 6 positions — consistent with real QUL transcription defects rather than
+a legitimate alternate convention. Still not auto-corrected: QUL's raw text is
+third-party licensed source data (see [`data/LICENSES.md`](data/LICENSES.md)),
+so a defect there belongs reported upstream to QUL, not silently patched here.
+
 The four "formatting" cases are QUL source-data encoding anomalies (extra/missing
 whitespace, a stray bidi control character) — they don't change a single Quranic
 letter, and are candidates for reporting upstream to QUL, not for silently

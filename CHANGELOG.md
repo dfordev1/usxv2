@@ -5,6 +5,13 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Cross-checked all 6 residual checksum verses against a third source (the
+  live quran.com v4 API) -- it agrees with Tanzil on all 6, including both
+  orthographic cases (11:13, 80:25). Strengthens the case that these are real
+  QUL data defects, but per instruction NOT auto-corrected -- QUL's raw text
+  is third-party source data; a fix belongs reported upstream, not patched
+  silently here. Updated `scripts/checksum-verify-full-options.js` and
+  `README.md` with the corroborating detail.
 - **Root-cause finding on the checksum-mismatch investigation: it was mostly
   an export-configuration mismatch, not a text-quality problem.** Tanzil's
   download tool has 5 independent options (pause marks, sajdah signs,

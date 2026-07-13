@@ -37,20 +37,44 @@ const XML_PATH = path.join(__dirname, "..", "data", "external", "tanzil-uthmani-
 // classified. Four are QUL source-data encoding anomalies (stray/missing
 // spaces, a stray bidi control character) that don't change any letter of
 // the text. Two (11:13, 80:25) are substantive orthographic differences --
-// a different alef form -- that need upstream QUL/source verification
-// before anyone "corrects" either side.
+// a different alef form.
+//
+// Cross-checked against a THIRD independent source, 2026-07-13: the
+// quran.com v4 API (api.quran.com/api/v4/quran/verses/uthmani), fetched live
+// for all 6 verse keys. It agrees with Tanzil on every one -- both the two
+// orthographic cases (ٱفْتَرَىٰهُ, أَنَّا) and the spacing in all four
+// formatting cases. Quran.com's Uthmani text likely shares lineage with
+// Tanzil's, so this isn't a fully independent third data source, but it IS
+// evidence that a second major, widely-used, actively-maintained platform's
+// text disagrees with QUL's word-level data at exactly these positions --
+// consistent with these being real QUL transcription defects rather than a
+// legitimate alternate convention. Still NOT auto-corrected here: QUL's raw
+// text is third-party licensed source data (see data/LICENSES.md), and a
+// defect there should be reported upstream, not silently patched downstream.
 const KNOWN_RESIDUAL = {
-  "5:52": { class: "formatting", note: "QUL has a stray space inside the word دَآئِرَ ةٌۭ (should be دَآئِرَةٌۭ)." },
+  "5:52": {
+    class: "formatting",
+    note: "QUL has a stray space inside the word دَآئِرَ ةٌۭ (should be دَآئِرَةٌۭ). Tanzil and quran.com both agree: no internal space.",
+  },
   "11:13": {
     class: "orthographic-needs-review",
-    note: "QUL: افْتَرَاهُ (plain alef + alef). Tanzil: ٱفْتَرَىٰهُ (alef wasla + alef maksura/superscript alef). Not a spacing issue -- needs upstream verification before treating either as correct.",
+    note: "QUL: افْتَرَاهُ (plain alef + alef). Tanzil AND quran.com both have ٱفْتَرَىٰهُ (alef wasla + alef maksura/superscript alef). Not a spacing issue -- two independent platforms agree against QUL, suggesting a real QUL defect, but not auto-corrected here; report upstream to QUL first.",
   },
-  "11:31": { class: "formatting", note: "QUL has a doubled space before the pause mark after أَنفُسِهِمْ." },
-  "18:1": { class: "formatting", note: "QUL is missing the space before the pause mark on عِوَجَا (U+06DC)." },
-  "27:26": { class: "formatting", note: "QUL has a stray U+200F (right-to-left mark) after the sajdah sign." },
+  "11:31": {
+    class: "formatting",
+    note: "QUL has a doubled space before the pause mark after أَنفُسِهِمْ. Tanzil and quran.com both have a single space.",
+  },
+  "18:1": {
+    class: "formatting",
+    note: "QUL is missing the space before the pause mark on عِوَجَا (U+06DC). Tanzil and quran.com both have the space.",
+  },
+  "27:26": {
+    class: "formatting",
+    note: "QUL has a stray U+200F (right-to-left mark) after the sajdah sign. Not present in Tanzil.",
+  },
   "80:25": {
     class: "orthographic-needs-review",
-    note: "QUL: اَنَّا (plain alef + fatha). Tanzil: أَنَّا (alef with hamza above). A different encoded letter, not a presentation choice -- needs upstream verification.",
+    note: "QUL: اَنَّا (plain alef + fatha). Tanzil AND quran.com both have أَنَّا (alef with hamza above). A different encoded letter, not a presentation choice -- two independent platforms agree against QUL, suggesting a real QUL defect, but not auto-corrected here; report upstream to QUL first.",
   },
 };
 
