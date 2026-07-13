@@ -68,6 +68,15 @@ live source of truth.
 4. **Rasm/text-variant support is explicitly out of scope for v1** (decided,
    not just deferred) — QUSX only models numbering differences between
    traditions, not actual differing wording.
+5. **The "standardized plain text" layer (QPC-glyph convention vs plain
+   Unicode) isn't built.** A community suggestion proposed three parallel
+   text layers (calligraphy-accurate, standardized plain, no-tashkeel),
+   with pins built once and carried across all three. The no-tashkeel case
+   was tested and confirmed to work end-to-end at full scale (114/114 XSD
+   valid, see CHANGELOG) — but that's the easy case (pure character
+   removal). The plain-text layer needs real normalization rules (the
+   QPC-vs-Tanzil divergence already documented in Text integrity), not
+   just been attempted yet.
 
 ## Decided, not open
 

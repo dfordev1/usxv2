@@ -5,6 +5,25 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added `scripts/derive_no_tashkeel.js` and tested a real community
+  proposal (from someone else reviewing this project, not from us): that
+  milestone pins should be built once against one text layer and carry
+  across other text representations of the same words (e.g. a
+  calligraphy-accurate layer, a plain-Unicode layer, a no-diacritics
+  layer), instead of duplicating pins per layer. Tested the simplest case
+  first -- stripping tashkeel (diacritics) from an already-generated file
+  without touching any pin/word-ID structure. Verified at full scale, not
+  just the one example surah: derived all 114 Hafs/madani-v2 files this
+  way, 0 real errors from validate.js and 114/114 XSD-valid. Confirms the
+  core claim holds for this simplest transform. A single example file kept
+  at `docs/examples/001-no-tashkeel-example.qusx.xml`; the other 113 were
+  cleaned up after verification rather than left cluttering `output/`.
+  Deliberately did NOT attempt the harder "standardized plain text" layer
+  (QPC-glyph-convention text vs plain Unicode Uthmani) in this pass --
+  that needs real normalization rules, not just character removal, per
+  the QPC-vs-Tanzil divergence already documented in the Text integrity
+  section.
+
 - Narrowed (not resolved) the Al-Duri surah-67 ayah-count conflict (30 vs
   31). Research confirmed this is a real, documented classical
   ʿadd-al-āy (verse-counting) disagreement -- Surah Al-Mulk has 30 ayahs
