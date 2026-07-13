@@ -1,0 +1,23 @@
+# Force LF line endings for all text/source/data files, regardless of the
+# checkout platform's core.autocrlf setting. Without this, a Windows clone
+# with the common core.autocrlf=true converts every text file to CRLF on
+# checkout, which changes its bytes -- and therefore its SHA-256 hash. That
+# silently broke `npm run verify` (scripts/hash_sources.js) on a normal
+# Windows checkout even though the exact same commit passed on Linux/macOS
+# or a byte-preserving Windows clone. Confirmed 2026-07-13.
+* text=auto eol=lf
+
+# Binary artifacts: never line-ending-convert or diff these. SQLite DBs are
+# the mushaf-layout databases under data/raw and data/layouts; the rest are
+# images and a spreadsheet under docs/ and assets/.
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.xlsx binary
+*.pdf binary
+*.zip binary

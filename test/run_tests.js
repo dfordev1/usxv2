@@ -240,6 +240,55 @@ check(
   `expected "Matched: 1125 / 6236" in output, got: ${checksumRun.stdout.split("\n").slice(0, 3).join(" ")}`
 );
 
+// --- checksum-verify-full-options.js: the real (non-export-config-confounded)
+// text-integrity comparison. Pins the current, honest state: 6,230/6,236 raw,
+// 6,234/6,236 with the 4 documented formatting corrections applied in the
+// comparison layer only (data/raw/uthmani.json itself is never touched — see
+// data/external/qul-text-corrections.json and qul-orthographic-review.md).
+// This must fail CI if: a previously-resolved verse regresses, a new
+// unclassified mismatch appears, or the residual count silently changes.
+
+const fullOptionsRun = spawnSync(
+  "node",
+  [path.join(__dirname, "..", "scripts", "checksum-verify-full-options.js")],
+  { encoding: "utf-8" }
+);
+check(
+  "checksum-verify-full-options.js exits zero (all mismatches are documented/classified)",
+  fullOptionsRun.status === 0,
+  `stderr: ${fullOptionsRun.stderr}`
+);
+check(
+  "checksum-verify-full-options.js: raw QUL text matches Tanzil on exactly 6,230/6,236 (no source edits)",
+  /\[raw QUL text, no corrections \(historical figure\)\] Matched: 6230 \/ 6236/.test(fullOptionsRun.stdout),
+  `expected "Matched: 6230 / 6236" for the raw-text run, got: ${fullOptionsRun.stdout}`
+);
+check(
+  "checksum-verify-full-options.js: with the 4 formatting corrections applied, reaches exactly 6,234/6,236",
+  /\[with the 4 formatting corrections applied \(comparison layer only\)\] Matched: 6234 \/ 6236/.test(
+    fullOptionsRun.stdout
+  ),
+  `expected "Matched: 6234 / 6236" for the corrected-comparison run, got: ${fullOptionsRun.stdout}`
+);
+const correctedSection = fullOptionsRun.stdout.split("[with the 4 formatting corrections applied")[1] || "";
+check(
+  "checksum-verify-full-options.js: the only 2 remaining mismatches (after corrections) are 11:13 and 80:25",
+  correctedSection.includes("11:13 [orthographic-needs-review]") &&
+    correctedSection.includes("80:25 [orthographic-needs-review]") &&
+    !correctedSection.includes("UNCLASSIFIED"),
+  `expected exactly 11:13 and 80:25 as classified residuals in the corrected-comparison section, no UNCLASSIFIED entries; got: ${correctedSection}`
+);
+check(
+  "checksum-verify-full-options.js never edits data/raw/uthmani.json (source data byte-identical after running)",
+  (() => {
+    const uthmaniPath = path.join(__dirname, "..", "data", "raw", "uthmani.json");
+    const before = fs.readFileSync(uthmaniPath, "utf-8");
+    spawnSync("node", [path.join(__dirname, "..", "scripts", "checksum-verify-full-options.js")]);
+    const after = fs.readFileSync(uthmaniPath, "utf-8");
+    return before === after;
+  })()
+);
+
 // --- validate.js CLI hardening (found by external review, verified before fixing) ---
 
 const unknownLayoutRun = spawnSync("node", [VALIDATE, "--layout=does-not-exist", "all"], { encoding: "utf-8" });

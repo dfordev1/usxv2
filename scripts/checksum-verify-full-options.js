@@ -32,51 +32,33 @@ const path = require("path");
 
 const RAW = path.join(__dirname, "..", "data", "raw");
 const XML_PATH = path.join(__dirname, "..", "data", "external", "tanzil-uthmani-full-options.xml");
+const CORRECTIONS_PATH = path.join(__dirname, "..", "data", "external", "qul-text-corrections.json");
 
-// The 6 verses confirmed to genuinely differ, each investigated and
-// classified. Four are QUL source-data encoding anomalies (stray/missing
-// spaces, a stray bidi control character) that don't change any letter of
-// the text. Two (11:13, 80:25) are substantive orthographic differences --
-// a different alef form.
-//
-// Cross-checked against a THIRD independent source, 2026-07-13: the
-// quran.com v4 API (api.quran.com/api/v4/quran/verses/uthmani), fetched live
-// for all 6 verse keys. It agrees with Tanzil on every one -- both the two
-// orthographic cases (ٱفْتَرَىٰهُ, أَنَّا) and the spacing in all four
-// formatting cases. Quran.com's Uthmani text likely shares lineage with
-// Tanzil's, so this isn't a fully independent third data source, but it IS
-// evidence that a second major, widely-used, actively-maintained platform's
-// text disagrees with QUL's word-level data at exactly these positions --
-// consistent with these being real QUL transcription defects rather than a
-// legitimate alternate convention. Still NOT auto-corrected here: QUL's raw
-// text is third-party licensed source data (see data/LICENSES.md), and a
-// defect there should be reported upstream, not silently patched downstream.
+// Of the 6 verses confirmed to genuinely differ (investigated 2026-07-13,
+// corroborated against Tanzil AND the live quran.com v4 API -- both agree
+// with each other on all 6), 4 are formatting anomalies (stray/missing
+// whitespace, a stray bidi control character) that don't change any letter
+// of the text. Those 4 are corrected ONLY in this comparison layer, via
+// data/external/qul-text-corrections.json -- data/raw/uthmani.json itself
+// (third-party licensed source data, see data/LICENSES.md) is never
+// touched. The remaining 2 (11:13, 80:25) change an encoded letter, not
+// just spacing, and are deliberately left unresolved pending an upstream
+// QUL decision -- see data/external/qul-orthographic-review.md.
 const KNOWN_RESIDUAL = {
-  "5:52": {
-    class: "formatting",
-    note: "QUL has a stray space inside the word دَآئِرَ ةٌۭ (should be دَآئِرَةٌۭ). Tanzil and quran.com both agree: no internal space.",
-  },
   "11:13": {
     class: "orthographic-needs-review",
-    note: "QUL: افْتَرَاهُ (plain alef + alef). Tanzil AND quran.com both have ٱفْتَرَىٰهُ (alef wasla + alef maksura/superscript alef). Not a spacing issue -- two independent platforms agree against QUL, suggesting a real QUL defect, but not auto-corrected here; report upstream to QUL first.",
-  },
-  "11:31": {
-    class: "formatting",
-    note: "QUL has a doubled space before the pause mark after أَنفُسِهِمْ. Tanzil and quran.com both have a single space.",
-  },
-  "18:1": {
-    class: "formatting",
-    note: "QUL is missing the space before the pause mark on عِوَجَا (U+06DC). Tanzil and quran.com both have the space.",
-  },
-  "27:26": {
-    class: "formatting",
-    note: "QUL has a stray U+200F (right-to-left mark) after the sajdah sign. Not present in Tanzil.",
+    note: "QUL: افْتَرَاهُ (plain alef + alef). Tanzil AND quran.com both have ٱفْتَرَىٰهُ (alef wasla + alef maksura/superscript alef). Not a spacing issue -- two independent platforms agree against QUL, suggesting a real QUL defect, but not auto-corrected here; see data/external/qul-orthographic-review.md.",
   },
   "80:25": {
     class: "orthographic-needs-review",
-    note: "QUL: اَنَّا (plain alef + fatha). Tanzil AND quran.com both have أَنَّا (alef with hamza above). A different encoded letter, not a presentation choice -- two independent platforms agree against QUL, suggesting a real QUL defect, but not auto-corrected here; report upstream to QUL first.",
+    note: "QUL: اَنَّا (plain alef + fatha). Tanzil AND quran.com both have أَنَّا (alef with hamza above). A different encoded letter, not a presentation choice -- two independent platforms agree against QUL, suggesting a real QUL defect, but not auto-corrected here; see data/external/qul-orthographic-review.md.",
   },
 };
+
+function loadCorrections() {
+  const doc = JSON.parse(fs.readFileSync(CORRECTIONS_PATH, "utf-8"));
+  return doc.corrections;
+}
 
 function decodeXmlEntities(s) {
   return s.replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
@@ -121,10 +103,26 @@ function loadQulRaw() {
   return reconstructed;
 }
 
-function main() {
-  const tanzil = loadTanzilFullOptions();
-  const qul = loadQulRaw();
+// Applies the 4 formatting corrections to a comparison-layer copy of the
+// text, and sanity-checks that each correction's recorded `rawText` still
+// matches what's actually in data/raw/uthmani.json today -- if the source
+// data has since changed underneath a correction, that correction is no
+// longer trustworthy and must be re-investigated, not silently applied.
+function applyCorrections(qulRaw, corrections) {
+  const corrected = new Map(qulRaw);
+  const staleCorrections = [];
+  for (const [key, c] of Object.entries(corrections)) {
+    const current = qulRaw.get(key);
+    if (current !== c.rawText) {
+      staleCorrections.push(key);
+      continue;
+    }
+    corrected.set(key, c.correctedText);
+  }
+  return { corrected, staleCorrections };
+}
 
+function run(label, tanzil, qul, { failOnUnclassified }) {
   let checked = 0;
   let matched = 0;
   const mismatches = [];
@@ -139,23 +137,66 @@ function main() {
     else mismatches.push({ key, reason: "text differs", ours, theirs });
   }
 
-  console.log(`Compared QUL's raw Uthmani text against Tanzil's full-options export (${checked} verses).`);
-  console.log(`Matched: ${matched} / ${checked}`);
-
+  console.log(`\n[${label}] Matched: ${matched} / ${checked}`);
   if (mismatches.length > 0) {
-    console.log(`\nMismatches (${mismatches.length}):`);
+    console.log(`Mismatches (${mismatches.length}):`);
     for (const m of mismatches) {
       const known = KNOWN_RESIDUAL[m.key];
-      console.log(`  ${m.key}${known ? ` [${known.class}]` : " [UNCLASSIFIED -- new, investigate]"}`);
+      console.log(`  ${m.key}${known ? ` [${known.class}]` : " [UNCLASSIFIED]"}`);
       if (known) console.log(`    ${known.note}`);
     }
+  }
+  if (failOnUnclassified) {
     const unclassified = mismatches.filter((m) => !KNOWN_RESIDUAL[m.key]);
     if (unclassified.length > 0) {
-      console.error(`\n${unclassified.length} mismatch(es) are not in the known/classified list -- this is a regression, investigate before trusting the 6,230/6,236 figure.`);
+      console.error(
+        `\n${unclassified.length} mismatch(es) are not in the known/classified residual list -- this is a ` +
+          `regression (a previously-resolved verse broke again, or a genuinely new divergence appeared). ` +
+          `Investigate before trusting this figure; do not add to KNOWN_RESIDUAL without documenting why.`
+      );
       process.exit(1);
     }
   }
-  console.log("\nAll mismatches are the 6 previously-investigated, classified residual differences. No regression.");
+  return { matched, checked, mismatches };
+}
+
+function main() {
+  const tanzil = loadTanzilFullOptions();
+  const qulRaw = loadQulRaw();
+  const corrections = loadCorrections();
+
+  console.log("Compared QUL's Uthmani text against Tanzil's full-options export (6,236 verses).");
+  console.log("This preserves QUL's original per-word text unmodified -- see data/raw/uthmani.json, untouched.");
+
+  run("raw QUL text, no corrections (historical figure)", tanzil, qulRaw, { failOnUnclassified: false });
+
+  const { corrected, staleCorrections } = applyCorrections(qulRaw, corrections);
+  if (staleCorrections.length > 0) {
+    console.error(
+      `\n${staleCorrections.length} correction(s) in data/external/qul-text-corrections.json no longer match ` +
+        `the current source text: ${staleCorrections.join(", ")}. The source data changed since the correction ` +
+        `was recorded -- re-investigate before trusting the corrected comparison.`
+    );
+    process.exit(1);
+  }
+  const result = run("with the 4 formatting corrections applied (comparison layer only)", tanzil, corrected, {
+    failOnUnclassified: true,
+  });
+
+  const expectedMatched = 6236 - Object.keys(KNOWN_RESIDUAL).length;
+  if (result.matched !== expectedMatched) {
+    console.error(
+      `\nExpected exactly ${expectedMatched} matches (6,236 minus the ${Object.keys(KNOWN_RESIDUAL).length} ` +
+        `documented residual verses) but got ${result.matched}. The residual set changed without an explicit ` +
+        `update to KNOWN_RESIDUAL and this script's documentation -- investigate before trusting this figure.`
+    );
+    process.exit(1);
+  }
+
+  console.log(
+    `\nFinal: ${result.matched} / 6,236 matched. Remaining ${Object.keys(KNOWN_RESIDUAL).length} residual ` +
+      `verses are the orthographic differences pending upstream review -- see data/external/qul-orthographic-review.md.`
+  );
 }
 
 main();
