@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="110" name="An-Nasr" nameArabic="النصر" ayahCount="3" revelationPlace="madinah" bismillahPre="true" tradition="sousi-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="sousi-kfqc" sid="110:1:sousi-kfqc"/>
+  <word id="1" position="1">إِذَا</word>
+  <word id="2" position="2">جَآءَ</word>
+  <word id="3" position="3">نَصۡرُ</word>
+  <word id="4" position="4">اُ۬للَّهِ</word>
+  <word id="5" position="5">وَاَلۡفَتۡحُ</word>
+  <word id="6" position="6" type="number">١</word>
+  <ayah eid="110:1:sousi-kfqc"/>
+  <ayah number="2" tradition="sousi-kfqc" sid="110:2:sousi-kfqc"/>
+  <word id="7" position="1">وَرَأَيۡتَ</word>
+  <word id="8" position="2">اَ۬لنَّاسَ</word>
+  <word id="9" position="3">يَدۡخُلُونَ</word>
+  <word id="10" position="4">فِي</word>
+  <word id="11" position="5">دِينِ</word>
+  <word id="12" position="6">اِ۬للَّهِ</word>
+  <word id="13" position="7">أَفۡوَاجٗا</word>
+  <word id="14" position="8" type="number">٢</word>
+  <ayah eid="110:2:sousi-kfqc"/>
+  <ayah number="3" tradition="sousi-kfqc" sid="110:3:sousi-kfqc"/>
+  <word id="15" position="1">فَسَبِّحۡ</word>
+  <word id="16" position="2">بِحَمۡدِ</word>
+  <word id="17" position="3">رَبِّكَ</word>
+  <word id="18" position="4">وَاَسۡتَغۡفِرۡهُۚ</word>
+  <word id="19" position="5">إِنَّهُۥ</word>
+  <word id="20" position="6">كَانَ</word>
+  <word id="21" position="7">تَوَّابَۢا</word>
+  <word id="22" position="8" type="number">٣</word>
+  <ayah eid="110:3:sousi-kfqc"/>
+</qusx>

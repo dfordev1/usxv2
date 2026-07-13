@@ -5,6 +5,33 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Scaled the pilot generator from 2 example surahs to the full 114-surah
+  corpus, across all 5 traditions with real text (Warsh, Qalun, Al-Duri,
+  Shu'bah, plus Al-Susi as a bonus extra). Real results, not assumed:
+  - Warsh: 6214/6214 ayahs, 114/114 files pass both validate.js and the
+    real XSD, 0 errors -- clean on the first full-scale attempt.
+  - Qalun, Shu'bah: same, 114/114 clean, 0 errors each.
+  - Al-Susi: 114/114 pass validate.js, but is NOT XSD-valid -- its
+    `sousi-kfqc` tradition code was never added to `schema/qusx.xsd`'s
+    enum, since Al-Susi was always a bonus extra outside the original
+    5-tradition scope. Left unresolved rather than silently added to the
+    schema without deciding if Al-Susi should really be in scope.
+  - Al-Duri: found a real, precise data conflict -- surah 67 has 30 ayahs
+    in this text source vs 31 in the earlier `quran-svg`-derived count
+    (`data/traditions/ayah-counts.json`). This pinpoints exactly where
+    part of the earlier 3-way Al-Duri discrepancy (6217 vs 6218 vs the
+    original 6205 announcement) actually lives, rather than leaving it as
+    an unlocated aggregate mismatch. Not resolved -- recorded as-is.
+  - At full scale this also exposed and fixed a real bug of our own:
+    `validate.js` was silently falling back to comparing Al-Susi's ayah
+    counts against the Hafs canonical table (since Al-Susi has no
+    verified per-tradition count data), producing 43 false-positive
+    errors. Fixed by skipping the ayahCount check entirely for a
+    recognized non-Hafs tradition we don't have real count data for,
+    rather than comparing against the wrong baseline. Re-verified: 0
+    errors for Al-Susi after the fix, and the real 1140-file Hafs corpus
+    still passes with 0 errors (fix didn't loosen anything there).
+
 - Added `scripts/generate_tradition_pilot.js` — a deliberately separate,
   minimal pilot generator proving the QUSX milestone-pin model works
   end-to-end for a non-Hafs tradition's real text. Kept separate from

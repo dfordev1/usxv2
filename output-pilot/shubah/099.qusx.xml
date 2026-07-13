@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="99" name="Az-Zalzalah" nameArabic="الزلزلة" ayahCount="8" revelationPlace="madinah" bismillahPre="true" tradition="shubah-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="shubah-kfqc" sid="99:1:shubah-kfqc"/>
+  <word id="1" position="1">إِذَا</word>
+  <word id="2" position="2">زُلۡزِلَتِ</word>
+  <word id="3" position="3">ٱلۡأَرۡضُ</word>
+  <word id="4" position="4">زِلۡزَالَهَا</word>
+  <word id="5" position="5" type="number">١</word>
+  <ayah eid="99:1:shubah-kfqc"/>
+  <ayah number="2" tradition="shubah-kfqc" sid="99:2:shubah-kfqc"/>
+  <word id="6" position="1">وَأَخۡرَجَتِ</word>
+  <word id="7" position="2">ٱلۡأَرۡضُ</word>
+  <word id="8" position="3">أَثۡقَالَهَا</word>
+  <word id="9" position="4" type="number">٢</word>
+  <ayah eid="99:2:shubah-kfqc"/>
+  <ayah number="3" tradition="shubah-kfqc" sid="99:3:shubah-kfqc"/>
+  <word id="10" position="1">وَقَالَ</word>
+  <word id="11" position="2">ٱلۡإِنسَٰنُ</word>
+  <word id="12" position="3">مَا</word>
+  <word id="13" position="4">لَهَا</word>
+  <word id="14" position="5" type="number">٣</word>
+  <ayah eid="99:3:shubah-kfqc"/>
+  <ayah number="4" tradition="shubah-kfqc" sid="99:4:shubah-kfqc"/>
+  <word id="15" position="1">يَوۡمَئِذٖ</word>
+  <word id="16" position="2">تُحَدِّثُ</word>
+  <word id="17" position="3">أَخۡبَارَهَا</word>
+  <word id="18" position="4" type="number">٤</word>
+  <ayah eid="99:4:shubah-kfqc"/>
+  <ayah number="5" tradition="shubah-kfqc" sid="99:5:shubah-kfqc"/>
+  <word id="19" position="1">بِأَنَّ</word>
+  <word id="20" position="2">رَبَّكَ</word>
+  <word id="21" position="3">أَوۡحَىٰ</word>
+  <word id="22" position="4">لَهَا</word>
+  <word id="23" position="5" type="number">٥</word>
+  <ayah eid="99:5:shubah-kfqc"/>
+  <ayah number="6" tradition="shubah-kfqc" sid="99:6:shubah-kfqc"/>
+  <word id="24" position="1">يَوۡمَئِذٖ</word>
+  <word id="25" position="2">يَصۡدُرُ</word>
+  <word id="26" position="3">ٱلنَّاسُ</word>
+  <word id="27" position="4">أَشۡتَاتٗا</word>
+  <word id="28" position="5">لِّيُرَوۡاْ</word>
+  <word id="29" position="6">أَعۡمَٰلَهُمۡ</word>
+  <word id="30" position="7" type="number">٦</word>
+  <ayah eid="99:6:shubah-kfqc"/>
+  <ayah number="7" tradition="shubah-kfqc" sid="99:7:shubah-kfqc"/>
+  <word id="31" position="1">فَمَن</word>
+  <word id="32" position="2">يَعۡمَلۡ</word>
+  <word id="33" position="3">مِثۡقَالَ</word>
+  <word id="34" position="4">ذَرَّةٍ</word>
+  <word id="35" position="5">خَيۡرٗا</word>
+  <word id="36" position="6">يَرَهُۥ</word>
+  <word id="37" position="7" type="number">٧</word>
+  <ayah eid="99:7:shubah-kfqc"/>
+  <ayah number="8" tradition="shubah-kfqc" sid="99:8:shubah-kfqc"/>
+  <word id="38" position="1">وَمَن</word>
+  <word id="39" position="2">يَعۡمَلۡ</word>
+  <word id="40" position="3">مِثۡقَالَ</word>
+  <word id="41" position="4">ذَرَّةٖ</word>
+  <word id="42" position="5">شَرّٗا</word>
+  <word id="43" position="6">يَرَهُۥ</word>
+  <word id="44" position="7" type="number">٨</word>
+  <ayah eid="99:8:shubah-kfqc"/>
+</qusx>

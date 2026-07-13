@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="15" name="Al-Hijr" nameArabic="الحجر" ayahCount="99" revelationPlace="makkah" bismillahPre="true" tradition="warsh-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="warsh-kfqc" sid="15:1:warsh-kfqc"/>
+  <word id="1" position="1">أَلَٓر۪ۖ</word>
+  <word id="2" position="2">تِلْكَ</word>
+  <word id="3" position="3">ءَايَٰتُ</word>
+  <word id="4" position="4">اُ۬لْكِتَٰبِ</word>
+  <word id="5" position="5">وَقُرْءَانٖ</word>
+  <word id="6" position="6">مُّبِينٖۖ</word>
+  <word id="7" position="7" type="number">١</word>
+  <ayah eid="15:1:warsh-kfqc"/>
+  <ayah number="2" tradition="warsh-kfqc" sid="15:2:warsh-kfqc"/>
+  <word id="8" position="1">رُّبَمَا</word>
+  <word id="9" position="2">يَوَدُّ</word>
+  <word id="10" position="3">اُ۬لذِينَ</word>
+  <word id="11" position="4">كَفَرُواْ</word>
+  <word id="12" position="5">لَوْ</word>
+  <word id="13" position="6">كَانُواْ</word>
+  <word id="14" position="7">مُسْلِمِينَۖ</word>
+  <word id="15" position="8" type="number">٢</word>
+  <ayah eid="15:2:warsh-kfqc"/>
+  <ayah number="3" tradition="warsh-kfqc" sid="15:3:warsh-kfqc"/>
+  <word id="16" position="1">ذَرْهُمْ</word>
+  <word id="17" position="2">يَاكُلُواْ</word>
+  <word id="18" position="3">وَيَتَمَتَّعُواْ</word>
+  <word id="19" position="4">وَيُلْهِهِمُ</word>
+  <word id="20" position="5">اُ۬لَامَلُۖ</word>
+  <word id="21" position="6">فَسَوْفَ</word>
+  <word id="22" position="7">يَعْلَمُونَۖ</word>
+  <word id="23" position="8" type="number">٣</word>
+  <ayah eid="15:3:warsh-kfqc"/>
+  <ayah number="4" tradition="warsh-kfqc" sid="15:4:warsh-kfqc"/>
+  <word id="24" position="1">وَمَآ</word>
+  <word id="25" position="2">أَهْلَكْنَا</word>
+  <word id="26" position="3">مِن</word>
+  <word id="27" position="4">قَرْيَةٍ</word>
+  <word id="28" position="5">اِلَّا</word>
+  <word id="29" position="6">وَلَهَا</word>
+  <word id="30" position="7">كِتَابٞ</word>
+  <word id="31" position="8">مَّعْلُومٞۖ</word>
+  <word id="32" position="9" type="number">٤</word>
+  <ayah eid="15:4:warsh-kfqc"/>
+  <ayah number="5" tradition="warsh-kfqc" sid="15:5:warsh-kfqc"/>
+  <word id="33" position="1">مَّا</word>
+  <word id="34" position="2">تَسْبِقُ</word>
+  <word id="35" position="3">مِنُ</word>
+  <word id="36" position="4">ا۟مَّةٍ</word>
+  <word id="37" position="5">اَجَلَهَا</word>
+  <word id="38" position="6">وَمَا</word>
+  <word id="39" position="7">يَسْتَٰخِرُونَۖ</word>
+  <word id="40" position="8" type="number">٥</word>
+  <ayah eid="15:5:warsh-kfqc"/>
+  <ayah number="6" tradition="warsh-kfqc" sid="15:6:warsh-kfqc"/>
+  <word id="41" position="1">وَقَالُواْ</word>
+  <word id="42" position="2">يَٰٓأَيُّهَا</word>
+  <word id="43" position="3">اَ۬لذِے</word>
+  <word id="44" position="4">نُزِّلَ</word>
+  <word id="45" position="5">عَلَيْهِ</word>
+  <word id="46" position="6">اِ۬لذِّكْرُ</word>
+  <word id="47" position="7">إِنَّكَ</word>
+  <word id="48" position="8">لَمَجْنُونٞ</word>
+  <word id="49" position="9" type="number">٦</word>
+  <ayah eid="15:6:warsh-kfqc"/>
+  <ayah number="7" tradition="warsh-kfqc" sid="15:7:warsh-kfqc"/>
+  <word id="50" position="1">لَّوْمَا</word>
+  <word id="51" position="2">تَاتِينَا</word>
+  <word id="52" position="3">بِالْمَلَٰٓئِكَةِ</word>
+  <word id="53" position="4">إِن</word>
+  <word id="54" position="5">كُنتَ</word>
+  <word id="55" position="6">مِنَ</word>
+  <word id="56" position="7">اَ۬لصَّٰدِقِينَۖ</word>
+  <word id="57" position="8" type="number">٧</word>
+  <ayah eid="15:7:warsh-kfqc"/>
+  <ayah number="8" tradition="warsh-kfqc" sid="15:8:warsh-kfqc"/>
+  <word id="58" position="1">مَا</word>
+  <word id="59" position="2">تَنَزَّلُ</word>
+  <word id="60" position="3">اُ۬لْمَلَٰٓئِكَةُ</word>
+  <word id="61" position="4">إِلَّا</word>
+  <word id="62" position="5">بِالْحَقِّۖ</word>
+  <word id="63" position="6">وَمَا</word>
+  <word id="64" position="7">كَانُوٓاْ</word>
+  <word id="65" position="8">إِذاٗ</word>
+  <word id="66" position="9">مُّنظَرِينَۖ</word>
+  <word id="67" position="10" type="number">٨</word>
+  <ayah eid="15:8:warsh-kfqc"/>
+  <ayah number="9" tradition="warsh-kfqc" sid="15:9:warsh-kfqc"/>
+  <word id="68" position="1">إِنَّا</word>
+  <word id="69" position="2">نَحْنُ</word>
+  <word id="70" position="3">نَزَّلْنَا</word>
+  <word id="71" position="4">اَ۬لذِّكْرَۖ</word>
+  <word id="72" position="5">وَإِنَّا</word>
+  <word id="73" position="6">لَهُۥ</word>
+  <word id="74" position="7">لَحَٰفِظُونَۖ</word>
+  <word id="75" position="8" type="number">٩</word>
+  <ayah eid="15:9:warsh-kfqc"/>
+  <ayah number="10" tradition="warsh-kfqc" sid="15:10:warsh-kfqc"/>
+  <word id="76" position="1">وَلَقَدَ</word>
+  <word id="77" position="2">اَرْسَلْنَا</word>
+  <word id="78" position="3">مِن</word>
+  <word id="79" position="4">قَبْلِكَ</word>
+  <word id="80" position="5">فِے</word>
+  <word id="81" position="6">شِيَعِ</word>
+  <word id="82" position="7">اِ۬لَاوَّلِينَۖ</word>
+  <word id="83" position="8" type="number">١٠</word>
+  <ayah eid="15:10:warsh-kfqc"/>
+  <ayah number="11" tradition="warsh-kfqc" sid="15:11:warsh-kfqc"/>
+  <word id="84" position="1">وَمَا</word>
+  <word id="85" position="2">يَاتِيهِم</word>
+  <word id="86" position="3">مِّن</word>
+  <word id="87" position="4">رَّسُولٍ</word>
+  <word id="88" position="5">اِلَّا</word>
+  <word id="89" position="6">كَانُواْ</word>
+  <word id="90" position="7">بِهِۦ</word>
+  <word id="91" position="8">يَسْتَهْزِءُونَۖ</word>
+  <word id="92" position="9" type="number">١١</word>
+  <ayah eid="15:11:warsh-kfqc"/>
+  <ayah number="12" tradition="warsh-kfqc" sid="15:12:warsh-kfqc"/>
+  <word id="93" position="1">كَذَٰلِكَ</word>
+  <word id="94" position="2">نَسْلُكُهُۥ</word>
+  <word id="95" position="3">فِے</word>
+  <word id="96" position="4">قُلُوبِ</word>
+  <word id="97" position="5">اِ۬لْمُجْرِمِينَ</word>
+  <word id="98" position="6" type="number">١٢</word>
+  <ayah eid="15:12:warsh-kfqc"/>
+  <ayah number="13" tradition="warsh-kfqc" sid="15:13:warsh-kfqc"/>
+  <word id="99" position="1">لَا</word>
+  <word id="100" position="2">يُومِنُونَ</word>
+  <word id="101" position="3">بِهِۦ</word>
+  <word id="102" position="4">وَقَدْ</word>
+  <word id="103" position="5">خَلَتْ</word>
+  <word id="104" position="6">سُنَّةُ</word>
+  <word id="105" position="7">اُ۬لَاوَّلِينَۖ</word>
+  <word id="106" position="8" type="number">١٣</word>
+  <ayah eid="15:13:warsh-kfqc"/>
+  <ayah number="14" tradition="warsh-kfqc" sid="15:14:warsh-kfqc"/>
+  <word id="107" position="1">وَلَوْ</word>
+  <word id="108" position="2">فَتَحْنَا</word>
+  <word id="109" position="3">عَلَيْهِم</word>
+  <word id="110" position="4">بَاباٗ</word>
+  <word id="111" position="5">مِّنَ</word>
+  <word id="112" position="6">اَ۬لسَّمَآءِ</word>
+  <word id="113" position="7">فَظَلُّواْ</word>
+  <word id="114" position="8">فِيهِ</word>
+  <word id="115" position="9">يَعْرُجُونَ</word>
+  <word id="116" position="10" type="number">١٤</word>
+  <ayah eid="15:14:warsh-kfqc"/>
+  <ayah number="15" tradition="warsh-kfqc" sid="15:15:warsh-kfqc"/>
+  <word id="117" position="1">لَقَالُوٓاْ</word>
+  <word id="118" position="2">إِنَّمَا</word>
+  <word id="119" position="3">سُكِّرَتَ</word>
+  <word id="120" position="4">اَبْصَٰرُنَا</word>
+  <word id="121" position="5">بَلْ</word>
+  <word id="122" position="6">نَحْنُ</word>
+  <word id="123" position="7">قَوْمٞ</word>
+  <word id="124" position="8">مَّسْحُورُونَۖ</word>
+  <word id="125" position="9" type="number">١٥</word>
+  <ayah eid="15:15:warsh-kfqc"/>
+  <ayah number="16" tradition="warsh-kfqc" sid="15:16:warsh-kfqc"/>
+  <word id="126" position="1">وَلَقَدْ</word>
+  <word id="127" position="2">جَعَلْنَا</word>
+  <word id="128" position="3">فِے</word>
+  <word id="129" position="4">اِ۬لسَّمَآءِ</word>
+  <word id="130" position="5">بُرُوجاٗ</word>
+  <word id="131" position="6">وَزَيَّنَّٰهَا</word>
+  <word id="132" position="7">لِلنَّٰظِرِينَ</word>
+  <word id="133" position="8" type="number">١٦</word>
+  <ayah eid="15:16:warsh-kfqc"/>
+  <ayah number="17" tradition="warsh-kfqc" sid="15:17:warsh-kfqc"/>
+  <word id="134" position="1">وَحَفِظْنَٰهَا</word>
+  <word id="135" position="2">مِن</word>
+  <word id="136" position="3">كُلِّ</word>
+  <word id="137" position="4">شَيْطَٰنٖ</word>
+  <word id="138" position="5">رَّجِيمٍ</word>
+  <word id="139" position="6" type="number">١٧</word>
+  <ayah eid="15:17:warsh-kfqc"/>
+  <ayah number="18" tradition="warsh-kfqc" sid="15:18:warsh-kfqc"/>
+  <word id="140" position="1">اِلَّا</word>
+  <word id="141" position="2">مَنِ</word>
+  <word id="142" position="3">اِ۪سْتَرَقَ</word>
+  <word id="143" position="4">اَ۬لسَّمْعَ</word>
+  <word id="144" position="5">فَأَتْبَعَهُۥ</word>
+  <word id="145" position="6">شِهَابٞ</word>
+  <word id="146" position="7">مُّبِينٞۖ</word>
+  <word id="147" position="8" type="number">١٨</word>
+  <ayah eid="15:18:warsh-kfqc"/>
+  <ayah number="19" tradition="warsh-kfqc" sid="15:19:warsh-kfqc"/>
+  <word id="148" position="1">وَالَارْضَ</word>
+  <word id="149" position="2">مَدَدْنَٰهَا</word>
+  <word id="150" position="3">وَأَلْقَيْنَا</word>
+  <word id="151" position="4">فِيهَا</word>
+  <word id="152" position="5">رَوَٰسِيَ</word>
+  <word id="153" position="6">وَأَنۢبَتْنَا</word>
+  <word id="154" position="7">فِيهَا</word>
+  <word id="155" position="8">مِن</word>
+  <word id="156" position="9">كُلِّ</word>
+  <word id="157" position="10">شَےْءٖ</word>
+  <word id="158" position="11">مَّوْزُونٖ</word>
+  <word id="159" position="12" type="number">١٩</word>
+  <ayah eid="15:19:warsh-kfqc"/>
+  <ayah number="20" tradition="warsh-kfqc" sid="15:20:warsh-kfqc"/>
+  <word id="160" position="1">وَجَعَلْنَا</word>
+  <word id="161" position="2">لَكُمْ</word>
+  <word id="162" position="3">فِيهَا</word>
+  <word id="163" position="4">مَعَٰيِشَۖ</word>
+  <word id="164" position="5">وَمَن</word>
+  <word id="165" position="6">لَّسْتُمْ</word>
+  <word id="166" position="7">لَهُۥ</word>
+  <word id="167" position="8">بِرَٰزِقِينَۖ</word>
+  <word id="168" position="9" type="number">٢٠</word>
+  <ayah eid="15:20:warsh-kfqc"/>
+  <ayah number="21" tradition="warsh-kfqc" sid="15:21:warsh-kfqc"/>
+  <word id="169" position="1">وَإِن</word>
+  <word id="170" position="2">مِّن</word>
+  <word id="171" position="3">شَےْءٍ</word>
+  <word id="172" position="4">اِلَّا</word>
+  <word id="173" position="5">عِندَنَا</word>
+  <word id="174" position="6">خَزَآئِنُهُۥۖ</word>
+  <word id="175" position="7">وَمَا</word>
+  <word id="176" position="8">نُنَزِّلُهُۥٓ</word>
+  <word id="177" position="9">إِلَّا</word>
+  <word id="178" position="10">بِقَدَرٖ</word>
+  <word id="179" position="11">مَّعْلُومٖۖ</word>
+  <word id="180" position="12" type="number">٢١</word>
+  <ayah eid="15:21:warsh-kfqc"/>
+  <ayah number="22" tradition="warsh-kfqc" sid="15:22:warsh-kfqc"/>
+  <word id="181" position="1">وَأَرْسَلْنَا</word>
+  <word id="182" position="2">اَ۬لرِّيَٰحَ</word>
+  <word id="183" position="3">لَوَٰقِحَ</word>
+  <word id="184" position="4">فَأَنزَلْنَا</word>
+  <word id="185" position="5">مِنَ</word>
+  <word id="186" position="6">اَ۬لسَّمَآءِ</word>
+  <word id="187" position="7">مَآءٗ</word>
+  <word id="188" position="8">فَأَسْقَيْنَٰكُمُوهُ</word>
+  <word id="189" position="9">وَمَآ</word>
+  <word id="190" position="10">أَنتُمْ</word>
+  <word id="191" position="11">لَهُۥ</word>
+  <word id="192" position="12">بِخَٰزِنِينَۖ</word>
+  <word id="193" position="13" type="number">٢٢</word>
+  <ayah eid="15:22:warsh-kfqc"/>
+  <ayah number="23" tradition="warsh-kfqc" sid="15:23:warsh-kfqc"/>
+  <word id="194" position="1">وَإِنَّا</word>
+  <word id="195" position="2">لَنَحْنُ</word>
+  <word id="196" position="3">نُحْيِۦ</word>
+  <word id="197" position="4">وَنُمِيتُ</word>
+  <word id="198" position="5">وَنَحْنُ</word>
+  <word id="199" position="6">اُ۬لْوَٰرِثُونَۖ</word>
+  <word id="200" position="7" type="number">٢٣</word>
+  <ayah eid="15:23:warsh-kfqc"/>
+  <ayah number="24" tradition="warsh-kfqc" sid="15:24:warsh-kfqc"/>
+  <word id="201" position="1">وَلَقَدْ</word>
+  <word id="202" position="2">عَلِمْنَا</word>
+  <word id="203" position="3">اَ۬لْمُسْتَقْدِمِينَ</word>
+  <word id="204" position="4">مِنكُمْ</word>
+  <word id="205" position="5">وَلَقَدْ</word>
+  <word id="206" position="6">عَلِمْنَا</word>
+  <word id="207" position="7">اَ۬لْمُسْتَٰخِرِينَۖ</word>
+  <word id="208" position="8" type="number">٢٤</word>
+  <ayah eid="15:24:warsh-kfqc"/>
+  <ayah number="25" tradition="warsh-kfqc" sid="15:25:warsh-kfqc"/>
+  <word id="209" position="1">وَإِنَّ</word>
+  <word id="210" position="2">رَبَّكَ</word>
+  <word id="211" position="3">هُوَ</word>
+  <word id="212" position="4">يَحْشُرُهُمُۥٓۖ</word>
+  <word id="213" position="5">إِنَّهُۥ</word>
+  <word id="214" position="6">حَكِيمٌ</word>
+  <word id="215" position="7">عَلِيمٞۖ</word>
+  <word id="216" position="8" type="number">٢٥</word>
+  <ayah eid="15:25:warsh-kfqc"/>
+  <ayah number="26" tradition="warsh-kfqc" sid="15:26:warsh-kfqc"/>
+  <word id="217" position="1">وَلَقَدْ</word>
+  <word id="218" position="2">خَلَقْنَا</word>
+  <word id="219" position="3">اَ۬لِانسَٰنَ</word>
+  <word id="220" position="4">مِن</word>
+  <word id="221" position="5">صَلْصَٰلٖ</word>
+  <word id="222" position="6">مِّنْ</word>
+  <word id="223" position="7">حَمَإٖ</word>
+  <word id="224" position="8">مَّسْنُونٖۖ</word>
+  <word id="225" position="9" type="number">٢٦</word>
+  <ayah eid="15:26:warsh-kfqc"/>
+  <ayah number="27" tradition="warsh-kfqc" sid="15:27:warsh-kfqc"/>
+  <word id="226" position="1">وَالْجَآنَّ</word>
+  <word id="227" position="2">خَلَقْنَٰهُ</word>
+  <word id="228" position="3">مِن</word>
+  <word id="229" position="4">قَبْلُ</word>
+  <word id="230" position="5">مِن</word>
+  <word id="231" position="6">نّ۪ارِ</word>
+  <word id="232" position="7">اِ۬لسَّمُومِۖ</word>
+  <word id="233" position="8" type="number">٢٧</word>
+  <ayah eid="15:27:warsh-kfqc"/>
+  <ayah number="28" tradition="warsh-kfqc" sid="15:28:warsh-kfqc"/>
+  <word id="234" position="1">وَإِذْ</word>
+  <word id="235" position="2">قَالَ</word>
+  <word id="236" position="3">رَبُّكَ</word>
+  <word id="237" position="4">لِلْمَلَٰٓئِكَةِ</word>
+  <word id="238" position="5">إِنِّے</word>
+  <word id="239" position="6">خَٰلِقُۢ</word>
+  <word id="240" position="7">بَشَراٗ</word>
+  <word id="241" position="8">مِّن</word>
+  <word id="242" position="9">صَلْصَٰلٖ</word>
+  <word id="243" position="10">مِّنْ</word>
+  <word id="244" position="11">حَمَإٖ</word>
+  <word id="245" position="12">مَّسْنُونٖ</word>
+  <word id="246" position="13" type="number">٢٨</word>
+  <ayah eid="15:28:warsh-kfqc"/>
+  <ayah number="29" tradition="warsh-kfqc" sid="15:29:warsh-kfqc"/>
+  <word id="247" position="1">فَإِذَا</word>
+  <word id="248" position="2">سَوَّيْتُهُۥ</word>
+  <word id="249" position="3">وَنَفَخْتُ</word>
+  <word id="250" position="4">فِيهِ</word>
+  <word id="251" position="5">مِن</word>
+  <word id="252" position="6">رُّوحِے</word>
+  <word id="253" position="7">فَقَعُواْ</word>
+  <word id="254" position="8">لَهُۥ</word>
+  <word id="255" position="9">سَٰجِدِينَۖ</word>
+  <word id="256" position="10" type="number">٢٩</word>
+  <ayah eid="15:29:warsh-kfqc"/>
+  <ayah number="30" tradition="warsh-kfqc" sid="15:30:warsh-kfqc"/>
+  <word id="257" position="1">فَسَجَدَ</word>
+  <word id="258" position="2">اَ۬لْمَلَٰٓئِكَةُ</word>
+  <word id="259" position="3">كُلُّهُمُۥٓ</word>
+  <word id="260" position="4">أَجْمَعُونَ</word>
+  <word id="261" position="5" type="number">٣٠</word>
+  <ayah eid="15:30:warsh-kfqc"/>
+  <ayah number="31" tradition="warsh-kfqc" sid="15:31:warsh-kfqc"/>
+  <word id="262" position="1">إِلَّآ</word>
+  <word id="263" position="2">إِبْلِيسَ</word>
+  <word id="264" position="3">أَب۪ىٰٓ</word>
+  <word id="265" position="4">أَنْ</word>
+  <word id="266" position="5">يَّكُونَ</word>
+  <word id="267" position="6">مَعَ</word>
+  <word id="268" position="7">اَ۬لسَّٰجِدِينَۖ</word>
+  <word id="269" position="8" type="number">٣١</word>
+  <ayah eid="15:31:warsh-kfqc"/>
+  <ayah number="32" tradition="warsh-kfqc" sid="15:32:warsh-kfqc"/>
+  <word id="270" position="1">قَالَ</word>
+  <word id="271" position="2">يَٰٓإِبْلِيسُ</word>
+  <word id="272" position="3">مَا</word>
+  <word id="273" position="4">لَكَ</word>
+  <word id="274" position="5">أَلَّا</word>
+  <word id="275" position="6">تَكُونَ</word>
+  <word id="276" position="7">مَعَ</word>
+  <word id="277" position="8">اَ۬لسَّٰجِدِينَۖ</word>
+  <word id="278" position="9" type="number">٣٢</word>
+  <ayah eid="15:32:warsh-kfqc"/>
+  <ayah number="33" tradition="warsh-kfqc" sid="15:33:warsh-kfqc"/>
+  <word id="279" position="1">قَالَ</word>
+  <word id="280" position="2">لَمَ</word>
+  <word id="281" position="3">اَكُن</word>
+  <word id="282" position="4">لِّأَسْجُدَ</word>
+  <word id="283" position="5">لِبَشَرٍ</word>
+  <word id="284" position="6">خَلَقْتَهُۥ</word>
+  <word id="285" position="7">مِن</word>
+  <word id="286" position="8">صَلْصَٰلٖ</word>
+  <word id="287" position="9">مِّنْ</word>
+  <word id="288" position="10">حَمَإٖ</word>
+  <word id="289" position="11">مَّسْنُونٖۖ</word>
+  <word id="290" position="12" type="number">٣٣</word>
+  <ayah eid="15:33:warsh-kfqc"/>
+  <ayah number="34" tradition="warsh-kfqc" sid="15:34:warsh-kfqc"/>
+  <word id="291" position="1">قَالَ</word>
+  <word id="292" position="2">فَاخْرُجْ</word>
+  <word id="293" position="3">مِنْهَا</word>
+  <word id="294" position="4">فَإِنَّكَ</word>
+  <word id="295" position="5">رَجِيمٞ</word>
+  <word id="296" position="6" type="number">٣٤</word>
+  <ayah eid="15:34:warsh-kfqc"/>
+  <ayah number="35" tradition="warsh-kfqc" sid="15:35:warsh-kfqc"/>
+  <word id="297" position="1">وَإِنَّ</word>
+  <word id="298" position="2">عَلَيْكَ</word>
+  <word id="299" position="3">اَ۬للَّعْنَةَ</word>
+  <word id="300" position="4">إِلَىٰ</word>
+  <word id="301" position="5">يَوْمِ</word>
+  <word id="302" position="6">اِ۬لدِّينِۖ</word>
+  <word id="303" position="7" type="number">٣٥</word>
+  <ayah eid="15:35:warsh-kfqc"/>
+  <ayah number="36" tradition="warsh-kfqc" sid="15:36:warsh-kfqc"/>
+  <word id="304" position="1">قَالَ</word>
+  <word id="305" position="2">رَبِّ</word>
+  <word id="306" position="3">فَأَنظِرْنِےٓ</word>
+  <word id="307" position="4">إِلَىٰ</word>
+  <word id="308" position="5">يَوْمِ</word>
+  <word id="309" position="6">يُبْعَثُونَۖ</word>
+  <word id="310" position="7" type="number">٣٦</word>
+  <ayah eid="15:36:warsh-kfqc"/>
+  <ayah number="37" tradition="warsh-kfqc" sid="15:37:warsh-kfqc"/>
+  <word id="311" position="1">قَالَ</word>
+  <word id="312" position="2">فَإِنَّكَ</word>
+  <word id="313" position="3">مِنَ</word>
+  <word id="314" position="4">اَ۬لْمُنظَرِينَ</word>
+  <word id="315" position="5" type="number">٣٧</word>
+  <ayah eid="15:37:warsh-kfqc"/>
+  <ayah number="38" tradition="warsh-kfqc" sid="15:38:warsh-kfqc"/>
+  <word id="316" position="1">إِلَىٰ</word>
+  <word id="317" position="2">يَوْمِ</word>
+  <word id="318" position="3">اِ۬لْوَقْتِ</word>
+  <word id="319" position="4">اِ۬لْمَعْلُومِۖ</word>
+  <word id="320" position="5" type="number">٣٨</word>
+  <ayah eid="15:38:warsh-kfqc"/>
+  <ayah number="39" tradition="warsh-kfqc" sid="15:39:warsh-kfqc"/>
+  <word id="321" position="1">قَالَ</word>
+  <word id="322" position="2">رَبِّ</word>
+  <word id="323" position="3">بِمَآ</word>
+  <word id="324" position="4">أَغْوَيْتَنِے</word>
+  <word id="325" position="5">لَأُزَيِّنَنَّ</word>
+  <word id="326" position="6">لَهُمْ</word>
+  <word id="327" position="7">فِے</word>
+  <word id="328" position="8">اِ۬لَارْضِ</word>
+  <word id="329" position="9">وَلَأُغْوِيَنَّهُمُۥٓ</word>
+  <word id="330" position="10">أَجْمَعِينَ</word>
+  <word id="331" position="11" type="number">٣٩</word>
+  <ayah eid="15:39:warsh-kfqc"/>
+  <ayah number="40" tradition="warsh-kfqc" sid="15:40:warsh-kfqc"/>
+  <word id="332" position="1">إِلَّا</word>
+  <word id="333" position="2">عِبَادَكَ</word>
+  <word id="334" position="3">مِنْهُمُ</word>
+  <word id="335" position="4">اُ۬لْمُخْلَصِينَۖ</word>
+  <word id="336" position="5" type="number">٤٠</word>
+  <ayah eid="15:40:warsh-kfqc"/>
+  <ayah number="41" tradition="warsh-kfqc" sid="15:41:warsh-kfqc"/>
+  <word id="337" position="1">قَالَ</word>
+  <word id="338" position="2">هَٰذَا</word>
+  <word id="339" position="3">صِرَٰطٌ</word>
+  <word id="340" position="4">عَلَيَّ</word>
+  <word id="341" position="5">مُسْتَقِيمٌۖ</word>
+  <word id="342" position="6" type="number">٤١</word>
+  <ayah eid="15:41:warsh-kfqc"/>
+  <ayah number="42" tradition="warsh-kfqc" sid="15:42:warsh-kfqc"/>
+  <word id="343" position="1">اِنَّ</word>
+  <word id="344" position="2">عِبَادِے</word>
+  <word id="345" position="3">لَيْسَ</word>
+  <word id="346" position="4">لَكَ</word>
+  <word id="347" position="5">عَلَيْهِمْ</word>
+  <word id="348" position="6">سُلْطَٰنٌ</word>
+  <word id="349" position="7">اِلَّا</word>
+  <word id="350" position="8">مَنِ</word>
+  <word id="351" position="9">اِ۪تَّبَعَكَ</word>
+  <word id="352" position="10">مِنَ</word>
+  <word id="353" position="11">اَ۬لْغَاوِينَۖ</word>
+  <word id="354" position="12" type="number">٤٢</word>
+  <ayah eid="15:42:warsh-kfqc"/>
+  <ayah number="43" tradition="warsh-kfqc" sid="15:43:warsh-kfqc"/>
+  <word id="355" position="1">وَإِنَّ</word>
+  <word id="356" position="2">جَهَنَّمَ</word>
+  <word id="357" position="3">لَمَوْعِدُهُمُۥٓ</word>
+  <word id="358" position="4">أَجْمَعِينَ</word>
+  <word id="359" position="5" type="number">٤٣</word>
+  <ayah eid="15:43:warsh-kfqc"/>
+  <ayah number="44" tradition="warsh-kfqc" sid="15:44:warsh-kfqc"/>
+  <word id="360" position="1">لَهَا</word>
+  <word id="361" position="2">سَبْعَةُ</word>
+  <word id="362" position="3">أَبْوَٰبٖۖ</word>
+  <word id="363" position="4">لِّكُلِّ</word>
+  <word id="364" position="5">بَابٖ</word>
+  <word id="365" position="6">مِّنْهُمْ</word>
+  <word id="366" position="7">جُزْءٞ</word>
+  <word id="367" position="8">مَّقْسُومٌۖ</word>
+  <word id="368" position="9" type="number">٤٤</word>
+  <ayah eid="15:44:warsh-kfqc"/>
+  <ayah number="45" tradition="warsh-kfqc" sid="15:45:warsh-kfqc"/>
+  <word id="369" position="1">اِنَّ</word>
+  <word id="370" position="2">اَ۬لْمُتَّقِينَ</word>
+  <word id="371" position="3">فِے</word>
+  <word id="372" position="4">جَنَّٰتٖ</word>
+  <word id="373" position="5">وَعُيُونٍ</word>
+  <word id="374" position="6" type="number">٤٥</word>
+  <ayah eid="15:45:warsh-kfqc"/>
+  <ayah number="46" tradition="warsh-kfqc" sid="15:46:warsh-kfqc"/>
+  <word id="375" position="1">اُ۟دْخُلُوهَا</word>
+  <word id="376" position="2">بِسَلَٰمٍ</word>
+  <word id="377" position="3">اٰمِنِينَۖ</word>
+  <word id="378" position="4" type="number">٤٦</word>
+  <ayah eid="15:46:warsh-kfqc"/>
+  <ayah number="47" tradition="warsh-kfqc" sid="15:47:warsh-kfqc"/>
+  <word id="379" position="1">وَنَزَعْنَا</word>
+  <word id="380" position="2">مَا</word>
+  <word id="381" position="3">فِے</word>
+  <word id="382" position="4">صُدُورِهِم</word>
+  <word id="383" position="5">مِّنْ</word>
+  <word id="384" position="6">غِلٍّۖ</word>
+  <word id="385" position="7">اِخْوَٰناً</word>
+  <word id="386" position="8">عَلَىٰ</word>
+  <word id="387" position="9">سُرُرٖ</word>
+  <word id="388" position="10">مُّتَقَٰبِلِينَۖ</word>
+  <word id="389" position="11" type="number">٤٧</word>
+  <ayah eid="15:47:warsh-kfqc"/>
+  <ayah number="48" tradition="warsh-kfqc" sid="15:48:warsh-kfqc"/>
+  <word id="390" position="1">لَا</word>
+  <word id="391" position="2">يَمَسُّهُمْ</word>
+  <word id="392" position="3">فِيهَا</word>
+  <word id="393" position="4">نَصَبٞۖ</word>
+  <word id="394" position="5">وَمَا</word>
+  <word id="395" position="6">هُم</word>
+  <word id="396" position="7">مِّنْهَا</word>
+  <word id="397" position="8">بِمُخْرَجِينَۖ</word>
+  <word id="398" position="9" type="number">٤٨</word>
+  <ayah eid="15:48:warsh-kfqc"/>
+  <ayah number="49" tradition="warsh-kfqc" sid="15:49:warsh-kfqc"/>
+  <word id="399" position="1">۞</word>
+  <word id="400" position="2">نَبِّۓْ</word>
+  <word id="401" position="3">عِبَادِيَ</word>
+  <word id="402" position="4">أَنِّيَ</word>
+  <word id="403" position="5">أَنَا</word>
+  <word id="404" position="6">اَ۬لْغَفُورُ</word>
+  <word id="405" position="7">اُ۬لرَّحِيمُ</word>
+  <word id="406" position="8" type="number">٤٩</word>
+  <ayah eid="15:49:warsh-kfqc"/>
+  <ayah number="50" tradition="warsh-kfqc" sid="15:50:warsh-kfqc"/>
+  <word id="407" position="1">وَأَنَّ</word>
+  <word id="408" position="2">عَذَابِے</word>
+  <word id="409" position="3">هُوَ</word>
+  <word id="410" position="4">اَ۬لْعَذَابُ</word>
+  <word id="411" position="5">اُ۬لَالِيمُۖ</word>
+  <word id="412" position="6" type="number">٥٠</word>
+  <ayah eid="15:50:warsh-kfqc"/>
+  <ayah number="51" tradition="warsh-kfqc" sid="15:51:warsh-kfqc"/>
+  <word id="413" position="1">وَنَبِّئْهُمْ</word>
+  <word id="414" position="2">عَن</word>
+  <word id="415" position="3">ضَيْفِ</word>
+  <word id="416" position="4">إِبْرَٰهِيمَ</word>
+  <word id="417" position="5" type="number">٥١</word>
+  <ayah eid="15:51:warsh-kfqc"/>
+  <ayah number="52" tradition="warsh-kfqc" sid="15:52:warsh-kfqc"/>
+  <word id="418" position="1">إِذْ</word>
+  <word id="419" position="2">دَخَلُواْ</word>
+  <word id="420" position="3">عَلَيْهِ</word>
+  <word id="421" position="4">فَقَالُواْ</word>
+  <word id="422" position="5">سَلَٰماٗۖ</word>
+  <word id="423" position="6">قَالَ</word>
+  <word id="424" position="7">إِنَّا</word>
+  <word id="425" position="8">مِنكُمْ</word>
+  <word id="426" position="9">وَجِلُونَۖ</word>
+  <word id="427" position="10" type="number">٥٢</word>
+  <ayah eid="15:52:warsh-kfqc"/>
+  <ayah number="53" tradition="warsh-kfqc" sid="15:53:warsh-kfqc"/>
+  <word id="428" position="1">قَالُواْ</word>
+  <word id="429" position="2">لَا</word>
+  <word id="430" position="3">تَوْجَلِ</word>
+  <word id="431" position="4">اِنَّا</word>
+  <word id="432" position="5">نُبَشِّرُكَ</word>
+  <word id="433" position="6">بِغُلَٰمٍ</word>
+  <word id="434" position="7">عَلِيمٖۖ</word>
+  <word id="435" position="8" type="number">٥٣</word>
+  <ayah eid="15:53:warsh-kfqc"/>
+  <ayah number="54" tradition="warsh-kfqc" sid="15:54:warsh-kfqc"/>
+  <word id="436" position="1">قَالَ</word>
+  <word id="437" position="2">أَبَشَّرْتُمُونِے</word>
+  <word id="438" position="3">عَلَىٰٓ</word>
+  <word id="439" position="4">أَن</word>
+  <word id="440" position="5">مَّسَّنِيَ</word>
+  <word id="441" position="6">اَ۬لْكِبَرُ</word>
+  <word id="442" position="7">فَبِمَ</word>
+  <word id="443" position="8">تُبَشِّرُونِۖ</word>
+  <word id="444" position="9" type="number">٥٤</word>
+  <ayah eid="15:54:warsh-kfqc"/>
+  <ayah number="55" tradition="warsh-kfqc" sid="15:55:warsh-kfqc"/>
+  <word id="445" position="1">قَالُواْ</word>
+  <word id="446" position="2">بَشَّرْنَٰكَ</word>
+  <word id="447" position="3">بِالْحَقِّ</word>
+  <word id="448" position="4">فَلَا</word>
+  <word id="449" position="5">تَكُن</word>
+  <word id="450" position="6">مِّنَ</word>
+  <word id="451" position="7">اَ۬لْقَٰنِطِينَۖ</word>
+  <word id="452" position="8" type="number">٥٥</word>
+  <ayah eid="15:55:warsh-kfqc"/>
+  <ayah number="56" tradition="warsh-kfqc" sid="15:56:warsh-kfqc"/>
+  <word id="453" position="1">قَالَ</word>
+  <word id="454" position="2">وَمَنْ</word>
+  <word id="455" position="3">يَّقْنَطُ</word>
+  <word id="456" position="4">مِن</word>
+  <word id="457" position="5">رَّحْمَةِ</word>
+  <word id="458" position="6">رَبِّهِۦٓ</word>
+  <word id="459" position="7">إِلَّا</word>
+  <word id="460" position="8">اَ۬لضَّآلُّونَۖ</word>
+  <word id="461" position="9" type="number">٥٦</word>
+  <ayah eid="15:56:warsh-kfqc"/>
+  <ayah number="57" tradition="warsh-kfqc" sid="15:57:warsh-kfqc"/>
+  <word id="462" position="1">قَالَ</word>
+  <word id="463" position="2">فَمَا</word>
+  <word id="464" position="3">خَطْبُكُمُۥٓ</word>
+  <word id="465" position="4">أَيُّهَا</word>
+  <word id="466" position="5">اَ۬لْمُرْسَلُونَۖ</word>
+  <word id="467" position="6" type="number">٥٧</word>
+  <ayah eid="15:57:warsh-kfqc"/>
+  <ayah number="58" tradition="warsh-kfqc" sid="15:58:warsh-kfqc"/>
+  <word id="468" position="1">قَالُوٓاْ</word>
+  <word id="469" position="2">إِنَّآ</word>
+  <word id="470" position="3">أُرْسِلْنَآ</word>
+  <word id="471" position="4">إِلَىٰ</word>
+  <word id="472" position="5">قَوْمٖ</word>
+  <word id="473" position="6">مُّجْرِمِينَ</word>
+  <word id="474" position="7" type="number">٥٨</word>
+  <ayah eid="15:58:warsh-kfqc"/>
+  <ayah number="59" tradition="warsh-kfqc" sid="15:59:warsh-kfqc"/>
+  <word id="475" position="1">إِلَّآ</word>
+  <word id="476" position="2">ءَالَ</word>
+  <word id="477" position="3">لُوطٍۖ</word>
+  <word id="478" position="4">اِنَّا</word>
+  <word id="479" position="5">لَمُنَجُّوهُمُۥٓ</word>
+  <word id="480" position="6">أَجْمَعِينَ</word>
+  <word id="481" position="7" type="number">٥٩</word>
+  <ayah eid="15:59:warsh-kfqc"/>
+  <ayah number="60" tradition="warsh-kfqc" sid="15:60:warsh-kfqc"/>
+  <word id="482" position="1">إِلَّا</word>
+  <word id="483" position="2">اَ۪مْرَأَتَهُۥ</word>
+  <word id="484" position="3">قَدَّرْنَآ</word>
+  <word id="485" position="4">إِنَّهَا</word>
+  <word id="486" position="5">لَمِنَ</word>
+  <word id="487" position="6">اَ۬لْغَٰبِرِينَۖ</word>
+  <word id="488" position="7" type="number">٦٠</word>
+  <ayah eid="15:60:warsh-kfqc"/>
+  <ayah number="61" tradition="warsh-kfqc" sid="15:61:warsh-kfqc"/>
+  <word id="489" position="1">فَلَمَّا</word>
+  <word id="490" position="2">جَآءَ</word>
+  <word id="491" position="3">ا۟لَ</word>
+  <word id="492" position="4">لُوطٍ</word>
+  <word id="493" position="5">اِ۬لْمُرْسَلُونَ</word>
+  <word id="494" position="6" type="number">٦١</word>
+  <ayah eid="15:61:warsh-kfqc"/>
+  <ayah number="62" tradition="warsh-kfqc" sid="15:62:warsh-kfqc"/>
+  <word id="495" position="1">قَالَ</word>
+  <word id="496" position="2">إِنَّكُمْ</word>
+  <word id="497" position="3">قَوْمٞ</word>
+  <word id="498" position="4">مُّنكَرُونَۖ</word>
+  <word id="499" position="5" type="number">٦٢</word>
+  <ayah eid="15:62:warsh-kfqc"/>
+  <ayah number="63" tradition="warsh-kfqc" sid="15:63:warsh-kfqc"/>
+  <word id="500" position="1">قَالُواْ</word>
+  <word id="501" position="2">بَلْ</word>
+  <word id="502" position="3">جِئْنَٰكَ</word>
+  <word id="503" position="4">بِمَا</word>
+  <word id="504" position="5">كَانُواْ</word>
+  <word id="505" position="6">فِيهِ</word>
+  <word id="506" position="7">يَمْتَرُونَ</word>
+  <word id="507" position="8" type="number">٦٣</word>
+  <ayah eid="15:63:warsh-kfqc"/>
+  <ayah number="64" tradition="warsh-kfqc" sid="15:64:warsh-kfqc"/>
+  <word id="508" position="1">وَأَتَيْنَٰكَ</word>
+  <word id="509" position="2">بِالْحَقِّ</word>
+  <word id="510" position="3">وَإِنَّا</word>
+  <word id="511" position="4">لَصَٰدِقُونَۖ</word>
+  <word id="512" position="5" type="number">٦٤</word>
+  <ayah eid="15:64:warsh-kfqc"/>
+  <ayah number="65" tradition="warsh-kfqc" sid="15:65:warsh-kfqc"/>
+  <word id="513" position="1">فَاسْرِ</word>
+  <word id="514" position="2">بِأَهْلِكَ</word>
+  <word id="515" position="3">بِقِطْعٖ</word>
+  <word id="516" position="4">مِّنَ</word>
+  <word id="517" position="5">اَ۬ليْلِ</word>
+  <word id="518" position="6">وَاتَّبِعَ</word>
+  <word id="519" position="7">اَدْبَٰرَهُمْ</word>
+  <word id="520" position="8">وَلَا</word>
+  <word id="521" position="9">يَلْتَفِتْ</word>
+  <word id="522" position="10">مِنكُمُۥٓ</word>
+  <word id="523" position="11">أَحَدٞ</word>
+  <word id="524" position="12">وَامْضُواْ</word>
+  <word id="525" position="13">حَيْثُ</word>
+  <word id="526" position="14">تُومَرُونَۖ</word>
+  <word id="527" position="15" type="number">٦٥</word>
+  <ayah eid="15:65:warsh-kfqc"/>
+  <ayah number="66" tradition="warsh-kfqc" sid="15:66:warsh-kfqc"/>
+  <word id="528" position="1">وَقَضَيْنَآ</word>
+  <word id="529" position="2">إِلَيْهِ</word>
+  <word id="530" position="3">ذَٰلِكَ</word>
+  <word id="531" position="4">اَ۬لَامْرَ</word>
+  <word id="532" position="5">أَنَّ</word>
+  <word id="533" position="6">دَابِرَ</word>
+  <word id="534" position="7">هَٰٓؤُلَآءِ</word>
+  <word id="535" position="8">مَقْطُوعٞ</word>
+  <word id="536" position="9">مُّصْبِحِينَۖ</word>
+  <word id="537" position="10" type="number">٦٦</word>
+  <ayah eid="15:66:warsh-kfqc"/>
+  <ayah number="67" tradition="warsh-kfqc" sid="15:67:warsh-kfqc"/>
+  <word id="538" position="1">وَجَآءَ</word>
+  <word id="539" position="2">اهْلُ</word>
+  <word id="540" position="3">اُ۬لْمَدِينَةِ</word>
+  <word id="541" position="4">يَسْتَبْشِرُونَۖ</word>
+  <word id="542" position="5" type="number">٦٧</word>
+  <ayah eid="15:67:warsh-kfqc"/>
+  <ayah number="68" tradition="warsh-kfqc" sid="15:68:warsh-kfqc"/>
+  <word id="543" position="1">قَالَ</word>
+  <word id="544" position="2">إِنَّ</word>
+  <word id="545" position="3">هَٰٓؤُلَآءِ</word>
+  <word id="546" position="4">ضَيْفِے</word>
+  <word id="547" position="5">فَلَا</word>
+  <word id="548" position="6">تَفْضَحُونِۖ</word>
+  <word id="549" position="7" type="number">٦٨</word>
+  <ayah eid="15:68:warsh-kfqc"/>
+  <ayah number="69" tradition="warsh-kfqc" sid="15:69:warsh-kfqc"/>
+  <word id="550" position="1">وَاتَّقُواْ</word>
+  <word id="551" position="2">اُ۬للَّهَ</word>
+  <word id="552" position="3">وَلَا</word>
+  <word id="553" position="4">تُخْزُونِۖ</word>
+  <word id="554" position="5" type="number">٦٩</word>
+  <ayah eid="15:69:warsh-kfqc"/>
+  <ayah number="70" tradition="warsh-kfqc" sid="15:70:warsh-kfqc"/>
+  <word id="555" position="1">قَالُوٓاْ</word>
+  <word id="556" position="2">أَوَلَمْ</word>
+  <word id="557" position="3">نَنْهَكَ</word>
+  <word id="558" position="4">عَنِ</word>
+  <word id="559" position="5">اِ۬لْعَٰلَمِينَۖ</word>
+  <word id="560" position="6" type="number">٧٠</word>
+  <ayah eid="15:70:warsh-kfqc"/>
+  <ayah number="71" tradition="warsh-kfqc" sid="15:71:warsh-kfqc"/>
+  <word id="561" position="1">قَالَ</word>
+  <word id="562" position="2">هَٰٓؤُلَآءِ</word>
+  <word id="563" position="3">بَنَاتِيَ</word>
+  <word id="564" position="4">إِن</word>
+  <word id="565" position="5">كُنتُمْ</word>
+  <word id="566" position="6">فَٰعِلِينَۖ</word>
+  <word id="567" position="7" type="number">٧١</word>
+  <ayah eid="15:71:warsh-kfqc"/>
+  <ayah number="72" tradition="warsh-kfqc" sid="15:72:warsh-kfqc"/>
+  <word id="568" position="1">لَعَمْرُكَ</word>
+  <word id="569" position="2">إِنَّهُمْ</word>
+  <word id="570" position="3">لَفِے</word>
+  <word id="571" position="4">سَكْرَتِهِمْ</word>
+  <word id="572" position="5">يَعْمَهُونَۖ</word>
+  <word id="573" position="6" type="number">٧٢</word>
+  <ayah eid="15:72:warsh-kfqc"/>
+  <ayah number="73" tradition="warsh-kfqc" sid="15:73:warsh-kfqc"/>
+  <word id="574" position="1">فَأَخَذَتْهُمُ</word>
+  <word id="575" position="2">اُ۬لصَّيْحَةُ</word>
+  <word id="576" position="3">مُشْرِقِينَ</word>
+  <word id="577" position="4" type="number">٧٣</word>
+  <ayah eid="15:73:warsh-kfqc"/>
+  <ayah number="74" tradition="warsh-kfqc" sid="15:74:warsh-kfqc"/>
+  <word id="578" position="1">فَجَعَلْنَا</word>
+  <word id="579" position="2">عَٰلِيَهَا</word>
+  <word id="580" position="3">سَافِلَهَا</word>
+  <word id="581" position="4">وَأَمْطَرْنَا</word>
+  <word id="582" position="5">عَلَيْهِمْ</word>
+  <word id="583" position="6">حِجَارَةٗ</word>
+  <word id="584" position="7">مِّن</word>
+  <word id="585" position="8">سِجِّيلٍۖ</word>
+  <word id="586" position="9" type="number">٧٤</word>
+  <ayah eid="15:74:warsh-kfqc"/>
+  <ayah number="75" tradition="warsh-kfqc" sid="15:75:warsh-kfqc"/>
+  <word id="587" position="1">اِنَّ</word>
+  <word id="588" position="2">فِے</word>
+  <word id="589" position="3">ذَٰلِكَ</word>
+  <word id="590" position="4">لَأٓيَٰتٖ</word>
+  <word id="591" position="5">لِّلْمُتَوَسِّمِينَۖ</word>
+  <word id="592" position="6" type="number">٧٥</word>
+  <ayah eid="15:75:warsh-kfqc"/>
+  <ayah number="76" tradition="warsh-kfqc" sid="15:76:warsh-kfqc"/>
+  <word id="593" position="1">وَإِنَّهَا</word>
+  <word id="594" position="2">لَبِسَبِيلٖ</word>
+  <word id="595" position="3">مُّقِيمٍۖ</word>
+  <word id="596" position="4" type="number">٧٦</word>
+  <ayah eid="15:76:warsh-kfqc"/>
+  <ayah number="77" tradition="warsh-kfqc" sid="15:77:warsh-kfqc"/>
+  <word id="597" position="1">اِنَّ</word>
+  <word id="598" position="2">فِے</word>
+  <word id="599" position="3">ذَٰلِكَ</word>
+  <word id="600" position="4">لَأٓيَةٗ</word>
+  <word id="601" position="5">لِّلْمُومِنِينَۖ</word>
+  <word id="602" position="6" type="number">٧٧</word>
+  <ayah eid="15:77:warsh-kfqc"/>
+  <ayah number="78" tradition="warsh-kfqc" sid="15:78:warsh-kfqc"/>
+  <word id="603" position="1">۞</word>
+  <word id="604" position="2">وَإِن</word>
+  <word id="605" position="3">كَانَ</word>
+  <word id="606" position="4">أَصْحَٰبُ</word>
+  <word id="607" position="5">اُ۬لَايْكَةِ</word>
+  <word id="608" position="6">لَظَٰلِمِينَۖ</word>
+  <word id="609" position="7" type="number">٧٨</word>
+  <ayah eid="15:78:warsh-kfqc"/>
+  <ayah number="79" tradition="warsh-kfqc" sid="15:79:warsh-kfqc"/>
+  <word id="610" position="1">فَانتَقَمْنَا</word>
+  <word id="611" position="2">مِنْهُمْۖ</word>
+  <word id="612" position="3">وَإِنَّهُمَا</word>
+  <word id="613" position="4">لَبِإِمَامٖ</word>
+  <word id="614" position="5">مُّبِينٖۖ</word>
+  <word id="615" position="6" type="number">٧٩</word>
+  <ayah eid="15:79:warsh-kfqc"/>
+  <ayah number="80" tradition="warsh-kfqc" sid="15:80:warsh-kfqc"/>
+  <word id="616" position="1">وَلَقَدْ</word>
+  <word id="617" position="2">كَذَّبَ</word>
+  <word id="618" position="3">أَصْحَٰبُ</word>
+  <word id="619" position="4">اُ۬لْحِجْرِ</word>
+  <word id="620" position="5">اِ۬لْمُرْسَلِينَۖ</word>
+  <word id="621" position="6" type="number">٨٠</word>
+  <ayah eid="15:80:warsh-kfqc"/>
+  <ayah number="81" tradition="warsh-kfqc" sid="15:81:warsh-kfqc"/>
+  <word id="622" position="1">وَءَاتَيْنَٰهُمُۥٓ</word>
+  <word id="623" position="2">ءَايَٰتِنَا</word>
+  <word id="624" position="3">فَكَانُواْ</word>
+  <word id="625" position="4">عَنْهَا</word>
+  <word id="626" position="5">مُعْرِضِينَۖ</word>
+  <word id="627" position="6" type="number">٨١</word>
+  <ayah eid="15:81:warsh-kfqc"/>
+  <ayah number="82" tradition="warsh-kfqc" sid="15:82:warsh-kfqc"/>
+  <word id="628" position="1">وَكَانُواْ</word>
+  <word id="629" position="2">يَنْحِتُونَ</word>
+  <word id="630" position="3">مِنَ</word>
+  <word id="631" position="4">اَ۬لْجِبَالِ</word>
+  <word id="632" position="5">بُيُوتاً</word>
+  <word id="633" position="6">اٰمِنِينَۖ</word>
+  <word id="634" position="7" type="number">٨٢</word>
+  <ayah eid="15:82:warsh-kfqc"/>
+  <ayah number="83" tradition="warsh-kfqc" sid="15:83:warsh-kfqc"/>
+  <word id="635" position="1">فَأَخَذَتْهُمُ</word>
+  <word id="636" position="2">اُ۬لصَّيْحَةُ</word>
+  <word id="637" position="3">مُصْبِحِينَۖ</word>
+  <word id="638" position="4" type="number">٨٣</word>
+  <ayah eid="15:83:warsh-kfqc"/>
+  <ayah number="84" tradition="warsh-kfqc" sid="15:84:warsh-kfqc"/>
+  <word id="639" position="1">فَمَآ</word>
+  <word id="640" position="2">أَغْن۪ىٰ</word>
+  <word id="641" position="3">عَنْهُم</word>
+  <word id="642" position="4">مَّا</word>
+  <word id="643" position="5">كَانُواْ</word>
+  <word id="644" position="6">يَكْسِبُونَۖ</word>
+  <word id="645" position="7" type="number">٨٤</word>
+  <ayah eid="15:84:warsh-kfqc"/>
+  <ayah number="85" tradition="warsh-kfqc" sid="15:85:warsh-kfqc"/>
+  <word id="646" position="1">وَمَا</word>
+  <word id="647" position="2">خَلَقْنَا</word>
+  <word id="648" position="3">اَ۬لسَّمَٰوَٰتِ</word>
+  <word id="649" position="4">وَالَارْضَ</word>
+  <word id="650" position="5">وَمَا</word>
+  <word id="651" position="6">بَيْنَهُمَآ</word>
+  <word id="652" position="7">إِلَّا</word>
+  <word id="653" position="8">بِالْحَقِّۖ</word>
+  <word id="654" position="9">وَإِنَّ</word>
+  <word id="655" position="10">اَ۬لسَّاعَةَ</word>
+  <word id="656" position="11">لَأٓتِيَةٞۖ</word>
+  <word id="657" position="12">فَاصْفَحِ</word>
+  <word id="658" position="13">اِ۬لصَّفْحَ</word>
+  <word id="659" position="14">اَ۬لْجَمِيلَۖ</word>
+  <word id="660" position="15" type="number">٨٥</word>
+  <ayah eid="15:85:warsh-kfqc"/>
+  <ayah number="86" tradition="warsh-kfqc" sid="15:86:warsh-kfqc"/>
+  <word id="661" position="1">إِنَّ</word>
+  <word id="662" position="2">رَبَّكَ</word>
+  <word id="663" position="3">هُوَ</word>
+  <word id="664" position="4">اَ۬لْخَلَّٰقُ</word>
+  <word id="665" position="5">اُ۬لْعَلِيمُۖ</word>
+  <word id="666" position="6" type="number">٨٦</word>
+  <ayah eid="15:86:warsh-kfqc"/>
+  <ayah number="87" tradition="warsh-kfqc" sid="15:87:warsh-kfqc"/>
+  <word id="667" position="1">وَلَقَدَ</word>
+  <word id="668" position="2">اٰتَيْنَٰكَ</word>
+  <word id="669" position="3">سَبْعاٗ</word>
+  <word id="670" position="4">مِّنَ</word>
+  <word id="671" position="5">اَ۬لْمَثَانِے</word>
+  <word id="672" position="6">وَالْقُرْءَانَ</word>
+  <word id="673" position="7">اَ۬لْعَظِيمَۖ</word>
+  <word id="674" position="8" type="number">٨٧</word>
+  <ayah eid="15:87:warsh-kfqc"/>
+  <ayah number="88" tradition="warsh-kfqc" sid="15:88:warsh-kfqc"/>
+  <word id="675" position="1">لَا</word>
+  <word id="676" position="2">تَمُدَّنَّ</word>
+  <word id="677" position="3">عَيْنَيْكَ</word>
+  <word id="678" position="4">إِلَىٰ</word>
+  <word id="679" position="5">مَا</word>
+  <word id="680" position="6">مَتَّعْنَا</word>
+  <word id="681" position="7">بِهِۦٓ</word>
+  <word id="682" position="8">أَزْوَٰجاٗ</word>
+  <word id="683" position="9">مِّنْهُمْۖ</word>
+  <word id="684" position="10">وَلَا</word>
+  <word id="685" position="11">تَحْزَنْ</word>
+  <word id="686" position="12">عَلَيْهِمْۖ</word>
+  <word id="687" position="13">وَاخْفِضْ</word>
+  <word id="688" position="14">جَنَاحَكَ</word>
+  <word id="689" position="15">لِلْمُومِنِينَۖ</word>
+  <word id="690" position="16" type="number">٨٨</word>
+  <ayah eid="15:88:warsh-kfqc"/>
+  <ayah number="89" tradition="warsh-kfqc" sid="15:89:warsh-kfqc"/>
+  <word id="691" position="1">وَقُلِ</word>
+  <word id="692" position="2">اِنِّيَ</word>
+  <word id="693" position="3">أَنَا</word>
+  <word id="694" position="4">اَ۬لنَّذِيرُ</word>
+  <word id="695" position="5">اُ۬لْمُبِينُ</word>
+  <word id="696" position="6" type="number">٨٩</word>
+  <ayah eid="15:89:warsh-kfqc"/>
+  <ayah number="90" tradition="warsh-kfqc" sid="15:90:warsh-kfqc"/>
+  <word id="697" position="1">كَمَآ</word>
+  <word id="698" position="2">أَنزَلْنَا</word>
+  <word id="699" position="3">عَلَى</word>
+  <word id="700" position="4">اَ۬لْمُقْتَسِمِينَ</word>
+  <word id="701" position="5" type="number">٩٠</word>
+  <ayah eid="15:90:warsh-kfqc"/>
+  <ayah number="91" tradition="warsh-kfqc" sid="15:91:warsh-kfqc"/>
+  <word id="702" position="1">اَ۬لذِينَ</word>
+  <word id="703" position="2">جَعَلُواْ</word>
+  <word id="704" position="3">اُ۬لْقُرْءَانَ</word>
+  <word id="705" position="4">عِضِينَۖ</word>
+  <word id="706" position="5" type="number">٩١</word>
+  <ayah eid="15:91:warsh-kfqc"/>
+  <ayah number="92" tradition="warsh-kfqc" sid="15:92:warsh-kfqc"/>
+  <word id="707" position="1">فَوَرَبِّكَ</word>
+  <word id="708" position="2">لَنَسْـَٔلَنَّهُمُۥٓ</word>
+  <word id="709" position="3">أَجْمَعِينَ</word>
+  <word id="710" position="4" type="number">٩٢</word>
+  <ayah eid="15:92:warsh-kfqc"/>
+  <ayah number="93" tradition="warsh-kfqc" sid="15:93:warsh-kfqc"/>
+  <word id="711" position="1">عَمَّا</word>
+  <word id="712" position="2">كَانُواْ</word>
+  <word id="713" position="3">يَعْمَلُونَۖ</word>
+  <word id="714" position="4" type="number">٩٣</word>
+  <ayah eid="15:93:warsh-kfqc"/>
+  <ayah number="94" tradition="warsh-kfqc" sid="15:94:warsh-kfqc"/>
+  <word id="715" position="1">فَاصْدَعْ</word>
+  <word id="716" position="2">بِمَا</word>
+  <word id="717" position="3">تُومَرُۖ</word>
+  <word id="718" position="4">وَأَعْرِضْ</word>
+  <word id="719" position="5">عَنِ</word>
+  <word id="720" position="6">اِ۬لْمُشْرِكِينَۖ</word>
+  <word id="721" position="7" type="number">٩٤</word>
+  <ayah eid="15:94:warsh-kfqc"/>
+  <ayah number="95" tradition="warsh-kfqc" sid="15:95:warsh-kfqc"/>
+  <word id="722" position="1">إِنَّا</word>
+  <word id="723" position="2">كَفَيْنَٰكَ</word>
+  <word id="724" position="3">اَ۬لْمُسْتَهْزِءِينَ</word>
+  <word id="725" position="4" type="number">٩٥</word>
+  <ayah eid="15:95:warsh-kfqc"/>
+  <ayah number="96" tradition="warsh-kfqc" sid="15:96:warsh-kfqc"/>
+  <word id="726" position="1">اَ۬لذِينَ</word>
+  <word id="727" position="2">يَجْعَلُونَ</word>
+  <word id="728" position="3">مَعَ</word>
+  <word id="729" position="4">اَ۬للَّهِ</word>
+  <word id="730" position="5">إِلَٰهاً</word>
+  <word id="731" position="6">اٰخَرَۖ</word>
+  <word id="732" position="7">فَسَوْفَ</word>
+  <word id="733" position="8">يَعْلَمُونَۖ</word>
+  <word id="734" position="9" type="number">٩٦</word>
+  <ayah eid="15:96:warsh-kfqc"/>
+  <ayah number="97" tradition="warsh-kfqc" sid="15:97:warsh-kfqc"/>
+  <word id="735" position="1">وَلَقَدْ</word>
+  <word id="736" position="2">نَعْلَمُ</word>
+  <word id="737" position="3">أَنَّكَ</word>
+  <word id="738" position="4">يَضِيقُ</word>
+  <word id="739" position="5">صَدْرُكَ</word>
+  <word id="740" position="6">بِمَا</word>
+  <word id="741" position="7">يَقُولُونَۖ</word>
+  <word id="742" position="8" type="number">٩٧</word>
+  <ayah eid="15:97:warsh-kfqc"/>
+  <ayah number="98" tradition="warsh-kfqc" sid="15:98:warsh-kfqc"/>
+  <word id="743" position="1">فَسَبِّحْ</word>
+  <word id="744" position="2">بِحَمْدِ</word>
+  <word id="745" position="3">رَبِّكَ</word>
+  <word id="746" position="4">وَكُن</word>
+  <word id="747" position="5">مِّنَ</word>
+  <word id="748" position="6">اَ۬لسَّٰجِدِينَۖ</word>
+  <word id="749" position="7" type="number">٩٨</word>
+  <ayah eid="15:98:warsh-kfqc"/>
+  <ayah number="99" tradition="warsh-kfqc" sid="15:99:warsh-kfqc"/>
+  <word id="750" position="1">وَاعْبُدْ</word>
+  <word id="751" position="2">رَبَّكَ</word>
+  <word id="752" position="3">حَتَّىٰ</word>
+  <word id="753" position="4">يَاتِيَكَ</word>
+  <word id="754" position="5">اَ۬لْيَقِينُۖ</word>
+  <word id="755" position="6" type="number">٩٩</word>
+  <ayah eid="15:99:warsh-kfqc"/>
+</qusx>

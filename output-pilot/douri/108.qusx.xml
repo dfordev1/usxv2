@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="108" name="Al-Kawthar" nameArabic="الكوثر" ayahCount="3" revelationPlace="makkah" bismillahPre="true" tradition="douri-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="douri-kfqc" sid="108:1:douri-kfqc"/>
+  <word id="1" position="1">إِنَّآ</word>
+  <word id="2" position="2">أَعۡطَيۡنَٰكَ</word>
+  <word id="3" position="3">اَ۬لۡكَوۡثَرَ</word>
+  <word id="4" position="4" type="number">١</word>
+  <ayah eid="108:1:douri-kfqc"/>
+  <ayah number="2" tradition="douri-kfqc" sid="108:2:douri-kfqc"/>
+  <word id="5" position="1">فَصَلِّ</word>
+  <word id="6" position="2">لِرَبِّكَ</word>
+  <word id="7" position="3">وَاَنۡحَرۡ</word>
+  <word id="8" position="4" type="number">٢</word>
+  <ayah eid="108:2:douri-kfqc"/>
+  <ayah number="3" tradition="douri-kfqc" sid="108:3:douri-kfqc"/>
+  <word id="9" position="1">إِنَّ</word>
+  <word id="10" position="2">شَانِئَكَ</word>
+  <word id="11" position="3">هُوَ</word>
+  <word id="12" position="4">اَ۬لۡأَبۡتَرُ</word>
+  <word id="13" position="5" type="number">٣</word>
+  <ayah eid="108:3:douri-kfqc"/>
+</qusx>

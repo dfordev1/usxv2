@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="105" name="Al-Fil" nameArabic="الفيل" ayahCount="5" revelationPlace="makkah" bismillahPre="true" tradition="warsh-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="warsh-kfqc" sid="105:1:warsh-kfqc"/>
+  <word id="1" position="1">اَلَمْ</word>
+  <word id="2" position="2">تَرَ</word>
+  <word id="3" position="3">كَيْفَ</word>
+  <word id="4" position="4">فَعَلَ</word>
+  <word id="5" position="5">رَبُّكَ</word>
+  <word id="6" position="6">بِأَصْحَٰبِ</word>
+  <word id="7" position="7">اِ۬لْفِيلِۖ</word>
+  <word id="8" position="8" type="number">١</word>
+  <ayah eid="105:1:warsh-kfqc"/>
+  <ayah number="2" tradition="warsh-kfqc" sid="105:2:warsh-kfqc"/>
+  <word id="9" position="1">أَلَمْ</word>
+  <word id="10" position="2">يَجْعَلْ</word>
+  <word id="11" position="3">كَيْدَهُمْ</word>
+  <word id="12" position="4">فِے</word>
+  <word id="13" position="5">تَضْلِيلٖ</word>
+  <word id="14" position="6" type="number">٢</word>
+  <ayah eid="105:2:warsh-kfqc"/>
+  <ayah number="3" tradition="warsh-kfqc" sid="105:3:warsh-kfqc"/>
+  <word id="15" position="1">وَأَرْسَلَ</word>
+  <word id="16" position="2">عَلَيْهِمْ</word>
+  <word id="17" position="3">طَيْراً</word>
+  <word id="18" position="4">اَبَابِيلَ</word>
+  <word id="19" position="5" type="number">٣</word>
+  <ayah eid="105:3:warsh-kfqc"/>
+  <ayah number="4" tradition="warsh-kfqc" sid="105:4:warsh-kfqc"/>
+  <word id="20" position="1">تَرْمِيهِم</word>
+  <word id="21" position="2">بِحِجَارَةٖ</word>
+  <word id="22" position="3">مِّن</word>
+  <word id="23" position="4">سِجِّيلٖ</word>
+  <word id="24" position="5" type="number">٤</word>
+  <ayah eid="105:4:warsh-kfqc"/>
+  <ayah number="5" tradition="warsh-kfqc" sid="105:5:warsh-kfqc"/>
+  <word id="25" position="1">فَجَعَلَهُمْ</word>
+  <word id="26" position="2">كَعَصْفٖ</word>
+  <word id="27" position="3">مَّاكُولٖۖ</word>
+  <word id="28" position="4" type="number">٥</word>
+  <ayah eid="105:5:warsh-kfqc"/>
+</qusx>

@@ -1,0 +1,2298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="11" name="Hud" nameArabic="هود" ayahCount="122" revelationPlace="makkah" bismillahPre="true" tradition="douri-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="douri-kfqc" sid="11:1:douri-kfqc"/>
+  <word id="1" position="1">الٓر۪ۚ</word>
+  <word id="2" position="2">كِتَٰبٌ</word>
+  <word id="3" position="3">أُحۡكِمَتۡ</word>
+  <word id="4" position="4">ءَايَٰتُهُۥ</word>
+  <word id="5" position="5">ثُمَّ</word>
+  <word id="6" position="6">فُصِّلَتۡ</word>
+  <word id="7" position="7">مِن</word>
+  <word id="8" position="8">لَّدُنۡ</word>
+  <word id="9" position="9">حَكِيمٍ</word>
+  <word id="10" position="10">خَبِيرٍ</word>
+  <word id="11" position="11" type="number">١</word>
+  <ayah eid="11:1:douri-kfqc"/>
+  <ayah number="2" tradition="douri-kfqc" sid="11:2:douri-kfqc"/>
+  <word id="12" position="1">أَلَّا</word>
+  <word id="13" position="2">تَعۡبُدُوٓاْ</word>
+  <word id="14" position="3">إِلَّا</word>
+  <word id="15" position="4">اَ۬للَّهَۚ</word>
+  <word id="16" position="5">إِنَّنِي</word>
+  <word id="17" position="6">لَكُم</word>
+  <word id="18" position="7">مِّنۡهُ</word>
+  <word id="19" position="8">نَذِيرٞ</word>
+  <word id="20" position="9">وَبَشِيرٞ</word>
+  <word id="21" position="10" type="number">٢</word>
+  <ayah eid="11:2:douri-kfqc"/>
+  <ayah number="3" tradition="douri-kfqc" sid="11:3:douri-kfqc"/>
+  <word id="22" position="1">وَأَنِ</word>
+  <word id="23" position="2">اِ۪سۡتَغۡفِرُواْ</word>
+  <word id="24" position="3">رَبَّكُمۡ</word>
+  <word id="25" position="4">ثُمَّ</word>
+  <word id="26" position="5">تُوبُوٓاْ</word>
+  <word id="27" position="6">إِلَيۡهِ</word>
+  <word id="28" position="7">يُمَتِّعۡكُم</word>
+  <word id="29" position="8">مَّتَٰعًا</word>
+  <word id="30" position="9">حَسَنًا</word>
+  <word id="31" position="10">إِلَىٰٓ</word>
+  <word id="32" position="11">أَجَلٖ</word>
+  <word id="33" position="12">مُّسَمّٗى</word>
+  <word id="34" position="13">وَيُؤۡتِ</word>
+  <word id="35" position="14">كُلَّ</word>
+  <word id="36" position="15">ذِي</word>
+  <word id="37" position="16">فَضۡلٖ</word>
+  <word id="38" position="17">فَضۡلَهُۥۖ</word>
+  <word id="39" position="18">وَإِن</word>
+  <word id="40" position="19">تَوَلَّوۡاْ</word>
+  <word id="41" position="20">فَإِنِّيَ</word>
+  <word id="42" position="21">أَخَافُ</word>
+  <word id="43" position="22">عَلَيۡكُمۡ</word>
+  <word id="44" position="23">عَذَابَ</word>
+  <word id="45" position="24">يَوۡمٖ</word>
+  <word id="46" position="25">كَبِيرٍ</word>
+  <word id="47" position="26" type="number">٣</word>
+  <ayah eid="11:3:douri-kfqc"/>
+  <ayah number="4" tradition="douri-kfqc" sid="11:4:douri-kfqc"/>
+  <word id="48" position="1">إِلَى</word>
+  <word id="49" position="2">اَ۬للَّهِ</word>
+  <word id="50" position="3">مَرۡجِعُكُمۡۖ</word>
+  <word id="51" position="4">وَهۡوَ</word>
+  <word id="52" position="5">عَلَىٰ</word>
+  <word id="53" position="6">كُلِّ</word>
+  <word id="54" position="7">شَيۡءٖ</word>
+  <word id="55" position="8">قَدِيرٌ</word>
+  <word id="56" position="9" type="number">٤</word>
+  <ayah eid="11:4:douri-kfqc"/>
+  <ayah number="5" tradition="douri-kfqc" sid="11:5:douri-kfqc"/>
+  <word id="57" position="1">أَلَآ</word>
+  <word id="58" position="2">إِنَّهُمۡ</word>
+  <word id="59" position="3">يَثۡنُونَ</word>
+  <word id="60" position="4">صُدُورَهُمۡ</word>
+  <word id="61" position="5">لِيَسۡتَخۡفُواْ</word>
+  <word id="62" position="6">مِنۡهُۚ</word>
+  <word id="63" position="7">أَلَا</word>
+  <word id="64" position="8">حِينَ</word>
+  <word id="65" position="9">يَسۡتَغۡشُونَ</word>
+  <word id="66" position="10">ثِيَابَهُمۡ</word>
+  <word id="67" position="11">يَعۡلَمُ</word>
+  <word id="68" position="12">مَا</word>
+  <word id="69" position="13">يُسِرُّونَ</word>
+  <word id="70" position="14">وَمَا</word>
+  <word id="71" position="15">يُعۡلِنُونَۚ</word>
+  <word id="72" position="16">إِنَّهُۥ</word>
+  <word id="73" position="17">عَلِيمُۢ</word>
+  <word id="74" position="18">بِذَاتِ</word>
+  <word id="75" position="19">اِ۬لصُّدُورِ</word>
+  <word id="76" position="20" type="number">٥</word>
+  <ayah eid="11:5:douri-kfqc"/>
+  <ayah number="6" tradition="douri-kfqc" sid="11:6:douri-kfqc"/>
+  <word id="77" position="1">۞</word>
+  <word id="78" position="2">وَمَا</word>
+  <word id="79" position="3">مِن</word>
+  <word id="80" position="4">دَآبَّةٖ</word>
+  <word id="81" position="5">فِي</word>
+  <word id="82" position="6">اِ۬لۡأَرۡضِ</word>
+  <word id="83" position="7">إِلَّا</word>
+  <word id="84" position="8">عَلَى</word>
+  <word id="85" position="9">اَ۬للَّهِ</word>
+  <word id="86" position="10">رِزۡقُهَا</word>
+  <word id="87" position="11">وَيَعۡلَمُ</word>
+  <word id="88" position="12">مُسۡتَقَرَّهَا</word>
+  <word id="89" position="13">وَمُسۡتَوۡدَعَهَاۚ</word>
+  <word id="90" position="14">كُلّٞ</word>
+  <word id="91" position="15">فِي</word>
+  <word id="92" position="16">كِتَٰبٖ</word>
+  <word id="93" position="17">مُّبِينٖ</word>
+  <word id="94" position="18" type="number">٦</word>
+  <ayah eid="11:6:douri-kfqc"/>
+  <ayah number="7" tradition="douri-kfqc" sid="11:7:douri-kfqc"/>
+  <word id="95" position="1">وَهۡوَ</word>
+  <word id="96" position="2">اَ۬لَّذِي</word>
+  <word id="97" position="3">خَلَقَ</word>
+  <word id="98" position="4">اَ۬لسَّمَٰوَٰتِ</word>
+  <word id="99" position="5">وَاَلۡأَرۡضَ</word>
+  <word id="100" position="6">فِي</word>
+  <word id="101" position="7">سِتَّةِ</word>
+  <word id="102" position="8">أَيَّامٖ</word>
+  <word id="103" position="9">وَكَانَ</word>
+  <word id="104" position="10">عَرۡشُهُۥ</word>
+  <word id="105" position="11">عَلَى</word>
+  <word id="106" position="12">اَ۬لۡمَآءِ</word>
+  <word id="107" position="13">لِيَبۡلُوَكُمۡ</word>
+  <word id="108" position="14">أَيُّكُمۡ</word>
+  <word id="109" position="15">أَحۡسَنُ</word>
+  <word id="110" position="16">عَمَلٗاۗ</word>
+  <word id="111" position="17">وَلَئِن</word>
+  <word id="112" position="18">قُلۡتَ</word>
+  <word id="113" position="19">إِنَّكُم</word>
+  <word id="114" position="20">مَّبۡعُوثُونَ</word>
+  <word id="115" position="21">مِنۢ</word>
+  <word id="116" position="22">بَعۡدِ</word>
+  <word id="117" position="23">اِ۬لۡمَوۡتِ</word>
+  <word id="118" position="24">لَيَقُولَنَّ</word>
+  <word id="119" position="25">اَ۬لَّذِينَ</word>
+  <word id="120" position="26">كَفَرُوٓاْ</word>
+  <word id="121" position="27">إِنۡ</word>
+  <word id="122" position="28">هَٰذَآ</word>
+  <word id="123" position="29">إِلَّا</word>
+  <word id="124" position="30">سِحۡرٞ</word>
+  <word id="125" position="31">مُّبِينٞ</word>
+  <word id="126" position="32" type="number">٧</word>
+  <ayah eid="11:7:douri-kfqc"/>
+  <ayah number="8" tradition="douri-kfqc" sid="11:8:douri-kfqc"/>
+  <word id="127" position="1">وَلَئِنۡ</word>
+  <word id="128" position="2">أَخَّرۡنَا</word>
+  <word id="129" position="3">عَنۡهُمُ</word>
+  <word id="130" position="4">اُ۬لۡعَذَابَ</word>
+  <word id="131" position="5">إِلَىٰٓ</word>
+  <word id="132" position="6">أُمَّةٖ</word>
+  <word id="133" position="7">مَّعۡدُودَةٖ</word>
+  <word id="134" position="8">لَّيَقُولُنَّ</word>
+  <word id="135" position="9">مَا</word>
+  <word id="136" position="10">يَحۡبِسُهُۥٓۗ</word>
+  <word id="137" position="11">أَلَا</word>
+  <word id="138" position="12">يَوۡمَ</word>
+  <word id="139" position="13">يَأۡتِيهِمۡ</word>
+  <word id="140" position="14">لَيۡسَ</word>
+  <word id="141" position="15">مَصۡرُوفًا</word>
+  <word id="142" position="16">عَنۡهُمۡ</word>
+  <word id="143" position="17">وَحَاقَ</word>
+  <word id="144" position="18">بِهِم</word>
+  <word id="145" position="19">مَّا</word>
+  <word id="146" position="20">كَانُواْ</word>
+  <word id="147" position="21">بِهِۦ</word>
+  <word id="148" position="22">يَسۡتَهۡزِءُونَ</word>
+  <word id="149" position="23" type="number">٨</word>
+  <ayah eid="11:8:douri-kfqc"/>
+  <ayah number="9" tradition="douri-kfqc" sid="11:9:douri-kfqc"/>
+  <word id="150" position="1">وَلَئِنۡ</word>
+  <word id="151" position="2">أَذَقۡنَا</word>
+  <word id="152" position="3">اَ۬لۡإِنسَٰنَ</word>
+  <word id="153" position="4">مِنَّا</word>
+  <word id="154" position="5">رَحۡمَةٗ</word>
+  <word id="155" position="6">ثُمَّ</word>
+  <word id="156" position="7">نَزَعۡنَٰهَا</word>
+  <word id="157" position="8">مِنۡهُ</word>
+  <word id="158" position="9">إِنَّهُۥ</word>
+  <word id="159" position="10">لَيَـُٔوسٞ</word>
+  <word id="160" position="11">كَفُورٞ</word>
+  <word id="161" position="12" type="number">٩</word>
+  <ayah eid="11:9:douri-kfqc"/>
+  <ayah number="10" tradition="douri-kfqc" sid="11:10:douri-kfqc"/>
+  <word id="162" position="1">وَلَئِنۡ</word>
+  <word id="163" position="2">أَذَقۡنَٰهُ</word>
+  <word id="164" position="3">نَعۡمَآءَ</word>
+  <word id="165" position="4">بَعۡدَ</word>
+  <word id="166" position="5">ضَرَّآءَ</word>
+  <word id="167" position="6">مَسَّتۡهُ</word>
+  <word id="168" position="7">لَيَقُولَنَّ</word>
+  <word id="169" position="8">ذَهَبَ</word>
+  <word id="170" position="9">اَ۬لسَّيِّـَٔاتُ</word>
+  <word id="171" position="10">عَنِّيَۚ</word>
+  <word id="172" position="11">إِنَّهُۥ</word>
+  <word id="173" position="12">لَفَرِحٞ</word>
+  <word id="174" position="13">فَخُورٌ</word>
+  <word id="175" position="14" type="number">١٠</word>
+  <ayah eid="11:10:douri-kfqc"/>
+  <ayah number="11" tradition="douri-kfqc" sid="11:11:douri-kfqc"/>
+  <word id="176" position="1">إِلَّا</word>
+  <word id="177" position="2">اَ۬لَّذِينَ</word>
+  <word id="178" position="3">صَبَرُواْ</word>
+  <word id="179" position="4">وَعَمِلُواْ</word>
+  <word id="180" position="5">اُ۬لصَّٰلِحَٰتِ</word>
+  <word id="181" position="6">أُوْلَٰٓئِكَ</word>
+  <word id="182" position="7">لَهُم</word>
+  <word id="183" position="8">مَّغۡفِرَةٞ</word>
+  <word id="184" position="9">وَأَجۡرٞ</word>
+  <word id="185" position="10">كَبِيرٞ</word>
+  <word id="186" position="11" type="number">١١</word>
+  <ayah eid="11:11:douri-kfqc"/>
+  <ayah number="12" tradition="douri-kfqc" sid="11:12:douri-kfqc"/>
+  <word id="187" position="1">فَلَعَلَّكَ</word>
+  <word id="188" position="2">تَارِكُۢ</word>
+  <word id="189" position="3">بَعۡضَ</word>
+  <word id="190" position="4">مَا</word>
+  <word id="191" position="5">يُوحَىٰٓ</word>
+  <word id="192" position="6">إِلَيۡكَ</word>
+  <word id="193" position="7">وَضَآئِقُۢ</word>
+  <word id="194" position="8">بِهِۦ</word>
+  <word id="195" position="9">صَدۡرُكَ</word>
+  <word id="196" position="10">أَن</word>
+  <word id="197" position="11">يَقُولُواْ</word>
+  <word id="198" position="12">لَوۡلَآ</word>
+  <word id="199" position="13">أُنزِلَ</word>
+  <word id="200" position="14">عَلَيۡهِ</word>
+  <word id="201" position="15">كَنزٌ</word>
+  <word id="202" position="16">أَوۡ</word>
+  <word id="203" position="17">جَآءَ</word>
+  <word id="204" position="18">مَعَهُۥ</word>
+  <word id="205" position="19">مَلَكٌۚ</word>
+  <word id="206" position="20">إِنَّمَآ</word>
+  <word id="207" position="21">أَنتَ</word>
+  <word id="208" position="22">نَذِيرٞۚ</word>
+  <word id="209" position="23">وَاَللَّهُ</word>
+  <word id="210" position="24">عَلَىٰ</word>
+  <word id="211" position="25">كُلِّ</word>
+  <word id="212" position="26">شَيۡءٖ</word>
+  <word id="213" position="27">وَكِيلٌ</word>
+  <word id="214" position="28" type="number">١٢</word>
+  <ayah eid="11:12:douri-kfqc"/>
+  <ayah number="13" tradition="douri-kfqc" sid="11:13:douri-kfqc"/>
+  <word id="215" position="1">أَمۡ</word>
+  <word id="216" position="2">يَقُولُونَ</word>
+  <word id="217" position="3">اَ۪فۡتَر۪ىٰهُۖ</word>
+  <word id="218" position="4">قُلۡ</word>
+  <word id="219" position="5">فَأۡتُواْ</word>
+  <word id="220" position="6">بِعَشۡرِ</word>
+  <word id="221" position="7">سُوَرٖ</word>
+  <word id="222" position="8">مِّثۡلِهِۦ</word>
+  <word id="223" position="9">مُفۡتَرَيَٰتٖ</word>
+  <word id="224" position="10">وَاَدۡعُواْ</word>
+  <word id="225" position="11">مَنِ</word>
+  <word id="226" position="12">اِ۪سۡتَطَعۡتُم</word>
+  <word id="227" position="13">مِّن</word>
+  <word id="228" position="14">دُونِ</word>
+  <word id="229" position="15">اِ۬للَّهِ</word>
+  <word id="230" position="16">إِن</word>
+  <word id="231" position="17">كُنتُمۡ</word>
+  <word id="232" position="18">صَٰدِقِينَ</word>
+  <word id="233" position="19" type="number">١٣</word>
+  <ayah eid="11:13:douri-kfqc"/>
+  <ayah number="14" tradition="douri-kfqc" sid="11:14:douri-kfqc"/>
+  <word id="234" position="1">۞</word>
+  <word id="235" position="2">فَإِلَّمۡ</word>
+  <word id="236" position="3">يَسۡتَجِيبُواْ</word>
+  <word id="237" position="4">لَكُمۡ</word>
+  <word id="238" position="5">فَاَعۡلَمُوٓاْ</word>
+  <word id="239" position="6">أَنَّمَآ</word>
+  <word id="240" position="7">أُنزِلَ</word>
+  <word id="241" position="8">بِعِلۡمِ</word>
+  <word id="242" position="9">اِ۬للَّهِ</word>
+  <word id="243" position="10">وَأَن</word>
+  <word id="244" position="11">لَّآ</word>
+  <word id="245" position="12">إِلَٰهَ</word>
+  <word id="246" position="13">إِلَّا</word>
+  <word id="247" position="14">هُوَۖ</word>
+  <word id="248" position="15">فَهَلۡ</word>
+  <word id="249" position="16">أَنتُم</word>
+  <word id="250" position="17">مُّسۡلِمُونَ</word>
+  <word id="251" position="18" type="number">١٤</word>
+  <ayah eid="11:14:douri-kfqc"/>
+  <ayah number="15" tradition="douri-kfqc" sid="11:15:douri-kfqc"/>
+  <word id="252" position="1">مَن</word>
+  <word id="253" position="2">كَانَ</word>
+  <word id="254" position="3">يُرِيدُ</word>
+  <word id="255" position="4">اُ۬لۡحَيَوٰةَ</word>
+  <word id="256" position="5">اَ۬لدُّنۡيۭا</word>
+  <word id="257" position="6">وَزِينَتَهَا</word>
+  <word id="258" position="7">نُوَفِّ</word>
+  <word id="259" position="8">إِلَيۡهِمۡ</word>
+  <word id="260" position="9">أَعۡمَٰلَهُمۡ</word>
+  <word id="261" position="10">فِيهَا</word>
+  <word id="262" position="11">وَهُمۡ</word>
+  <word id="263" position="12">فِيهَا</word>
+  <word id="264" position="13">لَا</word>
+  <word id="265" position="14">يُبۡخَسُونَ</word>
+  <word id="266" position="15" type="number">١٥</word>
+  <ayah eid="11:15:douri-kfqc"/>
+  <ayah number="16" tradition="douri-kfqc" sid="11:16:douri-kfqc"/>
+  <word id="267" position="1">أُوْلَٰٓئِكَ</word>
+  <word id="268" position="2">اَ۬لَّذِينَ</word>
+  <word id="269" position="3">لَيۡسَ</word>
+  <word id="270" position="4">لَهُمۡ</word>
+  <word id="271" position="5">فِي</word>
+  <word id="272" position="6">اِ۬لۡأٓخِرَةِ</word>
+  <word id="273" position="7">إِلَّا</word>
+  <word id="274" position="8">اَ۬لنَّارُۖ</word>
+  <word id="275" position="9">وَحَبِطَ</word>
+  <word id="276" position="10">مَا</word>
+  <word id="277" position="11">صَنَعُواْ</word>
+  <word id="278" position="12">فِيهَا</word>
+  <word id="279" position="13">وَبَٰطِلٞ</word>
+  <word id="280" position="14">مَّا</word>
+  <word id="281" position="15">كَانُواْ</word>
+  <word id="282" position="16">يَعۡمَلُونَ</word>
+  <word id="283" position="17" type="number">١٦</word>
+  <ayah eid="11:16:douri-kfqc"/>
+  <ayah number="17" tradition="douri-kfqc" sid="11:17:douri-kfqc"/>
+  <word id="284" position="1">أَفَمَن</word>
+  <word id="285" position="2">كَانَ</word>
+  <word id="286" position="3">عَلَىٰ</word>
+  <word id="287" position="4">بَيِّنَةٖ</word>
+  <word id="288" position="5">مِّن</word>
+  <word id="289" position="6">رَّبِّهِۦ</word>
+  <word id="290" position="7">وَيَتۡلُوهُ</word>
+  <word id="291" position="8">شَاهِدٞ</word>
+  <word id="292" position="9">مِّنۡهُ</word>
+  <word id="293" position="10">وَمِن</word>
+  <word id="294" position="11">قَبۡلِهِۦ</word>
+  <word id="295" position="12">كِتَٰبُ</word>
+  <word id="296" position="13">مُوسۭيٰٓ</word>
+  <word id="297" position="14">إِمَامٗا</word>
+  <word id="298" position="15">وَرَحۡمَةًۚ</word>
+  <word id="299" position="16">أُوْلَٰٓئِكَ</word>
+  <word id="300" position="17">يُؤۡمِنُونَ</word>
+  <word id="301" position="18">بِهِۦۚ</word>
+  <word id="302" position="19">وَمَن</word>
+  <word id="303" position="20">يَكۡفُرۡ</word>
+  <word id="304" position="21">بِهِۦ</word>
+  <word id="305" position="22">مِنَ</word>
+  <word id="306" position="23">اَ۬لۡأَحۡزَابِ</word>
+  <word id="307" position="24">فَاَلنَّارُ</word>
+  <word id="308" position="25">مَوۡعِدُهُۥۚ</word>
+  <word id="309" position="26">فَلَا</word>
+  <word id="310" position="27">تَكُ</word>
+  <word id="311" position="28">فِي</word>
+  <word id="312" position="29">مِرۡيَةٖ</word>
+  <word id="313" position="30">مِّنۡهُۚ</word>
+  <word id="314" position="31">إِنَّهُ</word>
+  <word id="315" position="32">اُ۬لۡحَقُّ</word>
+  <word id="316" position="33">مِن</word>
+  <word id="317" position="34">رَّبِّكَ</word>
+  <word id="318" position="35">وَلَٰكِنَّ</word>
+  <word id="319" position="36">أَكۡثَرَ</word>
+  <word id="320" position="37">اَ۬لنّ۪اسِ</word>
+  <word id="321" position="38">لَا</word>
+  <word id="322" position="39">يُؤۡمِنُونَ</word>
+  <word id="323" position="40" type="number">١٧</word>
+  <ayah eid="11:17:douri-kfqc"/>
+  <ayah number="18" tradition="douri-kfqc" sid="11:18:douri-kfqc"/>
+  <word id="324" position="1">وَمَنۡ</word>
+  <word id="325" position="2">أَظۡلَمُ</word>
+  <word id="326" position="3">مِمَّنِ</word>
+  <word id="327" position="4">اِ۪فۡتَر۪يٰ</word>
+  <word id="328" position="5">عَلَى</word>
+  <word id="329" position="6">اَ۬للَّهِ</word>
+  <word id="330" position="7">كَذِبًاۚ</word>
+  <word id="331" position="8">أُوْلَٰٓئِكَ</word>
+  <word id="332" position="9">يُعۡرَضُونَ</word>
+  <word id="333" position="10">عَلَىٰ</word>
+  <word id="334" position="11">رَبِّهِمۡ</word>
+  <word id="335" position="12">وَيَقُولُ</word>
+  <word id="336" position="13">اُ۬لۡأَشۡهَٰدُ</word>
+  <word id="337" position="14">هَٰٓؤُلَآءِ</word>
+  <word id="338" position="15">اِ۬لَّذِينَ</word>
+  <word id="339" position="16">كَذَبُواْ</word>
+  <word id="340" position="17">عَلَىٰ</word>
+  <word id="341" position="18">رَبِّهِمۡۚ</word>
+  <word id="342" position="19">أَلَا</word>
+  <word id="343" position="20">لَعۡنَةُ</word>
+  <word id="344" position="21">اُ۬للَّهِ</word>
+  <word id="345" position="22">عَلَى</word>
+  <word id="346" position="23">اَ۬لظَّٰلِمِينَ</word>
+  <word id="347" position="24" type="number">١٨</word>
+  <ayah eid="11:18:douri-kfqc"/>
+  <ayah number="19" tradition="douri-kfqc" sid="11:19:douri-kfqc"/>
+  <word id="348" position="1">اَ۬لَّذِينَ</word>
+  <word id="349" position="2">يَصُدُّونَ</word>
+  <word id="350" position="3">عَن</word>
+  <word id="351" position="4">سَبِيلِ</word>
+  <word id="352" position="5">اِ۬للَّهِ</word>
+  <word id="353" position="6">وَيَبۡغُونَهَا</word>
+  <word id="354" position="7">عِوَجٗا</word>
+  <word id="355" position="8">وَهُم</word>
+  <word id="356" position="9">بِالۡأٓخِرَةِ</word>
+  <word id="357" position="10">هُمۡ</word>
+  <word id="358" position="11">كَٰفِرُونَ</word>
+  <word id="359" position="12" type="number">١٩</word>
+  <ayah eid="11:19:douri-kfqc"/>
+  <ayah number="20" tradition="douri-kfqc" sid="11:20:douri-kfqc"/>
+  <word id="360" position="1">أُوْلَٰٓئِكَ</word>
+  <word id="361" position="2">لَمۡ</word>
+  <word id="362" position="3">يَكُونُواْ</word>
+  <word id="363" position="4">مُعۡجِزِينَ</word>
+  <word id="364" position="5">فِي</word>
+  <word id="365" position="6">اِ۬لۡأَرۡضِ</word>
+  <word id="366" position="7">وَمَا</word>
+  <word id="367" position="8">كَانَ</word>
+  <word id="368" position="9">لَهُم</word>
+  <word id="369" position="10">مِّن</word>
+  <word id="370" position="11">دُونِ</word>
+  <word id="371" position="12">اِ۬للَّهِ</word>
+  <word id="372" position="13">مِنۡ</word>
+  <word id="373" position="14">أَوۡلِيَآءَۘ</word>
+  <word id="374" position="15">يُضَٰعَفُ</word>
+  <word id="375" position="16">لَهُمُ</word>
+  <word id="376" position="17">اُ۬لۡعَذَابُۚ</word>
+  <word id="377" position="18">مَا</word>
+  <word id="378" position="19">كَانُواْ</word>
+  <word id="379" position="20">يَسۡتَطِيعُونَ</word>
+  <word id="380" position="21">اَ۬لسَّمۡعَ</word>
+  <word id="381" position="22">وَمَا</word>
+  <word id="382" position="23">كَانُواْ</word>
+  <word id="383" position="24">يُبۡصِرُونَ</word>
+  <word id="384" position="25" type="number">٢٠</word>
+  <ayah eid="11:20:douri-kfqc"/>
+  <ayah number="21" tradition="douri-kfqc" sid="11:21:douri-kfqc"/>
+  <word id="385" position="1">أُوْلَٰٓئِكَ</word>
+  <word id="386" position="2">اَ۬لَّذِينَ</word>
+  <word id="387" position="3">خَسِرُوٓاْ</word>
+  <word id="388" position="4">أَنفُسَهُمۡ</word>
+  <word id="389" position="5">وَضَلَّ</word>
+  <word id="390" position="6">عَنۡهُم</word>
+  <word id="391" position="7">مَّا</word>
+  <word id="392" position="8">كَانُواْ</word>
+  <word id="393" position="9">يَفۡتَرُونَ</word>
+  <word id="394" position="10" type="number">٢١</word>
+  <ayah eid="11:21:douri-kfqc"/>
+  <ayah number="22" tradition="douri-kfqc" sid="11:22:douri-kfqc"/>
+  <word id="395" position="1">لَا</word>
+  <word id="396" position="2">جَرَمَ</word>
+  <word id="397" position="3">أَنَّهُمۡ</word>
+  <word id="398" position="4">فِي</word>
+  <word id="399" position="5">اِ۬لۡأٓخِرَةِ</word>
+  <word id="400" position="6">هُمُ</word>
+  <word id="401" position="7">اُ۬لۡأَخۡسَرُونَ</word>
+  <word id="402" position="8" type="number">٢٢</word>
+  <ayah eid="11:22:douri-kfqc"/>
+  <ayah number="23" tradition="douri-kfqc" sid="11:23:douri-kfqc"/>
+  <word id="403" position="1">إِنَّ</word>
+  <word id="404" position="2">اَ۬لَّذِينَ</word>
+  <word id="405" position="3">ءَامَنُواْ</word>
+  <word id="406" position="4">وَعَمِلُواْ</word>
+  <word id="407" position="5">اُ۬لصَّٰلِحَٰتِ</word>
+  <word id="408" position="6">وَأَخۡبَتُوٓاْ</word>
+  <word id="409" position="7">إِلَىٰ</word>
+  <word id="410" position="8">رَبِّهِمۡ</word>
+  <word id="411" position="9">أُوْلَٰٓئِكَ</word>
+  <word id="412" position="10">أَصۡحَٰبُ</word>
+  <word id="413" position="11">اُ۬لۡجَنَّةِۖ</word>
+  <word id="414" position="12">هُمۡ</word>
+  <word id="415" position="13">فِيهَا</word>
+  <word id="416" position="14">خَٰلِدُونَ</word>
+  <word id="417" position="15" type="number">٢٣</word>
+  <ayah eid="11:23:douri-kfqc"/>
+  <ayah number="24" tradition="douri-kfqc" sid="11:24:douri-kfqc"/>
+  <word id="418" position="1">۞</word>
+  <word id="419" position="2">مَثَلُ</word>
+  <word id="420" position="3">اُ۬لۡفَرِيقَيۡنِ</word>
+  <word id="421" position="4">كَاَلۡأَعۡمَىٰ</word>
+  <word id="422" position="5">وَاَلۡأَصَمِّ</word>
+  <word id="423" position="6">وَاَلۡبَصِيرِ</word>
+  <word id="424" position="7">وَاَلسَّمِيعِۚ</word>
+  <word id="425" position="8">هَلۡ</word>
+  <word id="426" position="9">يَسۡتَوِيَانِ</word>
+  <word id="427" position="10">مَثَلًاۚ</word>
+  <word id="428" position="11">أَفَلَا</word>
+  <word id="429" position="12">تَذَّكَّرُونَ</word>
+  <word id="430" position="13" type="number">٢٤</word>
+  <ayah eid="11:24:douri-kfqc"/>
+  <ayah number="25" tradition="douri-kfqc" sid="11:25:douri-kfqc"/>
+  <word id="431" position="1">وَلَقَدۡ</word>
+  <word id="432" position="2">أَرۡسَلۡنَا</word>
+  <word id="433" position="3">نُوحًا</word>
+  <word id="434" position="4">إِلَىٰ</word>
+  <word id="435" position="5">قَوۡمِهِۦٓ</word>
+  <word id="436" position="6">أَنِّي</word>
+  <word id="437" position="7">لَكُمۡ</word>
+  <word id="438" position="8">نَذِيرٞ</word>
+  <word id="439" position="9">مُّبِينٌ</word>
+  <word id="440" position="10" type="number">٢٥</word>
+  <ayah eid="11:25:douri-kfqc"/>
+  <ayah number="26" tradition="douri-kfqc" sid="11:26:douri-kfqc"/>
+  <word id="441" position="1">أَن</word>
+  <word id="442" position="2">لَّا</word>
+  <word id="443" position="3">تَعۡبُدُوٓاْ</word>
+  <word id="444" position="4">إِلَّا</word>
+  <word id="445" position="5">اَ۬للَّهَۖ</word>
+  <word id="446" position="6">إِنِّيَ</word>
+  <word id="447" position="7">أَخَافُ</word>
+  <word id="448" position="8">عَلَيۡكُمۡ</word>
+  <word id="449" position="9">عَذَابَ</word>
+  <word id="450" position="10">يَوۡمٍ</word>
+  <word id="451" position="11">أَلِيمٖ</word>
+  <word id="452" position="12" type="number">٢٦</word>
+  <ayah eid="11:26:douri-kfqc"/>
+  <ayah number="27" tradition="douri-kfqc" sid="11:27:douri-kfqc"/>
+  <word id="453" position="1">فَقَالَ</word>
+  <word id="454" position="2">اَ۬لۡمَلَأُ</word>
+  <word id="455" position="3">اُ۬لَّذِينَ</word>
+  <word id="456" position="4">كَفَرُواْ</word>
+  <word id="457" position="5">مِن</word>
+  <word id="458" position="6">قَوۡمِهِۦ</word>
+  <word id="459" position="7">مَا</word>
+  <word id="460" position="8">نَر۪ىٰكَ</word>
+  <word id="461" position="9">إِلَّا</word>
+  <word id="462" position="10">بَشَرٗا</word>
+  <word id="463" position="11">مِّثۡلَنَا</word>
+  <word id="464" position="12">وَمَا</word>
+  <word id="465" position="13">نَر۪ىٰكَ</word>
+  <word id="466" position="14">اَ۪تَّبَعَكَ</word>
+  <word id="467" position="15">إِلَّا</word>
+  <word id="468" position="16">اَ۬لَّذِينَ</word>
+  <word id="469" position="17">هُمۡ</word>
+  <word id="470" position="18">أَرَاذِلُنَا</word>
+  <word id="471" position="19">بَادِئَ</word>
+  <word id="472" position="20">اَ۬لرَّأۡيِ</word>
+  <word id="473" position="21">وَمَا</word>
+  <word id="474" position="22">نَر۪يٰ</word>
+  <word id="475" position="23">لَكُمۡ</word>
+  <word id="476" position="24">عَلَيۡنَا</word>
+  <word id="477" position="25">مِن</word>
+  <word id="478" position="26">فَضۡلِۢ</word>
+  <word id="479" position="27">بَلۡ</word>
+  <word id="480" position="28">نَظُنُّكُمۡ</word>
+  <word id="481" position="29">كَٰذِبِينَ</word>
+  <word id="482" position="30" type="number">٢٧</word>
+  <ayah eid="11:27:douri-kfqc"/>
+  <ayah number="28" tradition="douri-kfqc" sid="11:28:douri-kfqc"/>
+  <word id="483" position="1">قَالَ</word>
+  <word id="484" position="2">يَٰقَوۡمِ</word>
+  <word id="485" position="3">أَرَءَيۡتُمۡ</word>
+  <word id="486" position="4">إِن</word>
+  <word id="487" position="5">كُنتُ</word>
+  <word id="488" position="6">عَلَىٰ</word>
+  <word id="489" position="7">بَيِّنَةٖ</word>
+  <word id="490" position="8">مِّن</word>
+  <word id="491" position="9">رَّبِّي</word>
+  <word id="492" position="10">وَءَاتَىٰنِي</word>
+  <word id="493" position="11">رَحۡمَةٗ</word>
+  <word id="494" position="12">مِّنۡ</word>
+  <word id="495" position="13">عِندِهِۦ</word>
+  <word id="496" position="14">فَعَمِيَتۡ</word>
+  <word id="497" position="15">عَلَيۡكُمۡ</word>
+  <word id="498" position="16">أَنُلۡزِمُكُمُوهَا</word>
+  <word id="499" position="17">وَأَنتُمۡ</word>
+  <word id="500" position="18">لَهَا</word>
+  <word id="501" position="19">كَٰرِهُونَ</word>
+  <word id="502" position="20" type="number">٢٨</word>
+  <ayah eid="11:28:douri-kfqc"/>
+  <ayah number="29" tradition="douri-kfqc" sid="11:29:douri-kfqc"/>
+  <word id="503" position="1">وَيَٰقَوۡمِ</word>
+  <word id="504" position="2">لَآ</word>
+  <word id="505" position="3">أَسۡـَٔلُكُمۡ</word>
+  <word id="506" position="4">عَلَيۡهِ</word>
+  <word id="507" position="5">مَالًاۖ</word>
+  <word id="508" position="6">إِنۡ</word>
+  <word id="509" position="7">أَجۡرِيَ</word>
+  <word id="510" position="8">إِلَّا</word>
+  <word id="511" position="9">عَلَى</word>
+  <word id="512" position="10">اَ۬للَّهِۚ</word>
+  <word id="513" position="11">وَمَآ</word>
+  <word id="514" position="12">أَنَا۠</word>
+  <word id="515" position="13">بِطَارِدِ</word>
+  <word id="516" position="14">اِ۬لَّذِينَ</word>
+  <word id="517" position="15">ءَامَنُوٓاْۚ</word>
+  <word id="518" position="16">إِنَّهُم</word>
+  <word id="519" position="17">مُّلَٰقُواْ</word>
+  <word id="520" position="18">رَبِّهِمۡ</word>
+  <word id="521" position="19">وَلَٰكِنِّيَ</word>
+  <word id="522" position="20">أَر۪ىٰكُمۡ</word>
+  <word id="523" position="21">قَوۡمٗا</word>
+  <word id="524" position="22">تَجۡهَلُونَ</word>
+  <word id="525" position="23" type="number">٢٩</word>
+  <ayah eid="11:29:douri-kfqc"/>
+  <ayah number="30" tradition="douri-kfqc" sid="11:30:douri-kfqc"/>
+  <word id="526" position="1">وَيَٰقَوۡمِ</word>
+  <word id="527" position="2">مَن</word>
+  <word id="528" position="3">يَنصُرُنِي</word>
+  <word id="529" position="4">مِنَ</word>
+  <word id="530" position="5">اَ۬للَّهِ</word>
+  <word id="531" position="6">إِن</word>
+  <word id="532" position="7">طَرَدتُّهُمۡۚ</word>
+  <word id="533" position="8">أَفَلَا</word>
+  <word id="534" position="9">تَذَّكَّرُونَ</word>
+  <word id="535" position="10" type="number">٣٠</word>
+  <ayah eid="11:30:douri-kfqc"/>
+  <ayah number="31" tradition="douri-kfqc" sid="11:31:douri-kfqc"/>
+  <word id="536" position="1">وَلَآ</word>
+  <word id="537" position="2">أَقُولُ</word>
+  <word id="538" position="3">لَكُمۡ</word>
+  <word id="539" position="4">عِندِي</word>
+  <word id="540" position="5">خَزَآئِنُ</word>
+  <word id="541" position="6">اُ۬للَّهِ</word>
+  <word id="542" position="7">وَلَآ</word>
+  <word id="543" position="8">أَعۡلَمُ</word>
+  <word id="544" position="9">اُ۬لۡغَيۡبَ</word>
+  <word id="545" position="10">وَلَآ</word>
+  <word id="546" position="11">أَقُولُ</word>
+  <word id="547" position="12">إِنِّي</word>
+  <word id="548" position="13">مَلَكٞ</word>
+  <word id="549" position="14">وَلَآ</word>
+  <word id="550" position="15">أَقُولُ</word>
+  <word id="551" position="16">لِلَّذِينَ</word>
+  <word id="552" position="17">تَزۡدَرِيٓ</word>
+  <word id="553" position="18">أَعۡيُنُكُمۡ</word>
+  <word id="554" position="19">لَن</word>
+  <word id="555" position="20">يُؤۡتِيَهُمُ</word>
+  <word id="556" position="21">اُ۬للَّهُ</word>
+  <word id="557" position="22">خَيۡرًاۖ</word>
+  <word id="558" position="23">اِ۬للَّهُ</word>
+  <word id="559" position="24">أَعۡلَمُ</word>
+  <word id="560" position="25">بِمَا</word>
+  <word id="561" position="26">فِيٓ</word>
+  <word id="562" position="27">أَنفُسِهِمۡ</word>
+  <word id="563" position="28">إِنِّيَ</word>
+  <word id="564" position="29">إِذٗا</word>
+  <word id="565" position="30">لَّمِنَ</word>
+  <word id="566" position="31">اَ۬لظَّٰلِمِينَ</word>
+  <word id="567" position="32" type="number">٣١</word>
+  <ayah eid="11:31:douri-kfqc"/>
+  <ayah number="32" tradition="douri-kfqc" sid="11:32:douri-kfqc"/>
+  <word id="568" position="1">۞</word>
+  <word id="569" position="2">قَالُواْ</word>
+  <word id="570" position="3">يَٰنُوحُ</word>
+  <word id="571" position="4">قَد</word>
+  <word id="572" position="5">جَّٰدَلۡتَنَا</word>
+  <word id="573" position="6">فَأَكۡثَرۡتَ</word>
+  <word id="574" position="7">جِدَٰلَنَا</word>
+  <word id="575" position="8">فَأۡتِنَا</word>
+  <word id="576" position="9">بِمَا</word>
+  <word id="577" position="10">تَعِدُنَآ</word>
+  <word id="578" position="11">إِن</word>
+  <word id="579" position="12">كُنتَ</word>
+  <word id="580" position="13">مِنَ</word>
+  <word id="581" position="14">اَ۬لصَّٰدِقِينَ</word>
+  <word id="582" position="15" type="number">٣٢</word>
+  <ayah eid="11:32:douri-kfqc"/>
+  <ayah number="33" tradition="douri-kfqc" sid="11:33:douri-kfqc"/>
+  <word id="583" position="1">قَالَ</word>
+  <word id="584" position="2">إِنَّمَا</word>
+  <word id="585" position="3">يَأۡتِيكُم</word>
+  <word id="586" position="4">بِهِ</word>
+  <word id="587" position="5">اِ۬للَّهُ</word>
+  <word id="588" position="6">إِن</word>
+  <word id="589" position="7">شَآءَ</word>
+  <word id="590" position="8">وَمَآ</word>
+  <word id="591" position="9">أَنتُم</word>
+  <word id="592" position="10">بِمُعۡجِزِينَ</word>
+  <word id="593" position="11" type="number">٣٣</word>
+  <ayah eid="11:33:douri-kfqc"/>
+  <ayah number="34" tradition="douri-kfqc" sid="11:34:douri-kfqc"/>
+  <word id="594" position="1">وَلَا</word>
+  <word id="595" position="2">يَنفَعُكُمۡ</word>
+  <word id="596" position="3">نُصۡحِيَ</word>
+  <word id="597" position="4">إِنۡ</word>
+  <word id="598" position="5">أَرَدتُّ</word>
+  <word id="599" position="6">أَنۡ</word>
+  <word id="600" position="7">أَنصَحَ</word>
+  <word id="601" position="8">لَكُمۡ</word>
+  <word id="602" position="9">إِن</word>
+  <word id="603" position="10">كَانَ</word>
+  <word id="604" position="11">اَ۬للَّهُ</word>
+  <word id="605" position="12">يُرِيدُ</word>
+  <word id="606" position="13">أَن</word>
+  <word id="607" position="14">يُغۡوِيَكُمۡۚ</word>
+  <word id="608" position="15">هُوَ</word>
+  <word id="609" position="16">رَبُّكُمۡ</word>
+  <word id="610" position="17">وَإِلَيۡهِ</word>
+  <word id="611" position="18">تُرۡجَعُونَ</word>
+  <word id="612" position="19" type="number">٣٤</word>
+  <ayah eid="11:34:douri-kfqc"/>
+  <ayah number="35" tradition="douri-kfqc" sid="11:35:douri-kfqc"/>
+  <word id="613" position="1">أَمۡ</word>
+  <word id="614" position="2">يَقُولُونَ</word>
+  <word id="615" position="3">اَ۪فۡتَر۪ىٰهُۖ</word>
+  <word id="616" position="4">قُلۡ</word>
+  <word id="617" position="5">إِنِ</word>
+  <word id="618" position="6">اِ۪فۡتَرَيۡتُهُۥ</word>
+  <word id="619" position="7">فَعَلَيَّ</word>
+  <word id="620" position="8">إِجۡرَامِي</word>
+  <word id="621" position="9">وَأَنَا۠</word>
+  <word id="622" position="10">بَرِيٓءٞ</word>
+  <word id="623" position="11">مِّمَّا</word>
+  <word id="624" position="12">تُجۡرِمُونَ</word>
+  <word id="625" position="13" type="number">٣٥</word>
+  <ayah eid="11:35:douri-kfqc"/>
+  <ayah number="36" tradition="douri-kfqc" sid="11:36:douri-kfqc"/>
+  <word id="626" position="1">وَأُوحِيَ</word>
+  <word id="627" position="2">إِلَىٰ</word>
+  <word id="628" position="3">نُوحٍ</word>
+  <word id="629" position="4">أَنَّهُۥ</word>
+  <word id="630" position="5">لَن</word>
+  <word id="631" position="6">يُؤۡمِنَ</word>
+  <word id="632" position="7">مِن</word>
+  <word id="633" position="8">قَوۡمِكَ</word>
+  <word id="634" position="9">إِلَّا</word>
+  <word id="635" position="10">مَن</word>
+  <word id="636" position="11">قَدۡ</word>
+  <word id="637" position="12">ءَامَنَ</word>
+  <word id="638" position="13">فَلَا</word>
+  <word id="639" position="14">تَبۡتَئِسۡ</word>
+  <word id="640" position="15">بِمَا</word>
+  <word id="641" position="16">كَانُواْ</word>
+  <word id="642" position="17">يَفۡعَلُونَ</word>
+  <word id="643" position="18" type="number">٣٦</word>
+  <ayah eid="11:36:douri-kfqc"/>
+  <ayah number="37" tradition="douri-kfqc" sid="11:37:douri-kfqc"/>
+  <word id="644" position="1">وَاَصۡنَعِ</word>
+  <word id="645" position="2">اِ۬لۡفُلۡكَ</word>
+  <word id="646" position="3">بِأَعۡيُنِنَا</word>
+  <word id="647" position="4">وَوَحۡيِنَا</word>
+  <word id="648" position="5">وَلَا</word>
+  <word id="649" position="6">تُخَٰطِبۡنِي</word>
+  <word id="650" position="7">فِي</word>
+  <word id="651" position="8">اِ۬لَّذِينَ</word>
+  <word id="652" position="9">ظَلَمُوٓاْۚ</word>
+  <word id="653" position="10">إِنَّهُم</word>
+  <word id="654" position="11">مُّغۡرَقُونَ</word>
+  <word id="655" position="12" type="number">٣٧</word>
+  <ayah eid="11:37:douri-kfqc"/>
+  <ayah number="38" tradition="douri-kfqc" sid="11:38:douri-kfqc"/>
+  <word id="656" position="1">وَيَصۡنَعُ</word>
+  <word id="657" position="2">اُ۬لۡفُلۡكَ</word>
+  <word id="658" position="3">وَكُلَّمَا</word>
+  <word id="659" position="4">مَرَّ</word>
+  <word id="660" position="5">عَلَيۡهِ</word>
+  <word id="661" position="6">مَلَأٞ</word>
+  <word id="662" position="7">مِّن</word>
+  <word id="663" position="8">قَوۡمِهِۦ</word>
+  <word id="664" position="9">سَخِرُواْ</word>
+  <word id="665" position="10">مِنۡهُۚ</word>
+  <word id="666" position="11">قَالَ</word>
+  <word id="667" position="12">إِن</word>
+  <word id="668" position="13">تَسۡخَرُواْ</word>
+  <word id="669" position="14">مِنَّا</word>
+  <word id="670" position="15">فَإِنَّا</word>
+  <word id="671" position="16">نَسۡخَرُ</word>
+  <word id="672" position="17">مِنكُمۡ</word>
+  <word id="673" position="18">كَمَا</word>
+  <word id="674" position="19">تَسۡخَرُونَ</word>
+  <word id="675" position="20" type="number">٣٨</word>
+  <ayah eid="11:38:douri-kfqc"/>
+  <ayah number="39" tradition="douri-kfqc" sid="11:39:douri-kfqc"/>
+  <word id="676" position="1">فَسَوۡفَ</word>
+  <word id="677" position="2">تَعۡلَمُونَ</word>
+  <word id="678" position="3">مَن</word>
+  <word id="679" position="4">يَأۡتِيهِ</word>
+  <word id="680" position="5">عَذَابٞ</word>
+  <word id="681" position="6">يُخۡزِيهِ</word>
+  <word id="682" position="7">وَيَحِلُّ</word>
+  <word id="683" position="8">عَلَيۡهِ</word>
+  <word id="684" position="9">عَذَابٞ</word>
+  <word id="685" position="10">مُّقِيمٌ</word>
+  <word id="686" position="11" type="number">٣٩</word>
+  <ayah eid="11:39:douri-kfqc"/>
+  <ayah number="40" tradition="douri-kfqc" sid="11:40:douri-kfqc"/>
+  <word id="687" position="1">حَتَّىٰٓ</word>
+  <word id="688" position="2">إِذَا</word>
+  <word id="689" position="3">جَآ</word>
+  <word id="690" position="4">أَمۡرُنَا</word>
+  <word id="691" position="5">وَفَارَ</word>
+  <word id="692" position="6">اَ۬لتَّنُّورُ</word>
+  <word id="693" position="7">قُلۡنَا</word>
+  <word id="694" position="8">اَ۪حۡمِلۡ</word>
+  <word id="695" position="9">فِيهَا</word>
+  <word id="696" position="10">مِن</word>
+  <word id="697" position="11">كُلِّ</word>
+  <word id="698" position="12">زَوۡجَيۡنِ</word>
+  <word id="699" position="13">اِ۪ثۡنَيۡنِ</word>
+  <word id="700" position="14">وَأَهۡلَكَ</word>
+  <word id="701" position="15">إِلَّا</word>
+  <word id="702" position="16">مَن</word>
+  <word id="703" position="17">سَبَقَ</word>
+  <word id="704" position="18">عَلَيۡهِ</word>
+  <word id="705" position="19">اِ۬لۡقَوۡلُ</word>
+  <word id="706" position="20">وَمَنۡ</word>
+  <word id="707" position="21">ءَامَنَۚ</word>
+  <word id="708" position="22">وَمَآ</word>
+  <word id="709" position="23">ءَامَنَ</word>
+  <word id="710" position="24">مَعَهُۥٓ</word>
+  <word id="711" position="25">إِلَّا</word>
+  <word id="712" position="26">قَلِيلٞ</word>
+  <word id="713" position="27" type="number">٤٠</word>
+  <ayah eid="11:40:douri-kfqc"/>
+  <ayah number="41" tradition="douri-kfqc" sid="11:41:douri-kfqc"/>
+  <word id="714" position="1">وَقَالَ</word>
+  <word id="715" position="2">اَ۪رۡكَبُواْ</word>
+  <word id="716" position="3">فِيهَا</word>
+  <word id="717" position="4">بِسۡمِ</word>
+  <word id="718" position="5">اِ۬للَّهِ</word>
+  <word id="719" position="6">مُجۡر۪ىٰهَا</word>
+  <word id="720" position="7">وَمُرۡسَىٰهَآۚ</word>
+  <word id="721" position="8">إِنَّ</word>
+  <word id="722" position="9">رَبِّي</word>
+  <word id="723" position="10">لَغَفُورٞ</word>
+  <word id="724" position="11">رَّحِيمٞ</word>
+  <word id="725" position="12" type="number">٤١</word>
+  <ayah eid="11:41:douri-kfqc"/>
+  <ayah number="42" tradition="douri-kfqc" sid="11:42:douri-kfqc"/>
+  <word id="726" position="1">۞</word>
+  <word id="727" position="2">وَهۡيَ</word>
+  <word id="728" position="3">تَجۡرِي</word>
+  <word id="729" position="4">بِهِمۡ</word>
+  <word id="730" position="5">فِي</word>
+  <word id="731" position="6">مَوۡجٖ</word>
+  <word id="732" position="7">كَاَلۡجِبَالِ</word>
+  <word id="733" position="8">وَنَادَىٰ</word>
+  <word id="734" position="9">نُوحٌ</word>
+  <word id="735" position="10">اِ۪بۡنَهُۥ</word>
+  <word id="736" position="11">وَكَانَ</word>
+  <word id="737" position="12">فِي</word>
+  <word id="738" position="13">مَعۡزِلٖ</word>
+  <word id="739" position="14">يَٰبُنَيِّ</word>
+  <word id="740" position="15">اِ۪رۡكَب</word>
+  <word id="741" position="16">مَّعَنَا</word>
+  <word id="742" position="17">وَلَا</word>
+  <word id="743" position="18">تَكُن</word>
+  <word id="744" position="19">مَّعَ</word>
+  <word id="745" position="20">اَ۬لۡكٰ۪فِرِينَ</word>
+  <word id="746" position="21" type="number">٤٢</word>
+  <ayah eid="11:42:douri-kfqc"/>
+  <ayah number="43" tradition="douri-kfqc" sid="11:43:douri-kfqc"/>
+  <word id="747" position="1">قَالَ</word>
+  <word id="748" position="2">سَـَٔاوِيٓ</word>
+  <word id="749" position="3">إِلَىٰ</word>
+  <word id="750" position="4">جَبَلٖ</word>
+  <word id="751" position="5">يَعۡصِمُنِي</word>
+  <word id="752" position="6">مِنَ</word>
+  <word id="753" position="7">اَ۬لۡمَآءِۚ</word>
+  <word id="754" position="8">قَالَ</word>
+  <word id="755" position="9">لَا</word>
+  <word id="756" position="10">عَاصِمَ</word>
+  <word id="757" position="11">اَ۬لۡيَوۡمَ</word>
+  <word id="758" position="12">مِنۡ</word>
+  <word id="759" position="13">أَمۡرِ</word>
+  <word id="760" position="14">اِ۬للَّهِ</word>
+  <word id="761" position="15">إِلَّا</word>
+  <word id="762" position="16">مَن</word>
+  <word id="763" position="17">رَّحِمَۚ</word>
+  <word id="764" position="18">وَحَالَ</word>
+  <word id="765" position="19">بَيۡنَهُمَا</word>
+  <word id="766" position="20">اَ۬لۡمَوۡجُ</word>
+  <word id="767" position="21">فَكَانَ</word>
+  <word id="768" position="22">مِنَ</word>
+  <word id="769" position="23">اَ۬لۡمُغۡرَقِينَ</word>
+  <word id="770" position="24" type="number">٤٣</word>
+  <ayah eid="11:43:douri-kfqc"/>
+  <ayah number="44" tradition="douri-kfqc" sid="11:44:douri-kfqc"/>
+  <word id="771" position="1">وَقِيلَ</word>
+  <word id="772" position="2">يَٰٓأَرۡضُ</word>
+  <word id="773" position="3">اُ۪بۡلَعِي</word>
+  <word id="774" position="4">مَآءَكِ</word>
+  <word id="775" position="5">وَيَٰسَمَآءُ</word>
+  <word id="776" position="6">اَ۬قۡلِعِي</word>
+  <word id="777" position="7">وَغِيضَ</word>
+  <word id="778" position="8">اَ۬لۡمَآءُ</word>
+  <word id="779" position="9">وَقُضِيَ</word>
+  <word id="780" position="10">اَ۬لۡأَمۡرُ</word>
+  <word id="781" position="11">وَاَسۡتَوَتۡ</word>
+  <word id="782" position="12">عَلَى</word>
+  <word id="783" position="13">اَ۬لۡجُودِيِّۖ</word>
+  <word id="784" position="14">وَقِيلَ</word>
+  <word id="785" position="15">بُعۡدٗا</word>
+  <word id="786" position="16">لِّلۡقَوۡمِ</word>
+  <word id="787" position="17">اِ۬لظَّٰلِمِينَ</word>
+  <word id="788" position="18" type="number">٤٤</word>
+  <ayah eid="11:44:douri-kfqc"/>
+  <ayah number="45" tradition="douri-kfqc" sid="11:45:douri-kfqc"/>
+  <word id="789" position="1">وَنَادَىٰ</word>
+  <word id="790" position="2">نُوحٞ</word>
+  <word id="791" position="3">رَّبَّهُۥ</word>
+  <word id="792" position="4">فَقَالَ</word>
+  <word id="793" position="5">رَبِّ</word>
+  <word id="794" position="6">إِنَّ</word>
+  <word id="795" position="7">اَ۪بۡنِي</word>
+  <word id="796" position="8">مِنۡ</word>
+  <word id="797" position="9">أَهۡلِي</word>
+  <word id="798" position="10">وَإِنَّ</word>
+  <word id="799" position="11">وَعۡدَكَ</word>
+  <word id="800" position="12">اَ۬لۡحَقُّ</word>
+  <word id="801" position="13">وَأَنتَ</word>
+  <word id="802" position="14">أَحۡكَمُ</word>
+  <word id="803" position="15">اُ۬لۡحَٰكِمِينَ</word>
+  <word id="804" position="16" type="number">٤٥</word>
+  <ayah eid="11:45:douri-kfqc"/>
+  <ayah number="46" tradition="douri-kfqc" sid="11:46:douri-kfqc"/>
+  <word id="805" position="1">قَالَ</word>
+  <word id="806" position="2">يَٰنُوحُ</word>
+  <word id="807" position="3">إِنَّهُۥ</word>
+  <word id="808" position="4">لَيۡسَ</word>
+  <word id="809" position="5">مِنۡ</word>
+  <word id="810" position="6">أَهۡلِكَۖ</word>
+  <word id="811" position="7">إِنَّهُۥ</word>
+  <word id="812" position="8">عَمَلٌ</word>
+  <word id="813" position="9">غَيۡرُ</word>
+  <word id="814" position="10">صَٰلِحٖۖ</word>
+  <word id="815" position="11">فَلَا</word>
+  <word id="816" position="12">تَسۡـَٔلۡنِۦ</word>
+  <word id="817" position="13">مَا</word>
+  <word id="818" position="14">لَيۡسَ</word>
+  <word id="819" position="15">لَكَ</word>
+  <word id="820" position="16">بِهِۦ</word>
+  <word id="821" position="17">عِلۡمٌۖ</word>
+  <word id="822" position="18">إِنِّيَ</word>
+  <word id="823" position="19">أَعِظُكَ</word>
+  <word id="824" position="20">أَن</word>
+  <word id="825" position="21">تَكُونَ</word>
+  <word id="826" position="22">مِنَ</word>
+  <word id="827" position="23">اَ۬لۡجَٰهِلِينَ</word>
+  <word id="828" position="24" type="number">٤٦</word>
+  <ayah eid="11:46:douri-kfqc"/>
+  <ayah number="47" tradition="douri-kfqc" sid="11:47:douri-kfqc"/>
+  <word id="829" position="1">قَالَ</word>
+  <word id="830" position="2">رَبِّ</word>
+  <word id="831" position="3">إِنِّيَ</word>
+  <word id="832" position="4">أَعُوذُ</word>
+  <word id="833" position="5">بِكَ</word>
+  <word id="834" position="6">أَنۡ</word>
+  <word id="835" position="7">أَسۡـَٔلَكَ</word>
+  <word id="836" position="8">مَا</word>
+  <word id="837" position="9">لَيۡسَ</word>
+  <word id="838" position="10">لِي</word>
+  <word id="839" position="11">بِهِۦ</word>
+  <word id="840" position="12">عِلۡمٞۖ</word>
+  <word id="841" position="13">وَإِلَّا</word>
+  <word id="842" position="14">تَغۡفِر</word>
+  <word id="843" position="15">لِّي</word>
+  <word id="844" position="16">وَتَرۡحَمۡنِيٓ</word>
+  <word id="845" position="17">أَكُن</word>
+  <word id="846" position="18">مِّنَ</word>
+  <word id="847" position="19">اَ۬لۡخَٰسِرِينَ</word>
+  <word id="848" position="20" type="number">٤٧</word>
+  <ayah eid="11:47:douri-kfqc"/>
+  <ayah number="48" tradition="douri-kfqc" sid="11:48:douri-kfqc"/>
+  <word id="849" position="1">قِيلَ</word>
+  <word id="850" position="2">يَٰنُوحُ</word>
+  <word id="851" position="3">اُ۪هۡبِطۡ</word>
+  <word id="852" position="4">بِسَلَٰمٖ</word>
+  <word id="853" position="5">مِّنَّا</word>
+  <word id="854" position="6">وَبَرَكَٰتٍ</word>
+  <word id="855" position="7">عَلَيۡكَ</word>
+  <word id="856" position="8">وَعَلَىٰٓ</word>
+  <word id="857" position="9">أُمَمٖ</word>
+  <word id="858" position="10">مِّمَّن</word>
+  <word id="859" position="11">مَّعَكَۚ</word>
+  <word id="860" position="12">وَأُمَمٞ</word>
+  <word id="861" position="13">سَنُمَتِّعُهُمۡ</word>
+  <word id="862" position="14">ثُمَّ</word>
+  <word id="863" position="15">يَمَسُّهُم</word>
+  <word id="864" position="16">مِّنَّا</word>
+  <word id="865" position="17">عَذَابٌ</word>
+  <word id="866" position="18">أَلِيمٞ</word>
+  <word id="867" position="19" type="number">٤٨</word>
+  <ayah eid="11:48:douri-kfqc"/>
+  <ayah number="49" tradition="douri-kfqc" sid="11:49:douri-kfqc"/>
+  <word id="868" position="1">تِلۡكَ</word>
+  <word id="869" position="2">مِنۡ</word>
+  <word id="870" position="3">أَنۢبَآءِ</word>
+  <word id="871" position="4">اِ۬لۡغَيۡبِ</word>
+  <word id="872" position="5">نُوحِيهَآ</word>
+  <word id="873" position="6">إِلَيۡكَۖ</word>
+  <word id="874" position="7">مَا</word>
+  <word id="875" position="8">كُنتَ</word>
+  <word id="876" position="9">تَعۡلَمُهَآ</word>
+  <word id="877" position="10">أَنتَ</word>
+  <word id="878" position="11">وَلَا</word>
+  <word id="879" position="12">قَوۡمُكَ</word>
+  <word id="880" position="13">مِن</word>
+  <word id="881" position="14">قَبۡلِ</word>
+  <word id="882" position="15">هَٰذَاۖ</word>
+  <word id="883" position="16">فَاَصۡبِرۡۖ</word>
+  <word id="884" position="17">إِنَّ</word>
+  <word id="885" position="18">اَ۬لۡعَٰقِبَةَ</word>
+  <word id="886" position="19">لِلۡمُتَّقِينَ</word>
+  <word id="887" position="20" type="number">٤٩</word>
+  <ayah eid="11:49:douri-kfqc"/>
+  <ayah number="50" tradition="douri-kfqc" sid="11:50:douri-kfqc"/>
+  <word id="888" position="1">۞</word>
+  <word id="889" position="2">وَإِلَىٰ</word>
+  <word id="890" position="3">عَادٍ</word>
+  <word id="891" position="4">أَخَاهُمۡ</word>
+  <word id="892" position="5">هُودٗاۚ</word>
+  <word id="893" position="6">قَالَ</word>
+  <word id="894" position="7">يَٰقَوۡمِ</word>
+  <word id="895" position="8">اِ۟عۡبُدُواْ</word>
+  <word id="896" position="9">اُ۬للَّهَ</word>
+  <word id="897" position="10">مَا</word>
+  <word id="898" position="11">لَكُم</word>
+  <word id="899" position="12">مِّنۡ</word>
+  <word id="900" position="13">إِلَٰهٍ</word>
+  <word id="901" position="14">غَيۡرُهُۥٓۖ</word>
+  <word id="902" position="15">إِنۡ</word>
+  <word id="903" position="16">أَنتُمۡ</word>
+  <word id="904" position="17">إِلَّا</word>
+  <word id="905" position="18">مُفۡتَرُونَ</word>
+  <word id="906" position="19" type="number">٥٠</word>
+  <ayah eid="11:50:douri-kfqc"/>
+  <ayah number="51" tradition="douri-kfqc" sid="11:51:douri-kfqc"/>
+  <word id="907" position="1">يَٰقَوۡمِ</word>
+  <word id="908" position="2">لَآ</word>
+  <word id="909" position="3">أَسۡـَٔلُكُمۡ</word>
+  <word id="910" position="4">عَلَيۡهِ</word>
+  <word id="911" position="5">أَجۡرًاۖ</word>
+  <word id="912" position="6">إِنۡ</word>
+  <word id="913" position="7">أَجۡرِيَ</word>
+  <word id="914" position="8">إِلَّا</word>
+  <word id="915" position="9">عَلَى</word>
+  <word id="916" position="10">اَ۬لَّذِي</word>
+  <word id="917" position="11">فَطَرَنِيٓۚ</word>
+  <word id="918" position="12">أَفَلَا</word>
+  <word id="919" position="13">تَعۡقِلُونَ</word>
+  <word id="920" position="14" type="number">٥١</word>
+  <ayah eid="11:51:douri-kfqc"/>
+  <ayah number="52" tradition="douri-kfqc" sid="11:52:douri-kfqc"/>
+  <word id="921" position="1">وَيَٰقَوۡمِ</word>
+  <word id="922" position="2">اِ۪سۡتَغۡفِرُواْ</word>
+  <word id="923" position="3">رَبَّكُمۡ</word>
+  <word id="924" position="4">ثُمَّ</word>
+  <word id="925" position="5">تُوبُوٓاْ</word>
+  <word id="926" position="6">إِلَيۡهِ</word>
+  <word id="927" position="7">يُرۡسِلِ</word>
+  <word id="928" position="8">اِ۬لسَّمَآءَ</word>
+  <word id="929" position="9">عَلَيۡكُم</word>
+  <word id="930" position="10">مِّدۡرَارٗا</word>
+  <word id="931" position="11">وَيَزِدۡكُمۡ</word>
+  <word id="932" position="12">قُوَّةً</word>
+  <word id="933" position="13">إِلَىٰ</word>
+  <word id="934" position="14">قُوَّتِكُمۡ</word>
+  <word id="935" position="15">وَلَا</word>
+  <word id="936" position="16">تَتَوَلَّوۡاْ</word>
+  <word id="937" position="17">مُجۡرِمِينَ</word>
+  <word id="938" position="18" type="number">٥٢</word>
+  <ayah eid="11:52:douri-kfqc"/>
+  <ayah number="53" tradition="douri-kfqc" sid="11:53:douri-kfqc"/>
+  <word id="939" position="1">قَالُواْ</word>
+  <word id="940" position="2">يَٰهُودُ</word>
+  <word id="941" position="3">مَا</word>
+  <word id="942" position="4">جِئۡتَنَا</word>
+  <word id="943" position="5">بِبَيِّنَةٖ</word>
+  <word id="944" position="6">وَمَا</word>
+  <word id="945" position="7">نَحۡنُ</word>
+  <word id="946" position="8">بِتَارِكِيٓ</word>
+  <word id="947" position="9">ءَالِهَتِنَا</word>
+  <word id="948" position="10">عَن</word>
+  <word id="949" position="11">قَوۡلِكَ</word>
+  <word id="950" position="12">وَمَا</word>
+  <word id="951" position="13">نَحۡنُ</word>
+  <word id="952" position="14">لَكَ</word>
+  <word id="953" position="15">بِمُؤۡمِنِينَ</word>
+  <word id="954" position="16" type="number">٥٣</word>
+  <ayah eid="11:53:douri-kfqc"/>
+  <ayah number="54" tradition="douri-kfqc" sid="11:54:douri-kfqc"/>
+  <word id="955" position="1">إِن</word>
+  <word id="956" position="2">نَّقُولُ</word>
+  <word id="957" position="3">إِلَّا</word>
+  <word id="958" position="4">اَ۪عۡتَر۪ىٰكَ</word>
+  <word id="959" position="5">بَعۡضُ</word>
+  <word id="960" position="6">ءَالِهَتِنَا</word>
+  <word id="961" position="7">بِسُوٓءٖۗ</word>
+  <word id="962" position="8">قَالَ</word>
+  <word id="963" position="9">إِنِّيٓ</word>
+  <word id="964" position="10">أُشۡهِدُ</word>
+  <word id="965" position="11">اُ۬للَّهَ</word>
+  <word id="966" position="12">وَاَشۡهَدُوٓاْ</word>
+  <word id="967" position="13">أَنِّي</word>
+  <word id="968" position="14">بَرِيٓءٞ</word>
+  <word id="969" position="15">مِّمَّا</word>
+  <word id="970" position="16">تُشۡرِكُونَ</word>
+  <word id="971" position="17">مِن</word>
+  <word id="972" position="18">دُونِهِۦۖ</word>
+  <word id="973" position="19">فَكِيدُونِي</word>
+  <word id="974" position="20">جَمِيعٗا</word>
+  <word id="975" position="21">ثُمَّ</word>
+  <word id="976" position="22">لَا</word>
+  <word id="977" position="23">تُنظِرُونِ</word>
+  <word id="978" position="24" type="number">٥٤</word>
+  <ayah eid="11:54:douri-kfqc"/>
+  <ayah number="55" tradition="douri-kfqc" sid="11:55:douri-kfqc"/>
+  <word id="979" position="1">إِنِّي</word>
+  <word id="980" position="2">تَوَكَّلۡتُ</word>
+  <word id="981" position="3">عَلَى</word>
+  <word id="982" position="4">اَ۬للَّهِ</word>
+  <word id="983" position="5">رَبِّي</word>
+  <word id="984" position="6">وَرَبِّكُمۚ</word>
+  <word id="985" position="7">مَّا</word>
+  <word id="986" position="8">مِن</word>
+  <word id="987" position="9">دَآبَّةٍ</word>
+  <word id="988" position="10">إِلَّا</word>
+  <word id="989" position="11">هُوَ</word>
+  <word id="990" position="12">ءَاخِذُۢ</word>
+  <word id="991" position="13">بِنَاصِيَتِهَآۚ</word>
+  <word id="992" position="14">إِنَّ</word>
+  <word id="993" position="15">رَبِّي</word>
+  <word id="994" position="16">عَلَىٰ</word>
+  <word id="995" position="17">صِرَٰطٖ</word>
+  <word id="996" position="18">مُّسۡتَقِيمٖ</word>
+  <word id="997" position="19" type="number">٥٥</word>
+  <ayah eid="11:55:douri-kfqc"/>
+  <ayah number="56" tradition="douri-kfqc" sid="11:56:douri-kfqc"/>
+  <word id="998" position="1">فَإِن</word>
+  <word id="999" position="2">تَوَلَّوۡاْ</word>
+  <word id="1000" position="3">فَقَدۡ</word>
+  <word id="1001" position="4">أَبۡلَغۡتُكُم</word>
+  <word id="1002" position="5">مَّآ</word>
+  <word id="1003" position="6">أُرۡسِلۡتُ</word>
+  <word id="1004" position="7">بِهِۦٓ</word>
+  <word id="1005" position="8">إِلَيۡكُمۡۚ</word>
+  <word id="1006" position="9">وَيَسۡتَخۡلِفُ</word>
+  <word id="1007" position="10">رَبِّي</word>
+  <word id="1008" position="11">قَوۡمًا</word>
+  <word id="1009" position="12">غَيۡرَكُمۡ</word>
+  <word id="1010" position="13">وَلَا</word>
+  <word id="1011" position="14">تَضُرُّونَهُۥ</word>
+  <word id="1012" position="15">شَيۡـًٔاۚ</word>
+  <word id="1013" position="16">إِنَّ</word>
+  <word id="1014" position="17">رَبِّي</word>
+  <word id="1015" position="18">عَلَىٰ</word>
+  <word id="1016" position="19">كُلِّ</word>
+  <word id="1017" position="20">شَيۡءٍ</word>
+  <word id="1018" position="21">حَفِيظٞ</word>
+  <word id="1019" position="22" type="number">٥٦</word>
+  <ayah eid="11:56:douri-kfqc"/>
+  <ayah number="57" tradition="douri-kfqc" sid="11:57:douri-kfqc"/>
+  <word id="1020" position="1">وَلَمَّا</word>
+  <word id="1021" position="2">جَآ</word>
+  <word id="1022" position="3">أَمۡرُنَا</word>
+  <word id="1023" position="4">نَجَّيۡنَا</word>
+  <word id="1024" position="5">هُودٗا</word>
+  <word id="1025" position="6">وَاَلَّذِينَ</word>
+  <word id="1026" position="7">ءَامَنُواْ</word>
+  <word id="1027" position="8">مَعَهُۥ</word>
+  <word id="1028" position="9">بِرَحۡمَةٖ</word>
+  <word id="1029" position="10">مِّنَّا</word>
+  <word id="1030" position="11">وَنَجَّيۡنَٰهُم</word>
+  <word id="1031" position="12">مِّنۡ</word>
+  <word id="1032" position="13">عَذَابٍ</word>
+  <word id="1033" position="14">غَلِيظٖ</word>
+  <word id="1034" position="15" type="number">٥٧</word>
+  <ayah eid="11:57:douri-kfqc"/>
+  <ayah number="58" tradition="douri-kfqc" sid="11:58:douri-kfqc"/>
+  <word id="1035" position="1">وَتِلۡكَ</word>
+  <word id="1036" position="2">عَادٞۖ</word>
+  <word id="1037" position="3">جَحَدُواْ</word>
+  <word id="1038" position="4">بِـَٔايَٰتِ</word>
+  <word id="1039" position="5">رَبِّهِمۡ</word>
+  <word id="1040" position="6">وَعَصَوۡاْ</word>
+  <word id="1041" position="7">رُسُلَهُۥ</word>
+  <word id="1042" position="8">وَاَتَّبَعُوٓاْ</word>
+  <word id="1043" position="9">أَمۡرَ</word>
+  <word id="1044" position="10">كُلِّ</word>
+  <word id="1045" position="11">جَبّ۪ارٍ</word>
+  <word id="1046" position="12">عَنِيدٖ</word>
+  <word id="1047" position="13" type="number">٥٨</word>
+  <ayah eid="11:58:douri-kfqc"/>
+  <ayah number="59" tradition="douri-kfqc" sid="11:59:douri-kfqc"/>
+  <word id="1048" position="1">وَأُتۡبِعُواْ</word>
+  <word id="1049" position="2">فِي</word>
+  <word id="1050" position="3">هَٰذِهِ</word>
+  <word id="1051" position="4">اِ۬لدُّنۡيۭا</word>
+  <word id="1052" position="5">لَعۡنَةٗ</word>
+  <word id="1053" position="6">وَيَوۡمَ</word>
+  <word id="1054" position="7">اَ۬لۡقِيَٰمَةِۗ</word>
+  <word id="1055" position="8">أَلَآ</word>
+  <word id="1056" position="9">إِنَّ</word>
+  <word id="1057" position="10">عَادٗا</word>
+  <word id="1058" position="11">كَفَرُواْ</word>
+  <word id="1059" position="12">رَبَّهُمۡۗ</word>
+  <word id="1060" position="13">أَلَا</word>
+  <word id="1061" position="14">بُعۡدٗا</word>
+  <word id="1062" position="15">لِّعَادٖ</word>
+  <word id="1063" position="16">قَوۡمِ</word>
+  <word id="1064" position="17">هُودٖ</word>
+  <word id="1065" position="18" type="number">٥٩</word>
+  <ayah eid="11:59:douri-kfqc"/>
+  <ayah number="60" tradition="douri-kfqc" sid="11:60:douri-kfqc"/>
+  <word id="1066" position="1">وَإِلَىٰ</word>
+  <word id="1067" position="2">ثَمُودَ</word>
+  <word id="1068" position="3">أَخَاهُمۡ</word>
+  <word id="1069" position="4">صَٰلِحٗاۚ</word>
+  <word id="1070" position="5">قَالَ</word>
+  <word id="1071" position="6">يَٰقَوۡمِ</word>
+  <word id="1072" position="7">اِ۟عۡبُدُواْ</word>
+  <word id="1073" position="8">اُ۬للَّهَ</word>
+  <word id="1074" position="9">مَا</word>
+  <word id="1075" position="10">لَكُم</word>
+  <word id="1076" position="11">مِّنۡ</word>
+  <word id="1077" position="12">إِلَٰهٍ</word>
+  <word id="1078" position="13">غَيۡرُهُۥۖ</word>
+  <word id="1079" position="14">هُوَ</word>
+  <word id="1080" position="15">أَنشَأَكُم</word>
+  <word id="1081" position="16">مِّنَ</word>
+  <word id="1082" position="17">اَ۬لۡأَرۡضِ</word>
+  <word id="1083" position="18">وَاَسۡتَعۡمَرَكُمۡ</word>
+  <word id="1084" position="19">فِيهَا</word>
+  <word id="1085" position="20">فَاَسۡتَغۡفِرُوهُ</word>
+  <word id="1086" position="21">ثُمَّ</word>
+  <word id="1087" position="22">تُوبُوٓاْ</word>
+  <word id="1088" position="23">إِلَيۡهِۚ</word>
+  <word id="1089" position="24">إِنَّ</word>
+  <word id="1090" position="25">رَبِّي</word>
+  <word id="1091" position="26">قَرِيبٞ</word>
+  <word id="1092" position="27">مُّجِيبٞ</word>
+  <word id="1093" position="28" type="number">٦٠</word>
+  <ayah eid="11:60:douri-kfqc"/>
+  <ayah number="61" tradition="douri-kfqc" sid="11:61:douri-kfqc"/>
+  <word id="1094" position="1">۞</word>
+  <word id="1095" position="2">قَالُواْ</word>
+  <word id="1096" position="3">يَٰصَٰلِحُ</word>
+  <word id="1097" position="4">قَدۡ</word>
+  <word id="1098" position="5">كُنتَ</word>
+  <word id="1099" position="6">فِينَا</word>
+  <word id="1100" position="7">مَرۡجُوّٗا</word>
+  <word id="1101" position="8">قَبۡلَ</word>
+  <word id="1102" position="9">هَٰذَآۖ</word>
+  <word id="1103" position="10">أَتَنۡهَىٰنَآ</word>
+  <word id="1104" position="11">أَن</word>
+  <word id="1105" position="12">نَّعۡبُدَ</word>
+  <word id="1106" position="13">مَا</word>
+  <word id="1107" position="14">يَعۡبُدُ</word>
+  <word id="1108" position="15">ءَابَآؤُنَا</word>
+  <word id="1109" position="16">وَإِنَّنَا</word>
+  <word id="1110" position="17">لَفِي</word>
+  <word id="1111" position="18">شَكّٖ</word>
+  <word id="1112" position="19">مِّمَّا</word>
+  <word id="1113" position="20">تَدۡعُونَآ</word>
+  <word id="1114" position="21">إِلَيۡهِ</word>
+  <word id="1115" position="22">مُرِيبٖ</word>
+  <word id="1116" position="23" type="number">٦١</word>
+  <ayah eid="11:61:douri-kfqc"/>
+  <ayah number="62" tradition="douri-kfqc" sid="11:62:douri-kfqc"/>
+  <word id="1117" position="1">قَالَ</word>
+  <word id="1118" position="2">يَٰقَوۡمِ</word>
+  <word id="1119" position="3">أَرَءَيۡتُمۡ</word>
+  <word id="1120" position="4">إِن</word>
+  <word id="1121" position="5">كُنتُ</word>
+  <word id="1122" position="6">عَلَىٰ</word>
+  <word id="1123" position="7">بَيِّنَةٖ</word>
+  <word id="1124" position="8">مِّن</word>
+  <word id="1125" position="9">رَّبِّي</word>
+  <word id="1126" position="10">وَءَاتَىٰنِي</word>
+  <word id="1127" position="11">مِنۡهُ</word>
+  <word id="1128" position="12">رَحۡمَةٗ</word>
+  <word id="1129" position="13">فَمَن</word>
+  <word id="1130" position="14">يَنصُرُنِي</word>
+  <word id="1131" position="15">مِنَ</word>
+  <word id="1132" position="16">اَ۬للَّهِ</word>
+  <word id="1133" position="17">إِنۡ</word>
+  <word id="1134" position="18">عَصَيۡتُهُۥۖ</word>
+  <word id="1135" position="19">فَمَا</word>
+  <word id="1136" position="20">تَزِيدُونَنِي</word>
+  <word id="1137" position="21">غَيۡرَ</word>
+  <word id="1138" position="22">تَخۡسِيرٖ</word>
+  <word id="1139" position="23" type="number">٦٢</word>
+  <ayah eid="11:62:douri-kfqc"/>
+  <ayah number="63" tradition="douri-kfqc" sid="11:63:douri-kfqc"/>
+  <word id="1140" position="1">وَيَٰقَوۡمِ</word>
+  <word id="1141" position="2">هَٰذِهِۦ</word>
+  <word id="1142" position="3">نَاقَةُ</word>
+  <word id="1143" position="4">اُ۬للَّهِ</word>
+  <word id="1144" position="5">لَكُمۡ</word>
+  <word id="1145" position="6">ءَايَةٗ</word>
+  <word id="1146" position="7">فَذَرُوهَا</word>
+  <word id="1147" position="8">تَأۡكُلۡ</word>
+  <word id="1148" position="9">فِيٓ</word>
+  <word id="1149" position="10">أَرۡضِ</word>
+  <word id="1150" position="11">اِ۬للَّهِ</word>
+  <word id="1151" position="12">وَلَا</word>
+  <word id="1152" position="13">تَمَسُّوهَا</word>
+  <word id="1153" position="14">بِسُوٓءٖ</word>
+  <word id="1154" position="15">فَيَأۡخُذَكُمۡ</word>
+  <word id="1155" position="16">عَذَابٞ</word>
+  <word id="1156" position="17">قَرِيبٞ</word>
+  <word id="1157" position="18" type="number">٦٣</word>
+  <ayah eid="11:63:douri-kfqc"/>
+  <ayah number="64" tradition="douri-kfqc" sid="11:64:douri-kfqc"/>
+  <word id="1158" position="1">فَعَقَرُوهَا</word>
+  <word id="1159" position="2">فَقَالَ</word>
+  <word id="1160" position="3">تَمَتَّعُواْ</word>
+  <word id="1161" position="4">فِي</word>
+  <word id="1162" position="5">د۪ارِكُمۡ</word>
+  <word id="1163" position="6">ثَلَٰثَةَ</word>
+  <word id="1164" position="7">أَيَّامٖۖ</word>
+  <word id="1165" position="8">ذَٰلِكَ</word>
+  <word id="1166" position="9">وَعۡدٌ</word>
+  <word id="1167" position="10">غَيۡرُ</word>
+  <word id="1168" position="11">مَكۡذُوبٖ</word>
+  <word id="1169" position="12" type="number">٦٤</word>
+  <ayah eid="11:64:douri-kfqc"/>
+  <ayah number="65" tradition="douri-kfqc" sid="11:65:douri-kfqc"/>
+  <word id="1170" position="1">فَلَمَّا</word>
+  <word id="1171" position="2">جَآ</word>
+  <word id="1172" position="3">أَمۡرُنَا</word>
+  <word id="1173" position="4">نَجَّيۡنَا</word>
+  <word id="1174" position="5">صَٰلِحٗا</word>
+  <word id="1175" position="6">وَاَلَّذِينَ</word>
+  <word id="1176" position="7">ءَامَنُواْ</word>
+  <word id="1177" position="8">مَعَهُۥ</word>
+  <word id="1178" position="9">بِرَحۡمَةٖ</word>
+  <word id="1179" position="10">مِّنَّا</word>
+  <word id="1180" position="11">وَمِنۡ</word>
+  <word id="1181" position="12">خِزۡيِ</word>
+  <word id="1182" position="13">يَوۡمِئِذٍۚ</word>
+  <word id="1183" position="14">إِنَّ</word>
+  <word id="1184" position="15">رَبَّكَ</word>
+  <word id="1185" position="16">هُوَ</word>
+  <word id="1186" position="17">اَ۬لۡقَوِيُّ</word>
+  <word id="1187" position="18">اُ۬لۡعَزِيزُ</word>
+  <word id="1188" position="19" type="number">٦٥</word>
+  <ayah eid="11:65:douri-kfqc"/>
+  <ayah number="66" tradition="douri-kfqc" sid="11:66:douri-kfqc"/>
+  <word id="1189" position="1">وَأَخَذَ</word>
+  <word id="1190" position="2">اَ۬لَّذِينَ</word>
+  <word id="1191" position="3">ظَلَمُواْ</word>
+  <word id="1192" position="4">اُ۬لصَّيۡحَةُ</word>
+  <word id="1193" position="5">فَأَصۡبَحُواْ</word>
+  <word id="1194" position="6">فِي</word>
+  <word id="1195" position="7">دِيٰ۪رِهِمۡ</word>
+  <word id="1196" position="8">جَٰثِمِينَ</word>
+  <word id="1197" position="9" type="number">٦٦</word>
+  <ayah eid="11:66:douri-kfqc"/>
+  <ayah number="67" tradition="douri-kfqc" sid="11:67:douri-kfqc"/>
+  <word id="1198" position="1">كَأَن</word>
+  <word id="1199" position="2">لَّمۡ</word>
+  <word id="1200" position="3">يَغۡنَوۡاْ</word>
+  <word id="1201" position="4">فِيهَآۗ</word>
+  <word id="1202" position="5">أَلَآ</word>
+  <word id="1203" position="6">إِنَّ</word>
+  <word id="1204" position="7">ثَمُودٗا</word>
+  <word id="1205" position="8">كَفَرُواْ</word>
+  <word id="1206" position="9">رَبَّهُمۡۗ</word>
+  <word id="1207" position="10">أَلَا</word>
+  <word id="1208" position="11">بُعۡدٗا</word>
+  <word id="1209" position="12">لِّثَمُودَ</word>
+  <word id="1210" position="13" type="number">٦٧</word>
+  <ayah eid="11:67:douri-kfqc"/>
+  <ayah number="68" tradition="douri-kfqc" sid="11:68:douri-kfqc"/>
+  <word id="1211" position="1">وَلَقَد</word>
+  <word id="1212" position="2">جَّآءَتۡ</word>
+  <word id="1213" position="3">رُسۡلُنَآ</word>
+  <word id="1214" position="4">إِبۡرَٰهِيمَ</word>
+  <word id="1215" position="5">بِالۡبُشۡر۪يٰ</word>
+  <word id="1216" position="6">قَالُواْ</word>
+  <word id="1217" position="7">سَلَٰمٗاۖ</word>
+  <word id="1218" position="8">قَالَ</word>
+  <word id="1219" position="9">سَلَٰمٞۖ</word>
+  <word id="1220" position="10">فَمَا</word>
+  <word id="1221" position="11">لَبِثَ</word>
+  <word id="1222" position="12">أَن</word>
+  <word id="1223" position="13">جَآءَ</word>
+  <word id="1224" position="14">بِعِجۡلٍ</word>
+  <word id="1225" position="15">حَنِيذٖ</word>
+  <word id="1226" position="16" type="number">٦٨</word>
+  <ayah eid="11:68:douri-kfqc"/>
+  <ayah number="69" tradition="douri-kfqc" sid="11:69:douri-kfqc"/>
+  <word id="1227" position="1">فَلَمَّا</word>
+  <word id="1228" position="2">رَء۪آ</word>
+  <word id="1229" position="3">أَيۡدِيَهُمۡ</word>
+  <word id="1230" position="4">لَا</word>
+  <word id="1231" position="5">تَصِلُ</word>
+  <word id="1232" position="6">إِلَيۡهِ</word>
+  <word id="1233" position="7">نَكِرَهُمۡ</word>
+  <word id="1234" position="8">وَأَوۡجَسَ</word>
+  <word id="1235" position="9">مِنۡهُمۡ</word>
+  <word id="1236" position="10">خِيفَةٗۚ</word>
+  <word id="1237" position="11">قَالُواْ</word>
+  <word id="1238" position="12">لَا</word>
+  <word id="1239" position="13">تَخَفۡ</word>
+  <word id="1240" position="14">إِنَّآ</word>
+  <word id="1241" position="15">أُرۡسِلۡنَآ</word>
+  <word id="1242" position="16">إِلَىٰ</word>
+  <word id="1243" position="17">قَوۡمِ</word>
+  <word id="1244" position="18">لُوطٖ</word>
+  <word id="1245" position="19" type="number">٦٩</word>
+  <ayah eid="11:69:douri-kfqc"/>
+  <ayah number="70" tradition="douri-kfqc" sid="11:70:douri-kfqc"/>
+  <word id="1246" position="1">وَاَمۡرَأَتُهُۥ</word>
+  <word id="1247" position="2">قَآئِمَةٞ</word>
+  <word id="1248" position="3">فَضَحِكَتۡ</word>
+  <word id="1249" position="4">فَبَشَّرۡنَٰهَا</word>
+  <word id="1250" position="5">بِإِسۡحَٰقَ</word>
+  <word id="1251" position="6">وَمِن</word>
+  <word id="1252" position="7">وَرَآ</word>
+  <word id="1253" position="8">إِسۡحَٰقَ</word>
+  <word id="1254" position="9">يَعۡقُوبُ</word>
+  <word id="1255" position="10" type="number">٧٠</word>
+  <ayah eid="11:70:douri-kfqc"/>
+  <ayah number="71" tradition="douri-kfqc" sid="11:71:douri-kfqc"/>
+  <word id="1256" position="1">قَالَتۡ</word>
+  <word id="1257" position="2">يَٰوَيۡلَتۭيٰٓ</word>
+  <word id="1258" position="3">ءَٰا۬لِدُ</word>
+  <word id="1259" position="4">وَأَنَا۠</word>
+  <word id="1260" position="5">عَجُوزٞ</word>
+  <word id="1261" position="6">وَهَٰذَا</word>
+  <word id="1262" position="7">بَعۡلِي</word>
+  <word id="1263" position="8">شَيۡخًاۖ</word>
+  <word id="1264" position="9">إِنَّ</word>
+  <word id="1265" position="10">هَٰذَا</word>
+  <word id="1266" position="11">لَشَيۡءٌ</word>
+  <word id="1267" position="12">عَجِيبٞ</word>
+  <word id="1268" position="13" type="number">٧١</word>
+  <ayah eid="11:71:douri-kfqc"/>
+  <ayah number="72" tradition="douri-kfqc" sid="11:72:douri-kfqc"/>
+  <word id="1269" position="1">۞</word>
+  <word id="1270" position="2">قَالُوٓاْ</word>
+  <word id="1271" position="3">أَتَعۡجَبِينَ</word>
+  <word id="1272" position="4">مِنۡ</word>
+  <word id="1273" position="5">أَمۡرِ</word>
+  <word id="1274" position="6">اِ۬للَّهِۖ</word>
+  <word id="1275" position="7">رَحۡمَتُ</word>
+  <word id="1276" position="8">اُ۬للَّهِ</word>
+  <word id="1277" position="9">وَبَرَكَٰتُهُۥ</word>
+  <word id="1278" position="10">عَلَيۡكُمۡ</word>
+  <word id="1279" position="11">أَهۡلَ</word>
+  <word id="1280" position="12">اَ۬لۡبَيۡتِۚ</word>
+  <word id="1281" position="13">إِنَّهُۥ</word>
+  <word id="1282" position="14">حَمِيدٞ</word>
+  <word id="1283" position="15">مَّجِيدٞ</word>
+  <word id="1284" position="16" type="number">٧٢</word>
+  <ayah eid="11:72:douri-kfqc"/>
+  <ayah number="73" tradition="douri-kfqc" sid="11:73:douri-kfqc"/>
+  <word id="1285" position="1">فَلَمَّا</word>
+  <word id="1286" position="2">ذَهَبَ</word>
+  <word id="1287" position="3">عَنۡ</word>
+  <word id="1288" position="4">إِبۡرَٰهِيمَ</word>
+  <word id="1289" position="5">اَ۬لرَّوۡعُ</word>
+  <word id="1290" position="6">وَجَآءَتۡهُ</word>
+  <word id="1291" position="7">اُ۬لۡبُشۡر۪يٰ</word>
+  <word id="1292" position="8">يُجَٰدِلُنَا</word>
+  <word id="1293" position="9">فِي</word>
+  <word id="1294" position="10">قَوۡمِ</word>
+  <word id="1295" position="11">لُوطٍ</word>
+  <word id="1296" position="12" type="number">٧٣</word>
+  <ayah eid="11:73:douri-kfqc"/>
+  <ayah number="74" tradition="douri-kfqc" sid="11:74:douri-kfqc"/>
+  <word id="1297" position="1">إِنَّ</word>
+  <word id="1298" position="2">إِبۡرَٰهِيمَ</word>
+  <word id="1299" position="3">لَحَلِيمٌ</word>
+  <word id="1300" position="4">أَوَّٰهٞ</word>
+  <word id="1301" position="5">مُّنِيبٞ</word>
+  <word id="1302" position="6" type="number">٧٤</word>
+  <ayah eid="11:74:douri-kfqc"/>
+  <ayah number="75" tradition="douri-kfqc" sid="11:75:douri-kfqc"/>
+  <word id="1303" position="1">يَٰٓإِبۡرَٰهِيمُ</word>
+  <word id="1304" position="2">أَعۡرِضۡ</word>
+  <word id="1305" position="3">عَنۡ</word>
+  <word id="1306" position="4">هَٰذَآۖ</word>
+  <word id="1307" position="5">إِنَّهُۥ</word>
+  <word id="1308" position="6">قَد</word>
+  <word id="1309" position="7">جَّآ</word>
+  <word id="1310" position="8">أَمۡرُ</word>
+  <word id="1311" position="9">رَبِّكَۖ</word>
+  <word id="1312" position="10">وَإِنَّهُمۡ</word>
+  <word id="1313" position="11">ءَاتِيهِمۡ</word>
+  <word id="1314" position="12">عَذَابٌ</word>
+  <word id="1315" position="13">غَيۡرُ</word>
+  <word id="1316" position="14">مَرۡدُودٖ</word>
+  <word id="1317" position="15" type="number">٧٥</word>
+  <ayah eid="11:75:douri-kfqc"/>
+  <ayah number="76" tradition="douri-kfqc" sid="11:76:douri-kfqc"/>
+  <word id="1318" position="1">وَلَمَّا</word>
+  <word id="1319" position="2">جَآءَتۡ</word>
+  <word id="1320" position="3">رُسۡلُنَا</word>
+  <word id="1321" position="4">لُوطٗا</word>
+  <word id="1322" position="5">سِيٓءَ</word>
+  <word id="1323" position="6">بِهِمۡ</word>
+  <word id="1324" position="7">وَضَاقَ</word>
+  <word id="1325" position="8">بِهِمۡ</word>
+  <word id="1326" position="9">ذَرۡعٗا</word>
+  <word id="1327" position="10">وَقَالَ</word>
+  <word id="1328" position="11">هَٰذَا</word>
+  <word id="1329" position="12">يَوۡمٌ</word>
+  <word id="1330" position="13">عَصِيبٞ</word>
+  <word id="1331" position="14" type="number">٧٦</word>
+  <ayah eid="11:76:douri-kfqc"/>
+  <ayah number="77" tradition="douri-kfqc" sid="11:77:douri-kfqc"/>
+  <word id="1332" position="1">وَجَآءَهُۥ</word>
+  <word id="1333" position="2">قَوۡمُهُۥ</word>
+  <word id="1334" position="3">يُهۡرَعُونَ</word>
+  <word id="1335" position="4">إِلَيۡهِ</word>
+  <word id="1336" position="5">وَمِن</word>
+  <word id="1337" position="6">قَبۡلُ</word>
+  <word id="1338" position="7">كَانُواْ</word>
+  <word id="1339" position="8">يَعۡمَلُونَ</word>
+  <word id="1340" position="9">اَ۬لسَّيِّـَٔاتِۚ</word>
+  <word id="1341" position="10">قَالَ</word>
+  <word id="1342" position="11">يَٰقَوۡمِ</word>
+  <word id="1343" position="12">هَٰٓؤُلَآءِ</word>
+  <word id="1344" position="13">بَنَاتِي</word>
+  <word id="1345" position="14">هُنَّ</word>
+  <word id="1346" position="15">أَطۡهَرُ</word>
+  <word id="1347" position="16">لَكُمۡۖ</word>
+  <word id="1348" position="17">فَاَتَّقُواْ</word>
+  <word id="1349" position="18">اُ۬للَّهَ</word>
+  <word id="1350" position="19">وَلَا</word>
+  <word id="1351" position="20">تُخۡزُونِۦ</word>
+  <word id="1352" position="21">فِي</word>
+  <word id="1353" position="22">ضَيۡفِيَۖ</word>
+  <word id="1354" position="23">أَلَيۡسَ</word>
+  <word id="1355" position="24">مِنكُمۡ</word>
+  <word id="1356" position="25">رَجُلٞ</word>
+  <word id="1357" position="26">رَّشِيدٞ</word>
+  <word id="1358" position="27" type="number">٧٧</word>
+  <ayah eid="11:77:douri-kfqc"/>
+  <ayah number="78" tradition="douri-kfqc" sid="11:78:douri-kfqc"/>
+  <word id="1359" position="1">قَالُواْ</word>
+  <word id="1360" position="2">لَقَدۡ</word>
+  <word id="1361" position="3">عَلِمۡتَ</word>
+  <word id="1362" position="4">مَا</word>
+  <word id="1363" position="5">لَنَا</word>
+  <word id="1364" position="6">فِي</word>
+  <word id="1365" position="7">بَنَاتِكَ</word>
+  <word id="1366" position="8">مِنۡ</word>
+  <word id="1367" position="9">حَقّٖ</word>
+  <word id="1368" position="10">وَإِنَّكَ</word>
+  <word id="1369" position="11">لَتَعۡلَمُ</word>
+  <word id="1370" position="12">مَا</word>
+  <word id="1371" position="13">نُرِيدُ</word>
+  <word id="1372" position="14" type="number">٧٨</word>
+  <ayah eid="11:78:douri-kfqc"/>
+  <ayah number="79" tradition="douri-kfqc" sid="11:79:douri-kfqc"/>
+  <word id="1373" position="1">قَالَ</word>
+  <word id="1374" position="2">لَوۡ</word>
+  <word id="1375" position="3">أَنَّ</word>
+  <word id="1376" position="4">لِي</word>
+  <word id="1377" position="5">بِكُمۡ</word>
+  <word id="1378" position="6">قُوَّةً</word>
+  <word id="1379" position="7">أَوۡ</word>
+  <word id="1380" position="8">ءَاوِيٓ</word>
+  <word id="1381" position="9">إِلَىٰ</word>
+  <word id="1382" position="10">رُكۡنٖ</word>
+  <word id="1383" position="11">شَدِيدٖ</word>
+  <word id="1384" position="12" type="number">٧٩</word>
+  <ayah eid="11:79:douri-kfqc"/>
+  <ayah number="80" tradition="douri-kfqc" sid="11:80:douri-kfqc"/>
+  <word id="1385" position="1">قَالُواْ</word>
+  <word id="1386" position="2">يَٰلُوطُ</word>
+  <word id="1387" position="3">إِنَّا</word>
+  <word id="1388" position="4">رُسُلُ</word>
+  <word id="1389" position="5">رَبِّكَ</word>
+  <word id="1390" position="6">لَن</word>
+  <word id="1391" position="7">يَصِلُوٓاْ</word>
+  <word id="1392" position="8">إِلَيۡكَۖ</word>
+  <word id="1393" position="9">فَأَسۡرِ</word>
+  <word id="1394" position="10">بِأَهۡلِكَ</word>
+  <word id="1395" position="11">بِقِطۡعٖ</word>
+  <word id="1396" position="12">مِّنَ</word>
+  <word id="1397" position="13">اَ۬لَّيۡلِ</word>
+  <word id="1398" position="14">وَلَا</word>
+  <word id="1399" position="15">يَلۡتَفِتۡ</word>
+  <word id="1400" position="16">مِنكُمۡ</word>
+  <word id="1401" position="17">أَحَدٌ</word>
+  <word id="1402" position="18">إِلَّا</word>
+  <word id="1403" position="19">اَ۪مۡرَأَتُكَۖ</word>
+  <word id="1404" position="20">إِنَّهُۥ</word>
+  <word id="1405" position="21">مُصِيبُهَا</word>
+  <word id="1406" position="22">مَآ</word>
+  <word id="1407" position="23">أَصَابَهُمۡۚ</word>
+  <word id="1408" position="24">إِنَّ</word>
+  <word id="1409" position="25">مَوۡعِدَهُمُ</word>
+  <word id="1410" position="26">اُ۬لصُّبۡحُۚ</word>
+  <word id="1411" position="27">أَلَيۡسَ</word>
+  <word id="1412" position="28">اَ۬لصُّبۡحُ</word>
+  <word id="1413" position="29">بِقَرِيبٖ</word>
+  <word id="1414" position="30" type="number">٨٠</word>
+  <ayah eid="11:80:douri-kfqc"/>
+  <ayah number="81" tradition="douri-kfqc" sid="11:81:douri-kfqc"/>
+  <word id="1415" position="1">فَلَمَّا</word>
+  <word id="1416" position="2">جَآ</word>
+  <word id="1417" position="3">أَمۡرُنَا</word>
+  <word id="1418" position="4">جَعَلۡنَا</word>
+  <word id="1419" position="5">عَٰلِيَهَا</word>
+  <word id="1420" position="6">سَافِلَهَا</word>
+  <word id="1421" position="7">وَأَمۡطَرۡنَا</word>
+  <word id="1422" position="8">عَلَيۡهَا</word>
+  <word id="1423" position="9">حِجَارَةٗ</word>
+  <word id="1424" position="10">مِّن</word>
+  <word id="1425" position="11">سِجِّيلٖ</word>
+  <word id="1426" position="12">مَّنضُودٖ</word>
+  <word id="1427" position="13" type="number">٨١</word>
+  <ayah eid="11:81:douri-kfqc"/>
+  <ayah number="82" tradition="douri-kfqc" sid="11:82:douri-kfqc"/>
+  <word id="1428" position="1">مُّسَوَّمَةً</word>
+  <word id="1429" position="2">عِندَ</word>
+  <word id="1430" position="3">رَبِّكَۖ</word>
+  <word id="1431" position="4">وَمَا</word>
+  <word id="1432" position="5">هِيَ</word>
+  <word id="1433" position="6">مِنَ</word>
+  <word id="1434" position="7">اَ۬لظَّٰلِمِينَ</word>
+  <word id="1435" position="8">بِبَعِيدٖ</word>
+  <word id="1436" position="9" type="number">٨٢</word>
+  <ayah eid="11:82:douri-kfqc"/>
+  <ayah number="83" tradition="douri-kfqc" sid="11:83:douri-kfqc"/>
+  <word id="1437" position="1">۞</word>
+  <word id="1438" position="2">وَإِلَىٰ</word>
+  <word id="1439" position="3">مَدۡيَنَ</word>
+  <word id="1440" position="4">أَخَاهُمۡ</word>
+  <word id="1441" position="5">شُعَيۡبٗاۚ</word>
+  <word id="1442" position="6">قَالَ</word>
+  <word id="1443" position="7">يَٰقَوۡمِ</word>
+  <word id="1444" position="8">اِ۟عۡبُدُواْ</word>
+  <word id="1445" position="9">اُ۬للَّهَ</word>
+  <word id="1446" position="10">مَا</word>
+  <word id="1447" position="11">لَكُم</word>
+  <word id="1448" position="12">مِّنۡ</word>
+  <word id="1449" position="13">إِلَٰهٍ</word>
+  <word id="1450" position="14">غَيۡرُهُۥۖ</word>
+  <word id="1451" position="15">وَلَا</word>
+  <word id="1452" position="16">تَنقُصُواْ</word>
+  <word id="1453" position="17">اُ۬لۡمِكۡيَالَ</word>
+  <word id="1454" position="18">وَاَلۡمِيزَانَۖ</word>
+  <word id="1455" position="19">إِنِّيَ</word>
+  <word id="1456" position="20">أَر۪ىٰكُم</word>
+  <word id="1457" position="21">بِخَيۡرٖ</word>
+  <word id="1458" position="22">وَإِنِّيَ</word>
+  <word id="1459" position="23">أَخَافُ</word>
+  <word id="1460" position="24">عَلَيۡكُمۡ</word>
+  <word id="1461" position="25">عَذَابَ</word>
+  <word id="1462" position="26">يَوۡمٖ</word>
+  <word id="1463" position="27">مُّحِيطٖ</word>
+  <word id="1464" position="28" type="number">٨٣</word>
+  <ayah eid="11:83:douri-kfqc"/>
+  <ayah number="84" tradition="douri-kfqc" sid="11:84:douri-kfqc"/>
+  <word id="1465" position="1">وَيَٰقَوۡمِ</word>
+  <word id="1466" position="2">أَوۡفُواْ</word>
+  <word id="1467" position="3">اُ۬لۡمِكۡيَالَ</word>
+  <word id="1468" position="4">وَاَلۡمِيزَانَ</word>
+  <word id="1469" position="5">بِالۡقِسۡطِۖ</word>
+  <word id="1470" position="6">وَلَا</word>
+  <word id="1471" position="7">تَبۡخَسُواْ</word>
+  <word id="1472" position="8">اُ۬لنَّاسَ</word>
+  <word id="1473" position="9">أَشۡيَآءَهُمۡ</word>
+  <word id="1474" position="10">وَلَا</word>
+  <word id="1475" position="11">تَعۡثَوۡاْ</word>
+  <word id="1476" position="12">فِي</word>
+  <word id="1477" position="13">اِ۬لۡأَرۡضِ</word>
+  <word id="1478" position="14">مُفۡسِدِينَ</word>
+  <word id="1479" position="15" type="number">٨٤</word>
+  <ayah eid="11:84:douri-kfqc"/>
+  <ayah number="85" tradition="douri-kfqc" sid="11:85:douri-kfqc"/>
+  <word id="1480" position="1">بَقِيَّتُ</word>
+  <word id="1481" position="2">اُ۬للَّهِ</word>
+  <word id="1482" position="3">خَيۡرٞ</word>
+  <word id="1483" position="4">لَّكُمۡ</word>
+  <word id="1484" position="5">إِن</word>
+  <word id="1485" position="6">كُنتُم</word>
+  <word id="1486" position="7">مُّؤۡمِنِينَ</word>
+  <word id="1487" position="8" type="number">٨٥</word>
+  <ayah eid="11:85:douri-kfqc"/>
+  <ayah number="86" tradition="douri-kfqc" sid="11:86:douri-kfqc"/>
+  <word id="1488" position="1">وَمَآ</word>
+  <word id="1489" position="2">أَنَا۠</word>
+  <word id="1490" position="3">عَلَيۡكُم</word>
+  <word id="1491" position="4">بِحَفِيظٖ</word>
+  <word id="1492" position="5" type="number">٨٦</word>
+  <ayah eid="11:86:douri-kfqc"/>
+  <ayah number="87" tradition="douri-kfqc" sid="11:87:douri-kfqc"/>
+  <word id="1493" position="1">قَالُواْ</word>
+  <word id="1494" position="2">يَٰشُعَيۡبُ</word>
+  <word id="1495" position="3">أَصَلَوَٰتُكَ</word>
+  <word id="1496" position="4">تَأۡمُرُكَ</word>
+  <word id="1497" position="5">أَن</word>
+  <word id="1498" position="6">نَّتۡرُكَ</word>
+  <word id="1499" position="7">مَا</word>
+  <word id="1500" position="8">يَعۡبُدُ</word>
+  <word id="1501" position="9">ءَابَآؤُنَآ</word>
+  <word id="1502" position="10">أَوۡ</word>
+  <word id="1503" position="11">أَن</word>
+  <word id="1504" position="12">نَّفۡعَلَ</word>
+  <word id="1505" position="13">فِيٓ</word>
+  <word id="1506" position="14">أَمۡوَٰلِنَا</word>
+  <word id="1507" position="15">مَا</word>
+  <word id="1508" position="16">نَشَٰٓؤُاْۖ</word>
+  <word id="1509" position="17">اِ۪نَّكَ</word>
+  <word id="1510" position="18">لَأَنتَ</word>
+  <word id="1511" position="19">اَ۬لۡحَلِيمُ</word>
+  <word id="1512" position="20">اُ۬لرَّشِيدُ</word>
+  <word id="1513" position="21" type="number">٨٧</word>
+  <ayah eid="11:87:douri-kfqc"/>
+  <ayah number="88" tradition="douri-kfqc" sid="11:88:douri-kfqc"/>
+  <word id="1514" position="1">قَالَ</word>
+  <word id="1515" position="2">يَٰقَوۡمِ</word>
+  <word id="1516" position="3">أَرَءَيۡتُمۡ</word>
+  <word id="1517" position="4">إِن</word>
+  <word id="1518" position="5">كُنتُ</word>
+  <word id="1519" position="6">عَلَىٰ</word>
+  <word id="1520" position="7">بَيِّنَةٖ</word>
+  <word id="1521" position="8">مِّن</word>
+  <word id="1522" position="9">رَّبِّي</word>
+  <word id="1523" position="10">وَرَزَقَنِي</word>
+  <word id="1524" position="11">مِنۡهُ</word>
+  <word id="1525" position="12">رِزۡقًا</word>
+  <word id="1526" position="13">حَسَنٗاۚ</word>
+  <word id="1527" position="14">وَمَآ</word>
+  <word id="1528" position="15">أُرِيدُ</word>
+  <word id="1529" position="16">أَنۡ</word>
+  <word id="1530" position="17">أُخَالِفَكُمۡ</word>
+  <word id="1531" position="18">إِلَىٰ</word>
+  <word id="1532" position="19">مَآ</word>
+  <word id="1533" position="20">أَنۡهَىٰكُمۡ</word>
+  <word id="1534" position="21">عَنۡهُۚ</word>
+  <word id="1535" position="22">إِنۡ</word>
+  <word id="1536" position="23">أُرِيدُ</word>
+  <word id="1537" position="24">إِلَّا</word>
+  <word id="1538" position="25">اَ۬لۡإِصۡلَٰحَ</word>
+  <word id="1539" position="26">مَا</word>
+  <word id="1540" position="27">اَ۪سۡتَطَعۡتُۚ</word>
+  <word id="1541" position="28">وَمَا</word>
+  <word id="1542" position="29">تَوۡفِيقِيَ</word>
+  <word id="1543" position="30">إِلَّا</word>
+  <word id="1544" position="31">بِاللَّهِۚ</word>
+  <word id="1545" position="32">عَلَيۡهِ</word>
+  <word id="1546" position="33">تَوَكَّلۡتُ</word>
+  <word id="1547" position="34">وَإِلَيۡهِ</word>
+  <word id="1548" position="35">أُنِيبُ</word>
+  <word id="1549" position="36" type="number">٨٨</word>
+  <ayah eid="11:88:douri-kfqc"/>
+  <ayah number="89" tradition="douri-kfqc" sid="11:89:douri-kfqc"/>
+  <word id="1550" position="1">وَيَٰقَوۡمِ</word>
+  <word id="1551" position="2">لَا</word>
+  <word id="1552" position="3">يَجۡرِمَنَّكُمۡ</word>
+  <word id="1553" position="4">شِقَاقِيَ</word>
+  <word id="1554" position="5">أَن</word>
+  <word id="1555" position="6">يُصِيبَكُم</word>
+  <word id="1556" position="7">مِّثۡلُ</word>
+  <word id="1557" position="8">مَآ</word>
+  <word id="1558" position="9">أَصَابَ</word>
+  <word id="1559" position="10">قَوۡمَ</word>
+  <word id="1560" position="11">نُوحٍ</word>
+  <word id="1561" position="12">أَوۡ</word>
+  <word id="1562" position="13">قَوۡمَ</word>
+  <word id="1563" position="14">هُودٍ</word>
+  <word id="1564" position="15">أَوۡ</word>
+  <word id="1565" position="16">قَوۡمَ</word>
+  <word id="1566" position="17">صَٰلِحٖۚ</word>
+  <word id="1567" position="18">وَمَا</word>
+  <word id="1568" position="19">قَوۡمُ</word>
+  <word id="1569" position="20">لُوطٖ</word>
+  <word id="1570" position="21">مِّنكُم</word>
+  <word id="1571" position="22">بِبَعِيدٖ</word>
+  <word id="1572" position="23" type="number">٨٩</word>
+  <ayah eid="11:89:douri-kfqc"/>
+  <ayah number="90" tradition="douri-kfqc" sid="11:90:douri-kfqc"/>
+  <word id="1573" position="1">وَاَسۡتَغۡفِرُواْ</word>
+  <word id="1574" position="2">رَبَّكُمۡ</word>
+  <word id="1575" position="3">ثُمَّ</word>
+  <word id="1576" position="4">تُوبُوٓاْ</word>
+  <word id="1577" position="5">إِلَيۡهِۚ</word>
+  <word id="1578" position="6">إِنَّ</word>
+  <word id="1579" position="7">رَبِّي</word>
+  <word id="1580" position="8">رَحِيمٞ</word>
+  <word id="1581" position="9">وَدُودٞ</word>
+  <word id="1582" position="10" type="number">٩٠</word>
+  <ayah eid="11:90:douri-kfqc"/>
+  <ayah number="91" tradition="douri-kfqc" sid="11:91:douri-kfqc"/>
+  <word id="1583" position="1">قَالُواْ</word>
+  <word id="1584" position="2">يَٰشُعَيۡبُ</word>
+  <word id="1585" position="3">مَا</word>
+  <word id="1586" position="4">نَفۡقَهُ</word>
+  <word id="1587" position="5">كَثِيرٗا</word>
+  <word id="1588" position="6">مِّمَّا</word>
+  <word id="1589" position="7">تَقُولُ</word>
+  <word id="1590" position="8">وَإِنَّا</word>
+  <word id="1591" position="9">لَنَر۪ىٰكَ</word>
+  <word id="1592" position="10">فِينَا</word>
+  <word id="1593" position="11">ضَعِيفٗاۖ</word>
+  <word id="1594" position="12">وَلَوۡلَا</word>
+  <word id="1595" position="13">رَهۡطُكَ</word>
+  <word id="1596" position="14">لَرَجَمۡنَٰكَۖ</word>
+  <word id="1597" position="15">وَمَآ</word>
+  <word id="1598" position="16">أَنتَ</word>
+  <word id="1599" position="17">عَلَيۡنَا</word>
+  <word id="1600" position="18">بِعَزِيزٖ</word>
+  <word id="1601" position="19" type="number">٩١</word>
+  <ayah eid="11:91:douri-kfqc"/>
+  <ayah number="92" tradition="douri-kfqc" sid="11:92:douri-kfqc"/>
+  <word id="1602" position="1">قَالَ</word>
+  <word id="1603" position="2">يَٰقَوۡمِ</word>
+  <word id="1604" position="3">أَرَهۡطِيَ</word>
+  <word id="1605" position="4">أَعَزُّ</word>
+  <word id="1606" position="5">عَلَيۡكُم</word>
+  <word id="1607" position="6">مِّنَ</word>
+  <word id="1608" position="7">اَ۬للَّهِ</word>
+  <word id="1609" position="8">وَاَتَّخَذتُّمُوهُ</word>
+  <word id="1610" position="9">وَرَآءَكُمۡ</word>
+  <word id="1611" position="10">ظِهۡرِيًّاۖ</word>
+  <word id="1612" position="11">إِنَّ</word>
+  <word id="1613" position="12">رَبِّي</word>
+  <word id="1614" position="13">بِمَا</word>
+  <word id="1615" position="14">تَعۡمَلُونَ</word>
+  <word id="1616" position="15">مُحِيطٞ</word>
+  <word id="1617" position="16" type="number">٩٢</word>
+  <ayah eid="11:92:douri-kfqc"/>
+  <ayah number="93" tradition="douri-kfqc" sid="11:93:douri-kfqc"/>
+  <word id="1618" position="1">وَيَٰقَوۡمِ</word>
+  <word id="1619" position="2">اِ۪عۡمَلُواْ</word>
+  <word id="1620" position="3">عَلَىٰ</word>
+  <word id="1621" position="4">مَكَانَتِكُمۡ</word>
+  <word id="1622" position="5">إِنِّي</word>
+  <word id="1623" position="6">عَٰمِلٞۖ</word>
+  <word id="1624" position="7">سَوۡفَ</word>
+  <word id="1625" position="8">تَعۡلَمُونَ</word>
+  <word id="1626" position="9">مَن</word>
+  <word id="1627" position="10">يَأۡتِيهِ</word>
+  <word id="1628" position="11">عَذَابٞ</word>
+  <word id="1629" position="12">يُخۡزِيهِ</word>
+  <word id="1630" position="13">وَمَنۡ</word>
+  <word id="1631" position="14">هُوَ</word>
+  <word id="1632" position="15">كَٰذِبٞۖ</word>
+  <word id="1633" position="16">وَاَرۡتَقِبُوٓاْ</word>
+  <word id="1634" position="17">إِنِّي</word>
+  <word id="1635" position="18">مَعَكُمۡ</word>
+  <word id="1636" position="19">رَقِيبٞ</word>
+  <word id="1637" position="20" type="number">٩٣</word>
+  <ayah eid="11:93:douri-kfqc"/>
+  <ayah number="94" tradition="douri-kfqc" sid="11:94:douri-kfqc"/>
+  <word id="1638" position="1">۞</word>
+  <word id="1639" position="2">وَلَمَّا</word>
+  <word id="1640" position="3">جَآ</word>
+  <word id="1641" position="4">أَمۡرُنَا</word>
+  <word id="1642" position="5">نَجَّيۡنَا</word>
+  <word id="1643" position="6">شُعَيۡبٗا</word>
+  <word id="1644" position="7">وَاَلَّذِينَ</word>
+  <word id="1645" position="8">ءَامَنُواْ</word>
+  <word id="1646" position="9">مَعَهُۥ</word>
+  <word id="1647" position="10">بِرَحۡمَةٖ</word>
+  <word id="1648" position="11">مِّنَّا</word>
+  <word id="1649" position="12">وَأَخَذَتِ</word>
+  <word id="1650" position="13">اِ۬لَّذِينَ</word>
+  <word id="1651" position="14">ظَلَمُواْ</word>
+  <word id="1652" position="15">اُ۬لصَّيۡحَةُ</word>
+  <word id="1653" position="16">فَأَصۡبَحُواْ</word>
+  <word id="1654" position="17">فِي</word>
+  <word id="1655" position="18">دِيٰ۪رِهِمۡ</word>
+  <word id="1656" position="19">جَٰثِمِينَ</word>
+  <word id="1657" position="20" type="number">٩٤</word>
+  <ayah eid="11:94:douri-kfqc"/>
+  <ayah number="95" tradition="douri-kfqc" sid="11:95:douri-kfqc"/>
+  <word id="1658" position="1">كَأَن</word>
+  <word id="1659" position="2">لَّمۡ</word>
+  <word id="1660" position="3">يَغۡنَوۡاْ</word>
+  <word id="1661" position="4">فِيهَآۗ</word>
+  <word id="1662" position="5">أَلَا</word>
+  <word id="1663" position="6">بُعۡدٗا</word>
+  <word id="1664" position="7">لِّمَدۡيَنَ</word>
+  <word id="1665" position="8">كَمَا</word>
+  <word id="1666" position="9">بَعِدَت</word>
+  <word id="1667" position="10">ثَّمُودُ</word>
+  <word id="1668" position="11" type="number">٩٥</word>
+  <ayah eid="11:95:douri-kfqc"/>
+  <ayah number="96" tradition="douri-kfqc" sid="11:96:douri-kfqc"/>
+  <word id="1669" position="1">وَلَقَدۡ</word>
+  <word id="1670" position="2">أَرۡسَلۡنَا</word>
+  <word id="1671" position="3">مُوسۭيٰ</word>
+  <word id="1672" position="4">بِـَٔايَٰتِنَا</word>
+  <word id="1673" position="5">وَسُلۡطَٰنٖ</word>
+  <word id="1674" position="6">مُّبِينٍ</word>
+  <word id="1675" position="7" type="number">٩٦</word>
+  <ayah eid="11:96:douri-kfqc"/>
+  <ayah number="97" tradition="douri-kfqc" sid="11:97:douri-kfqc"/>
+  <word id="1676" position="1">إِلَىٰ</word>
+  <word id="1677" position="2">فِرۡعَوۡنَ</word>
+  <word id="1678" position="3">وَمَلَإِيْهِۦ</word>
+  <word id="1679" position="4">فَاَتَّبَعُوٓاْ</word>
+  <word id="1680" position="5">أَمۡرَ</word>
+  <word id="1681" position="6">فِرۡعَوۡنَۖ</word>
+  <word id="1682" position="7">وَمَآ</word>
+  <word id="1683" position="8">أَمۡرُ</word>
+  <word id="1684" position="9">فِرۡعَوۡنَ</word>
+  <word id="1685" position="10">بِرَشِيدٖ</word>
+  <word id="1686" position="11" type="number">٩٧</word>
+  <ayah eid="11:97:douri-kfqc"/>
+  <ayah number="98" tradition="douri-kfqc" sid="11:98:douri-kfqc"/>
+  <word id="1687" position="1">يَقۡدُمُ</word>
+  <word id="1688" position="2">قَوۡمَهُۥ</word>
+  <word id="1689" position="3">يَوۡمَ</word>
+  <word id="1690" position="4">اَ۬لۡقِيَٰمَةِ</word>
+  <word id="1691" position="5">فَأَوۡرَدَهُمُ</word>
+  <word id="1692" position="6">اُ۬لنَّارَۖ</word>
+  <word id="1693" position="7">وَبِئۡسَ</word>
+  <word id="1694" position="8">اَ۬لۡوِرۡدُ</word>
+  <word id="1695" position="9">اُ۬لۡمَوۡرُودُ</word>
+  <word id="1696" position="10" type="number">٩٨</word>
+  <ayah eid="11:98:douri-kfqc"/>
+  <ayah number="99" tradition="douri-kfqc" sid="11:99:douri-kfqc"/>
+  <word id="1697" position="1">وَأُتۡبِعُواْ</word>
+  <word id="1698" position="2">فِي</word>
+  <word id="1699" position="3">هَٰذِهِۦ</word>
+  <word id="1700" position="4">لَعۡنَةٗ</word>
+  <word id="1701" position="5">وَيَوۡمَ</word>
+  <word id="1702" position="6">اَ۬لۡقِيَٰمَةِۚ</word>
+  <word id="1703" position="7">بِئۡسَ</word>
+  <word id="1704" position="8">اَ۬لرِّفۡدُ</word>
+  <word id="1705" position="9">اُ۬لۡمَرۡفُودُ</word>
+  <word id="1706" position="10" type="number">٩٩</word>
+  <ayah eid="11:99:douri-kfqc"/>
+  <ayah number="100" tradition="douri-kfqc" sid="11:100:douri-kfqc"/>
+  <word id="1707" position="1">ذَٰلِكَ</word>
+  <word id="1708" position="2">مِنۡ</word>
+  <word id="1709" position="3">أَنۢبَآءِ</word>
+  <word id="1710" position="4">اِ۬لۡقُر۪يٰ</word>
+  <word id="1711" position="5">نَقُصُّهُۥ</word>
+  <word id="1712" position="6">عَلَيۡكَۖ</word>
+  <word id="1713" position="7">مِنۡهَا</word>
+  <word id="1714" position="8">قَآئِمٞ</word>
+  <word id="1715" position="9">وَحَصِيدٞ</word>
+  <word id="1716" position="10" type="number">١٠٠</word>
+  <ayah eid="11:100:douri-kfqc"/>
+  <ayah number="101" tradition="douri-kfqc" sid="11:101:douri-kfqc"/>
+  <word id="1717" position="1">وَمَا</word>
+  <word id="1718" position="2">ظَلَمۡنَٰهُمۡ</word>
+  <word id="1719" position="3">وَلَٰكِن</word>
+  <word id="1720" position="4">ظَلَمُوٓاْ</word>
+  <word id="1721" position="5">أَنفُسَهُمۡۖ</word>
+  <word id="1722" position="6">فَمَآ</word>
+  <word id="1723" position="7">أَغۡنَتۡ</word>
+  <word id="1724" position="8">عَنۡهُمۡ</word>
+  <word id="1725" position="9">ءَالِهَتُهُمُ</word>
+  <word id="1726" position="10">اُ۬لَّتِي</word>
+  <word id="1727" position="11">يَدۡعُونَ</word>
+  <word id="1728" position="12">مِن</word>
+  <word id="1729" position="13">دُونِ</word>
+  <word id="1730" position="14">اِ۬للَّهِ</word>
+  <word id="1731" position="15">مِن</word>
+  <word id="1732" position="16">شَيۡءٖ</word>
+  <word id="1733" position="17">لَّمَّا</word>
+  <word id="1734" position="18">جَآ</word>
+  <word id="1735" position="19">أَمۡرُ</word>
+  <word id="1736" position="20">رَبِّكَۖ</word>
+  <word id="1737" position="21">وَمَا</word>
+  <word id="1738" position="22">زَادُوهُمۡ</word>
+  <word id="1739" position="23">غَيۡرَ</word>
+  <word id="1740" position="24">تَتۡبِيبٖ</word>
+  <word id="1741" position="25" type="number">١٠١</word>
+  <ayah eid="11:101:douri-kfqc"/>
+  <ayah number="102" tradition="douri-kfqc" sid="11:102:douri-kfqc"/>
+  <word id="1742" position="1">وَكَذَٰلِكَ</word>
+  <word id="1743" position="2">أَخۡذُ</word>
+  <word id="1744" position="3">رَبِّكَ</word>
+  <word id="1745" position="4">إِذَآ</word>
+  <word id="1746" position="5">أَخَذَ</word>
+  <word id="1747" position="6">اَ۬لۡقُر۪يٰ</word>
+  <word id="1748" position="7">وَهۡيَ</word>
+  <word id="1749" position="8">ظَٰلِمَةٌۚ</word>
+  <word id="1750" position="9">إِنَّ</word>
+  <word id="1751" position="10">أَخۡذَهُۥٓ</word>
+  <word id="1752" position="11">أَلِيمٞ</word>
+  <word id="1753" position="12">شَدِيدٌ</word>
+  <word id="1754" position="13" type="number">١٠٢</word>
+  <ayah eid="11:102:douri-kfqc"/>
+  <ayah number="103" tradition="douri-kfqc" sid="11:103:douri-kfqc"/>
+  <word id="1755" position="1">إِنَّ</word>
+  <word id="1756" position="2">فِي</word>
+  <word id="1757" position="3">ذَٰلِكَ</word>
+  <word id="1758" position="4">لَأٓيَةٗ</word>
+  <word id="1759" position="5">لِّمَنۡ</word>
+  <word id="1760" position="6">خَافَ</word>
+  <word id="1761" position="7">عَذَابَ</word>
+  <word id="1762" position="8">اَ۬لۡأٓخِرَةِۚ</word>
+  <word id="1763" position="9">ذَٰلِكَ</word>
+  <word id="1764" position="10">يَوۡمٞ</word>
+  <word id="1765" position="11">مَّجۡمُوعٞ</word>
+  <word id="1766" position="12">لَّهُ</word>
+  <word id="1767" position="13">اُ۬لنَّاسُ</word>
+  <word id="1768" position="14">وَذَٰلِكَ</word>
+  <word id="1769" position="15">يَوۡمٞ</word>
+  <word id="1770" position="16">مَّشۡهُودٞ</word>
+  <word id="1771" position="17" type="number">١٠٣</word>
+  <ayah eid="11:103:douri-kfqc"/>
+  <ayah number="104" tradition="douri-kfqc" sid="11:104:douri-kfqc"/>
+  <word id="1772" position="1">وَمَا</word>
+  <word id="1773" position="2">نُؤَخِّرُهُۥٓ</word>
+  <word id="1774" position="3">إِلَّا</word>
+  <word id="1775" position="4">لِأَجَلٖ</word>
+  <word id="1776" position="5">مَّعۡدُودٖ</word>
+  <word id="1777" position="6" type="number">١٠٤</word>
+  <ayah eid="11:104:douri-kfqc"/>
+  <ayah number="105" tradition="douri-kfqc" sid="11:105:douri-kfqc"/>
+  <word id="1778" position="1">يَوۡمَ</word>
+  <word id="1779" position="2">يَأۡتِۦ</word>
+  <word id="1780" position="3">لَا</word>
+  <word id="1781" position="4">تَكَلَّمُ</word>
+  <word id="1782" position="5">نَفۡسٌ</word>
+  <word id="1783" position="6">إِلَّا</word>
+  <word id="1784" position="7">بِإِذۡنِهِۦۚ</word>
+  <word id="1785" position="8">فَمِنۡهُمۡ</word>
+  <word id="1786" position="9">شَقِيّٞ</word>
+  <word id="1787" position="10">وَسَعِيدٞ</word>
+  <word id="1788" position="11" type="number">١٠٥</word>
+  <ayah eid="11:105:douri-kfqc"/>
+  <ayah number="106" tradition="douri-kfqc" sid="11:106:douri-kfqc"/>
+  <word id="1789" position="1">فَأَمَّا</word>
+  <word id="1790" position="2">اَ۬لَّذِينَ</word>
+  <word id="1791" position="3">شَقُواْ</word>
+  <word id="1792" position="4">فَفِي</word>
+  <word id="1793" position="5">اِ۬لنّ۪ارِ</word>
+  <word id="1794" position="6">لَهُمۡ</word>
+  <word id="1795" position="7">فِيهَا</word>
+  <word id="1796" position="8">زَفِيرٞ</word>
+  <word id="1797" position="9">وَشَهِيقٌ</word>
+  <word id="1798" position="10" type="number">١٠٦</word>
+  <ayah eid="11:106:douri-kfqc"/>
+  <ayah number="107" tradition="douri-kfqc" sid="11:107:douri-kfqc"/>
+  <word id="1799" position="1">خَٰلِدِينَ</word>
+  <word id="1800" position="2">فِيهَا</word>
+  <word id="1801" position="3">مَا</word>
+  <word id="1802" position="4">دَامَتِ</word>
+  <word id="1803" position="5">اِ۬لسَّمَٰوَٰتُ</word>
+  <word id="1804" position="6">وَاَلۡأَرۡضُ</word>
+  <word id="1805" position="7">إِلَّا</word>
+  <word id="1806" position="8">مَا</word>
+  <word id="1807" position="9">شَآءَ</word>
+  <word id="1808" position="10">رَبُّكَۚ</word>
+  <word id="1809" position="11">إِنَّ</word>
+  <word id="1810" position="12">رَبَّكَ</word>
+  <word id="1811" position="13">فَعَّالٞ</word>
+  <word id="1812" position="14">لِّمَا</word>
+  <word id="1813" position="15">يُرِيدُ</word>
+  <word id="1814" position="16" type="number">١٠٧</word>
+  <ayah eid="11:107:douri-kfqc"/>
+  <ayah number="108" tradition="douri-kfqc" sid="11:108:douri-kfqc"/>
+  <word id="1815" position="1">۞</word>
+  <word id="1816" position="2">وَأَمَّا</word>
+  <word id="1817" position="3">اَ۬لَّذِينَ</word>
+  <word id="1818" position="4">سَعِدُواْ</word>
+  <word id="1819" position="5">فَفِي</word>
+  <word id="1820" position="6">اِ۬لۡجَنَّةِ</word>
+  <word id="1821" position="7">خَٰلِدِينَ</word>
+  <word id="1822" position="8">فِيهَا</word>
+  <word id="1823" position="9">مَا</word>
+  <word id="1824" position="10">دَامَتِ</word>
+  <word id="1825" position="11">اِ۬لسَّمَٰوَٰتُ</word>
+  <word id="1826" position="12">وَاَلۡأَرۡضُ</word>
+  <word id="1827" position="13">إِلَّا</word>
+  <word id="1828" position="14">مَا</word>
+  <word id="1829" position="15">شَآءَ</word>
+  <word id="1830" position="16">رَبُّكَۖ</word>
+  <word id="1831" position="17">عَطَآءً</word>
+  <word id="1832" position="18">غَيۡرَ</word>
+  <word id="1833" position="19">مَجۡذُوذٖ</word>
+  <word id="1834" position="20" type="number">١٠٨</word>
+  <ayah eid="11:108:douri-kfqc"/>
+  <ayah number="109" tradition="douri-kfqc" sid="11:109:douri-kfqc"/>
+  <word id="1835" position="1">فَلَا</word>
+  <word id="1836" position="2">تَكُ</word>
+  <word id="1837" position="3">فِي</word>
+  <word id="1838" position="4">مِرۡيَةٖ</word>
+  <word id="1839" position="5">مِّمَّا</word>
+  <word id="1840" position="6">يَعۡبُدُ</word>
+  <word id="1841" position="7">هَٰٓؤُلَآءِۚ</word>
+  <word id="1842" position="8">مَا</word>
+  <word id="1843" position="9">يَعۡبُدُونَ</word>
+  <word id="1844" position="10">إِلَّا</word>
+  <word id="1845" position="11">كَمَا</word>
+  <word id="1846" position="12">يَعۡبُدُ</word>
+  <word id="1847" position="13">ءَابَآؤُهُم</word>
+  <word id="1848" position="14">مِّن</word>
+  <word id="1849" position="15">قَبۡلُۚ</word>
+  <word id="1850" position="16">وَإِنَّا</word>
+  <word id="1851" position="17">لَمُوَفُّوهُمۡ</word>
+  <word id="1852" position="18">نَصِيبَهُمۡ</word>
+  <word id="1853" position="19">غَيۡرَ</word>
+  <word id="1854" position="20">مَنقُوصٖ</word>
+  <word id="1855" position="21" type="number">١٠٩</word>
+  <ayah eid="11:109:douri-kfqc"/>
+  <ayah number="110" tradition="douri-kfqc" sid="11:110:douri-kfqc"/>
+  <word id="1856" position="1">وَلَقَدۡ</word>
+  <word id="1857" position="2">ءَاتَيۡنَا</word>
+  <word id="1858" position="3">مُوسَى</word>
+  <word id="1859" position="4">اَ۬لۡكِتَٰبَ</word>
+  <word id="1860" position="5">فَاَخۡتُلِفَ</word>
+  <word id="1861" position="6">فِيهِۚ</word>
+  <word id="1862" position="7">وَلَوۡلَا</word>
+  <word id="1863" position="8">كَلِمَةٞ</word>
+  <word id="1864" position="9">سَبَقَتۡ</word>
+  <word id="1865" position="10">مِن</word>
+  <word id="1866" position="11">رَّبِّكَ</word>
+  <word id="1867" position="12">لَقُضِيَ</word>
+  <word id="1868" position="13">بَيۡنَهُمۡۚ</word>
+  <word id="1869" position="14">وَإِنَّهُمۡ</word>
+  <word id="1870" position="15">لَفِي</word>
+  <word id="1871" position="16">شَكّٖ</word>
+  <word id="1872" position="17">مِّنۡهُ</word>
+  <word id="1873" position="18">مُرِيبٖ</word>
+  <word id="1874" position="19" type="number">١١٠</word>
+  <ayah eid="11:110:douri-kfqc"/>
+  <ayah number="111" tradition="douri-kfqc" sid="11:111:douri-kfqc"/>
+  <word id="1875" position="1">وَإِنَّ</word>
+  <word id="1876" position="2">كُلّٗا</word>
+  <word id="1877" position="3">لَّمَا</word>
+  <word id="1878" position="4">لَيُوَفِّيَنَّهُمۡ</word>
+  <word id="1879" position="5">رَبُّكَ</word>
+  <word id="1880" position="6">أَعۡمَٰلَهُمۡۚ</word>
+  <word id="1881" position="7">إِنَّهُۥ</word>
+  <word id="1882" position="8">بِمَا</word>
+  <word id="1883" position="9">يَعۡمَلُونَ</word>
+  <word id="1884" position="10">خَبِيرٞ</word>
+  <word id="1885" position="11" type="number">١١١</word>
+  <ayah eid="11:111:douri-kfqc"/>
+  <ayah number="112" tradition="douri-kfqc" sid="11:112:douri-kfqc"/>
+  <word id="1886" position="1">فَاَسۡتَقِمۡ</word>
+  <word id="1887" position="2">كَمَآ</word>
+  <word id="1888" position="3">أُمِرۡتَ</word>
+  <word id="1889" position="4">وَمَن</word>
+  <word id="1890" position="5">تَابَ</word>
+  <word id="1891" position="6">مَعَكَ</word>
+  <word id="1892" position="7">وَلَا</word>
+  <word id="1893" position="8">تَطۡغَوۡاْۚ</word>
+  <word id="1894" position="9">إِنَّهُۥ</word>
+  <word id="1895" position="10">بِمَا</word>
+  <word id="1896" position="11">تَعۡمَلُونَ</word>
+  <word id="1897" position="12">بَصِيرٞ</word>
+  <word id="1898" position="13" type="number">١١٢</word>
+  <ayah eid="11:112:douri-kfqc"/>
+  <ayah number="113" tradition="douri-kfqc" sid="11:113:douri-kfqc"/>
+  <word id="1899" position="1">وَلَا</word>
+  <word id="1900" position="2">تَرۡكَنُوٓاْ</word>
+  <word id="1901" position="3">إِلَى</word>
+  <word id="1902" position="4">اَ۬لَّذِينَ</word>
+  <word id="1903" position="5">ظَلَمُواْ</word>
+  <word id="1904" position="6">فَتَمَسَّكُمُ</word>
+  <word id="1905" position="7">اُ۬لنَّارُ</word>
+  <word id="1906" position="8">وَمَا</word>
+  <word id="1907" position="9">لَكُم</word>
+  <word id="1908" position="10">مِّن</word>
+  <word id="1909" position="11">دُونِ</word>
+  <word id="1910" position="12">اِ۬للَّهِ</word>
+  <word id="1911" position="13">مِنۡ</word>
+  <word id="1912" position="14">أَوۡلِيَآءَ</word>
+  <word id="1913" position="15">ثُمَّ</word>
+  <word id="1914" position="16">لَا</word>
+  <word id="1915" position="17">تُنصَرُونَ</word>
+  <word id="1916" position="18" type="number">١١٣</word>
+  <ayah eid="11:113:douri-kfqc"/>
+  <ayah number="114" tradition="douri-kfqc" sid="11:114:douri-kfqc"/>
+  <word id="1917" position="1">وَأَقِمِ</word>
+  <word id="1918" position="2">اِ۬لصَّلَوٰةَ</word>
+  <word id="1919" position="3">طَرَفَيِ</word>
+  <word id="1920" position="4">اِ۬لنَّه۪ارِ</word>
+  <word id="1921" position="5">وَزُلَفٗا</word>
+  <word id="1922" position="6">مِّنَ</word>
+  <word id="1923" position="7">اَ۬لَّيۡلِۚ</word>
+  <word id="1924" position="8">إِنَّ</word>
+  <word id="1925" position="9">اَ۬لۡحَسَنَٰتِ</word>
+  <word id="1926" position="10">يُذۡهِبۡنَ</word>
+  <word id="1927" position="11">اَ۬لسَّيِّـَٔاتِۚ</word>
+  <word id="1928" position="12">ذَٰلِكَ</word>
+  <word id="1929" position="13">ذِكۡر۪يٰ</word>
+  <word id="1930" position="14">لِلذَّٰكِرِينَ</word>
+  <word id="1931" position="15" type="number">١١٤</word>
+  <ayah eid="11:114:douri-kfqc"/>
+  <ayah number="115" tradition="douri-kfqc" sid="11:115:douri-kfqc"/>
+  <word id="1932" position="1">وَاَصۡبِرۡ</word>
+  <word id="1933" position="2">فَإِنَّ</word>
+  <word id="1934" position="3">اَ۬للَّهَ</word>
+  <word id="1935" position="4">لَا</word>
+  <word id="1936" position="5">يُضِيعُ</word>
+  <word id="1937" position="6">أَجۡرَ</word>
+  <word id="1938" position="7">اَ۬لۡمُحۡسِنِينَ</word>
+  <word id="1939" position="8" type="number">١١٥</word>
+  <ayah eid="11:115:douri-kfqc"/>
+  <ayah number="116" tradition="douri-kfqc" sid="11:116:douri-kfqc"/>
+  <word id="1940" position="1">فَلَوۡلَا</word>
+  <word id="1941" position="2">كَانَ</word>
+  <word id="1942" position="3">مِنَ</word>
+  <word id="1943" position="4">اَ۬لۡقُرُونِ</word>
+  <word id="1944" position="5">مِن</word>
+  <word id="1945" position="6">قَبۡلِكُمۡ</word>
+  <word id="1946" position="7">أُوْلُواْ</word>
+  <word id="1947" position="8">بَقِيَّةٖ</word>
+  <word id="1948" position="9">يَنۡهَوۡنَ</word>
+  <word id="1949" position="10">عَنِ</word>
+  <word id="1950" position="11">اِ۬لۡفَسَادِ</word>
+  <word id="1951" position="12">فِي</word>
+  <word id="1952" position="13">اِ۬لۡأَرۡضِ</word>
+  <word id="1953" position="14">إِلَّا</word>
+  <word id="1954" position="15">قَلِيلٗا</word>
+  <word id="1955" position="16">مِّمَّنۡ</word>
+  <word id="1956" position="17">أَنجَيۡنَا</word>
+  <word id="1957" position="18">مِنۡهُمۡۗ</word>
+  <word id="1958" position="19">وَاَتَّبَعَ</word>
+  <word id="1959" position="20">اَ۬لَّذِينَ</word>
+  <word id="1960" position="21">ظَلَمُواْ</word>
+  <word id="1961" position="22">مَآ</word>
+  <word id="1962" position="23">أُتۡرِفُواْ</word>
+  <word id="1963" position="24">فِيهِ</word>
+  <word id="1964" position="25">وَكَانُواْ</word>
+  <word id="1965" position="26">مُجۡرِمِينَ</word>
+  <word id="1966" position="27" type="number">١١٦</word>
+  <ayah eid="11:116:douri-kfqc"/>
+  <ayah number="117" tradition="douri-kfqc" sid="11:117:douri-kfqc"/>
+  <word id="1967" position="1">وَمَا</word>
+  <word id="1968" position="2">كَانَ</word>
+  <word id="1969" position="3">رَبُّكَ</word>
+  <word id="1970" position="4">لِيُهۡلِكَ</word>
+  <word id="1971" position="5">اَ۬لۡقُر۪يٰ</word>
+  <word id="1972" position="6">بِظُلۡمٖ</word>
+  <word id="1973" position="7">وَأَهۡلُهَا</word>
+  <word id="1974" position="8">مُصۡلِحُونَ</word>
+  <word id="1975" position="9" type="number">١١٧</word>
+  <ayah eid="11:117:douri-kfqc"/>
+  <ayah number="118" tradition="douri-kfqc" sid="11:118:douri-kfqc"/>
+  <word id="1976" position="1">وَلَوۡ</word>
+  <word id="1977" position="2">شَآءَ</word>
+  <word id="1978" position="3">رَبُّكَ</word>
+  <word id="1979" position="4">لَجَعَلَ</word>
+  <word id="1980" position="5">اَ۬لنَّاسَ</word>
+  <word id="1981" position="6">أُمَّةٗ</word>
+  <word id="1982" position="7">وَٰحِدَةٗۖ</word>
+  <word id="1983" position="8">وَلَا</word>
+  <word id="1984" position="9">يَزَالُونَ</word>
+  <word id="1985" position="10">مُخۡتَلِفِينَ</word>
+  <word id="1986" position="11">إِلَّا</word>
+  <word id="1987" position="12">مَن</word>
+  <word id="1988" position="13">رَّحِمَ</word>
+  <word id="1989" position="14">رَبُّكَۚ</word>
+  <word id="1990" position="15">وَلِذَٰلِكَ</word>
+  <word id="1991" position="16">خَلَقَهُمۡۗ</word>
+  <word id="1992" position="17">وَتَمَّتۡ</word>
+  <word id="1993" position="18">كَلِمَةُ</word>
+  <word id="1994" position="19">رَبِّكَ</word>
+  <word id="1995" position="20">لَأَمۡلَأَنَّ</word>
+  <word id="1996" position="21">جَهَنَّمَ</word>
+  <word id="1997" position="22">مِنَ</word>
+  <word id="1998" position="23">اَ۬لۡجِنَّةِ</word>
+  <word id="1999" position="24">وَاَلنّ۪اسِ</word>
+  <word id="2000" position="25">أَجۡمَعِينَ</word>
+  <word id="2001" position="26" type="number">١١٨</word>
+  <ayah eid="11:118:douri-kfqc"/>
+  <ayah number="119" tradition="douri-kfqc" sid="11:119:douri-kfqc"/>
+  <word id="2002" position="1">۞</word>
+  <word id="2003" position="2">وَكُلّٗا</word>
+  <word id="2004" position="3">نَّقُصُّ</word>
+  <word id="2005" position="4">عَلَيۡكَ</word>
+  <word id="2006" position="5">مِنۡ</word>
+  <word id="2007" position="6">أَنۢبَآءِ</word>
+  <word id="2008" position="7">اِ۬لرُّسُلِ</word>
+  <word id="2009" position="8">مَا</word>
+  <word id="2010" position="9">نُثَبِّتُ</word>
+  <word id="2011" position="10">بِهِۦ</word>
+  <word id="2012" position="11">فُؤَادَكَۚ</word>
+  <word id="2013" position="12">وَجَآءَكَ</word>
+  <word id="2014" position="13">فِي</word>
+  <word id="2015" position="14">هَٰذِهِ</word>
+  <word id="2016" position="15">اِ۬لۡحَقُّ</word>
+  <word id="2017" position="16">وَمَوۡعِظَةٞ</word>
+  <word id="2018" position="17">وَذِكۡر۪يٰ</word>
+  <word id="2019" position="18">لِلۡمُؤۡمِنِينَ</word>
+  <word id="2020" position="19" type="number">١١٩</word>
+  <ayah eid="11:119:douri-kfqc"/>
+  <ayah number="120" tradition="douri-kfqc" sid="11:120:douri-kfqc"/>
+  <word id="2021" position="1">وَقُل</word>
+  <word id="2022" position="2">لِّلَّذِينَ</word>
+  <word id="2023" position="3">لَا</word>
+  <word id="2024" position="4">يُؤۡمِنُونَ</word>
+  <word id="2025" position="5">اَ۪عۡمَلُواْ</word>
+  <word id="2026" position="6">عَلَىٰ</word>
+  <word id="2027" position="7">مَكَانَتِكُمۡ</word>
+  <word id="2028" position="8">إِنَّا</word>
+  <word id="2029" position="9">عَٰمِلُونَ</word>
+  <word id="2030" position="10" type="number">١٢٠</word>
+  <ayah eid="11:120:douri-kfqc"/>
+  <ayah number="121" tradition="douri-kfqc" sid="11:121:douri-kfqc"/>
+  <word id="2031" position="1">وَاَنتَظِرُوٓاْ</word>
+  <word id="2032" position="2">إِنَّا</word>
+  <word id="2033" position="3">مُنتَظِرُونَ</word>
+  <word id="2034" position="4" type="number">١٢١</word>
+  <ayah eid="11:121:douri-kfqc"/>
+  <ayah number="122" tradition="douri-kfqc" sid="11:122:douri-kfqc"/>
+  <word id="2035" position="1">وَلِلَّهِ</word>
+  <word id="2036" position="2">غَيۡبُ</word>
+  <word id="2037" position="3">اُ۬لسَّمَٰوَٰتِ</word>
+  <word id="2038" position="4">وَاَلۡأَرۡضِ</word>
+  <word id="2039" position="5">وَإِلَيۡهِ</word>
+  <word id="2040" position="6">يَرۡجِعُ</word>
+  <word id="2041" position="7">اُ۬لۡأَمۡرُ</word>
+  <word id="2042" position="8">كُلُّهُۥ</word>
+  <word id="2043" position="9">فَاَعۡبُدۡهُ</word>
+  <word id="2044" position="10">وَتَوَكَّلۡ</word>
+  <word id="2045" position="11">عَلَيۡهِۚ</word>
+  <word id="2046" position="12">وَمَا</word>
+  <word id="2047" position="13">رَبُّكَ</word>
+  <word id="2048" position="14">بِغَٰفِلٍ</word>
+  <word id="2049" position="15">عَمَّا</word>
+  <word id="2050" position="16">يَعۡمَلُونَ</word>
+  <word id="2051" position="17" type="number">١٢٢</word>
+  <ayah eid="11:122:douri-kfqc"/>
+</qusx>

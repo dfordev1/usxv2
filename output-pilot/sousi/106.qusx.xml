@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="106" name="Quraysh" nameArabic="قريش" ayahCount="5" revelationPlace="makkah" bismillahPre="true" tradition="sousi-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="sousi-kfqc" sid="106:1:sousi-kfqc"/>
+  <word id="1" position="1">لِإِيلَٰفِ</word>
+  <word id="2" position="2">قُرَيۡشٍ</word>
+  <word id="3" position="3" type="number">١</word>
+  <ayah eid="106:1:sousi-kfqc"/>
+  <ayah number="2" tradition="sousi-kfqc" sid="106:2:sousi-kfqc"/>
+  <word id="4" position="1">إِۦلَٰفِهِمۡ</word>
+  <word id="5" position="2">رِحۡلَةَ</word>
+  <word id="6" position="3">اَ۬لشِّتَآءِ</word>
+  <word id="7" position="4">وَاَلصَّيۡف</word>
+  <word id="8" position="5" type="number">٢</word>
+  <ayah eid="106:2:sousi-kfqc"/>
+  <ayah number="3" tradition="sousi-kfqc" sid="106:3:sousi-kfqc"/>
+  <word id="9" position="1">فَّلۡيَعۡبُدُواْ</word>
+  <word id="10" position="2">رَبَّ</word>
+  <word id="11" position="3">هَٰذَا</word>
+  <word id="12" position="4">اَ۬لۡبَيۡتِ</word>
+  <word id="13" position="5" type="number">٣</word>
+  <ayah eid="106:3:sousi-kfqc"/>
+  <ayah number="4" tradition="sousi-kfqc" sid="106:4:sousi-kfqc"/>
+  <word id="14" position="1">اِ۬لَّذِي</word>
+  <word id="15" position="2">أَطۡعَمَهُم</word>
+  <word id="16" position="3">مِّن</word>
+  <word id="17" position="4">جُوعٖ</word>
+  <word id="18" position="5" type="number">٤</word>
+  <ayah eid="106:4:sousi-kfqc"/>
+  <ayah number="5" tradition="sousi-kfqc" sid="106:5:sousi-kfqc"/>
+  <word id="19" position="1">وَءَامَنَهُم</word>
+  <word id="20" position="2">مِّنۡ</word>
+  <word id="21" position="3">خَوۡفِۢ</word>
+  <word id="22" position="4" type="number">٥</word>
+  <ayah eid="106:5:sousi-kfqc"/>
+</qusx>

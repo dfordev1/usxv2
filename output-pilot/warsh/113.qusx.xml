@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="113" name="Al-Falaq" nameArabic="الفلق" ayahCount="5" revelationPlace="makkah" bismillahPre="true" tradition="warsh-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="warsh-kfqc" sid="113:1:warsh-kfqc"/>
+  <word id="1" position="1">قُلَ</word>
+  <word id="2" position="2">اَعُوذُ</word>
+  <word id="3" position="3">بِرَبِّ</word>
+  <word id="4" position="4">اِ۬لْفَلَقِ</word>
+  <word id="5" position="5" type="number">١</word>
+  <ayah eid="113:1:warsh-kfqc"/>
+  <ayah number="2" tradition="warsh-kfqc" sid="113:2:warsh-kfqc"/>
+  <word id="6" position="1">مِن</word>
+  <word id="7" position="2">شَرِّ</word>
+  <word id="8" position="3">مَا</word>
+  <word id="9" position="4">خَلَقَ</word>
+  <word id="10" position="5" type="number">٢</word>
+  <ayah eid="113:2:warsh-kfqc"/>
+  <ayah number="3" tradition="warsh-kfqc" sid="113:3:warsh-kfqc"/>
+  <word id="11" position="1">وَمِن</word>
+  <word id="12" position="2">شَرِّ</word>
+  <word id="13" position="3">غَاسِقٍ</word>
+  <word id="14" position="4">اِذَا</word>
+  <word id="15" position="5">وَقَبَ</word>
+  <word id="16" position="6" type="number">٣</word>
+  <ayah eid="113:3:warsh-kfqc"/>
+  <ayah number="4" tradition="warsh-kfqc" sid="113:4:warsh-kfqc"/>
+  <word id="17" position="1">وَمِن</word>
+  <word id="18" position="2">شَرِّ</word>
+  <word id="19" position="3">اِ۬لنَّفَّٰثَٰتِ</word>
+  <word id="20" position="4">فِے</word>
+  <word id="21" position="5">اِ۬لْعُقَدِ</word>
+  <word id="22" position="6" type="number">٤</word>
+  <ayah eid="113:4:warsh-kfqc"/>
+  <ayah number="5" tradition="warsh-kfqc" sid="113:5:warsh-kfqc"/>
+  <word id="23" position="1">وَمِن</word>
+  <word id="24" position="2">شَرِّ</word>
+  <word id="25" position="3">حَاسِدٍ</word>
+  <word id="26" position="4">اِذَا</word>
+  <word id="27" position="5">حَسَدَۖ</word>
+  <word id="28" position="6" type="number">٥</word>
+  <ayah eid="113:5:warsh-kfqc"/>
+</qusx>

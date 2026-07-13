@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="109" name="Al-Kafirun" nameArabic="الكافرون" ayahCount="6" revelationPlace="makkah" bismillahPre="true" tradition="sousi-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="sousi-kfqc" sid="109:1:sousi-kfqc"/>
+  <word id="1" position="1">قُلۡ</word>
+  <word id="2" position="2">يَٰأَيُّهَا</word>
+  <word id="3" position="3">اَ۬لۡكَٰفِرُونَ</word>
+  <word id="4" position="4" type="number">١</word>
+  <ayah eid="109:1:sousi-kfqc"/>
+  <ayah number="2" tradition="sousi-kfqc" sid="109:2:sousi-kfqc"/>
+  <word id="5" position="1">لَا</word>
+  <word id="6" position="2">أَعۡبُدُ</word>
+  <word id="7" position="3">مَا</word>
+  <word id="8" position="4">تَعۡبُدُونَ</word>
+  <word id="9" position="5" type="number">٢</word>
+  <ayah eid="109:2:sousi-kfqc"/>
+  <ayah number="3" tradition="sousi-kfqc" sid="109:3:sousi-kfqc"/>
+  <word id="10" position="1">وَلَا</word>
+  <word id="11" position="2">أَنتُمۡ</word>
+  <word id="12" position="3">عَٰبِدُونَ</word>
+  <word id="13" position="4">مَا</word>
+  <word id="14" position="5">أَعۡبُدُ</word>
+  <word id="15" position="6" type="number">٣</word>
+  <ayah eid="109:3:sousi-kfqc"/>
+  <ayah number="4" tradition="sousi-kfqc" sid="109:4:sousi-kfqc"/>
+  <word id="16" position="1">وَلَا</word>
+  <word id="17" position="2">أَنَا۠</word>
+  <word id="18" position="3">عَابِدٞ</word>
+  <word id="19" position="4">مَّا</word>
+  <word id="20" position="5">عَبَدتُّمۡ</word>
+  <word id="21" position="6" type="number">٤</word>
+  <ayah eid="109:4:sousi-kfqc"/>
+  <ayah number="5" tradition="sousi-kfqc" sid="109:5:sousi-kfqc"/>
+  <word id="22" position="1">وَلَا</word>
+  <word id="23" position="2">أَنتُمۡ</word>
+  <word id="24" position="3">عَٰبِدُونَ</word>
+  <word id="25" position="4">مَا</word>
+  <word id="26" position="5">أَعۡبُدُ</word>
+  <word id="27" position="6" type="number">٥</word>
+  <ayah eid="109:5:sousi-kfqc"/>
+  <ayah number="6" tradition="sousi-kfqc" sid="109:6:sousi-kfqc"/>
+  <word id="28" position="1">لَكُمۡ</word>
+  <word id="29" position="2">دِينُكُمۡ</word>
+  <word id="30" position="3">وَلِي</word>
+  <word id="31" position="4">دِينِ</word>
+  <word id="32" position="5" type="number">٦</word>
+  <ayah eid="109:6:sousi-kfqc"/>
+</qusx>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="111" name="Al-Masad" nameArabic="المسد" ayahCount="5" revelationPlace="makkah" bismillahPre="true" tradition="qalon-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="qalon-kfqc" sid="111:1:qalon-kfqc"/>
+  <word id="1" position="1">تَبَّتْ</word>
+  <word id="2" position="2">يَدَا</word>
+  <word id="3" position="3">أَبِے</word>
+  <word id="4" position="4">لَهَبٖ</word>
+  <word id="5" position="5">وَتَبَّۖ</word>
+  <word id="6" position="6" type="number">١</word>
+  <ayah eid="111:1:qalon-kfqc"/>
+  <ayah number="2" tradition="qalon-kfqc" sid="111:2:qalon-kfqc"/>
+  <word id="7" position="1">مَا</word>
+  <word id="8" position="2">أَغْنَىٰ</word>
+  <word id="9" position="3">عَنْهُ</word>
+  <word id="10" position="4">مَالُهُۥ</word>
+  <word id="11" position="5">وَمَا</word>
+  <word id="12" position="6">كَسَبَۖ</word>
+  <word id="13" position="7" type="number">٢</word>
+  <ayah eid="111:2:qalon-kfqc"/>
+  <ayah number="3" tradition="qalon-kfqc" sid="111:3:qalon-kfqc"/>
+  <word id="14" position="1">سَيَصْلَىٰ</word>
+  <word id="15" position="2">نَاراٗ</word>
+  <word id="16" position="3">ذَاتَ</word>
+  <word id="17" position="4">لَهَبٖ</word>
+  <word id="18" position="5" type="number">٣</word>
+  <ayah eid="111:3:qalon-kfqc"/>
+  <ayah number="4" tradition="qalon-kfqc" sid="111:4:qalon-kfqc"/>
+  <word id="19" position="1">وَامْرَأَتُهُۥۖ</word>
+  <word id="20" position="2">حَمَّالَةُ</word>
+  <word id="21" position="3">اُ۬لْحَطَبِ</word>
+  <word id="22" position="4" type="number">٤</word>
+  <ayah eid="111:4:qalon-kfqc"/>
+  <ayah number="5" tradition="qalon-kfqc" sid="111:5:qalon-kfqc"/>
+  <word id="23" position="1">فِے</word>
+  <word id="24" position="2">جِيدِهَا</word>
+  <word id="25" position="3">حَبْلٞ</word>
+  <word id="26" position="4">مِّن</word>
+  <word id="27" position="5">مَّسَدِۢۖ</word>
+  <word id="28" position="6" type="number">٥</word>
+  <ayah eid="111:5:qalon-kfqc"/>
+</qusx>

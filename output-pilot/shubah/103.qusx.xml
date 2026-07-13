@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="103" name="Al-'Asr" nameArabic="العصر" ayahCount="3" revelationPlace="makkah" bismillahPre="true" tradition="shubah-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="shubah-kfqc" sid="103:1:shubah-kfqc"/>
+  <word id="1" position="1">وَٱلۡعَصۡرِ</word>
+  <word id="2" position="2" type="number">١</word>
+  <ayah eid="103:1:shubah-kfqc"/>
+  <ayah number="2" tradition="shubah-kfqc" sid="103:2:shubah-kfqc"/>
+  <word id="3" position="1">إِنَّ</word>
+  <word id="4" position="2">ٱلۡإِنسَٰنَ</word>
+  <word id="5" position="3">لَفِي</word>
+  <word id="6" position="4">خُسۡرٍ</word>
+  <word id="7" position="5" type="number">٢</word>
+  <ayah eid="103:2:shubah-kfqc"/>
+  <ayah number="3" tradition="shubah-kfqc" sid="103:3:shubah-kfqc"/>
+  <word id="8" position="1">إِلَّا</word>
+  <word id="9" position="2">ٱلَّذِينَ</word>
+  <word id="10" position="3">ءَامَنُواْ</word>
+  <word id="11" position="4">وَعَمِلُواْ</word>
+  <word id="12" position="5">ٱلصَّٰلِحَٰتِ</word>
+  <word id="13" position="6">وَتَوَاصَوۡاْ</word>
+  <word id="14" position="7">بِٱلۡحَقِّ</word>
+  <word id="15" position="8">وَتَوَاصَوۡاْ</word>
+  <word id="16" position="9">بِٱلصَّبۡرِ</word>
+  <word id="17" position="10" type="number">٣</word>
+  <ayah eid="103:3:shubah-kfqc"/>
+</qusx>

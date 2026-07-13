@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="97" name="Al-Qadr" nameArabic="القدر" ayahCount="5" revelationPlace="makkah" bismillahPre="true" tradition="shubah-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="shubah-kfqc" sid="97:1:shubah-kfqc"/>
+  <word id="1" position="1">إِنَّآ</word>
+  <word id="2" position="2">أَنزَلۡنَٰهُ</word>
+  <word id="3" position="3">فِي</word>
+  <word id="4" position="4">لَيۡلَةِ</word>
+  <word id="5" position="5">ٱلۡقَدۡرِ</word>
+  <word id="6" position="6" type="number">١</word>
+  <ayah eid="97:1:shubah-kfqc"/>
+  <ayah number="2" tradition="shubah-kfqc" sid="97:2:shubah-kfqc"/>
+  <word id="7" position="1">وَمَآ</word>
+  <word id="8" position="2">أَدۡرٜىٰكَ</word>
+  <word id="9" position="3">مَا</word>
+  <word id="10" position="4">لَيۡلَةُ</word>
+  <word id="11" position="5">ٱلۡقَدۡرِ</word>
+  <word id="12" position="6" type="number">٢</word>
+  <ayah eid="97:2:shubah-kfqc"/>
+  <ayah number="3" tradition="shubah-kfqc" sid="97:3:shubah-kfqc"/>
+  <word id="13" position="1">لَيۡلَةُ</word>
+  <word id="14" position="2">ٱلۡقَدۡرِ</word>
+  <word id="15" position="3">خَيۡرٞ</word>
+  <word id="16" position="4">مِّنۡ</word>
+  <word id="17" position="5">أَلۡفِ</word>
+  <word id="18" position="6">شَهۡرٖ</word>
+  <word id="19" position="7" type="number">٣</word>
+  <ayah eid="97:3:shubah-kfqc"/>
+  <ayah number="4" tradition="shubah-kfqc" sid="97:4:shubah-kfqc"/>
+  <word id="20" position="1">تَنَزَّلُ</word>
+  <word id="21" position="2">ٱلۡمَلَٰٓئِكَةُ</word>
+  <word id="22" position="3">وَٱلرُّوحُ</word>
+  <word id="23" position="4">فِيهَا</word>
+  <word id="24" position="5">بِإِذۡنِ</word>
+  <word id="25" position="6">رَبِّهِم</word>
+  <word id="26" position="7">مِّن</word>
+  <word id="27" position="8">كُلِّ</word>
+  <word id="28" position="9">أَمۡرٖ</word>
+  <word id="29" position="10" type="number">٤</word>
+  <ayah eid="97:4:shubah-kfqc"/>
+  <ayah number="5" tradition="shubah-kfqc" sid="97:5:shubah-kfqc"/>
+  <word id="30" position="1">سَلَٰمٌ</word>
+  <word id="31" position="2">هِيَ</word>
+  <word id="32" position="3">حَتَّىٰ</word>
+  <word id="33" position="4">مَطۡلَعِ</word>
+  <word id="34" position="5">ٱلۡفَجۡرِ</word>
+  <word id="35" position="6" type="number">٥</word>
+  <ayah eid="97:5:shubah-kfqc"/>
+</qusx>

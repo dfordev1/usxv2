@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="112" name="Al-Ikhlas" nameArabic="الإخلاص" ayahCount="4" revelationPlace="makkah" bismillahPre="true" tradition="sousi-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="sousi-kfqc" sid="112:1:sousi-kfqc"/>
+  <word id="1" position="1">قُلۡ</word>
+  <word id="2" position="2">هُوَ</word>
+  <word id="3" position="3">اَ۬للَّهُ</word>
+  <word id="4" position="4">أَحَدٌ</word>
+  <word id="5" position="5" type="number">١</word>
+  <ayah eid="112:1:sousi-kfqc"/>
+  <ayah number="2" tradition="sousi-kfqc" sid="112:2:sousi-kfqc"/>
+  <word id="6" position="1">اِ۬للَّهُ</word>
+  <word id="7" position="2">اُ۬لصَّمَدُ</word>
+  <word id="8" position="3" type="number">٢</word>
+  <ayah eid="112:2:sousi-kfqc"/>
+  <ayah number="3" tradition="sousi-kfqc" sid="112:3:sousi-kfqc"/>
+  <word id="9" position="1">لَمۡ</word>
+  <word id="10" position="2">يَلِدۡ</word>
+  <word id="11" position="3">وَلَمۡ</word>
+  <word id="12" position="4">يُولَدۡ</word>
+  <word id="13" position="5" type="number">٣</word>
+  <ayah eid="112:3:sousi-kfqc"/>
+  <ayah number="4" tradition="sousi-kfqc" sid="112:4:sousi-kfqc"/>
+  <word id="14" position="1">وَلَمۡ</word>
+  <word id="15" position="2">يَكُن</word>
+  <word id="16" position="3">لَّهُۥ</word>
+  <word id="17" position="4">كُفُؤًا</word>
+  <word id="18" position="5">أَحَدُۢ</word>
+  <word id="19" position="6" type="number">٤</word>
+  <ayah eid="112:4:sousi-kfqc"/>
+</qusx>

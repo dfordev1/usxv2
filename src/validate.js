@@ -47,6 +47,7 @@ const TRADITION_ID_TO_KEY = {
   "qalon-kfqc": "qalon",
   "douri-kfqc": "douri",
   "shubah-kfqc": "shubah",
+  "sousi-kfqc": "sousi", // recognized, but no verified per-tradition count data exists yet -- see expectedAyahCount() usage below
 };
 let TRADITION_AYAH_COUNTS = null;
 try {
@@ -141,16 +142,25 @@ function validateFile(filePath) {
         errors.push(`${fileName}: nameArabic="${rootAttrs.nameArabic}" does not match canonical "${canonical.name_arabic}" for surah ${declaredSurah}`);
       }
       // ayah count varies by tradition (different qira'at split/merge verse
-      // boundaries differently) -- use the per-tradition count when known,
-      // falling back to the Hafs canonical count only when the tradition is
-      // unrecognized or the per-tradition data isn't available.
+      // boundaries differently). Only Hafs's canonical count is comparable
+      // to a file with no `tradition` attribute or tradition="hafs-kufi" --
+      // for a RECOGNIZED non-Hafs tradition we don't have verified
+      // per-tradition counts for (e.g. Al-Susi), comparing against Hafs's
+      // number would be comparing against the wrong baseline, not a
+      // reasonable fallback. Skip the check in that case rather than
+      // produce a false error.
+      const isRecognizedNonHafs = rootAttrs.tradition && rootAttrs.tradition !== "hafs-kufi" && TRADITION_ID_TO_KEY[rootAttrs.tradition];
       const traditionExpected = expectedAyahCount(rootAttrs.tradition, declaredSurah);
-      const expected = traditionExpected !== null ? traditionExpected : Number(canonical.verses_count);
-      if (expected !== declaredAyahCount) {
-        errors.push(
-          `${fileName}: ayahCount="${declaredAyahCount}" does not match expected ${expected} for surah ${declaredSurah}` +
-            (traditionExpected !== null ? ` (tradition="${rootAttrs.tradition}")` : " (Hafs canonical)")
-        );
+      if (isRecognizedNonHafs && traditionExpected === null) {
+        // no verified count available for this tradition -- skip, don't guess
+      } else {
+        const expected = traditionExpected !== null ? traditionExpected : Number(canonical.verses_count);
+        if (expected !== declaredAyahCount) {
+          errors.push(
+            `${fileName}: ayahCount="${declaredAyahCount}" does not match expected ${expected} for surah ${declaredSurah}` +
+              (traditionExpected !== null ? ` (tradition="${rootAttrs.tradition}")` : " (Hafs canonical)")
+          );
+        }
       }
       if (String(rootAttrs.bismillahPre) !== String(canonical.bismillah_pre)) {
         errors.push(`${fileName}: bismillahPre="${rootAttrs.bismillahPre}" does not match canonical ${canonical.bismillah_pre} for surah ${declaredSurah}`);

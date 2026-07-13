@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="114" name="An-Nas" nameArabic="الناس" ayahCount="6" revelationPlace="makkah" bismillahPre="true" tradition="douri-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="douri-kfqc" sid="114:1:douri-kfqc"/>
+  <word id="1" position="1">قُلۡ</word>
+  <word id="2" position="2">أَعُوذُ</word>
+  <word id="3" position="3">بِرَبِّ</word>
+  <word id="4" position="4">اِ۬لنّ۪اسِ</word>
+  <word id="5" position="5" type="number">١</word>
+  <ayah eid="114:1:douri-kfqc"/>
+  <ayah number="2" tradition="douri-kfqc" sid="114:2:douri-kfqc"/>
+  <word id="6" position="1">مَلِكِ</word>
+  <word id="7" position="2">اِ۬لنّ۪اسِ</word>
+  <word id="8" position="3" type="number">٢</word>
+  <ayah eid="114:2:douri-kfqc"/>
+  <ayah number="3" tradition="douri-kfqc" sid="114:3:douri-kfqc"/>
+  <word id="9" position="1">إِلَٰهِ</word>
+  <word id="10" position="2">اِ۬لنّ۪اسِ</word>
+  <word id="11" position="3" type="number">٣</word>
+  <ayah eid="114:3:douri-kfqc"/>
+  <ayah number="4" tradition="douri-kfqc" sid="114:4:douri-kfqc"/>
+  <word id="12" position="1">مِن</word>
+  <word id="13" position="2">شَرِّ</word>
+  <word id="14" position="3">اِ۬لۡوَسۡوَاسِ</word>
+  <word id="15" position="4">اِ۬لۡخَنَّاسِ</word>
+  <word id="16" position="5" type="number">٤</word>
+  <ayah eid="114:4:douri-kfqc"/>
+  <ayah number="5" tradition="douri-kfqc" sid="114:5:douri-kfqc"/>
+  <word id="17" position="1">اِ۬لَّذِي</word>
+  <word id="18" position="2">يُوَسۡوِسُ</word>
+  <word id="19" position="3">فِي</word>
+  <word id="20" position="4">صُدُورِ</word>
+  <word id="21" position="5">اِ۬لنّ۪اسِ</word>
+  <word id="22" position="6" type="number">٥</word>
+  <ayah eid="114:5:douri-kfqc"/>
+  <ayah number="6" tradition="douri-kfqc" sid="114:6:douri-kfqc"/>
+  <word id="23" position="1">مِنَ</word>
+  <word id="24" position="2">اَ۬لۡجِنَّةِ</word>
+  <word id="25" position="3">وَاَلنّ۪اسِ</word>
+  <word id="26" position="4" type="number">٦</word>
+  <ayah eid="114:6:douri-kfqc"/>
+</qusx>

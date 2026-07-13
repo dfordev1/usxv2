@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="8" name="Al-Anfal" nameArabic="الأنفال" ayahCount="75" revelationPlace="madinah" bismillahPre="true" tradition="shubah-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="shubah-kfqc" sid="8:1:shubah-kfqc"/>
+  <word id="1" position="1">يَسۡـَٔلُونَكَ</word>
+  <word id="2" position="2">عَنِ</word>
+  <word id="3" position="3">ٱلۡأَنفَالِۖ</word>
+  <word id="4" position="4">قُلِ</word>
+  <word id="5" position="5">ٱلۡأَنفَالُ</word>
+  <word id="6" position="6">لِلَّهِ</word>
+  <word id="7" position="7">وَٱلرَّسُولِۖ</word>
+  <word id="8" position="8">فَٱتَّقُواْ</word>
+  <word id="9" position="9">ٱللَّهَ</word>
+  <word id="10" position="10">وَأَصۡلِحُواْ</word>
+  <word id="11" position="11">ذَاتَ</word>
+  <word id="12" position="12">بَيۡنِكُمۡۖ</word>
+  <word id="13" position="13">وَأَطِيعُواْ</word>
+  <word id="14" position="14">ٱللَّهَ</word>
+  <word id="15" position="15">وَرَسُولَهُۥٓ</word>
+  <word id="16" position="16">إِن</word>
+  <word id="17" position="17">كُنتُم</word>
+  <word id="18" position="18">مُّؤۡمِنِينَ</word>
+  <word id="19" position="19" type="number">١</word>
+  <ayah eid="8:1:shubah-kfqc"/>
+  <ayah number="2" tradition="shubah-kfqc" sid="8:2:shubah-kfqc"/>
+  <word id="20" position="1">إِنَّمَا</word>
+  <word id="21" position="2">ٱلۡمُؤۡمِنُونَ</word>
+  <word id="22" position="3">ٱلَّذِينَ</word>
+  <word id="23" position="4">إِذَا</word>
+  <word id="24" position="5">ذُكِرَ</word>
+  <word id="25" position="6">ٱللَّهُ</word>
+  <word id="26" position="7">وَجِلَتۡ</word>
+  <word id="27" position="8">قُلُوبُهُمۡ</word>
+  <word id="28" position="9">وَإِذَا</word>
+  <word id="29" position="10">تُلِيَتۡ</word>
+  <word id="30" position="11">عَلَيۡهِمۡ</word>
+  <word id="31" position="12">ءَايَٰتُهُۥ</word>
+  <word id="32" position="13">زَادَتۡهُمۡ</word>
+  <word id="33" position="14">إِيمَٰنٗا</word>
+  <word id="34" position="15">وَعَلَىٰ</word>
+  <word id="35" position="16">رَبِّهِمۡ</word>
+  <word id="36" position="17">يَتَوَكَّلُونَ</word>
+  <word id="37" position="18" type="number">٢</word>
+  <ayah eid="8:2:shubah-kfqc"/>
+  <ayah number="3" tradition="shubah-kfqc" sid="8:3:shubah-kfqc"/>
+  <word id="38" position="1">ٱلَّذِينَ</word>
+  <word id="39" position="2">يُقِيمُونَ</word>
+  <word id="40" position="3">ٱلصَّلَوٰةَ</word>
+  <word id="41" position="4">وَمِمَّا</word>
+  <word id="42" position="5">رَزَقۡنَٰهُمۡ</word>
+  <word id="43" position="6">يُنفِقُونَ</word>
+  <word id="44" position="7" type="number">٣</word>
+  <ayah eid="8:3:shubah-kfqc"/>
+  <ayah number="4" tradition="shubah-kfqc" sid="8:4:shubah-kfqc"/>
+  <word id="45" position="1">أُوْلَٰٓئِكَ</word>
+  <word id="46" position="2">هُمُ</word>
+  <word id="47" position="3">ٱلۡمُؤۡمِنُونَ</word>
+  <word id="48" position="4">حَقّٗاۚ</word>
+  <word id="49" position="5">لَّهُمۡ</word>
+  <word id="50" position="6">دَرَجَٰتٌ</word>
+  <word id="51" position="7">عِندَ</word>
+  <word id="52" position="8">رَبِّهِمۡ</word>
+  <word id="53" position="9">وَمَغۡفِرَةٞ</word>
+  <word id="54" position="10">وَرِزۡقٞ</word>
+  <word id="55" position="11">كَرِيمٞ</word>
+  <word id="56" position="12" type="number">٤</word>
+  <ayah eid="8:4:shubah-kfqc"/>
+  <ayah number="5" tradition="shubah-kfqc" sid="8:5:shubah-kfqc"/>
+  <word id="57" position="1">كَمَآ</word>
+  <word id="58" position="2">أَخۡرَجَكَ</word>
+  <word id="59" position="3">رَبُّكَ</word>
+  <word id="60" position="4">مِنۢ</word>
+  <word id="61" position="5">بَيۡتِكَ</word>
+  <word id="62" position="6">بِٱلۡحَقِّ</word>
+  <word id="63" position="7">وَإِنَّ</word>
+  <word id="64" position="8">فَرِيقٗا</word>
+  <word id="65" position="9">مِّنَ</word>
+  <word id="66" position="10">ٱلۡمُؤۡمِنِينَ</word>
+  <word id="67" position="11">لَكَٰرِهُونَ</word>
+  <word id="68" position="12" type="number">٥</word>
+  <ayah eid="8:5:shubah-kfqc"/>
+  <ayah number="6" tradition="shubah-kfqc" sid="8:6:shubah-kfqc"/>
+  <word id="69" position="1">يُجَٰدِلُونَكَ</word>
+  <word id="70" position="2">فِي</word>
+  <word id="71" position="3">ٱلۡحَقِّ</word>
+  <word id="72" position="4">بَعۡدَ</word>
+  <word id="73" position="5">مَا</word>
+  <word id="74" position="6">تَبَيَّنَ</word>
+  <word id="75" position="7">كَأَنَّمَا</word>
+  <word id="76" position="8">يُسَاقُونَ</word>
+  <word id="77" position="9">إِلَى</word>
+  <word id="78" position="10">ٱلۡمَوۡتِ</word>
+  <word id="79" position="11">وَهُمۡ</word>
+  <word id="80" position="12">يَنظُرُونَ</word>
+  <word id="81" position="13" type="number">٦</word>
+  <ayah eid="8:6:shubah-kfqc"/>
+  <ayah number="7" tradition="shubah-kfqc" sid="8:7:shubah-kfqc"/>
+  <word id="82" position="1">وَإِذۡ</word>
+  <word id="83" position="2">يَعِدُكُمُ</word>
+  <word id="84" position="3">ٱللَّهُ</word>
+  <word id="85" position="4">إِحۡدَى</word>
+  <word id="86" position="5">ٱلطَّآئِفَتَيۡنِ</word>
+  <word id="87" position="6">أَنَّهَا</word>
+  <word id="88" position="7">لَكُمۡ</word>
+  <word id="89" position="8">وَتَوَدُّونَ</word>
+  <word id="90" position="9">أَنَّ</word>
+  <word id="91" position="10">غَيۡرَ</word>
+  <word id="92" position="11">ذَاتِ</word>
+  <word id="93" position="12">ٱلشَّوۡكَةِ</word>
+  <word id="94" position="13">تَكُونُ</word>
+  <word id="95" position="14">لَكُمۡ</word>
+  <word id="96" position="15">وَيُرِيدُ</word>
+  <word id="97" position="16">ٱللَّهُ</word>
+  <word id="98" position="17">أَن</word>
+  <word id="99" position="18">يُحِقَّ</word>
+  <word id="100" position="19">ٱلۡحَقَّ</word>
+  <word id="101" position="20">بِكَلِمَٰتِهِۦ</word>
+  <word id="102" position="21">وَيَقۡطَعَ</word>
+  <word id="103" position="22">دَابِرَ</word>
+  <word id="104" position="23">ٱلۡكَٰفِرِينَ</word>
+  <word id="105" position="24" type="number">٧</word>
+  <ayah eid="8:7:shubah-kfqc"/>
+  <ayah number="8" tradition="shubah-kfqc" sid="8:8:shubah-kfqc"/>
+  <word id="106" position="1">لِيُحِقَّ</word>
+  <word id="107" position="2">ٱلۡحَقَّ</word>
+  <word id="108" position="3">وَيُبۡطِلَ</word>
+  <word id="109" position="4">ٱلۡبَٰطِلَ</word>
+  <word id="110" position="5">وَلَوۡ</word>
+  <word id="111" position="6">كَرِهَ</word>
+  <word id="112" position="7">ٱلۡمُجۡرِمُونَ</word>
+  <word id="113" position="8" type="number">٨</word>
+  <ayah eid="8:8:shubah-kfqc"/>
+  <ayah number="9" tradition="shubah-kfqc" sid="8:9:shubah-kfqc"/>
+  <word id="114" position="1">إِذۡ</word>
+  <word id="115" position="2">تَسۡتَغِيثُونَ</word>
+  <word id="116" position="3">رَبَّكُمۡ</word>
+  <word id="117" position="4">فَٱسۡتَجَابَ</word>
+  <word id="118" position="5">لَكُمۡ</word>
+  <word id="119" position="6">أَنِّي</word>
+  <word id="120" position="7">مُمِدُّكُم</word>
+  <word id="121" position="8">بِأَلۡفٖ</word>
+  <word id="122" position="9">مِّنَ</word>
+  <word id="123" position="10">ٱلۡمَلَٰٓئِكَةِ</word>
+  <word id="124" position="11">مُرۡدِفِينَ</word>
+  <word id="125" position="12" type="number">٩</word>
+  <ayah eid="8:9:shubah-kfqc"/>
+  <ayah number="10" tradition="shubah-kfqc" sid="8:10:shubah-kfqc"/>
+  <word id="126" position="1">وَمَا</word>
+  <word id="127" position="2">جَعَلَهُ</word>
+  <word id="128" position="3">ٱللَّهُ</word>
+  <word id="129" position="4">إِلَّا</word>
+  <word id="130" position="5">بُشۡرَىٰ</word>
+  <word id="131" position="6">وَلِتَطۡمَئِنَّ</word>
+  <word id="132" position="7">بِهِۦ</word>
+  <word id="133" position="8">قُلُوبُكُمۡۚ</word>
+  <word id="134" position="9">وَمَا</word>
+  <word id="135" position="10">ٱلنَّصۡرُ</word>
+  <word id="136" position="11">إِلَّا</word>
+  <word id="137" position="12">مِنۡ</word>
+  <word id="138" position="13">عِندِ</word>
+  <word id="139" position="14">ٱللَّهِۚ</word>
+  <word id="140" position="15">إِنَّ</word>
+  <word id="141" position="16">ٱللَّهَ</word>
+  <word id="142" position="17">عَزِيزٌ</word>
+  <word id="143" position="18">حَكِيمٌ</word>
+  <word id="144" position="19" type="number">١٠</word>
+  <ayah eid="8:10:shubah-kfqc"/>
+  <ayah number="11" tradition="shubah-kfqc" sid="8:11:shubah-kfqc"/>
+  <word id="145" position="1">إِذۡ</word>
+  <word id="146" position="2">يُغَشِّيكُمُ</word>
+  <word id="147" position="3">ٱلنُّعَاسَ</word>
+  <word id="148" position="4">أَمَنَةٗ</word>
+  <word id="149" position="5">مِّنۡهُ</word>
+  <word id="150" position="6">وَيُنَزِّلُ</word>
+  <word id="151" position="7">عَلَيۡكُم</word>
+  <word id="152" position="8">مِّنَ</word>
+  <word id="153" position="9">ٱلسَّمَآءِ</word>
+  <word id="154" position="10">مَآءٗ</word>
+  <word id="155" position="11">لِّيُطَهِّرَكُم</word>
+  <word id="156" position="12">بِهِۦ</word>
+  <word id="157" position="13">وَيُذۡهِبَ</word>
+  <word id="158" position="14">عَنكُمۡ</word>
+  <word id="159" position="15">رِجۡزَ</word>
+  <word id="160" position="16">ٱلشَّيۡطَٰنِ</word>
+  <word id="161" position="17">وَلِيَرۡبِطَ</word>
+  <word id="162" position="18">عَلَىٰ</word>
+  <word id="163" position="19">قُلُوبِكُمۡ</word>
+  <word id="164" position="20">وَيُثَبِّتَ</word>
+  <word id="165" position="21">بِهِ</word>
+  <word id="166" position="22">ٱلۡأَقۡدَامَ</word>
+  <word id="167" position="23" type="number">١١</word>
+  <ayah eid="8:11:shubah-kfqc"/>
+  <ayah number="12" tradition="shubah-kfqc" sid="8:12:shubah-kfqc"/>
+  <word id="168" position="1">إِذۡ</word>
+  <word id="169" position="2">يُوحِي</word>
+  <word id="170" position="3">رَبُّكَ</word>
+  <word id="171" position="4">إِلَى</word>
+  <word id="172" position="5">ٱلۡمَلَٰٓئِكَةِ</word>
+  <word id="173" position="6">أَنِّي</word>
+  <word id="174" position="7">مَعَكُمۡ</word>
+  <word id="175" position="8">فَثَبِّتُواْ</word>
+  <word id="176" position="9">ٱلَّذِينَ</word>
+  <word id="177" position="10">ءَامَنُواْۚ</word>
+  <word id="178" position="11">سَأُلۡقِي</word>
+  <word id="179" position="12">فِي</word>
+  <word id="180" position="13">قُلُوبِ</word>
+  <word id="181" position="14">ٱلَّذِينَ</word>
+  <word id="182" position="15">كَفَرُواْ</word>
+  <word id="183" position="16">ٱلرُّعۡبَ</word>
+  <word id="184" position="17">فَٱضۡرِبُواْ</word>
+  <word id="185" position="18">فَوۡقَ</word>
+  <word id="186" position="19">ٱلۡأَعۡنَاقِ</word>
+  <word id="187" position="20">وَٱضۡرِبُواْ</word>
+  <word id="188" position="21">مِنۡهُمۡ</word>
+  <word id="189" position="22">كُلَّ</word>
+  <word id="190" position="23">بَنَانٖ</word>
+  <word id="191" position="24" type="number">١٢</word>
+  <ayah eid="8:12:shubah-kfqc"/>
+  <ayah number="13" tradition="shubah-kfqc" sid="8:13:shubah-kfqc"/>
+  <word id="192" position="1">ذَٰلِكَ</word>
+  <word id="193" position="2">بِأَنَّهُمۡ</word>
+  <word id="194" position="3">شَآقُّواْ</word>
+  <word id="195" position="4">ٱللَّهَ</word>
+  <word id="196" position="5">وَرَسُولَهُۥۚ</word>
+  <word id="197" position="6">وَمَن</word>
+  <word id="198" position="7">يُشَاقِقِ</word>
+  <word id="199" position="8">ٱللَّهَ</word>
+  <word id="200" position="9">وَرَسُولَهُۥ</word>
+  <word id="201" position="10">فَإِنَّ</word>
+  <word id="202" position="11">ٱللَّهَ</word>
+  <word id="203" position="12">شَدِيدُ</word>
+  <word id="204" position="13">ٱلۡعِقَابِ</word>
+  <word id="205" position="14" type="number">١٣</word>
+  <ayah eid="8:13:shubah-kfqc"/>
+  <ayah number="14" tradition="shubah-kfqc" sid="8:14:shubah-kfqc"/>
+  <word id="206" position="1">ذَٰلِكُمۡ</word>
+  <word id="207" position="2">فَذُوقُوهُ</word>
+  <word id="208" position="3">وَأَنَّ</word>
+  <word id="209" position="4">لِلۡكَٰفِرِينَ</word>
+  <word id="210" position="5">عَذَابَ</word>
+  <word id="211" position="6">ٱلنَّارِ</word>
+  <word id="212" position="7" type="number">١٤</word>
+  <ayah eid="8:14:shubah-kfqc"/>
+  <ayah number="15" tradition="shubah-kfqc" sid="8:15:shubah-kfqc"/>
+  <word id="213" position="1">يَٰٓأَيُّهَا</word>
+  <word id="214" position="2">ٱلَّذِينَ</word>
+  <word id="215" position="3">ءَامَنُوٓاْ</word>
+  <word id="216" position="4">إِذَا</word>
+  <word id="217" position="5">لَقِيتُمُ</word>
+  <word id="218" position="6">ٱلَّذِينَ</word>
+  <word id="219" position="7">كَفَرُواْ</word>
+  <word id="220" position="8">زَحۡفٗا</word>
+  <word id="221" position="9">فَلَا</word>
+  <word id="222" position="10">تُوَلُّوهُمُ</word>
+  <word id="223" position="11">ٱلۡأَدۡبَارَ</word>
+  <word id="224" position="12" type="number">١٥</word>
+  <ayah eid="8:15:shubah-kfqc"/>
+  <ayah number="16" tradition="shubah-kfqc" sid="8:16:shubah-kfqc"/>
+  <word id="225" position="1">وَمَن</word>
+  <word id="226" position="2">يُوَلِّهِمۡ</word>
+  <word id="227" position="3">يَوۡمَئِذٖ</word>
+  <word id="228" position="4">دُبُرَهُۥٓ</word>
+  <word id="229" position="5">إِلَّا</word>
+  <word id="230" position="6">مُتَحَرِّفٗا</word>
+  <word id="231" position="7">لِّقِتَالٍ</word>
+  <word id="232" position="8">أَوۡ</word>
+  <word id="233" position="9">مُتَحَيِّزًا</word>
+  <word id="234" position="10">إِلَىٰ</word>
+  <word id="235" position="11">فِئَةٖ</word>
+  <word id="236" position="12">فَقَدۡ</word>
+  <word id="237" position="13">بَآءَ</word>
+  <word id="238" position="14">بِغَضَبٖ</word>
+  <word id="239" position="15">مِّنَ</word>
+  <word id="240" position="16">ٱللَّهِ</word>
+  <word id="241" position="17">وَمَأۡوَىٰهُ</word>
+  <word id="242" position="18">جَهَنَّمُۖ</word>
+  <word id="243" position="19">وَبِئۡسَ</word>
+  <word id="244" position="20">ٱلۡمَصِيرُ</word>
+  <word id="245" position="21" type="number">١٦</word>
+  <ayah eid="8:16:shubah-kfqc"/>
+  <ayah number="17" tradition="shubah-kfqc" sid="8:17:shubah-kfqc"/>
+  <word id="246" position="1">فَلَمۡ</word>
+  <word id="247" position="2">تَقۡتُلُوهُمۡ</word>
+  <word id="248" position="3">وَلَٰكِنَّ</word>
+  <word id="249" position="4">ٱللَّهَ</word>
+  <word id="250" position="5">قَتَلَهُمۡۚ</word>
+  <word id="251" position="6">وَمَا</word>
+  <word id="252" position="7">رَمَيۡتَ</word>
+  <word id="253" position="8">إِذۡ</word>
+  <word id="254" position="9">رَمَيۡتَ</word>
+  <word id="255" position="10">وَلَٰكِنَّ</word>
+  <word id="256" position="11">ٱللَّهَ</word>
+  <word id="257" position="12">رَمٜىٰ</word>
+  <word id="258" position="13">وَلِيُبۡلِيَ</word>
+  <word id="259" position="14">ٱلۡمُؤۡمِنِينَ</word>
+  <word id="260" position="15">مِنۡهُ</word>
+  <word id="261" position="16">بَلَآءً</word>
+  <word id="262" position="17">حَسَنًاۚ</word>
+  <word id="263" position="18">إِنَّ</word>
+  <word id="264" position="19">ٱللَّهَ</word>
+  <word id="265" position="20">سَمِيعٌ</word>
+  <word id="266" position="21">عَلِيمٞ</word>
+  <word id="267" position="22" type="number">١٧</word>
+  <ayah eid="8:17:shubah-kfqc"/>
+  <ayah number="18" tradition="shubah-kfqc" sid="8:18:shubah-kfqc"/>
+  <word id="268" position="1">ذَٰلِكُمۡ</word>
+  <word id="269" position="2">وَأَنَّ</word>
+  <word id="270" position="3">ٱللَّهَ</word>
+  <word id="271" position="4">مُوهِنٞ</word>
+  <word id="272" position="5">كَيۡدَ</word>
+  <word id="273" position="6">ٱلۡكَٰفِرِينَ</word>
+  <word id="274" position="7" type="number">١٨</word>
+  <ayah eid="8:18:shubah-kfqc"/>
+  <ayah number="19" tradition="shubah-kfqc" sid="8:19:shubah-kfqc"/>
+  <word id="275" position="1">إِن</word>
+  <word id="276" position="2">تَسۡتَفۡتِحُواْ</word>
+  <word id="277" position="3">فَقَدۡ</word>
+  <word id="278" position="4">جَآءَكُمُ</word>
+  <word id="279" position="5">ٱلۡفَتۡحُۖ</word>
+  <word id="280" position="6">وَإِن</word>
+  <word id="281" position="7">تَنتَهُواْ</word>
+  <word id="282" position="8">فَهُوَ</word>
+  <word id="283" position="9">خَيۡرٞ</word>
+  <word id="284" position="10">لَّكُمۡۖ</word>
+  <word id="285" position="11">وَإِن</word>
+  <word id="286" position="12">تَعُودُواْ</word>
+  <word id="287" position="13">نَعُدۡ</word>
+  <word id="288" position="14">وَلَن</word>
+  <word id="289" position="15">تُغۡنِيَ</word>
+  <word id="290" position="16">عَنكُمۡ</word>
+  <word id="291" position="17">فِئَتُكُمۡ</word>
+  <word id="292" position="18">شَيۡـٔٗا</word>
+  <word id="293" position="19">وَلَوۡ</word>
+  <word id="294" position="20">كَثُرَتۡۚ</word>
+  <word id="295" position="21">وَإِنَّ</word>
+  <word id="296" position="22">ٱللَّهَ</word>
+  <word id="297" position="23">مَعَ</word>
+  <word id="298" position="24">ٱلۡمُؤۡمِنِينَ</word>
+  <word id="299" position="25" type="number">١٩</word>
+  <ayah eid="8:19:shubah-kfqc"/>
+  <ayah number="20" tradition="shubah-kfqc" sid="8:20:shubah-kfqc"/>
+  <word id="300" position="1">يَٰٓأَيُّهَا</word>
+  <word id="301" position="2">ٱلَّذِينَ</word>
+  <word id="302" position="3">ءَامَنُوٓاْ</word>
+  <word id="303" position="4">أَطِيعُواْ</word>
+  <word id="304" position="5">ٱللَّهَ</word>
+  <word id="305" position="6">وَرَسُولَهُۥ</word>
+  <word id="306" position="7">وَلَا</word>
+  <word id="307" position="8">تَوَلَّوۡاْ</word>
+  <word id="308" position="9">عَنۡهُ</word>
+  <word id="309" position="10">وَأَنتُمۡ</word>
+  <word id="310" position="11">تَسۡمَعُونَ</word>
+  <word id="311" position="12" type="number">٢٠</word>
+  <ayah eid="8:20:shubah-kfqc"/>
+  <ayah number="21" tradition="shubah-kfqc" sid="8:21:shubah-kfqc"/>
+  <word id="312" position="1">وَلَا</word>
+  <word id="313" position="2">تَكُونُواْ</word>
+  <word id="314" position="3">كَٱلَّذِينَ</word>
+  <word id="315" position="4">قَالُواْ</word>
+  <word id="316" position="5">سَمِعۡنَا</word>
+  <word id="317" position="6">وَهُمۡ</word>
+  <word id="318" position="7">لَا</word>
+  <word id="319" position="8">يَسۡمَعُونَ</word>
+  <word id="320" position="9" type="number">٢١</word>
+  <ayah eid="8:21:shubah-kfqc"/>
+  <ayah number="22" tradition="shubah-kfqc" sid="8:22:shubah-kfqc"/>
+  <word id="321" position="1">۞</word>
+  <word id="322" position="2">إِنَّ</word>
+  <word id="323" position="3">شَرَّ</word>
+  <word id="324" position="4">ٱلدَّوَآبِّ</word>
+  <word id="325" position="5">عِندَ</word>
+  <word id="326" position="6">ٱللَّهِ</word>
+  <word id="327" position="7">ٱلصُّمُّ</word>
+  <word id="328" position="8">ٱلۡبُكۡمُ</word>
+  <word id="329" position="9">ٱلَّذِينَ</word>
+  <word id="330" position="10">لَا</word>
+  <word id="331" position="11">يَعۡقِلُونَ</word>
+  <word id="332" position="12" type="number">٢٢</word>
+  <ayah eid="8:22:shubah-kfqc"/>
+  <ayah number="23" tradition="shubah-kfqc" sid="8:23:shubah-kfqc"/>
+  <word id="333" position="1">وَلَوۡ</word>
+  <word id="334" position="2">عَلِمَ</word>
+  <word id="335" position="3">ٱللَّهُ</word>
+  <word id="336" position="4">فِيهِمۡ</word>
+  <word id="337" position="5">خَيۡرٗا</word>
+  <word id="338" position="6">لَّأَسۡمَعَهُمۡۖ</word>
+  <word id="339" position="7">وَلَوۡ</word>
+  <word id="340" position="8">أَسۡمَعَهُمۡ</word>
+  <word id="341" position="9">لَتَوَلَّواْ</word>
+  <word id="342" position="10">وَّهُم</word>
+  <word id="343" position="11">مُّعۡرِضُونَ</word>
+  <word id="344" position="12" type="number">٢٣</word>
+  <ayah eid="8:23:shubah-kfqc"/>
+  <ayah number="24" tradition="shubah-kfqc" sid="8:24:shubah-kfqc"/>
+  <word id="345" position="1">يَٰٓأَيُّهَا</word>
+  <word id="346" position="2">ٱلَّذِينَ</word>
+  <word id="347" position="3">ءَامَنُواْ</word>
+  <word id="348" position="4">ٱسۡتَجِيبُواْ</word>
+  <word id="349" position="5">لِلَّهِ</word>
+  <word id="350" position="6">وَلِلرَّسُولِ</word>
+  <word id="351" position="7">إِذَا</word>
+  <word id="352" position="8">دَعَاكُمۡ</word>
+  <word id="353" position="9">لِمَا</word>
+  <word id="354" position="10">يُحۡيِيكُمۡۖ</word>
+  <word id="355" position="11">وَٱعۡلَمُوٓاْ</word>
+  <word id="356" position="12">أَنَّ</word>
+  <word id="357" position="13">ٱللَّهَ</word>
+  <word id="358" position="14">يَحُولُ</word>
+  <word id="359" position="15">بَيۡنَ</word>
+  <word id="360" position="16">ٱلۡمَرۡءِ</word>
+  <word id="361" position="17">وَقَلۡبِهِۦ</word>
+  <word id="362" position="18">وَأَنَّهُۥٓ</word>
+  <word id="363" position="19">إِلَيۡهِ</word>
+  <word id="364" position="20">تُحۡشَرُونَ</word>
+  <word id="365" position="21" type="number">٢٤</word>
+  <ayah eid="8:24:shubah-kfqc"/>
+  <ayah number="25" tradition="shubah-kfqc" sid="8:25:shubah-kfqc"/>
+  <word id="366" position="1">وَٱتَّقُواْ</word>
+  <word id="367" position="2">فِتۡنَةٗ</word>
+  <word id="368" position="3">لَّا</word>
+  <word id="369" position="4">تُصِيبَنَّ</word>
+  <word id="370" position="5">ٱلَّذِينَ</word>
+  <word id="371" position="6">ظَلَمُواْ</word>
+  <word id="372" position="7">مِنكُمۡ</word>
+  <word id="373" position="8">خَآصَّةٗۖ</word>
+  <word id="374" position="9">وَٱعۡلَمُوٓاْ</word>
+  <word id="375" position="10">أَنَّ</word>
+  <word id="376" position="11">ٱللَّهَ</word>
+  <word id="377" position="12">شَدِيدُ</word>
+  <word id="378" position="13">ٱلۡعِقَابِ</word>
+  <word id="379" position="14" type="number">٢٥</word>
+  <ayah eid="8:25:shubah-kfqc"/>
+  <ayah number="26" tradition="shubah-kfqc" sid="8:26:shubah-kfqc"/>
+  <word id="380" position="1">وَٱذۡكُرُوٓاْ</word>
+  <word id="381" position="2">إِذۡ</word>
+  <word id="382" position="3">أَنتُمۡ</word>
+  <word id="383" position="4">قَلِيلٞ</word>
+  <word id="384" position="5">مُّسۡتَضۡعَفُونَ</word>
+  <word id="385" position="6">فِي</word>
+  <word id="386" position="7">ٱلۡأَرۡضِ</word>
+  <word id="387" position="8">تَخَافُونَ</word>
+  <word id="388" position="9">أَن</word>
+  <word id="389" position="10">يَتَخَطَّفَكُمُ</word>
+  <word id="390" position="11">ٱلنَّاسُ</word>
+  <word id="391" position="12">فَـَٔاوَىٰكُمۡ</word>
+  <word id="392" position="13">وَأَيَّدَكُم</word>
+  <word id="393" position="14">بِنَصۡرِهِۦ</word>
+  <word id="394" position="15">وَرَزَقَكُم</word>
+  <word id="395" position="16">مِّنَ</word>
+  <word id="396" position="17">ٱلطَّيِّبَٰتِ</word>
+  <word id="397" position="18">لَعَلَّكُمۡ</word>
+  <word id="398" position="19">تَشۡكُرُونَ</word>
+  <word id="399" position="20" type="number">٢٦</word>
+  <ayah eid="8:26:shubah-kfqc"/>
+  <ayah number="27" tradition="shubah-kfqc" sid="8:27:shubah-kfqc"/>
+  <word id="400" position="1">يَٰٓأَيُّهَا</word>
+  <word id="401" position="2">ٱلَّذِينَ</word>
+  <word id="402" position="3">ءَامَنُواْ</word>
+  <word id="403" position="4">لَا</word>
+  <word id="404" position="5">تَخُونُواْ</word>
+  <word id="405" position="6">ٱللَّهَ</word>
+  <word id="406" position="7">وَٱلرَّسُولَ</word>
+  <word id="407" position="8">وَتَخُونُوٓاْ</word>
+  <word id="408" position="9">أَمَٰنَٰتِكُمۡ</word>
+  <word id="409" position="10">وَأَنتُمۡ</word>
+  <word id="410" position="11">تَعۡلَمُونَ</word>
+  <word id="411" position="12" type="number">٢٧</word>
+  <ayah eid="8:27:shubah-kfqc"/>
+  <ayah number="28" tradition="shubah-kfqc" sid="8:28:shubah-kfqc"/>
+  <word id="412" position="1">وَٱعۡلَمُوٓاْ</word>
+  <word id="413" position="2">أَنَّمَآ</word>
+  <word id="414" position="3">أَمۡوَٰلُكُمۡ</word>
+  <word id="415" position="4">وَأَوۡلَٰدُكُمۡ</word>
+  <word id="416" position="5">فِتۡنَةٞ</word>
+  <word id="417" position="6">وَأَنَّ</word>
+  <word id="418" position="7">ٱللَّهَ</word>
+  <word id="419" position="8">عِندَهُۥٓ</word>
+  <word id="420" position="9">أَجۡرٌ</word>
+  <word id="421" position="10">عَظِيمٞ</word>
+  <word id="422" position="11" type="number">٢٨</word>
+  <ayah eid="8:28:shubah-kfqc"/>
+  <ayah number="29" tradition="shubah-kfqc" sid="8:29:shubah-kfqc"/>
+  <word id="423" position="1">يَٰٓأَيُّهَا</word>
+  <word id="424" position="2">ٱلَّذِينَ</word>
+  <word id="425" position="3">ءَامَنُوٓاْ</word>
+  <word id="426" position="4">إِن</word>
+  <word id="427" position="5">تَتَّقُواْ</word>
+  <word id="428" position="6">ٱللَّهَ</word>
+  <word id="429" position="7">يَجۡعَل</word>
+  <word id="430" position="8">لَّكُمۡ</word>
+  <word id="431" position="9">فُرۡقَانٗا</word>
+  <word id="432" position="10">وَيُكَفِّرۡ</word>
+  <word id="433" position="11">عَنكُمۡ</word>
+  <word id="434" position="12">سَيِّـَٔاتِكُمۡ</word>
+  <word id="435" position="13">وَيَغۡفِرۡ</word>
+  <word id="436" position="14">لَكُمۡۗ</word>
+  <word id="437" position="15">وَٱللَّهُ</word>
+  <word id="438" position="16">ذُو</word>
+  <word id="439" position="17">ٱلۡفَضۡلِ</word>
+  <word id="440" position="18">ٱلۡعَظِيمِ</word>
+  <word id="441" position="19" type="number">٢٩</word>
+  <ayah eid="8:29:shubah-kfqc"/>
+  <ayah number="30" tradition="shubah-kfqc" sid="8:30:shubah-kfqc"/>
+  <word id="442" position="1">وَإِذۡ</word>
+  <word id="443" position="2">يَمۡكُرُ</word>
+  <word id="444" position="3">بِكَ</word>
+  <word id="445" position="4">ٱلَّذِينَ</word>
+  <word id="446" position="5">كَفَرُواْ</word>
+  <word id="447" position="6">لِيُثۡبِتُوكَ</word>
+  <word id="448" position="7">أَوۡ</word>
+  <word id="449" position="8">يَقۡتُلُوكَ</word>
+  <word id="450" position="9">أَوۡ</word>
+  <word id="451" position="10">يُخۡرِجُوكَۚ</word>
+  <word id="452" position="11">وَيَمۡكُرُونَ</word>
+  <word id="453" position="12">وَيَمۡكُرُ</word>
+  <word id="454" position="13">ٱللَّهُۖ</word>
+  <word id="455" position="14">وَٱللَّهُ</word>
+  <word id="456" position="15">خَيۡرُ</word>
+  <word id="457" position="16">ٱلۡمَٰكِرِينَ</word>
+  <word id="458" position="17" type="number">٣٠</word>
+  <ayah eid="8:30:shubah-kfqc"/>
+  <ayah number="31" tradition="shubah-kfqc" sid="8:31:shubah-kfqc"/>
+  <word id="459" position="1">وَإِذَا</word>
+  <word id="460" position="2">تُتۡلَىٰ</word>
+  <word id="461" position="3">عَلَيۡهِمۡ</word>
+  <word id="462" position="4">ءَايَٰتُنَا</word>
+  <word id="463" position="5">قَالُواْ</word>
+  <word id="464" position="6">قَدۡ</word>
+  <word id="465" position="7">سَمِعۡنَا</word>
+  <word id="466" position="8">لَوۡ</word>
+  <word id="467" position="9">نَشَآءُ</word>
+  <word id="468" position="10">لَقُلۡنَا</word>
+  <word id="469" position="11">مِثۡلَ</word>
+  <word id="470" position="12">هَٰذَآ</word>
+  <word id="471" position="13">إِنۡ</word>
+  <word id="472" position="14">هَٰذَآ</word>
+  <word id="473" position="15">إِلَّآ</word>
+  <word id="474" position="16">أَسَٰطِيرُ</word>
+  <word id="475" position="17">ٱلۡأَوَّلِينَ</word>
+  <word id="476" position="18" type="number">٣١</word>
+  <ayah eid="8:31:shubah-kfqc"/>
+  <ayah number="32" tradition="shubah-kfqc" sid="8:32:shubah-kfqc"/>
+  <word id="477" position="1">وَإِذۡ</word>
+  <word id="478" position="2">قَالُواْ</word>
+  <word id="479" position="3">ٱللَّهُمَّ</word>
+  <word id="480" position="4">إِن</word>
+  <word id="481" position="5">كَانَ</word>
+  <word id="482" position="6">هَٰذَا</word>
+  <word id="483" position="7">هُوَ</word>
+  <word id="484" position="8">ٱلۡحَقَّ</word>
+  <word id="485" position="9">مِنۡ</word>
+  <word id="486" position="10">عِندِكَ</word>
+  <word id="487" position="11">فَأَمۡطِرۡ</word>
+  <word id="488" position="12">عَلَيۡنَا</word>
+  <word id="489" position="13">حِجَارَةٗ</word>
+  <word id="490" position="14">مِّنَ</word>
+  <word id="491" position="15">ٱلسَّمَآءِ</word>
+  <word id="492" position="16">أَوِ</word>
+  <word id="493" position="17">ٱئۡتِنَا</word>
+  <word id="494" position="18">بِعَذَابٍ</word>
+  <word id="495" position="19">أَلِيمٖ</word>
+  <word id="496" position="20" type="number">٣٢</word>
+  <ayah eid="8:32:shubah-kfqc"/>
+  <ayah number="33" tradition="shubah-kfqc" sid="8:33:shubah-kfqc"/>
+  <word id="497" position="1">وَمَا</word>
+  <word id="498" position="2">كَانَ</word>
+  <word id="499" position="3">ٱللَّهُ</word>
+  <word id="500" position="4">لِيُعَذِّبَهُمۡ</word>
+  <word id="501" position="5">وَأَنتَ</word>
+  <word id="502" position="6">فِيهِمۡۚ</word>
+  <word id="503" position="7">وَمَا</word>
+  <word id="504" position="8">كَانَ</word>
+  <word id="505" position="9">ٱللَّهُ</word>
+  <word id="506" position="10">مُعَذِّبَهُمۡ</word>
+  <word id="507" position="11">وَهُمۡ</word>
+  <word id="508" position="12">يَسۡتَغۡفِرُونَ</word>
+  <word id="509" position="13" type="number">٣٣</word>
+  <ayah eid="8:33:shubah-kfqc"/>
+  <ayah number="34" tradition="shubah-kfqc" sid="8:34:shubah-kfqc"/>
+  <word id="510" position="1">وَمَا</word>
+  <word id="511" position="2">لَهُمۡ</word>
+  <word id="512" position="3">أَلَّا</word>
+  <word id="513" position="4">يُعَذِّبَهُمُ</word>
+  <word id="514" position="5">ٱللَّهُ</word>
+  <word id="515" position="6">وَهُمۡ</word>
+  <word id="516" position="7">يَصُدُّونَ</word>
+  <word id="517" position="8">عَنِ</word>
+  <word id="518" position="9">ٱلۡمَسۡجِدِ</word>
+  <word id="519" position="10">ٱلۡحَرَامِ</word>
+  <word id="520" position="11">وَمَا</word>
+  <word id="521" position="12">كَانُوٓاْ</word>
+  <word id="522" position="13">أَوۡلِيَآءَهُۥٓۚ</word>
+  <word id="523" position="14">إِنۡ</word>
+  <word id="524" position="15">أَوۡلِيَآؤُهُۥٓ</word>
+  <word id="525" position="16">إِلَّا</word>
+  <word id="526" position="17">ٱلۡمُتَّقُونَ</word>
+  <word id="527" position="18">وَلَٰكِنَّ</word>
+  <word id="528" position="19">أَكۡثَرَهُمۡ</word>
+  <word id="529" position="20">لَا</word>
+  <word id="530" position="21">يَعۡلَمُونَ</word>
+  <word id="531" position="22" type="number">٣٤</word>
+  <ayah eid="8:34:shubah-kfqc"/>
+  <ayah number="35" tradition="shubah-kfqc" sid="8:35:shubah-kfqc"/>
+  <word id="532" position="1">وَمَا</word>
+  <word id="533" position="2">كَانَ</word>
+  <word id="534" position="3">صَلَاتُهُمۡ</word>
+  <word id="535" position="4">عِندَ</word>
+  <word id="536" position="5">ٱلۡبَيۡتِ</word>
+  <word id="537" position="6">إِلَّا</word>
+  <word id="538" position="7">مُكَآءٗ</word>
+  <word id="539" position="8">وَتَصۡدِيَةٗۚ</word>
+  <word id="540" position="9">فَذُوقُواْ</word>
+  <word id="541" position="10">ٱلۡعَذَابَ</word>
+  <word id="542" position="11">بِمَا</word>
+  <word id="543" position="12">كُنتُمۡ</word>
+  <word id="544" position="13">تَكۡفُرُونَ</word>
+  <word id="545" position="14" type="number">٣٥</word>
+  <ayah eid="8:35:shubah-kfqc"/>
+  <ayah number="36" tradition="shubah-kfqc" sid="8:36:shubah-kfqc"/>
+  <word id="546" position="1">إِنَّ</word>
+  <word id="547" position="2">ٱلَّذِينَ</word>
+  <word id="548" position="3">كَفَرُواْ</word>
+  <word id="549" position="4">يُنفِقُونَ</word>
+  <word id="550" position="5">أَمۡوَٰلَهُمۡ</word>
+  <word id="551" position="6">لِيَصُدُّواْ</word>
+  <word id="552" position="7">عَن</word>
+  <word id="553" position="8">سَبِيلِ</word>
+  <word id="554" position="9">ٱللَّهِۚ</word>
+  <word id="555" position="10">فَسَيُنفِقُونَهَا</word>
+  <word id="556" position="11">ثُمَّ</word>
+  <word id="557" position="12">تَكُونُ</word>
+  <word id="558" position="13">عَلَيۡهِمۡ</word>
+  <word id="559" position="14">حَسۡرَةٗ</word>
+  <word id="560" position="15">ثُمَّ</word>
+  <word id="561" position="16">يُغۡلَبُونَۗ</word>
+  <word id="562" position="17">وَٱلَّذِينَ</word>
+  <word id="563" position="18">كَفَرُوٓاْ</word>
+  <word id="564" position="19">إِلَىٰ</word>
+  <word id="565" position="20">جَهَنَّمَ</word>
+  <word id="566" position="21">يُحۡشَرُونَ</word>
+  <word id="567" position="22" type="number">٣٦</word>
+  <ayah eid="8:36:shubah-kfqc"/>
+  <ayah number="37" tradition="shubah-kfqc" sid="8:37:shubah-kfqc"/>
+  <word id="568" position="1">لِيَمِيزَ</word>
+  <word id="569" position="2">ٱللَّهُ</word>
+  <word id="570" position="3">ٱلۡخَبِيثَ</word>
+  <word id="571" position="4">مِنَ</word>
+  <word id="572" position="5">ٱلطَّيِّبِ</word>
+  <word id="573" position="6">وَيَجۡعَلَ</word>
+  <word id="574" position="7">ٱلۡخَبِيثَ</word>
+  <word id="575" position="8">بَعۡضَهُۥ</word>
+  <word id="576" position="9">عَلَىٰ</word>
+  <word id="577" position="10">بَعۡضٖ</word>
+  <word id="578" position="11">فَيَرۡكُمَهُۥ</word>
+  <word id="579" position="12">جَمِيعٗا</word>
+  <word id="580" position="13">فَيَجۡعَلَهُۥ</word>
+  <word id="581" position="14">فِي</word>
+  <word id="582" position="15">جَهَنَّمَۚ</word>
+  <word id="583" position="16">أُوْلَٰٓئِكَ</word>
+  <word id="584" position="17">هُمُ</word>
+  <word id="585" position="18">ٱلۡخَٰسِرُونَ</word>
+  <word id="586" position="19" type="number">٣٧</word>
+  <ayah eid="8:37:shubah-kfqc"/>
+  <ayah number="38" tradition="shubah-kfqc" sid="8:38:shubah-kfqc"/>
+  <word id="587" position="1">قُل</word>
+  <word id="588" position="2">لِّلَّذِينَ</word>
+  <word id="589" position="3">كَفَرُوٓاْ</word>
+  <word id="590" position="4">إِن</word>
+  <word id="591" position="5">يَنتَهُواْ</word>
+  <word id="592" position="6">يُغۡفَرۡ</word>
+  <word id="593" position="7">لَهُم</word>
+  <word id="594" position="8">مَّا</word>
+  <word id="595" position="9">قَدۡ</word>
+  <word id="596" position="10">سَلَفَ</word>
+  <word id="597" position="11">وَإِن</word>
+  <word id="598" position="12">يَعُودُواْ</word>
+  <word id="599" position="13">فَقَدۡ</word>
+  <word id="600" position="14">مَضَتۡ</word>
+  <word id="601" position="15">سُنَّتُ</word>
+  <word id="602" position="16">ٱلۡأَوَّلِينَ</word>
+  <word id="603" position="17" type="number">٣٨</word>
+  <ayah eid="8:38:shubah-kfqc"/>
+  <ayah number="39" tradition="shubah-kfqc" sid="8:39:shubah-kfqc"/>
+  <word id="604" position="1">وَقَٰتِلُوهُمۡ</word>
+  <word id="605" position="2">حَتَّىٰ</word>
+  <word id="606" position="3">لَا</word>
+  <word id="607" position="4">تَكُونَ</word>
+  <word id="608" position="5">فِتۡنَةٞ</word>
+  <word id="609" position="6">وَيَكُونَ</word>
+  <word id="610" position="7">ٱلدِّينُ</word>
+  <word id="611" position="8">كُلُّهُۥ</word>
+  <word id="612" position="9">لِلَّهِۚ</word>
+  <word id="613" position="10">فَإِنِ</word>
+  <word id="614" position="11">ٱنتَهَوۡاْ</word>
+  <word id="615" position="12">فَإِنَّ</word>
+  <word id="616" position="13">ٱللَّهَ</word>
+  <word id="617" position="14">بِمَا</word>
+  <word id="618" position="15">يَعۡمَلُونَ</word>
+  <word id="619" position="16">بَصِيرٞ</word>
+  <word id="620" position="17" type="number">٣٩</word>
+  <ayah eid="8:39:shubah-kfqc"/>
+  <ayah number="40" tradition="shubah-kfqc" sid="8:40:shubah-kfqc"/>
+  <word id="621" position="1">وَإِن</word>
+  <word id="622" position="2">تَوَلَّوۡاْ</word>
+  <word id="623" position="3">فَٱعۡلَمُوٓاْ</word>
+  <word id="624" position="4">أَنَّ</word>
+  <word id="625" position="5">ٱللَّهَ</word>
+  <word id="626" position="6">مَوۡلَىٰكُمۡۚ</word>
+  <word id="627" position="7">نِعۡمَ</word>
+  <word id="628" position="8">ٱلۡمَوۡلَىٰ</word>
+  <word id="629" position="9">وَنِعۡمَ</word>
+  <word id="630" position="10">ٱلنَّصِيرُ</word>
+  <word id="631" position="11" type="number">٤٠</word>
+  <ayah eid="8:40:shubah-kfqc"/>
+  <ayah number="41" tradition="shubah-kfqc" sid="8:41:shubah-kfqc"/>
+  <word id="632" position="1">۞</word>
+  <word id="633" position="2">وَٱعۡلَمُوٓاْ</word>
+  <word id="634" position="3">أَنَّمَا</word>
+  <word id="635" position="4">غَنِمۡتُم</word>
+  <word id="636" position="5">مِّن</word>
+  <word id="637" position="6">شَيۡءٖ</word>
+  <word id="638" position="7">فَأَنَّ</word>
+  <word id="639" position="8">لِلَّهِ</word>
+  <word id="640" position="9">خُمُسَهُۥ</word>
+  <word id="641" position="10">وَلِلرَّسُولِ</word>
+  <word id="642" position="11">وَلِذِي</word>
+  <word id="643" position="12">ٱلۡقُرۡبَىٰ</word>
+  <word id="644" position="13">وَٱلۡيَتَٰمَىٰ</word>
+  <word id="645" position="14">وَٱلۡمَسَٰكِينِ</word>
+  <word id="646" position="15">وَٱبۡنِ</word>
+  <word id="647" position="16">ٱلسَّبِيلِ</word>
+  <word id="648" position="17">إِن</word>
+  <word id="649" position="18">كُنتُمۡ</word>
+  <word id="650" position="19">ءَامَنتُم</word>
+  <word id="651" position="20">بِٱللَّهِ</word>
+  <word id="652" position="21">وَمَآ</word>
+  <word id="653" position="22">أَنزَلۡنَا</word>
+  <word id="654" position="23">عَلَىٰ</word>
+  <word id="655" position="24">عَبۡدِنَا</word>
+  <word id="656" position="25">يَوۡمَ</word>
+  <word id="657" position="26">ٱلۡفُرۡقَانِ</word>
+  <word id="658" position="27">يَوۡمَ</word>
+  <word id="659" position="28">ٱلۡتَقَى</word>
+  <word id="660" position="29">ٱلۡجَمۡعَانِۗ</word>
+  <word id="661" position="30">وَٱللَّهُ</word>
+  <word id="662" position="31">عَلَىٰ</word>
+  <word id="663" position="32">كُلِّ</word>
+  <word id="664" position="33">شَيۡءٖ</word>
+  <word id="665" position="34">قَدِيرٌ</word>
+  <word id="666" position="35" type="number">٤١</word>
+  <ayah eid="8:41:shubah-kfqc"/>
+  <ayah number="42" tradition="shubah-kfqc" sid="8:42:shubah-kfqc"/>
+  <word id="667" position="1">إِذۡ</word>
+  <word id="668" position="2">أَنتُم</word>
+  <word id="669" position="3">بِٱلۡعُدۡوَةِ</word>
+  <word id="670" position="4">ٱلدُّنۡيَا</word>
+  <word id="671" position="5">وَهُم</word>
+  <word id="672" position="6">بِٱلۡعُدۡوَةِ</word>
+  <word id="673" position="7">ٱلۡقُصۡوَىٰ</word>
+  <word id="674" position="8">وَٱلرَّكۡبُ</word>
+  <word id="675" position="9">أَسۡفَلَ</word>
+  <word id="676" position="10">مِنكُمۡۚ</word>
+  <word id="677" position="11">وَلَوۡ</word>
+  <word id="678" position="12">تَوَاعَدتُّمۡ</word>
+  <word id="679" position="13">لَٱخۡتَلَفۡتُمۡ</word>
+  <word id="680" position="14">فِي</word>
+  <word id="681" position="15">ٱلۡمِيعَٰدِ</word>
+  <word id="682" position="16">وَلَٰكِن</word>
+  <word id="683" position="17">لِّيَقۡضِيَ</word>
+  <word id="684" position="18">ٱللَّهُ</word>
+  <word id="685" position="19">أَمۡرٗا</word>
+  <word id="686" position="20">كَانَ</word>
+  <word id="687" position="21">مَفۡعُولٗا</word>
+  <word id="688" position="22">لِّيَهۡلِكَ</word>
+  <word id="689" position="23">مَنۡ</word>
+  <word id="690" position="24">هَلَكَ</word>
+  <word id="691" position="25">عَنۢ</word>
+  <word id="692" position="26">بَيِّنَةٖ</word>
+  <word id="693" position="27">وَيَحۡيَىٰ</word>
+  <word id="694" position="28">مَنۡ</word>
+  <word id="695" position="29">حَـِۧيَ</word>
+  <word id="696" position="30">عَنۢ</word>
+  <word id="697" position="31">بَيِّنَةٖۗ</word>
+  <word id="698" position="32">وَإِنَّ</word>
+  <word id="699" position="33">ٱللَّهَ</word>
+  <word id="700" position="34">لَسَمِيعٌ</word>
+  <word id="701" position="35">عَلِيمٌ</word>
+  <word id="702" position="36" type="number">٤٢</word>
+  <ayah eid="8:42:shubah-kfqc"/>
+  <ayah number="43" tradition="shubah-kfqc" sid="8:43:shubah-kfqc"/>
+  <word id="703" position="1">إِذۡ</word>
+  <word id="704" position="2">يُرِيكَهُمُ</word>
+  <word id="705" position="3">ٱللَّهُ</word>
+  <word id="706" position="4">فِي</word>
+  <word id="707" position="5">مَنَامِكَ</word>
+  <word id="708" position="6">قَلِيلٗاۖ</word>
+  <word id="709" position="7">وَلَوۡ</word>
+  <word id="710" position="8">أَرَىٰكَهُمۡ</word>
+  <word id="711" position="9">كَثِيرٗا</word>
+  <word id="712" position="10">لَّفَشِلۡتُمۡ</word>
+  <word id="713" position="11">وَلَتَنَٰزَعۡتُمۡ</word>
+  <word id="714" position="12">فِي</word>
+  <word id="715" position="13">ٱلۡأَمۡرِ</word>
+  <word id="716" position="14">وَلَٰكِنَّ</word>
+  <word id="717" position="15">ٱللَّهَ</word>
+  <word id="718" position="16">سَلَّمَۚ</word>
+  <word id="719" position="17">إِنَّهُۥ</word>
+  <word id="720" position="18">عَلِيمُۢ</word>
+  <word id="721" position="19">بِذَاتِ</word>
+  <word id="722" position="20">ٱلصُّدُورِ</word>
+  <word id="723" position="21" type="number">٤٣</word>
+  <ayah eid="8:43:shubah-kfqc"/>
+  <ayah number="44" tradition="shubah-kfqc" sid="8:44:shubah-kfqc"/>
+  <word id="724" position="1">وَإِذۡ</word>
+  <word id="725" position="2">يُرِيكُمُوهُمۡ</word>
+  <word id="726" position="3">إِذِ</word>
+  <word id="727" position="4">ٱلۡتَقَيۡتُمۡ</word>
+  <word id="728" position="5">فِيٓ</word>
+  <word id="729" position="6">أَعۡيُنِكُمۡ</word>
+  <word id="730" position="7">قَلِيلٗا</word>
+  <word id="731" position="8">وَيُقَلِّلُكُمۡ</word>
+  <word id="732" position="9">فِيٓ</word>
+  <word id="733" position="10">أَعۡيُنِهِمۡ</word>
+  <word id="734" position="11">لِيَقۡضِيَ</word>
+  <word id="735" position="12">ٱللَّهُ</word>
+  <word id="736" position="13">أَمۡرٗا</word>
+  <word id="737" position="14">كَانَ</word>
+  <word id="738" position="15">مَفۡعُولٗاۗ</word>
+  <word id="739" position="16">وَإِلَى</word>
+  <word id="740" position="17">ٱللَّهِ</word>
+  <word id="741" position="18">تُرۡجَعُ</word>
+  <word id="742" position="19">ٱلۡأُمُورُ</word>
+  <word id="743" position="20" type="number">٤٤</word>
+  <ayah eid="8:44:shubah-kfqc"/>
+  <ayah number="45" tradition="shubah-kfqc" sid="8:45:shubah-kfqc"/>
+  <word id="744" position="1">يَٰٓأَيُّهَا</word>
+  <word id="745" position="2">ٱلَّذِينَ</word>
+  <word id="746" position="3">ءَامَنُوٓاْ</word>
+  <word id="747" position="4">إِذَا</word>
+  <word id="748" position="5">لَقِيتُمۡ</word>
+  <word id="749" position="6">فِئَةٗ</word>
+  <word id="750" position="7">فَٱثۡبُتُواْ</word>
+  <word id="751" position="8">وَٱذۡكُرُواْ</word>
+  <word id="752" position="9">ٱللَّهَ</word>
+  <word id="753" position="10">كَثِيرٗا</word>
+  <word id="754" position="11">لَّعَلَّكُمۡ</word>
+  <word id="755" position="12">تُفۡلِحُونَ</word>
+  <word id="756" position="13" type="number">٤٥</word>
+  <ayah eid="8:45:shubah-kfqc"/>
+  <ayah number="46" tradition="shubah-kfqc" sid="8:46:shubah-kfqc"/>
+  <word id="757" position="1">وَأَطِيعُواْ</word>
+  <word id="758" position="2">ٱللَّهَ</word>
+  <word id="759" position="3">وَرَسُولَهُۥ</word>
+  <word id="760" position="4">وَلَا</word>
+  <word id="761" position="5">تَنَٰزَعُواْ</word>
+  <word id="762" position="6">فَتَفۡشَلُواْ</word>
+  <word id="763" position="7">وَتَذۡهَبَ</word>
+  <word id="764" position="8">رِيحُكُمۡۖ</word>
+  <word id="765" position="9">وَٱصۡبِرُوٓاْۚ</word>
+  <word id="766" position="10">إِنَّ</word>
+  <word id="767" position="11">ٱللَّهَ</word>
+  <word id="768" position="12">مَعَ</word>
+  <word id="769" position="13">ٱلصَّٰبِرِينَ</word>
+  <word id="770" position="14" type="number">٤٦</word>
+  <ayah eid="8:46:shubah-kfqc"/>
+  <ayah number="47" tradition="shubah-kfqc" sid="8:47:shubah-kfqc"/>
+  <word id="771" position="1">وَلَا</word>
+  <word id="772" position="2">تَكُونُواْ</word>
+  <word id="773" position="3">كَٱلَّذِينَ</word>
+  <word id="774" position="4">خَرَجُواْ</word>
+  <word id="775" position="5">مِن</word>
+  <word id="776" position="6">دِيَٰرِهِم</word>
+  <word id="777" position="7">بَطَرٗا</word>
+  <word id="778" position="8">وَرِئَآءَ</word>
+  <word id="779" position="9">ٱلنَّاسِ</word>
+  <word id="780" position="10">وَيَصُدُّونَ</word>
+  <word id="781" position="11">عَن</word>
+  <word id="782" position="12">سَبِيلِ</word>
+  <word id="783" position="13">ٱللَّهِۚ</word>
+  <word id="784" position="14">وَٱللَّهُ</word>
+  <word id="785" position="15">بِمَا</word>
+  <word id="786" position="16">يَعۡمَلُونَ</word>
+  <word id="787" position="17">مُحِيطٞ</word>
+  <word id="788" position="18" type="number">٤٧</word>
+  <ayah eid="8:47:shubah-kfqc"/>
+  <ayah number="48" tradition="shubah-kfqc" sid="8:48:shubah-kfqc"/>
+  <word id="789" position="1">وَإِذۡ</word>
+  <word id="790" position="2">زَيَّنَ</word>
+  <word id="791" position="3">لَهُمُ</word>
+  <word id="792" position="4">ٱلشَّيۡطَٰنُ</word>
+  <word id="793" position="5">أَعۡمَٰلَهُمۡ</word>
+  <word id="794" position="6">وَقَالَ</word>
+  <word id="795" position="7">لَا</word>
+  <word id="796" position="8">غَالِبَ</word>
+  <word id="797" position="9">لَكُمُ</word>
+  <word id="798" position="10">ٱلۡيَوۡمَ</word>
+  <word id="799" position="11">مِنَ</word>
+  <word id="800" position="12">ٱلنَّاسِ</word>
+  <word id="801" position="13">وَإِنِّي</word>
+  <word id="802" position="14">جَارٞ</word>
+  <word id="803" position="15">لَّكُمۡۖ</word>
+  <word id="804" position="16">فَلَمَّا</word>
+  <word id="805" position="17">تَرَآءَتِ</word>
+  <word id="806" position="18">ٱلۡفِئَتَانِ</word>
+  <word id="807" position="19">نَكَصَ</word>
+  <word id="808" position="20">عَلَىٰ</word>
+  <word id="809" position="21">عَقِبَيۡهِ</word>
+  <word id="810" position="22">وَقَالَ</word>
+  <word id="811" position="23">إِنِّي</word>
+  <word id="812" position="24">بَرِيٓءٞ</word>
+  <word id="813" position="25">مِّنكُمۡ</word>
+  <word id="814" position="26">إِنِّيٓ</word>
+  <word id="815" position="27">أَرَىٰ</word>
+  <word id="816" position="28">مَا</word>
+  <word id="817" position="29">لَا</word>
+  <word id="818" position="30">تَرَوۡنَ</word>
+  <word id="819" position="31">إِنِّيٓ</word>
+  <word id="820" position="32">أَخَافُ</word>
+  <word id="821" position="33">ٱللَّهَۚ</word>
+  <word id="822" position="34">وَٱللَّهُ</word>
+  <word id="823" position="35">شَدِيدُ</word>
+  <word id="824" position="36">ٱلۡعِقَابِ</word>
+  <word id="825" position="37" type="number">٤٨</word>
+  <ayah eid="8:48:shubah-kfqc"/>
+  <ayah number="49" tradition="shubah-kfqc" sid="8:49:shubah-kfqc"/>
+  <word id="826" position="1">إِذۡ</word>
+  <word id="827" position="2">يَقُولُ</word>
+  <word id="828" position="3">ٱلۡمُنَٰفِقُونَ</word>
+  <word id="829" position="4">وَٱلَّذِينَ</word>
+  <word id="830" position="5">فِي</word>
+  <word id="831" position="6">قُلُوبِهِم</word>
+  <word id="832" position="7">مَّرَضٌ</word>
+  <word id="833" position="8">غَرَّ</word>
+  <word id="834" position="9">هَٰٓؤُلَآءِ</word>
+  <word id="835" position="10">دِينُهُمۡۗ</word>
+  <word id="836" position="11">وَمَن</word>
+  <word id="837" position="12">يَتَوَكَّلۡ</word>
+  <word id="838" position="13">عَلَى</word>
+  <word id="839" position="14">ٱللَّهِ</word>
+  <word id="840" position="15">فَإِنَّ</word>
+  <word id="841" position="16">ٱللَّهَ</word>
+  <word id="842" position="17">عَزِيزٌ</word>
+  <word id="843" position="18">حَكِيمٞ</word>
+  <word id="844" position="19" type="number">٤٩</word>
+  <ayah eid="8:49:shubah-kfqc"/>
+  <ayah number="50" tradition="shubah-kfqc" sid="8:50:shubah-kfqc"/>
+  <word id="845" position="1">وَلَوۡ</word>
+  <word id="846" position="2">تَرَىٰٓ</word>
+  <word id="847" position="3">إِذۡ</word>
+  <word id="848" position="4">يَتَوَفَّى</word>
+  <word id="849" position="5">ٱلَّذِينَ</word>
+  <word id="850" position="6">كَفَرُواْ</word>
+  <word id="851" position="7">ٱلۡمَلَٰٓئِكَةُ</word>
+  <word id="852" position="8">يَضۡرِبُونَ</word>
+  <word id="853" position="9">وُجُوهَهُمۡ</word>
+  <word id="854" position="10">وَأَدۡبَٰرَهُمۡ</word>
+  <word id="855" position="11">وَذُوقُواْ</word>
+  <word id="856" position="12">عَذَابَ</word>
+  <word id="857" position="13">ٱلۡحَرِيقِ</word>
+  <word id="858" position="14" type="number">٥٠</word>
+  <ayah eid="8:50:shubah-kfqc"/>
+  <ayah number="51" tradition="shubah-kfqc" sid="8:51:shubah-kfqc"/>
+  <word id="859" position="1">ذَٰلِكَ</word>
+  <word id="860" position="2">بِمَا</word>
+  <word id="861" position="3">قَدَّمَتۡ</word>
+  <word id="862" position="4">أَيۡدِيكُمۡ</word>
+  <word id="863" position="5">وَأَنَّ</word>
+  <word id="864" position="6">ٱللَّهَ</word>
+  <word id="865" position="7">لَيۡسَ</word>
+  <word id="866" position="8">بِظَلَّٰمٖ</word>
+  <word id="867" position="9">لِّلۡعَبِيدِ</word>
+  <word id="868" position="10" type="number">٥١</word>
+  <ayah eid="8:51:shubah-kfqc"/>
+  <ayah number="52" tradition="shubah-kfqc" sid="8:52:shubah-kfqc"/>
+  <word id="869" position="1">كَدَأۡبِ</word>
+  <word id="870" position="2">ءَالِ</word>
+  <word id="871" position="3">فِرۡعَوۡنَ</word>
+  <word id="872" position="4">وَٱلَّذِينَ</word>
+  <word id="873" position="5">مِن</word>
+  <word id="874" position="6">قَبۡلِهِمۡۚ</word>
+  <word id="875" position="7">كَفَرُواْ</word>
+  <word id="876" position="8">بِـَٔايَٰتِ</word>
+  <word id="877" position="9">ٱللَّهِ</word>
+  <word id="878" position="10">فَأَخَذَهُمُ</word>
+  <word id="879" position="11">ٱللَّهُ</word>
+  <word id="880" position="12">بِذُنُوبِهِمۡۚ</word>
+  <word id="881" position="13">إِنَّ</word>
+  <word id="882" position="14">ٱللَّهَ</word>
+  <word id="883" position="15">قَوِيّٞ</word>
+  <word id="884" position="16">شَدِيدُ</word>
+  <word id="885" position="17">ٱلۡعِقَابِ</word>
+  <word id="886" position="18" type="number">٥٢</word>
+  <ayah eid="8:52:shubah-kfqc"/>
+  <ayah number="53" tradition="shubah-kfqc" sid="8:53:shubah-kfqc"/>
+  <word id="887" position="1">ذَٰلِكَ</word>
+  <word id="888" position="2">بِأَنَّ</word>
+  <word id="889" position="3">ٱللَّهَ</word>
+  <word id="890" position="4">لَمۡ</word>
+  <word id="891" position="5">يَكُ</word>
+  <word id="892" position="6">مُغَيِّرٗا</word>
+  <word id="893" position="7">نِّعۡمَةً</word>
+  <word id="894" position="8">أَنۡعَمَهَا</word>
+  <word id="895" position="9">عَلَىٰ</word>
+  <word id="896" position="10">قَوۡمٍ</word>
+  <word id="897" position="11">حَتَّىٰ</word>
+  <word id="898" position="12">يُغَيِّرُواْ</word>
+  <word id="899" position="13">مَا</word>
+  <word id="900" position="14">بِأَنفُسِهِمۡ</word>
+  <word id="901" position="15">وَأَنَّ</word>
+  <word id="902" position="16">ٱللَّهَ</word>
+  <word id="903" position="17">سَمِيعٌ</word>
+  <word id="904" position="18">عَلِيمٞ</word>
+  <word id="905" position="19" type="number">٥٣</word>
+  <ayah eid="8:53:shubah-kfqc"/>
+  <ayah number="54" tradition="shubah-kfqc" sid="8:54:shubah-kfqc"/>
+  <word id="906" position="1">كَدَأۡبِ</word>
+  <word id="907" position="2">ءَالِ</word>
+  <word id="908" position="3">فِرۡعَوۡنَ</word>
+  <word id="909" position="4">وَٱلَّذِينَ</word>
+  <word id="910" position="5">مِن</word>
+  <word id="911" position="6">قَبۡلِهِمۡۚ</word>
+  <word id="912" position="7">كَذَّبُواْ</word>
+  <word id="913" position="8">بِـَٔايَٰتِ</word>
+  <word id="914" position="9">رَبِّهِمۡ</word>
+  <word id="915" position="10">فَأَهۡلَكۡنَٰهُم</word>
+  <word id="916" position="11">بِذُنُوبِهِمۡ</word>
+  <word id="917" position="12">وَأَغۡرَقۡنَآ</word>
+  <word id="918" position="13">ءَالَ</word>
+  <word id="919" position="14">فِرۡعَوۡنَۚ</word>
+  <word id="920" position="15">وَكُلّٞ</word>
+  <word id="921" position="16">كَانُواْ</word>
+  <word id="922" position="17">ظَٰلِمِينَ</word>
+  <word id="923" position="18" type="number">٥٤</word>
+  <ayah eid="8:54:shubah-kfqc"/>
+  <ayah number="55" tradition="shubah-kfqc" sid="8:55:shubah-kfqc"/>
+  <word id="924" position="1">إِنَّ</word>
+  <word id="925" position="2">شَرَّ</word>
+  <word id="926" position="3">ٱلدَّوَآبِّ</word>
+  <word id="927" position="4">عِندَ</word>
+  <word id="928" position="5">ٱللَّهِ</word>
+  <word id="929" position="6">ٱلَّذِينَ</word>
+  <word id="930" position="7">كَفَرُواْ</word>
+  <word id="931" position="8">فَهُمۡ</word>
+  <word id="932" position="9">لَا</word>
+  <word id="933" position="10">يُؤۡمِنُونَ</word>
+  <word id="934" position="11" type="number">٥٥</word>
+  <ayah eid="8:55:shubah-kfqc"/>
+  <ayah number="56" tradition="shubah-kfqc" sid="8:56:shubah-kfqc"/>
+  <word id="935" position="1">ٱلَّذِينَ</word>
+  <word id="936" position="2">عَٰهَدتَّ</word>
+  <word id="937" position="3">مِنۡهُمۡ</word>
+  <word id="938" position="4">ثُمَّ</word>
+  <word id="939" position="5">يَنقُضُونَ</word>
+  <word id="940" position="6">عَهۡدَهُمۡ</word>
+  <word id="941" position="7">فِي</word>
+  <word id="942" position="8">كُلِّ</word>
+  <word id="943" position="9">مَرَّةٖ</word>
+  <word id="944" position="10">وَهُمۡ</word>
+  <word id="945" position="11">لَا</word>
+  <word id="946" position="12">يَتَّقُونَ</word>
+  <word id="947" position="13" type="number">٥٦</word>
+  <ayah eid="8:56:shubah-kfqc"/>
+  <ayah number="57" tradition="shubah-kfqc" sid="8:57:shubah-kfqc"/>
+  <word id="948" position="1">فَإِمَّا</word>
+  <word id="949" position="2">تَثۡقَفَنَّهُمۡ</word>
+  <word id="950" position="3">فِي</word>
+  <word id="951" position="4">ٱلۡحَرۡبِ</word>
+  <word id="952" position="5">فَشَرِّدۡ</word>
+  <word id="953" position="6">بِهِم</word>
+  <word id="954" position="7">مَّنۡ</word>
+  <word id="955" position="8">خَلۡفَهُمۡ</word>
+  <word id="956" position="9">لَعَلَّهُمۡ</word>
+  <word id="957" position="10">يَذَّكَّرُونَ</word>
+  <word id="958" position="11" type="number">٥٧</word>
+  <ayah eid="8:57:shubah-kfqc"/>
+  <ayah number="58" tradition="shubah-kfqc" sid="8:58:shubah-kfqc"/>
+  <word id="959" position="1">وَإِمَّا</word>
+  <word id="960" position="2">تَخَافَنَّ</word>
+  <word id="961" position="3">مِن</word>
+  <word id="962" position="4">قَوۡمٍ</word>
+  <word id="963" position="5">خِيَانَةٗ</word>
+  <word id="964" position="6">فَٱنۢبِذۡ</word>
+  <word id="965" position="7">إِلَيۡهِمۡ</word>
+  <word id="966" position="8">عَلَىٰ</word>
+  <word id="967" position="9">سَوَآءٍۚ</word>
+  <word id="968" position="10">إِنَّ</word>
+  <word id="969" position="11">ٱللَّهَ</word>
+  <word id="970" position="12">لَا</word>
+  <word id="971" position="13">يُحِبُّ</word>
+  <word id="972" position="14">ٱلۡخَآئِنِينَ</word>
+  <word id="973" position="15" type="number">٥٨</word>
+  <ayah eid="8:58:shubah-kfqc"/>
+  <ayah number="59" tradition="shubah-kfqc" sid="8:59:shubah-kfqc"/>
+  <word id="974" position="1">وَلَا</word>
+  <word id="975" position="2">تَحۡسَبَنَّ</word>
+  <word id="976" position="3">ٱلَّذِينَ</word>
+  <word id="977" position="4">كَفَرُواْ</word>
+  <word id="978" position="5">سَبَقُوٓاْۚ</word>
+  <word id="979" position="6">إِنَّهُمۡ</word>
+  <word id="980" position="7">لَا</word>
+  <word id="981" position="8">يُعۡجِزُونَ</word>
+  <word id="982" position="9" type="number">٥٩</word>
+  <ayah eid="8:59:shubah-kfqc"/>
+  <ayah number="60" tradition="shubah-kfqc" sid="8:60:shubah-kfqc"/>
+  <word id="983" position="1">وَأَعِدُّواْ</word>
+  <word id="984" position="2">لَهُم</word>
+  <word id="985" position="3">مَّا</word>
+  <word id="986" position="4">ٱسۡتَطَعۡتُم</word>
+  <word id="987" position="5">مِّن</word>
+  <word id="988" position="6">قُوَّةٖ</word>
+  <word id="989" position="7">وَمِن</word>
+  <word id="990" position="8">رِّبَاطِ</word>
+  <word id="991" position="9">ٱلۡخَيۡلِ</word>
+  <word id="992" position="10">تُرۡهِبُونَ</word>
+  <word id="993" position="11">بِهِۦ</word>
+  <word id="994" position="12">عَدُوَّ</word>
+  <word id="995" position="13">ٱللَّهِ</word>
+  <word id="996" position="14">وَعَدُوَّكُمۡ</word>
+  <word id="997" position="15">وَءَاخَرِينَ</word>
+  <word id="998" position="16">مِن</word>
+  <word id="999" position="17">دُونِهِمۡ</word>
+  <word id="1000" position="18">لَا</word>
+  <word id="1001" position="19">تَعۡلَمُونَهُمُ</word>
+  <word id="1002" position="20">ٱللَّهُ</word>
+  <word id="1003" position="21">يَعۡلَمُهُمۡۚ</word>
+  <word id="1004" position="22">وَمَا</word>
+  <word id="1005" position="23">تُنفِقُواْ</word>
+  <word id="1006" position="24">مِن</word>
+  <word id="1007" position="25">شَيۡءٖ</word>
+  <word id="1008" position="26">فِي</word>
+  <word id="1009" position="27">سَبِيلِ</word>
+  <word id="1010" position="28">ٱللَّهِ</word>
+  <word id="1011" position="29">يُوَفَّ</word>
+  <word id="1012" position="30">إِلَيۡكُمۡ</word>
+  <word id="1013" position="31">وَأَنتُمۡ</word>
+  <word id="1014" position="32">لَا</word>
+  <word id="1015" position="33">تُظۡلَمُونَ</word>
+  <word id="1016" position="34" type="number">٦٠</word>
+  <ayah eid="8:60:shubah-kfqc"/>
+  <ayah number="61" tradition="shubah-kfqc" sid="8:61:shubah-kfqc"/>
+  <word id="1017" position="1">۞</word>
+  <word id="1018" position="2">وَإِن</word>
+  <word id="1019" position="3">جَنَحُواْ</word>
+  <word id="1020" position="4">لِلسِّلۡمِ</word>
+  <word id="1021" position="5">فَٱجۡنَحۡ</word>
+  <word id="1022" position="6">لَهَا</word>
+  <word id="1023" position="7">وَتَوَكَّلۡ</word>
+  <word id="1024" position="8">عَلَى</word>
+  <word id="1025" position="9">ٱللَّهِۚ</word>
+  <word id="1026" position="10">إِنَّهُۥ</word>
+  <word id="1027" position="11">هُوَ</word>
+  <word id="1028" position="12">ٱلسَّمِيعُ</word>
+  <word id="1029" position="13">ٱلۡعَلِيمُ</word>
+  <word id="1030" position="14" type="number">٦١</word>
+  <ayah eid="8:61:shubah-kfqc"/>
+  <ayah number="62" tradition="shubah-kfqc" sid="8:62:shubah-kfqc"/>
+  <word id="1031" position="1">وَإِن</word>
+  <word id="1032" position="2">يُرِيدُوٓاْ</word>
+  <word id="1033" position="3">أَن</word>
+  <word id="1034" position="4">يَخۡدَعُوكَ</word>
+  <word id="1035" position="5">فَإِنَّ</word>
+  <word id="1036" position="6">حَسۡبَكَ</word>
+  <word id="1037" position="7">ٱللَّهُۚ</word>
+  <word id="1038" position="8">هُوَ</word>
+  <word id="1039" position="9">ٱلَّذِيٓ</word>
+  <word id="1040" position="10">أَيَّدَكَ</word>
+  <word id="1041" position="11">بِنَصۡرِهِۦ</word>
+  <word id="1042" position="12">وَبِٱلۡمُؤۡمِنِينَ</word>
+  <word id="1043" position="13" type="number">٦٢</word>
+  <ayah eid="8:62:shubah-kfqc"/>
+  <ayah number="63" tradition="shubah-kfqc" sid="8:63:shubah-kfqc"/>
+  <word id="1044" position="1">وَأَلَّفَ</word>
+  <word id="1045" position="2">بَيۡنَ</word>
+  <word id="1046" position="3">قُلُوبِهِمۡۚ</word>
+  <word id="1047" position="4">لَوۡ</word>
+  <word id="1048" position="5">أَنفَقۡتَ</word>
+  <word id="1049" position="6">مَا</word>
+  <word id="1050" position="7">فِي</word>
+  <word id="1051" position="8">ٱلۡأَرۡضِ</word>
+  <word id="1052" position="9">جَمِيعٗا</word>
+  <word id="1053" position="10">مَّآ</word>
+  <word id="1054" position="11">أَلَّفۡتَ</word>
+  <word id="1055" position="12">بَيۡنَ</word>
+  <word id="1056" position="13">قُلُوبِهِمۡ</word>
+  <word id="1057" position="14">وَلَٰكِنَّ</word>
+  <word id="1058" position="15">ٱللَّهَ</word>
+  <word id="1059" position="16">أَلَّفَ</word>
+  <word id="1060" position="17">بَيۡنَهُمۡۚ</word>
+  <word id="1061" position="18">إِنَّهُۥ</word>
+  <word id="1062" position="19">عَزِيزٌ</word>
+  <word id="1063" position="20">حَكِيمٞ</word>
+  <word id="1064" position="21" type="number">٦٣</word>
+  <ayah eid="8:63:shubah-kfqc"/>
+  <ayah number="64" tradition="shubah-kfqc" sid="8:64:shubah-kfqc"/>
+  <word id="1065" position="1">يَٰٓأَيُّهَا</word>
+  <word id="1066" position="2">ٱلنَّبِيُّ</word>
+  <word id="1067" position="3">حَسۡبُكَ</word>
+  <word id="1068" position="4">ٱللَّهُ</word>
+  <word id="1069" position="5">وَمَنِ</word>
+  <word id="1070" position="6">ٱتَّبَعَكَ</word>
+  <word id="1071" position="7">مِنَ</word>
+  <word id="1072" position="8">ٱلۡمُؤۡمِنِينَ</word>
+  <word id="1073" position="9" type="number">٦٤</word>
+  <ayah eid="8:64:shubah-kfqc"/>
+  <ayah number="65" tradition="shubah-kfqc" sid="8:65:shubah-kfqc"/>
+  <word id="1074" position="1">يَٰٓأَيُّهَا</word>
+  <word id="1075" position="2">ٱلنَّبِيُّ</word>
+  <word id="1076" position="3">حَرِّضِ</word>
+  <word id="1077" position="4">ٱلۡمُؤۡمِنِينَ</word>
+  <word id="1078" position="5">عَلَى</word>
+  <word id="1079" position="6">ٱلۡقِتَالِۚ</word>
+  <word id="1080" position="7">إِن</word>
+  <word id="1081" position="8">يَكُن</word>
+  <word id="1082" position="9">مِّنكُمۡ</word>
+  <word id="1083" position="10">عِشۡرُونَ</word>
+  <word id="1084" position="11">صَٰبِرُونَ</word>
+  <word id="1085" position="12">يَغۡلِبُواْ</word>
+  <word id="1086" position="13">مِاْئَتَيۡنِۚ</word>
+  <word id="1087" position="14">وَإِن</word>
+  <word id="1088" position="15">يَكُن</word>
+  <word id="1089" position="16">مِّنكُم</word>
+  <word id="1090" position="17">مِّاْئَةٞ</word>
+  <word id="1091" position="18">يَغۡلِبُوٓاْ</word>
+  <word id="1092" position="19">أَلۡفٗا</word>
+  <word id="1093" position="20">مِّنَ</word>
+  <word id="1094" position="21">ٱلَّذِينَ</word>
+  <word id="1095" position="22">كَفَرُواْ</word>
+  <word id="1096" position="23">بِأَنَّهُمۡ</word>
+  <word id="1097" position="24">قَوۡمٞ</word>
+  <word id="1098" position="25">لَّا</word>
+  <word id="1099" position="26">يَفۡقَهُونَ</word>
+  <word id="1100" position="27" type="number">٦٥</word>
+  <ayah eid="8:65:shubah-kfqc"/>
+  <ayah number="66" tradition="shubah-kfqc" sid="8:66:shubah-kfqc"/>
+  <word id="1101" position="1">ٱلۡـَٰٔنَ</word>
+  <word id="1102" position="2">خَفَّفَ</word>
+  <word id="1103" position="3">ٱللَّهُ</word>
+  <word id="1104" position="4">عَنكُمۡ</word>
+  <word id="1105" position="5">وَعَلِمَ</word>
+  <word id="1106" position="6">أَنَّ</word>
+  <word id="1107" position="7">فِيكُمۡ</word>
+  <word id="1108" position="8">ضَعۡفٗاۚ</word>
+  <word id="1109" position="9">فَإِن</word>
+  <word id="1110" position="10">يَكُن</word>
+  <word id="1111" position="11">مِّنكُم</word>
+  <word id="1112" position="12">مِّاْئَةٞ</word>
+  <word id="1113" position="13">صَابِرَةٞ</word>
+  <word id="1114" position="14">يَغۡلِبُواْ</word>
+  <word id="1115" position="15">مِاْئَتَيۡنِۚ</word>
+  <word id="1116" position="16">وَإِن</word>
+  <word id="1117" position="17">يَكُن</word>
+  <word id="1118" position="18">مِّنكُمۡ</word>
+  <word id="1119" position="19">أَلۡفٞ</word>
+  <word id="1120" position="20">يَغۡلِبُوٓاْ</word>
+  <word id="1121" position="21">أَلۡفَيۡنِ</word>
+  <word id="1122" position="22">بِإِذۡنِ</word>
+  <word id="1123" position="23">ٱللَّهِۗ</word>
+  <word id="1124" position="24">وَٱللَّهُ</word>
+  <word id="1125" position="25">مَعَ</word>
+  <word id="1126" position="26">ٱلصَّٰبِرِينَ</word>
+  <word id="1127" position="27" type="number">٦٦</word>
+  <ayah eid="8:66:shubah-kfqc"/>
+  <ayah number="67" tradition="shubah-kfqc" sid="8:67:shubah-kfqc"/>
+  <word id="1128" position="1">مَا</word>
+  <word id="1129" position="2">كَانَ</word>
+  <word id="1130" position="3">لِنَبِيٍّ</word>
+  <word id="1131" position="4">أَن</word>
+  <word id="1132" position="5">يَكُونَ</word>
+  <word id="1133" position="6">لَهُۥٓ</word>
+  <word id="1134" position="7">أَسۡرَىٰ</word>
+  <word id="1135" position="8">حَتَّىٰ</word>
+  <word id="1136" position="9">يُثۡخِنَ</word>
+  <word id="1137" position="10">فِي</word>
+  <word id="1138" position="11">ٱلۡأَرۡضِۚ</word>
+  <word id="1139" position="12">تُرِيدُونَ</word>
+  <word id="1140" position="13">عَرَضَ</word>
+  <word id="1141" position="14">ٱلدُّنۡيَا</word>
+  <word id="1142" position="15">وَٱللَّهُ</word>
+  <word id="1143" position="16">يُرِيدُ</word>
+  <word id="1144" position="17">ٱلۡأٓخِرَةَۗ</word>
+  <word id="1145" position="18">وَٱللَّهُ</word>
+  <word id="1146" position="19">عَزِيزٌ</word>
+  <word id="1147" position="20">حَكِيمٞ</word>
+  <word id="1148" position="21" type="number">٦٧</word>
+  <ayah eid="8:67:shubah-kfqc"/>
+  <ayah number="68" tradition="shubah-kfqc" sid="8:68:shubah-kfqc"/>
+  <word id="1149" position="1">لَّوۡلَا</word>
+  <word id="1150" position="2">كِتَٰبٞ</word>
+  <word id="1151" position="3">مِّنَ</word>
+  <word id="1152" position="4">ٱللَّهِ</word>
+  <word id="1153" position="5">سَبَقَ</word>
+  <word id="1154" position="6">لَمَسَّكُمۡ</word>
+  <word id="1155" position="7">فِيمَآ</word>
+  <word id="1156" position="8">أَخَذتُّمۡ</word>
+  <word id="1157" position="9">عَذَابٌ</word>
+  <word id="1158" position="10">عَظِيمٞ</word>
+  <word id="1159" position="11" type="number">٦٨</word>
+  <ayah eid="8:68:shubah-kfqc"/>
+  <ayah number="69" tradition="shubah-kfqc" sid="8:69:shubah-kfqc"/>
+  <word id="1160" position="1">فَكُلُواْ</word>
+  <word id="1161" position="2">مِمَّا</word>
+  <word id="1162" position="3">غَنِمۡتُمۡ</word>
+  <word id="1163" position="4">حَلَٰلٗا</word>
+  <word id="1164" position="5">طَيِّبٗاۚ</word>
+  <word id="1165" position="6">وَٱتَّقُواْ</word>
+  <word id="1166" position="7">ٱللَّهَۚ</word>
+  <word id="1167" position="8">إِنَّ</word>
+  <word id="1168" position="9">ٱللَّهَ</word>
+  <word id="1169" position="10">غَفُورٞ</word>
+  <word id="1170" position="11">رَّحِيمٞ</word>
+  <word id="1171" position="12" type="number">٦٩</word>
+  <ayah eid="8:69:shubah-kfqc"/>
+  <ayah number="70" tradition="shubah-kfqc" sid="8:70:shubah-kfqc"/>
+  <word id="1172" position="1">يَٰٓأَيُّهَا</word>
+  <word id="1173" position="2">ٱلنَّبِيُّ</word>
+  <word id="1174" position="3">قُل</word>
+  <word id="1175" position="4">لِّمَن</word>
+  <word id="1176" position="5">فِيٓ</word>
+  <word id="1177" position="6">أَيۡدِيكُم</word>
+  <word id="1178" position="7">مِّنَ</word>
+  <word id="1179" position="8">ٱلۡأَسۡرَىٰٓ</word>
+  <word id="1180" position="9">إِن</word>
+  <word id="1181" position="10">يَعۡلَمِ</word>
+  <word id="1182" position="11">ٱللَّهُ</word>
+  <word id="1183" position="12">فِي</word>
+  <word id="1184" position="13">قُلُوبِكُمۡ</word>
+  <word id="1185" position="14">خَيۡرٗا</word>
+  <word id="1186" position="15">يُؤۡتِكُمۡ</word>
+  <word id="1187" position="16">خَيۡرٗا</word>
+  <word id="1188" position="17">مِّمَّآ</word>
+  <word id="1189" position="18">أُخِذَ</word>
+  <word id="1190" position="19">مِنكُمۡ</word>
+  <word id="1191" position="20">وَيَغۡفِرۡ</word>
+  <word id="1192" position="21">لَكُمۡۚ</word>
+  <word id="1193" position="22">وَٱللَّهُ</word>
+  <word id="1194" position="23">غَفُورٞ</word>
+  <word id="1195" position="24">رَّحِيمٞ</word>
+  <word id="1196" position="25" type="number">٧٠</word>
+  <ayah eid="8:70:shubah-kfqc"/>
+  <ayah number="71" tradition="shubah-kfqc" sid="8:71:shubah-kfqc"/>
+  <word id="1197" position="1">وَإِن</word>
+  <word id="1198" position="2">يُرِيدُواْ</word>
+  <word id="1199" position="3">خِيَانَتَكَ</word>
+  <word id="1200" position="4">فَقَدۡ</word>
+  <word id="1201" position="5">خَانُواْ</word>
+  <word id="1202" position="6">ٱللَّهَ</word>
+  <word id="1203" position="7">مِن</word>
+  <word id="1204" position="8">قَبۡلُ</word>
+  <word id="1205" position="9">فَأَمۡكَنَ</word>
+  <word id="1206" position="10">مِنۡهُمۡۗ</word>
+  <word id="1207" position="11">وَٱللَّهُ</word>
+  <word id="1208" position="12">عَلِيمٌ</word>
+  <word id="1209" position="13">حَكِيمٌ</word>
+  <word id="1210" position="14" type="number">٧١</word>
+  <ayah eid="8:71:shubah-kfqc"/>
+  <ayah number="72" tradition="shubah-kfqc" sid="8:72:shubah-kfqc"/>
+  <word id="1211" position="1">إِنَّ</word>
+  <word id="1212" position="2">ٱلَّذِينَ</word>
+  <word id="1213" position="3">ءَامَنُواْ</word>
+  <word id="1214" position="4">وَهَاجَرُواْ</word>
+  <word id="1215" position="5">وَجَٰهَدُواْ</word>
+  <word id="1216" position="6">بِأَمۡوَٰلِهِمۡ</word>
+  <word id="1217" position="7">وَأَنفُسِهِمۡ</word>
+  <word id="1218" position="8">فِي</word>
+  <word id="1219" position="9">سَبِيلِ</word>
+  <word id="1220" position="10">ٱللَّهِ</word>
+  <word id="1221" position="11">وَٱلَّذِينَ</word>
+  <word id="1222" position="12">ءَاوَواْ</word>
+  <word id="1223" position="13">وَّنَصَرُوٓاْ</word>
+  <word id="1224" position="14">أُوْلَٰٓئِكَ</word>
+  <word id="1225" position="15">بَعۡضُهُمۡ</word>
+  <word id="1226" position="16">أَوۡلِيَآءُ</word>
+  <word id="1227" position="17">بَعۡضٖۚ</word>
+  <word id="1228" position="18">وَٱلَّذِينَ</word>
+  <word id="1229" position="19">ءَامَنُواْ</word>
+  <word id="1230" position="20">وَلَمۡ</word>
+  <word id="1231" position="21">يُهَاجِرُواْ</word>
+  <word id="1232" position="22">مَا</word>
+  <word id="1233" position="23">لَكُم</word>
+  <word id="1234" position="24">مِّن</word>
+  <word id="1235" position="25">وَلَٰيَتِهِم</word>
+  <word id="1236" position="26">مِّن</word>
+  <word id="1237" position="27">شَيۡءٍ</word>
+  <word id="1238" position="28">حَتَّىٰ</word>
+  <word id="1239" position="29">يُهَاجِرُواْۚ</word>
+  <word id="1240" position="30">وَإِنِ</word>
+  <word id="1241" position="31">ٱسۡتَنصَرُوكُمۡ</word>
+  <word id="1242" position="32">فِي</word>
+  <word id="1243" position="33">ٱلدِّينِ</word>
+  <word id="1244" position="34">فَعَلَيۡكُمُ</word>
+  <word id="1245" position="35">ٱلنَّصۡرُ</word>
+  <word id="1246" position="36">إِلَّا</word>
+  <word id="1247" position="37">عَلَىٰ</word>
+  <word id="1248" position="38">قَوۡمِۭ</word>
+  <word id="1249" position="39">بَيۡنَكُمۡ</word>
+  <word id="1250" position="40">وَبَيۡنَهُم</word>
+  <word id="1251" position="41">مِّيثَٰقٞۗ</word>
+  <word id="1252" position="42">وَٱللَّهُ</word>
+  <word id="1253" position="43">بِمَا</word>
+  <word id="1254" position="44">تَعۡمَلُونَ</word>
+  <word id="1255" position="45">بَصِيرٞ</word>
+  <word id="1256" position="46" type="number">٧٢</word>
+  <ayah eid="8:72:shubah-kfqc"/>
+  <ayah number="73" tradition="shubah-kfqc" sid="8:73:shubah-kfqc"/>
+  <word id="1257" position="1">وَٱلَّذِينَ</word>
+  <word id="1258" position="2">كَفَرُواْ</word>
+  <word id="1259" position="3">بَعۡضُهُمۡ</word>
+  <word id="1260" position="4">أَوۡلِيَآءُ</word>
+  <word id="1261" position="5">بَعۡضٍۚ</word>
+  <word id="1262" position="6">إِلَّا</word>
+  <word id="1263" position="7">تَفۡعَلُوهُ</word>
+  <word id="1264" position="8">تَكُن</word>
+  <word id="1265" position="9">فِتۡنَةٞ</word>
+  <word id="1266" position="10">فِي</word>
+  <word id="1267" position="11">ٱلۡأَرۡضِ</word>
+  <word id="1268" position="12">وَفَسَادٞ</word>
+  <word id="1269" position="13">كَبِيرٞ</word>
+  <word id="1270" position="14" type="number">٧٣</word>
+  <ayah eid="8:73:shubah-kfqc"/>
+  <ayah number="74" tradition="shubah-kfqc" sid="8:74:shubah-kfqc"/>
+  <word id="1271" position="1">وَٱلَّذِينَ</word>
+  <word id="1272" position="2">ءَامَنُواْ</word>
+  <word id="1273" position="3">وَهَاجَرُواْ</word>
+  <word id="1274" position="4">وَجَٰهَدُواْ</word>
+  <word id="1275" position="5">فِي</word>
+  <word id="1276" position="6">سَبِيلِ</word>
+  <word id="1277" position="7">ٱللَّهِ</word>
+  <word id="1278" position="8">وَٱلَّذِينَ</word>
+  <word id="1279" position="9">ءَاوَواْ</word>
+  <word id="1280" position="10">وَّنَصَرُوٓاْ</word>
+  <word id="1281" position="11">أُوْلَٰٓئِكَ</word>
+  <word id="1282" position="12">هُمُ</word>
+  <word id="1283" position="13">ٱلۡمُؤۡمِنُونَ</word>
+  <word id="1284" position="14">حَقّٗاۚ</word>
+  <word id="1285" position="15">لَّهُم</word>
+  <word id="1286" position="16">مَّغۡفِرَةٞ</word>
+  <word id="1287" position="17">وَرِزۡقٞ</word>
+  <word id="1288" position="18">كَرِيمٞ</word>
+  <word id="1289" position="19" type="number">٧٤</word>
+  <ayah eid="8:74:shubah-kfqc"/>
+  <ayah number="75" tradition="shubah-kfqc" sid="8:75:shubah-kfqc"/>
+  <word id="1290" position="1">وَٱلَّذِينَ</word>
+  <word id="1291" position="2">ءَامَنُواْ</word>
+  <word id="1292" position="3">مِنۢ</word>
+  <word id="1293" position="4">بَعۡدُ</word>
+  <word id="1294" position="5">وَهَاجَرُواْ</word>
+  <word id="1295" position="6">وَجَٰهَدُواْ</word>
+  <word id="1296" position="7">مَعَكُمۡ</word>
+  <word id="1297" position="8">فَأُوْلَٰٓئِكَ</word>
+  <word id="1298" position="9">مِنكُمۡۚ</word>
+  <word id="1299" position="10">وَأُوْلُواْ</word>
+  <word id="1300" position="11">ٱلۡأَرۡحَامِ</word>
+  <word id="1301" position="12">بَعۡضُهُمۡ</word>
+  <word id="1302" position="13">أَوۡلَىٰ</word>
+  <word id="1303" position="14">بِبَعۡضٖ</word>
+  <word id="1304" position="15">فِي</word>
+  <word id="1305" position="16">كِتَٰبِ</word>
+  <word id="1306" position="17">ٱللَّهِۚ</word>
+  <word id="1307" position="18">إِنَّ</word>
+  <word id="1308" position="19">ٱللَّهَ</word>
+  <word id="1309" position="20">بِكُلِّ</word>
+  <word id="1310" position="21">شَيۡءٍ</word>
+  <word id="1311" position="22">عَلِيمُۢ</word>
+  <word id="1312" position="23" type="number">٧٥</word>
+  <ayah eid="8:75:shubah-kfqc"/>
+</qusx>

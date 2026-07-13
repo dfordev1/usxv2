@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qusx version="0.1" surah="107" name="Al-Ma'un" nameArabic="الماعون" ayahCount="7" revelationPlace="makkah" bismillahPre="true" tradition="shubah-kfqc" generatorVersion="0.1.0" normalization="NFC">
+  <ayah number="1" tradition="shubah-kfqc" sid="107:1:shubah-kfqc"/>
+  <word id="1" position="1">أَرَءَيۡتَ</word>
+  <word id="2" position="2">ٱلَّذِي</word>
+  <word id="3" position="3">يُكَذِّبُ</word>
+  <word id="4" position="4">بِٱلدِّينِ</word>
+  <word id="5" position="5" type="number">١</word>
+  <ayah eid="107:1:shubah-kfqc"/>
+  <ayah number="2" tradition="shubah-kfqc" sid="107:2:shubah-kfqc"/>
+  <word id="6" position="1">فَذَٰلِكَ</word>
+  <word id="7" position="2">ٱلَّذِي</word>
+  <word id="8" position="3">يَدُعُّ</word>
+  <word id="9" position="4">ٱلۡيَتِيمَ</word>
+  <word id="10" position="5" type="number">٢</word>
+  <ayah eid="107:2:shubah-kfqc"/>
+  <ayah number="3" tradition="shubah-kfqc" sid="107:3:shubah-kfqc"/>
+  <word id="11" position="1">وَلَا</word>
+  <word id="12" position="2">يَحُضُّ</word>
+  <word id="13" position="3">عَلَىٰ</word>
+  <word id="14" position="4">طَعَامِ</word>
+  <word id="15" position="5">ٱلۡمِسۡكِينِ</word>
+  <word id="16" position="6" type="number">٣</word>
+  <ayah eid="107:3:shubah-kfqc"/>
+  <ayah number="4" tradition="shubah-kfqc" sid="107:4:shubah-kfqc"/>
+  <word id="17" position="1">فَوَيۡلٞ</word>
+  <word id="18" position="2">لِّلۡمُصَلِّينَ</word>
+  <word id="19" position="3" type="number">٤</word>
+  <ayah eid="107:4:shubah-kfqc"/>
+  <ayah number="5" tradition="shubah-kfqc" sid="107:5:shubah-kfqc"/>
+  <word id="20" position="1">ٱلَّذِينَ</word>
+  <word id="21" position="2">هُمۡ</word>
+  <word id="22" position="3">عَن</word>
+  <word id="23" position="4">صَلَاتِهِمۡ</word>
+  <word id="24" position="5">سَاهُونَ</word>
+  <word id="25" position="6" type="number">٥</word>
+  <ayah eid="107:5:shubah-kfqc"/>
+  <ayah number="6" tradition="shubah-kfqc" sid="107:6:shubah-kfqc"/>
+  <word id="26" position="1">ٱلَّذِينَ</word>
+  <word id="27" position="2">هُمۡ</word>
+  <word id="28" position="3">يُرَآءُونَ</word>
+  <word id="29" position="4" type="number">٦</word>
+  <ayah eid="107:6:shubah-kfqc"/>
+  <ayah number="7" tradition="shubah-kfqc" sid="107:7:shubah-kfqc"/>
+  <word id="30" position="1">وَيَمۡنَعُونَ</word>
+  <word id="31" position="2">ٱلۡمَاعُونَ</word>
+  <word id="32" position="3" type="number">٧</word>
+  <ayah eid="107:7:shubah-kfqc"/>
+</qusx>
