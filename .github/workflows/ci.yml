@@ -25,6 +25,9 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
+      - name: Source-data integrity (bundled inputs must match recorded SHA-256 hashes)
+        run: node scripts/hash_sources.js
+
       - name: Semantic conformance check (src/validate.js)
         run: node src/validate.js all
 
