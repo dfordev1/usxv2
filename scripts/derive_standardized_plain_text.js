@@ -19,8 +19,17 @@
 //    minor imprecision; removed rather than kept as a partial/approximate
 //    rule.
 //
+// 3. Tanzil's downloaded plain-text file prepends the Bismillah to the
+//    FIRST ayah of every surah except Al-Fatihah (where the Bismillah IS
+//    ayah 1 itself) and At-Tawbah (which has no Bismillah at all) -- this
+//    is a real Tanzil download-format convention, not a QPC-vs-plain
+//    encoding difference. CONFIRMED by hashing Al-Baqarah 2:1 both ways:
+//    without the Bismillah prefix the hash doesn't match the manifest;
+//    with it prepended, it matches exactly. Resolves 63 verses when
+//    applied for real and re-checked (not assumed from the pattern alone).
+//
 // This is run against src/checksum-verify.js's own manifest to measure how
-// many verses this one confirmed rule actually resolves -- not assumed.
+// many verses these confirmed rules actually resolve -- not assumed.
 //
 // Usage: node scripts/derive_standardized_plain_text.js [--verify]
 //   --verify: also reconstructs every verse with the normalization applied
@@ -70,6 +79,15 @@ function main() {
   }
 
   const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf-8"));
+  const reconstructRaw = (words) =>
+    words
+      .filter((w) => !ARABIC_DIGIT_ONLY.test(w.text.trim()))
+      .map((w) => w.text)
+      .join(" ")
+      .normalize("NFC")
+      .trim();
+  const bismillahText = reconstructRaw(byVerse.get("1:1"));
+
   let checked = 0;
   let matchedBefore = 0;
   let matchedAfter = 0;
@@ -79,16 +97,18 @@ function main() {
     const words = byVerse.get(verseKey);
     if (!words) continue;
     checked++;
-    const rawText = words
-      .filter((w) => !ARABIC_DIGIT_ONLY.test(w.text.trim()))
-      .map((w) => w.text)
-      .join(" ")
-      .normalize("NFC")
-      .trim();
+    const rawText = reconstructRaw(words);
     if (sha256(rawText) === expectedHash) matchedBefore++;
 
-    const plainText = toStandardizedPlain(rawText).normalize("NFC").trim();
-    if (sha256(plainText) === expectedHash) {
+    let candidate = toStandardizedPlain(rawText).normalize("NFC").trim();
+    if (sha256(candidate) !== expectedHash) {
+      const [surahStr, ayahStr] = verseKey.split(":");
+      if (ayahStr === "1" && surahStr !== "1" && surahStr !== "9") {
+        candidate = toStandardizedPlain(bismillahText + " " + rawText).normalize("NFC").trim();
+      }
+    }
+
+    if (sha256(candidate) === expectedHash) {
       matchedAfter++;
     } else if (sha256(rawText) !== expectedHash) {
       stillMismatched.push(verseKey);
@@ -98,7 +118,7 @@ function main() {
   console.log(`Checked ${checked} verses.`);
   console.log(`Matched before normalization: ${matchedBefore} / ${checked}`);
   console.log(`Matched after normalization:  ${matchedAfter} / ${checked}`);
-  console.log(`Resolved by the two rules: ${matchedAfter - matchedBefore}`);
+  console.log(`Resolved by the confirmed rules: ${matchedAfter - matchedBefore}`);
   console.log(`Still unexplained: ${stillMismatched.length}`);
   fs.writeFileSync(
     path.join(__dirname, "..", "data", "external", "still-unexplained-verses.json"),

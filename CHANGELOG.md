@@ -5,6 +5,18 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Found and confirmed a second real checksum-mismatch pattern while
+  continuing the Text integrity investigation: Tanzil's downloaded plain
+  text file prepends the Bismillah to a surah's first ayah (except
+  Al-Fatihah, where it IS ayah 1, and At-Tawbah, which has none) -- a
+  download-format convention, not a QPC-encoding difference. Confirmed
+  directly, not assumed from the pattern: hashed Al-Baqarah 2:1 both ways
+  and only the Bismillah-prepended version matches the manifest. Added
+  as a real rule to `scripts/derive_standardized_plain_text.js` (not a
+  one-off check) and re-verified at full scale: 1,928/6,236 explained
+  (was 1,865), 4,308 genuinely unexplained (was 4,371). README's Text
+  integrity table and Known gaps updated with the corrected figures.
+
 - **Corrected another documentation claim** while investigating the 2
   unaddressed QUL print layouts (Digital Khatt, Ligature Basd SVG
   Mushaf). README said they "use a different data shape than the
