@@ -60,11 +60,16 @@ live source of truth.
    question (Basri vs Kufi vs Hijazi ʿadd al-āy) but not resolved — the
    actual Basri-school number needs a primary source (e.g. al-Dani's
    *al-Bayan fi ʿAdd Ay al-Qur'an*) not reachable from general search.
-3. **Word-level text for the pilot traditions is per-ayah, not per-word.**
-   The main generator's Hafs data has individual word IDs; the pilot's text
-   would need real word-splitting to reach that granularity (whitespace
-   split is what's done now — works, but hasn't been checked against edge
-   cases like multi-word idioms or elongation marks affecting boundaries).
+3. ~~Word-level text for the pilot traditions is per-ayah, not per-word~~ —
+   **CLOSED, verified 2026-07-13.** Each pilot word already gets its own
+   `id`/`position` via whitespace split (same granularity as the main
+   generator). Checked the actual edge case directly: raw source data has
+   1,639 ayahs with cosmetic whitespace (leading/trailing spaces, doubled
+   spaces) across the 5 text files, but the generator's real parsing logic
+   (`.trim()` + split on `/\s+/`) already handles all of them correctly —
+   0 empty-word or malformed-split results across all 5 traditions
+   (31,088 ayahs checked). This was already fine; it just hadn't been
+   verified before.
 4. **Rasm/text-variant support is explicitly out of scope for v1** (decided,
    not just deferred) — QUSX only models numbering differences between
    traditions, not actual differing wording.
