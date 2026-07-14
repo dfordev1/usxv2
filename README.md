@@ -3,11 +3,16 @@
 </p>
 
 <p align="center">
+  <a href="https://dfordev1.github.io/usxv2/app/"><img alt="Live demo" src="https://img.shields.io/badge/▶_live_demo-open_the_app-3f7d4f.svg"></a>
   <a href="https://github.com/dfordev1/usxv2/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-33564F.svg"></a>
   <a href="https://nodejs.org"><img alt="Node >=22" src="https://img.shields.io/badge/node-%3E%3D22-33564F.svg"></a>
   <img alt="1140 files, 0 validation errors" src="https://img.shields.io/badge/validated-1140%20files%2C%200%20errors-3f7d4f.svg">
   <img alt="10 Mushaf layouts" src="https://img.shields.io/badge/layouts-10-9c7a3c.svg">
   <a href="https://community.itqan.dev/d/549/2"><img alt="Itqan community discussion" src="https://img.shields.io/badge/discussion-Itqan%20community-33564F.svg"></a>
+</p>
+
+<p align="center">
+  <b>▶ Try it live: <a href="https://dfordev1.github.io/usxv2/app/">dfordev1.github.io/usxv2/app</a></b> — read the Mushaf, compare traditions, and inspect any word, straight in the browser. No install.
 </p>
 
 # QUSX — a milestone-based XML standard for the Qur'an
@@ -246,9 +251,14 @@ against it. Note XSD 1.0 cannot express "sid XOR eid" as a structural constraint
 `validate.js`, not by the schema itself — this is a real, stated scope split
 between the two tools, not an oversight.
 
-Open `viewer/viewer.html` directly in a browser to see two real generated files
-(Al-Fātiḥah and An-Nās) parsed live and rendered, with a raw-XML toggle and
-click-to-inspect on every word.
+**Hosted app (no install):** [dfordev1.github.io/usxv2/app](https://dfordev1.github.io/usxv2/app/)
+— reads the full Mushaf across all 10 layouts, compares numbering traditions
+side by side, and lets you inspect any word's morphology, fetching live from
+this repo.
+
+**Local single-file viewer:** open `viewer/viewer.html` directly in a browser
+to see two real generated files (Al-Fātiḥah and An-Nās) parsed live and
+rendered, with a raw-XML toggle and click-to-inspect on every word.
 
 ## Text integrity
 
