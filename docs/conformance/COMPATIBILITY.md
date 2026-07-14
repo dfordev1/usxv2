@@ -30,19 +30,24 @@ extension handling). It MUST NOT reject a document solely because
 
 ## Namespace strategy
 
-- **v1 decision: no XML namespace.** The current format uses unqualified
-  element/attribute names (`elementFormDefault="qualified"` in the XSD refers
-  to local elements, but no target namespace is declared). Introducing a
-  namespace now would break every existing consumer and file for no functional
-  gain, so v1 stays namespace-free.
-- **Reserved for v2:** if a namespace is ever introduced, it will be a
-  breaking (MAJOR) change with a dated namespace URI
-  (`https://.../qusx/2`), and a migration-impact report. v1 tooling is not
-  required to understand a namespaced document.
+- **v1 decision: `https://dfordev1.github.io/usxv2/ns/v1`.** Every element in
+  the core vocabulary is qualified by this target namespace
+  (`schema/qusx.xsd` declares it via `targetNamespace` with
+  `elementFormDefault="qualified"`; every generated `<qusx>` root carries a
+  matching default `xmlns="https://dfordev1.github.io/usxv2/ns/v1"`). This
+  was adopted as a deliberate, approved decision rather than left
+  namespace-free, so QUSX documents can be safely mixed with other XML
+  vocabularies (e.g. embedded in a larger corpus or pipeline) without name
+  collisions.
+- **Versioning:** a future breaking (MAJOR) format change gets its own dated
+  namespace URI (e.g. `https://dfordev1.github.io/usxv2/ns/v2`), with a
+  migration-impact report. v1 tooling is not required to understand a
+  document in a different namespace.
 - **Extension namespace (reserved, forward-looking):** third-party extension
   attributes/elements, if standardized later, SHOULD use their own namespace
-  prefix so they can never collide with core QUSX names. v1 core defines no
-  such extensions.
+  prefix (distinct from the core `https://dfordev1.github.io/usxv2/ns/v1`)
+  so they can never collide with core QUSX names. v1 core defines no such
+  extensions.
 
 ## Schema-version rules
 
@@ -62,9 +67,10 @@ QUSX v1 is a **closed core vocabulary** (the child elements and attributes in
 the XSD) but defines how producers and consumers should treat content outside
 it:
 
-- **Producers** MUST NOT emit non-core elements or attributes in the no-namespace
-  core in v1. (There is no sanctioned extension mechanism in v1 core; one is
-  reserved for a future minor via the extension namespace above.)
+- **Producers** MUST NOT emit non-core elements or attributes in the
+  `https://dfordev1.github.io/usxv2/ns/v1` core namespace in v1. (There is no
+  sanctioned extension mechanism in v1 core; one is reserved for a future
+  minor via the extension namespace above.)
 - **Consumers** SHOULD be liberal in what they accept for *forward*
   compatibility: when reading a document whose `version` is a higher `1.z`, a
   consumer MUST ignore (not error on) any element or attribute it does not
