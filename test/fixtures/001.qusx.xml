@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Metadata comment that should not confuse the validator -->
+<qusx xmlns="https://dfordev1.github.io/usxv2/ns/v1" version="0.1" surah="1" name="Al-Fatihah" nameArabic="الفاتحة" ayahCount="7" revelationPlace="makkah" bismillahPre="false" tradition="hafs-kufi">
+  <?processing instruction?>
+  <ayah number="1" tradition="hafs-kufi" sid="1:1:hafs-kufi"/>
+  <word id="1" position="1">بِسْمِ</word>
+  <ayah eid="1:1:hafs-kufi"/>
+  <ayah number="2" tradition="hafs-kufi" sid="1:2:hafs-kufi"/>
+  <word id="2" position="1">ٱلْحَمْدُ</word>
+  <ayah eid="1:2:hafs-kufi"/>
+  <ayah number="3" tradition="hafs-kufi" sid="1:3:hafs-kufi"/>
+  <word id="3" position="1">ٱلرَّحْمَـٰنِ</word>
+  <ayah eid="1:3:hafs-kufi"/>
+  <ayah number="4" tradition="hafs-kufi" sid="1:4:hafs-kufi"/>
+  <word id="4" position="1">ٱلرَّحِيمِ</word>
+  <ayah eid="1:4:hafs-kufi"/>
+  <ayah number="5" tradition="hafs-kufi" sid="1:5:hafs-kufi"/>
+  <word id="5" position="1">مَـٰلِكِ</word>
+  <ayah eid="1:5:hafs-kufi"/>
+  <ayah number="6" tradition="hafs-kufi" sid="1:6:hafs-kufi"/>
+  <word id="6" position="1">يَوْمِ</word>
+  <ayah eid="1:6:hafs-kufi"/>
+  <ayah number="7" tradition="hafs-kufi" sid="1:7:hafs-kufi"/>
+  <word id="7" position="1">ٱلْقِيَامَةِ</word>
+  <ayah eid="1:7:hafs-kufi"/>
+</qusx>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="51" name="Adh-Dhariyat" nameArabic="الذاريات" ayahCount="60" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)" generatorVersion="0.1.0" normalization="NFC">
+<qusx xmlns="https://dfordev1.github.io/usxv2/ns/v1" version="0.1" surah="51" name="Adh-Dhariyat" nameArabic="الذاريات" ayahCount="60" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V2 (1421H)" generatorVersion="0.1.0" normalization="NFC">
   <juz number="26" sid="juz:26" fragment="end"/>
   <manzil number="7" sid="manzil:7" fragment="middle"/>
   <hizb number="52" sid="hizb:52" fragment="end"/>

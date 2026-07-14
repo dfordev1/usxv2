@@ -17,6 +17,10 @@ const path = require("path");
 const { execFileSync, spawnSync } = require("child_process");
 const { validateFile, validateCrossLayoutConsistency } = require("../src/validate.js");
 
+const NODE = process.execPath;
+const PYTHON = "py";
+const PYTHON_ARGS = ["-3.14"];
+
 const FIXTURES = path.join(__dirname, "fixtures");
 const SCHEMA = path.join(__dirname, "..", "schema", "qusx.xsd");
 const GENERATE = path.join(__dirname, "..", "src", "generate.js");
@@ -38,8 +42,9 @@ function check(name, condition, detail) {
 function xsdValid(filePath) {
   try {
     const out = execFileSync(
-      "python",
+      PYTHON,
       [
+        ...PYTHON_ARGS,
         "-c",
         `
 from lxml import etree
@@ -71,6 +76,30 @@ function semanticErrorsFor(fixtureName) {
     return [String(e)];
   }
 }
+
+check(
+  "duplicate-root-attribute.qusx.xml is rejected by validate.js",
+  semanticErrorsFor("duplicate-root-attribute.qusx.xml").some((e) => /\[QUSX-WF-003\]/.test(e) && /duplicate attribute/i.test(e)),
+  "expected a duplicate root attribute error"
+);
+
+check(
+  "invalid-version.qusx.xml is rejected by validate.js",
+  semanticErrorsFor("invalid-version.qusx.xml").some((e) => /\[QUSX-STR-001\]/.test(e) && /version/i.test(e)),
+  "expected a version-format error"
+);
+
+check(
+  "bad-generator-version.qusx.xml is rejected by validate.js",
+  semanticErrorsFor("bad-generator-version.qusx.xml").some((e) => /\[QUSX-HDR-007\]/.test(e) && /generatorVersion/i.test(e)),
+  "expected a generatorVersion mismatch error"
+);
+
+check(
+  "001.qusx.xml is still accepted by validate.js",
+  semanticErrorsFor("001.qusx.xml").length === 0,
+  `expected no errors, got: ${JSON.stringify(semanticErrorsFor("001.qusx.xml"))}`
+);
 
 check(
   "duplicate-sid.qusx.xml is rejected by validate.js",
@@ -142,7 +171,7 @@ check(
 
 const cliTestDir = fs.mkdtempSync(path.join(require("os").tmpdir(), "qusx-cli-test-"));
 try {
-  const dedupeRun = spawnSync("node", [GENERATE, "--layout=madani-v2", `--output-dir=${cliTestDir}`, "1", "1"], {
+  const dedupeRun = spawnSync(NODE, [GENERATE, "--layout=madani-v2", `--output-dir=${cliTestDir}`, "1", "1"], {
     encoding: "utf-8",
   });
   check(
@@ -161,7 +190,7 @@ try {
     `expected output written under the temp dir, not the real output/ tree, got: ${dedupeRun.stdout}`
   );
 
-  const invalidRun = spawnSync("node", [GENERATE, "--layout=madani-v2", `--output-dir=${cliTestDir}`, "999"], {
+  const invalidRun = spawnSync(NODE, [GENERATE, "--layout=madani-v2", `--output-dir=${cliTestDir}`, "999"], {
     encoding: "utf-8",
   });
   check(
@@ -171,7 +200,7 @@ try {
   );
 
   const invalidLayoutRun = spawnSync(
-    "node",
+    NODE,
     [GENERATE, "--layout=nonexistent-layout", `--output-dir=${cliTestDir}`, "1"],
     { encoding: "utf-8" }
   );
@@ -230,7 +259,7 @@ fs.rmSync(tmpDir, { recursive: true, force: true });
 // underlying data — doesn't go unnoticed. This is intentionally NOT
 // asserting a clean pass: 1,125/6,236 matching is the honest current state.
 
-const checksumRun = spawnSync("node", [path.join(__dirname, "..", "src", "checksum-verify.js")], {
+const checksumRun = spawnSync(NODE, [path.join(__dirname, "..", "src", "checksum-verify.js")], {
   encoding: "utf-8",
 });
 check("checksum-verify.js exits non-zero (matches known 1,125/6,236 partial-match state)", checksumRun.status === 1);
@@ -249,7 +278,7 @@ check(
 // unclassified mismatch appears, or the residual count silently changes.
 
 const fullOptionsRun = spawnSync(
-  "node",
+  NODE,
   [path.join(__dirname, "..", "scripts", "checksum-verify-full-options.js")],
   { encoding: "utf-8" }
 );
@@ -283,7 +312,7 @@ check(
   (() => {
     const uthmaniPath = path.join(__dirname, "..", "data", "raw", "uthmani.json");
     const before = fs.readFileSync(uthmaniPath, "utf-8");
-    spawnSync("node", [path.join(__dirname, "..", "scripts", "checksum-verify-full-options.js")]);
+    spawnSync(NODE, [path.join(__dirname, "..", "scripts", "checksum-verify-full-options.js")]);
     const after = fs.readFileSync(uthmaniPath, "utf-8");
     return before === after;
   })()
@@ -291,14 +320,14 @@ check(
 
 // --- validate.js CLI hardening (found by external review, verified before fixing) ---
 
-const unknownLayoutRun = spawnSync("node", [VALIDATE, "--layout=does-not-exist", "all"], { encoding: "utf-8" });
+const unknownLayoutRun = spawnSync(NODE, [VALIDATE, "--layout=does-not-exist", "all"], { encoding: "utf-8" });
 check(
   "validate.js rejects an unknown --layout instead of silently reporting 0 files, 0 errors",
   unknownLayoutRun.status !== 0 && /Unknown layout/.test(unknownLayoutRun.stderr),
   `expected non-zero exit and an "Unknown layout" message, got status=${unknownLayoutRun.status} stderr=${unknownLayoutRun.stderr}`
 );
 
-const zeroFileRun = spawnSync("node", [VALIDATE, "--layout=madani-v2", "this-file-does-not-exist.xml"], { encoding: "utf-8" });
+const zeroFileRun = spawnSync(NODE, [VALIDATE, "--layout=madani-v2", "this-file-does-not-exist.xml"], { encoding: "utf-8" });
 check(
   "validate.js treats a missing file as a real failure, with a clean message not a raw stack trace",
   zeroFileRun.status !== 0 && /\[QUSX-WF-001\]/.test(zeroFileRun.stdout) && /could not read file/.test(zeroFileRun.stdout) && !/at Object\.readFileSync/.test(zeroFileRun.stderr),
@@ -306,7 +335,7 @@ check(
 );
 
 const arbitraryPathRun = spawnSync(
-  "node",
+  NODE,
   [VALIDATE, path.relative(path.join(__dirname, ".."), path.join(FIXTURES, "duplicate-sid.qusx.xml"))],
   { encoding: "utf-8", cwd: path.join(__dirname, "..") }
 );

@@ -202,7 +202,7 @@ function generateSurah(surahNumber, wordLocation, layoutLabel) {
   const lines = [];
   lines.push('<?xml version="1.0" encoding="UTF-8"?>');
   lines.push(
-    `<qusx version="0.1" surah="${surahNumber}" name="${xmlEscape(
+    `<qusx xmlns="https://dfordev1.github.io/usxv2/ns/v1" version="0.1" surah="${surahNumber}" name="${xmlEscape(
       normalize(surahName.name_simple)
     )}" nameArabic="${xmlEscape(normalize(surahName.name_arabic))}" ayahCount="${surahName.verses_count}" ` +
       `revelationPlace="${surahName.revelation_place}" bismillahPre="${surahName.bismillah_pre}" ` +

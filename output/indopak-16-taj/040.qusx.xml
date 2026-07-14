@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="40" name="Ghafir" nameArabic="غافر" ayahCount="85" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 16-line (Taj Company)" generatorVersion="0.1.0" normalization="NFC">
+<qusx xmlns="https://dfordev1.github.io/usxv2/ns/v1" version="0.1" surah="40" name="Ghafir" nameArabic="غافر" ayahCount="85" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 16-line (Taj Company)" generatorVersion="0.1.0" normalization="NFC">
   <juz number="24" sid="juz:24" fragment="middle"/>
   <manzil number="6" sid="manzil:6" fragment="middle"/>
   <hizb number="47" sid="hizb:47" fragment="end"/>

@@ -44,10 +44,12 @@
 
   <title>QUSX v1 semantic rules (portable subset)</title>
 
+  <ns prefix="q" uri="https://dfordev1.github.io/usxv2/ns/v1"/>
+
   <!-- The eight milestone axes. -->
   <pattern id="pin-axes">
 
-    <rule context="juz | manzil | hizb | rub | ruku | page | line | ayah">
+    <rule context="q:juz | q:manzil | q:hizb | q:rub | q:ruku | q:page | q:line | q:ayah">
 
       <!-- QUSX-PIN-001: exactly one of sid or eid. -->
       <assert test="(@sid and not(@eid)) or (@eid and not(@sid))">[QUSX-PIN-001] milestone must carry exactly one of sid or eid (never both, never neither)</assert>
@@ -73,7 +75,7 @@
   <!-- QUSX-TRD-001: every ayah opening pin's tradition equals the root tradition. -->
   <pattern id="tradition-consistency">
 
-    <rule context="ayah[@sid]">
+    <rule context="q:ayah[@sid]">
       <assert test="@tradition = /*/@tradition">[QUSX-TRD-001] ayah pin tradition "<value-of select="@tradition"/>" must equal the root qusx tradition "<value-of select="/*/@tradition"/>"</assert>
     </rule>
 

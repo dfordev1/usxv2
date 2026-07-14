@@ -22,6 +22,7 @@ const fs = require("fs");
 const path = require("path");
 
 const OUT = path.join(__dirname, "..", "output");
+const PACKAGE_VERSION = require("../package.json").version;
 
 // Canonical surah names, loaded once for the name/number cross-check below.
 // Missing gracefully (this validator can run on files outside the repo where
@@ -104,13 +105,24 @@ const REQUIRED_ATTRS = {
 function parseAttrs(attrString) {
   const attrs = {};
   const duplicates = [];
-  const re = /(\w+)="([^"]*)"/g;
+  const re = /([A-Za-z_][\w:.-]*)="([^"]*)"/g;
   let m;
   while ((m = re.exec(attrString))) {
     if (Object.prototype.hasOwnProperty.call(attrs, m[1])) duplicates.push(m[1]);
     attrs[m[1]] = m[2];
   }
   return { attrs, duplicates };
+}
+
+function isValidVersion(value) {
+  return /^\d+\.\d+(?:\.\d+)?(?:[-+][A-Za-z0-9.-]+)?$/.test(value);
+}
+
+function stripXmlNoise(xml) {
+  return xml
+    .replace(/<\?xml[\s\S]*?\?>/g, "")
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<\?(?!xml)[\s\S]*?\?>/g, "");
 }
 
 function validateFile(filePath) {
@@ -120,24 +132,45 @@ function validateFile(filePath) {
   // Always return the same shape ({errors, wordCount, ...}), even on early
   // failure -- a caller that destructures the result shouldn't have to
   // special-case "no root element found" as a different return type.
-  const EMPTY_RESULT = { wordCount: 0, sajdaCount: 0, rukuCount: 0, maxPageNumber: 0, ayahCount: 0, surah: null };
+  const EMPTY_RESULT = { wordCount: 0, sajdaCount: 0, rukuCount: 0, maxPageNumber: 0, ayahCount: 0, surah: null, generatorVersion: null };
 
-  let xml;
   try {
-    xml = fs.readFileSync(filePath, "utf-8");
+    fs.readFileSync(filePath, "utf-8");
   } catch (e) {
     // A missing/unreadable file is a validation failure to report, not a
     // crash -- a raw Node stack trace isn't a useful diagnostic here.
     return { errors: [`[QUSX-WF-001] ${fileName}: could not read file (${e.code || e.message})`], ...EMPTY_RESULT };
   }
 
-  const rootMatch = xml.match(/<qusx\s+([^>]*)>/);
+  const xml = fs.readFileSync(filePath, "utf-8");
+  const xmlForScanning = stripXmlNoise(xml);
+  const rootMatch = xmlForScanning.match(/<qusx\b([^>]*)\/?>/);
   if (!rootMatch) {
     return { errors: [`[QUSX-WF-001] ${fileName}: no <qusx> root element found`], ...EMPTY_RESULT };
   }
   const { attrs: rootAttrs, duplicates: rootDuplicates } = parseAttrs(rootMatch[1]);
   for (const dup of rootDuplicates) {
     errors.push(`[QUSX-WF-003] ${fileName}: root <qusx> has duplicate attribute "${dup}"`);
+  }
+  const scanChildren = [];
+  const childRe = /<(\w+)([^>]*?)(\/)?>/g;
+  let m;
+  while ((m = childRe.exec(xmlForScanning))) {
+    const tag = m[1];
+    if (tag === "qusx" || tag === "?xml") continue;
+    const { attrs } = parseAttrs(m[2]);
+    scanChildren.push({ tag, attrs, text: "" });
+  }
+  if ("generatorVersion" in rootAttrs && rootAttrs.generatorVersion !== PACKAGE_VERSION) {
+    errors.push(`[QUSX-HDR-007] ${fileName}: generatorVersion="${rootAttrs.generatorVersion}" does not match package version "${PACKAGE_VERSION}"`);
+  }
+  for (const req of ["version", "surah", "name", "nameArabic", "ayahCount", "revelationPlace", "bismillahPre", "tradition"]) {
+    if (!(req in rootAttrs)) {
+      errors.push(`[QUSX-STR-001] ${fileName}: root <qusx> missing required attr "${req}"`);
+    }
+  }
+  if ("version" in rootAttrs && !isValidVersion(rootAttrs.version)) {
+    errors.push(`[QUSX-STR-001] ${fileName}: root version "${rootAttrs.version}" is not a valid semantic version`);
   }
   const declaredAyahCount = Number(rootAttrs.ayahCount);
   const declaredSurah = Number(rootAttrs.surah);
@@ -197,8 +230,6 @@ function validateFile(filePath) {
   }
 
   // walk every top-level element in document order
-  const tagRe = /<(\w+)([^>]*?)(\/)?>/g;
-  let m;
   const openPerAxis = new Map(); // tag -> currently open {sid} for that axis (each axis is single-range at a time)
   const seenSids = new Map(); // sid -> tag
   let closedSids = new Set();
@@ -211,12 +242,9 @@ function validateFile(filePath) {
   let rukuCount = 0;
   let maxPageNumber = 0;
 
-  while ((m = tagRe.exec(xml))) {
-    const tag = m[1];
-    if (tag === "qusx" || tag === "?xml") continue;
-    const { attrs, duplicates } = parseAttrs(m[2]);
-    for (const dup of duplicates) errors.push(`[QUSX-WF-003] ${fileName}: <${tag}> has duplicate attribute "${dup}"`);
-    const selfClosing = !!m[3];
+  for (const node of scanChildren) {
+    const tag = node.tag;
+    const attrs = node.attrs || {};
 
     if (tag === "word") {
       for (const req of REQUIRED_ATTRS.word) {
@@ -359,6 +387,7 @@ function validateFile(filePath) {
     maxPageNumber,
     ayahCount: ayahNumbers.length,
     surah: Number(rootAttrs.surah),
+    generatorVersion: rootAttrs.generatorVersion || null,
   };
 }
 
@@ -402,8 +431,9 @@ function validateLayoutCompleteness(layoutDir, fileResults) {
       wordCount: acc.wordCount + r.wordCount,
       sajdaCount: acc.sajdaCount + r.sajdaCount,
       rukuCount: acc.rukuCount + r.rukuCount,
+      generatorVersionMismatch: acc.generatorVersionMismatch + (r.generatorVersion && r.generatorVersion !== PACKAGE_VERSION ? 1 : 0),
     }),
-    { ayahCount: 0, wordCount: 0, sajdaCount: 0, rukuCount: 0 }
+    { ayahCount: 0, wordCount: 0, sajdaCount: 0, rukuCount: 0, generatorVersionMismatch: 0 }
   );
 
   const CORPUS_TOTAL_RULE_IDS = {
@@ -416,6 +446,9 @@ function validateLayoutCompleteness(layoutDir, fileResults) {
     if (totals[key] !== EXPECTED_CORPUS_TOTALS[key]) {
       errors.push(`[${CORPUS_TOTAL_RULE_IDS[key]}] ${layoutDir}: corpus-wide ${key} is ${totals[key]}, expected ${EXPECTED_CORPUS_TOTALS[key]}`);
     }
+  }
+  if (totals.generatorVersionMismatch > 0) {
+    errors.push(`[QUSX-HDR-007] ${layoutDir}: ${totals.generatorVersionMismatch} file(s) have a generatorVersion that does not match package version "${PACKAGE_VERSION}"`);
   }
 
   const expectedPages = EXPECTED_PAGE_COUNTS[layoutDir];

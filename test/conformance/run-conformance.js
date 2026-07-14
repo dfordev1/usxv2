@@ -28,6 +28,8 @@ const HERE = __dirname;
 const ROOT = path.join(HERE, "..", "..");
 const SCHEMA_XSD = path.join(ROOT, "schema", "qusx.xsd");
 const SCHEMATRON_RUNNER = path.join(ROOT, "scripts", "schematron_validate.py");
+const PYTHON = "py";
+const PYTHON_ARGS = ["-3.14"];
 
 const manifest = JSON.parse(fs.readFileSync(path.join(HERE, "manifest.json"), "utf-8"));
 const rulesDoc = JSON.parse(fs.readFileSync(path.join(HERE, "rules.json"), "utf-8"));
@@ -49,8 +51,9 @@ function check(name, condition, detail) {
 function xsdResult(absFile) {
   try {
     const out = execFileSync(
-      "python",
+      PYTHON,
       [
+        ...PYTHON_ARGS,
         "-c",
         `
 from lxml import etree
@@ -76,7 +79,7 @@ print("VALID" if schema.validate(doc) else "INVALID")
 function runSchematronBatch(absFiles) {
   const res = new Map();
   if (absFiles.length === 0) return res;
-  const out = spawnSync("python", [SCHEMATRON_RUNNER, ...absFiles], { encoding: "utf-8" });
+  const out = spawnSync(PYTHON, [...PYTHON_ARGS, SCHEMATRON_RUNNER, ...absFiles], { encoding: "utf-8" });
   const text = (out.stdout || "") + "\n" + (out.stderr || "");
   let current = null;
   for (const line of text.split("\n")) {

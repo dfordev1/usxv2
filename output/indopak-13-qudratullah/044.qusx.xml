@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="44" name="Ad-Dukhan" nameArabic="الدخان" ayahCount="59" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 13-line (Qudratullah)" generatorVersion="0.1.0" normalization="NFC">
+<qusx xmlns="https://dfordev1.github.io/usxv2/ns/v1" version="0.1" surah="44" name="Ad-Dukhan" nameArabic="الدخان" ayahCount="59" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="IndoPak 13-line (Qudratullah)" generatorVersion="0.1.0" normalization="NFC">
   <juz number="25" sid="juz:25" fragment="middle"/>
   <manzil number="6" sid="manzil:6" fragment="middle"/>
   <hizb number="50" sid="hizb:50" fragment="middle"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="56" name="Al-Waqi'ah" nameArabic="الواقعة" ayahCount="96" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0" normalization="NFC">
+<qusx xmlns="https://dfordev1.github.io/usxv2/ns/v1" version="0.1" surah="56" name="Al-Waqi'ah" nameArabic="الواقعة" ayahCount="96" revelationPlace="makkah" bismillahPre="true" tradition="hafs-kufi" layout="KFGQPC V1 (1405H)" generatorVersion="0.1.0" normalization="NFC">
   <juz number="27" sid="juz:27" fragment="middle"/>
   <manzil number="7" sid="manzil:7" fragment="middle"/>
   <hizb number="54" sid="hizb:54" fragment="middle"/>
