@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>QUSX SDK browser example</title>
+<body>
+  <h1 id="title">Loading QUSX…</h1>
+  <p id="ayah" dir="rtl"></p>
+  <script type="module">
+    import { createQusxClient } from "https://cdn.jsdelivr.net/npm/qusx@0.1.0/+esm";
+
+    const qusx = createQusxClient({ layout: "madani-v1" });
+    const surah = await qusx.load(114);
+    document.querySelector("#title").textContent = surah.metadata.name;
+    document.querySelector("#ayah").textContent = surah.getAyah(3).recitationText;
+  </script>
+</body>
+</html>

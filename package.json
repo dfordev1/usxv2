@@ -2,12 +2,36 @@
   "name": "qusx",
   "version": "0.1.0",
   "description": "QUSX (Qur'an Unified Scripture XML) — a milestone-based XML data standard for the Qur'an, modeled on the Bible's USX/USFM standard. v0.1 research prototype, not a finished standard.",
-  "main": "src/generate.js",
+  "type": "commonjs",
+  "main": "sdk/index.mjs",
+  "module": "sdk/index.mjs",
+  "types": "sdk/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./sdk/index.d.ts",
+      "import": "./sdk/index.mjs",
+      "default": "./sdk/index.mjs"
+    },
+    "./node": {
+      "types": "./sdk/node.d.ts",
+      "import": "./sdk/node.mjs",
+      "default": "./sdk/node.mjs"
+    },
+    "./schema": "./schema/qusx.xsd",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "sdk/",
+    "schema/qusx.xsd",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
   "scripts": {
     "generate": "node src/generate.js all",
     "validate": "node src/validate.js all",
     "validate:xsd": "node scripts/run-python.js scripts/xsd_validate.py",
-    "test": "node test/run_tests.js",
+    "test": "node test/run_tests.js && node --test test/sdk.test.mjs",
     "checksum": "node src/checksum-verify.js",
     "checksum:full-options": "node scripts/checksum-verify-full-options.js",
     "checksum:baseline": "node scripts/checksum-baseline.js",
