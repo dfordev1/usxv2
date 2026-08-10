@@ -12,7 +12,7 @@
 // page/line pins (this text source's own page numbers haven't been
 // validated as a coherent layout -- see caveats in THIRD_PARTY_NOTICES.md).
 //
-// Usage: node scripts/generate_tradition_pilot.js <tradition> <surahNumber|all>
+// Usage: node scripts/generate_tradition_pilot.js [--output-dir=path] <tradition> <surahNumber|all>
 // Example: node scripts/generate_tradition_pilot.js warsh 1
 //          node scripts/generate_tradition_pilot.js warsh all
 
@@ -27,10 +27,19 @@ const surahNames = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "data", "raw", "quran-metadata-surah-name.json"), "utf-8")
 );
 
-const TRADITION = process.argv[2];
-const SURAH_ARG = process.argv[3];
+const rawArgs = process.argv.slice(2);
+let outputRoot = path.join(__dirname, "..", "output-pilot");
+const args = [];
+for (const arg of rawArgs) {
+  const outputMatch = arg.match(/^--output-dir=(.+)$/);
+  if (outputMatch) outputRoot = outputMatch[1];
+  else args.push(arg);
+}
+
+const TRADITION = args[0];
+const SURAH_ARG = args[1];
 if (!TRADITION || !SURAH_ARG) {
-  console.error("Usage: node scripts/generate_tradition_pilot.js <tradition> <surahNumber|all>");
+  console.error("Usage: node scripts/generate_tradition_pilot.js [--output-dir=path] <tradition> <surahNumber|all>");
   process.exit(1);
 }
 
@@ -48,7 +57,7 @@ if (!traditionId) {
 }
 
 const TEXT_DIR = path.join(__dirname, "..", "data", "traditions", "text");
-const OUT_DIR = path.join(__dirname, "..", "output-pilot", TRADITION);
+const OUT_DIR = path.join(outputRoot, TRADITION);
 
 const GENERATOR_VERSION = require("../package.json").version;
 
@@ -74,7 +83,7 @@ function generateOne(allAyahs, surahNumber) {
   const lines = [];
   lines.push('<?xml version="1.0" encoding="UTF-8"?>');
   lines.push(
-    `<qusx version="0.1" surah="${surahNumber}" name="${xmlEscape(normalize(canonical.name_simple))}" ` +
+    `<qusx xmlns="https://dfordev1.github.io/usxv2/ns/v1" version="0.1" surah="${surahNumber}" name="${xmlEscape(normalize(canonical.name_simple))}" ` +
       `nameArabic="${xmlEscape(normalize(canonical.name_arabic))}" ` +
       `ayahCount="${surahAyahs.length}" revelationPlace="${canonical.revelation_place}" ` +
       `bismillahPre="${canonical.bismillah_pre}" tradition="${traditionId}" ` +
