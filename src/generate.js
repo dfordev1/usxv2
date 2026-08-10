@@ -10,7 +10,8 @@ const fs = require("fs");
 const path = require("path");
 const { DatabaseSync } = require("node:sqlite");
 
-const GENERATOR_VERSION = require("../package.json").version;
+const PACKAGE = require("../package.json");
+const GENERATOR_VERSION = PACKAGE.qusxGeneratorVersion || PACKAGE.version;
 
 const RAW = path.join(__dirname, "..", "data", "raw");
 const LAYOUTS_DIR = path.join(__dirname, "..", "data", "layouts");
