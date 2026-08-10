@@ -59,7 +59,8 @@ if (!traditionId) {
 const TEXT_DIR = path.join(__dirname, "..", "data", "traditions", "text");
 const OUT_DIR = path.join(outputRoot, TRADITION);
 
-const GENERATOR_VERSION = require("../package.json").version;
+const PACKAGE = require("../package.json");
+const GENERATOR_VERSION = PACKAGE.qusxGeneratorVersion || PACKAGE.version;
 
 function xmlEscape(s) {
   return String(s)

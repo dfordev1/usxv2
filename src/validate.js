@@ -22,7 +22,8 @@ const fs = require("fs");
 const path = require("path");
 
 const OUT = path.join(__dirname, "..", "output");
-const PACKAGE_VERSION = require("../package.json").version;
+const PACKAGE = require("../package.json");
+const GENERATOR_VERSION = PACKAGE.qusxGeneratorVersion || PACKAGE.version;
 
 // Canonical surah names, loaded once for the name/number cross-check below.
 // Missing gracefully (this validator can run on files outside the repo where
@@ -161,8 +162,8 @@ function validateFile(filePath) {
     const { attrs } = parseAttrs(m[2]);
     scanChildren.push({ tag, attrs, text: "" });
   }
-  if ("generatorVersion" in rootAttrs && rootAttrs.generatorVersion !== PACKAGE_VERSION) {
-    errors.push(`[QUSX-HDR-007] ${fileName}: generatorVersion="${rootAttrs.generatorVersion}" does not match package version "${PACKAGE_VERSION}"`);
+  if ("generatorVersion" in rootAttrs && rootAttrs.generatorVersion !== GENERATOR_VERSION) {
+    errors.push(`[QUSX-HDR-007] ${fileName}: generatorVersion="${rootAttrs.generatorVersion}" does not match generator version "${GENERATOR_VERSION}"`);
   }
   for (const req of ["version", "surah", "name", "nameArabic", "ayahCount", "revelationPlace", "bismillahPre", "tradition"]) {
     if (!(req in rootAttrs)) {
@@ -431,7 +432,7 @@ function validateLayoutCompleteness(layoutDir, fileResults) {
       wordCount: acc.wordCount + r.wordCount,
       sajdaCount: acc.sajdaCount + r.sajdaCount,
       rukuCount: acc.rukuCount + r.rukuCount,
-      generatorVersionMismatch: acc.generatorVersionMismatch + (r.generatorVersion && r.generatorVersion !== PACKAGE_VERSION ? 1 : 0),
+      generatorVersionMismatch: acc.generatorVersionMismatch + (r.generatorVersion && r.generatorVersion !== GENERATOR_VERSION ? 1 : 0),
     }),
     { ayahCount: 0, wordCount: 0, sajdaCount: 0, rukuCount: 0, generatorVersionMismatch: 0 }
   );
@@ -448,7 +449,7 @@ function validateLayoutCompleteness(layoutDir, fileResults) {
     }
   }
   if (totals.generatorVersionMismatch > 0) {
-    errors.push(`[QUSX-HDR-007] ${layoutDir}: ${totals.generatorVersionMismatch} file(s) have a generatorVersion that does not match package version "${PACKAGE_VERSION}"`);
+    errors.push(`[QUSX-HDR-007] ${layoutDir}: ${totals.generatorVersionMismatch} file(s) have a generatorVersion that does not match generator version "${GENERATOR_VERSION}"`);
   }
 
   const expectedPages = EXPECTED_PAGE_COUNTS[layoutDir];

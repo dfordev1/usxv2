@@ -1,6 +1,7 @@
 {
   "name": "qusx",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.1",
+  "qusxGeneratorVersion": "0.1.0",
   "description": "QUSX (Qur'an Unified Scripture XML) — a milestone-based XML data standard for the Qur'an, modeled on the Bible's USX/USFM standard. v0.1 research prototype, not a finished standard.",
   "type": "commonjs",
   "main": "sdk/index.mjs",
