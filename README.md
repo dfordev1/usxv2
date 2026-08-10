@@ -36,6 +36,7 @@ across 1,773 languages — for Bible software.
 ## Table of contents
 
 - [Why this exists](#why-this-exists)
+- [JavaScript SDK](#javascript-sdk)
 - [Status](#status)
 - [Quick start](#quick-start)
 - [Example output](#example-output-al-fatihah-abridged)
@@ -44,6 +45,26 @@ across 1,773 languages — for Bible software.
 - [Validating and viewing](#validating-and-viewing)
 - [Known gaps](#known-gaps)
 - [Project layout](#project-layout)
+
+## JavaScript SDK
+
+Install the dependency-free parser in a Node.js or modern web project:
+
+```sh
+npm install qusx
+```
+
+```js
+import { createQusxClient } from "qusx";
+
+const qusx = createQusxClient({ layout: "madani-v1" });
+const surah = await qusx.load(114);
+
+console.log(surah.getAyah(3).recitationText);
+console.log(surah.getLine(604, 13).words);
+```
+
+The npm package contains the parser, TypeScript declarations, and schema—not the 98 MB generated corpus. The client fetches individual surahs on demand; production users can point it at their own versioned CDN. See the [SDK guide](docs/sdk.md) for parsing, local-file, and query examples.
 
 ## Why this exists
 
