@@ -1,17 +1,17 @@
 # QUSX JavaScript SDK
 
-The `qusx` package turns a QUSX XML file into a queryable document in Node.js or a modern web app. It has no runtime dependencies. The generated 98 MB corpus is deliberately not included in the npm package; load only the surahs your application needs.
+The `quran-usx` package turns a QUSX XML file into a queryable document in Node.js or a modern web app. It has no runtime dependencies. The generated 98 MB corpus is deliberately not included in the npm package; load only the surahs your application needs.
 
 ## Install
 
 ```sh
-npm install qusx
+npm install quran-usx
 ```
 
 ## Load a surah
 
 ```js
-import { createQusxClient } from "qusx";
+import { createQusxClient } from "quran-usx";
 
 const qusx = createQusxClient({ layout: "madani-v1" });
 const surah = await qusx.load(114);
@@ -35,7 +35,7 @@ const qusx = createQusxClient({
 ## Parse XML already in memory
 
 ```js
-import { parseQusx } from "qusx";
+import { parseQusx } from "quran-usx";
 
 const document = parseQusx(xmlString);
 const firstWord = document.getWord(1);
@@ -45,7 +45,7 @@ const firstJuzFragment = document.getJuz(1);
 ## Read a local file in Node.js
 
 ```js
-import { readQusx } from "qusx/node";
+import { readQusx } from "quran-usx/node";
 
 const document = await readQusx("./001.qusx.xml");
 ```

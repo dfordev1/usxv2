@@ -51,11 +51,11 @@ across 1,773 languages — for Bible software.
 Install the dependency-free parser in a Node.js or modern web project:
 
 ```sh
-npm install qusx
+npm install quran-usx
 ```
 
 ```js
-import { createQusxClient } from "qusx";
+import { createQusxClient } from "quran-usx";
 
 const qusx = createQusxClient({ layout: "madani-v1" });
 const surah = await qusx.load(114);
