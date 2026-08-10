@@ -1,5 +1,5 @@
 {
-  "name": "qusx",
+  "name": "quran-usx",
   "version": "0.1.0-beta.1",
   "qusxGeneratorVersion": "0.1.0",
   "description": "QUSX (Qur'an Unified Scripture XML) — a milestone-based XML data standard for the Qur'an, modeled on the Bible's USX/USFM standard. v0.1 research prototype, not a finished standard.",
@@ -65,7 +65,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dfordev1/usxv2"
+    "url": "git+https://github.com/dfordev1/usxv2.git"
   },
   "homepage": "https://github.com/dfordev1/usxv2"
 }
