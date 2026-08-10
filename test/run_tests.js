@@ -16,7 +16,7 @@ const fs = require("fs");
 const path = require("path");
 const { execFileSync, spawnSync } = require("child_process");
 const { validateFile, validateCrossLayoutConsistency } = require("../src/validate.js");
-const { candidateCommands, resolvePython } = require("./python-command.js");
+const { candidateCommands, resolvePython } = require("../scripts/python-command.js");
 
 const NODE = process.execPath;
 const { command: PYTHON, args: PYTHON_ARGS } = resolvePython();

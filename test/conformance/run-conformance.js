@@ -23,7 +23,7 @@ const fs = require("fs");
 const path = require("path");
 const { execFileSync, spawnSync } = require("child_process");
 const { validateFile } = require("../../src/validate.js");
-const { resolvePython } = require("../python-command.js");
+const { resolvePython } = require("../../scripts/python-command.js");
 
 const HERE = __dirname;
 const ROOT = path.join(HERE, "..", "..");
