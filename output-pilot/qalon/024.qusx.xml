@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<qusx version="0.1" surah="24" name="An-Nur" nameArabic="النور" ayahCount="62" revelationPlace="madinah" bismillahPre="true" tradition="qalon-kfqc" generatorVersion="0.1.0" normalization="NFC">
+<qusx xmlns="https://dfordev1.github.io/usxv2/ns/v1" version="0.1" surah="24" name="An-Nur" nameArabic="النور" ayahCount="62" revelationPlace="madinah" bismillahPre="true" tradition="qalon-kfqc" generatorVersion="0.1.0" normalization="NFC">
   <ayah number="1" tradition="qalon-kfqc" sid="24:1:qalon-kfqc"/>
   <word id="1" position="1">سُورَةٌ</word>
   <word id="2" position="2">أَنزَلْنَٰهَا</word>

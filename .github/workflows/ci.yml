@@ -25,50 +25,10 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Source-data integrity (bundled inputs must match recorded SHA-256 hashes)
-        run: node scripts/hash_sources.js
+      - name: Run the complete verification gate
+        run: npm run verify
 
-      - name: Semantic conformance check (src/validate.js)
-        run: node src/validate.js all
-
-      - name: XSD validation (real XML Schema processor)
-        run: python scripts/xsd_validate.py
-
-      - name: Negative tests
-        run: node test/run_tests.js
-
-      - name: Conformance suite — manifest consistency + executable fixture oracle
-        run: |
-          node test/conformance/verify-manifest.js
-          node test/conformance/run-conformance.js
-
-      - name: Portable semantic rules — Schematron over real files + fixtures
-        run: python scripts/schematron_validate.py
-
-      - name: Deterministic regeneration (committed output must match a fresh build from source)
-        run: |
-          for layout in madani-v2 madani-v1 madani-v4-tajweed qatar indopak-15 indopak-9-gaba indopak-13-qudratullah indopak-13-taj indopak-16-taj nastaleeq; do
-            node src/generate.js --layout=$layout all
-          done
-          git diff --exit-code -- output/ || (echo "::error::Regenerated output differs from committed output — either the generator changed without regenerating, or committed output was hand-edited." && exit 1)
-
-      - name: Pilot traditions — XSD validation (the 4 conforming traditions must stay XSD-valid)
-        run: python scripts/xsd_validate.py --pilot
-
-      - name: Pilot traditions — deterministic regeneration (committed pilot output must match a fresh build)
-        run: |
-          for tradition in warsh qalon douri shubah sousi; do
-            node scripts/generate_tradition_pilot.js $tradition all
-          done
-          git diff --exit-code -- output-pilot/ || (echo "::error::Regenerated pilot output differs from committed pilot output." && exit 1)
-
-      - name: Text integrity check (baseline gate — fails only if the match count regresses from the reviewed baseline)
-        run: node scripts/checksum-baseline.js
-
-      - name: Text integrity — full-options Tanzil comparison (fails only on an unclassified new mismatch)
-        run: node scripts/checksum-verify-full-options.js
-
-      - name: Verification must not modify the working tree (source-of-truth guarantee)
+      - name: Verification must not modify the working tree
         run: |
           git status --porcelain
-          test -z "$(git status --porcelain)" || (echo "::error::Running the verification suite left the working tree dirty -- something read as a source is being written to, or a generated file wasn't committed. See git status output above." && exit 1)
+          test -z "$(git status --porcelain)" || (echo "::error::Verification left the working tree dirty." && exit 1)

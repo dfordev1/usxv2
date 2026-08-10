@@ -265,7 +265,15 @@ rendered, with a raw-XML toggle and click-to-inspect on every word.
 ```bash
 node scripts/checksum-verify-full-options.js   # compare QUL's raw text directly against a real Tanzil export
 node src/checksum-verify.js                    # (superseded framing, kept for history — see below)
+python scripts/audit_qurancom.py madani-v1     # live independent audit of generated text/counts/structure against Quran.com
 ```
+
+The Quran.com audit is deliberately separate from the deterministic offline
+verification gate because it requires network access and compares against a
+live external service. It checks all 6,236 generated ayahs plus each ayah's
+page/juz/hizb/rub/manzil/ruku assignment. Exact glyph comparison is reported
+separately from a letter-level comparison so differences in optional recitation
+marks are not misreported as different Qur'anic letters.
 
 For the full retrieval details (exact Tanzil download options/URLs, dates,
 file hashes, Bismillah behavior) and the final per-verse decisions in one

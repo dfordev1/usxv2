@@ -23,13 +23,13 @@ const fs = require("fs");
 const path = require("path");
 const { execFileSync, spawnSync } = require("child_process");
 const { validateFile } = require("../../src/validate.js");
+const { resolvePython } = require("../../scripts/python-command.js");
 
 const HERE = __dirname;
 const ROOT = path.join(HERE, "..", "..");
 const SCHEMA_XSD = path.join(ROOT, "schema", "qusx.xsd");
 const SCHEMATRON_RUNNER = path.join(ROOT, "scripts", "schematron_validate.py");
-const PYTHON = "py";
-const PYTHON_ARGS = ["-3.14"];
+const { command: PYTHON, args: PYTHON_ARGS } = resolvePython();
 
 const manifest = JSON.parse(fs.readFileSync(path.join(HERE, "manifest.json"), "utf-8"));
 const rulesDoc = JSON.parse(fs.readFileSync(path.join(HERE, "rules.json"), "utf-8"));

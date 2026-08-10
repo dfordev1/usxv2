@@ -16,18 +16,24 @@ const fs = require("fs");
 const path = require("path");
 const { execFileSync, spawnSync } = require("child_process");
 const { validateFile, validateCrossLayoutConsistency } = require("../src/validate.js");
+const { candidateCommands, resolvePython } = require("../scripts/python-command.js");
 
 const NODE = process.execPath;
-const PYTHON = "py";
-const PYTHON_ARGS = ["-3.14"];
+const { command: PYTHON, args: PYTHON_ARGS } = resolvePython();
 
 const FIXTURES = path.join(__dirname, "fixtures");
 const SCHEMA = path.join(__dirname, "..", "schema", "qusx.xsd");
 const GENERATE = path.join(__dirname, "..", "src", "generate.js");
+const GENERATE_PILOT = path.join(__dirname, "..", "scripts", "generate_tradition_pilot.js");
 const VALIDATE = path.join(__dirname, "..", "src", "validate.js");
 
 let failures = 0;
 let passed = 0;
+
+check(
+  "Linux Python discovery uses portable python3/python commands and never the Windows py launcher",
+  candidateCommands("linux", {}).map((candidate) => candidate.command).join(",") === "python3,python"
+);
 
 function check(name, condition, detail) {
   if (condition) {
@@ -211,6 +217,26 @@ try {
   );
 } finally {
   fs.rmSync(cliTestDir, { recursive: true, force: true });
+}
+
+const pilotCliTestDir = fs.mkdtempSync(path.join(require("os").tmpdir(), "qusx-pilot-cli-test-"));
+try {
+  const pilotRun = spawnSync(NODE, [GENERATE_PILOT, `--output-dir=${pilotCliTestDir}`, "warsh", "1"], {
+    encoding: "utf-8",
+  });
+  const pilotFile = path.join(pilotCliTestDir, "warsh", "001.qusx.xml");
+  check(
+    "pilot generator supports redirected output and exits zero",
+    pilotRun.status === 0 && fs.existsSync(pilotFile),
+    `status=${pilotRun.status} stderr=${pilotRun.stderr}`
+  );
+  check(
+    "pilot generator emits the required QUSX namespace",
+    fs.readFileSync(pilotFile, "utf-8").includes('xmlns="https://dfordev1.github.io/usxv2/ns/v1"')
+  );
+  check("fresh pilot output passes the XSD", xsdValid(pilotFile) === "VALID");
+} finally {
+  fs.rmSync(pilotCliTestDir, { recursive: true, force: true });
 }
 
 // --- cross-layout consistency negative test ---
