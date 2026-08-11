@@ -34,7 +34,8 @@ test("CLI exposes the complete Surah 63 review inventory", async () => {
   const bundle = JSON.parse(stdout);
   assert.equal(bundle.completeness.candidateObservations, 8);
   assert.equal(bundle.completeness.uniqueReviewLocations, 4);
-  assert.equal(bundle.completeness.pending, 4);
+  assert.equal(bundle.completeness.reviewed, 4);
+  assert.equal(bundle.completeness.pending, 0);
 });
 
 test("CLI exposes eight-riwayah candidate data", async () => {

@@ -39,15 +39,38 @@ const records = [...grouped.values()].sort((a, b) => a.canonical.localeCompare(b
   notes: "",
 }));
 
+let printedEvidence = null;
+try {
+  printedEvidence = JSON.parse(await readFile(path.join(root, "data", "review", `surah-${String(surah).padStart(3, "0")}-printed-evidence-v1.json`), "utf8"));
+} catch (error) {
+  if (error?.code !== "ENOENT") throw error;
+}
+if (printedEvidence) {
+  for (const evidence of printedEvidence.records) {
+    const record = records.find((item) => item.id === evidence.reviewId);
+    if (!record) throw new Error(`Printed evidence references unknown review record ${evidence.reviewId}`);
+    record.status = evidence.status;
+    record.decision = evidence.decision;
+    record.reviewer = "QUSX printed-edition audit";
+    record.reviewedAt = "2026-08-11T00:00:00Z";
+    record.evidence = evidence.evidence.map((uri) => uri.startsWith("../../docs/")
+      ? `https://github.com/dfordev1/usxv2/blob/main/${uri.slice(6)}`
+      : uri);
+    record.notes = evidence.notes;
+  }
+}
+
+const reviewedCount = records.filter((record) => record.status === "printed-edition-verified").length;
+
 const bundle = {
   format: "qusx-surah-alignment-review",
   version: "1.0.0",
-  status: "complete-candidate-inventory-review-pending",
+  status: reviewedCount === records.length ? "complete-candidate-inventory-printed-edition-verified" : "complete-candidate-inventory-review-pending",
   surah,
   canonicalTradition: "hafs-kufi",
   traditions: ["hafs-kufi", "shubah-kfqc", "warsh-kfqc", "qalon-kfqc", "douri-kfqc", "sousi-kfqc"],
   generatedFrom: files.sort().map((file) => `../alignments/${file}`),
-  completeness: { candidateObservations: observationCount, uniqueReviewLocations: records.length, reviewed: 0, pending: records.length },
+  completeness: { candidateObservations: observationCount, uniqueReviewLocations: records.length, reviewed: reviewedCount, pending: records.length - reviewedCount },
   allowedDecisions: ["reading-variant", "orthography-presentation", "tokenization", "source-versification", "reject-candidate"],
   records,
 };

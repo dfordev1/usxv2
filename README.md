@@ -229,6 +229,14 @@ found no unresolved substantive disagreements; its machine-readable hashes and
 classified residuals are published in
 [`data/alignments/eight-riwayah-mirror-audit-v1.json`](data/alignments/eight-riwayah-mirror-audit-v1.json).
 
+The same printed-edition method is prepared for the complete queue. Run
+`npm run audit:printed:plan` to reproducibly build a repository-only audit plan
+covering all 937 candidates and 805 ayahs. Each record points to its exact page
+in a pinned Quranpedia commit for the five editions with verified boundary
+maps. Pages and crops are fetched only when a record is reviewed, avoiding a
+multi-gigabyte evidence copy. Missing boundaries and uncertain decisions stay
+explicitly unresolved; the generator never awards scholarly certification.
+
 Status is deliberately `source-authenticated-research-prototype`, not
 `scholarly-certified`. Evidence and the authentication boundary are documented
 in [`docs/alignment-authentication.md`](docs/alignment-authentication.md).

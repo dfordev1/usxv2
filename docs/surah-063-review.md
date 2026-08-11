@@ -10,12 +10,18 @@ npx quran-usx@beta review 63
 npx quran-usx@beta review 63 --json
 ```
 
-The four decisions required are at `63:6:16`, `63:10:14`, `63:11:6`, and
-`63:11:11`. The JSON preserves every source token and its surrounding context.
-None is approved yet: each record is `scholarly-review-required`, with empty
-reviewer, date, evidence, and decision fields.
+The four locations are `63:6:16`, `63:10:14`, `63:11:6`, and `63:11:11`.
+The JSON preserves every source token and its surrounding context. All four are
+now `printed-edition-verified`: they were visually checked against page 555 of
+the relevant KFQC vector-page exports. Source pages, focused screenshots,
+hashes and decisions are recorded in
+`data/review/surah-063-printed-evidence-v1.json` and
+`docs/evidence/surah-063/`.
 
-A qualified reviewer should classify each location as one of:
+This status means that QUSX matches what those edition files visibly print. It
+does not claim scholarly certification of the underlying qiraat.
+
+A later qualified reviewer may confirm or revise each classification:
 
 - `reading-variant`
 - `orthography-presentation`
@@ -23,7 +29,6 @@ A qualified reviewer should classify each location as one of:
 - `source-versification`
 - `reject-candidate`
 
-For an approval, fill `reviewer`, `reviewedAt`, `decision`, at least one
-authoritative evidence URL, and concise notes. A second reviewer should verify
-all `reading-variant` decisions before they move into the normative alignment
-file. Regenerate the untouched inventory with `npm run review:surah -- 63`.
+The two `reading-variant` decisions should not move into the normative alignment
+file as scholarly certified without qualified review. Regenerate the inventory
+and reapply its evidence overlay with `npm run review:surah -- 63`.

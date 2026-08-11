@@ -5,6 +5,17 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added a reproducible printed-edition audit plan for all 937 eight-riwayah
+  candidates across 805 ayahs. It maps each record to pinned Quranpedia SVG
+  pages for the five traditions with complete local boundary indexes and keeps
+  evidence status pending until a visual decision is recorded.
+
+- Added the first printed-edition evidence pack for all four Surah 63 review
+  locations. Five KFQC page-555 vector exports (Hafs, Warsh, Qalun, Al-Duri and
+  Shu'bah) are pinned by upstream blob ID and SHA-256, with focused screenshots
+  and edition-scoped decisions. Records are now `printed-edition-verified`,
+  explicitly not scholarly certified.
+
 - Added a deterministic importer for Sheikh Talha bin Bashir's 77,432-row
   eight-riwayah parallel-word workbook. It maps every source row to stable QUSX
   Hafs locations, preserves all eight readings and workbook provenance, handles

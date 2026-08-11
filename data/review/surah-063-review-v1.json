@@ -1,7 +1,7 @@
 {
   "format": "qusx-surah-alignment-review",
   "version": "1.0.0",
-  "status": "complete-candidate-inventory-review-pending",
+  "status": "complete-candidate-inventory-printed-edition-verified",
   "surah": 63,
   "canonicalTradition": "hafs-kufi",
   "traditions": [
@@ -22,8 +22,8 @@
   "completeness": {
     "candidateObservations": 8,
     "uniqueReviewLocations": 4,
-    "reviewed": 0,
-    "pending": 4
+    "reviewed": 4,
+    "pending": 0
   },
   "allowedDecisions": [
     "reading-variant",
@@ -244,12 +244,16 @@
           ]
         }
       ],
-      "status": "scholarly-review-required",
-      "decision": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "evidence": [],
-      "notes": ""
+      "status": "printed-edition-verified",
+      "decision": "orthography-presentation",
+      "reviewer": "QUSX printed-edition audit",
+      "reviewedAt": "2026-08-11T00:00:00Z",
+      "evidence": [
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/hafs-63-6.png",
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/warsh-63-6.png",
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/qalon-63-6.png"
+      ],
+      "notes": "Page 555, lines 3-4: the final-ya presentation difference is visible in the Hafs, Warsh and Qalun edition files."
     },
     {
       "id": "qusx:review:063:002",
@@ -462,12 +466,16 @@
           ]
         }
       ],
-      "status": "scholarly-review-required",
-      "decision": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "evidence": [],
-      "notes": ""
+      "status": "printed-edition-verified",
+      "decision": "orthography-presentation",
+      "reviewer": "QUSX printed-edition audit",
+      "reviewedAt": "2026-08-11T00:00:00Z",
+      "evidence": [
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/hafs-63-10-11.png",
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/warsh-63-10-11.png",
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/qalon-63-10-11.png"
+      ],
+      "notes": "Page 555, lines 12-14: the final-ya presentation difference is visible in the three edition files."
     },
     {
       "id": "qusx:review:063:003",
@@ -781,12 +789,17 @@
           ]
         }
       ],
-      "status": "scholarly-review-required",
-      "decision": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "evidence": [],
-      "notes": ""
+      "status": "printed-edition-verified",
+      "decision": "reading-variant",
+      "reviewer": "QUSX printed-edition audit",
+      "reviewedAt": "2026-08-11T00:00:00Z",
+      "evidence": [
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/hafs-63-11-word.png",
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/warsh-63-11-word.png",
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/qalon-63-11-word.png",
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/douri-63-11-word.png"
+      ],
+      "notes": "Page 555, line 15: Hafs prints جاء with the standalone hamza; Warsh, Qalun and Al-Duri print جا without it."
     },
     {
       "id": "qusx:review:063:004",
@@ -858,12 +871,15 @@
           ]
         }
       ],
-      "status": "scholarly-review-required",
-      "decision": null,
-      "reviewer": null,
-      "reviewedAt": null,
-      "evidence": [],
-      "notes": ""
+      "status": "printed-edition-verified",
+      "decision": "reading-variant",
+      "reviewer": "QUSX printed-edition audit",
+      "reviewedAt": "2026-08-11T00:00:00Z",
+      "evidence": [
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/hafs-63-11-ending.png",
+        "https://github.com/dfordev1/usxv2/blob/main/docs/evidence/surah-063/shubah-63-11-ending.png"
+      ],
+      "notes": "Page 555, line 15: Hafs prints تعملون while Shu'bah prints يعملون."
     }
   ]
 }
