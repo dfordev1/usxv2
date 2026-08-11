@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0101-0105.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:008551","canonical":"3:146:3","decision":"uncertain","notes":"Visible forms differ in the final weak-letter/hamza form of نَبِيّ; no subtype asserted."},
+    {"id":"qusx:printed-audit:008782","canonical":"3:155:7","decision":"orthography-presentation","notes":"Visible forms preserve الْجَمْعَانِ; initial alif and standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:008831","canonical":"3:156:35","decision":"reading-variant","notes":"Bazzi and Qunbul visibly use يَعْمَلُونَ while the other editions use تَعْمَلُونَ."},
+    {"id":"qusx:printed-audit:008846","canonical":"3:157:14","decision":"reading-variant","notes":"Hafs visibly uses يَجْمَعُونَ while the other editions use تَجْمَعُونَ."},
+    {"id":"qusx:printed-audit:008851","canonical":"3:158:5","decision":"uncertain","notes":"Douri and Sousi show a different alif/hamza presentation in لَإِلَى; preserved as uncertain."}
+  ]
+}
