@@ -44,6 +44,17 @@ test("first printed review batch records ten edition-scoped decisions", async ()
   assert.ok(decisions.records.every((record) => record.decision && record.notes));
 });
 
+test("complete verdict covers every candidate without inventing semantic certainty", async () => {
+  const chunks = [];
+  for await (const chunk of createReadStream(new URL("../data/review/eight-riwayah-complete-error-verdict-v1.json.gz", import.meta.url)).pipe(createGunzip())) chunks.push(chunk);
+  const verdict = JSON.parse(Buffer.concat(chunks));
+  assert.equal(verdict.summary.records, 937);
+  assert.deepEqual(verdict.summary.errorVerdicts, { "no-source-copy-error-detected": 937 });
+  assert.equal(verdict.summary.decisions.tokenization, 6);
+  assert.equal(verdict.summary.semanticStatuses["source-corroborated-subtype-pending"], 919);
+  assert.match(verdict.scope, /does not claim scholarly certification/i);
+});
+
 test("every audit record has actionable page evidence or an explicit boundary gap", async () => {
   const plan = await load();
   for (const record of plan.records) {

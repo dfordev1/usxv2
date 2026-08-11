@@ -239,6 +239,11 @@ explicitly unresolved; the generator never awards scholarly certification.
 `npm run audit:printed:verify` checks every unique referenced page, hashes its
 bytes, and confirms the expected ayah tags. The committed audit currently
 verifies all 2,213 referenced pages with no missing required ayah tags.
+`npm run audit:printed:verdict` then combines that evidence with the independent
+eight-dataset mirror audit. It currently records a complete source-error verdict
+for all 937 candidates: no source-copy error was detected. Exact semantic
+subtyping remains explicit—reviewed where supported, otherwise
+`source-corroborated-subtype-pending` rather than guessed.
 
 Status is deliberately `source-authenticated-research-prototype`, not
 `scholarly-certified`. Evidence and the authentication boundary are documented

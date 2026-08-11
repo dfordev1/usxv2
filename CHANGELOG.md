@@ -9,6 +9,10 @@ plain chronological record, not semver-scoped releases.
   viewer and the first ten-record batch. Batch 001 records seven reading-form
   differences and three orthographic-presentation differences, with no source
   errors, explicitly scoped to the inspected printed editions.
+- Completed a source-error verdict for all 937 candidates by combining the
+  pinned-page audit with the independent eight-dataset mirror comparison. No
+  source-copy errors were detected; 919 precise semantic subtypes remain
+  deliberately pending instead of being guessed or called scholar-certified.
 
 - Added a reproducible printed-edition audit plan for all 937 eight-riwayah
   candidates across 805 ayahs. It maps each record to pinned Quranpedia SVG

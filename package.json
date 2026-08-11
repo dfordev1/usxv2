@@ -71,6 +71,7 @@
     "audit:printed:plan": "node scripts/build_printed_audit_plan.mjs",
     "audit:printed:verify": "node scripts/verify_printed_audit_sources.mjs",
     "audit:printed:batch": "node scripts/build_printed_review_batch.mjs",
+    "audit:printed:verdict": "node scripts/build_complete_printed_verdict.mjs",
     "align:review-data": "node scripts/build_alignment_review_data.js",
     "align:boundaries": "node scripts/generate_boundary_mappings.js",
     "align:metrics": "node scripts/report_alignment_metrics.js",
