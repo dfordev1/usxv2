@@ -120,14 +120,25 @@ numbered ayah; `mapAyah()` returns an empty array instead of inventing a match.
 ## Normalize provider responses
 
 ```js
-import { normalizeKfgqpcAyah, normalizeQuranComVerse } from "quran-usx/adapters";
+import {
+  normalizeAlQuranCloudAyah,
+  normalizeKfgqpcAyah,
+  normalizeQuranComVerse,
+} from "quran-usx/adapters";
 
 const hafs = normalizeQuranComVerse(quranComResponse);
 const warsh = normalizeKfgqpcAyah(kfgqpcRecord, { tradition: "warsh-kfqc" });
+const cloud = normalizeAlQuranCloudAyah(alQuranCloudResponse, { tradition: "hafs-kufi" });
 ```
 
 Both adapters return the same `qusx-compatible-verse` shape (`reference`,
 `tradition`, `words`, `text`, and source provenance). Adapters are optional
 transition helpers, not part of the QUSX XML standard.
+
+AlQuran Cloud returns whole-ayah text rather than a word array, so its adapter
+derives tokens only from provider whitespace and preserves the full edition
+record as provenance. It deliberately requires an explicit `tradition`; an
+edition identifier alone is not treated as proof of a riwayah. The optional
+live contract check is `npm run audit:alquran-cloud`.
 
 The package is ESM-only and requires Node.js 22 or a modern browser/build tool.

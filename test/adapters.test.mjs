@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { normalizeKfgqpcAyah, normalizeQuranComVerse } from "../sdk/adapters.mjs";
+import { normalizeAlQuranCloudAyah, normalizeKfgqpcAyah, normalizeQuranComVerse } from "../sdk/adapters.mjs";
 
 test("normalizes a Quran.com-style Hafs response", () => {
   const verse = normalizeQuranComVerse({
@@ -27,4 +27,27 @@ test("normalizes a KFGQPC tradition record and removes the ayah-number token", (
 test("adapters reject incomplete provider data", () => {
   assert.throws(() => normalizeQuranComVerse({ verse_key: "1:1" }), /words are required/);
   assert.throws(() => normalizeKfgqpcAyah({ sura_no: 1, aya_no: 1 }), /aya_text/);
+  assert.throws(() => normalizeAlQuranCloudAyah({ data: { surah: { number: 1 }, numberInSurah: 1, text: "text" } }), /explicit tradition/);
+});
+
+test("normalizes an AlQuran Cloud whole-ayah response without guessing its tradition", () => {
+  const response = {
+    code: 200,
+    status: "OK",
+    data: {
+      number: 1,
+      text: "\uFEFFبِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+      edition: { identifier: "quran-uthmani", format: "text", type: "quran" },
+      surah: { number: 1, englishName: "Al-Faatiha", numberOfAyahs: 7 },
+      numberInSurah: 1,
+      juz: 1,
+      page: 1,
+    },
+  };
+  const verse = normalizeAlQuranCloudAyah(response, { tradition: "hafs-kufi" });
+  assert.equal(verse.source, "alquran.cloud");
+  assert.equal(verse.reference, "1:1");
+  assert.equal(verse.words.length, 4);
+  assert.equal(verse.words[0].text, "بِسْمِ".normalize("NFC"));
+  assert.equal(verse.providerRecord.edition.identifier, "quran-uthmani");
 });

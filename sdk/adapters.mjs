@@ -44,3 +44,15 @@ export function normalizeKfgqpcAyah(record, options = {}) {
   const words = tokens.map((text, index) => ({ position: index + 1, text: text.normalize("NFC") }));
   return result("kfgqpc", options.tradition ?? "unknown-kfgqpc", surah, ayah, words, record);
 }
+
+export function normalizeAlQuranCloudAyah(input, options = {}) {
+  const record = input?.data ?? input;
+  if (!record || typeof record !== "object") throw new QusxError("AlQuran Cloud ayah record is required", "QUSX_ADAPTER");
+  const surah = positive(record.surah?.number, "surah.number");
+  const ayah = positive(record.numberInSurah, "numberInSurah");
+  if (typeof record.text !== "string" || !record.text.trim()) throw new QusxError("AlQuran Cloud text is required", "QUSX_ADAPTER");
+  if (!options.tradition) throw new QusxError("AlQuran Cloud adapter requires an explicit tradition", "QUSX_ADAPTER");
+  const tokens = record.text.replace(/^\uFEFF/u, "").trim().split(/\s+/u);
+  const words = tokens.map((text, index) => ({ position: index + 1, text: text.normalize("NFC") }));
+  return result("alquran.cloud", options.tradition, surah, ayah, words, record);
+}

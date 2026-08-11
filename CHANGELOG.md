@@ -5,6 +5,12 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added an AlQuran Cloud adapter pilot for its whole-ayah response shape. The
+  adapter preserves provider/edition provenance, derives token boundaries only
+  from provider whitespace, and requires the caller to provide the tradition
+  explicitly. Added deterministic contract tests and an optional live endpoint
+  audit command.
+
 - Added the `quran-usx` executable with `compare`, `map`, and `validate`
   commands, positional and long-form arguments, short tradition aliases, and
   structured `--json` output. Added Node helpers for loading bundled alignment
