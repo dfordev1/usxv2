@@ -1,0 +1,17 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0071-0080.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:005666","canonical":"2:271:13","decision":"reading-variant","notes":"Hafs visibly uses وَيُكَفِّرُ while the other editions use وَنُكَفِّرُ."},
+    {"id":"qusx:printed-audit:005738","canonical":"2:274:7","decision":"orthography-presentation","notes":"Visible forms preserve وَعَلَانِيَةً; standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:005943","canonical":"2:282:61","decision":"uncertain","notes":"Visible forms differ in initial alif/wasla and standing-alif presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:006071","canonical":"2:285:1","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَامَنَ versus اٰمَنَ; no subtype asserted."},
+    {"id":"qusx:printed-audit:006080","canonical":"2:285:10","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَامَنَ versus اٰمَنَ; no subtype asserted."},
+    {"id":"qusx:printed-audit:006335","canonical":"3:13:15","decision":"reading-variant","notes":"Warsh and Qalun visibly use تَرَوْنَهُمْ while the other forms use يَرَوْنَهُمْ."},
+    {"id":"qusx:printed-audit:006683","canonical":"3:30:25","decision":"uncertain","notes":"Visible hamza-seat and waw/alif presentation differs in رَءُوفُ; no subtype asserted."},
+    {"id":"qusx:printed-audit:006778","canonical":"3:37:9","decision":"uncertain","notes":"The visible forms differ in the final hamza and vowel sequence of زَكَرِيَّا; preserved as uncertain."},
+    {"id":"qusx:printed-audit:006782","canonical":"3:37:13","decision":"reading-variant","notes":"Hafs visibly uses زَكَرِيَّا while the other editions use زَكَرِيَّاءُ."},
+    {"id":"qusx:printed-audit:006806","canonical":"3:38:3","decision":"reading-variant","notes":"Hafs visibly uses زَكَرِيَّا while the other editions use زَكَرِيَّاءُ."}
+  ]
+}
