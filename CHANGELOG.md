@@ -5,6 +5,13 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added a deterministic importer for Sheikh Talha bin Bashir's 77,432-row
+  eight-riwayah parallel-word workbook. It maps every source row to stable QUSX
+  Hafs locations, preserves all eight readings and workbook provenance, handles
+  split/join tokenization, and emits a complete compressed slot dataset plus a
+  937-record scholarly-review queue. Added schema, Node loaders, `eight-summary`
+  and `slot` CLI commands, tests, and explicit source/licensing status.
+
 - Added the first complete-surah alignment review inventory for Surah 63. It
   preserves all eight generated observations across Warsh, Qalun, Douri,
   Shubah, and Sousi while consolidating them into four unique scholarly review

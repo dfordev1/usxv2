@@ -36,3 +36,12 @@ test("CLI exposes the complete Surah 63 review inventory", async () => {
   assert.equal(bundle.completeness.uniqueReviewLocations, 4);
   assert.equal(bundle.completeness.pending, 4);
 });
+
+test("CLI exposes eight-riwayah candidate data", async () => {
+  const summary = JSON.parse((await run(process.execPath, [cli, "eight-summary", "--json"])).stdout);
+  assert.equal(summary.candidateCount, 937);
+  assert.equal(summary.traditions.length, 8);
+  const result = JSON.parse((await run(process.execPath, [cli, "slot", "63:11:11", "--json"])).stdout);
+  assert.equal(result.slots.length, 1);
+  assert.equal(result.slots[0].readings["shubah-kfqc"][0], "يَعۡمَلُونَ");
+});

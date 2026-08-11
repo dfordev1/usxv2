@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/dfordev1/usxv2/schema/qusx-eight-riwayah-slots.schema.json",
+  "title": "QUSX eight-riwayah aligned slots",
+  "type": "object",
+  "required": ["format", "version", "status", "source", "canonicalTradition", "traditions", "slotCount", "classificationCounts", "slots"],
+  "properties": {
+    "format": { "const": "qusx-eight-riwayah-slots" },
+    "version": { "type": "string" },
+    "status": { "const": "source-derived-candidate-review-required" },
+    "source": { "type": "object" },
+    "canonicalTradition": { "const": "hafs-kufi" },
+    "traditions": { "type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true, "items": { "type": "string" } },
+    "slotCount": { "const": 77432 },
+    "candidateCount": { "type": "integer", "minimum": 0 },
+    "classificationCounts": { "type": "object" },
+    "qusxHafsAlignment": { "type": "object" },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "sequence", "canonicalLocations", "canonicalSegment", "classification", "splitJoinFlag", "readings", "provenance"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^qusx:slot:global:[0-9]{6}$" },
+          "sequence": { "type": "integer", "minimum": 1, "maximum": 77432 },
+          "canonicalLocations": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[0-9]+:[0-9]+:[0-9]+$" } },
+          "canonicalSegment": { "type": ["integer", "null"] },
+          "classification": { "enum": ["identical", "orthographic-presentation", "substantive-candidate", "split-join"] },
+          "splitJoinFlag": { "type": "boolean" },
+          "readings": { "type": "object", "minProperties": 8, "maxProperties": 8, "additionalProperties": { "type": "array", "items": { "type": "string" } } },
+          "provenance": { "type": "object", "required": ["sheet", "row"], "properties": { "sheet": { "type": "string" }, "row": { "type": "integer", "minimum": 2 } }, "additionalProperties": false }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

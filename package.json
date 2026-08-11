@@ -38,6 +38,8 @@
     "./ayah-mapping-schema": "./schema/qusx-ayah-mapping.schema.json",
     "./review/surah-063": "./data/review/surah-063-review-v1.json",
     "./review-schema": "./schema/qusx-surah-review.schema.json",
+    "./eight-riwayah-manifest": "./data/alignments/eight-riwayah-manifest-v1.json",
+    "./eight-riwayah-schema": "./schema/qusx-eight-riwayah-slots.schema.json",
     "./package.json": "./package.json"
   },
   "files": [
@@ -50,6 +52,10 @@
     "data/alignments/boundary-v1.json",
     "data/review/surah-063-review-v1.json",
     "schema/qusx-surah-review.schema.json",
+    "schema/qusx-eight-riwayah-slots.schema.json",
+    "data/alignments/eight-riwayah-manifest-v1.json",
+    "data/alignments/eight-riwayah-review-candidates-v1.json.gz",
+    "data/alignments/eight-riwayah-slots-v1.json.gz",
     "README.md",
     "LICENSE",
     "THIRD_PARTY_NOTICES.md"
@@ -58,7 +64,7 @@
     "generate": "node src/generate.js all",
     "validate": "node src/validate.js all",
     "validate:xsd": "node scripts/run-python.js scripts/xsd_validate.py",
-    "test": "node test/run_tests.js && node --test test/sdk.test.mjs test/adapters.test.mjs test/providers.test.mjs test/cli.test.mjs test/candidate-alignments.test.js test/normative-alignment.test.js test/review-bundle.test.mjs",
+    "test": "node test/run_tests.js && node --test test/sdk.test.mjs test/adapters.test.mjs test/providers.test.mjs test/cli.test.mjs test/candidate-alignments.test.js test/normative-alignment.test.js test/review-bundle.test.mjs test/eight-riwayah.test.mjs",
     "review:surah": "node scripts/build_surah_review_bundle.mjs",
     "align:candidates": "node scripts/generate_candidate_alignments.js",
     "align:review-data": "node scripts/build_alignment_review_data.js",

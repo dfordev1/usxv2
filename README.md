@@ -174,6 +174,8 @@ The package also ships an executable CLI:
 npx quran-usx@beta compare hafs warsh 57:24
 npx quran-usx@beta map hafs warsh 2:1
 npx quran-usx@beta validate ./001.qusx.xml
+npx quran-usx@beta eight-summary
+npx quran-usx@beta slot 63:11:11
 ```
 
 Add `--json` for machine-readable output. `compare` reports all currently
@@ -211,6 +213,14 @@ npx quran-usx@beta review 63 --json
 
 See [`docs/surah-063-review.md`](docs/surah-063-review.md) for the reviewer
 contract and decision vocabulary.
+
+An additional eight-riwayah pilot converts Sheikh Talha bin Bashir's 77,432-row
+parallel-word workbook into stable QUSX slots for Hafs, Shu'bah, Warsh, Qalun,
+Al-Bazzi, Al-Duri, Qunbul, and Al-Susi. It produces a complete compressed dataset
+and a focused queue of 937 substantive or split/join candidates. This materially
+answers the practical alignment question, but does not replace scholarly review;
+the records remain `source-derived-candidate-review-required`. See
+[`docs/eight-riwayah-workbook.md`](docs/eight-riwayah-workbook.md).
 
 Status is deliberately `source-authenticated-research-prototype`, not
 `scholarly-certified`. Evidence and the authentication boundary are documented
