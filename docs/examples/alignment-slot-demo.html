@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>QUSX Six-Riwāyah Alignment</title>
+  <style>
+    :root{font-family:Inter,system-ui,sans-serif;color:#18231d;background:#eef2ee;--green:#126a4b;--line:#d6e0d8}
+    *{box-sizing:border-box}body{margin:0}main{max-width:1000px;margin:auto;padding:40px 20px 70px}h1{font:700 clamp(30px,5vw,50px) Georgia,serif;margin:8px 0}.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.intro{max-width:720px;color:#596a60;line-height:1.6}.notice{background:#fff4d8;border-left:4px solid #c6962d;padding:12px 14px;margin:22px 0;border-radius:6px}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}button{border:1px solid var(--line);background:white;padding:9px 14px;border-radius:999px;cursor:pointer;font:inherit}button.active{background:var(--green);color:white;border-color:var(--green)}.rules{display:grid;gap:14px}.rule{background:white;border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:0 5px 18px #1c422c10}.meta{display:flex;justify-content:space-between;gap:12px;color:#68776e;font:12px ui-monospace,monospace}.arabic{direction:rtl;text-align:center;font-family:"Noto Naskh Arabic","Segoe UI",serif;font-size:30px;line-height:1.8;margin:18px 0}.empty{color:#a36b18;font:15px ui-monospace,monospace}.ayah{text-align:center;color:#68776e;font-size:13px}.slot{color:var(--green);font-weight:700}.evidence{font-size:12px;color:#68776e;margin-top:12px}.evidence a{color:var(--green)}
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">Source-authenticated research prototype</div>
+  <h1>Three shared slots, six riwāyāt.</h1>
+  <p class="intro">This companion alignment demonstrates real reading variants without changing existing QUSX word IDs. Select a riwāyah to see what each stable slot contains.</p>
+  <div class="notice"><strong>Scope:</strong> source-authenticated against published muṣḥaf data and qirāʾāt references; not labeled as personal scholarly certification.</div>
+  <div class="controls" id="controls"></div>
+  <section class="rules" id="rules"></section>
+</main><script>
+const traditions={
+  'hafs-kufi':'Hafs','shubah-kfqc':'Shuʿbah','warsh-kfqc':'Warsh','qalon-kfqc':'Qalun','douri-kfqc':'Al-Duri','sousi-kfqc':'Al-Susi'
+};
+const rules=[
+  {id:'qusx:slot:037:130:001',label:'As-Saffat 37:130',evidence:'https://quranpedia.net/surah/4/37',readings:{'hafs-kufi':['37:130','إِلْ يَاسِينَ'],'shubah-kfqc':['37:130','إِلْ يَاسِينَ'],'warsh-kfqc':['37:130','ءَالِ يَاسِينَ'],'qalon-kfqc':['37:130','ءَالِ يَاسِينَ'],'douri-kfqc':['37:130','إِلْ يَاسِينَ'],'sousi-kfqc':['37:130','إِلْ يَاسِينَ']}},
+  {id:'qusx:slot:040:026:001',label:'Ghafir 40:26',evidence:'https://quranpedia.net/surah/7/40',readings:{'hafs-kufi':['40:26','أَوْ أَن'],'shubah-kfqc':['40:26','أَوْ أَن'],'warsh-kfqc':['40:26','وَأَن'],'qalon-kfqc':['40:26','وَأَن'],'douri-kfqc':['40:26','وَأَن'],'sousi-kfqc':['40:26','وَأَن']}},
+  {id:'qusx:slot:057:024:001',label:'Al-Hadid 57:23/24',evidence:'https://quranpedia.net/surah/1/57/book/27800',readings:{'hafs-kufi':['57:24','هُوَ'],'shubah-kfqc':['57:24','هُوَ'],'warsh-kfqc':['57:23',''],'qalon-kfqc':['57:23',''],'douri-kfqc':['57:23','هُوَ'],'sousi-kfqc':['57:23','هُوَ']}}
+];
+let selected='hafs-kufi';
+function render(){
+  document.getElementById('controls').innerHTML=Object.entries(traditions).map(([id,name])=>`<button class="${id===selected?'active':''}" data-id="${id}">${name}</button>`).join('');
+  document.getElementById('rules').innerHTML=rules.map(rule=>{const [ayah,text]=rule.readings[selected];return `<article class="rule"><div class="meta"><span class="slot">${rule.id}</span><span>${rule.label}</span></div><div class="arabic">${text||'<span class="empty">∅ empty slot</span>'}</div><div class="ayah">${traditions[selected]} · ${ayah}</div><div class="evidence"><a href="${rule.evidence}" target="_blank">View corroborating evidence</a></div></article>`}).join('');
+  document.querySelectorAll('button[data-id]').forEach(button=>button.onclick=()=>{selected=button.dataset.id;render()});
+}
+render();
+</script></body></html>

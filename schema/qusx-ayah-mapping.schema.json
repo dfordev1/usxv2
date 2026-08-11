@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dfordev1.github.io/usxv2/schema/qusx-ayah-mapping-v1.json",
+  "title": "QUSX ayah boundary mapping companion",
+  "type": "object",
+  "required": ["format", "version", "status", "hubTradition", "traditions", "method", "mappings", "unmappedHubAyahs"],
+  "properties": {
+    "format": { "const": "qusx-ayah-mapping" },
+    "version": { "type": "string", "pattern": "^[1-9][0-9]*\\.[0-9]+\\.[0-9]+$" },
+    "status": { "const": "algorithmic-source-derived-research-prototype" },
+    "hubTradition": { "const": "hafs-kufi" },
+    "traditions": { "type": "array", "minItems": 6, "uniqueItems": true, "items": { "type": "string" } },
+    "method": { "type": "string", "minLength": 1 },
+    "mappings": {
+      "type": "object",
+      "required": ["warsh-kfqc", "qalon-kfqc", "douri-kfqc", "shubah-kfqc", "sousi-kfqc"],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(warsh|qalon|douri|shubah|sousi)-kfqc$": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["source", "targets"],
+            "additionalProperties": false,
+            "properties": {
+              "source": { "type": "string", "pattern": "^(?:[1-9]|[1-9][0-9]|10[0-9]|11[0-4]):[1-9][0-9]*$" },
+              "targets": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^(?:[1-9]|[1-9][0-9]|10[0-9]|11[0-4]):[1-9][0-9]*$" } }
+            }
+          }
+        }
+      }
+    },
+    "unmappedHubAyahs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": { "type": "string", "pattern": "^(?:[1-9]|[1-9][0-9]|10[0-9]|11[0-4]):[1-9][0-9]*$" }
+      }
+    }
+  },
+  "additionalProperties": false
+}

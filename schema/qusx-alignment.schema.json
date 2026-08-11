@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dfordev1.github.io/usxv2/schema/qusx-alignment-v1.json",
+  "title": "QUSX alignment companion file",
+  "type": "object",
+  "required": ["format", "version", "status", "canonicalTradition", "traditions", "rules"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "format": { "const": "qusx-alignment" },
+    "version": { "type": "string", "pattern": "^[1-9][0-9]*\\.[0-9]+\\.[0-9]+$" },
+    "status": { "enum": ["source-authenticated-research-prototype", "scholarly-certified"] },
+    "canonicalTradition": { "$ref": "#/$defs/tradition" },
+    "traditions": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/tradition" }
+    },
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/rule" }
+    }
+  },
+  "$defs": {
+    "tradition": {
+      "enum": ["hafs-kufi", "shubah-kfqc", "warsh-kfqc", "qalon-kfqc", "douri-kfqc", "sousi-kfqc"]
+    },
+    "reading": {
+      "type": "object",
+      "required": ["ayah", "tokens"],
+      "additionalProperties": false,
+      "properties": {
+        "ayah": { "type": "string", "pattern": "^(?:[1-9]|[1-9][0-9]|10[0-9]|11[0-4]):[1-9][0-9]*$" },
+        "tokens": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "rule": {
+      "type": "object",
+      "required": ["id", "slotId", "kind", "authentication", "readings", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^qusx:alignment:[0-9]{3}:[0-9]{3}:[0-9]{3}$" },
+        "slotId": { "type": "string", "pattern": "^qusx:slot:[0-9]{3}:[0-9]{3}:[0-9]{3}$" },
+        "kind": { "enum": ["reading-variant", "presence-absence"] },
+        "authentication": { "enum": ["source-authenticated", "scholarly-certified"] },
+        "readings": {
+          "type": "object",
+          "required": ["hafs-kufi", "shubah-kfqc", "warsh-kfqc", "qalon-kfqc", "douri-kfqc", "sousi-kfqc"],
+          "additionalProperties": false,
+          "properties": {
+            "hafs-kufi": { "$ref": "#/$defs/reading" },
+            "shubah-kfqc": { "$ref": "#/$defs/reading" },
+            "warsh-kfqc": { "$ref": "#/$defs/reading" },
+            "qalon-kfqc": { "$ref": "#/$defs/reading" },
+            "douri-kfqc": { "$ref": "#/$defs/reading" },
+            "sousi-kfqc": { "$ref": "#/$defs/reading" }
+          }
+        },
+        "evidence": { "type": "array", "minItems": 2, "items": { "type": "string", "format": "uri" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "../../schema/qusx-alignment.schema.json",
+  "format": "qusx-alignment",
+  "version": "1.0.0",
+  "status": "source-authenticated-research-prototype",
+  "canonicalTradition": "hafs-kufi",
+  "traditions": [
+    "hafs-kufi",
+    "shubah-kfqc",
+    "warsh-kfqc",
+    "qalon-kfqc",
+    "douri-kfqc",
+    "sousi-kfqc"
+  ],
+  "rules": [
+    {
+      "id": "qusx:alignment:037:130:001",
+      "slotId": "qusx:slot:037:130:001",
+      "kind": "reading-variant",
+      "authentication": "source-authenticated",
+      "readings": {
+        "hafs-kufi": { "ayah": "37:130", "tokens": ["إِلْ", "يَاسِينَ"] },
+        "shubah-kfqc": { "ayah": "37:130", "tokens": ["إِلْ", "يَاسِينَ"] },
+        "warsh-kfqc": { "ayah": "37:130", "tokens": ["ءَالِ", "يَاسِينَ"] },
+        "qalon-kfqc": { "ayah": "37:130", "tokens": ["ءَالِ", "يَاسِينَ"] },
+        "douri-kfqc": { "ayah": "37:130", "tokens": ["إِلْ", "يَاسِينَ"] },
+        "sousi-kfqc": { "ayah": "37:130", "tokens": ["إِلْ", "يَاسِينَ"] }
+      },
+      "evidence": [
+        "https://dm.qurancomplex.gov.sa/",
+        "https://quranpedia.net/surah/4/37",
+        "https://tafsir.app/altibyan-ghreeb/37/130"
+      ]
+    },
+    {
+      "id": "qusx:alignment:040:026:001",
+      "slotId": "qusx:slot:040:026:001",
+      "kind": "reading-variant",
+      "authentication": "source-authenticated",
+      "readings": {
+        "hafs-kufi": { "ayah": "40:26", "tokens": ["أَوْ", "أَن"] },
+        "shubah-kfqc": { "ayah": "40:26", "tokens": ["أَوْ", "أَن"] },
+        "warsh-kfqc": { "ayah": "40:26", "tokens": ["وَأَن"] },
+        "qalon-kfqc": { "ayah": "40:26", "tokens": ["وَأَن"] },
+        "douri-kfqc": { "ayah": "40:26", "tokens": ["وَأَن"] },
+        "sousi-kfqc": { "ayah": "40:26", "tokens": ["وَأَن"] }
+      },
+      "evidence": [
+        "https://dm.qurancomplex.gov.sa/",
+        "https://quranpedia.net/surah/7/40",
+        "https://quranpedia.net/book-attachment/19870/77911"
+      ]
+    },
+    {
+      "id": "qusx:alignment:057:024:001",
+      "slotId": "qusx:slot:057:024:001",
+      "kind": "presence-absence",
+      "authentication": "source-authenticated",
+      "readings": {
+        "hafs-kufi": { "ayah": "57:24", "tokens": ["هُوَ"] },
+        "shubah-kfqc": { "ayah": "57:24", "tokens": ["هُوَ"] },
+        "warsh-kfqc": { "ayah": "57:23", "tokens": [] },
+        "qalon-kfqc": { "ayah": "57:23", "tokens": [] },
+        "douri-kfqc": { "ayah": "57:23", "tokens": ["هُوَ"] },
+        "sousi-kfqc": { "ayah": "57:23", "tokens": ["هُوَ"] }
+      },
+      "evidence": [
+        "https://dm.qurancomplex.gov.sa/",
+        "https://www.greattafsirs.com/Tafsir_Library.aspx?AyahNo=25&LanguageID=1&MadhabNo=2&QuranAyat_Home=1&SoraNo=57&TafsirNo=11",
+        "https://quranpedia.net/surah/1/57/book/27800"
+      ]
+    }
+  ]
+}

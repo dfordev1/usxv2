@@ -5,6 +5,16 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added the first six-riwayah alignment prototype for Hafs, Warsh, Qalun,
+  Douri, Shubah, and Sousi. This includes 31,098 explicit ayah-boundary
+  mappings, three source-authenticated normative alignment rules, stable slot
+  identifiers, provenance evidence, candidate-generation and review tooling,
+  aggregate quality metrics, interactive demos, JSON schemas, SDK query
+  helpers, and Quran.com/KFGQPC adapter functions. Candidate mappings remain
+  algorithmic research output; only reviewed normative records are exposed in
+  the npm package, and scholarly certification is still required before any
+  recitational claim is described as authoritative.
+
 - **Closed out the text-integrity work**: added a transparent,
   provenance-tracked correction layer (`data/external/qul-text-corrections.json`)
   applying the 4 formatting fixes (5:52, 11:31, 18:1, 27:26) at comparison time
