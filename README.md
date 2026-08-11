@@ -250,7 +250,7 @@ The final record-level technical review is stored in
 937 records carries rendered evidence from eight editions: ayah crops from the
 five pinned Quranpedia vectors and target-line crops from independently pinned
 Al-Bazzi, Qunbul and Al-Susi PDFs. The conservative result is 208 reading
-variants, 51 presentation differences, 6 tokenization cases and 668 uncertain
+variants, 53 presentation differences, 6 tokenization cases and 666 uncertain
 cases. `Uncertain` is a completed technical outcome, not an invented scholarly
 classification: these cases need domain interpretation to separate weak-letter
 or hamza reading behavior from edition orthography.
