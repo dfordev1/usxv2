@@ -1,4 +1,4 @@
-import test from "node:test";
+﻿import test from "node:test";
 import assert from "node:assert/strict";
 import { createGunzip } from "node:zlib";
 import { createReadStream } from "node:fs";
@@ -63,9 +63,9 @@ test("complete eight-edition review has individual rendered evidence and explici
   assert.equal(review.coverage.candidates, 937);
   assert.equal(review.coverage.traditions, 8);
   assert.deepEqual(review.coverage.decisions, {
-    "reading-variant": 209,
-    "orthography-presentation": 21,
-    uncertain: 701,
+    "reading-variant": 211,
+    "orthography-presentation": 22,
+    uncertain: 694,
     tokenization: 6,
   });
   assert.equal(review.records.length, 937);
@@ -95,3 +95,4 @@ test("every audit record has actionable page evidence or an explicit boundary ga
     }
   }
 });
+
