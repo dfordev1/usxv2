@@ -1,0 +1,17 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0051-0060.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:003929","canonical":"2:210:10","decision":"orthography-presentation","notes":"Visible forms preserve الْغَمَامِ; initial alif and dagger-alif presentation differs."},
+    {"id":"qusx:printed-audit:003939","canonical":"2:211:3","decision":"orthography-presentation","notes":"Visible forms preserve إِسْرَائِيلَ; alif and madd presentation differs."},
+    {"id":"qusx:printed-audit:003941","canonical":"2:211:5","decision":"uncertain","notes":"Initial hamza/alif and final pronoun-mark presentation differ; no subtype asserted."},
+    {"id":"qusx:printed-audit:003943","canonical":"2:211:7","decision":"uncertain","notes":"Initial hamza/alif and tanwin-mark presentation differ; no subtype asserted."},
+    {"id":"qusx:printed-audit:004209","canonical":"2:220:8","decision":"orthography-presentation","notes":"Visible forms preserve إِصْلَاحٌ; alif and vowel-mark presentation differs."},
+    {"id":"qusx:printed-audit:004399","canonical":"2:229:2","decision":"orthography-presentation","notes":"Visible forms preserve مَرَّتَانِ; standing-alif and stopping-mark presentation differs."},
+    {"id":"qusx:printed-audit:004561","canonical":"2:233:10","decision":"orthography-presentation","notes":"Visible forms preserve الرَّضَاعَةَ; initial alif and standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:004606","canonical":"2:233:55","decision":"reading-variant","notes":"Bazzi and Qunbul visibly use أَتَيْتُم while the other editions use ءَاتَيْتُم."},
+    {"id":"qusx:printed-audit:004827","canonical":"2:243:17","decision":"uncertain","notes":"The visible forms differ in weak-letter, alif, pronoun, and stopping presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:004870","canonical":"2:246:7","decision":"orthography-presentation","notes":"Visible forms preserve إِسْرَائِيلَ; alif and madd presentation differs."}
+  ]
+}
