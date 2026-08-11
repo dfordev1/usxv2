@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0146-0150.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:014184","canonical":"5:32:7","decision":"orthography-presentation","notes":"Visible forms preserve إِسْرَائِيلَ; alif and madd presentation differs."},
+    {"id":"qusx:printed-audit:014383","canonical":"5:41:24","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَاخَرِينَ versus اٰخَرِينَ; no subtype asserted."},
+    {"id":"qusx:printed-audit:014726","canonical":"5:53:1","decision":"reading-variant","notes":"The editions visibly divide between وَيَقُولُ, يَقُولُ, and وَيَقُولَ forms."},
+    {"id":"qusx:printed-audit:014745","canonical":"5:54:5","decision":"reading-variant","notes":"Warsh and Qalun visibly use يَرْتَدِدْ while the other forms use يَرْتَدَّ."},
+    {"id":"qusx:printed-audit:014768","canonical":"5:54:28","decision":"uncertain","notes":"Visible alif, madd, and stopping-mark differences in لَائِمٍ are preserved without subtype assertion."}
+  ]
+}
