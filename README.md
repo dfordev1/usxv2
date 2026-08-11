@@ -161,8 +161,11 @@ The SDK now exposes `createAlignmentClient()` for reading/comparing slots and
 ayah companion maps all 31,098 non-Hafs source ayahs through a Hafs hub and is
 published as `quran-usx/ayah-mapping`. It is algorithmic research data; only the
 three alignment rules above currently carry source-authenticated status. Optional
-provider adapters (`quran-usx/adapters`) normalize Quran.com-style Hafs responses
-and KFGQPC ayah records into one QUSX-compatible JSON shape. See
+provider adapters (`quran-usx/adapters`) normalize Quran.com-style word arrays,
+KFGQPC ayah records, and AlQuran Cloud whole-ayah responses into one
+QUSX-compatible JSON shape. AlQuran Cloud requires an explicit tradition and
+retains its edition record rather than inferring a riwayah from the provider's
+identifier. See
 [`docs/sdk.md`](docs/sdk.md).
 
 The package also ships an executable CLI:
