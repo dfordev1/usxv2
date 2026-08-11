@@ -28,3 +28,11 @@ test("CLI validates a QUSX file and rejects malformed input", async () => {
   const invalid = fileURLToPath(new URL("fixtures/malformed-not-well-formed.xml", import.meta.url));
   await assert.rejects(run(process.execPath, [cli, "validate", invalid]), (error) => error.code === 1 && /INVALID/.test(error.stderr));
 });
+
+test("CLI exposes the complete Surah 63 review inventory", async () => {
+  const { stdout } = await run(process.execPath, [cli, "review", "63", "--json"]);
+  const bundle = JSON.parse(stdout);
+  assert.equal(bundle.completeness.candidateObservations, 8);
+  assert.equal(bundle.completeness.uniqueReviewLocations, 4);
+  assert.equal(bundle.completeness.pending, 4);
+});

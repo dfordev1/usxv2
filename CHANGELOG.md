@@ -5,6 +5,13 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added the first complete-surah alignment review inventory for Surah 63. It
+  preserves all eight generated observations across Warsh, Qalun, Douri,
+  Shubah, and Sousi while consolidating them into four unique scholarly review
+  decisions. Added a JSON schema, deterministic generator, bundled Node loader,
+  CLI `review 63` command, tests, and reviewer instructions. Every record remains
+  explicitly review-pending and is not part of the normative alignment file.
+
 - Added a unified provider registry for Quran.com and AlQuran Cloud with common
   `getAyah()` and `getSurah()` methods, injectable network clients, and stable
   QUSX-compatible responses. A live Al-Fatihah audit now compares all seven

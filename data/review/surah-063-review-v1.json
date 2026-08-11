@@ -1,0 +1,869 @@
+{
+  "format": "qusx-surah-alignment-review",
+  "version": "1.0.0",
+  "status": "complete-candidate-inventory-review-pending",
+  "surah": 63,
+  "canonicalTradition": "hafs-kufi",
+  "traditions": [
+    "hafs-kufi",
+    "shubah-kfqc",
+    "warsh-kfqc",
+    "qalon-kfqc",
+    "douri-kfqc",
+    "sousi-kfqc"
+  ],
+  "generatedFrom": [
+    "../alignments/douri-to-hafs.candidates.json",
+    "../alignments/qalon-to-hafs.candidates.json",
+    "../alignments/shubah-to-hafs.candidates.json",
+    "../alignments/sousi-to-hafs.candidates.json",
+    "../alignments/warsh-to-hafs.candidates.json"
+  ],
+  "completeness": {
+    "candidateObservations": 8,
+    "uniqueReviewLocations": 4,
+    "reviewed": 0,
+    "pending": 4
+  },
+  "allowedDecisions": [
+    "reading-variant",
+    "orthography-presentation",
+    "tokenization",
+    "source-versification",
+    "reject-candidate"
+  ],
+  "records": [
+    {
+      "id": "qusx:review:063:001",
+      "canonical": "63:6:16",
+      "hafs": {
+        "location": "63:6:16",
+        "text": "يَهْدِى"
+      },
+      "observations": [
+        {
+          "tradition": "qalon-kfqc",
+          "type": "uncertain-match",
+          "confidence": "review-required",
+          "reading": {
+            "location": "63:6:16:qalon",
+            "text": "يَهْدِے"
+          },
+          "context": [
+            {
+              "hafs": {
+                "location": "63:6:12",
+                "text": "لَهُمْ ۚ"
+              },
+              "qalon": {
+                "location": "63:6:12:qalon",
+                "text": "لَهُمْۖ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:13",
+                "text": "إِنَّ"
+              },
+              "qalon": {
+                "location": "63:6:13:qalon",
+                "text": "إِنَّ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:14",
+                "text": "ٱللَّهَ"
+              },
+              "qalon": {
+                "location": "63:6:14:qalon",
+                "text": "اَ۬للَّهَ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:15",
+                "text": "لَا"
+              },
+              "qalon": {
+                "location": "63:6:15:qalon",
+                "text": "لَا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:16",
+                "text": "يَهْدِى"
+              },
+              "qalon": {
+                "location": "63:6:16:qalon",
+                "text": "يَهْدِے"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:17",
+                "text": "ٱلْقَوْمَ"
+              },
+              "qalon": {
+                "location": "63:6:17:qalon",
+                "text": "اِ۬لْقَوْمَ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:18",
+                "text": "ٱلْفَـٰسِقِينَ"
+              },
+              "qalon": {
+                "location": "63:6:18:qalon",
+                "text": "اَ۬لْفَٰسِقِينَۖ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:7:1",
+                "text": "هُمُ"
+              },
+              "qalon": {
+                "location": "63:7:1:qalon",
+                "text": "هُمُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:7:2",
+                "text": "ٱلَّذِينَ"
+              },
+              "qalon": {
+                "location": "63:7:2:qalon",
+                "text": "اُ۬لذِينَ"
+              }
+            }
+          ]
+        },
+        {
+          "tradition": "warsh-kfqc",
+          "type": "uncertain-match",
+          "confidence": "review-required",
+          "reading": {
+            "location": "63:6:16:warsh",
+            "text": "يَهْدِے"
+          },
+          "context": [
+            {
+              "hafs": {
+                "location": "63:6:12",
+                "text": "لَهُمْ ۚ"
+              },
+              "warsh": {
+                "location": "63:6:12:warsh",
+                "text": "لَهُمُۥٓۖ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:13",
+                "text": "إِنَّ"
+              },
+              "warsh": {
+                "location": "63:6:13:warsh",
+                "text": "إِنَّ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:14",
+                "text": "ٱللَّهَ"
+              },
+              "warsh": {
+                "location": "63:6:14:warsh",
+                "text": "اَ۬للَّهَ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:15",
+                "text": "لَا"
+              },
+              "warsh": {
+                "location": "63:6:15:warsh",
+                "text": "لَا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:16",
+                "text": "يَهْدِى"
+              },
+              "warsh": {
+                "location": "63:6:16:warsh",
+                "text": "يَهْدِے"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:17",
+                "text": "ٱلْقَوْمَ"
+              },
+              "warsh": {
+                "location": "63:6:17:warsh",
+                "text": "اِ۬لْقَوْمَ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:6:18",
+                "text": "ٱلْفَـٰسِقِينَ"
+              },
+              "warsh": {
+                "location": "63:6:18:warsh",
+                "text": "اَ۬لْفَٰسِقِينَۖ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:7:1",
+                "text": "هُمُ"
+              },
+              "warsh": {
+                "location": "63:7:1:warsh",
+                "text": "هُمُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:7:2",
+                "text": "ٱلَّذِينَ"
+              },
+              "warsh": {
+                "location": "63:7:2:warsh",
+                "text": "اُ۬لذِينَ"
+              }
+            }
+          ]
+        }
+      ],
+      "status": "scholarly-review-required",
+      "decision": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "qusx:review:063:002",
+      "canonical": "63:10:14",
+      "hafs": {
+        "location": "63:10:14",
+        "text": "أَخَّرْتَنِىٓ"
+      },
+      "observations": [
+        {
+          "tradition": "qalon-kfqc",
+          "type": "uncertain-match",
+          "confidence": "review-required",
+          "reading": {
+            "location": "63:10:14:qalon",
+            "text": "أَخَّرْتَنِے"
+          },
+          "context": [
+            {
+              "hafs": {
+                "location": "63:10:10",
+                "text": "ٱلْمَوْتُ"
+              },
+              "qalon": {
+                "location": "63:10:10:qalon",
+                "text": "اُ۬لْمَوْتُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:11",
+                "text": "فَيَقُولَ"
+              },
+              "qalon": {
+                "location": "63:10:11:qalon",
+                "text": "فَيَقُولَ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:12",
+                "text": "رَبِّ"
+              },
+              "qalon": {
+                "location": "63:10:12:qalon",
+                "text": "رَبِّ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:13",
+                "text": "لَوْلَآ"
+              },
+              "qalon": {
+                "location": "63:10:13:qalon",
+                "text": "لَوْلَا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:14",
+                "text": "أَخَّرْتَنِىٓ"
+              },
+              "qalon": {
+                "location": "63:10:14:qalon",
+                "text": "أَخَّرْتَنِے"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:15",
+                "text": "إِلَىٰٓ"
+              },
+              "qalon": {
+                "location": "63:10:15:qalon",
+                "text": "إِلَىٰ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:16",
+                "text": "أَجَلٍۢ"
+              },
+              "qalon": {
+                "location": "63:10:16:qalon",
+                "text": "أَجَلٖ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:17",
+                "text": "قَرِيبٍۢ"
+              },
+              "qalon": {
+                "location": "63:10:17:qalon",
+                "text": "قَرِيبٖ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:18",
+                "text": "فَأَصَّدَّقَ"
+              },
+              "qalon": {
+                "location": "63:10:18:qalon",
+                "text": "فَأَصَّدَّقَ"
+              }
+            }
+          ]
+        },
+        {
+          "tradition": "warsh-kfqc",
+          "type": "uncertain-match",
+          "confidence": "review-required",
+          "reading": {
+            "location": "63:10:14:warsh",
+            "text": "أَخَّرْتَنِےٓ"
+          },
+          "context": [
+            {
+              "hafs": {
+                "location": "63:10:10",
+                "text": "ٱلْمَوْتُ"
+              },
+              "warsh": {
+                "location": "63:10:10:warsh",
+                "text": "اُ۬لْمَوْتُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:11",
+                "text": "فَيَقُولَ"
+              },
+              "warsh": {
+                "location": "63:10:11:warsh",
+                "text": "فَيَقُولَ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:12",
+                "text": "رَبِّ"
+              },
+              "warsh": {
+                "location": "63:10:12:warsh",
+                "text": "رَبِّ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:13",
+                "text": "لَوْلَآ"
+              },
+              "warsh": {
+                "location": "63:10:13:warsh",
+                "text": "لَوْلَآ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:14",
+                "text": "أَخَّرْتَنِىٓ"
+              },
+              "warsh": {
+                "location": "63:10:14:warsh",
+                "text": "أَخَّرْتَنِےٓ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:15",
+                "text": "إِلَىٰٓ"
+              },
+              "warsh": {
+                "location": "63:10:15:warsh",
+                "text": "إِلَىٰٓ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:16",
+                "text": "أَجَلٍۢ"
+              },
+              "warsh": {
+                "location": "63:10:16:warsh",
+                "text": "أَجَلٖ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:17",
+                "text": "قَرِيبٍۢ"
+              },
+              "warsh": {
+                "location": "63:10:17:warsh",
+                "text": "قَرِيبٖ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:10:18",
+                "text": "فَأَصَّدَّقَ"
+              },
+              "warsh": {
+                "location": "63:10:18:warsh",
+                "text": "فَأَصَّدَّقَ"
+              }
+            }
+          ]
+        }
+      ],
+      "status": "scholarly-review-required",
+      "decision": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "qusx:review:063:003",
+      "canonical": "63:11:6",
+      "hafs": {
+        "location": "63:11:6",
+        "text": "جَآءَ"
+      },
+      "observations": [
+        {
+          "tradition": "douri-kfqc",
+          "type": "uncertain-match",
+          "confidence": "review-required",
+          "reading": {
+            "location": "63:11:6:douri",
+            "text": "جَآ"
+          },
+          "context": [
+            {
+              "hafs": {
+                "location": "63:11:2",
+                "text": "يُؤَخِّرَ"
+              },
+              "douri": {
+                "location": "63:11:2:douri",
+                "text": "يُؤَخِّرَ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:3",
+                "text": "ٱللَّهُ"
+              },
+              "douri": {
+                "location": "63:11:3:douri",
+                "text": "اَ۬للَّهُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:4",
+                "text": "نَفْسًا"
+              },
+              "douri": {
+                "location": "63:11:4:douri",
+                "text": "نَفۡسًا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:5",
+                "text": "إِذَا"
+              },
+              "douri": {
+                "location": "63:11:5:douri",
+                "text": "إِذَا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:6",
+                "text": "جَآءَ"
+              },
+              "douri": {
+                "location": "63:11:6:douri",
+                "text": "جَآ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:7",
+                "text": "أَجَلُهَا ۚ"
+              },
+              "douri": {
+                "location": "63:11:7:douri",
+                "text": "أَجَلُهَاۚ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:8",
+                "text": "وَٱللَّهُ"
+              },
+              "douri": {
+                "location": "63:11:8:douri",
+                "text": "وَاَللَّهُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:9",
+                "text": "خَبِيرٌۢ"
+              },
+              "douri": {
+                "location": "63:11:9:douri",
+                "text": "خَبِيرُۢ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:10",
+                "text": "بِمَا"
+              },
+              "douri": {
+                "location": "63:11:10:douri",
+                "text": "بِمَا"
+              }
+            }
+          ]
+        },
+        {
+          "tradition": "qalon-kfqc",
+          "type": "uncertain-match",
+          "confidence": "review-required",
+          "reading": {
+            "location": "63:11:6:qalon",
+            "text": "جَا"
+          },
+          "context": [
+            {
+              "hafs": {
+                "location": "63:11:2",
+                "text": "يُؤَخِّرَ"
+              },
+              "qalon": {
+                "location": "63:11:2:qalon",
+                "text": "يُّؤَخِّرَ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:3",
+                "text": "ٱللَّهُ"
+              },
+              "qalon": {
+                "location": "63:11:3:qalon",
+                "text": "اَ۬للَّهُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:4",
+                "text": "نَفْسًا"
+              },
+              "qalon": {
+                "location": "63:11:4:qalon",
+                "text": "نَفْساً"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:5",
+                "text": "إِذَا"
+              },
+              "qalon": {
+                "location": "63:11:5:qalon",
+                "text": "إِذَا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:6",
+                "text": "جَآءَ"
+              },
+              "qalon": {
+                "location": "63:11:6:qalon",
+                "text": "جَا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:7",
+                "text": "أَجَلُهَا ۚ"
+              },
+              "qalon": {
+                "location": "63:11:7:qalon",
+                "text": "أَجَلُهَاۖ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:8",
+                "text": "وَٱللَّهُ"
+              },
+              "qalon": {
+                "location": "63:11:8:qalon",
+                "text": "وَاللَّهُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:9",
+                "text": "خَبِيرٌۢ"
+              },
+              "qalon": {
+                "location": "63:11:9:qalon",
+                "text": "خَبِيرُۢ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:10",
+                "text": "بِمَا"
+              },
+              "qalon": {
+                "location": "63:11:10:qalon",
+                "text": "بِمَا"
+              }
+            }
+          ]
+        },
+        {
+          "tradition": "sousi-kfqc",
+          "type": "uncertain-match",
+          "confidence": "review-required",
+          "reading": {
+            "location": "63:11:6:sousi",
+            "text": "جَا"
+          },
+          "context": [
+            {
+              "hafs": {
+                "location": "63:11:2",
+                "text": "يُؤَخِّرَ"
+              },
+              "sousi": {
+                "location": "63:11:2:sousi",
+                "text": "يُؤَخِّرَ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:3",
+                "text": "ٱللَّهُ"
+              },
+              "sousi": {
+                "location": "63:11:3:sousi",
+                "text": "اَ۬للَّهُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:4",
+                "text": "نَفْسًا"
+              },
+              "sousi": {
+                "location": "63:11:4:sousi",
+                "text": "نَفۡسًا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:5",
+                "text": "إِذَا"
+              },
+              "sousi": {
+                "location": "63:11:5:sousi",
+                "text": "إِذَا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:6",
+                "text": "جَآءَ"
+              },
+              "sousi": {
+                "location": "63:11:6:sousi",
+                "text": "جَا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:7",
+                "text": "أَجَلُهَا ۚ"
+              },
+              "sousi": {
+                "location": "63:11:7:sousi",
+                "text": "أَجَلُهَاۚ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:8",
+                "text": "وَٱللَّهُ"
+              },
+              "sousi": {
+                "location": "63:11:8:sousi",
+                "text": "وَاَللَّهُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:9",
+                "text": "خَبِيرٌۢ"
+              },
+              "sousi": {
+                "location": "63:11:9:sousi",
+                "text": "خَبِيرُۢ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:10",
+                "text": "بِمَا"
+              },
+              "sousi": {
+                "location": "63:11:10:sousi",
+                "text": "بِمَا"
+              }
+            }
+          ]
+        }
+      ],
+      "status": "scholarly-review-required",
+      "decision": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "id": "qusx:review:063:004",
+      "canonical": "63:11:11",
+      "hafs": {
+        "location": "63:11:11",
+        "text": "تَعْمَلُونَ"
+      },
+      "observations": [
+        {
+          "tradition": "shubah-kfqc",
+          "type": "uncertain-match",
+          "confidence": "review-required",
+          "reading": {
+            "location": "63:11:11:shubah",
+            "text": "يَعۡمَلُونَ"
+          },
+          "context": [
+            {
+              "hafs": {
+                "location": "63:11:7",
+                "text": "أَجَلُهَا ۚ"
+              },
+              "shubah": {
+                "location": "63:11:7:shubah",
+                "text": "أَجَلُهَاۚ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:8",
+                "text": "وَٱللَّهُ"
+              },
+              "shubah": {
+                "location": "63:11:8:shubah",
+                "text": "وَٱللَّهُ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:9",
+                "text": "خَبِيرٌۢ"
+              },
+              "shubah": {
+                "location": "63:11:9:shubah",
+                "text": "خَبِيرُۢ"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:10",
+                "text": "بِمَا"
+              },
+              "shubah": {
+                "location": "63:11:10:shubah",
+                "text": "بِمَا"
+              }
+            },
+            {
+              "hafs": {
+                "location": "63:11:11",
+                "text": "تَعْمَلُونَ"
+              },
+              "shubah": {
+                "location": "63:11:11:shubah",
+                "text": "يَعۡمَلُونَ"
+              }
+            }
+          ]
+        }
+      ],
+      "status": "scholarly-review-required",
+      "decision": null,
+      "reviewer": null,
+      "reviewedAt": null,
+      "evidence": [],
+      "notes": ""
+    }
+  ]
+}

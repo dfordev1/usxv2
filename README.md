@@ -199,6 +199,19 @@ providers at letter and lexical-word-count level after provider presentation
 marks are normalized. This is a compatibility layer, not part of the normative
 QUSX XML standard.
 
+The first complete-surah alignment review inventory is also bundled for Surah
+63. It consolidates all eight generated observations across the five non-Hafs
+sources into four unique locations, without claiming that any candidate has
+been scholarly approved:
+
+```bash
+npx quran-usx@beta review 63
+npx quran-usx@beta review 63 --json
+```
+
+See [`docs/surah-063-review.md`](docs/surah-063-review.md) for the reviewer
+contract and decision vocabulary.
+
 Status is deliberately `source-authenticated-research-prototype`, not
 `scholarly-certified`. Evidence and the authentication boundary are documented
 in [`docs/alignment-authentication.md`](docs/alignment-authentication.md).

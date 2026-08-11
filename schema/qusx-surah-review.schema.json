@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dfordev1.github.io/usxv2/schema/qusx-surah-review-v1.json",
+  "title": "QUSX complete-surah alignment review bundle",
+  "type": "object",
+  "required": ["format", "version", "status", "surah", "canonicalTradition", "traditions", "completeness", "allowedDecisions", "records"],
+  "properties": {
+    "format": { "const": "qusx-surah-alignment-review" },
+    "version": { "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "status": { "type": "string" },
+    "surah": { "type": "integer", "minimum": 1, "maximum": 114 },
+    "canonicalTradition": { "type": "string" },
+    "traditions": { "type": "array", "minItems": 2, "uniqueItems": true, "items": { "type": "string" } },
+    "generatedFrom": { "type": "array", "items": { "type": "string" } },
+    "completeness": {
+      "type": "object",
+      "required": ["candidateObservations", "uniqueReviewLocations", "reviewed", "pending"],
+      "properties": {
+        "candidateObservations": { "type": "integer", "minimum": 0 },
+        "uniqueReviewLocations": { "type": "integer", "minimum": 0 },
+        "reviewed": { "type": "integer", "minimum": 0 },
+        "pending": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "allowedDecisions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "canonical", "hafs", "observations", "status", "decision", "reviewer", "reviewedAt", "evidence", "notes"],
+        "properties": {
+          "id": { "type": "string" },
+          "canonical": { "type": "string" },
+          "hafs": { "type": ["object", "null"] },
+          "observations": { "type": "array", "minItems": 1, "items": { "type": "object" } },
+          "status": { "type": "string" },
+          "decision": { "type": ["string", "null"] },
+          "reviewer": { "type": ["string", "null"] },
+          "reviewedAt": { "type": ["string", "null"], "format": "date-time" },
+          "evidence": { "type": "array", "items": { "type": "string", "format": "uri" } },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
