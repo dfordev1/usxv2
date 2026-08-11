@@ -9,6 +9,10 @@ plain chronological record, not semver-scoped releases.
   candidates across 805 ayahs. It maps each record to pinned Quranpedia SVG
   pages for the five traditions with complete local boundary indexes and keeps
   evidence status pending until a visual decision is recorded.
+- Verified and SHA-256-pinned all 2,213 unique printed pages referenced by that
+  plan, including the presence of every required ayah tag. The compact audit
+  report records zero missing or failed page checks without bundling page text
+  in npm.
 
 - Added the first printed-edition evidence pack for all four Surah 63 review
   locations. Five KFQC page-555 vector exports (Hafs, Warsh, Qalun, Al-Duri and

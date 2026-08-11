@@ -9,6 +9,12 @@ async function load() {
   return JSON.parse(Buffer.concat(chunks));
 }
 
+async function loadSourceAudit() {
+  const chunks = [];
+  for await (const chunk of createReadStream(new URL("../data/review/eight-riwayah-printed-source-audit-v1.json.gz", import.meta.url)).pipe(createGunzip())) chunks.push(chunk);
+  return JSON.parse(Buffer.concat(chunks));
+}
+
 test("printed audit plan covers every candidate without claiming certification", async () => {
   const plan = await load();
   assert.equal(plan.status, "complete-inventory-evidence-pending");
@@ -17,6 +23,14 @@ test("printed audit plan covers every candidate without claiming certification",
   assert.equal(plan.records.length, 937);
   assert.match(plan.limitations, /not scholarly certification/i);
   assert.ok(plan.records.every((record) => record.status === "printed-evidence-pending"));
+});
+
+test("every referenced printed page and required ayah tag was verified", async () => {
+  const audit = await loadSourceAudit();
+  assert.equal(audit.status, "all-referenced-pages-and-ayah-tags-verified");
+  assert.deepEqual(audit.coverage.statusCounts, { "page-and-ayah-tags-verified": 2213 });
+  assert.equal(audit.pages.length, 2213);
+  assert.ok(audit.pages.every((page) => /^[0-9a-f]{64}$/.test(page.sha256) && page.missingAyahs.length === 0));
 });
 
 test("every audit record has actionable page evidence or an explicit boundary gap", async () => {

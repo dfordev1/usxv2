@@ -236,6 +236,9 @@ in a pinned Quranpedia commit for the five editions with verified boundary
 maps. Pages and crops are fetched only when a record is reviewed, avoiding a
 multi-gigabyte evidence copy. Missing boundaries and uncertain decisions stay
 explicitly unresolved; the generator never awards scholarly certification.
+`npm run audit:printed:verify` checks every unique referenced page, hashes its
+bytes, and confirms the expected ayah tags. The committed audit currently
+verifies all 2,213 referenced pages with no missing required ayah tags.
 
 Status is deliberately `source-authenticated-research-prototype`, not
 `scholarly-certified`. Evidence and the authentication boundary are documented
