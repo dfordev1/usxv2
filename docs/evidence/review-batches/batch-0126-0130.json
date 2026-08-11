@@ -1,0 +1,482 @@
+{
+  "format": "qusx-printed-review-batch",
+  "start": 125,
+  "limit": 5,
+  "records": [
+    {
+      "id": "qusx:printed-audit:010232",
+      "slotId": "qusx:slot:global:010232",
+      "canonical": "4:24:3",
+      "surah": 4,
+      "ayah": 24,
+      "word": 3,
+      "workbookClassification": "substantive-candidate",
+      "readings": {
+        "hafs-kufi": [
+          "ٱلنِّسَآءِ"
+        ],
+        "shubah-kfqc": [
+          "ٱلنِّسَآءِ"
+        ],
+        "warsh-kfqc": [
+          "اَ۬لنِّسَآءِ"
+        ],
+        "qalon-kfqc": [
+          "اَ۬لنِّسَآ۟"
+        ],
+        "bazzi-kfqc": [
+          "ٱلنِّسَآ۟"
+        ],
+        "douri-kfqc": [
+          "اَ۬لنِّسَآ"
+        ],
+        "qunbul-kfqc": [
+          "ٱلنِّسَآءِ"
+        ],
+        "sousi-kfqc": [
+          "اَ۬لنِّسَا"
+        ]
+      },
+      "pages": {
+        "hafs-kufi": {
+          "status": "ready-to-fetch",
+          "page": 82,
+          "sourceSurah": 4,
+          "sourceAyah": 24,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/hafs/kfqc/svg/082.svg",
+          "bounds": {
+            "top": 1.5,
+            "bottom": 230.69
+          }
+        },
+        "warsh-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 82,
+          "sourceSurah": 4,
+          "sourceAyah": 24,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/warsh/kfqc/svg/082.svg",
+          "bounds": {
+            "top": 1.5,
+            "bottom": 228.53
+          }
+        },
+        "qalon-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 82,
+          "sourceSurah": 4,
+          "sourceAyah": 24,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/qalon/kfqc/svg/082.svg",
+          "bounds": {
+            "top": 1.5,
+            "bottom": 228.53
+          }
+        },
+        "douri-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 82,
+          "sourceSurah": 4,
+          "sourceAyah": 24,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/douri/kfqc/svg/082.svg",
+          "bounds": {
+            "top": 1.5,
+            "bottom": 229.7
+          }
+        },
+        "shubah-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 82,
+          "sourceSurah": 4,
+          "sourceAyah": 24,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/shubah/kfqc/svg/082.svg",
+          "bounds": {
+            "top": 1.5,
+            "bottom": 230.69
+          }
+        }
+      },
+      "status": "printed-evidence-pending",
+      "decision": null,
+      "evidence": []
+    },
+    {
+      "id": "qusx:printed-audit:010445",
+      "slotId": "qusx:slot:global:010445",
+      "canonical": "4:33:6",
+      "surah": 4,
+      "ayah": 33,
+      "word": 6,
+      "workbookClassification": "substantive-candidate",
+      "readings": {
+        "hafs-kufi": [
+          "ٱلۡوَٰلِدَانِ"
+        ],
+        "shubah-kfqc": [
+          "ٱلۡوَٰلِدَانِ"
+        ],
+        "warsh-kfqc": [
+          "اَ۬لۡوَٰلِدَٰنِ"
+        ],
+        "qalon-kfqc": [
+          "اَ۬لۡوَٰلِدَٰنِ"
+        ],
+        "bazzi-kfqc": [
+          "ٱلۡوَٰلِدَانِ"
+        ],
+        "douri-kfqc": [
+          "اَ۬لۡوَٰلِدَانِ"
+        ],
+        "qunbul-kfqc": [
+          "ٱلۡوَٰلِدَانِ"
+        ],
+        "sousi-kfqc": [
+          "اَ۬لۡوَٰلِدَانِ"
+        ]
+      },
+      "pages": {
+        "hafs-kufi": {
+          "status": "ready-to-fetch",
+          "page": 83,
+          "sourceSurah": 4,
+          "sourceAyah": 33,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/hafs/kfqc/svg/083.svg",
+          "bounds": {
+            "top": 432.83,
+            "bottom": 550
+          }
+        },
+        "warsh-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 83,
+          "sourceSurah": 4,
+          "sourceAyah": 33,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/warsh/kfqc/svg/083.svg",
+          "bounds": {
+            "top": 429.19,
+            "bottom": 545.67
+          }
+        },
+        "qalon-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 83,
+          "sourceSurah": 4,
+          "sourceAyah": 33,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/qalon/kfqc/svg/083.svg",
+          "bounds": {
+            "top": 429.19,
+            "bottom": 545.67
+          }
+        },
+        "douri-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 83,
+          "sourceSurah": 4,
+          "sourceAyah": 33,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/douri/kfqc/svg/083.svg",
+          "bounds": {
+            "top": 434.39,
+            "bottom": 550
+          }
+        },
+        "shubah-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 83,
+          "sourceSurah": 4,
+          "sourceAyah": 33,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/shubah/kfqc/svg/083.svg",
+          "bounds": {
+            "top": 432.83,
+            "bottom": 550
+          }
+        }
+      },
+      "status": "printed-evidence-pending",
+      "decision": null,
+      "evidence": []
+    },
+    {
+      "id": "qusx:printed-audit:010538",
+      "slotId": "qusx:slot:global:010538",
+      "canonical": "4:36:18",
+      "surah": 4,
+      "ayah": 36,
+      "word": 18,
+      "workbookClassification": "substantive-candidate",
+      "readings": {
+        "hafs-kufi": [
+          "وَٱلصَّاحِبِ"
+        ],
+        "shubah-kfqc": [
+          "وَٱلصَّاحِبِ"
+        ],
+        "warsh-kfqc": [
+          "وَالصَّٰحِبِ"
+        ],
+        "qalon-kfqc": [
+          "وَالصَّٰحِبِ"
+        ],
+        "bazzi-kfqc": [
+          "وَٱلصَّاحِبِ"
+        ],
+        "douri-kfqc": [
+          "وَاَلصَّاحِبِ"
+        ],
+        "qunbul-kfqc": [
+          "وَٱلصَّاحِبِ"
+        ],
+        "sousi-kfqc": [
+          "وَاَلصَّاحِب"
+        ]
+      },
+      "pages": {
+        "hafs-kufi": {
+          "status": "ready-to-fetch",
+          "page": 84,
+          "sourceSurah": 4,
+          "sourceAyah": 36,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/hafs/kfqc/svg/084.svg",
+          "bounds": {
+            "top": 290.49,
+            "bottom": 479.35
+          }
+        },
+        "warsh-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 84,
+          "sourceSurah": 4,
+          "sourceAyah": 36,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/warsh/kfqc/svg/084.svg",
+          "bounds": {
+            "top": 288.25,
+            "bottom": 475.18
+          }
+        },
+        "qalon-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 84,
+          "sourceSurah": 4,
+          "sourceAyah": 36,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/qalon/kfqc/svg/084.svg",
+          "bounds": {
+            "top": 288.25,
+            "bottom": 475.18
+          }
+        },
+        "douri-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 84,
+          "sourceSurah": 4,
+          "sourceAyah": 36,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/douri/kfqc/svg/084.svg",
+          "bounds": {
+            "top": 291.12,
+            "bottom": 480.36
+          }
+        },
+        "shubah-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 84,
+          "sourceSurah": 4,
+          "sourceAyah": 36,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/shubah/kfqc/svg/084.svg",
+          "bounds": {
+            "top": 290.49,
+            "bottom": 479.35
+          }
+        }
+      },
+      "status": "printed-evidence-pending",
+      "decision": null,
+      "evidence": []
+    },
+    {
+      "id": "qusx:printed-audit:010589",
+      "slotId": "qusx:slot:global:010589",
+      "canonical": "4:39:4",
+      "surah": 4,
+      "ayah": 39,
+      "word": 4,
+      "workbookClassification": "substantive-candidate",
+      "readings": {
+        "hafs-kufi": [
+          "ءَامَنُواْ"
+        ],
+        "shubah-kfqc": [
+          "ءَامَنُواْ"
+        ],
+        "warsh-kfqc": [
+          "اٰمَنُواۡ"
+        ],
+        "qalon-kfqc": [
+          "ءَامَنُواۡ"
+        ],
+        "bazzi-kfqc": [
+          "ءَامَنُواْ"
+        ],
+        "douri-kfqc": [
+          "ءَامَنُواْ"
+        ],
+        "qunbul-kfqc": [
+          "ءَامَنُواْ"
+        ],
+        "sousi-kfqc": [
+          "ءَامَنُواْ"
+        ]
+      },
+      "pages": {
+        "hafs-kufi": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 39,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/hafs/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 76.32,
+            "bottom": 158.02
+          }
+        },
+        "warsh-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 39,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/warsh/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 76.79,
+            "bottom": 158.03
+          }
+        },
+        "qalon-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 39,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/qalon/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 76.79,
+            "bottom": 158.03
+          }
+        },
+        "douri-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 39,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/douri/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 76.36,
+            "bottom": 158.17
+          }
+        },
+        "shubah-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 39,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/shubah/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 76.32,
+            "bottom": 158.02
+          }
+        }
+      },
+      "status": "printed-evidence-pending",
+      "decision": null,
+      "evidence": []
+    },
+    {
+      "id": "qusx:printed-audit:010668",
+      "slotId": "qusx:slot:global:010668",
+      "canonical": "4:43:27",
+      "surah": 4,
+      "ayah": 43,
+      "word": 27,
+      "workbookClassification": "substantive-candidate",
+      "readings": {
+        "hafs-kufi": [
+          "جَآءَ"
+        ],
+        "shubah-kfqc": [
+          "جَآءَ"
+        ],
+        "warsh-kfqc": [
+          "جَآءَ"
+        ],
+        "qalon-kfqc": [
+          "جَا"
+        ],
+        "bazzi-kfqc": [
+          "جَا"
+        ],
+        "douri-kfqc": [
+          "جَآ"
+        ],
+        "qunbul-kfqc": [
+          "جَآءَ"
+        ],
+        "sousi-kfqc": [
+          "جَا"
+        ]
+      },
+      "pages": {
+        "hafs-kufi": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 43,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/hafs/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 290.99,
+            "bottom": 516.36
+          }
+        },
+        "warsh-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 43,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/warsh/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 288.24,
+            "bottom": 510.44
+          }
+        },
+        "qalon-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 43,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/qalon/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 288.24,
+            "bottom": 510.44
+          }
+        },
+        "douri-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 43,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/douri/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 291.19,
+            "bottom": 516.21
+          }
+        },
+        "shubah-kfqc": {
+          "status": "ready-to-fetch",
+          "page": 85,
+          "sourceSurah": 4,
+          "sourceAyah": 43,
+          "source": "https://raw.githubusercontent.com/quranpedia/quran-svg/5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2/mushafs/shubah/kfqc/svg/085.svg",
+          "bounds": {
+            "top": 290.99,
+            "bottom": 516.36
+          }
+        }
+      },
+      "status": "printed-evidence-pending",
+      "decision": null,
+      "evidence": []
+    }
+  ]
+}

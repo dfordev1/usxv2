@@ -30,6 +30,7 @@ const batch12 = JSON.parse(await readFile(path.join(root, "data/review/printed-r
 const batch12b = JSON.parse(await readFile(path.join(root, "data/review/printed-review-batch-012b-decisions.json"), "utf8"));
 const batch13 = JSON.parse(await readFile(path.join(root, "data/review/printed-review-batch-013-decisions.json"), "utf8"));
 const batch14 = JSON.parse(await readFile(path.join(root, "data/review/printed-review-batch-014-decisions.json"), "utf8"));
+const batch15 = JSON.parse(await readFile(path.join(root, "data/review/printed-review-batch-015-decisions.json"), "utf8"));
 const surah63 = JSON.parse(await readFile(path.join(root, "data/review/surah-063-printed-evidence-v1.json"), "utf8"));
 const svgById = new Map(svgEvidence.records.map((record) => [record.id, record]));
 const pdfById = new Map(pdfEvidence.records.map((record) => [record.id, record]));
@@ -48,6 +49,7 @@ for (const record of batch12.records) manual.set(record.id, record);
 for (const record of batch12b.records) manual.set(record.id, record);
 for (const record of batch13.records) manual.set(record.id, record);
 for (const record of batch14.records) manual.set(record.id, record);
+for (const record of batch15.records) manual.set(record.id, record);
 for (const record of surah63.records) manual.set(record.canonical, record);
 
 const folds = new Map([["ٱ", "ا"], ["أ", "ا"], ["إ", "ا"], ["آ", "ا"], ["ى", "ي"], ["ے", "ي"], ["ؤ", "و"], ["ئ", "ي"]]);
