@@ -5,6 +5,13 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added the `quran-usx` executable with `compare`, `map`, and `validate`
+  commands, positional and long-form arguments, short tradition aliases, and
+  structured `--json` output. Added Node helpers for loading bundled alignment
+  data, structured file validation, and an ayah-level comparison API. CLI
+  wording preserves the distinction between reviewed normative slots,
+  algorithmic boundary mappings, and as-yet-unreviewed coverage.
+
 - Added the first six-riwayah alignment prototype for Hafs, Warsh, Qalun,
   Douri, Shubah, and Sousi. This includes 31,098 explicit ayah-boundary
   mappings, three source-authenticated normative alignment rules, stable slot

@@ -1,12 +1,15 @@
 {
   "name": "quran-usx",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "qusxGeneratorVersion": "0.1.0",
   "description": "QUSX (Qur'an Unified Scripture XML) — a milestone-based XML data standard for the Qur'an, modeled on the Bible's USX/USFM standard. v0.1 research prototype, not a finished standard.",
   "type": "commonjs",
   "main": "sdk/index.mjs",
   "module": "sdk/index.mjs",
   "types": "sdk/index.d.ts",
+  "bin": {
+    "quran-usx": "cli/qusx.mjs"
+  },
   "exports": {
     ".": {
       "types": "./sdk/index.d.ts",
@@ -31,6 +34,7 @@
     "./package.json": "./package.json"
   },
   "files": [
+    "cli/",
     "sdk/",
     "schema/qusx.xsd",
     "schema/qusx-alignment.schema.json",
@@ -45,7 +49,7 @@
     "generate": "node src/generate.js all",
     "validate": "node src/validate.js all",
     "validate:xsd": "node scripts/run-python.js scripts/xsd_validate.py",
-    "test": "node test/run_tests.js && node --test test/sdk.test.mjs test/adapters.test.mjs test/candidate-alignments.test.js test/normative-alignment.test.js",
+    "test": "node test/run_tests.js && node --test test/sdk.test.mjs test/adapters.test.mjs test/cli.test.mjs test/candidate-alignments.test.js test/normative-alignment.test.js",
     "align:candidates": "node scripts/generate_candidate_alignments.js",
     "align:review-data": "node scripts/build_alignment_review_data.js",
     "align:boundaries": "node scripts/generate_boundary_mappings.js",
