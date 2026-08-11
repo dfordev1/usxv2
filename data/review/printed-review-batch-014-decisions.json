@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0121-0125.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:009993","canonical":"4:13:8","decision":"reading-variant","notes":"Hafs and the other non-Warsh/Qalun forms use يُدْخِلْهُ while Warsh and Qalun use نُدْخِلْهُ."},
+    {"id":"qusx:printed-audit:010010","canonical":"4:14:7","decision":"reading-variant","notes":"Hafs and the other non-Warsh/Qalun forms use يُدْخِلْهُ while Warsh and Qalun use نُدْخِلْهُ."},
+    {"id":"qusx:printed-audit:010039","canonical":"4:16:1","decision":"uncertain","notes":"Visible forms differ in alif, hamza, shadda, and final weak-letter presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:010086","canonical":"4:18:14","decision":"uncertain","notes":"The complex hamza/alif sequence of الْآنَ differs visibly; preserved as uncertain."},
+    {"id":"qusx:printed-audit:010165","canonical":"4:22:7","decision":"uncertain","notes":"Visible final hamza, madd, and stopping-mark differences are preserved without subtype assertion."}
+  ]
+}
