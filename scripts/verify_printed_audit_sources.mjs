@@ -33,7 +33,7 @@ for (const record of plan.records) {
   for (const [tradition, page] of Object.entries(record.pages)) {
     if (page.status !== "ready-to-fetch") continue;
     if (!requirements.has(page.source)) requirements.set(page.source, { tradition, page: page.page, ayahs: new Set() });
-    requirements.get(page.source).ayahs.add(`${record.surah}:${record.ayah}`);
+    requirements.get(page.source).ayahs.add(`${page.sourceSurah ?? record.surah}:${page.sourceAyah ?? record.ayah}`);
   }
 }
 

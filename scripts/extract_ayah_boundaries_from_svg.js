@@ -24,8 +24,10 @@ if (!TRADITION) {
 const OUT_DIR = path.join(__dirname, "..", "data", "traditions");
 const SURAH_JSON = path.join(OUT_DIR, `${TRADITION}_surah.json`);
 
-const CONCURRENCY = 8;
-const BASE = `https://raw.githubusercontent.com/quranpedia/quran-svg/main/mushafs/${TRADITION}/kfqc/svg`;
+const CONCURRENCY = Number(process.env.QUSX_AUDIT_CONCURRENCY || 16);
+const QURAN_SVG_COMMIT = "5fbcb1d4d92b5a2972ab51472fe991b6066bb6e2";
+const REPO_BASE = `https://raw.githubusercontent.com/quranpedia/quran-svg/${QURAN_SVG_COMMIT}/mushafs/${TRADITION}/kfqc`;
+const BASE = `${REPO_BASE}/svg`;
 
 // Attribute order varies across pages/traditions -- e.g. <path id="verse-N"
 // class="ayahPolygon" ... ayah="1" surah="1" .../> vs class first, vs
@@ -52,8 +54,17 @@ async function fetchPage(pageNum) {
   return { pageNum, entries };
 }
 
+async function loadSurahData() {
+  if (fs.existsSync(SURAH_JSON)) return JSON.parse(fs.readFileSync(SURAH_JSON, "utf-8"));
+  const response = await fetch(`${REPO_BASE}/json/surah.json`);
+  if (!response.ok) throw new Error(`Cannot fetch ${TRADITION} surah metadata: HTTP ${response.status}`);
+  const data = await response.json();
+  fs.writeFileSync(SURAH_JSON, JSON.stringify(data, null, 2) + "\n", "utf-8");
+  return data;
+}
+
 async function main() {
-  const surahData = JSON.parse(fs.readFileSync(SURAH_JSON, "utf-8"));
+  const surahData = await loadSurahData();
   const maxPage = Math.max(...surahData.map((s) => s.pageNumber)) + 10; // headroom past last surah's start page
 
   console.log(`Fetching ${TRADITION}: pages 1..${maxPage}, concurrency ${CONCURRENCY}`);
@@ -84,7 +95,7 @@ async function main() {
     }
   }
 
-  const output = { tradition: TRADITION, generatedAt: "2026-07-13", source: "quran-svg SVG files (surah/ayah tags), CC0", surahs: {} };
+  const output = { tradition: TRADITION, generatedAt: "2026-08-11", source: `quran-svg SVG files at ${QURAN_SVG_COMMIT} (surah/ayah tags), CC0`, surahs: {} };
   let totalAyahs = 0;
   let mismatches = [];
   for (const s of surahData) {

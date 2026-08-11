@@ -72,6 +72,9 @@
     "audit:printed:verify": "node scripts/verify_printed_audit_sources.mjs",
     "audit:printed:batch": "node scripts/build_printed_review_batch.mjs",
     "audit:printed:verdict": "node scripts/build_complete_printed_verdict.mjs",
+    "audit:printed:pdf-lines": "node scripts/run-python.js scripts/audit_additional_printed_pdfs.py",
+    "audit:printed:svg-crops": "node scripts/audit_svg_ayah_crops.mjs",
+    "audit:printed:classify": "node scripts/classify_complete_printed_review.mjs",
     "align:review-data": "node scripts/build_alignment_review_data.js",
     "align:boundaries": "node scripts/generate_boundary_mappings.js",
     "align:metrics": "node scripts/report_alignment_metrics.js",
@@ -111,5 +114,8 @@
     "type": "git",
     "url": "git+https://github.com/dfordev1/usxv2.git"
   },
-  "homepage": "https://github.com/dfordev1/usxv2"
+  "homepage": "https://github.com/dfordev1/usxv2",
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
 }

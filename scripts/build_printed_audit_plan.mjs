@@ -29,6 +29,7 @@ function location(value) {
 }
 
 const candidates = await readGzipJson(sourcePath);
+const ayahMappings = JSON.parse(await readFile(path.join(root, "data", "alignments", "boundary-v1.json"), "utf8"));
 const boundaries = {};
 for (const tradition of supported) {
   const data = JSON.parse(await readFile(path.join(root, "data", "traditions", `${tradition}-ayah-boundaries.json`), "utf8"));
@@ -40,10 +41,18 @@ const records = candidates.slots.map((slot) => {
   const canonical = slot.canonicalLocations[0];
   const { surah, ayah, word } = location(canonical);
   const pages = Object.fromEntries(supported.map((tradition) => {
-    const page = boundaries[tradition].get(`${surah}:${ayah}`) ?? null;
+    const traditionId = ids[tradition];
+    const canonicalAyah = `${surah}:${ayah}`;
+    const mapped = tradition === "hafs" ? canonicalAyah : ayahMappings.mappings[traditionId]
+      ?.find((item) => item.targets.includes(canonicalAyah))?.source ?? canonicalAyah;
+    const page = boundaries[tradition].get(mapped) ?? null;
+    const [sourceSurah, sourceAyah] = mapped.split(":").map(Number);
     return [ids[tradition], page === null ? { status: "boundary-unavailable" } : {
       status: "ready-to-fetch",
       page,
+      sourceSurah,
+      sourceAyah,
+      mappedFromCanonical: mapped === canonicalAyah ? undefined : canonicalAyah,
       source: `${upstream}/mushafs/${tradition}/kfqc/svg/${String(page).padStart(3, "0")}.svg`,
     }];
   }));

@@ -5,6 +5,12 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Completed an individual record-level eight-edition technical review for all
+  937 candidates. Each record now carries hashes for five rendered SVG ayah
+  regions and three rendered PDF target-line regions. Conservative decisions
+  are 208 reading variants, 3 presentation differences, 6 tokenization cases,
+  and 720 explicit uncertainties; none is described as scholar-certified.
+
 - Started the complete visual review with a reusable side-by-side pinned-page
   viewer and the first ten-record batch. Batch 001 records seven reading-form
   differences and three orthographic-presentation differences, with no source
@@ -18,7 +24,7 @@ plain chronological record, not semver-scoped releases.
   candidates across 805 ayahs. It maps each record to pinned Quranpedia SVG
   pages for the five traditions with complete local boundary indexes and keeps
   evidence status pending until a visual decision is recorded.
-- Verified and SHA-256-pinned all 2,213 unique printed pages referenced by that
+- Verified and SHA-256-pinned all 2,230 unique printed pages referenced by that
   plan, including the presence of every required ayah tag. The compact audit
   report records zero missing or failed page checks without bundling page text
   in npm.

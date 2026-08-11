@@ -29,8 +29,8 @@ test("printed audit plan covers every candidate without claiming certification",
 test("every referenced printed page and required ayah tag was verified", async () => {
   const audit = await loadSourceAudit();
   assert.equal(audit.status, "all-referenced-pages-and-ayah-tags-verified");
-  assert.deepEqual(audit.coverage.statusCounts, { "page-and-ayah-tags-verified": 2213 });
-  assert.equal(audit.pages.length, 2213);
+  assert.deepEqual(audit.coverage.statusCounts, { "page-and-ayah-tags-verified": 2230 });
+  assert.equal(audit.pages.length, 2230);
   assert.ok(audit.pages.every((page) => /^[0-9a-f]{64}$/.test(page.sha256) && page.missingAyahs.length === 0));
 });
 
@@ -53,6 +53,36 @@ test("complete verdict covers every candidate without inventing semantic certain
   assert.equal(verdict.summary.decisions.tokenization, 6);
   assert.equal(verdict.summary.semanticStatuses["source-corroborated-subtype-pending"], 919);
   assert.match(verdict.scope, /does not claim scholarly certification/i);
+});
+
+test("complete eight-edition review has individual rendered evidence and explicit decisions", async () => {
+  const chunks = [];
+  for await (const chunk of createReadStream(new URL("../data/review/eight-riwayah-complete-printed-review-v1.json.gz", import.meta.url)).pipe(createGunzip())) chunks.push(chunk);
+  const review = JSON.parse(Buffer.concat(chunks));
+  assert.equal(review.status, "complete-edition-scoped-review-not-scholarly-certified");
+  assert.equal(review.coverage.candidates, 937);
+  assert.equal(review.coverage.traditions, 8);
+  assert.deepEqual(review.coverage.decisions, {
+    "reading-variant": 208,
+    "orthography-presentation": 3,
+    uncertain: 720,
+    tokenization: 6,
+  });
+  assert.equal(review.records.length, 937);
+  for (const record of review.records) {
+    assert.ok(["reading-variant", "orthography-presentation", "uncertain", "tokenization"].includes(record.decision));
+    assert.equal(record.evidence.renderedEditions, 8);
+    assert.equal(Object.keys(record.evidence.svgAyahCrops).length, 5);
+    assert.equal(Object.keys(record.evidence.pdfLineCrops).length, 3);
+    for (const item of Object.values(record.evidence.svgAyahCrops)) {
+      assert.equal(item.status, "ayah-region-rendered-and-hashed");
+      assert.match(item.cropSha256, /^[0-9a-f]{64}$/);
+    }
+    for (const item of Object.values(record.evidence.pdfLineCrops)) {
+      assert.equal(item.status, "target-line-region-rendered-and-hashed");
+      assert.match(item.cropSha256, /^[0-9a-f]{64}$/);
+    }
+  }
 });
 
 test("every audit record has actionable page evidence or an explicit boundary gap", async () => {

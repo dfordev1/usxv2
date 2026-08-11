@@ -33,7 +33,7 @@ for (const record of records) {
     if (page.status !== "ready-to-fetch") continue;
     const response = await fetch(page.source);
     if (!response.ok) throw new Error(`${response.status} ${page.source}`);
-    page.bounds = polygonBounds(await response.text(), record.surah, record.ayah);
+    page.bounds = polygonBounds(await response.text(), page.sourceSurah ?? record.surah, page.sourceAyah ?? record.ayah);
   }
 }
 const label = start === 0 && limit === 10 ? "001" : `${String(start + 1).padStart(4, "0")}-${String(start + records.length).padStart(4, "0")}`;

@@ -238,12 +238,22 @@ multi-gigabyte evidence copy. Missing boundaries and uncertain decisions stay
 explicitly unresolved; the generator never awards scholarly certification.
 `npm run audit:printed:verify` checks every unique referenced page, hashes its
 bytes, and confirms the expected ayah tags. The committed audit currently
-verifies all 2,213 referenced pages with no missing required ayah tags.
+verifies all 2,230 referenced pages with no missing required ayah tags.
 `npm run audit:printed:verdict` then combines that evidence with the independent
 eight-dataset mirror audit. It currently records a complete source-error verdict
 for all 937 candidates: no source-copy error was detected. Exact semantic
 subtyping remains explicit—reviewed where supported, otherwise
 `source-corroborated-subtype-pending` rather than guessed.
+
+The final record-level technical review is stored in
+`data/review/eight-riwayah-complete-printed-review-v1.json.gz`. Every one of the
+937 records carries rendered evidence from eight editions: ayah crops from the
+five pinned Quranpedia vectors and target-line crops from independently pinned
+Al-Bazzi, Qunbul and Al-Susi PDFs. The conservative result is 208 reading
+variants, 3 presentation differences, 6 tokenization cases and 720 uncertain
+cases. `Uncertain` is a completed technical outcome, not an invented scholarly
+classification: these cases need domain interpretation to separate weak-letter
+or hamza reading behavior from edition orthography.
 
 Status is deliberately `source-authenticated-research-prototype`, not
 `scholarly-certified`. Evidence and the authentication boundary are documented
