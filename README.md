@@ -183,6 +183,22 @@ identical. `validate` performs the package's safe structural parser checks; the
 repository's XSD, Schematron, and corpus-wide checks remain the complete
 conformance gate.
 
+For a unified live API interface, `quran-usx/providers` currently supports
+Quran.com and AlQuran Cloud:
+
+```js
+import { createProvider } from "quran-usx/providers";
+
+const provider = createProvider("quran.com");
+const verse = await provider.getAyah("57:24");
+const surah = await provider.getSurah(1);
+```
+
+The complete live Al-Fatihah pilot matches all seven ayahs between both
+providers at letter and lexical-word-count level after provider presentation
+marks are normalized. This is a compatibility layer, not part of the normative
+QUSX XML standard.
+
 Status is deliberately `source-authenticated-research-prototype`, not
 `scholarly-certified`. Evidence and the authentication boundary are documented
 in [`docs/alignment-authentication.md`](docs/alignment-authentication.md).

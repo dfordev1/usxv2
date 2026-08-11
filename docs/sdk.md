@@ -142,3 +142,23 @@ edition identifier alone is not treated as proof of a riwayah. The optional
 live contract check is `npm run audit:alquran-cloud`.
 
 The package is ESM-only and requires Node.js 22 or a modern browser/build tool.
+
+## Unified provider clients
+
+```js
+import { createProvider, listProviders } from "quran-usx/providers";
+
+listProviders(); // ["quran.com", "alquran.cloud"]
+
+const quranCom = createProvider("quran.com");
+const cloud = createProvider("alquran.cloud", { tradition: "hafs-kufi" });
+
+const verse = await quranCom.getAyah("57:24");
+const fatiha = await cloud.getSurah(1);
+```
+
+Both clients return the same `CompatibleVerse` structure. Quran.com ayah-ending
+number markers are excluded from lexical words. AlQuran Cloud requires an
+explicit tradition because its edition identifier is not treated as riwayah
+authentication. Network tests can inject `fetch` and `baseUrl`; the live
+Al-Fatihah compatibility audit is `npm run audit:provider-fatiha`.

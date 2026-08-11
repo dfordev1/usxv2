@@ -1,6 +1,6 @@
 {
   "name": "quran-usx",
-  "version": "0.1.0-beta.4",
+  "version": "0.1.0-beta.5",
   "qusxGeneratorVersion": "0.1.0",
   "description": "QUSX (Qur'an Unified Scripture XML) — a milestone-based XML data standard for the Qur'an, modeled on the Bible's USX/USFM standard. v0.1 research prototype, not a finished standard.",
   "type": "commonjs",
@@ -26,6 +26,11 @@
       "import": "./sdk/adapters.mjs",
       "default": "./sdk/adapters.mjs"
     },
+    "./providers": {
+      "types": "./sdk/providers.d.ts",
+      "import": "./sdk/providers.mjs",
+      "default": "./sdk/providers.mjs"
+    },
     "./schema": "./schema/qusx.xsd",
     "./alignment": "./data/alignments/normative-v1.json",
     "./alignment-schema": "./schema/qusx-alignment.schema.json",
@@ -49,7 +54,7 @@
     "generate": "node src/generate.js all",
     "validate": "node src/validate.js all",
     "validate:xsd": "node scripts/run-python.js scripts/xsd_validate.py",
-    "test": "node test/run_tests.js && node --test test/sdk.test.mjs test/adapters.test.mjs test/cli.test.mjs test/candidate-alignments.test.js test/normative-alignment.test.js",
+    "test": "node test/run_tests.js && node --test test/sdk.test.mjs test/adapters.test.mjs test/providers.test.mjs test/cli.test.mjs test/candidate-alignments.test.js test/normative-alignment.test.js",
     "align:candidates": "node scripts/generate_candidate_alignments.js",
     "align:review-data": "node scripts/build_alignment_review_data.js",
     "align:boundaries": "node scripts/generate_boundary_mappings.js",
@@ -64,6 +69,7 @@
     "verify:regeneration": "node scripts/verify-regeneration.js",
     "audit:qurancom": "node scripts/run-python.js scripts/audit_qurancom.py madani-v1",
     "audit:alquran-cloud": "node scripts/audit_alquran_cloud.mjs",
+    "audit:provider-fatiha": "node scripts/audit_provider_fatiha.mjs",
     "verify": "npm run hashes && npm run validate && npm run validate:xsd && npm run validate:pilot && npm test && npm run conformance && npm run validate:schematron && npm run checksum:baseline && npm run checksum:full-options && npm run verify:regeneration"
   },
   "keywords": [
