@@ -203,3 +203,167 @@ export function createQusxClient(options = {}) {
     },
   });
 }
+
+function alignmentError(message) {
+  return new QusxError(message, "QUSX_ALIGNMENT");
+}
+
+export function parseAlignment(value) {
+  let data = value;
+  if (typeof value === "string") {
+    try { data = JSON.parse(value); } catch { throw alignmentError("Alignment input is not valid JSON"); }
+  }
+  if (!data || typeof data !== "object" || Array.isArray(data)) throw alignmentError("Alignment must be an object");
+  if (data.format !== "qusx-alignment") throw alignmentError("Unsupported alignment format");
+  if (!/^\d+\.\d+\.\d+$/.test(data.version ?? "")) throw alignmentError("Alignment version must be semantic");
+  if (!Array.isArray(data.traditions) || data.traditions.length < 2 || new Set(data.traditions).size !== data.traditions.length) {
+    throw alignmentError("Alignment traditions must be a unique array");
+  }
+  if (!data.traditions.includes(data.canonicalTradition)) throw alignmentError("Canonical tradition is not listed");
+  if (!Array.isArray(data.rules) || !data.rules.length) throw alignmentError("Alignment requires at least one rule");
+
+  const ids = new Set();
+  const slots = new Set();
+  const rules = data.rules.map((rule) => {
+    if (!rule || typeof rule !== "object") throw alignmentError("Alignment rule must be an object");
+    if (typeof rule.id !== "string" || ids.has(rule.id)) throw alignmentError(`Duplicate or missing alignment rule id: ${rule.id ?? "missing"}`);
+    if (typeof rule.slotId !== "string" || slots.has(rule.slotId)) throw alignmentError(`Duplicate or missing alignment slot id: ${rule.slotId ?? "missing"}`);
+    ids.add(rule.id);
+    slots.add(rule.slotId);
+    if (!rule.readings || typeof rule.readings !== "object") throw alignmentError(`${rule.id}: readings are required`);
+    const readingKeys = Object.keys(rule.readings);
+    if (readingKeys.length !== data.traditions.length || data.traditions.some((tradition) => !readingKeys.includes(tradition))) {
+      throw alignmentError(`${rule.id}: every listed tradition must have one reading`);
+    }
+    const readings = Object.fromEntries(data.traditions.map((tradition) => {
+      const reading = rule.readings[tradition];
+      if (!reading || !/^\d+:\d+$/.test(reading.ayah ?? "") || !Array.isArray(reading.tokens) || reading.tokens.some((token) => typeof token !== "string" || !token)) {
+        throw alignmentError(`${rule.id}: invalid reading for ${tradition}`);
+      }
+      return [tradition, Object.freeze({ ayah: reading.ayah, tokens: Object.freeze([...reading.tokens]), text: reading.tokens.join(" ") })];
+    }));
+    return Object.freeze({ ...rule, readings: Object.freeze(readings), evidence: Object.freeze([...(rule.evidence ?? [])]) });
+  });
+
+  return Object.freeze({
+    ...data,
+    traditions: Object.freeze([...data.traditions]),
+    rules: Object.freeze(rules),
+  });
+}
+
+export function createAlignmentClient(input) {
+  const alignment = parseAlignment(input);
+  const bySlot = new Map(alignment.rules.map((rule) => [rule.slotId, rule]));
+  const byId = new Map(alignment.rules.map((rule) => [rule.id, rule]));
+
+  function requireTradition(tradition) {
+    if (!alignment.traditions.includes(tradition)) throw alignmentError(`Unknown alignment tradition: ${tradition}`);
+  }
+
+  function requireRule(identifier) {
+    const rule = bySlot.get(identifier) ?? byId.get(identifier);
+    if (!rule) throw alignmentError(`Unknown alignment rule or slot: ${identifier}`);
+    return rule;
+  }
+
+  return Object.freeze({
+    alignment,
+    listAlignmentRules() { return alignment.rules; },
+    getReading(identifier, tradition) {
+      requireTradition(tradition);
+      const rule = requireRule(identifier);
+      return Object.freeze({ ruleId: rule.id, slotId: rule.slotId, tradition, ...rule.readings[tradition] });
+    },
+    compareReadings(identifier) {
+      const rule = requireRule(identifier);
+      return Object.freeze({
+        ruleId: rule.id,
+        slotId: rule.slotId,
+        kind: rule.kind,
+        readings: rule.readings,
+      });
+    },
+    getAlignmentEvidence(identifier) {
+      const rule = requireRule(identifier);
+      return Object.freeze({ authentication: rule.authentication, evidence: rule.evidence });
+    },
+  });
+}
+
+export function parseAyahMapping(value) {
+  let data = value;
+  if (typeof value === "string") {
+    try { data = JSON.parse(value); } catch { throw alignmentError("Ayah mapping input is not valid JSON"); }
+  }
+  if (!data || typeof data !== "object" || data.format !== "qusx-ayah-mapping") throw alignmentError("Unsupported ayah mapping format");
+  if (!/^\d+\.\d+\.\d+$/.test(data.version ?? "")) throw alignmentError("Ayah mapping version must be semantic");
+  if (!Array.isArray(data.traditions) || !data.traditions.includes(data.hubTradition)) throw alignmentError("Ayah mapping hub tradition is not listed");
+  if (!data.mappings || typeof data.mappings !== "object") throw alignmentError("Ayah mappings are required");
+  const reference = /^(?:[1-9]|[1-9]\d|10\d|11[0-4]):[1-9]\d*$/;
+  const mappings = {};
+  for (const tradition of data.traditions) {
+    if (tradition === data.hubTradition) continue;
+    const rows = data.mappings[tradition];
+    if (!Array.isArray(rows) || !rows.length) throw alignmentError(`Missing ayah mappings for ${tradition}`);
+    const seen = new Set();
+    mappings[tradition] = Object.freeze(rows.map((row) => {
+      if (!reference.test(row?.source ?? "") || seen.has(row.source)) throw alignmentError(`${tradition}: duplicate or invalid source ayah`);
+      if (!Array.isArray(row.targets) || !row.targets.length || row.targets.some((target) => !reference.test(target))) throw alignmentError(`${tradition} ${row.source}: invalid target ayahs`);
+      seen.add(row.source);
+      return Object.freeze({ source: row.source, targets: Object.freeze([...new Set(row.targets)]) });
+    }));
+  }
+  const unmappedHubAyahs = Object.freeze(Object.fromEntries(Object.entries(data.unmappedHubAyahs ?? {}).map(([tradition, references]) => {
+    if (!Array.isArray(references) || references.some((item) => !reference.test(item))) throw alignmentError(`${tradition}: invalid unmapped hub ayahs`);
+    return [tradition, Object.freeze([...references])];
+  })));
+  return Object.freeze({ ...data, traditions: Object.freeze([...data.traditions]), mappings: Object.freeze(mappings), unmappedHubAyahs });
+}
+
+export function createAyahMappingClient(input) {
+  const mapping = parseAyahMapping(input);
+  const hub = mapping.hubTradition;
+  const toHub = new Map();
+  const fromHub = new Map();
+  const known = new Map(mapping.traditions.map((tradition) => [tradition, new Set()]));
+  for (const [tradition, rows] of Object.entries(mapping.mappings)) {
+    const forward = new Map();
+    const reverse = new Map();
+    for (const row of rows) {
+      forward.set(row.source, row.targets);
+      known.get(tradition).add(row.source);
+      for (const target of row.targets) {
+        known.get(hub).add(target);
+        if (!reverse.has(target)) reverse.set(target, []);
+        reverse.get(target).push(row.source);
+      }
+    }
+    toHub.set(tradition, forward);
+    fromHub.set(tradition, reverse);
+  }
+  function requireTradition(tradition) {
+    if (!mapping.traditions.includes(tradition)) throw alignmentError(`Unknown ayah-mapping tradition: ${tradition}`);
+  }
+  function uniqueSorted(values) {
+    return [...new Set(values)].sort((a, b) => {
+      const [as, aa] = a.split(":").map(Number);
+      const [bs, ba] = b.split(":").map(Number);
+      return as - bs || aa - ba;
+    });
+  }
+  return Object.freeze({
+    mapping,
+    mapAyah(reference, targetTradition, sourceTradition = hub) {
+      requireTradition(sourceTradition);
+      requireTradition(targetTradition);
+      if (!known.get(sourceTradition).has(reference)) return Object.freeze([]);
+      if (sourceTradition === targetTradition) return Object.freeze([reference]);
+      const hubRefs = sourceTradition === hub ? [reference] : toHub.get(sourceTradition).get(reference);
+      if (!hubRefs?.length) return Object.freeze([]);
+      if (targetTradition === hub) return Object.freeze([...hubRefs]);
+      const targets = hubRefs.flatMap((hubRef) => fromHub.get(targetTradition).get(hubRef) ?? []);
+      return Object.freeze(uniqueSorted(targets));
+    },
+  });
+}

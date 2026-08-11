@@ -1,6 +1,6 @@
 {
   "name": "quran-usx",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "qusxGeneratorVersion": "0.1.0",
   "description": "QUSX (Qur'an Unified Scripture XML) — a milestone-based XML data standard for the Qur'an, modeled on the Bible's USX/USFM standard. v0.1 research prototype, not a finished standard.",
   "type": "commonjs",
@@ -18,12 +18,25 @@
       "import": "./sdk/node.mjs",
       "default": "./sdk/node.mjs"
     },
+    "./adapters": {
+      "types": "./sdk/adapters.d.ts",
+      "import": "./sdk/adapters.mjs",
+      "default": "./sdk/adapters.mjs"
+    },
     "./schema": "./schema/qusx.xsd",
+    "./alignment": "./data/alignments/normative-v1.json",
+    "./alignment-schema": "./schema/qusx-alignment.schema.json",
+    "./ayah-mapping": "./data/alignments/boundary-v1.json",
+    "./ayah-mapping-schema": "./schema/qusx-ayah-mapping.schema.json",
     "./package.json": "./package.json"
   },
   "files": [
     "sdk/",
     "schema/qusx.xsd",
+    "schema/qusx-alignment.schema.json",
+    "schema/qusx-ayah-mapping.schema.json",
+    "data/alignments/normative-v1.json",
+    "data/alignments/boundary-v1.json",
     "README.md",
     "LICENSE",
     "THIRD_PARTY_NOTICES.md"
@@ -32,7 +45,11 @@
     "generate": "node src/generate.js all",
     "validate": "node src/validate.js all",
     "validate:xsd": "node scripts/run-python.js scripts/xsd_validate.py",
-    "test": "node test/run_tests.js && node --test test/sdk.test.mjs",
+    "test": "node test/run_tests.js && node --test test/sdk.test.mjs test/adapters.test.mjs test/candidate-alignments.test.js test/normative-alignment.test.js",
+    "align:candidates": "node scripts/generate_candidate_alignments.js",
+    "align:review-data": "node scripts/build_alignment_review_data.js",
+    "align:boundaries": "node scripts/generate_boundary_mappings.js",
+    "align:metrics": "node scripts/report_alignment_metrics.js",
     "checksum": "node src/checksum-verify.js",
     "checksum:full-options": "node scripts/checksum-verify-full-options.js",
     "checksum:baseline": "node scripts/checksum-baseline.js",

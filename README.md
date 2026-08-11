@@ -131,9 +131,9 @@ word-level text, morphology (root/stem/lemma), and full page/juz/hizb/rub/manzil
 milestone pins across all 10 print layouts (1140 files, all validated).
 
 A **separate pilot generator** (`scripts/generate_tradition_pilot.js`) produces real,
-XSD-valid ayah-numbering pins with real Arabic text for 4 more traditions — Warsh,
-Qalun, Al-Duri, Shu'bah (456 files, `output-pilot/`) — plus Al-Susi as an
-unscoped bonus. This is genuinely real, not a demo: real per-tradition text,
+XSD-valid ayah-numbering pins with real Arabic text for 5 more traditions — Warsh,
+Qalun, Al-Duri, Shu'bah and Al-Susi (570 files, `output-pilot/`). Together with
+Hafs, the research prototype covers six riwāyāt. This is genuinely real, not a demo: real per-tradition text,
 verified to differ from Hafs at the rasm level, not a relabeled copy. It is
 **deliberately narrower** than the main generator's output, though — no
 morphology, and no page/juz/hizb/rub/manzil/ruku pins, since those would need
@@ -143,6 +143,31 @@ generator is tightly coupled to Hafs-canonical indexing throughout. See
 [Known gaps](#known-gaps) for open questions (license status of the pilot's
 text source, an unresolved Al-Duri count discrepancy, and whether QUSX should
 model numbering-only or full rasm/text variants).
+
+### Six-riwāyah alignment prototype
+
+[`data/alignments/normative-v1.json`](data/alignments/normative-v1.json) is a
+versioned companion alignment file containing three unique, source-authenticated
+textual differences across all six riwāyāt. It uses stable slot IDs without
+changing existing QUSX word IDs. Every rule maps Hafs, Shu'bah, Warsh, Qalun,
+Al-Duri and Al-Susi, including an empty token list where a reading has no word at
+that position. The JSON shape is defined by
+[`schema/qusx-alignment.schema.json`](schema/qusx-alignment.schema.json), tested
+by [`test/normative-alignment.test.js`](test/normative-alignment.test.js), and
+published from the npm package as `quran-usx/alignment`.
+
+The SDK now exposes `createAlignmentClient()` for reading/comparing slots and
+`createAyahMappingClient()` for cross-riwāyah ayah navigation. The generated
+ayah companion maps all 31,098 non-Hafs source ayahs through a Hafs hub and is
+published as `quran-usx/ayah-mapping`. It is algorithmic research data; only the
+three alignment rules above currently carry source-authenticated status. Optional
+provider adapters (`quran-usx/adapters`) normalize Quran.com-style Hafs responses
+and KFGQPC ayah records into one QUSX-compatible JSON shape. See
+[`docs/sdk.md`](docs/sdk.md).
+
+Status is deliberately `source-authenticated-research-prototype`, not
+`scholarly-certified`. Evidence and the authentication boundary are documented
+in [`docs/alignment-authentication.md`](docs/alignment-authentication.md).
 
 ## Quick start
 
@@ -426,7 +451,7 @@ here — recorded rather than smoothed over.
 
 ## Known gaps
 
-1. **Multi-tradition pins exist as a real pilot, not in the main generator.**
+1. **Multi-tradition text/alignment exists as a real research prototype, not yet in the main generator.**
    Real per-tradition Arabic text was found for Warsh, Qalun, Al-Duri, Shu'bah
    (and Al-Susi as a bonus) — sourced from `thetruetruth/quran-data-kfgqpc`, a
    third-party mirror of King Fahd Complex's official font/data packages —
@@ -456,14 +481,10 @@ here — recorded rather than smoothed over.
      school specifically — that number lives in specialized ʿulūm al-Qurʾān
      references (e.g. al-Dani's *al-Bayan fi ʿAdd Ay al-Qur'an*), not
      reachable from general web search.
-   **Decided, not left open:** QUSX v1 models ayah **numbering only**, not
-   rasm/text variants (Warsh's actual differing wording, not just verse
-   boundaries) — that's a materially harder, separate problem, out of scope
-   until there's a real plan for it. Al-Susi stays out of the formally-
-   supported tradition list (not added to `schema/qusx.xsd`'s enum) since it
-   has no independently verified ayah-count data and was never part of the
-   originally-licensed 5-tradition scope — its pilot output remains a bonus
-   artifact in `output-pilot/sousi/`.
+   **Current scope:** core QUSX XML remains numbering/milestone-oriented. A
+   separate optional alignment companion now prototypes rasm/text variants
+   without destabilizing word IDs or the XML schema. It currently contains only
+   three authenticated locations and is not a complete qirāʾāt corpus.
    **Checked and ruled out** as a text source: [tanzil.net/download](https://tanzil.net/download/)
    — verified directly, no riwayah/qira'a selector at all.
 2. **10 of QUL's 12 print layouts are wired in** (KFGQPC V1/V2/V4-tajweed,

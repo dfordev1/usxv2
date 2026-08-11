@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>QUSX Alignment Review</title>
+  <style>
+    :root{font-family:Inter,system-ui,sans-serif;color:#17231d;background:#edf2ee;--green:#126a4b;--line:#d8e1da}
+    *{box-sizing:border-box} body{margin:0} header{background:#123b2d;color:white;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+    h1{font-size:20px;margin:0} header p{margin:4px 0 0;color:#c9ded4;font-size:13px}.status{background:#f4c95d;color:#3a2a00;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+    main{max-width:1100px;margin:auto;padding:20px}.toolbar,.card{background:white;border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 18px #173c2810}
+    .toolbar{padding:12px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px} select,input,textarea,button{font:inherit;border:1px solid #b9c8be;border-radius:8px;padding:8px 10px;background:white}
+    button{cursor:pointer}.primary{background:var(--green);color:white;border-color:var(--green)}.counter{margin-left:auto;font-weight:700}.progress{height:6px;background:#dfe8e2;border-radius:8px;overflow:hidden;width:100%}.progress i{display:block;height:100%;background:var(--green);width:0}
+    .card{padding:20px}.meta{display:flex;gap:8px;align-items:center;color:#5b6c62;font-size:13px}.pill{background:#eef4f0;padding:4px 8px;border-radius:999px;color:#315544}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+    .text-panel{border:1px solid var(--line);border-radius:12px;padding:16px}.text-panel h2{font-size:13px;margin:0 0 12px;color:#53645a}.arabic{font-family:"Noto Naskh Arabic","Segoe UI",serif;font-size:25px;line-height:2.1;text-align:right;direction:rtl}.missing{color:#a13a32;background:#fff0ed;border-radius:5px;padding:1px 5px}.focus{color:#fff;background:#126a4b;border-radius:5px;padding:1px 5px}
+    .location{font-family:ui-monospace,monospace;font-size:12px;color:#6b7a71;margin-top:8px}.recommendation{border-left:4px solid #d6a52e;background:#fff8e5;padding:10px 12px;border-radius:6px;margin:14px 0;font-size:14px}.recommendation strong{display:block;margin-bottom:3px}.decisions{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}.decision.active{background:#dff2e8;border-color:#31815f;font-weight:700}
+    label{display:block;font-size:13px;font-weight:700;margin:12px 0 5px} textarea{width:100%;min-height:70px;resize:vertical}.nav{display:flex;justify-content:space-between;margin-top:16px}.empty{text-align:center;padding:50px;color:#65766c}
+    @media(max-width:700px){.comparison{grid-template-columns:1fr}.decisions{grid-template-columns:1fr 1fr}.counter{margin-left:0}.toolbar{align-items:stretch}}
+  </style>
+</head>
+<body>
+<header><div><h1>QUSX Alignment Review</h1><p>Possible insertion and omission candidates</p></div><span class="status">NOT CERTIFIED</span></header>
+<main>
+  <section class="toolbar">
+    <select id="tradition"><option value="all">All traditions</option></select>
+    <select id="state"><option value="all">All decisions</option><option value="pending">Pending only</option><option value="reviewed">Reviewed only</option></select>
+    <select id="technical"><option value="all">All technical categories</option><option value="source-authenticated-textual-difference">8 authenticated differences</option><option value="tokenization">Tokenization</option><option value="source-versification">Source/versification</option></select>
+    <button id="export">Export decisions</button><button id="clear">Clear local decisions</button>
+    <span class="counter" id="counter"></span><div class="progress"><i id="progress"></i></div>
+  </section>
+  <section class="card" id="card"></section>
+</main>
+<script src="alignment-review-data.js"></script>
+<script>
+(() => {
+  const queue = window.QUSX_ALIGNMENT_REVIEW?.records || [];
+  const storageKey = 'qusx-alignment-review-v1';
+  let decisions = JSON.parse(localStorage.getItem(storageKey) || '{}');
+  let filtered = queue, index = 0;
+  const $ = id => document.getElementById(id);
+  [...new Set(queue.map(r => r.tradition))].forEach(t => $('tradition').add(new Option(t, t)));
+  const save = () => localStorage.setItem(storageKey, JSON.stringify(decisions));
+  const word = (entry, key, record) => {
+    if (!entry) return '<span class="missing">— empty slot —</span>';
+    const target = (record[key]?.location || '') === entry.location;
+    return `<span class="${target ? 'focus' : ''}">${entry.text}</span>`;
+  };
+  function render() {
+    const r = filtered[index];
+    const reviewed = queue.filter(x => decisions[x.id]?.decision).length;
+    $('counter').textContent = `${reviewed} / ${queue.length} reviewed`;
+    $('progress').style.width = `${queue.length ? reviewed / queue.length * 100 : 0}%`;
+    if (!r) { $('card').innerHTML = '<div class="empty">No candidates match this filter.</div>'; return; }
+    const d = decisions[r.id] || {};
+    const context = r.context || [];
+    const row = key => context.map(p => word(p[key], key, r)).join(' ');
+    const choices = [['confirmed','Confirmed difference'],['tokenization','Tokenization issue'],['alignment-error','Alignment error'],['scholar','Needs scholar review']];
+    $('card').innerHTML = `<div class="meta"><span class="pill">${r.tradition}</span><span>Surah ${r.surah}</span><span>${r.type}</span><span>ID ${r.id}</span></div>
+      <div class="comparison"><div class="text-panel"><h2>HAFS</h2><div class="arabic">${row('hafs')}</div><div class="location">${r.hafs?.location || 'empty slot'}</div></div>
+      <div class="text-panel"><h2>${r.tradition.toUpperCase()}</h2><div class="arabic">${row(r.tradition)}</div><div class="location">${r[r.tradition]?.location || 'empty slot'}</div></div></div>
+      <div class="recommendation"><strong>Technical review: ${r.technicalReview.category}</strong>${r.technicalReview.note} Confidence: ${r.technicalReview.confidence}.${r.technicalReview.authentication ? ` <a href="${r.technicalReview.authentication.traditionEvidence}" target="_blank">Tradition evidence</a> · <a href="${r.technicalReview.authentication.hafsEvidence}" target="_blank">Hafs evidence</a>${r.technicalReview.authentication.corroboration.map((url,i)=>` · <a href="${url}" target="_blank">Cross-check ${i+1}</a>`).join('')}` : ''}</div>
+      <label>Decision</label><div class="decisions">${choices.map(([v,l]) => `<button class="decision ${d.decision===v?'active':''}" data-value="${v}">${l}</button>`).join('')}</div>
+      <label for="source">Scholarly source / reference</label><input id="source" style="width:100%" value="${(d.source||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;')}">
+      <label for="notes">Notes</label><textarea id="notes">${(d.notes||'').replace(/&/g,'&amp;').replace(/</g,'&lt;')}</textarea>
+      <div class="nav"><button id="prev">← Previous</button><strong>${index + 1} of ${filtered.length}</strong><button class="primary" id="next">Save & next →</button></div>`;
+    document.querySelectorAll('.decision').forEach(b => b.onclick = () => { decisions[r.id] = {...decisions[r.id], decision:b.dataset.value}; saveCurrent(false); render(); });
+    $('prev').onclick = () => { saveCurrent(false); index = Math.max(0,index-1); render(); };
+    $('next').onclick = () => { saveCurrent(false); index = Math.min(filtered.length-1,index+1); render(); };
+  }
+  function saveCurrent(rerender=true) { const r=filtered[index]; if(!r)return; decisions[r.id]={...decisions[r.id],source:$('source')?.value||'',notes:$('notes')?.value||'',reviewedAt:new Date().toISOString()}; save(); if(rerender)render(); }
+  function applyFilter(){const t=$('tradition').value,s=$('state').value,c=$('technical').value;filtered=queue.filter(r=>(t==='all'||r.tradition===t)&&(c==='all'||r.technicalReview.category===c)&&(s==='all'||(s==='pending'?!decisions[r.id]?.decision:!!decisions[r.id]?.decision)));index=0;render();}
+  $('tradition').onchange=$('state').onchange=$('technical').onchange=applyFilter;
+  $('export').onclick=()=>{saveCurrent(false);const out={format:'qusx-alignment-review-decisions',version:1,candidateStatus:window.QUSX_ALIGNMENT_REVIEW.status,exportedAt:new Date().toISOString(),decisions:Object.entries(decisions).map(([id,value])=>({id,...value}))};const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(out,null,2)],{type:'application/json'}));a.download='qusx-alignment-review-decisions.json';a.click();URL.revokeObjectURL(a.href)};
+  $('clear').onclick=()=>{if(confirm('Clear all locally saved review decisions?')){decisions={};save();applyFilter()}};
+  render();
+})();
+</script>
+</body></html>

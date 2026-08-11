@@ -1,0 +1,68 @@
+{
+  "format": "qusx-alignment-metrics",
+  "version": "1.0.0",
+  "scope": "five non-Hafs source traditions aligned independently to Hafs across 114 surahs",
+  "traditions": {
+    "douri": {
+      "surahs": 114,
+      "alignedSlots": 77435,
+      "exact": 26311,
+      "orthographicMatch": 50865,
+      "uncertainMatch": 247,
+      "hafsOnly": 9,
+      "traditionOnly": 3
+    },
+    "qalon": {
+      "surahs": 114,
+      "alignedSlots": 77437,
+      "exact": 38091,
+      "orthographicMatch": 35861,
+      "uncertainMatch": 3473,
+      "hafsOnly": 7,
+      "traditionOnly": 5
+    },
+    "shubah": {
+      "surahs": 114,
+      "alignedSlots": 77434,
+      "exact": 31837,
+      "orthographicMatch": 45482,
+      "uncertainMatch": 110,
+      "hafsOnly": 3,
+      "traditionOnly": 2
+    },
+    "sousi": {
+      "surahs": 114,
+      "alignedSlots": 77476,
+      "exact": 23848,
+      "orthographicMatch": 53282,
+      "uncertainMatch": 294,
+      "hafsOnly": 8,
+      "traditionOnly": 44
+    },
+    "warsh": {
+      "surahs": 114,
+      "alignedSlots": 77435,
+      "exact": 35855,
+      "orthographicMatch": 37986,
+      "uncertainMatch": 3583,
+      "hafsOnly": 8,
+      "traditionOnly": 3
+    }
+  },
+  "totals": {
+    "alignedSlots": 387217,
+    "exact": 155942,
+    "orthographicMatch": 223476,
+    "uncertainMatch": 7707,
+    "hafsOnly": 35,
+    "traditionOnly": 57
+  },
+  "technicalReview": {
+    "source-versification": 16,
+    "tokenization": 68,
+    "source-authenticated-textual-difference": 8
+  },
+  "authenticatedRules": 3,
+  "authenticatedRecords": 8,
+  "ayahMappings": 31098
+}
