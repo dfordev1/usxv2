@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0186-0190.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:017646","canonical":"6:89:6","decision":"reading-variant","notes":"Visible forms show وَٱلنُّبُوَّةَ in Hafs/Shu'bah/Bazzi/Qunbul, وَالنُّبُوٓءَةَ in Warsh/Qalun, and وَالنُّبُوَّةَ with prefixed alif presentation in Duri/Susi; the Warsh/Qalun lexical form is a clear reading difference."},
+    {"id":"qusx:printed-audit:017699","canonical":"6:91:26","decision":"reading-variant","notes":"Visible forms show تَجۡعَلُونَهُۥ in Hafs/Shu'bah/Warsh/Qalun and يَجۡعَلُونَهُۥ in Bazzi/Duri/Qunbul/Susi."},
+    {"id":"qusx:printed-audit:017701","canonical":"6:91:28","decision":"reading-variant","notes":"Visible forms show تُبۡدُونَهَا in Hafs/Shu'bah/Warsh/Qalun and يُبۡدُونَهَا in Bazzi/Duri/Qunbul/Susi."},
+    {"id":"qusx:printed-audit:017702","canonical":"6:91:29","decision":"reading-variant","notes":"Visible forms show وَتُخۡفُونَ in Hafs/Shu'bah/Warsh/Qalun and وَيُخۡفُونَ in Bazzi/Duri/Qunbul/Susi."},
+    {"id":"qusx:printed-audit:017721","canonical":"6:92:4","decision":"orthography-presentation","notes":"The visible forms share مُبَارَكٞ lexically; Warsh/Qalun show dagger-alif presentation مُبَٰرَكٞ while the other editions show مُبَارَكٞ."}
+  ]
+}
