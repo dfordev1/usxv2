@@ -8,12 +8,14 @@ test("normalizes a Quran.com-style Hafs response", () => {
     words: [
       { id: 1, position: 1, location: "57:24:1", text_qpc_hafs: "ٱلَّذِينَ" },
       { id: 2, position: 2, location: "57:24:2", text_qpc_hafs: "يَبْخَلُونَ" },
+      { id: 3, position: 3, char_type_name: "end", text_qpc_hafs: "٢٤" },
     ],
   });
   assert.equal(verse.reference, "57:24");
   assert.equal(verse.tradition, "hafs-kufi");
   assert.equal(verse.text, "ٱلَّذِينَ يَبْخَلُونَ".normalize("NFC"));
   assert.equal(verse.words[0].location, "57:24:1");
+  assert.equal(verse.words.length, 2);
 });
 
 test("normalizes a KFGQPC tradition record and removes the ayah-number token", () => {

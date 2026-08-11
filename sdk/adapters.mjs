@@ -27,7 +27,8 @@ export function normalizeQuranComVerse(input, options = {}) {
   const match = /^(\d+):(\d+)$/.exec(verse.verse_key ?? verse.verseKey ?? "");
   if (!match) throw new QusxError("Quran.com verse_key is required", "QUSX_ADAPTER");
   if (!Array.isArray(verse.words)) throw new QusxError("Quran.com words are required", "QUSX_ADAPTER");
-  const words = verse.words.map((word, index) => {
+  const lexicalWords = verse.words.filter((word) => (word.char_type_name ?? word.charTypeName) !== "end");
+  const words = lexicalWords.map((word, index) => {
     const text = word.text_qpc_hafs ?? word.text_uthmani ?? word.text ?? word.textUthmani;
     if (typeof text !== "string" || !text.trim()) throw new QusxError(`Quran.com word ${index + 1} has no supported text field`, "QUSX_ADAPTER");
     return { position: positive(word.position ?? index + 1, "word position"), text: text.normalize("NFC"), providerId: word.id, location: word.location };

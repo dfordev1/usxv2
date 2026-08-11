@@ -5,6 +5,13 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Added a unified provider registry for Quran.com and AlQuran Cloud with common
+  `getAyah()` and `getSurah()` methods, injectable network clients, and stable
+  QUSX-compatible responses. A live Al-Fatihah audit now compares all seven
+  ayahs across both providers. The pilot exposed and fixed Quran.com's
+  ayah-ending number marker being included as a lexical word; both providers
+  now agree on all seven normalized letter streams and word counts.
+
 - Added an AlQuran Cloud adapter pilot for its whole-ayah response shape. The
   adapter preserves provider/edition provenance, derives token boundaries only
   from provider whitespace, and requires the caller to provide the tradition
