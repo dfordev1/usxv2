@@ -64,8 +64,8 @@ test("complete eight-edition review has individual rendered evidence and explici
   assert.equal(review.coverage.traditions, 8);
   assert.deepEqual(review.coverage.decisions, {
     "reading-variant": 214,
-    "orthography-presentation": 65,
-    uncertain: 652,
+    "orthography-presentation": 69,
+    uncertain: 648,
     tokenization: 6,
   });
   assert.equal(review.records.length, 937);

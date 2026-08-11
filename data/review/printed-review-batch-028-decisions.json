@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0191-0195.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:017726","canonical":"6:92:9","decision":"reading-variant","notes":"Visible forms show وَلِتُنذِرَ in Hafs/Warsh/Qalun/Bazzi/Duri/Qunbul/Susi and وَلِيُنذِرَ in Shu'bah."},
+    {"id":"qusx:printed-audit:017787","canonical":"6:93:48","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰيَٰتِهِۦ while the other editions show ءَايَٰتِهِۦ, an edition presentation difference in the initial alif/hamza form."},
+    {"id":"qusx:printed-audit:017820","canonical":"6:95:3","decision":"orthography-presentation","notes":"The visible lexical form فالق is consistent; Warsh/Qalun show dagger-alif presentation فَٰلِقُ while the other editions show فَالِقُ."},
+    {"id":"qusx:printed-audit:017842","canonical":"6:96:8","decision":"orthography-presentation","notes":"The visible lexical form حُسبان is consistent; Warsh/Qalun show dagger-alif and stopping-mark presentation differences in حُسۡبَٰناٗۖ versus حُسۡبَانٗاۚ."},
+    {"id":"qusx:printed-audit:017902","canonical":"6:99:27","decision":"orthography-presentation","notes":"The visible lexical form أعناب is consistent; Warsh/Qalun show dagger-alif presentation in اَعۡنَٰبٖ versus the other editions' أَعۡنَابٖ."}
+  ]
+}
