@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0106-0110.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:008904","canonical":"3:161:3","decision":"uncertain","notes":"Visible forms differ in the final weak-letter/hamza form of نَبِيٍّ; no subtype asserted."},
+    {"id":"qusx:printed-audit:008993","canonical":"3:166:5","decision":"orthography-presentation","notes":"Visible forms preserve الْجَمْعَانِ; initial alif and standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:009263","canonical":"3:180:29","decision":"reading-variant","notes":"Hafs and Shubah visibly use تَعْمَلُونَ while the other editions use يَعْمَلُونَ."},
+    {"id":"qusx:printed-audit:009294","canonical":"3:182:8","decision":"orthography-presentation","notes":"Visible forms preserve بِظَلَّامٍ; standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:009390","canonical":"3:187:8","decision":"reading-variant","notes":"The editions visibly divide between لَتُبَيِّنُنَّهُ and لَيُبَيِّنُنَّهُ."}
+  ]
+}
