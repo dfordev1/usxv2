@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0136-0140.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:011423","canonical":"4:82:3","decision":"uncertain","notes":"Visible forms differ in hamza, alif, vowel, and stopping presentation of الْقُرْآنَ; no subtype asserted."},
+    {"id":"qusx:printed-audit:012190","canonical":"4:114:24","decision":"reading-variant","notes":"Visible forms divide among نُؤْتِيهِ, نُوتِيهِ, and يُؤْتِيهِ; preserved as a reading variant."},
+    {"id":"qusx:printed-audit:012878","canonical":"4:152:12","decision":"reading-variant","notes":"The editions visibly divide among يُؤْتِيهِم and نُؤْتِيهِم forms."},
+    {"id":"qusx:printed-audit:013354","canonical":"4:176:30","decision":"orthography-presentation","notes":"Visible forms preserve الثُّلُثَانِ; initial alif and standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:013613","canonical":"5:6:29","decision":"uncertain","notes":"Visible forms differ in madd and final hamza presentation of جَاءَ; no subtype asserted."}
+  ]
+}
