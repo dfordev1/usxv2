@@ -52,6 +52,29 @@ const document = await readQusx("./001.qusx.xml");
 
 Parsing verifies the namespace and version, required metadata, positive numeric fields, unique `sid` values, and correctly paired `sid`/`eid` milestones. Invalid input throws `QusxError` with a stable `code`.
 
+Node applications can load the package's alignment companions without manual
+JSON imports:
+
+```js
+import { loadBundledAlignment, loadBundledAyahMapping } from "quran-usx/node";
+
+const readings = await loadBundledAlignment();
+const ayahs = await loadBundledAyahMapping();
+```
+
+## Command line
+
+```sh
+npx quran-usx compare hafs warsh 57:24
+npx quran-usx map --from warsh --to hafs --ayah 2:1
+npx quran-usx validate ./001.qusx.xml
+```
+
+Every command accepts `--json`. Tradition aliases are `hafs`, `shubah`,
+`warsh`, `qalon`, `douri`, and `sousi`. The validator is the dependency-free
+structural parser check. Use the repository verification gate when formal XSD,
+Schematron, and corpus-wide validation are required.
+
 ## Compare the six prototype riwāyāt
 
 ```js
@@ -62,8 +85,13 @@ const readings = createAlignmentClient(alignment);
 readings.getReading("qusx:slot:057:024:001", "hafs-kufi").text;  // هُوَ
 readings.getReading("qusx:slot:057:024:001", "warsh-kfqc").text; // empty
 readings.compareReadings("qusx:slot:040:026:001");
+readings.compareAyah("57:24", "hafs-kufi", "warsh-kfqc");
 readings.getAlignmentEvidence("qusx:slot:037:130:001");
 ```
+
+`compareAyah()` returns every published reviewed slot whose source reading uses
+that ayah. An empty array means the normative prototype has no reviewed record
+there; it is not a claim that the two traditions have no difference.
 
 The bundled alignment contains three source-authenticated research rules, not a
 complete scholarly-certified qirāʾāt corpus. `createAlignmentClient()` also

@@ -37,6 +37,7 @@ export interface AlignmentClient {
   listAlignmentRules(): readonly AlignmentRule[];
   getReading(identifier: string, tradition: string): Readonly<AlignmentReading & { ruleId: string; slotId: string; tradition: string }>;
   compareReadings(identifier: string): Readonly<{ ruleId: string; slotId: string; kind: string; readings: Readonly<Record<string, AlignmentReading>> }>;
+  compareAyah(reference: string, sourceTradition: string, targetTradition: string): readonly Readonly<{ ruleId: string; slotId: string; kind: string; authentication: string; source: Readonly<AlignmentReading & { tradition: string }>; target: Readonly<AlignmentReading & { tradition: string }>; evidence: readonly string[] }>[];
   getAlignmentEvidence(identifier: string): Readonly<{ authentication: string; evidence: readonly string[] }>;
 }
 export function parseAlignment(value: string | AlignmentInput): AlignmentDocument;

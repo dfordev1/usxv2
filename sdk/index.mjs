@@ -284,6 +284,24 @@ export function createAlignmentClient(input) {
         readings: rule.readings,
       });
     },
+    compareAyah(reference, sourceTradition, targetTradition) {
+      requireTradition(sourceTradition);
+      requireTradition(targetTradition);
+      if (!/^(?:[1-9]|[1-9]\d|10\d|11[0-4]):[1-9]\d*$/.test(reference)) {
+        throw alignmentError(`Invalid ayah reference: ${reference}`);
+      }
+      return Object.freeze(alignment.rules
+        .filter((rule) => rule.readings[sourceTradition].ayah === reference)
+        .map((rule) => Object.freeze({
+          ruleId: rule.id,
+          slotId: rule.slotId,
+          kind: rule.kind,
+          authentication: rule.authentication,
+          source: Object.freeze({ tradition: sourceTradition, ...rule.readings[sourceTradition] }),
+          target: Object.freeze({ tradition: targetTradition, ...rule.readings[targetTradition] }),
+          evidence: rule.evidence,
+        })));
+    },
     getAlignmentEvidence(identifier) {
       const rule = requireRule(identifier);
       return Object.freeze({ authentication: rule.authentication, evidence: rule.evidence });

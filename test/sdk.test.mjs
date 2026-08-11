@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import { createAlignmentClient, createAyahMappingClient, createQusxClient, parseAlignment, parseQusx, QusxError } from "../sdk/index.mjs";
-import { readQusx } from "../sdk/node.mjs";
+import { loadBundledAlignment, loadBundledAyahMapping, readQusx, validateQusxFile } from "../sdk/node.mjs";
 
 const fixtureUrl = new URL("../output/madani-v1/114.qusx.xml", import.meta.url);
 const alignmentUrl = new URL("../data/alignments/normative-v1.json", import.meta.url);
@@ -75,4 +75,19 @@ test("ayah mapping SDK resolves shifts, splits, inverse, and cross-tradition map
   const invalid = JSON.parse(await readFile(boundaryUrl, "utf8"));
   invalid.mappings["warsh-kfqc"][0].source = "115:1";
   assert.throws(() => createAyahMappingClient(invalid), /invalid source ayah/);
+});
+
+test("node helpers load bundled data without manual JSON imports", async () => {
+  const [alignment, mapping] = await Promise.all([loadBundledAlignment(), loadBundledAyahMapping()]);
+  assert.equal(alignment.alignment.rules.length, 3);
+  assert.deepEqual(mapping.mapAyah("57:24", "warsh-kfqc"), ["57:23"]);
+  assert.equal(alignment.compareAyah("57:24", "hafs-kufi", "warsh-kfqc")[0].target.text, "");
+  assert.deepEqual(alignment.compareAyah("2:1", "hafs-kufi", "warsh-kfqc"), []);
+});
+
+test("node validation helper returns structured success and failure", async () => {
+  assert.equal((await validateQusxFile(fixtureUrl)).valid, true);
+  const invalid = await validateQusxFile(new URL("fixtures/malformed-not-well-formed.xml", import.meta.url));
+  assert.equal(invalid.valid, false);
+  assert.ok(invalid.errors.length);
 });

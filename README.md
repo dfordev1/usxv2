@@ -165,6 +165,21 @@ provider adapters (`quran-usx/adapters`) normalize Quran.com-style Hafs response
 and KFGQPC ayah records into one QUSX-compatible JSON shape. See
 [`docs/sdk.md`](docs/sdk.md).
 
+The package also ships an executable CLI:
+
+```bash
+npx quran-usx@beta compare hafs warsh 57:24
+npx quran-usx@beta map hafs warsh 2:1
+npx quran-usx@beta validate ./001.qusx.xml
+```
+
+Add `--json` for machine-readable output. `compare` reports all currently
+reviewed alignment slots attached to the requested source ayah; an empty result
+means no reviewed rule is published for that ayah, not that the recitations are
+identical. `validate` performs the package's safe structural parser checks; the
+repository's XSD, Schematron, and corpus-wide checks remain the complete
+conformance gate.
+
 Status is deliberately `source-authenticated-research-prototype`, not
 `scholarly-certified`. Evidence and the authentication boundary are documented
 in [`docs/alignment-authentication.md`](docs/alignment-authentication.md).
