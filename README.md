@@ -221,6 +221,10 @@ and a focused queue of 937 substantive or split/join candidates. This materially
 answers the practical alignment question, but does not replace scholarly review;
 the records remain `source-derived-candidate-review-required`. See
 [`docs/eight-riwayah-workbook.md`](docs/eight-riwayah-workbook.md).
+The full letter-stream cross-check against a pinned eight-dataset KFGQPC mirror
+found no unresolved substantive disagreements; its machine-readable hashes and
+classified residuals are published in
+[`data/alignments/eight-riwayah-mirror-audit-v1.json`](data/alignments/eight-riwayah-mirror-audit-v1.json).
 
 Status is deliberately `source-authenticated-research-prototype`, not
 `scholarly-certified`. Evidence and the authentication boundary are documented

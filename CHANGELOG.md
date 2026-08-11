@@ -11,6 +11,11 @@ plain chronological record, not semver-scoped releases.
   split/join tokenization, and emits a complete compressed slot dataset plus a
   937-record scholarly-review queue. Added schema, Node loaders, `eight-summary`
   and `slot` CLI commands, tests, and explicit source/licensing status.
+- Cross-checked all eight workbook traditions against a pinned commit of the
+  accessible `thetruetruth/quran-data-kfgqpc` mirror. The audit records every
+  source hash and found zero unresolved substantive letter differences after
+  QUSX normalization. Its retained residuals are explicitly classified as a
+  Sūrah 1 Basmalah boundary convention or 2:72 hamza encoding presentation.
 
 - Added the first complete-surah alignment review inventory for Surah 63. It
   preserves all eight generated observations across Warsh, Qalun, Douri,

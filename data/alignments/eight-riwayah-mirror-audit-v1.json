@@ -1,0 +1,181 @@
+{
+  "format": "qusx-kfgqpc-mirror-audit",
+  "version": "1.0.0",
+  "status": "cross-source-corroboration-not-scholarly-certification",
+  "workbookSha256": "c38f66638cec1d8464e24b6d891f273cdaf63f70a64769e8f60845d476a00512",
+  "mirror": {
+    "repository": "https://github.com/thetruetruth/quran-data-kfgqpc",
+    "commit": "281dbbe8eed1370daa5a023b6cd81655cbfd6473",
+    "licenseStatus": "no-license-file"
+  },
+  "normalization": "QUSX letter normalization; differences retained and classified after normalization.",
+  "results": [
+    {
+      "tradition": "hafs-kufi",
+      "path": "hafs/data/hafsData_v18.json",
+      "sha256": "2f2d91c558414399f2ce8b2faa9f50ba606adda581626f1b42f6558568fb19d5",
+      "verseRecords": 6236,
+      "normalizedExact": true,
+      "differenceCounts": {},
+      "differences": []
+    },
+    {
+      "tradition": "shubah-kfqc",
+      "path": "shouba/data/ShoubaData08.json",
+      "sha256": "d5c58d4baf923f006dada99c97d9960332305645d585c69295cc07a6ad548f87",
+      "verseRecords": 6236,
+      "normalizedExact": false,
+      "differenceCounts": {
+        "encoding-presentation": 1
+      },
+      "differences": [
+        {
+          "surah": 2,
+          "operation": "delete",
+          "workbook": "ء",
+          "mirror": "",
+          "classification": "encoding-presentation"
+        }
+      ]
+    },
+    {
+      "tradition": "warsh-kfqc",
+      "path": "warsh/data/warshData_v10.json",
+      "sha256": "af16278fdd34c0ef2143dd8463d31c055fd01f1b45cc500a70321bd259269a40",
+      "verseRecords": 6214,
+      "normalizedExact": false,
+      "differenceCounts": {
+        "boundary-convention": 1,
+        "encoding-presentation": 1
+      },
+      "differences": [
+        {
+          "surah": 1,
+          "operation": "delete",
+          "workbook": "بسماللهالرحمنالرحيم",
+          "mirror": "",
+          "classification": "boundary-convention"
+        },
+        {
+          "surah": 2,
+          "operation": "delete",
+          "workbook": "ء",
+          "mirror": "",
+          "classification": "encoding-presentation"
+        }
+      ]
+    },
+    {
+      "tradition": "qalon-kfqc",
+      "path": "qaloon/data/QaloonData_v10.json",
+      "sha256": "f5f6bc9fd1897c8802be1ad821cea16a4c26a87b8964872b78325cc223d52440",
+      "verseRecords": 6214,
+      "normalizedExact": false,
+      "differenceCounts": {
+        "boundary-convention": 1,
+        "encoding-presentation": 1
+      },
+      "differences": [
+        {
+          "surah": 1,
+          "operation": "delete",
+          "workbook": "بسماللهالرحمنالرحيم",
+          "mirror": "",
+          "classification": "boundary-convention"
+        },
+        {
+          "surah": 2,
+          "operation": "delete",
+          "workbook": "ء",
+          "mirror": "",
+          "classification": "encoding-presentation"
+        }
+      ]
+    },
+    {
+      "tradition": "bazzi-kfqc",
+      "path": "bazzi/data/BazziData_v07.json",
+      "sha256": "47086a209a3454237e8a3fd187d179c38932f1a01d31ef896a9d31288273ac1d",
+      "verseRecords": 6220,
+      "normalizedExact": false,
+      "differenceCounts": {
+        "encoding-presentation": 1
+      },
+      "differences": [
+        {
+          "surah": 2,
+          "operation": "delete",
+          "workbook": "ء",
+          "mirror": "",
+          "classification": "encoding-presentation"
+        }
+      ]
+    },
+    {
+      "tradition": "douri-kfqc",
+      "path": "doori/data/DooriData_v09.json",
+      "sha256": "232533da191973c176d92a1278abc8f3ba9089829603560035a6eb2830498c1e",
+      "verseRecords": 6217,
+      "normalizedExact": false,
+      "differenceCounts": {
+        "boundary-convention": 1,
+        "encoding-presentation": 1
+      },
+      "differences": [
+        {
+          "surah": 1,
+          "operation": "delete",
+          "workbook": "بسماللهالرحمنالرحيم",
+          "mirror": "",
+          "classification": "boundary-convention"
+        },
+        {
+          "surah": 2,
+          "operation": "delete",
+          "workbook": "ء",
+          "mirror": "",
+          "classification": "encoding-presentation"
+        }
+      ]
+    },
+    {
+      "tradition": "qunbul-kfqc",
+      "path": "qumbul/data/QumbulData_v07.json",
+      "sha256": "542b075db715a86547a0016246e47395fa983f21dd12c4b4bd764ecdceb28b21",
+      "verseRecords": 6220,
+      "normalizedExact": false,
+      "differenceCounts": {
+        "encoding-presentation": 1
+      },
+      "differences": [
+        {
+          "surah": 2,
+          "operation": "delete",
+          "workbook": "ء",
+          "mirror": "",
+          "classification": "encoding-presentation"
+        }
+      ]
+    },
+    {
+      "tradition": "sousi-kfqc",
+      "path": "soosi/data/SoosiData09.json",
+      "sha256": "7c55dd0426861e7a28adb52f1944df4037f45ad6c0e43b3e386efd240cde8027",
+      "verseRecords": 6217,
+      "normalizedExact": false,
+      "differenceCounts": {
+        "boundary-convention": 1
+      },
+      "differences": [
+        {
+          "surah": 1,
+          "operation": "delete",
+          "workbook": "بسماللهالرحمنالرحيم",
+          "mirror": "",
+          "classification": "boundary-convention"
+        }
+      ]
+    }
+  ],
+  "unresolvedSubstantiveDifferences": 0
+}

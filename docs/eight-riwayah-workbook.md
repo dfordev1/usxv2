@@ -13,6 +13,13 @@ The workbook contains 77,432 manually aligned rows, using Hafs as its reference.
   931 are substantive review candidates, and 6 are explicit split/join cases.
 - The compressed full dataset and the smaller 937-record review queue are
   deterministic outputs of `scripts/import_eight_riwayah_workbook.py`.
+- A complete cross-source audit against commit
+  `281dbbe8eed1370daa5a023b6cd81655cbfd6473` of the accessible KFGQPC mirror
+  found **zero unresolved substantive letter differences** across all eight
+  traditions after QUSX normalization. Hafs matches exactly. The only retained
+  differences are the Sūrah 1 Basmalah boundary convention in four traditions
+  and a standalone-versus-combining hamza encoding at 2:72 in six traditions.
+  See `data/alignments/eight-riwayah-mirror-audit-v1.json`.
 
 ## What is not established
 
@@ -29,6 +36,12 @@ python scripts/import_eight_riwayah_workbook.py path/to/riwayat-words.xlsx
 
 Expected source SHA-256:
 `c38f66638cec1d8464e24b6d891f273cdaf63f70a64769e8f60845d476a00512`.
+
+Cross-check a local clone of the mirror:
+
+```bash
+python scripts/audit_kfgqpc_mirror.py path/to/riwayat-words.xlsx path/to/quran-data-kfgqpc
+```
 
 ## Query
 
