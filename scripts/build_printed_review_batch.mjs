@@ -36,8 +36,8 @@ for (const record of records) {
     page.bounds = polygonBounds(await response.text(), record.surah, record.ayah);
   }
 }
-const number = String(Math.floor(start / limit) + 1).padStart(3, "0");
-const output = path.join(root, "docs", "evidence", "review-batches", `batch-${number}.json`);
+const label = start === 0 && limit === 10 ? "001" : `${String(start + 1).padStart(4, "0")}-${String(start + records.length).padStart(4, "0")}`;
+const output = path.join(root, "docs", "evidence", "review-batches", `batch-${label}.json`);
 await mkdir(path.dirname(output), { recursive: true });
 await writeFile(output, `${JSON.stringify({ format: "qusx-printed-review-batch", start, limit, records }, null, 2)}\n`);
 console.log(`wrote ${output}: ${records.length} records`);
