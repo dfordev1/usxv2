@@ -3,6 +3,7 @@ import { createAlignmentClient, createAyahMappingClient, parseQusx } from "./ind
 
 const ALIGNMENT_URL = new URL("../data/alignments/normative-v1.json", import.meta.url);
 const MAPPING_URL = new URL("../data/alignments/boundary-v1.json", import.meta.url);
+const REVIEW_URLS = Object.freeze({ 63: new URL("../data/review/surah-063-review-v1.json", import.meta.url) });
 
 export async function readQusx(path, options) {
   return parseQusx(await readFile(path, "utf8"), options);
@@ -23,6 +24,13 @@ export async function validateQusxFile(path, options) {
   } catch (error) {
     return Object.freeze({ valid: false, path: String(path), errors: Object.freeze([error instanceof Error ? error.message : String(error)]) });
   }
+}
+
+export async function loadBundledSurahReview(surah) {
+  const number = Number(surah);
+  const url = REVIEW_URLS[number];
+  if (!url) throw new Error(`No bundled complete-surah review for surah ${surah}`);
+  return JSON.parse(await readFile(url, "utf8"));
 }
 
 export * from "./index.mjs";

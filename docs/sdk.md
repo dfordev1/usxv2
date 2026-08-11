@@ -162,3 +162,15 @@ number markers are excluded from lexical words. AlQuran Cloud requires an
 explicit tradition because its edition identifier is not treated as riwayah
 authentication. Network tests can inject `fetch` and `baseUrl`; the live
 Al-Fatihah compatibility audit is `npm run audit:provider-fatiha`.
+
+## Complete-surah review inventory
+
+```sh
+npx quran-usx review 63
+npx quran-usx review 63 --json
+```
+
+The bundled Surah 63 pilot is a complete inventory of generated candidates, not
+a normative alignment. Eight observations are consolidated into four unique
+review locations. All four remain `scholarly-review-required` until reviewer,
+date, decision, evidence, and notes are supplied and independently checked.

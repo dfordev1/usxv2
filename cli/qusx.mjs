@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { loadBundledAlignment, loadBundledAyahMapping, validateQusxFile } from "../sdk/node.mjs";
+import { loadBundledAlignment, loadBundledAyahMapping, loadBundledSurahReview, validateQusxFile } from "../sdk/node.mjs";
 
 const aliases = Object.freeze({
   hafs: "hafs-kufi",
@@ -17,6 +17,7 @@ Usage:
   quran-usx compare <from> <to> <surah:ayah> [--json]
   quran-usx map <from> <to> <surah:ayah> [--json]
   quran-usx validate <file.qusx.xml> [--json]
+  quran-usx review <surah> [--json]
 
 Long form:
   quran-usx compare --from hafs --to warsh --ayah 57:24
@@ -94,6 +95,15 @@ async function validate(path, json) {
   if (!result.valid) process.exitCode = 1;
 }
 
+async function review(surah, json) {
+  const bundle = await loadBundledSurahReview(surah);
+  if (json) return print(bundle, true);
+  console.log(`Surah ${bundle.surah} complete candidate inventory`);
+  console.log(`${bundle.completeness.candidateObservations} observations → ${bundle.completeness.uniqueReviewLocations} review locations`);
+  console.log(`Status: ${bundle.status}`);
+  for (const record of bundle.records) console.log(`- ${record.id} ${record.canonical}: ${record.observations.map((item) => item.tradition).join(", ")} [${record.status}]`);
+}
+
 async function main() {
   const { command, json, positional, options } = parseArgs(process.argv.slice(2));
   if (!command || command === "help" || command === "--help" || command === "-h") return print(usage(), false);
@@ -105,6 +115,7 @@ async function main() {
     return command === "compare" ? compare(from, to, reference, json) : map(from, to, reference, json);
   }
   if (command === "validate") return validate(positional[0], json);
+  if (command === "review") return review(positional[0], json);
   throw new Error(`Unknown command: ${command}`);
 }
 
