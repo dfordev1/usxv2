@@ -24,5 +24,6 @@ export interface EightRiwayahDataset {
   candidateCount?: number;
   slots: EightRiwayahSlot[];
 }
+/** Loads the npm-bundled review queue. Pass false only in a source checkout containing the repository-only full archive. */
 export function loadBundledEightRiwayah(options?: { candidatesOnly?: boolean }): Promise<EightRiwayahDataset>;
 export function findBundledEightRiwayahSlots(reference: string, options?: { candidatesOnly?: boolean }): Promise<readonly EightRiwayahSlot[]>;

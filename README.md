@@ -221,6 +221,9 @@ and a focused queue of 937 substantive or split/join candidates. This materially
 answers the practical alignment question, but does not replace scholarly review;
 the records remain `source-derived-candidate-review-required`. See
 [`docs/eight-riwayah-workbook.md`](docs/eight-riwayah-workbook.md).
+Only the focused review queue is included in the npm package. The 3.5 MB full
+parallel-text archive is repository-only pending explicit redistribution
+permission.
 The full letter-stream cross-check against a pinned eight-dataset KFGQPC mirror
 found no unresolved substantive disagreements; its machine-readable hashes and
 classified residuals are published in

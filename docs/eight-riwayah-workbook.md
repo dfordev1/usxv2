@@ -51,5 +51,6 @@ npx quran-usx@beta slot 63:11
 npx quran-usx@beta slot 63:11:11 --json
 ```
 
-By default `slot` searches only the review queue. Add `--all` to search all
-77,432 aligned slots, including identical and presentation-only rows.
+`slot` searches the 937-record review queue bundled with npm. The full
+77,432-slot archive remains available only in the source repository and is not
+distributed in the npm package pending explicit redistribution permission.

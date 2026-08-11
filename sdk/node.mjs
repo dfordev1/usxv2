@@ -39,12 +39,12 @@ export async function loadBundledSurahReview(surah) {
 }
 
 export async function loadBundledEightRiwayah(options = {}) {
-  const url = options.candidatesOnly ? EIGHT_RIWAYAH_CANDIDATES_URL : EIGHT_RIWAYAH_URL;
+  const url = options.candidatesOnly === false ? EIGHT_RIWAYAH_URL : EIGHT_RIWAYAH_CANDIDATES_URL;
   return JSON.parse((await unzip(await readFile(url))).toString("utf8"));
 }
 
 export async function findBundledEightRiwayahSlots(reference, options = {}) {
-  const dataset = await loadBundledEightRiwayah({ candidatesOnly: options.candidatesOnly ?? true });
+  const dataset = await loadBundledEightRiwayah({ candidatesOnly: options.candidatesOnly !== false });
   const exactWord = /^\d+:\d+:\d+$/.test(reference);
   const prefix = `${reference}:`;
   return Object.freeze(dataset.slots.filter((slot) =>

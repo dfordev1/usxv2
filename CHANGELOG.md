@@ -16,6 +16,9 @@ plain chronological record, not semver-scoped releases.
   source hash and found zero unresolved substantive letter differences after
   QUSX normalization. Its retained residuals are explicitly classified as a
   Sūrah 1 Basmalah boundary convention or 2:72 hamza encoding presentation.
+- Kept the 3.5 MB complete eight-riwayah parallel-text archive out of the npm
+  package pending explicit redistribution permission. npm bundles only the
+  focused 937-record review queue and its non-textual audit metadata.
 
 - Added the first complete-surah alignment review inventory for Surah 63. It
   preserves all eight generated observations across Warsh, Qalun, Douri,
