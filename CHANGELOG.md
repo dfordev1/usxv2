@@ -10,7 +10,8 @@ plain chronological record, not semver-scoped releases.
   regions and three rendered PDF target-line regions. Conservative decisions
   are 208 reading variants, 3 presentation differences, 6 tokenization cases,
   and 709 explicit uncertainties; none is described as scholar-certified. A
-  second 20-record batch was manually inspected and recorded.
+  second 20-record batch and a third 10-record batch were manually inspected
+  and recorded.
 
 - Started the complete visual review with a reusable side-by-side pinned-page
   viewer and the first ten-record batch. Batch 001 records seven reading-form
