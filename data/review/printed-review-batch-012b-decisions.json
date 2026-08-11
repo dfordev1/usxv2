@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0111-0115.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:009393","canonical":"3:187:11","decision":"reading-variant","notes":"The editions visibly divide between تَكْتُمُونَهُ and يَكْتُمُونَهُ."},
+    {"id":"qusx:printed-audit:009405","canonical":"3:188:2","decision":"reading-variant","notes":"Hafs and Shubah visibly use تَحْسَبَنَّ while the other editions use يَحْسِبَنَّ."},
+    {"id":"qusx:printed-audit:009417","canonical":"3:188:14","decision":"reading-variant","notes":"The editions visibly divide between تَحْسَبَنَّهُم and يَحْسِبُنَّهُم."},
+    {"id":"qusx:printed-audit:009483","canonical":"3:193:8","decision":"uncertain","notes":"Visible hamza/alif and ending-mark differences are preserved without subtype assertion."},
+    {"id":"qusx:printed-audit:009716","canonical":"4:5:3","decision":"uncertain","notes":"The visible forms differ in final hamza, madd, and stopping presentation; no subtype asserted."}
+  ]
+}
