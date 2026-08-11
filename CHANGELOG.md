@@ -9,7 +9,8 @@ plain chronological record, not semver-scoped releases.
   937 candidates. Each record now carries hashes for five rendered SVG ayah
   regions and three rendered PDF target-line regions. Conservative decisions
   are 208 reading variants, 3 presentation differences, 6 tokenization cases,
-  and 720 explicit uncertainties; none is described as scholar-certified.
+  and 709 explicit uncertainties; none is described as scholar-certified. A
+  second 20-record batch was manually inspected and recorded.
 
 - Started the complete visual review with a reusable side-by-side pinned-page
   viewer and the first ten-record batch. Batch 001 records seven reading-form

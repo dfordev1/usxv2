@@ -16,10 +16,12 @@ const plan = await gzipJson(path.join(root, "data/review/eight-riwayah-printed-a
 const svgEvidence = await gzipJson(path.join(root, "data/review/five-edition-ayah-crop-evidence-v1.json.gz"));
 const pdfEvidence = await gzipJson(path.join(root, "data/review/additional-printed-line-evidence-v1.json.gz"));
 const batch = JSON.parse(await readFile(path.join(root, "data/review/printed-review-batch-001-decisions.json"), "utf8"));
+const batch2 = JSON.parse(await readFile(path.join(root, "data/review/printed-review-batch-002-decisions.json"), "utf8"));
 const surah63 = JSON.parse(await readFile(path.join(root, "data/review/surah-063-printed-evidence-v1.json"), "utf8"));
 const svgById = new Map(svgEvidence.records.map((record) => [record.id, record]));
 const pdfById = new Map(pdfEvidence.records.map((record) => [record.id, record]));
 const manual = new Map(batch.records.map((record) => [record.id, record]));
+for (const record of batch2.records) manual.set(record.id, record);
 for (const record of surah63.records) manual.set(record.canonical, record);
 
 const folds = new Map([["ٱ", "ا"], ["أ", "ا"], ["إ", "ا"], ["آ", "ا"], ["ى", "ي"], ["ے", "ي"], ["ؤ", "و"], ["ئ", "ي"]]);

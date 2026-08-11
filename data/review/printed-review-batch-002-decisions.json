@@ -1,0 +1,28 @@
+{
+  "format": "qusx-printed-review-decisions",
+  "version": 1,
+  "batch": "../../docs/evidence/review-batches/batch-0011-0030.json",
+  "status": "manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records": [
+    {"id":"qusx:printed-audit:001132","canonical":"2:71:18","decision":"uncertain","notes":"Visible differences are concentrated in alif/hamza and edition presentation; no safe subtype asserted."},
+    {"id":"qusx:printed-audit:001142","canonical":"2:72:4","decision":"uncertain","notes":"Printed forms differ in alif, hamza, and final presentation marks; preserved as uncertain pending domain interpretation."},
+    {"id":"qusx:printed-audit:001196","canonical":"2:74:37","decision":"reading-variant","notes":"Bazzi and Qunbul visibly use يَعْمَلُونَ while the other group uses تَعْمَلُونَ; aligned word is not a source-copy error."},
+    {"id":"qusx:printed-audit:001333","canonical":"2:83:5","decision":"orthography-presentation","notes":"The visible forms preserve إِسْرَائِيلَ with edition-specific alif/madd and final mark presentation."},
+    {"id":"qusx:printed-audit:001335","canonical":"2:83:7","decision":"reading-variant","notes":"Bazzi and Qunbul visibly use يَعْبُدُونَ while the other group uses تَعْبُدُونَ."},
+    {"id":"qusx:printed-audit:001339","canonical":"2:83:11","decision":"orthography-presentation","notes":"The visible forms preserve the same lexical word; differences are alif and tanwin placement/presentation."},
+    {"id":"qusx:printed-audit:001421","canonical":"2:85:49","decision":"reading-variant","notes":"Visible forms divide between تَعْمَلُونَ and يَعْمَلُونَ across editions."},
+    {"id":"qusx:printed-audit:001436","canonical":"2:87:2","decision":"uncertain","notes":"Difference is the initial hamza/alif presentation in ءَاتَيْنَا versus اٰتَيْنَا; no subtype asserted."},
+    {"id":"qusx:printed-audit:001738","canonical":"2:102:22","decision":"orthography-presentation","notes":"Visible forms preserve هَارُوتَ; dagger-alif presentation differs by edition."},
+    {"id":"qusx:printed-audit:001739","canonical":"2:102:23","decision":"orthography-presentation","notes":"Visible forms preserve مَارُوتَ; dagger-alif and stopping-mark presentation differs."},
+    {"id":"qusx:printed-audit:001741","canonical":"2:102:25","decision":"orthography-presentation","notes":"Visible forms preserve يُعَلِّمَانِ; alif/standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:001843","canonical":"2:106:4","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَايَةٍ versus اٰيَةٍ; preserved as uncertain."},
+    {"id":"qusx:printed-audit:002147","canonical":"2:121:6","decision":"orthography-presentation","notes":"Visible forms preserve تِلَاوَتِهِ; standing-alif and final vowel/mark presentation differs."},
+    {"id":"qusx:printed-audit:002158","canonical":"2:122:2","decision":"orthography-presentation","notes":"The visible forms preserve إِسْرَائِيلَ with edition-specific alif/madd presentation."},
+    {"id":"qusx:printed-audit:002188","canonical":"2:124:3","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمَ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:002214","canonical":"2:125:10","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمَ; differences are small-letter, alif, and final-mark presentation."},
+    {"id":"qusx:printed-audit:002218","canonical":"2:125:14","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمَ; differences are small-letter and alif presentation."},
+    {"id":"qusx:printed-audit:002229","canonical":"2:126:3","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمُ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:002234","canonical":"2:126:8","decision":"uncertain","notes":"Difference is initial hamza/alif and tanwin presentation in ءَامِنًا versus اٰمِنا; no subtype asserted."},
+    {"id":"qusx:printed-audit:002240","canonical":"2:126:14","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَامَنَ versus اٰمَنَ; no subtype asserted."}
+  ]
+}
