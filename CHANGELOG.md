@@ -5,6 +5,11 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Started the complete visual review with a reusable side-by-side pinned-page
+  viewer and the first ten-record batch. Batch 001 records seven reading-form
+  differences and three orthographic-presentation differences, with no source
+  errors, explicitly scoped to the inspected printed editions.
+
 - Added a reproducible printed-edition audit plan for all 937 eight-riwayah
   candidates across 805 ayahs. It maps each record to pinned Quranpedia SVG
   pages for the five traditions with complete local boundary indexes and keeps

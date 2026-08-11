@@ -1,0 +1,28 @@
+{
+  "format": "qusx-printed-review-decisions",
+  "version": "1.0.0",
+  "status": "printed-edition-reviewed-not-scholarly-certified",
+  "batch": "../../docs/evidence/review-batches/batch-001.json",
+  "reviewedAt": "2026-08-11T00:00:00Z",
+  "reviewer": "QUSX printed-edition audit",
+  "summary": {
+    "records": 10,
+    "reading-variant": 7,
+    "orthography-presentation": 3,
+    "tokenization": 0,
+    "source-error": 0,
+    "uncertain": 0
+  },
+  "records": [
+    { "id": "qusx:printed-audit:000425", "canonical": "2:28:6", "decision": "reading-variant", "notes": "The pinned editions visibly preserve different madd and mim-al-jam treatments; the lexical word is aligned correctly." },
+    { "id": "qusx:printed-audit:000491", "canonical": "2:31:12", "decision": "reading-variant", "notes": "The pinned editions preserve different hamza/madd treatments in the same aligned word." },
+    { "id": "qusx:printed-audit:000618", "canonical": "2:40:2", "decision": "orthography-presentation", "notes": "The aligned editions show the same lexical reading with edition-specific alif/madd presentation." },
+    { "id": "qusx:printed-audit:000690", "canonical": "2:47:2", "decision": "orthography-presentation", "notes": "Repeated Israel form; the difference is edition-specific alif/madd presentation." },
+    { "id": "qusx:printed-audit:000709", "canonical": "2:48:10", "decision": "reading-variant", "notes": "The editions visibly divide between yuqbal and tuqbal; alignment is correct." },
+    { "id": "qusx:printed-audit:000722", "canonical": "2:49:4", "decision": "reading-variant", "notes": "Warsh preserves a different initial-hamza treatment in the pinned edition." },
+    { "id": "qusx:printed-audit:000768", "canonical": "2:53:2", "decision": "reading-variant", "notes": "Warsh preserves a different initial-hamza treatment in the pinned edition." },
+    { "id": "qusx:printed-audit:000823", "canonical": "2:57:3", "decision": "orthography-presentation", "notes": "The lexical letters align; initial-alif and dagger-alif marks differ by edition convention." },
+    { "id": "qusx:printed-audit:000854", "canonical": "2:58:16", "decision": "reading-variant", "notes": "The editions visibly divide between naghfir and yughfar forms; alignment is correct." },
+    { "id": "qusx:printed-audit:000972", "canonical": "2:62:9", "decision": "reading-variant", "notes": "Warsh preserves a different initial-hamza treatment in the pinned edition." }
+  ]
+}

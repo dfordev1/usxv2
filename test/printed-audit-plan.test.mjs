@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createGunzip } from "node:zlib";
 import { createReadStream } from "node:fs";
+import { readFile } from "node:fs/promises";
 
 async function load() {
   const chunks = [];
@@ -31,6 +32,16 @@ test("every referenced printed page and required ayah tag was verified", async (
   assert.deepEqual(audit.coverage.statusCounts, { "page-and-ayah-tags-verified": 2213 });
   assert.equal(audit.pages.length, 2213);
   assert.ok(audit.pages.every((page) => /^[0-9a-f]{64}$/.test(page.sha256) && page.missingAyahs.length === 0));
+});
+
+test("first printed review batch records ten edition-scoped decisions", async () => {
+  const decisions = JSON.parse(await readFile(new URL("../data/review/printed-review-batch-001-decisions.json", import.meta.url), "utf8"));
+  assert.equal(decisions.status, "printed-edition-reviewed-not-scholarly-certified");
+  assert.equal(decisions.records.length, 10);
+  assert.equal(["reading-variant", "orthography-presentation", "tokenization", "source-error", "uncertain"]
+    .reduce((sum, key) => sum + decisions.summary[key], 0), decisions.summary.records);
+  assert.equal(decisions.summary["source-error"], 0);
+  assert.ok(decisions.records.every((record) => record.decision && record.notes));
 });
 
 test("every audit record has actionable page evidence or an explicit boundary gap", async () => {
