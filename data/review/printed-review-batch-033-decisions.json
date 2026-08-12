@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0216-0220.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:020533","canonical":"7:81:1","decision":"reading-variant","notes":"Visible forms differ beyond marks: Hafs/Warsh/Qalun show إِنَّكُمۡ, Shu'bah shows أَءِنَّكُمۡ, and the other forms show أَ۟نَّكُمُۥ or أَٰ۟نَّكُمۡ."},
+    {"id":"qusx:printed-audit:020619","canonical":"7:86:11","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰمَنَ while the other editions show ءَامَنَ, an initial alif/hamza presentation difference."},
+    {"id":"qusx:printed-audit:020766","canonical":"7:94:6","decision":"reading-variant","notes":"Visible forms show نَّبِيٍّ in most editions and نَّبِےٓءٍ in Warsh/Qalun, a clear lexical/letter-form difference."},
+    {"id":"qusx:printed-audit:020930","canonical":"7:105:18","decision":"orthography-presentation","notes":"The visible lexical form إسراءيل is consistent; Warsh/Qalun differ in dagger-alif and stopping-mark presentation from the other editions."},
+    {"id":"qusx:printed-audit:020985","canonical":"7:113:5","decision":"reading-variant","notes":"Visible forms show إِنَّ in Hafs/Warsh/Qalun/Bazzi/Qunbul, أَءِنَّ in Shu'bah, and أَٰ۟نَّ in Duri/Susi."}
+  ]
+}
