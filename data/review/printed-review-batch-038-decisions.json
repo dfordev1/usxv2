@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0241-0245.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:022341","canonical":"7:189:25","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰتَيۡتَنَا while the other editions show ءَاتَيۡتَنَا, an initial alif/hamza presentation difference."},
+    {"id":"qusx:printed-audit:022351","canonical":"7:190:6","decision":"reading-variant","notes":"Visible forms show شُرَكَآءَ in Hafs/Bazzi/Duri/Qunbul/Susi and شِرۡكٗا or شِرۡكاٗ in Shu'bah/Warsh/Qalun, a clear lexical and consonantal difference."},
+    {"id":"qusx:printed-audit:022425","canonical":"7:196:2","decision":"orthography-presentation","notes":"The visible lexical form is consistent; the forms differ in special alif/ya and hamza presentation around وَلِيِّيَ, without a confident separate lexical subtype."},
+    {"id":"qusx:printed-audit:022516","canonical":"7:204:3","decision":"orthography-presentation","notes":"The visible lexical form القرآن is preserved; editions differ in hamza, alif, and sukūn/vowel presentation, including ٱلۡقُرۡءَانُ and ٱلۡقُرَانُ."},
+    {"id":"qusx:printed-audit:022757","canonical":"8:15:11","decision":"orthography-presentation","notes":"The visible lexical form الأدبار is preserved; editions differ in initial alif/wasla, dagger-alif, vowel, and stopping-mark presentation."}
+  ]
+}
