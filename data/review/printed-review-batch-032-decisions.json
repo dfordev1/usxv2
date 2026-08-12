@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0211-0215.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:019805","canonical":"7:38:40","decision":"reading-variant","notes":"Visible forms show تَعۡلَمُونَ in most editions and يَعۡلَمُونَ in Shu'bah."},
+    {"id":"qusx:printed-audit:019963","canonical":"7:47:4","decision":"uncertain","notes":"Visible forms differ in final hamza, madd, and ending presentation in تِلۡقَآءَ/تِلۡقَا; the evidence supports a form difference but not a confident semantic subtype."},
+    {"id":"qusx:printed-audit:020117","canonical":"7:54:29","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh/Qalun show dagger-alif presentation تَبَٰرَكَ while the other editions show تَبَارَكَ."},
+    {"id":"qusx:printed-audit:020148","canonical":"7:57:5","decision":"reading-variant","notes":"Visible forms show بُشۡرَۢا in Hafs/Shu'bah and نُشُرَۢا or نُشُراَۢ in the other editions, a clear consonantal/lexical difference."},
+    {"id":"qusx:printed-audit:020463","canonical":"7:75:10","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰمَنَ while the other editions show ءَامَنَ, an initial alif/hamza presentation difference."}
+  ]
+}
