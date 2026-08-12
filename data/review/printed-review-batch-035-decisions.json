@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0226-0230.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:021269","canonical":"7:137:13","decision":"reading-variant","notes":"Visible forms show كَلِمَتُ in most editions and كَلِمَةُ in Warsh/Qalun, a clear final-letter form difference."},
+    {"id":"qusx:printed-audit:021274","canonical":"7:137:18","decision":"orthography-presentation","notes":"The visible lexical form إسراءيل is consistent; Warsh/Qalun differ only in dagger-alif presentation from the other editions."},
+    {"id":"qusx:printed-audit:021288","canonical":"7:138:3","decision":"orthography-presentation","notes":"The visible lexical form إسراءيل is consistent; Warsh/Qalun differ only in dagger-alif presentation from the other editions."},
+    {"id":"qusx:printed-audit:021331","canonical":"7:141:4","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰلِ while the other editions show ءَالِ, an initial alif/hamza presentation difference."},
+    {"id":"qusx:printed-audit:021416","canonical":"7:144:7","decision":"reading-variant","notes":"Visible forms show plural بِرِسَٰلَٰتِي in Hafs/Shu'bah/Duri/Susi and singular بِرِسَالَتِے or بِرِسَالَتِي in the other forms."}
+  ]
+}
