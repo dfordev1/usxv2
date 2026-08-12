@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0131-0135.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:010768","canonical":"4:47:18","decision":"orthography-presentation","notes":"Visible forms preserve أَدْبَارِهَا; weak-letter, alif, and madd presentation differs."},
+    {"id":"qusx:printed-audit:010874","canonical":"4:54:11","decision":"uncertain","notes":"Visible forms differ in initial hamza/alif and ending madd presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:010884","canonical":"4:55:3","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَامَنَ versus اٰمَنَ; no subtype asserted."},
+    {"id":"qusx:printed-audit:011201","canonical":"4:73:9","decision":"reading-variant","notes":"Hafs and Bazzi visibly use تَكُن while the other editions use يَكُن."},
+    {"id":"qusx:printed-audit:011329","canonical":"4:77:47","decision":"reading-variant","notes":"Bazzi and Qunbul visibly use يُظْلَمُونَ while the other editions use تُظْلَمُونَ."}
+  ]
+}

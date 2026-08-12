@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0236-0240.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:022007","canonical":"7:169:40","decision":"reading-variant","notes":"Visible forms show تَعۡقِلُونَ in Hafs/Warsh/Qalun and يَعۡقِلُونَ in Shu'bah/Bazzi/Duri/Qunbul/Susi."},
+    {"id":"qusx:printed-audit:022055","canonical":"7:172:19","decision":"reading-variant","notes":"Visible forms show تَقُولُواْ in Hafs/Shu'bah/Warsh/Qalun/Bazzi/Qunbul and يَقُولُواْ in Duri/Susi; the ending-mark differences are secondary."},
+    {"id":"qusx:printed-audit:022064","canonical":"7:173:2","decision":"reading-variant","notes":"Visible forms show تَقُولُوٓاْ or its ending-mark variants in most editions and يَقُولُوٓاْ in Duri/Susi, a clear initial-letter difference."},
+    {"id":"qusx:printed-audit:022212","canonical":"7:184:4","decision":"orthography-presentation","notes":"The visible lexical form is consistent; differences are dagger-alif presentation in Warsh/Qalun and pronoun-mark presentation in Bazzi/Qunbul."},
+    {"id":"qusx:printed-audit:022248","canonical":"7:186:7","decision":"reading-variant","notes":"Visible forms show وَيَذَرُهُمۡ in Hafs/Shu'bah/Duri/Susi and وَنَذَرُهُمۡ in Warsh/Qalun/Bazzi/Qunbul, with clear initial-letter differences."}
+  ]
+}

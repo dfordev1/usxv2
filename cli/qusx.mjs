@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { loadBundledAlignment, loadBundledAyahMapping, loadBundledSurahReview, validateQusxFile } from "../sdk/node.mjs";
+import { findBundledEightRiwayahSlots, loadBundledAlignment, loadBundledAyahMapping, loadBundledEightRiwayah, loadBundledSurahReview, validateQusxFile } from "../sdk/node.mjs";
 
 const aliases = Object.freeze({
   hafs: "hafs-kufi",
@@ -8,6 +8,8 @@ const aliases = Object.freeze({
   qalon: "qalon-kfqc",
   douri: "douri-kfqc",
   sousi: "sousi-kfqc",
+  bazzi: "bazzi-kfqc",
+  qunbul: "qunbul-kfqc",
 });
 
 function usage() {
@@ -18,6 +20,8 @@ Usage:
   quran-usx map <from> <to> <surah:ayah> [--json]
   quran-usx validate <file.qusx.xml> [--json]
   quran-usx review <surah> [--json]
+  quran-usx eight-summary [--json]
+  quran-usx slot <surah:ayah[:word]> [--json]
 
 Long form:
   quran-usx compare --from hafs --to warsh --ayah 57:24
@@ -104,6 +108,26 @@ async function review(surah, json) {
   for (const record of bundle.records) console.log(`- ${record.id} ${record.canonical}: ${record.observations.map((item) => item.tradition).join(", ")} [${record.status}]`);
 }
 
+async function eightSummary(json) {
+  const dataset = await loadBundledEightRiwayah({ candidatesOnly: true });
+  const result = { format: dataset.format, version: dataset.version, status: dataset.status, traditions: dataset.traditions, slotCount: dataset.slotCount, candidateCount: dataset.candidateCount, classificationCounts: dataset.classificationCounts };
+  if (json) return print(result, true);
+  console.log(`${result.traditions.length} riwayat, ${result.slotCount} aligned slots`);
+  console.log(`${result.candidateCount} review candidates (${result.classificationCounts["substantive-candidate"]} substantive, ${result.classificationCounts["split-join"]} split/join)`);
+  console.log(`Status: ${result.status}`);
+}
+
+async function slot(reference, json) {
+  if (!/^\d+:\d+(?::\d+)?$/.test(reference ?? "")) throw new Error("slot requires surah:ayah or surah:ayah:word");
+  const slots = await findBundledEightRiwayahSlots(reference);
+  if (json) return print({ reference, candidatesOnly: true, slots }, true);
+  if (!slots.length) return console.log(`No review-candidate slot found for ${reference}.`);
+  for (const item of slots) {
+    console.log(`${item.id} ${item.canonicalLocations.join("+")} [${item.classification}]`);
+    for (const [name, tokens] of Object.entries(item.readings)) console.log(`  ${name}: ${tokens.join(" ") || "∅"}`);
+  }
+}
+
 async function main() {
   const { command, json, positional, options } = parseArgs(process.argv.slice(2));
   if (!command || command === "help" || command === "--help" || command === "-h") return print(usage(), false);
@@ -116,6 +140,8 @@ async function main() {
   }
   if (command === "validate") return validate(positional[0], json);
   if (command === "review") return review(positional[0], json);
+  if (command === "eight-summary") return eightSummary(json);
+  if (command === "slot") return slot(positional[0], json);
   throw new Error(`Unknown command: ${command}`);
 }
 

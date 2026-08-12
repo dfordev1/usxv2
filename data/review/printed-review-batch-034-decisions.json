@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0221-0225.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:021051","canonical":"7:123:3","decision":"reading-variant","notes":"Visible forms show substantial hamza, alif, and pronoun-form differences across the editions, including Hafs ءَامَنتُم and the other distinct forms; no source-error claim is made."},
+    {"id":"qusx:printed-audit:021055","canonical":"7:123:7","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh uses اٰذَنَ and Susi omits the final stopping/presentation mark, while the consonantal form is preserved."},
+    {"id":"qusx:printed-audit:021086","canonical":"7:126:6","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰمَنَّا while the other editions show ءَامَنَّا, an initial alif/hamza presentation difference."},
+    {"id":"qusx:printed-audit:021193","canonical":"7:132:6","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰيَةٖ while the other editions show ءَايَةٖ, an initial alif/hamza presentation difference."},
+    {"id":"qusx:printed-audit:021234","canonical":"7:134:22","decision":"orthography-presentation","notes":"The visible lexical form إسراءيل is consistent; Warsh/Qalun differ in dagger-alif and stopping-mark presentation from the other editions."}
+  ]
+}

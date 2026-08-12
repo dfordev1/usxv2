@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0176-0180.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:016888","canonical":"6:46:2","decision":"uncertain","notes":"Visible forms differ in hamza, alif, weak-letter, and pronoun presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:016911","canonical":"6:47:2","decision":"uncertain","notes":"Visible forms differ in hamza, alif, weak-letter, and pronoun presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:016931","canonical":"6:48:8","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَامَنَ versus اٰمَنَ; no subtype asserted."},
+    {"id":"qusx:printed-audit:017062","canonical":"6:55:4","decision":"reading-variant","notes":"Shubah visibly uses وَلِيَسْتَبِينَ while the other editions use وَلِتَسْتَبِينَ."},
+    {"id":"qusx:printed-audit:017103","canonical":"6:57:18","decision":"reading-variant","notes":"Douri and Sousi visibly use يَقْضِ while the other editions use يَقُصُّ."}
+  ]
+}

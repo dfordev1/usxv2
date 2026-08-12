@@ -1,0 +1,53 @@
+{
+  "format": "qusx-printed-edition-evidence",
+  "version": "1.0.0",
+  "status": "printed-edition-verified-not-scholarly-certified",
+  "surah": 63,
+  "page": 555,
+  "source": {
+    "repository": "https://github.com/quranpedia/quran-svg",
+    "edition": "KFQC page-vector exports",
+    "limitations": "Visual verification establishes what these edition files print; it is not a scholarly ruling on qiraat."
+  },
+  "pages": {
+    "hafs-kufi": { "path": "../../docs/evidence/surah-063/hafs-page-555.svg", "gitBlob": "ca52b66e36a86c9abfb7f99d82f4afba3e53e9d3", "sha256": "e42fdab949121597e2b189ca603aa443aafccc5df29555b2a0bf2914760538a6" },
+    "warsh-kfqc": { "path": "../../docs/evidence/surah-063/warsh-page-555.svg", "gitBlob": "751339085e7466dcbd67a11e4d4f0d9fc68e057d", "sha256": "c3b6ee62a1a32ba1c1c1cda23d74503fc0d880c03eec263dab187648d89fe5cc" },
+    "qalon-kfqc": { "path": "../../docs/evidence/surah-063/qalon-page-555.svg", "gitBlob": "008be32b4ab643e14596b51b50c24dac6babc065", "sha256": "bc0378f562882817ed7cf28c5510fcd841b76ec9612e707eb680d3036be0f05b" },
+    "douri-kfqc": { "path": "../../docs/evidence/surah-063/douri-page-555.svg", "gitBlob": "9199c07ddf7411ce6e0fcff0ba2d562ce14a6206", "sha256": "f88c27ae96904066690f154f650997032bd86be67240cce65f84442c994c3f74" },
+    "shubah-kfqc": { "path": "../../docs/evidence/surah-063/shubah-page-555.svg", "gitBlob": "517dfe53df7e80b6f76d26bd0cc519ec72888c31", "sha256": "5c0c8e953fa45f838238df25458e5ce5725541c2544d4971a7be4421dfad65a5" }
+  },
+  "records": [
+    {
+      "reviewId": "qusx:review:063:001",
+      "canonical": "63:6:16",
+      "decision": "orthography-presentation",
+      "status": "printed-edition-verified",
+      "evidence": ["../../docs/evidence/surah-063/hafs-63-6.png", "../../docs/evidence/surah-063/warsh-63-6.png", "../../docs/evidence/surah-063/qalon-63-6.png"],
+      "notes": "Page 555, lines 3-4: the final-ya presentation difference is visible in the Hafs, Warsh and Qalun edition files."
+    },
+    {
+      "reviewId": "qusx:review:063:002",
+      "canonical": "63:10:14",
+      "decision": "orthography-presentation",
+      "status": "printed-edition-verified",
+      "evidence": ["../../docs/evidence/surah-063/hafs-63-10-11.png", "../../docs/evidence/surah-063/warsh-63-10-11.png", "../../docs/evidence/surah-063/qalon-63-10-11.png"],
+      "notes": "Page 555, lines 12-14: the final-ya presentation difference is visible in the three edition files."
+    },
+    {
+      "reviewId": "qusx:review:063:003",
+      "canonical": "63:11:6",
+      "decision": "reading-variant",
+      "status": "printed-edition-verified",
+      "evidence": ["../../docs/evidence/surah-063/hafs-63-11-word.png", "../../docs/evidence/surah-063/warsh-63-11-word.png", "../../docs/evidence/surah-063/qalon-63-11-word.png", "../../docs/evidence/surah-063/douri-63-11-word.png"],
+      "notes": "Page 555, line 15: Hafs prints جاء with the standalone hamza; Warsh, Qalun and Al-Duri print جا without it."
+    },
+    {
+      "reviewId": "qusx:review:063:004",
+      "canonical": "63:11:11",
+      "decision": "reading-variant",
+      "status": "printed-edition-verified",
+      "evidence": ["../../docs/evidence/surah-063/hafs-63-11-ending.png", "../../docs/evidence/surah-063/shubah-63-11-ending.png"],
+      "notes": "Page 555, line 15: Hafs prints تعملون while Shu'bah prints يعملون."
+    }
+  ]
+}

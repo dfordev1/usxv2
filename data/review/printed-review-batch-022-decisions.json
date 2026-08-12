@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0161-0165.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:015806","canonical":"5:106:12","decision":"orthography-presentation","notes":"Visible forms preserve اثْنَانِ; initial alif and standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:015811","canonical":"5:106:17","decision":"uncertain","notes":"Visible forms differ in initial hamza/alif and standing-alif presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:015826","canonical":"5:106:32","decision":"orthography-presentation","notes":"Visible forms preserve فَيُقْسِمَانِ; standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:015852","canonical":"5:107:7","decision":"uncertain","notes":"Visible forms differ in standing-alif and hamza presentation of فَآخَرَانِ; no subtype asserted."},
+    {"id":"qusx:printed-audit:015853","canonical":"5:107:8","decision":"orthography-presentation","notes":"Visible forms preserve يَقُومَانِ; standing-alif presentation differs."}
+  ]
+}

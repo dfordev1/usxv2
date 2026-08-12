@@ -1,0 +1,33 @@
+{
+  "format": "qusx-additional-printed-editions",
+  "version": "1.0.0",
+  "status": "independent-printed-sources-not-kfqc-vector-exports",
+  "limitations": "These PDFs close the visual-source gap for Al-Bazzi, Qunbul and Al-Susi, but they are not byte-identical official KFQC downloads. Page mapping is documented per source and every candidate crop must retain this limitation.",
+  "editions": {
+    "bazzi-kfqc": {
+      "localAuditPath": "../../tmp/pdfs/bazzi.pdf",
+      "source": "https://archive.org/download/20191120_20191120_0859/%D8%A7%D9%84%D9%82%D8%B1%D8%A2%D9%86%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%85%20%D8%A8%D8%B1%D9%88%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D8%A8%D8%B2%D9%8A%20%D8%B9%D9%86%20%D8%A7%D8%A8%D9%86%20%D9%83%D8%AB%D9%8A%D8%B1.pdf",
+      "sha256": "8d4b14d60be535e49fffd7d6613a5145e68dd2adfe3f0950f2575df0010ccdf5",
+      "pdfPages": 604,
+      "canonicalPageOffset": 0,
+      "pageMapping": "The 604-page file begins with Al-Fatihah on PDF page 1 and Al-Baqarah on page 2; canonical Hafs page and PDF page are equal."
+    },
+    "qunbul-kfqc": {
+      "localAuditPath": "../../tmp/pdfs/qunbul.pdf",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/49/%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81_%D8%A8%D8%B1%D9%88%D8%A7%D9%8A%D8%A9_%D9%82%D9%86%D8%A8%D9%84_%D8%B9%D9%86_%D8%A7%D8%A8%D9%86_%D9%83%D8%AB%D9%8A%D8%B1.pdf",
+      "sha256": "411be1ce012b1167e0d7e667f6eb9965818135038977073e1263f2b164d1539c",
+      "pdfPages": 604,
+      "canonicalPageOffset": 0,
+      "pageMapping": "The 604-page file begins with Al-Fatihah on PDF page 1 and Al-Baqarah on page 2; canonical Hafs page and PDF page are equal.",
+      "license": "Wikimedia Commons marks the file as public domain; uploader author information is missing."
+    },
+    "sousi-kfqc": {
+      "localAuditPath": "../../tmp/pdfs/sousi.pdf",
+      "source": "https://d1.islamhouse.com/data/ar/ih_books/single_02/ar_Alsousi_an_Abi_amrou.pdf",
+      "sha256": "f80e3345f3ad552c75b8cf432e25ca9e6e8642aa876730475b3266b32891e28b",
+      "pdfPages": 620,
+      "canonicalPageOffset": 2,
+      "pageMapping": "Two cover/title leaves precede the numbered 604-page Mushaf: canonical page 1 is PDF page 3. IslamHouse attributes this edition to the King Fahd Complex."
+    }
+  }
+}

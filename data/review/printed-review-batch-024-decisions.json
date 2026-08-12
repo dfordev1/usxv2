@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0171-0175.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:016272","canonical":"6:6:31","decision":"uncertain","notes":"Difference is initial hamza/alif and stopping-mark presentation in ءَاخَرِينَ; no subtype asserted."},
+    {"id":"qusx:printed-audit:016447","canonical":"6:19:14","decision":"uncertain","notes":"Visible forms differ in hamza, alif, and vowel presentation in الْقُرْآنُ; no subtype asserted."},
+    {"id":"qusx:printed-audit:016452","canonical":"6:19:19","decision":"uncertain","notes":"The complex hamza/alif/weak-letter forms differ visibly; preserved as uncertain."},
+    {"id":"qusx:printed-audit:016673","canonical":"6:32:13","decision":"reading-variant","notes":"The editions visibly divide between تَعْقِلُونَ and يَعْقِلُونَ."},
+    {"id":"qusx:printed-audit:016807","canonical":"6:40:2","decision":"uncertain","notes":"Visible forms differ in hamza, alif, weak-letter, and pronoun presentation; no subtype asserted."}
+  ]
+}

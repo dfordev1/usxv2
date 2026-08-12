@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0096-0100.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:008020","canonical":"3:111:8","decision":"orthography-presentation","notes":"Visible forms preserve الْأَدْبَارَ; initial alif and dagger-alif presentation differs."},
+    {"id":"qusx:printed-audit:008089","canonical":"3:115:2","decision":"reading-variant","notes":"Hafs visibly uses يَفْعَلُوا while the other editions use تَفْعَلُوا."},
+    {"id":"qusx:printed-audit:008093","canonical":"3:115:6","decision":"reading-variant","notes":"Hafs visibly uses يُكْفَرُوهُ while the other editions use تُكْفَرُوهُ."},
+    {"id":"qusx:printed-audit:008229","canonical":"3:122:3","decision":"orthography-presentation","notes":"Visible forms preserve طَائِفَتَانِ; standing-alif and stopping-mark presentation differs."},
+    {"id":"qusx:printed-audit:008353","canonical":"3:133:1","decision":"reading-variant","notes":"Warsh and Qalun visibly omit the initial waw in سَارِعُوا while the other editions retain وَسَارِعُوا."}
+  ]
+}

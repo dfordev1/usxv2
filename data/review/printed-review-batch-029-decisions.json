@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0196-0200.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:018111","canonical":"6:112:4","decision":"reading-variant","notes":"Visible forms show نَبِيٍّ in Hafs/Shu'bah/Bazzi/Duri/Qunbul/Susi and نَبِےٓءٍ in Warsh/Qalun."},
+    {"id":"qusx:printed-audit:018334","canonical":"6:124:18","decision":"reading-variant","notes":"Visible forms show singular رِسَالَتَهُۥ in Hafs/Bazzi/Qunbul and plural رِسَٰلَٰتِهِۦ in the other forms, with edition-specific marks and stopping signs."},
+    {"id":"qusx:printed-audit:018394","canonical":"6:128:2","decision":"reading-variant","notes":"Visible forms show يَحۡشُرُهُمۡ in Hafs and نَحۡشُرُهُمۡ in the other principal forms; Bazzi/Qunbul additionally show the pronoun ending ۥ."},
+    {"id":"qusx:printed-audit:018499","canonical":"6:133:18","decision":"orthography-presentation","notes":"The visible lexical form آخرين is consistent; Warsh shows اٰخَرِينَ and Qalun/Warsh include stopping-mark presentation, while the other forms show ءَاخَرِينَ."},
+    {"id":"qusx:printed-audit:018614","canonical":"6:139:13","decision":"reading-variant","notes":"Visible forms show يَكُن in Hafs/Bazzi/Duri/Qunbul/Susi, تَكُن in Shu'bah, and geminated يَّكُن in Warsh/Qalun."}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0156-0160.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:015134","canonical":"5:72:14","decision":"orthography-presentation","notes":"Visible forms preserve إِسْرَائِيلَ; alif and madd presentation differs."},
+    {"id":"qusx:printed-audit:015201","canonical":"5:75:15","decision":"uncertain","notes":"Visible forms differ in hamza, alif, weak-letter, and standing-alif presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:015256","canonical":"5:78:6","decision":"orthography-presentation","notes":"Visible forms preserve إِسْرَائِيلَ; alif and madd presentation differs."},
+    {"id":"qusx:printed-audit:015301","canonical":"5:81:5","decision":"uncertain","notes":"Visible forms differ in initial alif/wasla and final weak-letter/hamza presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:015713","canonical":"5:101:17","decision":"uncertain","notes":"Visible forms differ in hamza, alif, and vowel presentation in الْقُرْآنُ; no subtype asserted."}
+  ]
+}

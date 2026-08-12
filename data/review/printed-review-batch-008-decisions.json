@@ -1,0 +1,17 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0081-0090.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:006965","canonical":"3:48:1","decision":"reading-variant","notes":"Hafs visibly uses وَيُعَلِّمُهُ while the other editions use وَنُعَلِّمُهُ."},
+    {"id":"qusx:printed-audit:006973","canonical":"3:49:4","decision":"orthography-presentation","notes":"Visible forms preserve إِسْرَائِيلَ; alif and madd presentation differs."},
+    {"id":"qusx:printed-audit:007125","canonical":"3:57:6","decision":"reading-variant","notes":"Hafs visibly uses فَيُوَفِّيهِم while the other editions use فَنُوَفِّيهِم."},
+    {"id":"qusx:printed-audit:007292","canonical":"3:68:8","decision":"uncertain","notes":"Visible forms differ in the final weak-letter/hamza form of النَّبِيُّ; no subtype asserted."},
+    {"id":"qusx:printed-audit:007357","canonical":"3:73:12","decision":"uncertain","notes":"Visible forms differ in hamza, alif, and vowel-mark presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:007495","canonical":"3:79:9","decision":"uncertain","notes":"The forms differ in the final hamza/ta sequence of النُّبُوَّة; preserved as uncertain."},
+    {"id":"qusx:printed-audit:007534","canonical":"3:81:7","decision":"uncertain","notes":"Visible forms differ in pronoun suffix and weak-letter presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:007571","canonical":"3:83:4","decision":"reading-variant","notes":"The editions visibly divide between يَبْغُونَ and تَبْغُونَ."},
+    {"id":"qusx:printed-audit:007581","canonical":"3:83:14","decision":"reading-variant","notes":"Hafs visibly uses يُرْجَعُونَ while the other editions use تُرْجَعُونَ."},
+    {"id":"qusx:printed-audit:007583","canonical":"3:84:2","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَامَنَّا versus اٰمَنَّا; no subtype asserted."}
+  ]
+}

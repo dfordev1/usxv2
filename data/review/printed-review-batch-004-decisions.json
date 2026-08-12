@@ -1,0 +1,17 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0041-0050.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:002491","canonical":"2:140:14","decision":"uncertain","notes":"The eight visible forms differ in hamza, alif, madd, and marks; preserved without subtype."},
+    {"id":"qusx:printed-audit:002587","canonical":"2:143:44","decision":"uncertain","notes":"Visible hamza-seat and waw/alif presentation differences require domain interpretation."},
+    {"id":"qusx:printed-audit:002711","canonical":"2:149:17","decision":"reading-variant","notes":"Douri and Sousi visibly use يَعْمَلُونَ while the other editions use تَعْمَلُونَ."},
+    {"id":"qusx:printed-audit:002824","canonical":"2:158:5","decision":"orthography-presentation","notes":"Visible forms preserve شَعَائِرِ; standing-alif and madd presentation differs."},
+    {"id":"qusx:printed-audit:002966","canonical":"2:165:18","decision":"reading-variant","notes":"Warsh and Qalun visibly use تَرَى while the other forms use يَرَى; Sousi also shows a weak-letter presentation form."},
+    {"id":"qusx:printed-audit:002991","canonical":"2:166:12","decision":"uncertain","notes":"The visible forms differ in hamza/alif and vowel-mark presentation around الْأَسْبَابُ; no subtype asserted."},
+    {"id":"qusx:printed-audit:003186","canonical":"2:177:12","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَامَنَ versus اٰمَنَ; no subtype asserted."},
+    {"id":"qusx:printed-audit:003368","canonical":"2:185:6","decision":"uncertain","notes":"Visible differences include hamza, alif, and vowel presentation in الْقُرْآنُ; preserved as uncertain."},
+    {"id":"qusx:printed-audit:003447","canonical":"2:187:24","decision":"uncertain","notes":"The forms differ substantially in the complex hamza/alif sequence of فَالْآنَ; no subtype asserted from appearance alone."},
+    {"id":"qusx:printed-audit:003891","canonical":"2:207:10","decision":"uncertain","notes":"Visible forms differ in hamza-seat and waw/alif presentation in رَءُوفُ; no subtype asserted."}
+  ]
+}

@@ -5,6 +5,53 @@ plain chronological record, not semver-scoped releases.
 
 ## Unreleased
 
+- Completed an individual record-level eight-edition technical review for all
+  937 candidates. Each record now carries hashes for five rendered SVG ayah
+  regions and three rendered PDF target-line regions. Conservative decisions
+  are 208 reading variants, 3 presentation differences, 6 tokenization cases,
+  and 709 explicit uncertainties; none is described as scholar-certified. A
+  second 20-record batch and a third 10-record batch were manually inspected
+  and recorded.
+
+- Started the complete visual review with a reusable side-by-side pinned-page
+  viewer and the first ten-record batch. Batch 001 records seven reading-form
+  differences and three orthographic-presentation differences, with no source
+  errors, explicitly scoped to the inspected printed editions.
+- Completed a source-error verdict for all 937 candidates by combining the
+  pinned-page audit with the independent eight-dataset mirror comparison. No
+  source-copy errors were detected; 919 precise semantic subtypes remain
+  deliberately pending instead of being guessed or called scholar-certified.
+
+- Added a reproducible printed-edition audit plan for all 937 eight-riwayah
+  candidates across 805 ayahs. It maps each record to pinned Quranpedia SVG
+  pages for the five traditions with complete local boundary indexes and keeps
+  evidence status pending until a visual decision is recorded.
+- Verified and SHA-256-pinned all 2,230 unique printed pages referenced by that
+  plan, including the presence of every required ayah tag. The compact audit
+  report records zero missing or failed page checks without bundling page text
+  in npm.
+
+- Added the first printed-edition evidence pack for all four Surah 63 review
+  locations. Five KFQC page-555 vector exports (Hafs, Warsh, Qalun, Al-Duri and
+  Shu'bah) are pinned by upstream blob ID and SHA-256, with focused screenshots
+  and edition-scoped decisions. Records are now `printed-edition-verified`,
+  explicitly not scholarly certified.
+
+- Added a deterministic importer for Sheikh Talha bin Bashir's 77,432-row
+  eight-riwayah parallel-word workbook. It maps every source row to stable QUSX
+  Hafs locations, preserves all eight readings and workbook provenance, handles
+  split/join tokenization, and emits a complete compressed slot dataset plus a
+  937-record scholarly-review queue. Added schema, Node loaders, `eight-summary`
+  and `slot` CLI commands, tests, and explicit source/licensing status.
+- Cross-checked all eight workbook traditions against a pinned commit of the
+  accessible `thetruetruth/quran-data-kfgqpc` mirror. The audit records every
+  source hash and found zero unresolved substantive letter differences after
+  QUSX normalization. Its retained residuals are explicitly classified as a
+  Sūrah 1 Basmalah boundary convention or 2:72 hamza encoding presentation.
+- Kept the 3.5 MB complete eight-riwayah parallel-text archive out of the npm
+  package pending explicit redistribution permission. npm bundles only the
+  focused 937-record review queue and its non-textual audit metadata.
+
 - Added the first complete-surah alignment review inventory for Surah 63. It
   preserves all eight generated observations across Warsh, Qalun, Douri,
   Shubah, and Sousi while consolidating them into four unique scholarly review

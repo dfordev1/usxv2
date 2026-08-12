@@ -1,0 +1,18 @@
+{
+  "format":"qusx-printed-review-decisions",
+  "version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0031-0040.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:002259","canonical":"2:127:3","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمُ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:002308","canonical":"2:130:5","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمَ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:002331","canonical":"2:132:1","decision":"reading-variant","notes":"Warsh and Qalun visibly use وَأَوْصَى while the other editions use وَوَصَّى."},
+    {"id":"qusx:printed-audit:002333","canonical":"2:132:3","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمُ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:002366","canonical":"2:133:20","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمَ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:002398","canonical":"2:135:10","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمَ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:002413","canonical":"2:136:10","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمَ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:002436","canonical":"2:137:2","decision":"uncertain","notes":"Difference is initial hamza/alif and ending vowel-mark presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:002479","canonical":"2:140:2","decision":"reading-variant","notes":"Hafs visibly uses تَقُولُونَ while the other seven editions use يَقُولُونَ."},
+    {"id":"qusx:printed-audit:002481","canonical":"2:140:4","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمَ; small-letter and alif presentation differs."}
+  ]
+}

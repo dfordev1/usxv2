@@ -1,0 +1,74 @@
+{
+  "format": "qusx-eight-riwayah-slots",
+  "version": "1.0.0",
+  "status": "source-derived-candidate-review-required",
+  "source": {
+    "title": "ملف كلمات الروايات",
+    "compiler": "Talha bin Bashir",
+    "url": "https://docs.google.com/spreadsheets/d/1iGgb9Q-pYmDHKggTGuErcUJc6Yal8w3q/edit",
+    "sha256": "c38f66638cec1d8464e24b6d891f273cdaf63f70a64769e8f60845d476a00512",
+    "redistributionStatus": "permission-not-yet-documented-in-repository",
+    "method": "Text extracted from eight King Fahd Complex mushaf/font editions and manually aligned to the 77,432-row Hafs sequence."
+  },
+  "canonicalTradition": "hafs-kufi",
+  "traditions": [
+    "hafs-kufi",
+    "shubah-kfqc",
+    "warsh-kfqc",
+    "qalon-kfqc",
+    "bazzi-kfqc",
+    "douri-kfqc",
+    "qunbul-kfqc",
+    "sousi-kfqc"
+  ],
+  "slotCount": 77432,
+  "classificationCounts": {
+    "identical": 31921,
+    "orthographic-presentation": 44574,
+    "substantive-candidate": 931,
+    "split-join": 6
+  },
+  "qusxHafsAlignment": {
+    "ratio": 0.9999354272135551,
+    "nonEqualBlocks": [
+      {
+        "kind": "replace",
+        "qusxLocations": [
+          "2:72:4"
+        ],
+        "workbookSequences": [
+          1142
+        ]
+      },
+      {
+        "kind": "replace",
+        "qusxLocations": [
+          "11:13:3"
+        ],
+        "workbookSequences": [
+          28317
+        ]
+      },
+      {
+        "kind": "replace",
+        "qusxLocations": [
+          "15:7:1",
+          "15:7:2"
+        ],
+        "workbookSequences": [
+          33535
+        ]
+      },
+      {
+        "kind": "replace",
+        "qusxLocations": [
+          "37:130:3"
+        ],
+        "workbookSequences": [
+          58040,
+          58041
+        ]
+      }
+    ]
+  }
+}

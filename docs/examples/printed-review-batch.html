@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>QUSX printed review batch</title>
+<style>
+body{font:15px system-ui;background:#f4f1e8;color:#24231f;margin:24px}h1{margin-bottom:4px}.note{max-width:900px;color:#655f52}.record{background:white;border:1px solid #d8d0bf;border-radius:10px;padding:16px;margin:18px 0}.readings{direction:rtl;font-size:22px;display:flex;gap:18px;flex-wrap:wrap}.editions{display:grid;grid-template-columns:repeat(auto-fit,minmax(710px,1fr));gap:12px}.edition{border:1px solid #ddd;padding:8px;overflow:auto}.crop{position:relative;overflow:hidden;width:690px;background:white}.crop img{position:absolute;width:690px;height:auto;left:0}.missing{padding:30px;color:#a33}code{direction:ltr}button{padding:8px 14px}
+</style>
+<h1>Printed-edition review batch</h1><p class="note">Visual evidence from pinned KFQC page vectors. This supports edition-scoped classification only; it is not scholarly certification.</p>
+<label>Batch file <input id="batch" value="../evidence/review-batches/batch-001.json" size="55"></label> <button id="load">Load</button><main id="out"></main>
+<script>
+const labels={"hafs-kufi":"Hafs","shubah-kfqc":"Shu'bah","warsh-kfqc":"Warsh","qalon-kfqc":"Qalun","douri-kfqc":"Al-Duri"};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function load(){const data=await fetch(document.querySelector('#batch').value).then(r=>r.json());out.innerHTML=data.records.map(r=>`<section class="record"><h2>${esc(r.canonical)} <small>${esc(r.id)}</small></h2><div class="readings">${Object.entries(r.readings).map(([k,v])=>`<span><b>${esc(k)}</b>: ${esc(v.join(' '))}</span>`).join('')}</div><div class="editions">${Object.entries(r.pages).map(([k,p])=>{if(!p.bounds)return `<div class="edition missing">${esc(labels[k]||k)}: boundary unavailable</div>`;const scale=690/345,h=(p.bounds.bottom-p.bounds.top)*scale;return `<div class="edition"><b>${esc(labels[k]||k)} — page ${p.page}</b><div class="crop" style="height:${h}px"><img src="${esc(p.source)}" style="top:${-p.bounds.top*scale}px"></div></div>`}).join('')}</div><p>Decision: ☐ reading variant ☐ orthography ☐ tokenization ☐ source error ☐ uncertain</p></section>`).join('')}
+document.querySelector('#load').onclick=load;load();
+</script></html>

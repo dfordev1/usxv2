@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0181-0185.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:017184","canonical":"6:61:10","decision":"uncertain","notes":"Visible madd, final hamza, and stopping-mark differences in جَاءَ are preserved without subtype assertion."},
+    {"id":"qusx:printed-audit:017215","canonical":"6:63:12","decision":"reading-variant","notes":"Hafs visibly uses أَنْجَانَا while the other forms use أَنْجَيْتَنَا."},
+    {"id":"qusx:printed-audit:017430","canonical":"6:74:8","decision":"uncertain","notes":"Difference is initial hamza/alif and stopping-mark presentation in ءَالِهَةً; no subtype asserted."},
+    {"id":"qusx:printed-audit:017601","canonical":"6:85:1","decision":"reading-variant","notes":"Hafs visibly uses وَزَكَرِيَّا while the other editions use وَزَكَرِيَّاءَ."},
+    {"id":"qusx:printed-audit:017617","canonical":"6:87:2","decision":"uncertain","notes":"Visible forms differ in initial hamza/alif and pronoun-mark presentation; no subtype asserted."}
+  ]
+}

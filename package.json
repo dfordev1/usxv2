@@ -38,6 +38,9 @@
     "./ayah-mapping-schema": "./schema/qusx-ayah-mapping.schema.json",
     "./review/surah-063": "./data/review/surah-063-review-v1.json",
     "./review-schema": "./schema/qusx-surah-review.schema.json",
+    "./eight-riwayah-manifest": "./data/alignments/eight-riwayah-manifest-v1.json",
+    "./eight-riwayah-schema": "./schema/qusx-eight-riwayah-slots.schema.json",
+    "./eight-riwayah-mirror-audit": "./data/alignments/eight-riwayah-mirror-audit-v1.json",
     "./package.json": "./package.json"
   },
   "files": [
@@ -50,6 +53,10 @@
     "data/alignments/boundary-v1.json",
     "data/review/surah-063-review-v1.json",
     "schema/qusx-surah-review.schema.json",
+    "schema/qusx-eight-riwayah-slots.schema.json",
+    "data/alignments/eight-riwayah-manifest-v1.json",
+    "data/alignments/eight-riwayah-review-candidates-v1.json.gz",
+    "data/alignments/eight-riwayah-mirror-audit-v1.json",
     "README.md",
     "LICENSE",
     "THIRD_PARTY_NOTICES.md"
@@ -58,9 +65,16 @@
     "generate": "node src/generate.js all",
     "validate": "node src/validate.js all",
     "validate:xsd": "node scripts/run-python.js scripts/xsd_validate.py",
-    "test": "node test/run_tests.js && node --test test/sdk.test.mjs test/adapters.test.mjs test/providers.test.mjs test/cli.test.mjs test/candidate-alignments.test.js test/normative-alignment.test.js test/review-bundle.test.mjs",
+    "test": "node test/run_tests.js && node --test test/sdk.test.mjs test/adapters.test.mjs test/providers.test.mjs test/cli.test.mjs test/candidate-alignments.test.js test/normative-alignment.test.js test/review-bundle.test.mjs test/eight-riwayah.test.mjs test/kfgqpc-mirror-audit.test.mjs test/printed-audit-plan.test.mjs",
     "review:surah": "node scripts/build_surah_review_bundle.mjs",
     "align:candidates": "node scripts/generate_candidate_alignments.js",
+    "audit:printed:plan": "node scripts/build_printed_audit_plan.mjs",
+    "audit:printed:verify": "node scripts/verify_printed_audit_sources.mjs",
+    "audit:printed:batch": "node scripts/build_printed_review_batch.mjs",
+    "audit:printed:verdict": "node scripts/build_complete_printed_verdict.mjs",
+    "audit:printed:pdf-lines": "node scripts/run-python.js scripts/audit_additional_printed_pdfs.py",
+    "audit:printed:svg-crops": "node scripts/audit_svg_ayah_crops.mjs",
+    "audit:printed:classify": "node scripts/classify_complete_printed_review.mjs",
     "align:review-data": "node scripts/build_alignment_review_data.js",
     "align:boundaries": "node scripts/generate_boundary_mappings.js",
     "align:metrics": "node scripts/report_alignment_metrics.js",
@@ -100,5 +114,8 @@
     "type": "git",
     "url": "git+https://github.com/dfordev1/usxv2.git"
   },
-  "homepage": "https://github.com/dfordev1/usxv2"
+  "homepage": "https://github.com/dfordev1/usxv2",
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
 }

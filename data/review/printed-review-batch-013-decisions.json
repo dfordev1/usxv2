@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0116-0120.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:009737","canonical":"4:6:8","decision":"uncertain","notes":"Visible forms differ in initial hamza/alif, standing-alif, and pronoun presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:009771","canonical":"4:7:5","decision":"orthography-presentation","notes":"Visible forms preserve الْوَالِدَانِ; initial alif and standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:009777","canonical":"4:7:11","decision":"orthography-presentation","notes":"Visible forms preserve الْوَالِدَانِ; initial alif and standing-alif presentation differs."},
+    {"id":"qusx:printed-audit:009866","canonical":"4:11:40","decision":"orthography-presentation","notes":"Visible forms preserve أَبَوَاهُ; standing-alif and pronoun-mark presentation differs."},
+    {"id":"qusx:printed-audit:009882","canonical":"4:11:56","decision":"uncertain","notes":"Visible forms differ in initial hamza/alif and pronoun presentation; no subtype asserted."}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0061-0070.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:004876","canonical":"2:246:13","decision":"uncertain","notes":"Warsh and Qalun visibly differ in the final weak-letter/hamza form of لِنَبِيّ; preserved as uncertain."},
+    {"id":"qusx:printed-audit:005140","canonical":"2:253:39","decision":"uncertain","notes":"Difference is initial hamza/alif presentation in ءَامَنَ versus اٰمَنَ; no subtype asserted."},
+    {"id":"qusx:printed-audit:005278","canonical":"2:258:6","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمَ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:005282","canonical":"2:258:10","decision":"uncertain","notes":"Visible forms differ in weak-letter, alif, and pronoun presentation; no subtype asserted."},
+    {"id":"qusx:printed-audit:005287","canonical":"2:258:15","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمُ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:005297","canonical":"2:258:25","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمُ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:005366","canonical":"2:259:51","decision":"orthography-presentation","notes":"Visible forms preserve الْعِظَامِ; initial alif and dagger-alif presentation differs."},
+    {"id":"qusx:printed-audit:005368","canonical":"2:259:53","decision":"reading-variant","notes":"Hafs visibly uses نُنْشِزُهَا while the other editions use نُنْشِرُهَا."},
+    {"id":"qusx:printed-audit:005385","canonical":"2:260:3","decision":"orthography-presentation","notes":"Visible forms preserve إِبْرَاهِيمُ; small-letter and alif presentation differs."},
+    {"id":"qusx:printed-audit:005554","canonical":"2:266:9","decision":"orthography-presentation","notes":"Visible forms preserve وَأَعْنَابٍ; standing-alif presentation differs."}
+  ]
+}
