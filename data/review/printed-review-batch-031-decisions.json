@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0206-0210.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:019099","canonical":"6:158:26","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰمَنَتۡ while the other editions show ءَامَنَتۡ, an initial alif/hamza presentation difference."},
+    {"id":"qusx:printed-audit:019466","canonical":"7:22:10","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh/Qalun show dagger-alif presentation يَخۡصِفَٰنِ while the other editions show يَخۡصِفَانِ."},
+    {"id":"qusx:printed-audit:019531","canonical":"7:26:16","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰيَٰتِ while the other editions show ءَايَٰتِ, an initial alif/hamza presentation difference."},
+    {"id":"qusx:printed-audit:019693","canonical":"7:34:5","decision":"orthography-presentation","notes":"The visible lexical form جَاءَ is preserved; differences are limited to madd, final hamza, and related presentation marks across editions."},
+    {"id":"qusx:printed-audit:019696","canonical":"7:34:8","decision":"orthography-presentation","notes":"The visible lexical form يَسۡتَأۡخِرُونَ is preserved; editions differ in dagger-alif, hamza, and related orthographic presentation."}
+  ]
+}
