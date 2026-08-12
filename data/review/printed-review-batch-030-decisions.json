@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0201-0205.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:018700","canonical":"6:143:10","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows آٰلذَّكَرَيۡنِ while other editions show an initial hamza/alif form, and Duri/Susi use a different long-alif presentation."},
+    {"id":"qusx:printed-audit:018721","canonical":"6:144:8","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh alone shows آٰلذَّكَرَيۡنِ while the other editions use the initial hamza/alif presentation."},
+    {"id":"qusx:printed-audit:018767","canonical":"6:145:14","decision":"reading-variant","notes":"Visible forms show يَكُونَ in Hafs/Shu'bah/Duri/Susi, geminated يَّكُونَ in Warsh/Qalun, and تَكُونَ in Bazzi/Qunbul."},
+    {"id":"qusx:printed-audit:019020","canonical":"6:155:4","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh/Qalun show dagger-alif presentation مُبَٰرَكٞ while the other editions show مُبَارَكٞ."},
+    {"id":"qusx:printed-audit:019068","canonical":"6:157:30","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰيَٰتِنَا while the other editions show ءَايَٰتِنَا, an initial alif/hamza presentation difference."}
+  ]
+}
