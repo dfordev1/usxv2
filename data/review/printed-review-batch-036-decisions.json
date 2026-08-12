@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0231-0235.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:021446","canonical":"7:146:3","decision":"orthography-presentation","notes":"The visible lexical form is consistent; Warsh shows اٰيَٰتِيَ while the other editions show ءَايَٰتِيَ, an initial alif/hamza presentation difference."},
+    {"id":"qusx:printed-audit:021701","canonical":"7:157:4","decision":"reading-variant","notes":"Visible forms differ between ٱلنَّبِيَّ, اَ۬لنَّبِيَّ, and Warsh/Qalun اَ۬لنَّبِےٓءَ; the latter includes a clear final hamza/letter-form difference."},
+    {"id":"qusx:printed-audit:021763","canonical":"7:158:23","decision":"reading-variant","notes":"Visible forms differ between ٱلنَّبِيِّ, ا۬لنَّبِيِّ, and Warsh/Qalun اِ۬لنَّبِےٓءِ; the latter includes a clear final hamza/letter-form difference."},
+    {"id":"qusx:printed-audit:021838","canonical":"7:161:16","decision":"reading-variant","notes":"Visible forms show نَّغۡفِرۡ in most editions and تُغۡفَرۡ in Warsh/Qalun, a clear active/passive and consonantal difference."},
+    {"id":"qusx:printed-audit:021840","canonical":"7:161:18","decision":"reading-variant","notes":"Visible forms show خَطِيٓـَٰٔتِكُمۡ or its pronoun-marked form in most editions, خَطِيٓـَٰٔتُكُمۡ in Warsh/Qalun, and خَطَٰيَىٰكُمۡ in Duri/Susi, with clear stem/vowel and ending differences."}
+  ]
+}
