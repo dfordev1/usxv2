@@ -1,0 +1,12 @@
+{
+  "format":"qusx-printed-review-decisions","version":1,
+  "batch":"../../docs/evidence/review-batches/batch-0251-0255.json",
+  "status":"manually-reviewed-edition-scoped-not-scholarly-certified",
+  "records":[
+    {"id":"qusx:printed-audit:023556","canonical":"8:65:2","decision":"reading-variant","notes":"Visible forms show ٱلنَّبِيُّ or its alif presentation in most editions and اَ۬لنَّبِےٓءُ in Warsh/Qalun, a clear final hamza/letter-form difference."},
+    {"id":"qusx:printed-audit:023569","canonical":"8:65:15","decision":"reading-variant","notes":"Visible forms show يَكُن in Hafs/Shu'bah/Duri/Susi and تَكُن in Warsh/Qalun/Bazzi/Qunbul, a clear initial-letter difference."},
+    {"id":"qusx:printed-audit:023581","canonical":"8:66:1","decision":"uncertain","notes":"Visible forms differ substantially in alif/wasla, hamza, and dagger-alif presentation around ٱلۡـَٰٔنَ; the evidence supports a form difference but not a confident semantic subtype."},
+    {"id":"qusx:printed-audit:023590","canonical":"8:66:10","decision":"reading-variant","notes":"Visible forms show يَكُن in Hafs/Shu'bah and تَكُن in the other editions, a clear initial-letter difference."},
+    {"id":"qusx:printed-audit:023609","canonical":"8:67:3","decision":"reading-variant","notes":"Visible forms show لِنَبِيٍّ in Hafs/Shu'bah/Bazzi/Duri/Qunbul/Susi and لِنَبِےٓءٍ in Warsh/Qalun, a clear final hamza/letter-form difference."}
+  ]
+}

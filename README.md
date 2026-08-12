@@ -249,8 +249,8 @@ The final record-level technical review is stored in
 `data/review/eight-riwayah-complete-printed-review-v1.json.gz`. Every one of the
 937 records carries rendered evidence from eight editions: ayah crops from the
 five pinned Quranpedia vectors and target-line crops from independently pinned
-Al-Bazzi, Qunbul and Al-Susi PDFs. The conservative result is 216 reading
-variants, 97 presentation differences, 6 tokenization cases and 608 uncertain
+Al-Bazzi, Qunbul and Al-Susi PDFs. The conservative result is 228 reading
+variants, 97 presentation differences, 6 tokenization cases and 606 uncertain
 cases. `Uncertain` is a completed technical outcome, not an invented scholarly
 classification: these cases need domain interpretation to separate weak-letter
 or hamza reading behavior from edition orthography.
